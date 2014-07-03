@@ -1,0 +1,27 @@
+// # Lists
+// Because we most commoly use `ol/ul` without the default styling we're providing
+// classes to add bullets/numbers.
+
+%list,
+.list {
+    margin-left: spacer(2.5);
+    margin-bottom: spacer(1);
+
+    &--bullet {
+        list-style-type: disc;
+    }
+
+    &--numbered {
+        list-style-type: decimal;
+    }
+}
+
+// ## Nested List Spacing
+// Vertical spacing will be removed from nested lists.
+
+li {
+    > ul,
+    > ol {
+            margin-bottom: 0;
+    }
+}

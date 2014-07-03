@@ -1,0 +1,23 @@
+//# Main
+// High level defaults establishing font and color.
+
+html {
+    @include font-smoothing(on);
+    font: #{ map-get($font-size, base) } / #{ map-get($line-height, base) } map-get($font-family, base);
+    font-weight: map-get($font-weight, light);
+    color: map-get($font-color, base);
+}
+
+// Set height on `html` and `body` to 100%, html so children can also be full height.
+
+html, body {
+    height: 100%;
+}
+
+p {
+    margin-bottom: spacer(1);
+}
+
+b {
+    font-weight: 500;
+}

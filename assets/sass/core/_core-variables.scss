@@ -1,0 +1,197 @@
+// # Core Variables
+
+// ## Colors
+// Default color for objects' borders etc.
+
+// IMPORTANT Do not use these values directly. Use the more specifically named
+// variables below that use these black and grey values.
+
+$base-black             : #000;
+$base-white             : #FFF;
+$grey-90                : tint($base-black, 10%);
+$grey-85                : tint($base-black, 15%);
+$grey-80                : tint($base-black, 20%);
+$grey-70                : tint($base-black, 30%);
+$grey-60                : tint($base-black, 40%);
+$grey-50                : tint($base-black, 50%);
+$grey-35                : tint($base-black, 65%);
+$grey-30                : tint($base-black, 70%);
+$grey-25                : tint($base-black, 75%);
+$grey-12                : tint($base-black, 88%);
+$grey-07                : tint($base-black, 93%);
+$grey-03                : tint($base-black, 97%);
+
+// ### Base Colors
+// These are colors can be used on UI elements like borders.
+
+
+$ui-color: (
+    // Blacks & grays
+    base                : $grey-12,
+    white               : $base-white,
+    light               : $grey-07,
+    medium              : $grey-60,
+    dark                : $grey-85,
+    black               : $base-black,
+
+    // Colors
+    brand               : #006EB6,
+    brand-dark          : #003366,
+    warning             : #F7ECB5,
+    error               : #C1272D,
+    good-news           : #90B71C
+);
+
+// ### Link Colors
+// For anchor links.
+
+$link-color: (
+    base                : map-get($ui-color, brand),
+    brand               : map-get($ui-color, brand)
+);
+
+// ### Background colors
+
+$background-color: (
+    base                : $grey-80,
+    faint               : $grey-03,
+    light               : $grey-07,
+    muted               : $grey-35,
+    medium              : $grey-50,
+
+    warning             : lighten(#F7ECB5, 10%),
+    error               : lighten(#C1272D, 48%),
+    good-news           : lighten(#90B71C, 10%)
+);
+
+// ### Font Colors
+
+$font-color: (
+    base                : $grey-85,
+    white               : $base-white,
+    light               : $grey-25,
+    muted               : $grey-35,
+    medium              : $grey-50,
+    dark                : $grey-85,
+
+    brand               : map-get($ui-color, brand),
+    brand-dark          : map-get($ui-color, brand-dark),
+    warning             : map-get($ui-color, warning),
+    error               : map-get($ui-color, error),
+    good-news           : map-get($ui-color, good-news)
+);
+
+// ## Fonts
+// ### Font Family
+
+$font-family: (
+    base                : unquote("'Gotham SSm A', 'Gotham SSm B', Helvetica, Verdana, sans-serif"),
+    monospace           : monospace
+);
+
+// ### Font Sizes
+
+$font-size: (
+    base                : 12px,
+    micro               : 10px,
+    milli               : 11px,
+
+    // Heading sizes
+    alpha               : 50px, // h1
+    beta                : 42px, // h2
+    gamma               : 30px, // h3
+    delta               : 20px, // h4
+    epsilon             : 16px, // h5
+    zeta                : 12px, // h6
+
+    // Extra large fonts
+    kilo                : 70px,
+    mega                : 86px,
+    giga                : 96px
+);
+
+// ### Line Heights
+// Specifying variable instead of inside map so it can be used by line-height mixin.
+
+$line-height: (
+    base                : 1.6,
+    tight               : 1.2,
+    loose               : 1.8
+);
+
+// ### Font Weights
+
+$font-weight: (
+    light               : 300,
+    normal              : 400,
+    bold                : 500
+);
+
+// ### Font Spacing
+
+$letter-spacing: (
+    loose               : 1px,
+    tight               : -1px,
+    extra-tight         : -2px
+);
+
+// ## UI Elements
+// ### Rounded corners.
+
+$border-radius: (
+    base                : 2px,
+    big                 : 4px,
+    full                : 50%
+);
+
+
+// ## Arrow Entities
+// Create a small arrow for dropdowns or disclosures.
+
+$arrow-entity: (
+    up                  : "\25B2",
+    down                : "\25BC",
+    left                : "\25BA",
+    right               : "\25C4"
+);
+
+// ### Shadows
+
+$box-shadow: (
+    base                : 4px rgba(map-get($ui-color, black), 0.2),
+    big                 : 8px rgba(map-get($ui-color, black), 0.3)
+);
+
+// ### Transitions
+
+$transition-duration: (
+    base                : 0.3s
+);
+
+// ## Form Variables
+
+$input-focus-border-color    : map-get($ui-color, brand) !default;
+
+
+// ## Spacing Unit
+// Defines spacing for paddings and margins.
+
+$spacer-unit: 10px;
+
+// Using this function requires that the value passed be a multiple of .5
+// This encourages greater spacing consistentcy. The following example
+// will output 25px.
+
+// [c]
+//     padding: spacer(2.5);
+// [/c]
+
+@function spacer($value) {
+    // Test to see if value is multiple of .5. If not provide warning.
+    @if ($value * 2) % 1 != 0 {
+        @warn "Spacer value must be a multiple of .5";
+        @return "Spacer value must be a multiple of .5";
+    } @else {
+        @return $spacer-unit * $value;
+    }
+}

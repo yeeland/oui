@@ -1,0 +1,259 @@
+//# Buttons
+
+//|| Description || HTML || Example ||
+//|| Default || `<button class="button">Button</button>` || <button class="button">Button</button> ||
+//|| Primary || `<button class="button button--primary">Button</button>` || <button class="button button--primary">Button</button> ||
+//|| Accent || `<button class="button button--accent">Button</button>` || <button class="button button--accent">Button</button> ||
+//|| Dark || `<button class="button button--on-dark">Button</button>` || <button class="button button--on-dark">Button</button> ||
+
+// ## Button Variables
+// Shadows for buttons.
+
+$button-hover-shadow                      : 0px 1px 3px rgba(0, 0, 0, 0.18);
+$button-active-shadow                     : inset 0px 0px map-get($box-shadow, base);
+
+$button-brand-gradient                    : linear-gradient(#147EC7, #126FB0);
+$button-brand-border-color                : #225995;
+
+%button,
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 8px spacer(1.5);
+    height: 31px;
+    font-weight: map-get($font-weight, normal);
+    border-radius: map-get($border-radius, base);
+    color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 1;
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+        outline: none;
+        color: map-get($ui-color, white);
+    }
+
+
+    &--brand {
+        @include background($button-brand-gradient);
+        border-color: $button-brand-border-color;
+
+        &:hover {
+            box-shadow: $button-hover-shadow;
+            background: #147EC7;
+            border-color: #1C487D;
+        }
+
+        &:active {
+            box-shadow: $button-hover-shadow;
+            background: #1375B9;
+            border-color: #1C487D;
+        }
+    }
+
+
+    // ## Button Styles
+    // Button color variations.
+
+    &--primary {
+        @include background(linear-gradient(#90B71C, #7FA119));
+        border-color: #7E9339;
+
+        &:hover {
+            background: #90B71C;
+            border-color: #68792F;
+        }
+
+        &:active {
+            background: #86AA1A;
+            border-color: #68792F;
+        }
+    }
+
+    &--secondary {
+        @include background(linear-gradient(#FFF, #EEE));
+        color: #888;
+        border-color: #CACACA;
+
+        &:hover {
+            background: #f9f9f9;
+            border-color: #B8B8B8;
+        }
+
+        &:active {
+            background: #f7f7f7;
+            border-color: #b8b8b8;
+        }
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+            color: #888;
+        }
+    }
+
+    &--danger {
+        @include background(linear-gradient(#AB290D, #93230b));
+        border-color: #93230b;
+
+        &:hover {
+            background: #AB290D;
+            border-color: #721B09;
+        }
+
+        &:active {
+            background: #9C250C;
+            border-color: #721B09;
+        }
+    }
+
+    // ## Button Sizes
+    // Button size variations.
+
+    &--small {
+        padding: 4px spacer(1);
+        height: 24px;
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    &--full {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    &--squish {
+        padding-right: spacer(1);
+        padding-left: spacer(1);
+    }
+}
+
+
+
+// ## Inactive Button
+// Disabled state.
+
+.button[disabled],
+.button[disabled]:hover,
+.button[disabled]:active,
+.button[disabled]:focus,
+.button--disabled,
+.button--disabled:hover,
+.button--disabled:active,
+.button--disabled:focus {
+    background: none !important;
+    background-color: map-get($background-color, light) !important;
+    color: map-get($font-color, light) !important;
+    cursor: default;
+    top: 0;
+    border-color: map-get($ui-color, base);
+    box-shadow: none;
+}
+
+
+// ## Button Group
+// For buttons row should align left or right.
+
+//[hc]
+//     <div class="button-group--left">
+//        <button class="button">Button</button>
+//        <button class="button button--preferred">Button</button>
+//     </div>
+//[/hc]
+
+//[hc]
+//     <div class="button-group--right">
+//        <button class="button">Button</button>
+//        <button class="button button--preferred">Button</button>
+//     </div>
+//[/hc]
+
+%button-group,
+.button-group {
+
+    &--left {
+
+        .button {
+            margin-right: spacer(1);
+        }
+    }
+
+
+    &--right {
+        text-align: right;
+
+        .button {
+            margin-left: spacer(1);
+        }
+    }
+
+    &--center {
+        text-align: center;
+
+        .button {
+            margin-left: spacer(.5);
+            margin-right: spacer(.5);
+        }
+    }
+
+    &--flush {
+        @extend %flex;
+
+        .button {
+            margin-left: 0;
+            border-radius: 0;
+
+            &:not(:last-child) {
+                border-right: none;
+            }
+
+            &:first-child {
+                border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
+            }
+            &:last-child {
+                border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+            }
+        }
+    }
+
+    &--toggle {
+        @extend %button-group--flush;
+
+        .button {
+            @extend %button--small;
+        }
+
+        // This is needed due to CSS source order.
+        .button:not(.button-toggle__active) {
+            @extend %button--secondary;
+        }
+
+        .button-toggle__active {
+            @extend %button--brand;
+            border-color: $button-brand-border-color;
+            cursor: default;
+
+            &:hover,
+            &:active {
+                @include background($button-brand-gradient);
+                box-shadow: none;
+            }
+
+            + .button {
+                border-left: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// # Block List
+//
+// Create big blocky lists of content that, e.g.:
+//
+// [hc]
+//     <ul class="block-list">
+//       <li>Foo</li>
+//       <li>Bar</li>
+//       <li>Baz</li>
+//       <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
+//     </ul>
+// [/hc]
+
+%block-list,
+.block-list {
+    list-style: none;
+    margin-left: 0;
+
+    > li {
+        padding: spacer(.5);
+    }
+}
+
+// For links that will take up full space of list item.
+
+%block-list__link,
+.block-list__link {
+    display: block;
+    padding: spacer(.5);
+    margin: -(spacer(.5));
+}
+
+// ## Block List Ruled
+// List that has ruled lines after each list item.
+
+.block-list--ruled {
+    > li {
+        border-bottom: 1px solid map-get($ui-color, base);
+    }
+}

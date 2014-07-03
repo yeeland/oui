@@ -1,0 +1,200 @@
+// # Forms
+
+// ## Text inputs
+//
+// Instead of a `[type]` selector for each kind of form input, we just use a
+// class to target any/every one, e.g.:
+
+// [c]
+//      <input type="text" class="text-input">
+//      <input type="email" class="text-input">
+//      <input type="password" class="text-input">
+// [/c]
+
+.text-input,
+textarea {
+    width: 100%;
+    border: 1px solid map-get($ui-color, base);
+    border-radius: map-get($border-radius, base);
+    padding: 7px;
+    vertical-align: middle;
+    line-height: 1.3;
+
+    &:focus {
+        border-color: $input-focus-border-color;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form__header {
+    margin-bottom: spacer(1);
+}
+
+.form__footer {
+    margin-top: spacer(3);
+}
+
+.form-fields {
+    @extend %kill-last-child-margin;
+    list-style: none;
+    margin: 0;
+}
+
+.form-field__item {
+    margin-bottom: spacer(1.5);
+}
+
+fieldset {
+    margin-bottom: spacer(4);
+}
+
+// ## Form Field Titles
+// Used if a larger title is needed and the usual `label` won't do or is not available.
+
+.form-field__title {
+    font-size: map-get($font-size, epsilon);
+    margin-bottom: spacer(.5);
+}
+
+//## Labels
+//
+// Define a `.label` class as well as a `<label>` element. This means we can apply
+// label-like styling to meta-labels for groups of options where a `<label>`
+// element is not suitable.
+
+label,
+.label {
+    display: block;
+    margin-bottom: spacer(.5);
+    font-weight: map-get($font-weight, normal);
+}
+
+
+//  Groups of checkboxes and radios.
+
+.check-list {
+    list-style: none;
+    margin: 0;
+
+    > li {
+        display: table;
+        margin-bottom: spacer(1);
+    }
+
+    input {
+        display: table-cell;
+    }
+}
+
+// Labels in check-lists
+.check-label,
+.check-list label,
+.check-list .label {
+    display: table-cell;
+    padding-left: spacer(1);
+    font-weight: map-get($font-weight, normal);
+}
+
+.input--disabled {
+    background-color: map-get($background-color, light);
+}
+
+.or {
+    text-align: center;
+    color: map-get($font-color, muted);
+    text-transform: uppercase;
+    margin: spacer(1.5) auto;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        border-top: 1px dotted map-get($ui-color, base);
+        width: 40%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+
+    &:after {
+        left: auto;
+        right: 0;
+    }
+} // .or
+
+
+// ## Form Errors
+
+.form-error {
+    label {
+        color: map-get($font-color, error);
+    }
+
+    [type=text],
+    [type=password] {
+        border-color: map-get($ui-color, error);
+    }
+}
+
+
+.form-note {
+    padding-top: spacer(.5);
+    font-size: map-get($font-size, micro);
+}
+
+.form-note--error {
+    color: map-get($font-color, error);
+}
+
+// ## Complete Form Example
+
+// [hc]
+//     <form>
+//       <div class="form__header">
+//         <h3>Form to Fill</h3>
+//         <p>Lorem omnis quod magnam consequatur voluptatibus et sed sapiente placeat nam.</p>
+//       </div>
+//       <fieldset>
+//         <ol class="form-fields">
+//           <li class="split-fields">
+//             <div>
+//               <label>Split Inputs</label>
+//               <input type="text" placeholder="This is placeholder" type="email">
+//             </div>
+//             <div>
+//               <label>Split Inputs</label>
+//               <input type="password">
+//             </div>
+//           </li>
+//           <li>
+//              <ul class="check-list">
+//                  <li>
+//                      <input name="foo-1" id="foo-1" type="checkbox" checked /> <label for="foo-1">Checkbox 1</label>
+//                  </li>
+//                  <li>
+//                      <input name="foo-2" id="foo-2" type="checkbox" /> <label for="foo-2">Checkbox 2</label>
+//                  </li>
+//                  <li>
+//                      <input name="foo-3" id="foo-3" type="checkbox" /> <label for="foo-3">Checkbox 3</label>
+//                  </li>
+//              </ul>
+//           </li>
+//           <li>
+//             <label>Single Input</label>
+//              <input type="text" class="text-input">
+//           </li>
+//           <li>
+//             <label>Textarea</label>
+//             <textarea></textarea>
+//           </li>
+//         </ol>
+//       </fieldset>
+//       <div class="form__footer btn-group--right">
+//         <button class="btn">Cancel</button>
+//         <button class="btn btn--preferred">Submit</button>
+//       </div>
+//     </form>
+// [/hc]

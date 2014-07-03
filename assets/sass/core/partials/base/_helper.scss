@@ -1,0 +1,625 @@
+// # Helper
+
+// A series of helper classes to use arbitrarily. Only use a helper class if an
+// element/component doesn't already have a class to which you could apply this
+// styling, e.g. if you need to float `.main-nav` left then add `float: left;` to
+// that ruleset as opposed to adding the `.float--left` class to the markup.
+
+// A lot of these classes carry ` !important` as you will always want them to win
+// out over other selectors.
+
+
+// ## Floats
+// Add/remove floats.
+
+//[c]
+//     <div class="float--right">content</div>
+//[/c]
+
+.float--right {
+    float: right !important;
+}
+
+.float--left {
+    float: left !important;
+}
+
+.float--none {
+    float: none !important;
+}
+
+// ## Anchor
+
+.anchor--middle {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/// ### Flexbox anchors, moves element to right or left.
+
+.anchor--right {
+    margin-left: auto !important;
+}
+
+.anchor--left {
+    margin-right: auto !important;
+}
+
+// ## Text Alignment
+
+//[c]
+//     <div class="text--left">content</div>
+//[/c]
+
+.text--left {
+    text-align: left !important;
+}
+
+.text--center {
+    text-align: center !important;
+}
+
+.text--right {
+    text-align: right !important;
+}
+
+// ## Vertical Alignment for table cells.
+
+//[c]
+//     <div class="vertical-align--bottom">content</div>
+//[/c]
+
+.vertical-align--top {
+    vertical-align: top !important;
+}
+
+.vertical-align--middle {
+    vertical-align: middle !important;
+}
+
+.vertical-align--bottom {
+    vertical-align: bottom !important;
+}
+
+// ## Font Weights
+
+//[c]
+//     <div class="weight--light">content</div>
+//[/c]
+
+.weight--light {
+    font-weight: 300 !important;
+}
+
+.weight--normal {
+    font-weight: 400 !important;
+}
+
+.weight--bold {
+    font-weight: 500 !important;
+}
+
+// ## Add Margins
+// Push elements in any direction.
+
+//[c]
+//     <div class="push--top">content</div>
+//[/c]
+
+.push {
+    margin: spacer(1) !important;
+}
+
+.push--top {
+    margin-top: spacer(1) !important;
+}
+
+.push--right {
+    margin-right: spacer(1) !important;
+}
+
+.push--bottom {
+    margin-bottom: spacer(1) !important;
+}
+
+.push--left {
+    margin-left: spacer(1) !important;
+}
+
+.push--ends {
+    margin-top: spacer(1) !important;
+    margin-bottom: spacer(1) !important;
+}
+
+.push--sides {
+    margin-right: spacer(1) !important;
+    margin-left: spacer(1) !important;
+}
+
+.push-half {
+    margin: spacer(.5) !important;
+}
+
+.push-half--top {
+    margin-top: spacer(.5) !important;
+}
+
+.push-half--right {
+    margin-right: spacer(.5) !important;
+}
+
+.push-half--bottom {
+    margin-bottom: spacer(.5) !important;
+}
+
+.push-half--left {
+    margin-left: spacer(.5) !important;
+}
+
+.push-half--ends {
+    margin-top: spacer(.5) !important;
+    margin-bottom: spacer(.5) !important;
+}
+
+.push-half--sides {
+    margin-right: spacer(.5) !important;
+    margin-left: spacer(.5) !important;
+}
+
+.push-double {
+    margin: spacer(2) !important;
+}
+
+.push-double--top {
+    margin-top: spacer(2) !important;
+}
+
+.push-double--right {
+    margin-right: spacer(2) !important;
+}
+
+.push-double--bottom {
+    margin-bottom: spacer(2) !important;
+}
+
+.push-double--left {
+    margin-left: spacer(2) !important;
+}
+
+.push-double--ends {
+    margin-top: spacer(2) !important;
+    margin-bottom: spacer(2) !important;
+}
+
+.push-double--sides {
+    margin-right: spacer(2) !important;
+    margin-left: spacer(2) !important;
+}
+
+.push-triple {
+    margin: spacer(3) !important;
+}
+
+.push-triple--top {
+    margin-top: spacer(3) !important;
+}
+
+.push-triple--right {
+    margin-right: spacer(3) !important;
+}
+
+.push-triple--bottom {
+    margin-bottom: spacer(3) !important;
+}
+
+.push-triple--left {
+    margin-left: spacer(3) !important;
+}
+
+.push-triple--ends {
+    margin-top: spacer(3) !important;
+    margin-bottom: spacer(3) !important;
+}
+
+.push-triple--sides {
+    margin-right: spacer(3) !important;
+    margin-left: spacer(3) !important;
+}
+
+// ## Add Paddings
+// Pad elements in any direction.
+
+//[c]
+//     <div class="push--soft">content</div>
+//[/c]
+
+.soft {
+    padding: spacer(1) !important;
+}
+
+.soft--top {
+    padding-top: spacer(1) !important;
+}
+
+.soft--right {
+    padding-right: spacer(1) !important;
+}
+
+.soft--bottom {
+    padding-bottom: spacer(1) !important;
+}
+
+.soft--left {
+    padding-left: spacer(1) !important;
+}
+
+.soft--ends {
+    padding-top: spacer(1) !important;
+    padding-bottom: spacer(1) !important;
+}
+
+.soft--sides {
+    padding-right: spacer(1) !important;
+    padding-left: spacer(1) !important;
+}
+
+.soft-half {
+    padding: spacer(.5) !important;
+}
+
+.soft-half--top {
+    padding-top: spacer(.5) !important;
+}
+
+.soft-half--right {
+    padding-right: spacer(.5) !important;
+}
+
+.soft-half--bottom {
+    padding-bottom: spacer(.5) !important;
+}
+
+.soft-half--left {
+    padding-left: spacer(.5) !important;
+}
+
+.soft-half--ends {
+    padding-top: spacer(.5) !important;
+    padding-bottom: spacer(.5) !important;
+}
+
+.soft-half--sides {
+    padding-right: spacer(.5) !important;
+    padding-left: spacer(.5) !important;
+}
+
+.soft-one-and-half--sides {
+    padding-right: spacer(1.5) !important;
+    padding-left: spacer(1.5) !important;
+}
+
+.soft-double {
+    padding: spacer(2) !important;
+}
+
+.soft-double--top {
+    padding-top: spacer(2) !important;
+}
+
+.soft-double--right {
+    padding-right: spacer(2) !important;
+}
+
+.soft-double--bottom {
+    padding-bottom: spacer(2) !important;
+}
+
+.soft-double--left {
+    padding-left: spacer(2) !important;
+}
+
+.soft-double--ends {
+    padding-top: spacer(2) !important;
+    padding-bottom: spacer(2) !important;
+}
+
+.soft-double--sides {
+    padding-right: spacer(2) !important;
+    padding-left: spacer(2) !important;
+}
+
+.soft-triple--top {
+    padding-top: spacer(3) !important;
+}
+
+.soft-triple--right {
+    padding-right: spacer(3) !important;
+}
+
+.soft-triple--bottom {
+    padding-bottom: spacer(3) !important;
+}
+
+.soft-triple--left {
+    padding-left: spacer(3) !important;
+}
+
+.soft-triple--ends {
+    padding-top: spacer(3) !important;
+    padding-bottom: spacer(3) !important;
+}
+
+.soft-triple--sides {
+    padding-right: spacer(3) !important;
+    padding-left: spacer(3) !important;
+}
+
+// ## Zero Margins
+
+//[c]
+//     <div class="flush--top">content</div>
+//[/c]
+
+.flush {
+    margin: 0 !important;
+}
+
+.flush--top {
+    margin-top: 0 !important;
+}
+
+.flush--right {
+    margin-right: 0 !important;
+}
+
+.flush--bottom {
+    margin-bottom: 0 !important;
+}
+
+.flush--left {
+    margin-left: 0 !important;
+}
+
+.flush--ends {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.flush--sides {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+// ## Zero Paddings
+
+//[c]
+//     <div class="hard--top">content</div>
+//[/c]
+
+.hard {
+    padding: 0 !important;
+}
+
+.hard--top {
+    padding-top: 0 !important;
+}
+
+.hard--right {
+    padding-right: 0 !important;
+}
+
+.hard--bottom {
+    padding-bottom: 0 !important;
+}
+
+.hard--left {
+    padding-left: 0 !important;
+}
+
+.hard--ends {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.hard--sides {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+// ## Remove Borders
+// Remove borders from all or just one side.
+
+.no-border {
+    border: none !important;
+}
+
+.no-border--top {
+    border-top: none !important;
+}
+
+.no-border--right {
+    border-right: none !important;
+}
+
+.no-border--bottom {
+    border-bottom: none !important;
+}
+
+.no-border--left {
+    border-left: none !important;
+}
+
+// ## Font Lighter
+// Make font color lighter.
+
+//[c]
+//     <div class="light-font-color">content</div>
+//[/c]
+
+.light-font-color {
+    color: map-get($font-color, light);
+}
+
+.reverse-font-color {
+    color: map-get($font-color, white);
+}
+
+// ## Full Screen
+// Make full width/height of screen. Should be last element in HTML.
+// Might require a z-index.
+
+//[c]
+//     <div class="full-screen">full screen content</div>
+//[/c]
+
+%full-screen,
+.full-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+// ## Full Bleed
+// Pull items full width of `.island` parents.
+
+//[c]
+//     <div class="full-bleed">full bleed</div>
+//[/c]
+
+%full-bleed,
+.full-bleed {
+    margin-right: -(spacer(1)) !important;
+    margin-left: -(spacer(1)) !important;
+
+    .islet & {
+        margin-right: -(spacer(.5)) !important;
+        margin-left: -(spacer(.5)) !important;
+    }
+}
+
+// ## Help Cursor
+// Add a help cursor to any element that gives the user extra information on
+// `:hover`.
+
+//[c]
+//     <div class="informative">content</div>
+//[/c]
+
+.informative {
+    cursor: help !important;
+}
+
+// ## Underline
+// Adds text-decoration: underline to text.
+
+//[c]
+//     <p>content is <span class="underline">underlined</span></p>
+//[/c]
+
+.underline {
+    text-decoration: underline;
+}
+
+// Adds text-decoration: line-through;.
+
+//[c]
+//     <p><span class="strike">strike</span> the content as needed</p>
+//[/c]
+
+.strike {
+    text-decoration: line-through;
+}
+
+// ## Muted Color
+// Mute text to a ligher shade of gray.
+
+//[hc]
+//     <p class="muted">This text is muted</p>
+//[/hc]
+
+.muted {
+    color: map-get($font-color, muted);
+}
+
+// ## Proceed (Align Right)
+// Align items to the right where they imply progression/movement forward, e.g.:
+
+//[hc]
+//     <p class="proceed"><a href="#">Read more...</a></p>
+//[/hc]
+
+.proceed {
+    text-align: right !important;
+}
+
+// ## Right-Angle Quote
+// Add a right-angled quote to links that imply movement, e.g.:
+
+//[hc]
+//     <a href=# class="go">Read more</a>
+//[/hc]
+
+.go:after {
+    content: "\00A0" "\00BB" !important;
+}
+
+// ## Uppercase
+// Apply capital case to an element.
+
+//[hc]
+//     <a href=# class="caps">Read more</a>
+//[/hc]
+
+.caps {
+    text-transform: uppercase !important;
+}
+
+// ## Break Word
+// Break long, unbroken strings.
+
+//[hc]
+//     <a href=# class="force-break">alongunbrokenstringthatgoeson</a>
+//[/hc]
+
+.force-break {
+    word-wrap: break-word !important;
+}
+
+// ## Last Item Margin
+
+// Per http://css-tricks.com/spacing-the-bottom-of-modules/ this removes
+// the margin from the last child that would otherwise create too much space
+// inside a element with bottom padding.
+
+%kill-last-child-margin {
+    & > *:last-child,
+    & > *:last-child > *:last-child,
+    & > *:last-child > *:last-child > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ## Position Helper
+// Use as a wrapper inside `display: table-cell` items with children that
+// must be position absolute. Needed primariliy by Firefox.
+
+.cell-trap {
+    position: relative;
+}
+
+// ## Line Height
+// For adjusting line-heights.
+
+.line--tight {
+    line-height: map-get($line-height, tight);
+}
+
+.line--loose {
+    line-height: map-get($line-height, loose);
+}
+
+.hidden {
+    display: none;
+}

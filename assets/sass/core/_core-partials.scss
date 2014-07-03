@@ -1,0 +1,52 @@
+// # Core Partials
+// This represents the bulk of the paritals used by all sites. They are the building
+// blocks of all patterns and are width and layout independent. Refinements are made in the
+// the partials found in the `layout` directory.
+
+// ## Base
+// Baseline rules.
+
+@import "partials/base/mixins";
+@import "partials/base/reset";
+
+@import "partials/base/images";
+@import "partials/base/links";
+@import "partials/base/lists";
+@import "partials/base/main";
+@import "partials/base/tables";
+
+// ## Elements
+// Abstractions that provide basic structure, generally extended into larger objects.
+
+@import "partials/elements/clearfix";
+@import "partials/elements/block-list";
+@import "partials/elements/flexbox";
+@import "partials/elements/form";
+@import "partials/elements/grid";
+@import "partials/elements/island";
+@import "partials/elements/media";
+@import "partials/elements/nav";
+@import "partials/elements/row";
+@import "partials/elements/split";
+@import "partials/elements/stats";
+
+// ## UI Objects
+// Simple styled objects that can be extended or used directly in HTML.
+// Import only the files you need.
+
+@import "partials/ui-objects/attention";
+@import "partials/ui-objects/arrows";
+@import "partials/ui-objects/arrows-inline";
+@import "partials/ui-objects/buttons";
+@import "partials/ui-objects/borders";
+@import "partials/ui-objects/modal";
+@import "partials/ui-objects/pagination";
+@import "partials/ui-objects/preloader";
+@import "partials/ui-objects/rules";
+@import "partials/ui-objects/type";
+
+// ## Core Helpers
+// Override helpers.
+
+@import "partials/base/helper";
+@import "partials/base/widths";

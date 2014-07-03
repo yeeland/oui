@@ -1,0 +1,39 @@
+// # Island
+
+// Simple, boxed off content, as per: [Island Object](http://tinyurl.com/kgu5w9k)
+
+//[hc]
+//     <div class="island">
+//        I am boxed off.
+//     </div>
+//[/hc]
+
+%island,
+.island {
+    border-radius: map-get($border-radius, base);
+    padding: spacer(1);
+    @extend %kill-last-child-margin;
+
+    &--center {
+        text-align: center;
+    }
+}
+
+// ## Islet
+// Just like `.island`, only smaller.
+
+//[hc]
+//     <div class="islet">
+//        I am boxed off.
+//     </div>
+//[/hc]
+
+%islet,
+.islet {
+    @extend %island;
+    padding: spacer(.5);
+
+    &--center {
+        text-align: center;
+    }
+}

@@ -1,0 +1,37 @@
+// # Modal
+// Dialog boxes and overlays.
+
+.modal {
+    box-shadow: 0 0 map-get($box-shadow, big);
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: spacer(1.5);
+    }
+
+    &__header,
+    &__footer {
+        background-color: map-get($background-color, faint);
+    }
+
+    &__header {
+        border-bottom: 1px solid map-get($ui-color, light);
+    }
+
+    &__footer {
+        border-top: 1px solid map-get($ui-color, light);
+    }
+
+    &__title {
+        font-size: map-get($font-size, gamma);
+        letter-spacing: -1px;
+        color: map-get($font-color, brand-dark);
+        line-height: 1;
+    }
+
+    &__body {
+        @extend %kill-last-child-margin;
+    }
+}
+

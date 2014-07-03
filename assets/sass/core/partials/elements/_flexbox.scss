@@ -1,0 +1,54 @@
+// # Flexbox
+// The -ms prefixes are for IE 10 only. The -webkit prefix is for Safari.
+
+// Note that `flex-grow` is not supported by IE10, `justify-content` is the next best thing.
+
+%flex,
+.flex {
+    display: -webkit-flex; // Safari
+    display: -ms-flexbox; // IE 10
+    display: flex;
+}
+
+%flex-1,
+.flex-1 {
+    -webkit-flex: 1; // Safari
+    -ms-flex: 1; // IE 10
+    flex: 1;
+}
+
+%flex-wrap--wrap,
+.flex-wrap--wrap {
+    -webkit-flex-wrap: wrap; // Safari
+    -ms-flex-wrap: wrap; // IE 10
+    flex-wrap: wrap;
+}
+
+%justify--space-between,
+.justify--space-between {
+    -webkit-justify-content: space-between; // Safari
+    -ms-flex-pack: justify; // IE 10
+    justify-content: space-between;
+}
+
+%justify--center,
+.justify--center {
+    -webkit-justify-content: center; // Safari
+    -ms-flex-pack: center; // IE 10
+    justify-content: center;
+}
+
+%align-items--center,
+.align-items--center {
+    -webkit-align-items: center; // Safari
+    -ms-flex-align: center; // IE 10
+    align-items: center;
+}
+
+%align-items--flex-end,
+.align-items--flex-end {
+    -webkit-align-items: flex-end; // Safari
+    -ms-flex-align: end; // IE 10
+    align-items: flex-end;
+}
+

@@ -1,0 +1,21 @@
+// # Row
+
+// Creates a row of "n" number of elements.
+
+//[hc]
+//     <ul class="row">
+//         <li>row item</li>
+//         <li>row item</li>
+//         <li>row item</li>
+//     </ul>
+//[/hc]
+
+%row,
+.row {
+    @extend %flex;
+}
+
+%row--spread,
+.row--spread {
+    @extend %justify--space-between;
+}

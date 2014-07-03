@@ -1,0 +1,57 @@
+// # Grids
+// Fluid and nestable grid system, e.g.:
+
+%grid,
+.grid {
+    @extend %flex;
+    @extend %flex-wrap--wrap;
+
+    &__cell {
+        @extend %flex-1;
+    }
+
+    // ## Grid Gutter
+    // If you want a gutter between grid items.
+
+    &--gutter {
+        margin-left: -(spacer(2));
+
+        > .grid__cell {
+            padding-left: spacer(2);
+        }
+    }
+
+    &--gutter--wide {
+        margin-left: -(spacer(4));
+
+        > .grid__cell {
+            padding-left: spacer(4);
+        }
+    }
+
+    // ## Grid Alignment
+    // Moves grid cells to align center or anchored at the bottom of the grid.
+
+    &--center {
+        @extend %align-items--center;
+    }
+
+    &--bottom {
+        @extend %align-items--flex-end;
+    }
+
+    // ## Grid Widths
+
+    // If a width is specificed along side the cell__grid then we need
+    // we have to disable the default `flex: 1`.
+
+    // [c]
+    //     <div class="grid__cell width-1-3">grid cell</div>
+    // [/c]
+
+    &__cell[class*="width-"] {
+        -webkit-flex: none;
+        -ms-flex: none;
+        flex: none;
+    }
+}

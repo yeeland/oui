@@ -1,0 +1,30 @@
+// # Stats
+
+// Simple object to display key-value statistic-like information, for example Issue counts.
+
+//[hc]
+//     <div class="stat-group">
+//        <dl class="stat">
+//            <dt>Tweets</dt>
+//            <dd>27,740</dd>
+//        </dl>
+//        <dl class="stat">
+//            <dt>Following</dt>
+//            <dd>11,529</dd>
+//        </dl>
+//        <dl class="stat">
+//            <dt>Followers</dt>
+//            <dd>12,105</dd>
+//        </dl>
+//     </div>
+//[/hc]
+
+%stat-group,
+.stat-group {
+    @extend %grid;
+}
+
+%stat,
+.stat {
+    @extend %grid__cell;
+}
