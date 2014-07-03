@@ -1,5 +1,7 @@
-Lego: Refactored, component-based Sass/HTML and vue.js.
+Lego
 ====
+
+Refactored, component-based Sass/HTML and vue.js.
 
 Currently this repo contains the modular Sass library that will serve as the foundation for building out objects on optimizely.com.
 
