@@ -1,0 +1,36 @@
+// # Dropdown
+// A list of links that drops down from a trigger.
+
+// We use this group to wrap button and the dropdown.
+
+.dropdown-group {
+    font-size: map-get($font-size, base);
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: auto;
+    border: 1px solid map-get($ui-color, base);
+    border-radius: map-get($border-radius, base);
+    box-shadow: 0 2px map-get($box-shadow, light);
+    padding-top: spacer(1);
+    padding-bottom: spacer(1);
+    background-color: $base-white;
+    margin-top: 2px;
+    z-index: 1;
+
+    &__item {
+        padding-left: spacer(1.5);
+        padding-right: spacer(1.5);
+        white-space: nowrap;
+    }
+
+    &--right {
+        right: 0;
+        left: auto;
+    }
+}
