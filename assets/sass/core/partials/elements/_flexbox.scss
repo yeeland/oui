@@ -24,6 +24,13 @@
     flex-wrap: wrap;
 }
 
+%flex-wrap--nowrap,
+.flex-wrap--nowrap {
+    -webkit-flex-wrap: nowrap; // Safari
+    -ms-flex-wrap: nowwrap; // IE 10
+    flex-wrap: nowrap;
+}
+
 %justify--space-between,
 .justify--space-between {
     -webkit-justify-content: space-between; // Safari

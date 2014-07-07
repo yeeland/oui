@@ -45,7 +45,7 @@
 
     &--flush {
         @extend %grid;
-        white-space: nowrap;
+        @extend %flex-wrap--nowrap;
 
         .button {
             margin-left: 0;
