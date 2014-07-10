@@ -59,6 +59,7 @@ $background-color: (
     muted               : $grey-35,
     medium              : $grey-50,
 
+    brand               : map-get($ui-color, brand),
     warning             : lighten(#F7ECB5, 10%),
     error               : lighten(#C1272D, 48%),
     good-news           : lighten(#90B71C, 10%)
