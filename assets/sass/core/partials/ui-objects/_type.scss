@@ -35,7 +35,7 @@
 h1,
 .alpha {
     @include font-size(map-get($font-size, alpha));
-    letter-spacing: map-get($letter-spacing, extra-tight);
+    letter-spacing: map-get($letter-spacing, tight);
 }
 
 h2,

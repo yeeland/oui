@@ -3,7 +3,9 @@
 
 html {
     @include font-smoothing(on);
-    font: #{ map-get($font-size, base) } / #{ map-get($line-height, base) } map-get($font-family, base);
+    font-size: map-get($font-size, base);
+    font-family: map-get($font-family, base);
+    line-height: map-get($line-height, base);
     font-weight: map-get($font-weight, light);
     color: map-get($font-color, base);
 }
