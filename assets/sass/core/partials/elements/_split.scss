@@ -3,25 +3,14 @@
 // ## Split
 // Split right/left any 2 elements inside a parent container.
 
-//[hc]
-//    <dl class="split">
-//       <dt class="split__title">Burger and fries</dt>
-//       <dd>£5.99</dd>
-//       <dt class="split__title">Fillet steak</dt>
-//       <dd>£19.99</dd>
-//       <dt class="split__title">Ice cream</dt>
-//       <dd>£2.99</dd>
-//    </dl>
-//[/hc]
 
 .split {
+    @extend %flex;
     text-align: right;
-    list-style: none;
-    margin-left: 0;
 
     &__title {
+        @extend %flex-1;
         text-align: left;
-        float: left;
-        clear: left;
+        margin-right: spacer(1);
     }
 }

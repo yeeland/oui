@@ -119,14 +119,15 @@ th {
 
 
 // ## Table Variations
+// We're using direct decendent selectors so any child tables do not inherit styles.
 
 %table--rule,
 .table--rule {
-    th {
+    > thead > th {
         padding-bottom: spacer(1);
     }
 
-    tbody > tr {
+    > tbody > tr {
         border-top: 1px solid map-get($ui-color, light);
     }
 
@@ -148,8 +149,8 @@ th {
 %table--tight,
 .table--tight {
 
-    th,
-    td {
+    > thead > tr > th,
+    > tbody > tr > td {
         padding-top: spacer(.5);
         padding-bottom: spacer(.5);
    }
