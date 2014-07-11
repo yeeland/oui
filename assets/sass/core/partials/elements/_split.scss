@@ -6,10 +6,10 @@
 
 .split {
     @extend %flex;
+    @extend %justify--space-between;
     text-align: right;
 
     &__title {
-        @extend %flex-1;
         text-align: left;
         margin-right: spacer(1);
     }

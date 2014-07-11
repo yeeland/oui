@@ -11,22 +11,21 @@
 }
 
 .dropdown {
+    @extend %block-list-group;
+    background: map-get($background-color, white);
+    box-shadow: 0 2px map-get($box-shadow, light);
     position: absolute;
     top: 100%;
     left: auto;
-    border: 1px solid map-get($ui-color, base);
-    border-radius: map-get($border-radius, base);
-    box-shadow: 0 2px map-get($box-shadow, light);
-    padding-top: spacer(1);
-    padding-bottom: spacer(1);
-    background-color: $base-white;
-    margin-top: 2px;
     z-index: 1;
+    margin-top: 2px;
 
     &__item {
-        padding-left: spacer(1.5);
-        padding-right: spacer(1.5);
         white-space: nowrap;
+    }
+
+    a {
+        @extend %block-list__link;
     }
 
     &--right {

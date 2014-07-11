@@ -28,4 +28,10 @@ $progress-bar-height: 20px;
     font-size: map-get($font-size, milli);
     text-align: center;
     min-width: 20px;
+
+    &[aria-valuenow="0"] {
+        background: transparent;
+        box-shadow: none;
+        color: map-get($font-color, medium);
+    }
 }
