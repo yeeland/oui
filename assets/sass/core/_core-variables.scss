@@ -159,9 +159,9 @@ $arrow-entity: (
 // ### Shadows
 
 $box-shadow: (
-    base                : 4px rgba(map-get($ui-color, black), 0.2),
-    light               : 3px rgba(map-get($ui-color, black), 0.1),
-    big                 : 8px rgba(map-get($ui-color, black), 0.3)
+    base                : 4px rgba(0, 0, 0, 0.2),
+    light               : 3px rgba(0, 0, 0, 0.1),
+    big                 : 8px rgba(0, 0, 0, 0.3)
 );
 
 // ### Transitions

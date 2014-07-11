@@ -112,6 +112,23 @@ hgroup .hN {
     margin-bottom: 0;
 }
 
+// ## Small Text
+
+// A couple classes for setting small type.
+
+//[c]
+//     <div class="milli">Text</div>
+//[/c]
+
+.milli {
+    font-size: map-get($font-size, milli);
+}
+
+.micro {
+    font-size: map-get($font-size, micro);
+}
+
+
 // ## Large Heading
 
 // A series of classes for setting massive type; for use in heroes, mastheads,
