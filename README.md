@@ -22,7 +22,7 @@ or use if you want to use sourcemaps...
 
 If you want to use sourcemaps with Chrome follow [the instructions](https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0). Once you have it all set up run:
 
-    sass --compass --sourcemap --watch assets/sass:assets/css
+    sass --compass --sourcemap --watch sass:css
 
 
 
