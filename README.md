@@ -12,17 +12,11 @@ Currently this repo contains the modular Sass library that will serve as the fou
 - Compass 1.0.0.alpha.19
     - `gem install compass --pre`
 
-To run you can use:
-
-    compass watch
-
-or use if you want to use sourcemaps...
-
 ## Using Sourcemaps
 
 If you want to use sourcemaps with Chrome follow [the instructions](https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0). Once you have it all set up run:
 
-    sass --compass --sourcemap --watch sass:css
+    sass --compass --sourcemap --watch path/to/this/repo:path/to/destination/css
 
 
 

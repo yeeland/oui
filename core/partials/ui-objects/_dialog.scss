@@ -1,7 +1,7 @@
 // # Modal
 // Dialog boxes and overlays.
 
-.modal {
+.lego-dialog {
     box-shadow: 0 0 map-get($box-shadow, big);
 
     &__header,

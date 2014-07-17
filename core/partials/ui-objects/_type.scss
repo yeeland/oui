@@ -61,7 +61,6 @@ h5,
 .epsilon {
     @include font-size(map-get($font-size, epsilon), false);
     line-height: map-get($line-height, tight);
-    letter-spacing: map-get($letter-spacing, tight);
 }
 
 h6,
