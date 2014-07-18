@@ -8,7 +8,7 @@ $pop-upsell-border: map-get($ui-color, base);
     @extend %block-list-group;
     max-width: 250px;
     display: inline-block;
-    box-shadow: 0 2px map-get($box-shadow, light);
+    box-shadow: 0 2px map-get($shadow, light);
 
     &__content {
         @extend %kill-last-child-margin;

@@ -13,7 +13,7 @@
 .dropdown {
     @extend %block-list-group;
     background: map-get($background-color, white);
-    box-shadow: 0 2px map-get($box-shadow, light);
+    box-shadow: 0 2px map-get($shadow, light);
     min-width: 100%;
     position: absolute;
     top: 100%;

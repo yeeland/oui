@@ -2,7 +2,7 @@
 // Dialog boxes and overlays.
 
 .lego-dialog {
-    box-shadow: 0 0 map-get($box-shadow, big);
+    box-shadow: 0 0 map-get($shadow, big);
 
     &__header,
     &__body,
