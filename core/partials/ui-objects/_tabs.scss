@@ -1,0 +1,60 @@
+// # Tabs
+// Creates a set of tabs.
+
+.tab-nav {
+    @extend %flex;
+    border-bottom: 1px solid map-get($ui-color, dark);
+    margin-bottom: spacer(2);
+}
+
+.tab-nav__item {
+    position: relative;
+    text-align: center;
+    padding: spacer(1) spacer(1.5);
+    border-left: 1px solid map-get($ui-color, base);
+    border-top: 1px solid map-get($ui-color, base);
+    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
+    color: map-get($font-color, muted);
+    cursor: pointer;
+
+    &:last-child {
+        border-right: 1px solid map-get($ui-color, base);
+    }
+
+    &--active {
+        border-right: 1px solid map-get($ui-color, dark);
+        border-color: map-get($ui-color, dark);
+        background: map-get($background-color, white);
+        color: map-get($font-color, base);
+
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: map-get($background-color, white);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+        }
+
+        + .tab-nav__item {
+            border-left: 0;
+        }
+    }
+}
+
+.tab__content {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.tabs--small {
+    .tab-nav__item {
+        padding: spacer(.5) spacer(1);
+        font-size: map-get($font-size, micro);
+    }
+}

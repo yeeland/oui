@@ -12,7 +12,6 @@
 $button-hover-shadow                      : 0px 1px 3px rgba(0, 0, 0, 0.18);
 $button-active-shadow                     : inset 0px 0px map-get($box-shadow, base);
 
-$button-brand-gradient                    : linear-gradient(#147EC7, #126FB0);
 $button-brand-border-color                : #225995;
 
 %button,
@@ -42,19 +41,21 @@ $button-brand-border-color                : #225995;
         color: map-get($ui-color, white);
     }
 
+    &:active {
+        box-shadow: $button-active-shadow;
+    }
+
 
     &--brand {
-        @include background($button-brand-gradient);
+        background: map-get($background-color, brand);
         border-color: $button-brand-border-color;
 
         &:hover {
-            box-shadow: $button-hover-shadow;
             background: #147EC7;
             border-color: #1C487D;
         }
 
         &:active {
-            box-shadow: $button-hover-shadow;
             background: #1375B9;
             border-color: #1C487D;
         }
@@ -65,7 +66,7 @@ $button-brand-border-color                : #225995;
     // Button color variations.
 
     &--primary {
-        @include background(linear-gradient(#90B71C, #7FA119));
+        background: #87ab1b;
         border-color: #7E9339;
 
         &:hover {
@@ -80,7 +81,7 @@ $button-brand-border-color                : #225995;
     }
 
     &--secondary {
-        @include background(linear-gradient(#FFF, #EEE));
+        background: #f6f6f6;
         color: #888;
         border-color: #CACACA;
 
@@ -90,7 +91,7 @@ $button-brand-border-color                : #225995;
         }
 
         &:active {
-            background: #f7f7f7;
+            background: #eee;
             border-color: #b8b8b8;
         }
 
@@ -103,7 +104,7 @@ $button-brand-border-color                : #225995;
     }
 
     &--danger {
-        @include background(linear-gradient(#AB290D, #93230b));
+        background: #9d250c;
         border-color: #93230b;
 
         &:hover {

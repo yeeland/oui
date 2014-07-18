@@ -18,6 +18,7 @@
 
     > li {
         padding: spacer(.5) spacer(1);
+        border-bottom: 1px solid map-get($ui-color, base);
     }
 }
 
@@ -33,23 +34,12 @@
     margin-right: -(spacer(1));
 }
 
-// ## Block List Ruled
-// List that has ruled lines after each list item.
-
-%block-list--rule,
-.block-list--rule {
-    > li {
-        border-bottom: 1px solid map-get($ui-color, base);
-    }
-}
-
 // ## Block List Group
 // Extends ruled list to create a self-contained grouping.
 
 %block-list-group,
 .block-list-group {
     @extend %block-list;
-    @extend %block-list--rule;
     border: 1px solid map-get($ui-color, base);
     border-radius: map-get($border-radius, base);
 

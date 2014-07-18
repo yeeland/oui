@@ -27,7 +27,6 @@
 @import "partials/elements/media";
 @import "partials/elements/nav";
 @import "partials/elements/row";
-@import "partials/elements/split";
 @import "partials/elements/stats";
 
 // ## UI Objects
@@ -47,7 +46,10 @@
 @import "partials/ui-objects/pagination";
 @import "partials/ui-objects/preloader";
 @import "partials/ui-objects/progress";
+@import "partials/ui-objects/pop-tip";
+@import "partials/ui-objects/pop-upsell";
 @import "partials/ui-objects/rules";
+@import "partials/ui-objects/tabs";
 @import "partials/ui-objects/type";
 
 // ## Core Helpers

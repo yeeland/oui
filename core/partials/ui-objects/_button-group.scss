@@ -102,7 +102,7 @@ $button-group-offset: 4px;
 
             &:hover,
             &:active {
-                @include background($button-brand-gradient);
+                background: map-get($background-color, brand);
                 box-shadow: none;
             }
 

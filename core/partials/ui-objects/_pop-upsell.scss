@@ -1,0 +1,46 @@
+// # Poptips
+// Information bubbles on hover. Almost always used with postition: absolute.
+
+$pop-upsell-background: map-get($ui-color, white);
+$pop-upsell-border: map-get($ui-color, base);
+
+.pop-upsell {
+    @extend %block-list-group;
+    max-width: 250px;
+    display: inline-block;
+    box-shadow: 0 2px map-get($box-shadow, light);
+
+    &__content {
+        @extend %kill-last-child-margin;
+    }
+
+    &__title {
+        font-weight: map-get($font-weight, bold);
+    }
+
+    &__link {
+        background: map-get($background-color, faint);
+
+        a {
+            @extend %block-list__link;
+        }
+    }
+
+    // Arrow options.
+
+    &--arrow-top {
+        @include arrow(top, center, $pop-upsell-background, $pop-upsell-border);
+    }
+
+    &--arrow-bottom {
+        @include arrow(bottom, center, map-get($background-color, faint), $pop-upsell-border);
+    }
+
+    &--arrow-left {
+        @include arrow(left, center, $pop-upsell-background, $pop-upsell-border);
+    }
+
+    &--arrow-right {
+        @include arrow(right, center, $pop-upsell-background, $pop-upsell-border);
+    }
+}
