@@ -10,12 +10,11 @@
 //     </ul>
 //[/hc]
 
-%row,
-.row {
+%lego-row,
+.lego-row {
     @extend %flex;
-}
 
-%row--spread,
-.row--spread {
-    @extend %justify--space-between;
+    &--spread {
+        @extend %justify--space-between;
+    }
 }

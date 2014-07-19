@@ -11,8 +11,8 @@
 //     </ul>
 // [/hc]
 
-%block-list,
-.block-list {
+%lego-block-list,
+.lego-block-list {
     list-style: none;
     margin-left: 0;
 
@@ -20,26 +20,26 @@
         padding: spacer(.5) spacer(1);
         border-bottom: 1px solid map-get($ui-color, base);
     }
+
+    // For links that will take up full space of list item.
+
+    &__link {
+        display: block;
+        padding: spacer(.5) spacer(1);
+        margin-top: -(spacer(.5));
+        margin-bottom: -(spacer(.5));
+        margin-left: -(spacer(1));
+        margin-right: -(spacer(1));
+    }
 }
 
-// For links that will take up full space of list item.
-
-%block-list__link,
-.block-list__link {
-    display: block;
-    padding: spacer(.5) spacer(1);
-    margin-top: -(spacer(.5));
-    margin-bottom: -(spacer(.5));
-    margin-left: -(spacer(1));
-    margin-right: -(spacer(1));
-}
 
 // ## Block List Group
 // Extends ruled list to create a self-contained grouping.
 
-%block-list-group,
-.block-list-group {
-    @extend %block-list;
+%lego-block-list-group,
+.lego-block-list-group {
+    @extend %lego-block-list;
     border: 1px solid map-get($ui-color, base);
     border-radius: map-get($border-radius, base);
 

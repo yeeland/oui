@@ -1,8 +1,8 @@
 // # Drop Target
 // Creates a drop area for drag/drop usage. Height can be adjusted.
 
-%drop-target,
-.drop-target {
+%lego-drop-target,
+.lego-drop-target {
     @extend %island--center;
     border: 3px dashed map-get($ui-color, light);
     border-radius: map-get($border-radius, big);

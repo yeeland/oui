@@ -1,7 +1,7 @@
 // # Breadcrumb
 // Indicate the current page's location.
 
-.breadcrumbs {
+.lego-breadcrumb {
     @extend %flex;
     background: map-get($background-color, light);
     border-radius: map-get($border-radius, base);
@@ -15,7 +15,7 @@
         }
     }
 
-    .breadcrumb__active {
+    &__active {
         color: map-get($font-color, medium);
     }
 }

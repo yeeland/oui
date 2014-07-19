@@ -4,8 +4,8 @@
 $pop-upsell-background: map-get($ui-color, white);
 $pop-upsell-border: map-get($ui-color, base);
 
-.pop-upsell {
-    @extend %block-list-group;
+.lego-pop-upsell {
+    @extend %lego-block-list-group;
     max-width: 250px;
     display: inline-block;
     box-shadow: 0 2px map-get($shadow, light);
@@ -22,7 +22,7 @@ $pop-upsell-border: map-get($ui-color, base);
         background: map-get($background-color, faint);
 
         a {
-            @extend %block-list__link;
+            @extend %lego-block-list__link;
         }
     }
 

@@ -21,10 +21,10 @@
 
 %stat-group,
 .stat-group {
-    @extend %grid;
+    @extend %lego-grid;
 }
 
 %stat,
 .stat {
-    @extend %grid__cell;
+    @extend %lego-grid__cell;
 }

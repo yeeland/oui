@@ -3,15 +3,16 @@
 
 // We use this group to wrap button and the dropdown.
 
-.dropdown-group {
+.lego-dropdown-group {
     font-size: map-get($font-size, base);
     display: inline-block;
     position: relative;
     vertical-align: top;
 }
 
-.dropdown {
-    @extend %block-list-group;
+%lego-dropdown,
+.lego-dropdown {
+    @extend %lego-block-list-group;
     background: map-get($background-color, white);
     box-shadow: 0 2px map-get($shadow, light);
     min-width: 100%;
@@ -27,7 +28,7 @@
     }
 
     a {
-        @extend %block-list__link;
+        @extend %lego-block-list__link;
     }
 
     &--right {

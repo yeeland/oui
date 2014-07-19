@@ -3,7 +3,7 @@
 
 $pop-tip-background: map-get($ui-color, dark);
 
-.pop-tip {
+.lego-pop-tip {
     background: $pop-tip-background;
     color: map-get($font-color, white);
     border-radius: map-get($border-radius, base);

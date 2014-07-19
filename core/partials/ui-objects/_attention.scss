@@ -1,7 +1,7 @@
 // Attention
 // Boxes for highlighting important information or warnings.
 
-.attention {
+.lego-attention {
     @extend %kill-last-child-margin;
     padding: spacer(1);
     margin-bottom: spacer(2);

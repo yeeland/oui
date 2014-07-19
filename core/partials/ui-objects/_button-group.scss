@@ -17,12 +17,12 @@
 
 $button-group-offset: 4px;
 
-%button-group,
-.button-group {
+%lego-button-group,
+.lego-button-group {
 
     &--left {
 
-        .button {
+        .lego-button {
             margin-right: spacer(2) - $button-group-offset;
         }
     }
@@ -31,7 +31,7 @@ $button-group-offset: 4px;
     &--right {
         text-align: right;
 
-        .button {
+        .lego-button {
             margin-left: spacer(2) - $button-group-offset;
         }
     }
@@ -39,22 +39,22 @@ $button-group-offset: 4px;
     &--center {
         text-align: center;
 
-        .button {
+        .lego-button {
             margin-left: spacer(.5);
             margin-right: spacer(.5);
         }
     }
 
     &--flush {
-        @extend %grid;
+        @extend %lego-grid;
         @extend %flex-wrap--nowrap;
 
-        .button {
+        .lego-button {
             margin-left: 0;
             border-radius: 0;
         }
 
-        > .button {
+        > .lego-button {
             &:not(:last-child) {
                 border-right: none;
             }
@@ -71,12 +71,12 @@ $button-group-offset: 4px;
 
         .dropdown-group {
             &:not(:last-child) {
-                .button {
+                .lego-button {
                     border-radius: 0;
                     border-right: none;
                 }
             }
-            &:last-child .button {
+            &:last-child .lego-button {
                 border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
             }
         }
@@ -84,19 +84,19 @@ $button-group-offset: 4px;
 
 
     &--toggle {
-        @extend %button-group--flush;
+        @extend %lego-button-group--flush;
 
-        .button {
-            @extend %button--small;
+        .lego-button {
+            @extend %lego-button--small;
         }
 
         // This is needed due to CSS source order.
-        .button:not(.button-toggle__active) {
-            @extend %button--secondary;
+        .lego-button:not(.lego-button-toggle__active) {
+            @extend %lego-button--secondary;
         }
 
-        .button-toggle__active {
-            @extend %button--brand;
+        .lego-button-toggle__active {
+            @extend %lego-button--brand;
             border-color: $button-brand-border-color;
             cursor: default;
 
@@ -106,7 +106,7 @@ $button-group-offset: 4px;
                 box-shadow: none;
             }
 
-            + .button {
+            + .lego-button {
                 border-left: none;
             }
         }

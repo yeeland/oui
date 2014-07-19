@@ -14,8 +14,8 @@ $button-active-shadow                     : inset 0px 0px map-get($shadow, base)
 
 $button-brand-border-color                : #225995;
 
-%button,
-.button {
+%lego-button,
+.lego-button {
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
@@ -139,26 +139,25 @@ $button-brand-border-color                : #225995;
         padding-right: spacer(1);
         padding-left: spacer(1);
     }
+    // ## Inactive Button
+    // Disabled state.
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active,
+    &[disabled]:focus,
+    &--disabled,
+    &--disabled:hover,
+    &--disabled:active,
+    &--disabled:focus {
+        background: none !important;
+        background-color: map-get($background-color, light) !important;
+        color: map-get($font-color, light) !important;
+        cursor: default;
+        top: 0;
+        border-color: map-get($ui-color, base);
+        box-shadow: none;
+    }
 }
 
 
-
-// ## Inactive Button
-// Disabled state.
-
-.button[disabled],
-.button[disabled]:hover,
-.button[disabled]:active,
-.button[disabled]:focus,
-.button--disabled,
-.button--disabled:hover,
-.button--disabled:active,
-.button--disabled:focus {
-    background: none !important;
-    background-color: map-get($background-color, light) !important;
-    color: map-get($font-color, light) !important;
-    cursor: default;
-    top: 0;
-    border-color: map-get($ui-color, base);
-    box-shadow: none;
-}
