@@ -6,43 +6,40 @@
 //     <div>Nav down <span class="arrow-inline--down"></span></div>
 //[/hc]
 
-%arrow-inline {
+%lego-arrow-inline,
+.lego-arrow-inline {
     display: inline-block;
     position: relative;
     top: -0.1em;
     font-family: Arial, sans;
     font-size: .7em;
-}
 
-%arrow-inline--up,
-.arrow-inline--up {
-    @extend %arrow-inline;
+    &--up {
+        @extend %lego-arrow-inline;
 
-    &:before {
-        content: map-get($arrow-entity, up);
+        &:before {
+            content: map-get($arrow-entity, up);
+        }
     }
-}
 
-%arrow-inline--down,
-.arrow-inline--down {
-    @extend %arrow-inline;
-    &:before {
-        content: map-get($arrow-entity, down);
+    &--down {
+        @extend %lego-arrow-inline;
+        &:before {
+            content: map-get($arrow-entity, down);
+        }
     }
-}
 
-%arrow-inline--right,
-.arrow-inline--right {
-    @extend %arrow-inline;
-    &:before {
-        content: map-get($arrow-entity, right);
+    &--right {
+        @extend %lego-arrow-inline;
+        &:before {
+            content: map-get($arrow-entity, right);
+        }
     }
-}
 
-%arrow-inline--left,
-.arrow-inline--left {
-    @extend %arrow-inline;
-    &:before {
-        content: map-get($arrow-entity, left);
+    &--left {
+        @extend %lego-arrow-inline;
+        &:before {
+            content: map-get($arrow-entity, left);
+        }
     }
 }

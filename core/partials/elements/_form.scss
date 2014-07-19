@@ -6,13 +6,13 @@
 // class to target any/every one, e.g.:
 
 // [c]
-//      <input type="text" class="text-input">
-//      <input type="email" class="text-input">
-//      <input type="password" class="text-input">
+//      <input type="text" class="lego-text-input">
+//      <input type="email" class="lego-text-input">
+//      <input type="password" class="lego-text-input">
 // [/c]
 
-.text-input,
-textarea {
+.lego-text-input,
+.lego-textarea {
     width: 100%;
     border: 1px solid map-get($ui-color, base);
     border-radius: map-get($border-radius, base);
@@ -25,25 +25,25 @@ textarea {
     }
 }
 
-textarea {
+.lego-textarea {
     resize: vertical;
 }
 
-.form__header {
+.lego-form__header {
     margin-bottom: spacer(1);
 }
 
-.form__footer {
+.lego-form__footer {
     margin-top: spacer(3);
 }
 
-.form-fields {
+.lego-form-fields {
     @extend %kill-last-child-margin;
     list-style: none;
     margin: 0;
 }
 
-.form-field__item {
+.lego-form-field__item {
     margin-bottom: spacer(1.5);
 }
 
@@ -54,7 +54,7 @@ fieldset {
 // ## Form Field Titles
 // Used if a larger title is needed and the usual `label` won't do or is not available.
 
-.form-field__title {
+.lego-form-field__title {
     font-size: map-get($font-size, epsilon);
     margin-bottom: spacer(.5);
 }
@@ -65,8 +65,7 @@ fieldset {
 // label-like styling to meta-labels for groups of options where a `<label>`
 // element is not suitable.
 
-label,
-.label {
+.lego-label {
     display: block;
     margin-bottom: spacer(.5);
     font-weight: map-get($font-weight, normal);
@@ -75,7 +74,7 @@ label,
 
 //  Groups of checkboxes and radios.
 
-.check-list {
+.lego-input-list {
     list-style: none;
     margin: 0;
 
@@ -89,22 +88,21 @@ label,
     }
 }
 
-// Labels in check-lists
-.check-label,
-.check-list label,
-.check-list .label {
+// Labels in lego-input-lists
+.lego-check-label,
+.lego-input-list .lego-label {
     display: table-cell;
     padding-left: spacer(1);
     font-weight: map-get($font-weight, normal);
 }
 
-.input--disabled {
+.lego-input--disabled {
     background-color: map-get($background-color, light);
 }
 
-.or {
+.lego-or {
     text-align: center;
-    color: map-get($font-color, muted);
+    color: map-get($font-color, base);
     text-transform: uppercase;
     margin: spacer(1.5) auto;
     position: relative;
@@ -128,8 +126,8 @@ label,
 
 // ## Form Errors
 
-.form-error {
-    label {
+.lego-form-error {
+    .lego-label {
         color: map-get($font-color, error);
     }
 
@@ -140,61 +138,11 @@ label,
 }
 
 
-.form-note {
+.lego-form-note {
     padding-top: spacer(.5);
     font-size: map-get($font-size, micro);
 }
 
-.form-note--error {
+.lego-form-note--error {
     color: map-get($font-color, error);
 }
-
-// ## Complete Form Example
-
-// [hc]
-//     <form>
-//       <div class="form__header">
-//         <h3>Form to Fill</h3>
-//         <p>Lorem omnis quod magnam consequatur voluptatibus et sed sapiente placeat nam.</p>
-//       </div>
-//       <fieldset>
-//         <ol class="form-fields">
-//           <li class="split-fields">
-//             <div>
-//               <label>Split Inputs</label>
-//               <input type="text" placeholder="This is placeholder" type="email">
-//             </div>
-//             <div>
-//               <label>Split Inputs</label>
-//               <input type="password">
-//             </div>
-//           </li>
-//           <li>
-//              <ul class="check-list">
-//                  <li>
-//                      <input name="foo-1" id="foo-1" type="checkbox" checked /> <label for="foo-1">Checkbox 1</label>
-//                  </li>
-//                  <li>
-//                      <input name="foo-2" id="foo-2" type="checkbox" /> <label for="foo-2">Checkbox 2</label>
-//                  </li>
-//                  <li>
-//                      <input name="foo-3" id="foo-3" type="checkbox" /> <label for="foo-3">Checkbox 3</label>
-//                  </li>
-//              </ul>
-//           </li>
-//           <li>
-//             <label>Single Input</label>
-//              <input type="text" class="text-input">
-//           </li>
-//           <li>
-//             <label>Textarea</label>
-//             <textarea></textarea>
-//           </li>
-//         </ol>
-//       </fieldset>
-//       <div class="form__footer btn-group--right">
-//         <button class="btn">Cancel</button>
-//         <button class="btn btn--preferred">Submit</button>
-//       </div>
-//     </form>
-// [/hc]

@@ -601,25 +601,17 @@
     }
 }
 
-// ## Position Helper
-// Use as a wrapper inside `display: table-cell` items with children that
-// must be position absolute. Needed primariliy by Firefox.
-
-.cell-trap {
-    position: relative;
-}
-
 // ## Line Height
 // For adjusting line-heights.
 
 .line--tight {
-    line-height: map-get($line-height, tight);
+    line-height: map-get($line-height, tight) !important;
 }
 
 .line--loose {
-    line-height: map-get($line-height, loose);
+    line-height: map-get($line-height, loose) !important;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
