@@ -23,12 +23,23 @@
     margin-top: 2px;
     text-align: left;
 
-    &__item {
-        white-space: nowrap;
-    }
-
     a {
         @extend %lego-block-list__link;
+    }
+
+    &__item {
+        white-space: nowrap;
+        color: map-get($font-color, base);
+    }
+
+    &__item--freeform {
+        white-space: normal;
+
+        a {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
     }
 
     &--right {

@@ -27,8 +27,15 @@
 %flex-wrap--nowrap,
 .flex-wrap--nowrap {
     -webkit-flex-wrap: nowrap; // Safari
-    -ms-flex-wrap: nowwrap; // IE 10
+    -ms-flex-wrap: nowrap; // IE 10
     flex-wrap: nowrap;
+}
+
+%flex-direction--column,
+.flex-direction--column {
+    -webkit-flex-direction: column; // Safari
+    -ms-flex-direction: column; // IE 10
+    flex-direction: column;
 }
 
 %justify--space-between,
