@@ -1,8 +1,11 @@
 // # Tabss
-// Creates a set of tabss.
+// Creates a set of tabs.
+
+$tab-border-color: map-get($ui-color, medium);
 
 .lego-tabs {
 
+    // This is where the content goes.
     &__content {
         display: none;
 
@@ -11,6 +14,7 @@
         }
     }
 
+    // Small set of tabs.
     &--small {
         .lego-tabs-nav__item {
             margin-right: spacer(.5);
@@ -20,9 +24,11 @@
     }
 }
 
+
+// These are the navigation tab items.
 .lego-tabs-nav {
     @extend %flex;
-    border-bottom: 1px solid map-get($ui-color, dark);
+    border-bottom: 1px solid $tab-border-color;
     margin-bottom: spacer(2);
 
     &__item {
@@ -42,12 +48,11 @@
 
         &:hover,
         &--active {
-            border-right: 1px solid map-get($ui-color, dark);
-            border-color: map-get($ui-color, dark);
+            border-color: $tab-border-color;
             background: map-get($background-color, white);
             color: map-get($font-color, base);
 
-            // Provides the whit bar under the active tab.
+            // Provides the white bar under the active tab.
             &:after {
                 content: "";
                 display: block;

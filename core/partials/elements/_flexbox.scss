@@ -59,3 +59,10 @@
     align-items: flex-end;
 }
 
+%align-items--flex-start,
+.align-items--flex-start {
+    -webkit-align-items: flex-start; // Safari
+    -ms-flex-align: start; // IE 10
+    align-items: flex-start;
+}
+

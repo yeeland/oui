@@ -3,51 +3,50 @@
 // blocks of all patterns and are width and layout independent. Refinements are made in the
 // the partials found in the `layout` directory.
 
+// ## Elements
+// Abstractions that provide basic structure, generally extended into larger objects.
+
+@import "partials/elements/mixins";
+@import "partials/elements/clearfix";
+@import "partials/elements/flexbox";
+@import "partials/elements/grid";
+@import "partials/elements/row";
+
 // ## Base
 // Baseline rules.
 
-@import "partials/base/mixins";
 @import "partials/base/reset";
 @import "partials/base/main";
 
+@import "partials/base/form";
 @import "partials/base/images";
 @import "partials/base/links";
 @import "partials/base/lists";
 @import "partials/base/tables";
+@import "partials/base/type";
 
-// ## Elements
-// Abstractions that provide basic structure, generally extended into larger objects.
-
-@import "partials/elements/clearfix";
-@import "partials/elements/block-list";
-@import "partials/elements/flexbox";
-@import "partials/elements/form";
-@import "partials/elements/grid";
-@import "partials/elements/island";
-@import "partials/elements/media";
-@import "partials/elements/nav";
-@import "partials/elements/row";
-@import "partials/elements/stats";
-
-// ## UI Objects
+// ## Objects
 // Simple styled objects that can be extended or used directly in HTML.
-// Import only the files you need.
 
-@import "partials/ui-objects/attention";
-@import "partials/ui-objects/arrows";
-@import "partials/ui-objects/arrows-inline";
-@import "partials/ui-objects/breadcrumbs";
-@import "partials/ui-objects/buttons";
-@import "partials/ui-objects/button-group";
-@import "partials/ui-objects/borders";
-@import "partials/ui-objects/dropdown";
-@import "partials/ui-objects/drop-target";
-@import "partials/ui-objects/dialog";
-@import "partials/ui-objects/pagination";
-@import "partials/ui-objects/preloader";
-@import "partials/ui-objects/progress";
-@import "partials/ui-objects/pop-tip";
-@import "partials/ui-objects/pop-upsell";
-@import "partials/ui-objects/rules";
-@import "partials/ui-objects/tabs";
-@import "partials/ui-objects/type";
+@import "partials/objects/block-list";
+@import "partials/objects/attention";
+@import "partials/objects/arrows";
+@import "partials/objects/arrows-inline";
+@import "partials/objects/breadcrumbs";
+@import "partials/objects/buttons";
+@import "partials/objects/button-group";
+@import "partials/objects/borders";
+@import "partials/objects/dropdown";
+@import "partials/objects/drop-target";
+@import "partials/objects/dialog";
+@import "partials/objects/island";
+@import "partials/objects/media";
+@import "partials/objects/nav";
+@import "partials/objects/pagination";
+@import "partials/objects/preloader";
+@import "partials/objects/progress";
+@import "partials/objects/pop-tip";
+@import "partials/objects/pop-upsell";
+@import "partials/objects/rules";
+@import "partials/objects/stats";
+@import "partials/objects/tabs";

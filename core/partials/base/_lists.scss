@@ -2,8 +2,8 @@
 // Because we most commoly use `ol/ul` without the default styling we're providing
 // classes to add bullets/numbers.
 
-%list,
-.list {
+%lego-list,
+.lego-list {
     margin-left: spacer(2.5);
     margin-bottom: spacer(1);
 
