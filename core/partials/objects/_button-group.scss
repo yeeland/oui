@@ -23,7 +23,7 @@ $button-group-offset: 4px;
     &--left {
 
         .lego-button {
-            margin-right: spacer(2) - $button-group-offset;
+            margin-right: spacer(1) - $button-group-offset;
         }
     }
 
@@ -32,7 +32,7 @@ $button-group-offset: 4px;
         text-align: right;
 
         .lego-button {
-            margin-left: spacer(2) - $button-group-offset;
+            margin-left: spacer(1) - $button-group-offset;
         }
     }
 
