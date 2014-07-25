@@ -21,6 +21,14 @@
         }
     }
 
+    &--gutter--narrow {
+        margin-left: -(spacer(1));
+
+        > .lego-grid__cell {
+            padding-left: spacer(1);
+        }
+    }
+
     &--gutter--wide {
         margin-left: -(spacer(4));
 

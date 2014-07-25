@@ -27,8 +27,8 @@
 //     </div>
 //[/hc]
 
-%media,
-.media {
+%lego-media,
+.lego-media {
     @extend %flex;
     @extend %align-items--flex-start;
 
