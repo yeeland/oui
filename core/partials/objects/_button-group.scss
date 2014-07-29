@@ -24,6 +24,10 @@ $button-group-offset: 4px;
 
         .lego-button {
             margin-right: spacer(1) - $button-group-offset;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
@@ -33,6 +37,10 @@ $button-group-offset: 4px;
 
         .lego-button {
             margin-left: spacer(1) - $button-group-offset;
+
+            &:first-child {
+                margin-left: 0;
+            }
         }
     }
 
@@ -62,6 +70,7 @@ $button-group-offset: 4px;
             &:first-child {
                 border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
             }
+
             &:last-child {
                 border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
             }
@@ -76,6 +85,7 @@ $button-group-offset: 4px;
                     border-right: none;
                 }
             }
+
             &:last-child .lego-button {
                 border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
             }
