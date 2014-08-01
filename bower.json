@@ -1,0 +1,23 @@
+{
+  "name": "lego",
+  "version": "0.0.0",
+  "homepage": "https://github.com/optimizely/lego",
+  "authors": [
+    "Cheston Lee <cheston@optimizely.com>"
+  ],
+  "description": "CSS/JS library for Optimizely",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "expect": "~0.3.1",
+    "mocha": "~1.21.3",
+    "requirejs": "~2.1.14",
+    "sinon": "~1.10.3"
+  }
+}
