@@ -3,17 +3,17 @@
 
 %lego-rule,
 .lego-rule {
-    border: 0;
-    height: 0;
-    border-top: 1px solid map-get($ui-color, base);
-    margin-top: spacer(1) - 1px;
-    margin-bottom: spacer(1);
+  border: 0;
+  height: 0;
+  border-top: 1px solid map-get($ui-color, base);
+  margin-top: spacer(1) - 1px;
+  margin-bottom: spacer(1);
 
-    &--dotted {
-        border-top-style: dotted;
-    }
+  &--dotted {
+    border-top-style: dotted;
+  }
 
-    &--dashed {
-        border-top-style: dashed;
-    }
+  &--dashed {
+    border-top-style: dashed;
+  }
 }

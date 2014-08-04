@@ -4,29 +4,29 @@
 $lego-pop-tip-background: map-get($ui-color, dark);
 
 .lego-pop-tip {
-    background: $lego-pop-tip-background;
-    color: map-get($font-color, white);
-    border-radius: map-get($border-radius, base);
-    font-size: map-get($font-size, micro);
-    padding: spacer(.5) spacer(1);
-    max-width: 250px;
-    display: inline-block;
+  background: $lego-pop-tip-background;
+  color: map-get($font-color, white);
+  border-radius: map-get($border-radius, base);
+  font-size: map-get($font-size, micro);
+  padding: spacer(.5) spacer(1);
+  max-width: 250px;
+  display: inline-block;
 
-    // Arrow options.
+  // Arrow options.
 
-    &--arrow-top {
-        @include arrow(top, center, $lego-pop-tip-background);
-    }
+  &--arrow-top {
+    @include arrow(top, center, $lego-pop-tip-background);
+  }
 
-    &--arrow-bottom {
-        @include arrow(bottom, center, $lego-pop-tip-background);
-    }
+  &--arrow-bottom {
+    @include arrow(bottom, center, $lego-pop-tip-background);
+  }
 
-    &--arrow-left {
-        @include arrow(left, center, $lego-pop-tip-background);
-    }
+  &--arrow-left {
+    @include arrow(left, center, $lego-pop-tip-background);
+  }
 
-    &--arrow-right {
-        @include arrow(right, center, $lego-pop-tip-background);
-    }
+  &--arrow-right {
+    @include arrow(right, center, $lego-pop-tip-background);
+  }
 }

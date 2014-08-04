@@ -13,37 +13,36 @@
 
 %lego-block-list,
 .lego-block-list {
-    list-style: none;
-    margin-left: 0;
+  list-style: none;
+  margin-left: 0;
 
-    > li {
-        padding: spacer(.5) spacer(1);
-        border-bottom: 1px solid map-get($ui-color, base);
-    }
+  > li {
+    padding: spacer(.5) spacer(1);
+    border-bottom: 1px solid map-get($ui-color, base);
+  }
 
-    // For links that will take up full space of list item.
+  // For links that will take up full space of list item.
 
-    &__link {
-        display: block;
-        padding: spacer(.5) spacer(1);
-        margin-top: -(spacer(.5));
-        margin-bottom: -(spacer(.5));
-        margin-left: -(spacer(1));
-        margin-right: -(spacer(1));
-    }
+  &__link {
+    display: block;
+    padding: spacer(.5) spacer(1);
+    margin-top: -(spacer(.5));
+    margin-bottom: -(spacer(.5));
+    margin-left: -(spacer(1));
+    margin-right: -(spacer(1));
+  }
 }
-
 
 // ## Block List Group
 // Extends ruled list to create a self-contained grouping.
 
 %lego-block-list-group,
 .lego-block-list-group {
-    @extend %lego-block-list;
-    border: 1px solid map-get($ui-color, base);
-    border-radius: map-get($border-radius, base);
+  @extend %lego-block-list;
+  border: 1px solid map-get($ui-color, base);
+  border-radius: map-get($border-radius, base);
 
-    > li:last-child {
-        border: none;
-    }
+  > li:last-child {
+    border: 0;
+  }
 }

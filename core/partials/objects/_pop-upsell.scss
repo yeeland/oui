@@ -5,43 +5,43 @@ $pop-upsell-background: map-get($ui-color, white);
 $pop-upsell-border: map-get($ui-color, base);
 
 .lego-pop-upsell {
-    @extend %lego-block-list-group;
-    max-width: 250px;
-    display: inline-block;
-    box-shadow: 0 2px map-get($shadow, light);
+  @extend %lego-block-list-group;
+  max-width: 250px;
+  display: inline-block;
+  box-shadow: 0 2px map-get($shadow, light);
 
-    &__content {
-        @extend %kill-last-child-margin;
+  &__content {
+    @extend %kill-last-child-margin;
+  }
+
+  &__title {
+    font-weight: map-get($font-weight, bold);
+  }
+
+  &__link {
+    background: map-get($background-color, brand);
+
+    a {
+      @extend %lego-block-list__link;
+      color: map-get($font-color, white);
     }
+  }
 
-    &__title {
-        font-weight: map-get($font-weight, bold);
-    }
+  // Arrow options.
 
-    &__link {
-        background: map-get($background-color, brand);
+  &--arrow-top {
+    @include arrow(top, center, $pop-upsell-background, $pop-upsell-border);
+  }
 
-        a {
-            @extend %lego-block-list__link;
-            color: map-get($font-color, white);
-        }
-    }
+  &--arrow-bottom {
+    @include arrow(bottom, center, map-get($background-color, brand), map-get($background-color, brand));
+  }
 
-    // Arrow options.
+  &--arrow-left {
+    @include arrow(left, center, $pop-upsell-background, $pop-upsell-border);
+  }
 
-    &--arrow-top {
-        @include arrow(top, center, $pop-upsell-background, $pop-upsell-border);
-    }
-
-    &--arrow-bottom {
-        @include arrow(bottom, center, map-get($background-color, brand), map-get($background-color, brand));
-    }
-
-    &--arrow-left {
-        @include arrow(left, center, $pop-upsell-background, $pop-upsell-border);
-    }
-
-    &--arrow-right {
-        @include arrow(right, center, $pop-upsell-background, $pop-upsell-border);
-    }
+  &--arrow-right {
+    @include arrow(right, center, $pop-upsell-background, $pop-upsell-border);
+  }
 }
