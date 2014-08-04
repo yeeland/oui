@@ -18,14 +18,15 @@
 
 %lego-nav,
 .lego-nav {
-    @extend %flex;
+  @extend %flex;
 
-    > li {
-        margin-right: spacer(1);
-        > a {
-            display: block;
-        }
+  > li {
+    margin-right: spacer(1);
+
+    > a {
+      display: block;
     }
+  }
 
 // ## Nav Stacked
 
@@ -39,13 +40,13 @@
 //     </ul>
 //[/hc]
 
-    &--stacked {
-        display: block;
+  &--stacked {
+    display: block;
 
-        > li {
-            margin-right: 0;
-        }
+    > li {
+      margin-right: 0;
     }
+  }
 
 // ## Nav Banner
 
@@ -59,14 +60,14 @@
 //     </ul>
 //[/hc]
 
-    &--banner {
-        @extend %justify--center;
+  &--banner {
+    @extend %justify--center;
 
-        > li {
-            margin-left: spacer(.5);
-            margin-right: spacer(.5);
-        }
+    > li {
+      margin-left: spacer(.5);
+      margin-right: spacer(.5);
     }
+  }
 
 // ## Nav Fit
 
@@ -82,15 +83,15 @@
 //     </ul>
 //[/hc]
 
-    &--fit {
-        @extend %flex;
+  &--fit {
+    @extend %flex;
 
-        > li {
-            @extend %flex-1;
+    > li {
+      @extend %flex-1;
 
-            > a {
-                display: block;
-            }
-        }
+      > a {
+        display: block;
+      }
     }
+  }
 }

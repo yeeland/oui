@@ -13,6 +13,9 @@ Currently this repo contains the modular Sass library that will serve as the fou
     - `gem install compass --pre`
 - Gulp
     - `npm install`
+- SCSS Lint
+    - `gem install scss-lint`
+
 
 ## Build
 

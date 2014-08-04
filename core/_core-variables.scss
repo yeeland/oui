@@ -7,7 +7,7 @@
 // variables below that use these black and grey values.
 
 $base-black             : #000;
-$base-white             : #FFF;
+$base-white             : #fff;
 $grey-90                : tint($base-black, 10%);
 $grey-85                : tint($base-black, 15%);
 $grey-80                : tint($base-black, 20%);
@@ -26,125 +26,125 @@ $grey-03                : tint($base-black, 97%);
 
 
 $ui-color: (
-    // Blacks & grays
-    base                : $grey-12,
-    white               : $base-white,
-    light               : $grey-07,
-    medium              : $grey-50,
-    dark                : $grey-85,
-    black               : $base-black,
+  // Blacks & grays
+  base                : $grey-12,
+  white               : $base-white,
+  light               : $grey-07,
+  medium              : $grey-50,
+  dark                : $grey-85,
+  black               : $base-black,
 
-    // Colors
-    brand               : #006EB6,
-    brand-dark          : #003366,
-    warning             : #F7ECB5,
-    error               : #C1272D,
-    good-news           : #90B71C
+  // Colors
+  brand               : #006eb6,
+  brand-dark          : #036,
+  warning             : #f7ecb5,
+  error               : #c1272d,
+  good-news           : #90b71c
 );
 
 // ### Link Colors
 // For anchor links.
 
 $link-color: (
-    base                : map-get($ui-color, brand),
-    brand               : map-get($ui-color, brand)
+  base                : map-get($ui-color, brand),
+  brand               : map-get($ui-color, brand)
 );
 
 // ### Background colors
 
 $background-color: (
-    base                : $grey-80,
-    white               : $base-white,
-    faint               : $grey-03,
-    light               : $grey-07,
-    muted               : $grey-35,
-    medium              : $grey-50,
+  base                : $grey-80,
+  white               : $base-white,
+  faint               : $grey-03,
+  light               : $grey-07,
+  muted               : $grey-35,
+  medium              : $grey-50,
 
-    brand               : map-get($ui-color, brand),
-    brand-dark          : map-get($ui-color, brand-dark),
-    warning             : lighten(#F7ECB5, 10%),
-    error               : lighten(#C1272D, 48%),
-    good-news           : lighten(#90B71C, 10%)
+  brand               : map-get($ui-color, brand),
+  brand-dark          : map-get($ui-color, brand-dark),
+  warning             : lighten(#f7ecb5, 10%),
+  error               : lighten(#c1272d, 48%),
+  good-news           : lighten(#90b71c, 10%)
 );
 
 // ### Font Colors
 
 $font-color: (
-    base                : $grey-85,
-    white               : $base-white,
-    light               : $grey-25,
-    muted               : $grey-35,
-    medium              : $grey-50,
-    dark                : $grey-85,
+  base                : $grey-85,
+  white               : $base-white,
+  light               : $grey-25,
+  muted               : $grey-35,
+  medium              : $grey-50,
+  dark                : $grey-85,
 
-    brand               : map-get($ui-color, brand),
-    brand-dark          : map-get($ui-color, brand-dark),
-    warning             : map-get($ui-color, warning),
-    error               : map-get($ui-color, error),
-    good-news           : map-get($ui-color, good-news)
+  brand               : map-get($ui-color, brand),
+  brand-dark          : map-get($ui-color, brand-dark),
+  warning             : map-get($ui-color, warning),
+  error               : map-get($ui-color, error),
+  good-news           : map-get($ui-color, good-news)
 );
 
 // ## Fonts
 // ### Font Family
 
 $font-family: (
-    base                : unquote("'Gotham SSm A', 'Gotham SSm B', Helvetica, Verdana, sans-serif"),
-    monospace           : monospace
+  base                : unquote("'Gotham SSm A', 'Gotham SSm B', Helvetica, Verdana, sans-serif"),
+  monospace           : monospace
 );
 
 // ### Font Sizes
 
 $font-size: (
-    base                : 12px,
-    micro               : 10px,
-    milli               : 11px,
+  base                : 12px,
+  micro               : 10px,
+  milli               : 11px,
 
-    // Heading sizes
-    alpha               : 50px, // h1
-    beta                : 42px, // h2
-    gamma               : 30px, // h3
-    delta               : 20px, // h4
-    epsilon             : 16px, // h5
-    zeta                : 12px, // h6
+  // Heading sizes
+  alpha               : 50px, // h1
+  beta                : 42px, // h2
+  gamma               : 30px, // h3
+  delta               : 20px, // h4
+  epsilon             : 16px, // h5
+  zeta                : 12px, // h6
 
-    // Extra large fonts
-    kilo                : 70px,
-    mega                : 86px,
-    giga                : 96px
+  // Extra large fonts
+  kilo                : 70px,
+  mega                : 86px,
+  giga                : 96px
 );
 
 // ### Line Heights
 // Specifying variable instead of inside map so it can be used by line-height mixin.
 
 $line-height: (
-    base                : 1.6,
-    tight               : 1.2,
-    loose               : 1.8
+  base                : 1.6,
+  tight               : 1.2,
+  loose               : 1.8
 );
 
 // ### Font Weights
 
 $font-weight: (
-    light               : 300,
-    normal              : 400,
-    bold                : 500
+  light               : 300,
+  normal              : 400,
+  bold                : 500
 );
 
 // ### Font Spacing
 
 $letter-spacing: (
-    loose               : 1px,
-    tight               : -1px,
-    extra-tight         : -2px
+  loose               : 1px,
+  tight               : -1px,
+  extra-tight         : -2px
 );
 
 // ## UI Elements
 // ### Rounded corners.
 
 $border-radius: (
-    base                : 2px,
-    big                 : 4px,
-    full                : 50%
+  base                : 2px,
+  big                 : 4px,
+  full                : 50%
 );
 
 
@@ -152,24 +152,24 @@ $border-radius: (
 // Create a small arrow for dropdowns or disclosures.
 
 $arrow-entity: (
-    up                  : "\25B2",
-    down                : "\25BC",
-    left                : "\25C4",
-    right               : "\25BA"
+  up                  : '\25B2',
+  down                : '\25BC',
+  left                : '\25C4',
+  right               : '\25BA'
 );
 
 // ### Shadows
 
 $shadow: (
-    base                : 4px rgba(0, 0, 0, 0.2),
-    light               : 3px rgba(0, 0, 0, 0.1),
-    big                 : 8px rgba(0, 0, 0, 0.3)
+  base                : 4px rgba(0, 0, 0, .2),
+  light               : 3px rgba(0, 0, 0, .1),
+  big                 : 8px rgba(0, 0, 0, .3)
 );
 
 // ### Transitions
 
 $transition-duration: (
-    base                : 0.3s
+  base                : .3s
 );
 
 // ## Form Variables
@@ -191,11 +191,11 @@ $spacer-unit: 10px;
 // [/c]
 
 @function spacer($value) {
-    // Test to see if value is multiple of .5. If not provide warning.
-    @if ($value * 2) % 1 != 0 {
-        @warn "Spacer value must be a multiple of .5";
-        @return "Spacer value must be a multiple of .5";
-    } @else {
-        @return $spacer-unit * $value;
-    }
+  // Test to see if value is multiple of .5. If not provide warning.
+  @if ($value * 2) % 1 != 0 {
+    @warn 'Spacer value must be a multiple of .5';
+    @return 'Spacer value must be a multiple of .5';
+  } @else {
+    @return $spacer-unit * $value;
+  }
 }
