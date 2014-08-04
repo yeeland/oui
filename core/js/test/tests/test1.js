@@ -1,5 +1,3 @@
-'use strict';
-
 define(function(require) {
   var Test = require('app/directives/poptip');
   describe('this is a test', function() {

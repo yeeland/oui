@@ -2,12 +2,10 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var rjs = require('gulp-requirejs');
 var jshint = require('gulp-jshint');
-//var scsslint = require('gulp-scss-lint');
 
 var paths = {
   'scripts' : ['core/js/**/*.js', '!out/lego.min.js'],
-  'styles' : ['core/partials/**/*.scss', 'core/partials/*.scss',
-              './lego.scss', 'custom/*.scss', '!out/lego.css']
+  'styles' : ['core/partials/**/*.scss', 'core/*.scss']
 };
 
 gulp.task('lint:js', function() {
@@ -17,10 +15,10 @@ gulp.task('lint:js', function() {
 });
 
 gulp.task('lint:styles', function() {
-  // gulp.src(paths.styles)
-  //   .pipe(scsslint({
-  //     'config' : 'scss-lint.yml'
-  //   }));
+  var complete = '======        SCSS-LINT COMPLETE          =======';
+  gulp.src(paths.styles)
+  //We use shell here because the scss-lint plugin cannot handle scss-lint errors and explodes
+  .pipe(shell(['scss-lint -c scss-lint.yml ' + paths.styles.join(' ')])).on('error', function() { console.log(complete); process.exit(); });
 });
 
 gulp.task('build:styles', function() {
@@ -38,8 +36,8 @@ gulp.task('build:js', function() {
     // optimize: 'uglify2',
     optimize: 'none',
 
-    include: ['app/directives/poptip'],
-    insertRequire: ['lib/vue.js'],
+    include: ['main.js'],
+    insertRequire: ['main.js'],
     name: 'lib/almond',
     wrap: true
   }).pipe(gulp.dest('./out/'));
@@ -51,5 +49,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('lint', ['lint:styles', 'lint:js']);
+gulp.task('build', ['build:styles', 'build:js']);
 
 gulp.task('default', ['lint', 'build:styles', 'build:js']);

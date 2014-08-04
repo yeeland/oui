@@ -8,7 +8,7 @@
     optimize: 'none',
 
     include: ['app/directives/poptip'],
-    insertRequire: ['lib/vue.js'],
+    insertRequire: ['main.js'],
     name: '../../bower_components/almond/almond.js',
     wrap: true
 })
