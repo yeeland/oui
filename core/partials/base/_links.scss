@@ -9,26 +9,26 @@
 a,
 %link,
 .link {
+  color: map-get($link-color, base);
+
+  &:visited,
+  &:active {
     color: map-get($link-color, base);
+  }
 
-    &:visited,
-    &:active {
-        color: map-get($link-color, base);
-    }
-
-    &:hover {
-        color: lighten(map-get($link-color, base), 10%);
-    }
+  &:hover {
+    color: lighten(map-get($link-color, base), 10%);
+  }
 }
 
 // Targets anchors without an `href` attribute.
 a:not([href]) {
-    color: map-get($link-color, base);
+  color: map-get($link-color, base);
 
-    &:visited,
-    &:hover,
-    &:active {
-        color: map-get($link-color, base);
-        cursor: default;
-    }
+  &:visited,
+  &:hover,
+  &:active {
+    color: map-get($link-color, base);
+    cursor: default;
+  }
 }

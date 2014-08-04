@@ -12,9 +12,9 @@
 
 %lego-row,
 .lego-row {
-    @extend %flex;
+  @extend %flex;
 
-    &--spread {
-        @extend %justify--space-between;
-    }
+  &--spread {
+    @extend %justify--space-between;
+  }
 }

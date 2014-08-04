@@ -7,12 +7,13 @@ Currently this repo contains the modular Sass library that will serve as the fou
 
 ## Requirements
 
-- Sass 3.3.8
-    - `gem install sass` will update existing Sass install
-- Compass 1.0.0.alpha.19
-    - `gem install compass --pre`
-- Gulp
-    - `npm install`
+- Bundler: Run `bundle install` to satisfy the ruby deps
+  - [SASS](http://sass-lang.com/)
+  - [Compass](http://compass-style.org/)
+  - [SCSS-Lint](https://github.com/causes/scss-lint)
+
+- NPM: Run  `npm install` to satisfy the node deps
+  - [Gulp](http://gulpjs.com/)
 
 ## Build
 

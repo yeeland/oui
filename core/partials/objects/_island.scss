@@ -10,13 +10,13 @@
 
 %island,
 .island {
-    border-radius: map-get($border-radius, base);
-    padding: spacer(1);
-    @extend %kill-last-child-margin;
+  @extend %kill-last-child-margin;
+  border-radius: map-get($border-radius, base);
+  padding: spacer(1);
 
-    &--center {
-        text-align: center;
-    }
+  &--center {
+    text-align: center;
+  }
 }
 
 // ## Islet
@@ -30,10 +30,10 @@
 
 %islet,
 .islet {
-    @extend %island;
-    padding: spacer(.5);
+  @extend %island;
+  padding: spacer(.5);
 
-    &--center {
-        text-align: center;
-    }
+  &--center {
+    text-align: center;
+  }
 }

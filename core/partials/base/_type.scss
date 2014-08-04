@@ -34,64 +34,64 @@
 
 h1,
 .alpha {
-    @include font-size(map-get($font-size, alpha));
-    letter-spacing: map-get($letter-spacing, tight);
+  @include font-size(map-get($font-size, alpha));
+  letter-spacing: map-get($letter-spacing, tight);
 }
 
 h2,
 .beta {
-    @include font-size(map-get($font-size, beta));
-    letter-spacing: map-get($letter-spacing, tight);
+  @include font-size(map-get($font-size, beta));
+  letter-spacing: map-get($letter-spacing, tight);
 }
 
 h3,
 .gamma {
-    @include font-size(map-get($font-size, gamma));
-    letter-spacing: map-get($letter-spacing, tight);
+  @include font-size(map-get($font-size, gamma));
+  letter-spacing: map-get($letter-spacing, tight);
 }
 
 h4,
 .delta {
-    @include font-size(map-get($font-size, delta), false);
-    line-height: map-get($line-height, tight);
+  @include font-size(map-get($font-size, delta), false);
+  line-height: map-get($line-height, tight);
 }
 
 h5,
 .epsilon {
-    @include font-size(map-get($font-size, epsilon), false);
-    line-height: map-get($line-height, tight);
+  @include font-size(map-get($font-size, epsilon), false);
+  line-height: map-get($line-height, tight);
 }
 
 h6,
 .zeta {
-    @include font-size(map-get($font-size, zeta));
+  @include font-size(map-get($font-size, zeta));
 }
 
 // ## Heading Margin Defaults
 
 h1 {
-    margin-bottom: spacer(2);
+  margin-bottom: spacer(2);
 }
 
 h2 {
-    margin-bottom: spacer(2);
+  margin-bottom: spacer(2);
 }
 
 h3 {
-    margin-bottom: spacer(1.5);
+  margin-bottom: spacer(1.5);
 }
 
 h4 {
-    margin-bottom: spacer(1);
+  margin-bottom: spacer(1);
 }
 
 h5 {
-    margin-bottom: spacer(1.5);
+  margin-bottom: spacer(1.5);
 }
 
 h6 {
-    margin-bottom: spacer(.5);
-    text-transform: uppercase;
+  margin-bottom: spacer(.5);
+  text-transform: uppercase;
 }
 
 // ## Heading Group
@@ -106,8 +106,8 @@ h6 {
 //     </hgroup>
 //[/hc]
 
-hgroup .hN {
-    margin-bottom: 0;
+hgroup .hn {
+  margin-bottom: 0;
 }
 
 // ## Small Text
@@ -119,11 +119,11 @@ hgroup .hN {
 //[/c]
 
 .milli {
-    font-size: map-get($font-size, milli);
+  font-size: map-get($font-size, milli);
 }
 
 .micro {
-    font-size: map-get($font-size, micro);
+  font-size: map-get($font-size, micro);
 }
 
 
@@ -137,35 +137,35 @@ hgroup .hN {
 //[/c]
 
 .giga {
-    font-size: map-get($font-size, giga);
+  font-size: map-get($font-size, giga);
 }
 
 .mega {
-    font-size: map-get($font-size, mega);
+  font-size: map-get($font-size, mega);
 }
 
 .kilo {
-    font-size: map-get($font-size, kilo);
+  font-size: map-get($font-size, kilo);
 }
 
 // ## Extra Helper classes for color.
 
 %nowrap,
 .nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 %good-news,
 .good-news {
-    color: map-get($font-color, good-news);
+  color: map-get($font-color, good-news);
 }
 
 %warning,
 .warning {
-    color: map-get($font-color, warning);
+  color: map-get($font-color, warning);
 }
 
 %error,
 .error {
-    color: map-get($font-color, error);
+  color: map-get($font-color, error);
 }

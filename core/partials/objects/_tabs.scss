@@ -5,60 +5,60 @@ $tab-border-color: map-get($ui-color, medium);
 
 .lego-tabs {
 
-    // This is where the content goes.
-    &__content {
-        display: none;
+  // This is where the content goes.
+  &__content {
+    display: none;
 
-        &--active {
-            display: block;
-        }
+    &--active {
+      display: block;
     }
+  }
 
-    // Small set of tabs.
-    &--small {
-        .lego-tabs-nav__item {
-            margin-right: spacer(.5);
-            padding: spacer(.5) spacer(1);
-            font-size: map-get($font-size, micro);
-        }
+  // Small set of tabs.
+  &--small {
+    .lego-tabs-nav__item {
+      margin-right: spacer(.5);
+      padding: spacer(.5) spacer(1);
+      font-size: map-get($font-size, micro);
     }
+  }
 }
 
 
 // These are the navigation tab items.
 .lego-tabs-nav {
-    @extend %flex;
-    border-bottom: 1px solid $tab-border-color;
-    margin-bottom: spacer(2);
+  @extend %flex;
+  border-bottom: 1px solid $tab-border-color;
+  margin-bottom: spacer(2);
 
-    &__item {
-        position: relative;
-        text-align: center;
-        padding: spacer(1) spacer(1.5);
-        border: 1px solid map-get($ui-color, base);
-        border-bottom: none;
-        border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
-        color: map-get($font-color, muted);
-        cursor: pointer;
-        margin-right: spacer(1);
+  &__item {
+    position: relative;
+    text-align: center;
+    padding: spacer(1) spacer(1.5);
+    border: 1px solid map-get($ui-color, base);
+    border-bottom: 0;
+    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
+    color: map-get($font-color, muted);
+    cursor: pointer;
+    margin-right: spacer(1);
 
-        &:hover,
-        &--active {
-            border-color: $tab-border-color;
-            background: map-get($background-color, white);
-            color: map-get($font-color, base);
+    &:hover,
+    &--active {
+      border-color: $tab-border-color;
+      background: map-get($background-color, white);
+      color: map-get($font-color, base);
 
-            // Provides the white bar under the active tab.
-            &:after {
-                content: "";
-                display: block;
-                height: 1px;
-                background: map-get($background-color, white);
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -1px;
-            }
-        }
+      // Provides the white bar under the active tab.
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background: map-get($background-color, white);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+      }
     }
+  }
 }

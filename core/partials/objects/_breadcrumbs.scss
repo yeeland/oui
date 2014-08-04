@@ -2,20 +2,20 @@
 // Indicate the current page's location.
 
 .lego-breadcrumb {
-    @extend %flex;
-    background: map-get($background-color, light);
-    border-radius: map-get($border-radius, base);
-    padding: spacer(.5) spacer(1);
+  @extend %flex;
+  background: map-get($background-color, light);
+  border-radius: map-get($border-radius, base);
+  padding: spacer(.5) spacer(1);
 
-    > li {
-        + li:before {
-            color: map-get($font-color, light);
-            content: "/\00a0";
-            padding: 0 5px 0 8px;
-        }
+  > li {
+    + li:before {
+      color: map-get($font-color, light);
+      content: '/\00a0';
+      padding: 0 5px 0 8px;
     }
+  }
 
-    &__active {
-        color: map-get($font-color, medium);
-    }
+  &__active {
+    color: map-get($font-color, medium);
+  }
 }

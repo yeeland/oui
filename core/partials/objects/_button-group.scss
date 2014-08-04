@@ -20,105 +20,105 @@ $button-group-offset: 4px;
 %lego-button-group,
 .lego-button-group {
 
-    &--left {
+  &--left {
 
-        .lego-button {
-            margin-right: spacer(1) - $button-group-offset;
+    .lego-button {
+      margin-right: spacer(1) - $button-group-offset;
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  &--right {
+    text-align: right;
+
+    .lego-button {
+      margin-left: spacer(1) - $button-group-offset;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--center {
+    text-align: center;
+
+    .lego-button {
+      margin-left: spacer(.5);
+      margin-right: spacer(.5);
+    }
+  }
+
+  &--flush {
+    @extend %lego-grid;
+    @extend %flex-wrap--nowrap;
+
+    .lego-button {
+      margin-left: 0;
+      border-radius: 0;
     }
 
+    > .lego-button {
+      &:not(:last-child) {
+        border-right: 0;
+      }
 
-    &--right {
-        text-align: right;
+      &:first-child {
+        border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
+      }
 
-        .lego-button {
-            margin-left: spacer(1) - $button-group-offset;
-
-            &:first-child {
-                margin-left: 0;
-            }
-        }
+      &:last-child {
+        border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      }
     }
 
-    &--center {
-        text-align: center;
+    // This is for buttons inside dropdown-groups. Only needed if buttons are rounded.
 
+    .dropdown-group {
+      &:not(:last-child) {
         .lego-button {
-            margin-left: spacer(.5);
-            margin-right: spacer(.5);
+          border-radius: 0;
+          border-right: 0;
         }
+      }
+
+      &:last-child .lego-button {
+        border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      }
+    }
+  }
+
+
+  &--toggle {
+    @extend %lego-button-group--flush;
+
+    .lego-button {
+      @extend %lego-button--small;
     }
 
-    &--flush {
-        @extend %lego-grid;
-        @extend %flex-wrap--nowrap;
-
-        .lego-button {
-            margin-left: 0;
-            border-radius: 0;
-        }
-
-        > .lego-button {
-            &:not(:last-child) {
-                border-right: none;
-            }
-
-            &:first-child {
-                border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
-            }
-
-            &:last-child {
-                border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
-            }
-        }
-
-        // This is for buttons inside dropdown-groups. Only needed if buttons are rounded.
-
-        .dropdown-group {
-            &:not(:last-child) {
-                .lego-button {
-                    border-radius: 0;
-                    border-right: none;
-                }
-            }
-
-            &:last-child .lego-button {
-                border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
-            }
-        }
+    // This is needed due to CSS source order.
+    .lego-button:not(.lego-button-toggle__active) {
+      @extend %lego-button--secondary;
     }
 
+    .lego-button-toggle__active {
+      @extend %lego-button--brand;
+      border-color: $button-brand-border-color;
+      cursor: default;
 
-    &--toggle {
-        @extend %lego-button-group--flush;
+      &:hover,
+      &:active {
+        background: map-get($background-color, brand);
+        box-shadow: 0;
+      }
 
-        .lego-button {
-            @extend %lego-button--small;
-        }
-
-        // This is needed due to CSS source order.
-        .lego-button:not(.lego-button-toggle__active) {
-            @extend %lego-button--secondary;
-        }
-
-        .lego-button-toggle__active {
-            @extend %lego-button--brand;
-            border-color: $button-brand-border-color;
-            cursor: default;
-
-            &:hover,
-            &:active {
-                background: map-get($background-color, brand);
-                box-shadow: none;
-            }
-
-            + .lego-button {
-                border-left: none;
-            }
-        }
+      + .lego-button {
+        border-left: 0;
+      }
     }
+  }
 }

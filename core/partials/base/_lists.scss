@@ -4,24 +4,24 @@
 
 %lego-list,
 .lego-list {
-    margin-left: spacer(2.5);
-    margin-bottom: spacer(1);
+  margin-left: spacer(2.5);
+  margin-bottom: spacer(1);
 
-    &--bullet {
-        list-style-type: disc;
-    }
+  &--bullet {
+    list-style-type: disc;
+  }
 
-    &--numbered {
-        list-style-type: decimal;
-    }
+  &--numbered {
+    list-style-type: decimal;
+  }
 }
 
 // ## Nested List Spacing
 // Vertical spacing will be removed from nested lists.
 
 li {
-    > ul,
-    > ol {
-            margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }

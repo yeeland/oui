@@ -9,7 +9,7 @@
 
 %width-1,
 .width-1 {
-    width: 100%;
+  width: 100%;
 }
 
 // ## Halves
@@ -19,7 +19,7 @@
 
 %width-1-2,
 .width-1-2 {
-    width: 50%;
+  width: 50%;
 }
 
 // ## Thirds
@@ -29,12 +29,12 @@
 
 %width-1-3,
 .width-1-3 {
-    width: 33.333%;
+  width: 33.333%;
 }
 
 %width-2-3,
 .width-2-3 {
-    width: 66.666%;
+  width: 66.666%;
 }
 
 // ## 4s
@@ -44,16 +44,16 @@
 
 %width-1-4,
 .width-1-4 {
-    width: 25%;
+  width: 25%;
 }
 
 .width-2-4 {
-    @extend %width-1-2;
+  @extend %width-1-2;
 }
 
 %width-3-4,
 .width-3-4 {
-    width: 75%;
+  width: 75%;
 }
 
 // ## 5
@@ -63,22 +63,22 @@
 
 %width-1-5,
 .width-1-5 {
-    width: 20%;
+  width: 20%;
 }
 
 %width-2-5,
 .width-2-5 {
-    width: 40%;
+  width: 40%;
 }
 
 %width-3-5,
 .width-3-5 {
-    width: 60%;
+  width: 60%;
 }
 
 %width-4-5,
 .width-4-5 {
-    width: 80%;
+  width: 80%;
 }
 
 // ## 6
@@ -88,24 +88,24 @@
 
 %width-1-6,
 .width-1-6 {
-    width: 16.666%;
+  width: 16.666%;
 }
 
 .width-2-6 {
-    @extend %width-1-3;
+  @extend %width-1-3;
 }
 
 .width-3-6 {
-    @extend %width-1-2;
+  @extend %width-1-2;
 }
 
 .width-4-6 {
-    @extend %width-2-3;
+  @extend %width-2-3;
 }
 
 %width-5-6,
 .width-5-6 {
-    width: 83.333%;
+  width: 83.333%;
 }
 
 // ## 8
@@ -115,34 +115,34 @@
 
 %width-1-8,
 .width-1-8 {
-    width: 12.5%;
+  width: 12.5%;
 }
 
 .width-2-8 {
-    @extend %width-1-4;
+  @extend %width-1-4;
 }
 
 %width-3-8,
 .width-3-8 {
-    width: 37.5%;
+  width: 37.5%;
 }
 
 .width-4-8 {
-    @extend %width-1-2;
+  @extend %width-1-2;
 }
 
 %width-5-8,
 .width-5-8 {
-    width: 62.5%;
+  width: 62.5%;
 }
 
 .width-6-8 {
-    @extend %width-3-4;
+  @extend %width-3-4;
 }
 
 %width-7-8,
 .width-7-8 {
-    width: 87.5%;
+  width: 87.5%;
 }
 
 // ## 10
@@ -152,42 +152,42 @@
 
 %width-1-10,
 .width-1-10 {
-    width: 10%;
+  width: 10%;
 }
 
 .width-2-10 {
-    @extend %width-1-5;
+  @extend %width-1-5;
 }
 
 %width-3-10,
 .width-3-10 {
-    width: 30%;
+  width: 30%;
 }
 
 .width-4-10 {
-    @extend %width-2-5;
+  @extend %width-2-5;
 }
 
 .width-5-10 {
-    @extend %width-1-2;
+  @extend %width-1-2;
 }
 
 .width-6-10 {
-    @extend %width-3-5;
+  @extend %width-3-5;
 }
 
 %width-7-10,
 .width-7-10 {
-    width: 70%;
+  width: 70%;
 }
 
 .width-8-10 {
-    @extend %width-4-5;
+  @extend %width-4-5;
 }
 
 %width-9-10,
 .width-9-10 {
-    width: 90%;
+  width: 90%;
 }
 
 // ## 12
@@ -197,71 +197,71 @@
 
 %width-1-12,
 .width-1-12 {
-    width: 8.333%;
+  width: 8.333%;
 }
 
 .width-2-12 {
-    @extend %width-1-6;
+  @extend %width-1-6;
 }
 
 .width-3-12 {
-    @extend %width-1-4;
+  @extend %width-1-4;
 }
 
 .width-4-12 {
-    @extend %width-1-3;
+  @extend %width-1-3;
 }
 
 %width-5-12,
 .width-5-12 {
-    width: 41.666%
+  width: 41.666%;
 }
 
 .width-6-12 {
-    @extend %width-1-2;
+  @extend %width-1-2;
 }
 
 %width-7-12,
 .width-7-12 {
-    width: 58.333%;
+  width: 58.333%;
 }
 
 .width-8-12 {
-    @extend %width-2-3;
+  @extend %width-2-3;
 }
 
 .width-9-12 {
-    @extend %width-3-4;
+  @extend %width-3-4;
 }
 
 .width-ten-12 {
-    @extend %width-5-6;
+  @extend %width-5-6;
 }
 
 %width-11-12,
 .width-11-12 {
-    width: 91.666%;
+  width: 91.666%;
 }
 
 // ## Pixel widths
 // Use rarely, for form elements only as a last resort.
 
 .width-50 {
-    width: 50px;
+  width: 50px;
 }
 
 .width-100 {
-    width: 100px;
+  width: 100px;
 }
 
 .width-150 {
-    width: 150px;
+  width: 150px;
 }
 
 .width-200 {
-    width: 200px;
+  width: 200px;
 }
 
 .width-250 {
-    width: 250px;
+  width: 250px;
 }
