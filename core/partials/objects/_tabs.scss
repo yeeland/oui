@@ -42,10 +42,6 @@ $tab-border-color: map-get($ui-color, medium);
         cursor: pointer;
         margin-right: spacer(1);
 
-        &:last-child {
-            border-right: 1px solid map-get($ui-color, base);
-        }
-
         &:hover,
         &--active {
             border-color: $tab-border-color;
