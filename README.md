@@ -11,6 +11,15 @@ Currently this repo contains the modular Sass library that will serve as the fou
     - `gem install sass` will update existing Sass install
 - Compass 1.0.0.alpha.19
     - `gem install compass --pre`
+- Gulp
+    - `npm install`
+
+## Build
+
+- `gulp build` Will build all JS & CSS
+- `gulp build:styles` Will build all CSS from SCSS
+- `gulp build:js` Will build all JS
+- `gulp watch` Will watch all JS & Styles and rebuild
 
 ## Using Sourcemaps
 
