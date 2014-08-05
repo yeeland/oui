@@ -18,7 +18,7 @@ gulp.task('lint:styles', function() {
   var complete = '======        SCSS-LINT COMPLETE          =======';
   gulp.src(paths.styles)
   //We use shell here because the scss-lint plugin cannot handle scss-lint errors and explodes
-  .pipe(shell(['scss-lint -c scss-lint.yml ' + paths.styles.join(' ')])).on('error', function() { console.log(complete); process.exit(); });
+  .pipe(shell(['scss-lint -c .scss-lint.yml ' + paths.styles.join(' ')])).on('error', function() { console.log(complete); process.exit(); });
 });
 
 gulp.task('build:styles', function() {
