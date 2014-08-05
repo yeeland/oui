@@ -4,12 +4,12 @@ var rjs = require('gulp-requirejs');
 var jshint = require('gulp-jshint');
 
 var paths = {
-  'scripts' : ['core/js/**/*.js', '!out/lego.min.js'],
+  'scripts' : ['js/**/*.js', '!out/lego.min.js'],
   'styles' : ['core/partials/**/*.scss', 'core/*.scss']
 };
 
 gulp.task('lint:js', function() {
-  gulp.src(['core/js/**/*.js', 'core/js/*.js', '!core/js/lib/*.js'])
+  gulp.src(['js/**/*.js', 'js/*.js', '!js/lib/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -22,14 +22,14 @@ gulp.task('lint:styles', function() {
 });
 
 gulp.task('build:styles', function() {
-  gulp.src('lego.scss')
-    .pipe(shell(['sass --compass lego.scss:out/lego.css']));
+  gulp.src('scss/lego.scss')
+    .pipe(shell(['sass --compass scss/lego.scss:out/lego.css']));
 });
 
 gulp.task('build:js', function() {
   rjs({
-    baseUrl: 'core/js',
-    mainConfigFile: 'core/js/common.js',
+    baseUrl: 'js',
+    mainConfigFile: 'js/common.js',
     findNestedDependencies: true,
 
     out: 'lego.min.js',
