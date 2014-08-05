@@ -6,11 +6,15 @@ linters:
     enabled: true
   ColorKeyword: # use color in hex rather than name
     enabled: false
-  DeclarationOrder: #Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order
+  DeclarationOrder: # Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order
+    enabled: true
+  DuplicateProperty: # Catches duplicate properities.
     enabled: true
   ElsePlacement: # @else should be placed on same line as previous curly brace
     enabled: false
   EmptyLineBetweenBlocks: # Rule declaration should be preceded by an empty line
+    enabled: true
+  EmptyRule: # Reports when you have an empty rule set.
     enabled: true
   FinalNewline: # Files should end with a trailing newline
     enabled: false
@@ -20,11 +24,19 @@ linters:
     enabled: true
   LeadingZero: # `0.18` should be written without a leading zero as `.18`
     enabled: true
-  NameFormat: # Name of placeholder `block-list__link` should be written in lowercase with hyphens instead of underscores
+  MergeableSelector: #Reports when you define the same selector twice in a single sheet.
+    enabled: true
+  NameFormat: # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
     enabled: false
+  PlaceholderInExtend: # Always use placeholder selectors in @extend.
+    enabled: true
+  PropertySpelling: # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
+    enabled: true
   PropertySortOrder: # Properties should be sorted in order, with vendor-prefixed extensions before the standardized CSS property
     enabled: false
   SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4
+    enabled: true
+  Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
     enabled: true
   SingleLinePerSelector: # Each selector in a comma sequence should be on its own line
     enabled: true
