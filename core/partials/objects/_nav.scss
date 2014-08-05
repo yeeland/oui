@@ -64,8 +64,8 @@
     @extend %justify--center;
 
     > li {
-      margin-left: spacer(.5);
-      margin-right: spacer(.5);
+      margin-left: spacer(0.5);
+      margin-right: spacer(0.5);
     }
   }
 

@@ -56,7 +56,7 @@ fieldset {
 
 .lego-form-field__title {
   font-size: map-get($font-size, epsilon);
-  margin-bottom: spacer(.5);
+  margin-bottom: spacer(0.5);
 }
 
 //## Labels
@@ -67,7 +67,7 @@ fieldset {
 
 .lego-label {
   display: block;
-  margin-bottom: spacer(.5);
+  margin-bottom: spacer(0.5);
   font-weight: map-get($font-weight, normal);
 }
 
@@ -139,7 +139,7 @@ fieldset {
 
 
 .lego-form-note {
-  padding-top: spacer(.5);
+  padding-top: spacer(0.5);
   font-size: map-get($font-size, micro);
 }
 

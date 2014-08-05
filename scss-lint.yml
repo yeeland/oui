@@ -23,6 +23,7 @@ linters:
   Indentation: # Line should be indented 2 spaces, but was indented 4 spaces.
     enabled: true
   LeadingZero: # `0.18` should be written without a leading zero as `.18`.
+    style: include_zero
     enabled: true
   MergeableSelector: #Reports when you define the same selector twice in a single sheet.
     enabled: true
@@ -35,7 +36,7 @@ linters:
   PropertySortOrder: # Properties should be sorted in order, with vendor-prefixed extensions before the standardized CSS property.
     enabled: false
   SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4.
-    enabled: true
+    enabled: false
   Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
     enabled: true
   SingleLinePerSelector: # Each selector in a comma sequence should be on its own line.

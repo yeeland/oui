@@ -21,7 +21,7 @@ $progress-bar-height: 20px;
     @include transition(width map-get($transition-duration, base));
     height: 100%;
     background: map-get($background-color, brand);
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     line-height: $progress-bar-height;
     color: map-get($font-color, white);
     font-size: map-get($font-size, milli);

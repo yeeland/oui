@@ -18,7 +18,7 @@
   @extend %justify--center;
 
   & > li {
-    padding: spacer(.5);
+    padding: spacer(0.5);
   }
 
   &__first a:before {

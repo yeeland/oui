@@ -17,7 +17,7 @@
   margin-left: 0;
 
   > li {
-    padding: spacer(.5) spacer(1);
+    padding: spacer(0.5) spacer(1);
     border-bottom: 1px solid map-get($ui-color, base);
   }
 
@@ -25,9 +25,9 @@
 
   &__link {
     display: block;
-    padding: spacer(.5) spacer(1);
-    margin-top: -(spacer(.5));
-    margin-bottom: -(spacer(.5));
+    padding: spacer(0.5) spacer(1);
+    margin-top: -(spacer(0.5));
+    margin-bottom: -(spacer(0.5));
     margin-left: -(spacer(1));
     margin-right: -(spacer(1));
   }

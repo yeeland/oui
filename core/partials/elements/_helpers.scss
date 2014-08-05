@@ -137,33 +137,33 @@
 }
 
 .push-half {
-  margin: spacer(.5) !important;
+  margin: spacer(0.5) !important;
 }
 
 .push-half--top {
-  margin-top: spacer(.5) !important;
+  margin-top: spacer(0.5) !important;
 }
 
 .push-half--right {
-  margin-right: spacer(.5) !important;
+  margin-right: spacer(0.5) !important;
 }
 
 .push-half--bottom {
-  margin-bottom: spacer(.5) !important;
+  margin-bottom: spacer(0.5) !important;
 }
 
 .push-half--left {
-  margin-left: spacer(.5) !important;
+  margin-left: spacer(0.5) !important;
 }
 
 .push-half--ends {
-  margin-top: spacer(.5) !important;
-  margin-bottom: spacer(.5) !important;
+  margin-top: spacer(0.5) !important;
+  margin-bottom: spacer(0.5) !important;
 }
 
 .push-half--sides {
-  margin-right: spacer(.5) !important;
-  margin-left: spacer(.5) !important;
+  margin-right: spacer(0.5) !important;
+  margin-left: spacer(0.5) !important;
 }
 
 .push-double {
@@ -264,33 +264,33 @@
 }
 
 .soft-half {
-  padding: spacer(.5) !important;
+  padding: spacer(0.5) !important;
 }
 
 .soft-half--top {
-  padding-top: spacer(.5) !important;
+  padding-top: spacer(0.5) !important;
 }
 
 .soft-half--right {
-  padding-right: spacer(.5) !important;
+  padding-right: spacer(0.5) !important;
 }
 
 .soft-half--bottom {
-  padding-bottom: spacer(.5) !important;
+  padding-bottom: spacer(0.5) !important;
 }
 
 .soft-half--left {
-  padding-left: spacer(.5) !important;
+  padding-left: spacer(0.5) !important;
 }
 
 .soft-half--ends {
-  padding-top: spacer(.5) !important;
-  padding-bottom: spacer(.5) !important;
+  padding-top: spacer(0.5) !important;
+  padding-bottom: spacer(0.5) !important;
 }
 
 .soft-half--sides {
-  padding-right: spacer(.5) !important;
-  padding-left: spacer(.5) !important;
+  padding-right: spacer(0.5) !important;
+  padding-left: spacer(0.5) !important;
 }
 
 .soft-one-and-half--sides {
@@ -494,8 +494,8 @@
   margin-left: -(spacer(1)) !important;
 
   .islet & {
-    margin-right: -(spacer(.5)) !important;
-    margin-left: -(spacer(.5)) !important;
+    margin-right: -(spacer(0.5)) !important;
+    margin-left: -(spacer(0.5)) !important;
   }
 }
 

@@ -31,7 +31,7 @@
 %islet,
 .islet {
   @extend %island;
-  padding: spacer(.5);
+  padding: spacer(0.5);
 
   &--center {
     text-align: center;

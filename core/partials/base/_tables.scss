@@ -28,23 +28,23 @@
     color: map-get($font-color, muted);
   }
 
-// ## Cell Alignments
-// Defaults for cell alignments with one helper class for numbers.
+  // ## Cell Alignments
+  // Defaults for cell alignments with one helper class for numbers.
 
-//[hc]
-//     <table class="table--rule">
-//       <tbody>
-//           <tr>
-//               <td class="numerical">300</td>
-//               <td>Lorem</td>
-//           </tr>
-//           <tr>
-//               <td class="numerical">225</td>
-//               <td>Foobar</td>
-//           </tr>
-//       </tbody>
-//     </table>
-//[/hc]
+  //[hc]
+  //     <table class="table--rule">
+  //       <tbody>
+  //           <tr>
+  //               <td class="numerical">300</td>
+  //               <td>Lorem</td>
+  //           </tr>
+  //           <tr>
+  //               <td class="numerical">225</td>
+  //               <td>Foobar</td>
+  //           </tr>
+  //       </tbody>
+  //     </table>
+  //[/hc]
 
   [rowspan] {
     vertical-align: middle;
@@ -68,23 +68,25 @@
   }
 
 
-// ## Table Variations
-// We're using direct decendent selectors so any child tables do not inherit styles.
+    // ## Table Variations
+    // We're using direct decendent selectors so any child tables do not inherit styles.
 
   &--rule {
-    th {
+
+    > thead > th {
       padding-bottom: spacer(1);
     }
 
-    tr {
+    > tbody > tr {
       border-top: 1px solid map-get($ui-color, light);
     }
 
   }
 
   &--wall {
-    th,
-    td {
+
+    > thead > tr > th,
+    > tbody > tr > td {
       border-left: 1px solid map-get($ui-color, light);
       padding-right: spacer(1);
 
@@ -95,10 +97,11 @@
   }
 
   &--tight {
-    th,
-    td {
-      padding-top: spacer(.5);
-      padding-bottom: spacer(.5);
+
+    > thead > tr > th,
+    > tbody > tr > td {
+      padding-top: spacer(0.5);
+      padding-bottom: spacer(0.5);
     }
   }
 }
