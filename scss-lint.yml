@@ -17,7 +17,7 @@ linters:
   EmptyRule: # Reports when you have an empty rule set.
     enabled: true
   FinalNewline: # Files should end with a trailing newline
-    enabled: false
+    enabled: true
   HexNotation: # Color `#721B09` should be written as `#721b09`
     enabled: true
   Indentation: # Line should be indented 2 spaces, but was indented 4 spaces
