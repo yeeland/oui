@@ -17,10 +17,29 @@ body {
   height: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 p {
   margin-bottom: spacer(1);
 }
 
 b {
   font-weight: 500;
+}
+
+
+// ## Legacy CSS Overrides
+// These are here only to override styles from legacy app.css
+
+body {
+  color: inherit;
+  background: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  min-width: 0;
+  width: auto;
 }
