@@ -1,6 +1,6 @@
 ---
 linters:
-  BorderZero:   # border : 0 is preferred over border: 0
+  BorderZero:   # border: 0 is preferred over border: none
     enabled: true
   CapitalizationInSelector: # all class names should be in lowercase
     enabled: true
