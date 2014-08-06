@@ -571,8 +571,8 @@
   text-transform: uppercase !important;
 }
 
-// ## Break Word
-// Break long, unbroken strings.
+// ## Break Word & No Wrap
+// Break or don't break long strings.
 
 //[hc]
 //     <a href=# class="force-break">alongunbrokenstringthatgoeson</a>
@@ -580,6 +580,11 @@
 
 .force-break {
   word-wrap: break-word !important;
+}
+
+%nowrap,
+.nowrap {
+  white-space: nowrap !important;
 }
 
 // ## Last Item Margin
@@ -647,4 +652,22 @@
 
 .background--good-news {
   background-color: map-get($background-color, good-news) !important;
+}
+
+
+// ## Extra Helper classes for text color.
+
+%good-news,
+.good-news {
+  color: map-get($font-color, good-news);
+}
+
+%warning,
+.warning {
+  color: map-get($font-color, warning);
+}
+
+%error,
+.error {
+  color: map-get($font-color, error);
 }

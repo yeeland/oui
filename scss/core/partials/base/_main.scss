@@ -3,30 +3,8 @@
 
 html {
   @include font-smoothing(on);
-  font-size: map-get($font-size, base);
-  font-family: map-get($font-family, base);
-  line-height: map-get($line-height, base);
-  font-weight: map-get($font-weight, light);
   color: map-get($font-color, base);
   background-color: map-get($background-color, base);
-}
-
-// Set height on `html` and `body` to 100%, html so children can also be full height.
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  color: inherit;  // Legacy app.css override.
-  background: inherit;  // Legacy app.css override.
-  line-height: inherit;  // Legacy app.css override.
-  font-size: inherit;  // Legacy app.css override.
-  font-weight: inherit;  // Legacy app.css override.
-  font-family: inherit;  // Legacy app.css override.
-  min-width: 0;  // Legacy app.css override.
-  width: auto;  // Legacy app.css override.
 }
 
 p {
@@ -35,13 +13,4 @@ p {
 
 b {
   font-weight: 500;
-}
-
-li {
-  color: inherit; // Legacy app.css override.
-  font-size: inherit; // Legacy app.css override.
-  font-weight: inherit; // Legacy app.css override.
-  line-height: inherit; // Legacy app.css override.
-  list-style-position: inherit; // Legacy app.css override.
-  margin: 0; // Legacy app.css override.
 }

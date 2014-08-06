@@ -1,12 +1,12 @@
 @import 'compass';
 
-// Import `core` and `custom` variables
+// Import `core` and `desktop` variables
 @import 'core/core-variables';
-@import 'custom/custom-variables';
+@import 'desktop/desktop-variables';
 
-// Import `core` and `custom` partials
+// Import `core` and `desktop` partials
 @import 'core/core-partials';
-@import 'custom/custom-partials';
+@import 'desktop/desktop-partials';
 
 
 // ## Trumps

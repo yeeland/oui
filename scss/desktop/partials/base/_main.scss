@@ -1,0 +1,45 @@
+//# Main
+// High level defaults establishing font and color.
+
+html {
+  font-size: map-get($font-size, base);
+  font-family: map-get($font-family, base);
+  line-height: map-get($line-height, base);
+  font-weight: map-get($font-weight, light);
+}
+
+// Set height on `html` and `body` to 100%, html so children can also be full height.
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: inherit;  // Legacy app.css override.
+  background: inherit;  // Legacy app.css override.
+  line-height: inherit;  // Legacy app.css override.
+  font-size: inherit;  // Legacy app.css override.
+  font-weight: inherit;  // Legacy app.css override.
+  font-family: inherit;  // Legacy app.css override.
+  width: auto;  // Legacy app.css override.
+  min-width: $platform-min-width;  // Legacy app.css override.
+}
+
+li {
+  color: inherit; // Legacy app.css override.
+  font-size: inherit; // Legacy app.css override.
+  font-weight: inherit; // Legacy app.css override.
+  line-height: inherit; // Legacy app.css override.
+  list-style-position: inherit; // Legacy app.css override.
+  margin: 0; // Legacy app.css override.
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit; // Legacy app.css override.
+}

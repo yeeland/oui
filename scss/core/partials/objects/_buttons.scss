@@ -151,7 +151,7 @@ $button-brand-border-color                : #225995;
   &--disabled:active,
   &--disabled:focus {
     background: none !important;
-    background-color: map-get($background-color, light) !important;
+    background-color: map-get($background-color, faint) !important;
     color: map-get($font-color, light) !important;
     cursor: default;
     top: 0;
