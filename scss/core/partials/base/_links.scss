@@ -21,6 +21,11 @@ a,
   }
 }
 
+%link--reverse,
+.link--reverse {
+    color: map-get($link-color, white);
+}
+
 // Targets anchors without an `href` attribute.
 a:not([href]) {
   color: map-get($link-color, base);

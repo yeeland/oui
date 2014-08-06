@@ -9,8 +9,8 @@
   th,
   td {
     padding-left: spacer(1.5);
-    padding-top: spacer(1);
-    padding-bottom: spacer(1.5);
+    padding-top: spacer(0.5);
+    padding-bottom: spacer(0.5);
 
     &:first-child {
       padding-left: 0;
@@ -67,6 +67,10 @@
     padding-left: spacer(1.5);
   }
 
+  .cell-collapse {
+    width: 1%;
+  }
+
 
     // ## Table Variations
     // We're using direct decendent selectors so any child tables do not inherit styles.
@@ -93,15 +97,6 @@
       &:first-child {
         border-left: 0;
       }
-    }
-  }
-
-  &--tight {
-
-    > thead > tr > th,
-    > tbody > tr > td {
-      padding-top: spacer(0.5);
-      padding-bottom: spacer(0.5);
     }
   }
 }

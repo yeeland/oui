@@ -169,3 +169,24 @@ hgroup .hn {
 .error {
   color: map-get($font-color, error);
 }
+
+// ## Editiable
+// Text that can be edited, like project titles.
+
+.editable {
+
+  &:hover {
+    background: map-get($background-color, light);
+    padding-left: spacer(0.5);
+    padding-right: spacer(0.5);
+    margin-left: spacer(-0.5);
+    border-radius: map-get($border-radius, base);
+  }
+
+  // Pencil icon to go here.
+  &:after {
+    content: '\270E';
+    font-size: 18px;
+    padding-left: spacer(0.5);
+  }
+}

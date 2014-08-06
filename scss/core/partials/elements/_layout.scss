@@ -1,7 +1,8 @@
 // # Layout
 // Classes for building page layouts.
 
-.lego-panel-group {
+%lego-pane-group,
+.lego-pane-group {
   @extend %flex;
   height: 100%;
 
@@ -10,11 +11,17 @@
   }
 }
 
-.lego-panel {
-  border: 1px solid red;
+%lego-pane,
+.lego-pane {
 
   &--flex {
     @extend %flex-1;
     overflow-y: auto;
   }
+}
+
+%lego-fence,
+.lego-fence {
+  padding-left: spacer(2);
+  padding-right: spacer(2);
 }

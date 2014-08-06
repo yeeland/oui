@@ -481,24 +481,6 @@
   bottom: 0;
 }
 
-// ## Full Bleed
-// Pull items full width of `.island` parents.
-
-//[c]
-//     <div class="full-bleed">full bleed</div>
-//[/c]
-
-%full-bleed,
-.full-bleed {
-  margin-right: -(spacer(1)) !important;
-  margin-left: -(spacer(1)) !important;
-
-  .islet & {
-    margin-right: -(spacer(0.5)) !important;
-    margin-left: -(spacer(0.5)) !important;
-  }
-}
-
 // ## Help Cursor
 // Add a help cursor to any element that gives the user extra information on
 // `:hover`.
@@ -552,6 +534,19 @@
 
 .proceed {
   text-align: right !important;
+}
+
+// ## Ellipsis
+// Truncates item to a single line, adding ellipsis at the end.
+
+//[hc]
+//     <p class="truncate">Long string will be truncated.</p>
+//[/hc]
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // ## Right-Angle Quote
@@ -611,6 +606,45 @@
   line-height: map-get($line-height, loose) !important;
 }
 
-.hidden {
-  display: none !important;
+// ## Backgrounds
+// Adding background colors via classes.
+
+.background--white {
+  background-color: map-get($background-color, white) !important;
+}
+
+.background--faint {
+  background-color: map-get($background-color, faint) !important;
+}
+
+.background--light {
+  background-color: map-get($background-color, light) !important;
+}
+
+.background--muted {
+  background-color: map-get($background-color, muted) !important;
+}
+
+.background--medium {
+  background-color: map-get($background-color, medium) !important;
+}
+
+.background--brand {
+  background-color: map-get($background-color, brand) !important;
+}
+
+.background--brand-dark {
+  background-color: map-get($background-color, brand-dark) !important;
+}
+
+.background--warning {
+  background-color: map-get($background-color, warning) !important;
+}
+
+.background--error {
+  background-color: map-get($background-color, error) !important;
+}
+
+.background--good-news {
+  background-color: map-get($background-color, good-news) !important;
 }

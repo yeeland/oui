@@ -1,4 +1,4 @@
-// # Tabss
+// # Tabs
 // Creates a set of tabs.
 
 $tab-border-color: map-get($ui-color, medium);
@@ -59,6 +59,20 @@ $tab-border-color: map-get($ui-color, medium);
         right: 0;
         bottom: -1px;
       }
+    }
+  }
+
+  .lego-tabs--full & {
+    background: map-get($background-color, light);
+    border-bottom: 0;
+    margin-bottom: 0;
+
+    &__item {
+      @extend %flex-1;
+      border: 0;
+      border-radius: 0;
+      margin: 0;
+      border-left: 1px solid map-get($ui-color, white);
     }
   }
 }

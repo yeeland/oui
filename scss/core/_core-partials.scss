@@ -1,5 +1,6 @@
 // # Core Partials
-// This represents the bulk of the paritals used by all sites. They are the building
+// This represents the bulk of the paritals used by all sites: desktop, mobile, tablet.
+// They are the building
 // blocks of all patterns and are width and layout independent. Refinements are made in the
 // the partials found in the `layout` directory.
 
@@ -45,6 +46,7 @@
 @import 'partials/objects/media';
 @import 'partials/objects/nav';
 @import 'partials/objects/pagination';
+@import 'partials/objects/pill-text';
 @import 'partials/objects/preloader';
 @import 'partials/objects/progress';
 @import 'partials/objects/pop-tip';

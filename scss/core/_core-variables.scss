@@ -37,7 +37,7 @@ $ui-color: (
   // Colors
   brand               : #006eb6,
   brand-dark          : #036,
-  warning             : #f7ecb5,
+  warning             : #ffd40c,
   error               : #c1272d,
   good-news           : #90b71c
 );
@@ -47,13 +47,14 @@ $ui-color: (
 
 $link-color: (
   base                : map-get($ui-color, brand),
-  brand               : map-get($ui-color, brand)
+  brand               : map-get($ui-color, brand),
+  white               : map-get($ui-color, $base-white)
 );
 
 // ### Background colors
 
 $background-color: (
-  base                : $grey-80,
+  base                : $base-white,
   white               : $base-white,
   faint               : $grey-03,
   light               : $grey-07,
@@ -100,9 +101,9 @@ $font-size: (
   milli               : 11px,
 
   // Heading sizes
-  alpha               : 50px, // h1
-  beta                : 42px, // h2
-  gamma               : 30px, // h3
+  alpha               : 36px, // h1
+  beta                : 30px, // h2
+  gamma               : 24px, // h3
   delta               : 20px, // h4
   epsilon             : 16px, // h5
   zeta                : 12px, // h6
