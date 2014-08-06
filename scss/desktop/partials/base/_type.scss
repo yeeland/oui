@@ -34,37 +34,48 @@
 
 h1,
 .alpha {
-  @include font-size(map-get($font-size, alpha));
+  font-size: map-get($font-size, alpha);
   letter-spacing: map-get($letter-spacing, tight);
+  font-weight: map-get($font-weight, light);
+  line-height: 1.1;
 }
 
 h2,
 .beta {
-  @include font-size(map-get($font-size, beta));
+  font-size: map-get($font-size, beta);
   letter-spacing: map-get($letter-spacing, tight);
+  font-weight: map-get($font-weight, light);
+  line-height: 1.1;
 }
 
 h3,
 .gamma {
-  @include font-size(map-get($font-size, gamma));
+  font-size: map-get($font-size, gamma);
   letter-spacing: map-get($letter-spacing, tight);
+  font-weight: map-get($font-weight, light);
+  line-height: 1.2;
 }
 
 h4,
 .delta {
-  @include font-size(map-get($font-size, delta), false);
+  font-size: map-get($font-size, delta), false;
   line-height: map-get($line-height, tight);
+  font-weight: map-get($font-weight, light);
+  line-height: 1.2;
 }
 
 h5,
 .epsilon {
-  @include font-size(map-get($font-size, epsilon), false);
+  font-size: map-get($font-size, epsilon);
   line-height: map-get($line-height, tight);
+  font-weight: map-get($font-weight, light);
+  line-height: 1.2;
 }
 
 h6,
 .zeta {
-  @include font-size(map-get($font-size, zeta));
+  font-size: map-get($font-size, zeta);
+  font-weight: map-get($font-weight, light);
 }
 
 // ## Heading Margin Defaults

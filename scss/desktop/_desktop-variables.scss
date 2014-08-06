@@ -21,4 +21,13 @@ $font-size: (
   giga                : 96px
 );
 
+// ### Line Heights
+// Specifying variable instead of inside map so it can be used by line-height mixin.
+
+$line-height: (
+  base                : 1.6,
+  tight               : 1.2,
+  loose               : 1.8
+);
+
 $platform-min-width   : 1000px;

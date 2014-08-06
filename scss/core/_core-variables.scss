@@ -93,15 +93,6 @@ $font-family: (
   monospace           : monospace
 );
 
-// ### Line Heights
-// Specifying variable instead of inside map so it can be used by line-height mixin.
-
-$line-height: (
-  base                : 1.6,
-  tight               : 1.2,
-  loose               : 1.8
-);
-
 // ### Font Weights
 
 $font-weight: (

@@ -4,6 +4,7 @@
 $tab-border-color: map-get($ui-color, medium);
 
 .lego-tabs {
+  border-bottom: 1px solid map-get($ui-color, base);
 
   // This is where the content goes.
   &__content {
@@ -14,37 +15,24 @@ $tab-border-color: map-get($ui-color, medium);
     }
   }
 
-  // Small set of tabs.
-  &--small {
-    .lego-tabs-nav__item {
-      margin-right: spacer(0.5);
-      padding: spacer(0.5) spacer(1);
-      font-size: map-get($font-size, micro);
-    }
-  }
-}
-
-
-// These are the navigation tab items.
-.lego-tabs-nav {
-  @extend %flex;
-  border-bottom: 1px solid $tab-border-color;
-  margin-bottom: spacer(2);
-
-  &__item {
+  .lego-tabs-nav__item {
     position: relative;
     text-align: center;
     padding: spacer(1) spacer(1.5);
-    border: 1px solid map-get($ui-color, base);
+    border-top: 1px solid map-get($ui-color, base);
+    border-right: 1px solid map-get($ui-color, base);
     border-bottom: 0;
-    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
     color: map-get($font-color, muted);
     cursor: pointer;
-    margin-right: spacer(1);
+    background: map-get($background-color, light);
+
+    &:last-child {
+      border-right: none;
+    }
 
     &:hover,
     &--active {
-      border-color: $tab-border-color;
+      border-top: 1px solid map-get($ui-color, base);
       background: map-get($background-color, white);
       color: map-get($font-color, base);
 
@@ -60,19 +48,30 @@ $tab-border-color: map-get($ui-color, medium);
         bottom: -1px;
       }
     }
+
   }
 
-  .lego-tabs--full & {
-    background: map-get($background-color, light);
-    border-bottom: 0;
-    margin-bottom: 0;
-
-    &__item {
-      @extend %flex-1;
-      border: 0;
-      border-radius: 0;
-      margin: 0;
-      border-left: 1px solid map-get($ui-color, white);
+  // Small set of tabs.
+  &--small {
+    .lego-tabs-nav__item {
+      padding: spacer(0.5) spacer(1);
+      font-size: map-get($font-size, micro);
     }
   }
+
+  &--full {
+    background: map-get($background-color, light);
+    border-top: 1px solid map-get($ui-color, base);
+
+
+    .lego-tabs-nav__item,
+    .lego-tabs-nav__item--active {
+      @extend %flex-1;
+      border-top: none !important;
+    }
+  }
+}
+
+.lego-tabs-nav {
+  @extend %flex;
 }

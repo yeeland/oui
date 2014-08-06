@@ -7,10 +7,7 @@
 .editable {
 
   &:hover {
-    background: map-get($background-color, light);
-    padding-left: spacer(0.5);
-    padding-right: spacer(0.5);
-    margin-left: spacer(-0.5);
+    color: map-get($font-color, muted);
     border-radius: map-get($border-radius, base);
   }
 
