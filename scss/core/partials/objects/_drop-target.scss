@@ -3,7 +3,7 @@
 
 %lego-drop-target,
 .lego-drop-target {
-  @extend %island--center;
+  @extend %lego-island--center;
   border: 3px dashed map-get($ui-color, light);
   border-radius: map-get($border-radius, big);
   padding-top: spacer(1);

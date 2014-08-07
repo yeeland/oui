@@ -8,30 +8,13 @@
 //     </div>
 //[/hc]
 
-%island,
-.island {
+%lego-island,
+.lego-island {
   @extend %kill-last-child-margin;
+  border: 1px solid map-get($ui-color, light);
   border-radius: map-get($border-radius, base);
+  background: map-get($background-color, faint);
   padding: spacer(1);
-
-  &--center {
-    text-align: center;
-  }
-}
-
-// ## Islet
-// Just like `.island`, only smaller.
-
-//[hc]
-//     <div class="islet">
-//        I am boxed off.
-//     </div>
-//[/hc]
-
-%islet,
-.islet {
-  @extend %island;
-  padding: spacer(0.5);
 
   &--center {
     text-align: center;
