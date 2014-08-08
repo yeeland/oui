@@ -14,6 +14,10 @@
 .lego-row {
   @extend %flex;
 
+  > li {
+    @extend %flex-1;
+  }
+
   &--spread {
     @extend %justify--space-between;
   }

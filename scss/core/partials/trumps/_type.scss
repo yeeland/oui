@@ -1,0 +1,185 @@
+// # Type Trumps
+
+// ## Font Weights
+
+//[c]
+//     <div class="weight--light">content</div>
+//[/c]
+
+.weight--light {
+  font-weight: 300 !important;
+}
+
+.weight--normal {
+  font-weight: 400 !important;
+}
+
+.weight--bold {
+  font-weight: 500 !important;
+}
+
+
+// ## Font Lighter
+// Make font color lighter.
+
+//[c]
+//     <div class="light-font-color">content</div>
+//[/c]
+
+.light-font-color {
+  color: map-get($font-color, light) !important;
+}
+
+.reverse-font-color {
+  color: map-get($font-color, white) !important;
+}
+
+
+// ## Help Cursor
+// Add a help cursor to any element that gives the user extra information on
+// `:hover`.
+
+//[c]
+//     <div class="informative">content</div>
+//[/c]
+
+.informative {
+  cursor: help !important;
+}
+
+// ## Underline
+// Adds text-decoration: underline to text.
+
+//[c]
+//     <p>content is <span class="underline">underlined</span></p>
+//[/c]
+
+.underline {
+  text-decoration: underline;
+}
+
+// Adds text-decoration: line-through;.
+
+//[c]
+//     <p><span class="strike">strike</span> the content as needed</p>
+//[/c]
+
+.strike {
+  text-decoration: line-through;
+}
+
+// ## Muted Color
+// Mute text to a ligher shade of gray.
+
+//[hc]
+//     <p class="muted">This text is muted</p>
+//[/hc]
+
+.muted {
+  color: map-get($font-color, muted);
+}
+
+// ## Proceed (Align Right)
+// Align items to the right where they imply progression/movement forward, e.g.:
+
+//[hc]
+//     <p class="proceed"><a href="#">Read more...</a></p>
+//[/hc]
+
+.proceed {
+  text-align: right !important;
+}
+
+// ## Ellipsis
+// Truncates item to a single line, adding ellipsis at the end.
+
+//[hc]
+//     <p class="truncate">Long string will be truncated.</p>
+//[/hc]
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// ## Right-Angle Quote
+// Add a right-angled quote to links that imply movement, e.g.:
+
+//[hc]
+//     <a href=# class="go">Read more</a>
+//[/hc]
+
+.go:after {
+  content: '\00A0' '\00BB' !important;
+}
+
+// ## Uppercase
+// Apply capital case to an element.
+
+//[hc]
+//     <a href=# class="caps">Read more</a>
+//[/hc]
+
+.caps {
+  text-transform: uppercase !important;
+}
+
+// ## Break Word & No Wrap
+// Break or don't break long strings.
+
+//[hc]
+//     <a href=# class="force-break">alongunbrokenstringthatgoeson</a>
+//[/hc]
+
+.force-break {
+  word-wrap: break-word !important;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+// ## Text
+// Adjust block and inline.
+
+//[hc]
+//     <a href="#" class="text--block">block link</a>
+//[/hc]
+
+.text--block {
+  display: block !important;
+}
+
+.text--inline {
+  display: inline !important;
+}
+
+// ## Line Height
+// For adjusting line-heights.
+
+.line--tight {
+  line-height: map-get($line-height, tight) !important;
+}
+
+.line--loose {
+  line-height: map-get($line-height, loose) !important;
+}
+
+
+// ## Extra Helper classes for text color.
+
+%good-news,
+.good-news {
+  color: map-get($font-color, good-news);
+}
+
+%warning,
+.warning {
+  color: map-get($font-color, warning);
+}
+
+%error,
+.error {
+  color: map-get($font-color, error);
+}

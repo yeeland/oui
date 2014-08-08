@@ -14,12 +14,28 @@ $lego-pop-tip-background: map-get($ui-color, dark);
 
   // Arrow options.
 
-  &--arrow-top {
+  &--arrow-top-center {
     @include arrow(top, center, $lego-pop-tip-background);
   }
 
-  &--arrow-bottom {
+  &--arrow-top-left {
+    @include arrow(top, left, $lego-pop-tip-background);
+  }
+
+  &--arrow-top-right {
+    @include arrow(top, right, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-center {
     @include arrow(bottom, center, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-left {
+    @include arrow(bottom, left, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-right {
+    @include arrow(bottom, right, $lego-pop-tip-background);
   }
 
   &--arrow-left {
