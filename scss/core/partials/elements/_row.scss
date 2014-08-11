@@ -17,8 +17,20 @@
   > li {
     @extend %flex-1;
   }
+}
 
-  &--spread {
-    @extend %justify--space-between;
+%lego-row-split,
+.lego-row-split {
+  @extend %flex;
+
+  li {
+    &:first-child {
+      @extend %flex-1;
+    }
+
+    &:last-child {
+      text-align: right;
+      margin-left: spacer(1);
+    }
   }
 }
