@@ -2,47 +2,44 @@
 // Small arrows as needed next to navigational elements.
 
 //[hc]
-//     <div>Nav up <span class="arrow-inline--up"></span></div>
-//     <div>Nav down <span class="arrow-inline--down"></span></div>
+//     <div>Nav up <span class="lego-arrow-inline--up"></span></div>
+//     <div>Nav down <span class="lego-arrow-inline--down"></span></div>
 //[/hc]
 
 %lego-arrow-inline,
 .lego-arrow-inline {
   display: inline-block;
-  position: relative;
-  top: -0.1em;
-  font-family: Arial, sans;
-  font-size: 0.7em;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  margin-left: 2px;
+  vertical-align: middle;
 
   &--up {
     @extend %lego-arrow-inline;
-
-    &:before {
-      content: map-get($arrow-entity, up);
-    }
+    border-bottom: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
   }
 
   &--down {
     @extend %lego-arrow-inline;
-
-    &:before {
-      content: map-get($arrow-entity, down);
-    }
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
   }
 
   &--right {
     @extend %lego-arrow-inline;
-
-    &:before {
-      content: map-get($arrow-entity, right);
-    }
+    border-left: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
   }
 
   &--left {
     @extend %lego-arrow-inline;
-
-    &:before {
-      content: map-get($arrow-entity, left);
-    }
+    border-right: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
   }
 }

@@ -2,7 +2,7 @@
 // Information bubbles on hover. Almost always used with postition: absolute.
 
 $pop-upsell-background: map-get($ui-color, white);
-$pop-upsell-border: map-get($ui-color, base);
+$pop-upsell-border: map-get($ui-color, medium);
 
 .lego-pop-upsell {
   @extend %lego-block-list-group;
@@ -24,6 +24,10 @@ $pop-upsell-border: map-get($ui-color, base);
     a {
       @extend %lego-block-list__link;
       color: map-get($font-color, white);
+
+      &:hover {
+        background: map-get($background-color, brand);
+      }
     }
   }
 

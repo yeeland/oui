@@ -65,7 +65,7 @@ $background-color: (
 
   brand               : map-get($ui-color, brand),
   brand-dark          : map-get($ui-color, brand-dark),
-  brand-light         : lighten(map-get($ui-color, brand), 53%),
+  brand-light         : #f2f7fc,
   warning             : lighten(#f7ecb5, 10%),
   error               : lighten(#c1272d, 48%),
   good-news           : lighten(#90b71c, 10%)
