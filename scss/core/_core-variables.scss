@@ -14,10 +14,11 @@ $grey-80                : tint($base-black, 20%);
 $grey-70                : tint($base-black, 30%);
 $grey-60                : tint($base-black, 40%);
 $grey-50                : tint($base-black, 50%);
+$grey-40                : tint($base-black, 60%);
 $grey-35                : tint($base-black, 65%);
 $grey-30                : tint($base-black, 70%);
 $grey-25                : tint($base-black, 75%);
-$grey-12                : tint($base-black, 88%);
+$grey-20                : tint($base-black, 80%);
 $grey-07                : tint($base-black, 93%);
 $grey-03                : tint($base-black, 97%);
 
@@ -27,18 +28,19 @@ $grey-03                : tint($base-black, 97%);
 
 $ui-color: (
   // Blacks & grays
-  base                : $grey-12,
+  base                : $grey-20,
   white               : $base-white,
   light               : $grey-07,
-  medium              : $grey-50,
+  medium              : $grey-40,
   dark                : $grey-85,
   black               : $base-black,
 
   // Colors
-  brand               : #006eb6,
+  brand               : #1d7ebd,
+  brand-light         : #8abee3,
   brand-dark          : #036,
   warning             : #ffd40c,
-  error               : #c1272d,
+  error               : #e8545b,
   good-news           : #90b71c
 );
 
@@ -63,6 +65,7 @@ $background-color: (
 
   brand               : map-get($ui-color, brand),
   brand-dark          : map-get($ui-color, brand-dark),
+  brand-light         : lighten(map-get($ui-color, brand), 53%),
   warning             : lighten(#f7ecb5, 10%),
   error               : lighten(#c1272d, 48%),
   good-news           : lighten(#90b71c, 10%)
@@ -145,7 +148,7 @@ $transition-duration: (
 
 // ## Form Variables
 
-$input-focus-border-color    : map-get($ui-color, brand) !default;
+$input-focus-border-color    : map-get($ui-color, brand-light);
 
 
 // ## Spacing Unit

@@ -9,11 +9,6 @@
 // ## Button Variables
 // Shadows for buttons.
 
-$button-hover-shadow                      : 0 1px 3px rgba(0, 0, 0, 0.18);
-$button-active-shadow                     : inset 0 0 map-get($shadow, base);
-
-$button-brand-border-color                : #225995;
-
 %lego-button,
 .lego-button {
   display: inline-block;
@@ -41,79 +36,71 @@ $button-brand-border-color                : #225995;
     color: map-get($ui-color, white);
   }
 
-  &:active {
-    box-shadow: $button-active-shadow;
-  }
-
   &--brand {
     background: map-get($background-color, brand);
-    border-color: $button-brand-border-color;
+    border-color: map-get($ui-color, brand-dark);
 
     &:hover {
-      background: #147ec7;
-      border-color: #1c487d;
+      background: #1d88cf;
     }
 
     &:active {
-      background: #1375b9;
-      border-color: #1c487d;
+      background: #196598;
+      border-color: #196598;
     }
   }
-
 
   // ## Button Styles
   // Button color variations.
 
   &--primary {
-    background: #87ab1b;
-    border-color: #7e9339;
+    background: #7abd37;
+    border-color: #4f9a00;
 
     &:hover {
-      background: #90b71c;
-      border-color: #68792f;
+      background: #88d13f;
     }
 
     &:active {
-      background: #86aa1a;
-      border-color: #68792f;
+      background: #598a28;
+      border-color: #598a28;
     }
   }
 
   &--secondary {
-    background: #f6f6f6;
-    color: #888;
-    border-color: #cacaca;
+    background: #f8f8f8;
+    color: map-get($font-color, base);
+    border-color: map-get($ui-color, base);
 
     &:hover {
-      background: #f9f9f9;
-      border-color: #b8b8b8;
+      background: #fafafa;
+      border-color: map-get($ui-color, medium);
     }
 
     &:active {
       background: #eee;
-      border-color: #b8b8b8;
+      border-color: map-get($ui-color, medium);
     }
 
     &:hover,
     &:active,
     &:visited,
     &:focus {
-      color: #888;
+      color: map-get($font-color, base);
     }
   }
 
   &--danger {
-    background: #9d250c;
-    border-color: #93230b;
+    background: #d04b51;
+    border-color: #a20000;
 
     &:hover {
-      background: #ab290d;
-      border-color: #721b09;
+      background: #e8545b;
     }
 
     &:active {
-      background: #9c250c;
-      border-color: #721b09;
+      background: #9c383d;
+      border-color: #9c383d;
     }
   }
 

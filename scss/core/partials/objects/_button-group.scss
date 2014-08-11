@@ -60,9 +60,7 @@ $button-group-offset: 4px;
     .lego-button {
       margin-left: 0;
       border-radius: 0;
-    }
 
-    > .lego-button {
       &:not(:last-child) {
         border-right: 0;
       }
@@ -73,6 +71,24 @@ $button-group-offset: 4px;
 
       &:last-child {
         border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      }
+
+      &:hover + .lego-button {
+        border-left-color: map-get($ui-color, medium);
+      }
+
+      &--brand {
+        cursor: default;
+        background: map-get($background-color, brand);
+
+        + .lego-button,
+        &:hover + .lego-button {
+          border-left-color: map-get($ui-color, brand-dark);
+        }
+      }
+
+      &:hover + .lego-button--brand {
+          border-left-color: map-get($ui-color, brand-dark);
       }
     }
 
@@ -88,36 +104,6 @@ $button-group-offset: 4px;
 
       &:last-child .lego-button {
         border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
-      }
-    }
-  }
-
-
-  &--toggle {
-    @extend %lego-button-group--flush;
-
-    .lego-button {
-      @extend %lego-button--small;
-    }
-
-    // This is needed due to CSS source order.
-    .lego-button:not(.lego-button-toggle__active) {
-      @extend %lego-button--secondary;
-    }
-
-    .lego-button-toggle__active {
-      @extend %lego-button--brand;
-      border-color: $button-brand-border-color;
-      cursor: default;
-
-      &:hover,
-      &:active {
-        background: map-get($background-color, brand);
-        box-shadow: 0;
-      }
-
-      + .lego-button {
-        border-left: 0;
       }
     }
   }

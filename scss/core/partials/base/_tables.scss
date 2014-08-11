@@ -26,6 +26,7 @@
     font-weight: map-get($font-weight, normal);
     font-size: map-get($font-size, milli);
     color: map-get($font-color, muted);
+    text-align: left;
   }
 
   // ## Cell Alignments
