@@ -10,6 +10,7 @@ a,
 %link,
 .link {
   color: map-get($link-color, base);
+  cursor: pointer;
 
   &:visited,
   &:active {
@@ -23,7 +24,11 @@ a,
 
 %link--reverse,
 .link--reverse {
-    color: map-get($link-color, white);
+  color: map-get($link-color, brand-light) !important;
+
+  &:hover {
+    color: lighten(map-get($link-color, brand-light), 15%) !important;
+  }
 }
 
 // Targets anchors without an `href` attribute.

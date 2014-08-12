@@ -2,7 +2,7 @@
 
 //|| Description || HTML || Example ||
 //|| Default || `<button class="button">Button</button>` || <button class="button">Button</button> ||
-//|| Primary || `<button class="button button--primary">Button</button>` || <button class="button button--primary">Button</button> ||
+//|| Primary || `<button class="button button--highlight">Button</button>` || <button class="button button--highlight">Button</button> ||
 //|| Accent || `<button class="button button--accent">Button</button>` || <button class="button button--accent">Button</button> ||
 //|| Dark || `<button class="button button--on-dark">Button</button>` || <button class="button button--on-dark">Button</button> ||
 
@@ -69,7 +69,7 @@
 
   &--secondary {
     background: #f8f8f8;
-    color: map-get($font-color, base);
+    color: map-get($font-color, medium);
     border-color: map-get($ui-color, base);
 
     &:hover {
@@ -86,7 +86,7 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-get($font-color, base);
+      color: map-get($font-color, medium);
     }
   }
 

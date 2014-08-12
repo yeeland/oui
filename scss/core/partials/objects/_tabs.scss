@@ -1,7 +1,6 @@
 // # Tabs
 // Creates a set of tabs.
 
-
 .lego-tabs-nav {
   @extend %flex;
   border-bottom: 1px solid map-get($ui-color, base);
@@ -21,6 +20,9 @@
     &:hover,
     &--active {
       color: map-get($font-color, brand);
+    }
+
+    &--active {
 
       // Provides the white bar under the active tab.
       &:after {
@@ -43,3 +45,14 @@
     font-size: map-get($font-size, micro);
   }
 }
+
+.lego-tabs--center {
+  .lego-tabs-nav {
+    @extend %justify--center;
+  }
+
+  .lego-tabs-nav__item:first-child {
+    margin-left: spacer(0.5);
+  }
+}
+

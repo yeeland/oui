@@ -112,3 +112,8 @@
     }
   }
 }
+
+// Added to the table row.
+.lego-table-row--active {
+  background-color: map-get($background-color, brand-light);
+}

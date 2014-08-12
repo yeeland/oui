@@ -50,6 +50,7 @@ $ui-color: (
 $link-color: (
   base                : map-get($ui-color, brand),
   brand               : map-get($ui-color, brand),
+  brand-light         : map-get($ui-color, brand-light),
   white               : map-get($ui-color, $base-white)
 );
 
