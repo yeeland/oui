@@ -1,0 +1,183 @@
+// # Mixins
+
+// ## Font Size
+// Computes a custom line-height for a given size, unless bool set to false.
+
+@mixin font-size($font-size, $line-height-bool: true) {
+  font-size: $font-size;
+  @if $line-height-bool == true {
+    line-height: ceil( $font-size / map-get($line-height, base) ) * map-get($line-height, base) / $font-size;
+  }
+}
+
+// ## Font Smoothing
+// Better rendering of fonts on OS X. Does not affect IE.
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// ## Dead Center
+// Centers object via position absolute using element width/height.
+
+@mixin dead-center() {
+  @include transform(translateX(-50%) translateY(-50%));
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+// ## CSS Arrows
+
+// CSS arrows!!! But... before you read on, you might want to grab a coffee...
+//
+// This mixin creates a CSS arrow on a given element. We can have the arrow
+// appear in one of 12 locations, 3 positions for each side.
+//
+// You pass this position in along with a desired arrow color and optional
+// border color, for example:
+//
+// `@include arrow(top, left, red)`
+//
+// for just a single, red arrow, or:
+//
+// `@include arrow(bottom, center, red, black)`
+//
+// which will create a red triangle with a black border which sits at the bottom
+// center of the element. Call the mixin thus:
+//
+//     .foo {
+//         @include arrow(top, left, #BADA55, #ACE);
+//         background-color: #BADA55;
+//         border: 1px solid #ACE;
+//     }
+
+@mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
+  @if $arrow-edge == top {
+    @extend %arrow--top;
+
+    &:before {
+      border-bottom-color: $border-color!important;
+    }
+
+    &:after {
+      border-bottom-color: $arrow-color!important;
+    }
+
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
+
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
+  }
+
+  @if $arrow-edge == right {
+    @extend %arrow--far;
+
+    &:before {
+      border-left-color: $border-color!important;
+    }
+
+    &:after {
+      border-left-color: $arrow-color!important;
+    }
+
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
+
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
+  }
+
+  @if $arrow-edge == bottom {
+    @extend %arrow--bottom;
+
+    &:before {
+      border-top-color: $border-color!important;
+    }
+
+    &:after {
+      border-top-color: $arrow-color!important;
+    }
+
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
+
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
+  }
+
+  @if $arrow-edge == left {
+    @extend %arrow--near;
+
+    &:before {
+      border-right-color: $border-color!important;
+    }
+
+    &:after {
+      border-right-color: $arrow-color!important;
+    }
+
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
+
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
+  }
+}
+
+
+// ## Keyframes mixin.
+// @param $name Name of animation to be referenced later in "animation:" property.
+//
+// Example:
+//     @include keyframes(fadeIn) {
+//         0% { opacity: 0; }
+//         100% { opacity: 1; }
+//     }
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

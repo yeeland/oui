@@ -1,0 +1,148 @@
+//# Buttons
+
+//|| Description || HTML || Example ||
+//|| Default || `<button class="button">Button</button>` || <button class="button">Button</button> ||
+//|| Primary || `<button class="button button--highlight">Button</button>` || <button class="button button--highlight">Button</button> ||
+//|| Accent || `<button class="button button--accent">Button</button>` || <button class="button button--accent">Button</button> ||
+//|| Dark || `<button class="button button--on-dark">Button</button>` || <button class="button button--on-dark">Button</button> ||
+
+// ## Button Variables
+// Shadows for buttons.
+
+%lego-button,
+.lego-button {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  padding: 8px spacer(1.5);
+  height: 31px;
+  font-weight: map-get($font-weight, normal);
+  border-radius: map-get($border-radius, base);
+  color: map-get($font-color, white);
+  border-style: solid;
+  border-width: 1px;
+  line-height: 1;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    outline: none;
+    color: map-get($ui-color, white);
+  }
+
+  &--brand {
+    background: map-get($background-color, brand);
+    border-color: map-get($ui-color, brand-dark);
+
+    &:hover {
+      background: #1d88cf;
+    }
+
+    &:active {
+      background: #196598;
+      border-color: #196598;
+    }
+  }
+
+  // ## Button Styles
+  // Button color variations.
+
+  &--primary {
+    background: #7abd37;
+    border-color: #4f9a00;
+
+    &:hover {
+      background: #88d13f;
+    }
+
+    &:active {
+      background: #598a28;
+      border-color: #598a28;
+    }
+  }
+
+  &--secondary {
+    background: #f8f8f8;
+    color: map-get($font-color, medium);
+    border-color: map-get($ui-color, base);
+
+    &:hover {
+      background: #fff;
+      border-color: map-get($ui-color, medium);
+    }
+
+    &:active {
+      background: #eee;
+      border-color: map-get($ui-color, medium);
+    }
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: map-get($font-color, medium);
+    }
+  }
+
+  &--danger {
+    background: #d04b51;
+    border-color: #a20000;
+
+    &:hover {
+      background: #e8545b;
+    }
+
+    &:active {
+      background: #9c383d;
+      border-color: #9c383d;
+    }
+  }
+
+  // ## Button Sizes
+  // Button size variations.
+
+  &--small {
+    padding: 4px spacer(1);
+    height: 24px;
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  &--full {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &--squish {
+    padding-right: spacer(1);
+    padding-left: spacer(1);
+  }
+
+  // ## Inactive Button
+  // Disabled state.
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus,
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active,
+  &--disabled:focus {
+    background: none !important;
+    background-color: map-get($background-color, faint) !important;
+    color: map-get($font-color, light) !important;
+    cursor: default;
+    top: 0;
+    border-color: map-get($ui-color, base);
+    box-shadow: none;
+  }
+}

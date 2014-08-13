@@ -1,0 +1,58 @@
+// # Tabs
+// Creates a set of tabs.
+
+.lego-tabs-nav {
+  @extend %flex;
+  border-bottom: 1px solid map-get($ui-color, base);
+
+  &__item {
+    position: relative;
+    text-align: center;
+    margin-right: spacer(0.5);
+    padding: spacer(1) spacer(1.5);
+    border: 1px solid map-get($ui-color, base);
+    border-bottom: 0;
+    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
+    color: map-get($font-color, medium);
+    font-weight: map-get($font-weight, bold);
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      color: map-get($font-color, brand);
+    }
+
+    &--active {
+
+      // Provides the white bar under the active tab.
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background: map-get($background-color, white);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+      }
+    }
+  }
+}
+
+.lego-tabs--small {
+  .lego-tabs-nav__item {
+    padding: spacer(0.5) spacer(1);
+    font-size: map-get($font-size, micro);
+  }
+}
+
+.lego-tabs--center {
+  .lego-tabs-nav {
+    @extend %justify--center;
+  }
+
+  .lego-tabs-nav__item:first-child {
+    margin-left: spacer(0.5);
+  }
+}
+

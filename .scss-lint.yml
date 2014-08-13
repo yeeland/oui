@@ -1,0 +1,59 @@
+---
+linters:
+  BorderZero:   # border: 0 is preferred over border: none.
+    enabled: true
+  CapitalizationInSelector: # All class names should be in lowercase.
+    enabled: true
+  ColorKeyword: # Use color in hex rather than name.
+    enabled: false
+  DeclarationOrder: # Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order.
+    enabled: true
+  DuplicateProperty: # Catches duplicate properities.
+    enabled: true
+  ElsePlacement: # @else should be placed on same line as previous curly brace.
+    enabled: false
+  EmptyLineBetweenBlocks: # Rule declaration should be preceded by an empty line.
+    enabled: true
+  EmptyRule: # Reports when you have an empty rule set.
+    enabled: true
+  FinalNewline: # Files should end with a trailing newline.
+    enabled: true
+  HexNotation: # Color `#721B09` should be written as `#721b09`
+    enabled: true
+  Indentation: # Line should be indented 2 spaces, but was indented 4 spaces.
+    enabled: true
+  LeadingZero: # `0.18` should be written without a leading zero as `.18`.
+    style: include_zero
+    enabled: true
+  MergeableSelector: #Reports when you define the same selector twice in a single sheet.
+    enabled: true
+  NameFormat: # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
+    enabled: false
+  PlaceholderInExtend: # Always use placeholder selectors in @extend.
+    enabled: true
+  PropertySpelling: # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
+    enabled: true
+  PropertySortOrder: # Properties should be sorted in order, with vendor-prefixed extensions before the standardized CSS property.
+    enabled: false
+  SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4.
+    enabled: false
+  Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
+    enabled: true
+  SingleLinePerSelector: # Each selector in a comma sequence should be on its own line.
+    enabled: true
+  SpaceAfterComma: # Commas in function arguments should be followed by a single space.
+    enabled: true
+  SpaceAfterPropertyColon: # Colon after property should be followed by one space.
+    enabled: true
+  SpaceBeforeBrace: # Opening curly brace `{` should be preceded by one space.
+    enabled: true
+  SpaceBetweenParens: # Expected 0 spaces between parentheses instead of 1.
+    enabled: false
+  StringQuotes: # Prefer single quoted strings.
+    enabled: true
+  TrailingSemicolon: # Declaration should not have a space before the terminating semicolon.
+    enabled: true
+  UnnecessaryParentReference: # Unnecessary parent selector (&).
+    enabled: false
+  ZeroUnit: # `0px` should be written without units as `0`.
+    enabled: true

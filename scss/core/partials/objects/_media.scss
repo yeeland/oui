@@ -1,0 +1,47 @@
+// # Media
+
+// Place any image- and text-like content side-by-side, see
+// [Media Object](http://tinyurl.com/qzsad6r).
+//
+//[hc]
+//     <div class="media">
+//         <img src="http://placekitten.com/100/100" alt=""  class="media__img" />
+//         <div class="media__body">
+//           <h4 class="media__title">Media Title</h4>
+//           <p>Text of media or description or something that could go on longer if need be.</p>
+//         </div>
+//     </div>
+//[/hc]
+
+// Use `.media__img--rev` for reverse image location (right instead of left).
+
+//[hc]
+//     <div class="media">
+//         <div class="media__body">
+//           <h4 class="media__title">Media Title</h4>
+//           <p>Text of media or description or something that could go on longer if need be.</p>
+//         </div>
+//         <div class="media__img--rev">
+//          <img src="http://placekitten.com/100/100" alt="" />
+//         </div>
+//     </div>
+//[/hc]
+
+%lego-media,
+.lego-media {
+  @extend %flex;
+  @extend %align-items--flex-start;
+
+  &__img {
+    margin-right: spacer(1);
+  }
+
+  &__img--rev {
+    margin-left: spacer(1);
+  }
+
+  &__body {
+    @extend %flex-1;
+    @extend %kill-last-child-margin;
+  }
+}

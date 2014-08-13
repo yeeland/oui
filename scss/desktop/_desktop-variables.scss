@@ -1,0 +1,33 @@
+// # Custom Variables
+
+// ### Font Sizes
+
+$font-size: (
+  base                : 12px,
+  micro               : 10px,
+  milli               : 11px,
+
+  // Heading sizes
+  alpha               : 36px, // h1
+  beta                : 30px, // h2
+  gamma               : 24px, // h3
+  delta               : 20px, // h4
+  epsilon             : 16px, // h5
+  zeta                : 12px, // h6
+
+  // Extra large fonts
+  kilo                : 70px,
+  mega                : 86px,
+  giga                : 96px
+);
+
+// ### Line Heights
+// Specifying variable instead of inside map so it can be used by line-height mixin.
+
+$line-height: (
+  base                : 1.6,
+  tight               : 1.2,
+  loose               : 1.8
+);
+
+$platform-min-width   : 1000px;

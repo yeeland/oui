@@ -1,0 +1,44 @@
+// # Links
+
+// Links will use the `map-get($link-color, base)`. You can also apply a `.link` class to an element.
+
+//[hc]
+//      Text can have <span class="link">link color</span> when not html anchors.
+//[/hc]
+
+a,
+%link,
+.link {
+  color: map-get($link-color, base);
+  cursor: pointer;
+
+  &:visited,
+  &:active {
+    color: map-get($link-color, base);
+  }
+
+  &:hover {
+    color: lighten(map-get($link-color, base), 10%);
+  }
+}
+
+%link--reverse,
+.link--reverse {
+  color: map-get($link-color, brand-light) !important;
+
+  &:hover {
+    color: lighten(map-get($link-color, brand-light), 15%) !important;
+  }
+}
+
+// Targets anchors without an `href` attribute.
+a:not([href]) {
+  color: map-get($link-color, base);
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: map-get($link-color, base);
+    cursor: default;
+  }
+}

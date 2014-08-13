@@ -1,0 +1,48 @@
+// # Poptips
+// Information bubbles on hover. Almost always used with postition: absolute.
+
+$lego-pop-tip-background: map-get($ui-color, dark);
+
+.lego-pop-tip {
+  background: $lego-pop-tip-background;
+  color: map-get($font-color, white);
+  border-radius: map-get($border-radius, base);
+  font-size: map-get($font-size, micro);
+  padding: spacer(0.5) spacer(1);
+  max-width: 250px;
+  display: inline-block;
+
+  // Arrow options.
+
+  &--arrow-top-center {
+    @include arrow(top, center, $lego-pop-tip-background);
+  }
+
+  &--arrow-top-left {
+    @include arrow(top, left, $lego-pop-tip-background);
+  }
+
+  &--arrow-top-right {
+    @include arrow(top, right, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-center {
+    @include arrow(bottom, center, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-left {
+    @include arrow(bottom, left, $lego-pop-tip-background);
+  }
+
+  &--arrow-bottom-right {
+    @include arrow(bottom, right, $lego-pop-tip-background);
+  }
+
+  &--arrow-left {
+    @include arrow(left, center, $lego-pop-tip-background);
+  }
+
+  &--arrow-right {
+    @include arrow(right, center, $lego-pop-tip-background);
+  }
+}

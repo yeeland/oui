@@ -1,5 +1,5 @@
 .cf:after {
-  content: "";
+  content: '';
   display: table;
   clear: both; }
 
@@ -99,19 +99,40 @@
 body {
   margin: 0; }
 
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-dl, dd, ol, ul,
-form, fieldset, legend,
-table, th, td, caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+caption,
 hr {
   margin: 0;
   padding: 0; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400; }
 
 table {
@@ -122,7 +143,8 @@ abbr[title],
 dfn[title] {
   cursor: help; }
 
-u, ins {
+u,
+ins {
   text-decoration: none; }
 
 ins {
@@ -176,7 +198,7 @@ strong {
   font-weight: 500; }
 
 fieldset {
-  border: none; }
+  border: 0; }
 
 textarea {
   vertical-align: top; }
@@ -222,7 +244,8 @@ html {
   font-weight: 300;
   color: #262626; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 p {
@@ -296,7 +319,7 @@ fieldset {
   margin: 15px auto;
   position: relative; }
   .lego-or:before, .lego-or:after {
-    content: "";
+    content: '';
     border-top: 1px dotted #e0e0e0;
     width: 40%;
     position: absolute;
@@ -326,7 +349,7 @@ figure > img {
   display: block; }
 
 a img {
-  border: none; }
+  border: 0; }
 
 img[width],
 img[height] {
@@ -425,7 +448,7 @@ li > ol {
     padding-right: 10px; }
     .lego-table--wall > thead > tr > th:first-child,
     .lego-table--wall > tbody > tr > td:first-child {
-      border-left: none; }
+      border-left: 0; }
   .lego-table--tight > thead > tr > th,
   .lego-table--tight > tbody > tr > td {
     padding-top: 5px;
@@ -483,7 +506,7 @@ h6 {
   margin-bottom: 5px;
   text-transform: uppercase; }
 
-hgroup .hN {
+hgroup .hn {
   margin-bottom: 0; }
 
 .milli {
@@ -538,7 +561,7 @@ hgroup .hN {
   border-radius: 2px; }
   .lego-dropdown > li:last-child, .lego-pop-upsell > li:last-child,
   .lego-block-list-group > li:last-child {
-    border: none; }
+    border: 0; }
 
 .lego-attention {
   padding: 10px;
@@ -557,7 +580,7 @@ hgroup .hN {
 .lego-pop-tip--arrow-top, .lego-pop-upsell--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right, .lego-pop-upsell--arrow-left, .lego-pop-upsell--arrow-right, .lego-pop-tip--arrow-bottom, .lego-pop-upsell--arrow-bottom {
   position: relative; }
   .lego-pop-tip--arrow-top:before, .lego-pop-upsell--arrow-top:before, .lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before, .lego-pop-upsell--arrow-left:before, .lego-pop-upsell--arrow-right:before, .lego-pop-tip--arrow-bottom:before, .lego-pop-upsell--arrow-bottom:before, .lego-pop-tip--arrow-top:after, .lego-pop-upsell--arrow-top:after, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-left:after, .lego-pop-upsell--arrow-right:after, .lego-pop-tip--arrow-bottom:after, .lego-pop-upsell--arrow-bottom:after {
-    content: "";
+    content: '';
     position: absolute;
     border-collapse: separate;
     pointer-events: none; }
@@ -599,7 +622,7 @@ hgroup .hN {
   position: relative;
   top: -0.1em;
   font-family: Arial, sans;
-  font-size: .7em; }
+  font-size: 0.7em; }
   .lego-arrow-inline--up:before {
     content: "\25B2"; }
   .lego-arrow-inline--down:before {
@@ -615,7 +638,7 @@ hgroup .hN {
   padding: 5px 10px; }
   .lego-breadcrumb > li + li:before {
     color: #bfbfbf;
-    content: "/\00a0";
+    content: '/\00a0';
     padding: 0 5px 0 8px; }
   .lego-breadcrumb__active {
     color: #7f7f7f; }
@@ -627,13 +650,13 @@ hgroup .hN {
   font-family: inherit;
   font-size: 12px;
   cursor: pointer;
-  border: none;
+  border: 0;
   margin: 0;
   padding: 8px 15px;
   height: 31px;
   font-weight: 400;
   border-radius: 2px;
-  color: #FFF;
+  color: white;
   border-style: solid;
   border-width: 1px;
   line-height: 1; }
@@ -644,37 +667,37 @@ hgroup .hN {
     outline: none;
     color: white; }
   .lego-button:active {
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2); }
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); }
   .lego-button-group--toggle .lego-button-toggle__active,
   .lego-button--brand {
     background: #006eb6;
     border-color: #225995; }
     .lego-button-group--toggle .lego-button-toggle__active:hover,
     .lego-button--brand:hover {
-      background: #147EC7;
-      border-color: #1C487D; }
+      background: #147ec7;
+      border-color: #1c487d; }
     .lego-button-group--toggle .lego-button-toggle__active:active,
     .lego-button--brand:active {
-      background: #1375B9;
-      border-color: #1C487D; }
+      background: #1375b9;
+      border-color: #1c487d; }
   .lego-button--primary {
     background: #87ab1b;
-    border-color: #7E9339; }
+    border-color: #7e9339; }
     .lego-button--primary:hover {
-      background: #90B71C;
-      border-color: #68792F; }
+      background: #90b71c;
+      border-color: #68792f; }
     .lego-button--primary:active {
-      background: #86AA1A;
-      border-color: #68792F; }
+      background: #86aa1a;
+      border-color: #68792f; }
   .lego-button-group--toggle .lego-button:not(.lego-button-toggle__active),
   .lego-button--secondary {
     background: #f6f6f6;
     color: #888;
-    border-color: #CACACA; }
+    border-color: #cacaca; }
     .lego-button-group--toggle .lego-button:hover:not(.lego-button-toggle__active),
     .lego-button--secondary:hover {
       background: #f9f9f9;
-      border-color: #B8B8B8; }
+      border-color: #b8b8b8; }
     .lego-button-group--toggle .lego-button:active:not(.lego-button-toggle__active),
     .lego-button--secondary:active {
       background: #eee;
@@ -692,11 +715,11 @@ hgroup .hN {
     background: #9d250c;
     border-color: #93230b; }
     .lego-button--danger:hover {
-      background: #AB290D;
-      border-color: #721B09; }
+      background: #ab290d;
+      border-color: #721b09; }
     .lego-button--danger:active {
-      background: #9C250C;
-      border-color: #721B09; }
+      background: #9c250c;
+      border-color: #721b09; }
   .lego-button-group--toggle .lego-button,
   .lego-button--small {
     padding: 4px 10px;
@@ -729,10 +752,14 @@ hgroup .hN {
 
 .lego-button-group--left .lego-button {
   margin-right: 6px; }
+  .lego-button-group--left .lego-button:last-child {
+    margin-right: 0; }
 .lego-button-group--right {
   text-align: right; }
   .lego-button-group--right .lego-button {
     margin-left: 6px; }
+    .lego-button-group--right .lego-button:first-child {
+      margin-left: 0; }
 .lego-button-group--center {
   text-align: center; }
   .lego-button-group--center .lego-button {
@@ -744,7 +771,7 @@ hgroup .hN {
   border-radius: 0; }
 .lego-button-group--toggle > .lego-button:not(:last-child),
 .lego-button-group--flush > .lego-button:not(:last-child) {
-  border-right: none; }
+  border-right: 0; }
 .lego-button-group--toggle > .lego-button:first-child,
 .lego-button-group--flush > .lego-button:first-child {
   border-radius: 2px 0 0 2px; }
@@ -754,7 +781,7 @@ hgroup .hN {
 .lego-button-group--toggle .dropdown-group:not(:last-child) .lego-button,
 .lego-button-group--flush .dropdown-group:not(:last-child) .lego-button {
   border-radius: 0;
-  border-right: none; }
+  border-right: 0; }
 .lego-button-group--toggle .dropdown-group:last-child .lego-button,
 .lego-button-group--flush .dropdown-group:last-child .lego-button {
   border-radius: 0 2px 2px 0; }
@@ -764,9 +791,9 @@ hgroup .hN {
   .lego-button-group--toggle .lego-button-toggle__active:hover,
   .lego-button-group--toggle .lego-button-toggle__active:active {
     background: #006eb6;
-    box-shadow: none; }
+    box-shadow: 0; }
   .lego-button-group--toggle .lego-button-toggle__active + .lego-button {
-    border-left: none; }
+    border-left: 0; }
 
 .border--top {
   border-top: 1px solid #e0e0e0;
@@ -876,9 +903,9 @@ hgroup .hN {
 .lego-pagination > li {
   padding: 5px; }
 .lego-pagination__first a:before {
-  content: "\00AB" "\00A0"; }
+  content: '\00AB' '\00A0'; }
 .lego-pagination__last a:after {
-  content: "\00A0" "\00BB"; }
+  content: '\00A0' '\00BB'; }
 .lego-pagination__current > a {
   color: #262626; }
 
@@ -890,6 +917,7 @@ hgroup .hN {
   overflow: hidden; }
   .lego-progress__bar {
     -moz-transition: width 0.3s;
+    -o-transition: width 0.3s;
     -webkit-transition: width 0.3s;
     transition: width 0.3s;
     height: 100%;
@@ -988,19 +1016,17 @@ hgroup .hN {
     text-align: center;
     padding: 10px 15px;
     border: 1px solid #e0e0e0;
-    border-bottom: none;
+    border-bottom: 0;
     border-radius: 2px 2px 0 0;
     color: #a5a5a5;
     cursor: pointer;
     margin-right: 10px; }
-    .lego-tabs-nav__item:last-child {
-      border-right: 1px solid #e0e0e0; }
     .lego-tabs-nav__item:hover, .lego-tabs-nav__item--active {
       border-color: #7f7f7f;
       background: white;
       color: #262626; }
       .lego-tabs-nav__item:hover:after, .lego-tabs-nav__item--active:after {
-        content: "";
+        content: '';
         display: block;
         height: 1px;
         background: white;
@@ -1385,7 +1411,7 @@ hgroup .hN {
   padding-left: 0 !important; }
 
 .no-border {
-  border: none !important; }
+  border: 0 !important; }
 
 .no-border--top {
   border-top: none !important; }
@@ -1436,7 +1462,7 @@ hgroup .hN {
   text-align: right !important; }
 
 .go:after {
-  content: "\00A0" "\00BB" !important; }
+  content: '\00A0' '\00BB' !important; }
 
 .caps {
   text-transform: uppercase !important; }
@@ -1450,10 +1476,7 @@ hgroup .hN {
 .lego-media__body > *:last-child, .lego-pop-upsell__content > *:last-child, .lego-form-fields > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child,
 .islet > *:last-child > *:last-child,
 .island > *:last-child > *:last-child,
-.lego-media__body > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child, .lego-form-fields > *:last-child > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child > *:last-child,
-.islet > *:last-child > *:last-child > *:last-child,
-.island > *:last-child > *:last-child > *:last-child,
-.lego-media__body > *:last-child > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child > *:last-child {
+.lego-media__body > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child {
   margin-bottom: 0; }
 
 .line--tight {

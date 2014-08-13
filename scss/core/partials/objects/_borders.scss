@@ -1,0 +1,31 @@
+// # Borders
+// This adds a border directly to an element.
+
+%border--top,
+.border--top {
+  border-top: 1px solid map-get($ui-color, base);
+  margin-top: spacer(1) - 1px;
+  padding-top: spacer(1);
+}
+
+%border--bottom,
+.border--bottom {
+  border-bottom: 1px solid map-get($ui-color, base);
+  margin-bottom: spacer(1) - 1px;
+  padding-bottom: spacer(1);
+}
+
+// ## Border Left/Right
+// These don't add margin so they remain flush with right/left side.
+
+%border--left,
+.border--left {
+  border-left: 1px solid map-get($ui-color, base);
+  padding-left: spacer(1);
+}
+
+%border--right,
+.border--right {
+  border-right: 1px solid map-get($ui-color, base);
+  padding-right: spacer(1);
+}

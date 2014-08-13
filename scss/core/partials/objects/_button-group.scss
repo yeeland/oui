@@ -1,0 +1,110 @@
+// ## Button Group
+// For buttons row should align left or right.
+
+//[hc]
+//     <div class="button-group--left">
+//        <button class="button">Button</button>
+//        <button class="button button--preferred">Button</button>
+//     </div>
+//[/hc]
+
+//[hc]
+//     <div class="button-group--right">
+//        <button class="button">Button</button>
+//        <button class="button button--preferred">Button</button>
+//     </div>
+//[/hc]
+
+$button-group-offset: 4px;
+
+%lego-button-group,
+.lego-button-group {
+
+  &--left {
+
+    .lego-button {
+      margin-right: spacer(1) - $button-group-offset;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  &--right {
+    text-align: right;
+
+    .lego-button {
+      margin-left: spacer(1) - $button-group-offset;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--center {
+    text-align: center;
+
+    .lego-button {
+      margin-left: spacer(0.5);
+      margin-right: spacer(0.5);
+    }
+  }
+
+  &--flush {
+    @extend %lego-grid;
+    @extend %flex-wrap--nowrap;
+
+    .lego-button {
+      margin-left: 0;
+      border-radius: 0;
+
+      &:not(:last-child) {
+        border-right: 0;
+      }
+
+      &:first-child {
+        border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
+      }
+
+      &:last-child {
+        border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      }
+
+      &:hover + .lego-button {
+        border-left-color: map-get($ui-color, medium);
+      }
+
+      &--brand {
+        cursor: default;
+        background: map-get($background-color, brand);
+
+        + .lego-button,
+        &:hover + .lego-button {
+          border-left-color: map-get($ui-color, brand-dark);
+        }
+      }
+
+      &:hover + .lego-button--brand {
+          border-left-color: map-get($ui-color, brand-dark);
+      }
+    }
+
+    // This is for buttons inside dropdown-groups. Only needed if buttons are rounded.
+
+    .dropdown-group {
+      &:not(:last-child) {
+        .lego-button {
+          border-radius: 0;
+          border-right: 0;
+        }
+      }
+
+      &:last-child .lego-button {
+        border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      }
+    }
+  }
+}

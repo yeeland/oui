@@ -1,0 +1,38 @@
+// # Pill Text
+// Reverse text with rounded corners. For short words and numbers.
+
+// Width of paused and running pills.
+$status-pill-width: 70px;
+
+.pill {
+  background: map-get($background-color, light);
+  color: map-get($font-color, white);
+  border-radius: 1em;
+  padding: 3px spacer(1);
+  text-transform: uppercase;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: map-get($font-weight, semi);
+  letter-spacing: map-get($letter-spacing, loose);
+  text-align: center;
+  display: inline-block;
+}
+
+.pill--paused,
+.pill--running,
+.pill--draft {
+  width: $status-pill-width;
+}
+
+.pill--paused {
+  background: map-get($ui-color, warning);
+}
+
+.pill--running {
+  background: map-get($ui-color, good-news);
+}
+
+.pill--draft {
+  background: map-get($ui-color, brand);
+}
+

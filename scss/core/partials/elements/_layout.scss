@@ -1,0 +1,26 @@
+// # Layout
+// Classes for building page layouts.
+
+%lego-pane-group,
+.lego-pane-group {
+  @extend %flex;
+  height: 100%;
+
+  &--column {
+    @extend %flex-direction--column;
+  }
+}
+
+%lego-pane,
+.lego-pane {
+
+  &--flex {
+    @extend %flex-1;
+  }
+}
+
+%lego-fence,
+.lego-fence {
+  padding-left: spacer(2);
+  padding-right: spacer(2);
+}

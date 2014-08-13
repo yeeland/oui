@@ -1,0 +1,19 @@
+@import 'compass';
+
+// Import `core` and `desktop` variables
+@import 'core/core-variables';
+@import 'desktop/desktop-variables';
+
+// Import `core` and `desktop` partials
+@import 'core/core-partials';
+@import 'desktop/desktop-partials';
+
+
+// ## Trumps
+// `!important` classes for overrides. Should always be loaded last.
+
+@import 'core/partials/trumps/background';
+@import 'core/partials/trumps/layout';
+@import 'core/partials/trumps/margin';
+@import 'core/partials/trumps/padding';
+@import 'core/partials/trumps/type';

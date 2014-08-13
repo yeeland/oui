@@ -1,0 +1,22 @@
+// Attention
+// Boxes for highlighting important information or warnings.
+
+.lego-attention {
+  @extend %kill-last-child-margin;
+  padding: spacer(1.5);
+  margin-bottom: spacer(2);
+  border-radius: map-get($border-radius, base);
+  border: 1px solid map-get($ui-color, brand-light);
+  background: map-get($background-color, brand-light);
+
+  &--warning {
+    border-color: map-get($ui-color, warning);
+    background-color: map-get($background-color, warning);
+  }
+
+  &--error {
+    border-color: map-get($ui-color, error);
+    background-color: map-get($ui-color, error);
+    color: map-get($font-color, white);
+  }
+}
