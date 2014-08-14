@@ -9,8 +9,7 @@ define(function(require) {
   var ARROW_CLASS_TEMPLATE = 'lego-pop-tip lego-pop-tip--arrow-';
 
   return {
-    data: {
-    },
+    isEmpty: true,
     bind: function() {
       var $el = $(this.el);
       $el.addClass(ARROW_CLASS_TEMPLATE + this.expression);

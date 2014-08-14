@@ -11,7 +11,7 @@
 define(function(require) {
   return {
      component: require('app/components'),
-     directive: require('app/directives'),
+     directive: require('app/directives')
      // partial: require('app/partials'),
      // filter: require('app/filters')
   };
