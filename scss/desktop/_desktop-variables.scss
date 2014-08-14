@@ -1,5 +1,14 @@
 // # Custom Variables
 
+
+// ### Layout Width
+// Widths for major layout elements.
+
+$layout-width: (
+  body                : 1120px,
+  data-sidebar        : 320px
+);
+
 // ### Font Sizes
 
 $font-size: (
@@ -29,5 +38,3 @@ $line-height: (
   tight               : 1.2,
   loose               : 1.8
 );
-
-$platform-min-width   : 1000px;

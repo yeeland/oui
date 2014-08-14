@@ -3,6 +3,15 @@
 
 .lego-dialog {
   box-shadow: 0 0 map-get($shadow, big);
+  width: map-get($dialog, width-base);
+
+  &--narrow {
+    width: map-get($dialog, width-narrow);
+  }
+
+  &--wide {
+    width: map-get($dialog, width-wide);
+  }
 
   &__header,
   &__body,

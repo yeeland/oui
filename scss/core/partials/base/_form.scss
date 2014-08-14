@@ -5,12 +5,6 @@
 // Instead of a `[type]` selector for each kind of form input, we just use a
 // class to target any/every one, e.g.:
 
-// [c]
-//      <input type="text" class="lego-text-input">
-//      <input type="email" class="lego-text-input">
-//      <input type="password" class="lego-text-input">
-// [/c]
-
 .lego-text-input,
 .lego-textarea {
   width: 100%;

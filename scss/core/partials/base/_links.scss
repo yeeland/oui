@@ -3,7 +3,7 @@
 // Links will use the `map-get($link-color, base)`. You can also apply a `.link` class to an element.
 
 //[hc]
-//      Text can have <span class="link">link color</span> when not html anchors.
+//      Text can have <span class="link">link color</span> when not an HTML anchor.
 //[/hc]
 
 a,
@@ -24,7 +24,7 @@ a,
 
 %link--reverse,
 .link--reverse {
-  color: map-get($link-color, brand-light) !important;
+  color: map-get($link-color, white) !important;
 
   &:hover {
     color: lighten(map-get($link-color, brand-light), 15%) !important;

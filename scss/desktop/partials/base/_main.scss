@@ -23,7 +23,7 @@ body {
   font-weight: inherit;  // Legacy app.css override.
   font-family: inherit;  // Legacy app.css override.
   width: auto;  // Legacy app.css override.
-  min-width: $platform-min-width;  // Legacy app.css override.
+  min-width: map-get($layout-width, body);  // Legacy app.css override.
 }
 
 li {

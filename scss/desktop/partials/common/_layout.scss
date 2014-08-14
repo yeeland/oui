@@ -1,0 +1,4 @@
+.lego-data-sidebar {
+  width: map-get($layout-width, data-sidebar);
+  border-left: 1px solid map-get($ui-color, base);
+}

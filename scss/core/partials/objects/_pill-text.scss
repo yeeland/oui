@@ -1,8 +1,7 @@
 // # Pill Text
 // Reverse text with rounded corners. For short words and numbers.
 
-// Width of paused and running pills.
-$status-pill-width: 70px;
+$status-pill-width: 70px; // Width of paused and running pills.
 
 .pill {
   background: map-get($background-color, light);
@@ -33,6 +32,6 @@ $status-pill-width: 70px;
 }
 
 .pill--draft {
-  background: map-get($ui-color, brand);
+  background: map-get($ui-color, base);
 }
 

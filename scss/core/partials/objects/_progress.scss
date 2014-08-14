@@ -1,14 +1,7 @@
 // # Progress
 // Creates a progress bar.
 
-//[hc]
-//     <div class="progress">
-//         <div class="progress__bar" style="width: 60%;">60%</div>
-//     </div>
-//[/hc]
-
-
-$progress-bar-height: 20px;
+$progress-bar-height: 20px; // Progress bar height.
 
 .lego-progress {
   background: map-get($background-color, faint);

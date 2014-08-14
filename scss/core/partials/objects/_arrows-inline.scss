@@ -6,6 +6,9 @@
 //     <div>Nav down <span class="lego-arrow-inline--down"></span></div>
 //[/hc]
 
+$border-colored: 4px solid currentColor;
+$border-transparent: 4px solid transparent;
+
 %lego-arrow-inline,
 .lego-arrow-inline {
   display: inline-block;
@@ -17,29 +20,29 @@
 
   &--up {
     @extend %lego-arrow-inline;
-    border-bottom: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-bottom: $border-colored;
+    border-right: $border-transparent;
+    border-left: $border-transparent;
   }
 
   &--down {
     @extend %lego-arrow-inline;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-top: $border-colored;
+    border-right: $border-transparent;
+    border-left: $border-transparent;
   }
 
   &--right {
     @extend %lego-arrow-inline;
-    border-left: 4px solid;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
+    border-left: $border-colored;
+    border-top: $border-transparent;
+    border-bottom: $border-transparent;
   }
 
   &--left {
     @extend %lego-arrow-inline;
-    border-right: 4px solid;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
+    border-right: $border-colored;
+    border-top: $border-transparent;
+    border-bottom: $border-transparent;
   }
 }

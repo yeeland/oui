@@ -4,11 +4,14 @@
 %lego-pane-group,
 .lego-pane-group {
   @extend %flex;
-  height: 100%;
 
   &--column {
     @extend %flex-direction--column;
   }
+}
+
+.lego-pane--full {
+  height: 100%;
 }
 
 %lego-pane,
@@ -17,6 +20,11 @@
   &--flex {
     @extend %flex-1;
   }
+}
+
+%lego-pane--scroll-y,
+.lego-pane--scroll-y {
+  overflow-y: auto;
 }
 
 %lego-fence,
