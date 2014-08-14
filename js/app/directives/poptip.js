@@ -3,22 +3,19 @@
  *
  * @author Cheston Lee
  */
-define(function(require, exports, module) {
+define(function(require) {
   var $ = require('jquery');
-  var Vue = require('vue');
 
-  var $poptip = $('<div class="lego-pop-tip"></div>');
-  var arrowClassTmpl = 'lego-pop-tip--arrow-';
+  var ARROW_CLASS_TEMPLATE = 'lego-pop-tip lego-pop-tip--arrow-';
 
-  return Vue.directive('poptip',{
+  return {
+    isEmpty: true,
     bind: function() {
-      // var $el = $(this.el);
-      var $body = $('body');
-      $poptip.addClass(arrowClassTmpl + this.expression);
-      $body.append($poptip);
+      var $el = $(this.el);
+      $el.addClass(ARROW_CLASS_TEMPLATE + this.expression);
     },
     unbind: function() {
-      $poptip.remove();
+      $(this.el).remove();
     }
-  });
+  };
 });

@@ -3,7 +3,7 @@
  *
  * Makes testing easier
  */
-define(function(require, module, exports) {
+define(function(require) {
   var _ = require('lodash');
   var Vue = require('vue');
 
@@ -22,11 +22,11 @@ define(function(require, module, exports) {
     /**
      * @var {Vue} reference to the page level Vue ViewModel
      */
-    this.rootComponent;
+    this.rootComponent = null;
     // Calling app.$broadcast or app.$on before app.run() will queue up the broadcast
     // or event handlers in these queues and execute them when the app is run
     this.broadcastQueue = [];
-    this.handlerQueue = []
+    this.handlerQueue = [];
   }
 
   /**
