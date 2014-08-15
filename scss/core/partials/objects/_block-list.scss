@@ -1,15 +1,5 @@
 // # Block List
-//
-// Create big blocky lists of content that, e.g.:
-//
-// [hc]
-//     <ul class="block-list">
-//       <li>Foo</li>
-//       <li>Bar</li>
-//       <li>Baz</li>
-//       <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
-//     </ul>
-// [/hc]
+// Create big blocky vertical lists with dividers.
 
 %lego-block-list,
 .lego-block-list {

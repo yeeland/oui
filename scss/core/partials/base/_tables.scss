@@ -28,21 +28,6 @@
   // ## Cell Alignments
   // Defaults for cell alignments with one helper class for numbers.
 
-  //[hc]
-  //     <table class="table--rule">
-  //       <tbody>
-  //           <tr>
-  //               <td class="numerical">300</td>
-  //               <td>Lorem</td>
-  //           </tr>
-  //           <tr>
-  //               <td class="numerical">225</td>
-  //               <td>Foobar</td>
-  //           </tr>
-  //       </tbody>
-  //     </table>
-  //[/hc]
-
   [rowspan] {
     vertical-align: middle;
   }
@@ -68,8 +53,8 @@
   }
 
 
-    // ## Table Variations
-    // We're using direct decendent selectors so any child tables do not inherit styles.
+  // ## Table Variations
+  // We're using direct decendent selectors so any child tables do not inherit styles.
 
   &--rule {
 
@@ -109,6 +94,7 @@
 }
 
 // Added to the table row.
+
 .lego-table-row--active {
   background-color: map-get($background-color, brand-light);
 }

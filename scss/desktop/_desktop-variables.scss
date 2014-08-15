@@ -1,5 +1,6 @@
 // # Custom Variables
-
+// These variables set defaults for the `desktop` CSS send to optimizely.com.
+// You can also override variables set in `core` as needed.
 
 // ### Layout Width
 // Widths for major layout elements.
@@ -16,7 +17,6 @@ $font-size: (
   micro               : 10px,
   milli               : 11px,
 
-  // Heading sizes
   alpha               : 36px, // h1
   beta                : 30px, // h2
   gamma               : 24px, // h3
@@ -24,8 +24,7 @@ $font-size: (
   epsilon             : 16px, // h5
   zeta                : 12px, // h6
 
-  // Extra large fonts
-  kilo                : 70px,
+  kilo                : 70px, // Extra large fonts.
   mega                : 86px,
   giga                : 96px
 );

@@ -1,20 +1,5 @@
 // # Nav
-
 // Creates simple nav pattens to extend.
-// See [nav abstraction explanation](http://tinyurl.com/mdd3fp9).
-
-// ## Basic Nav
-// When used on an `ol` or `ul`, this class throws the list into horizontal mode
-// e.g.:
-//
-//[hc]
-//     <ul class="nav">
-//       <li><a href="#">Home</a></li>
-//       <li><a href="#">About</a></li>
-//       <li><a href="#">Portfolio</a></li>
-//       <li><a href="#">Contact</a></li>
-//     </ul>
-//[/hc]
 
 %lego-nav,
 .lego-nav {
@@ -29,16 +14,7 @@
   }
 
 // ## Nav Stacked
-
-// `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
-//[hc]
-//     <ul class="nav nav--stacked">
-//       <li><a href="#">Home</a></li>
-//       <li><a href="#">About</a></li>
-//       <li><a href="#">Portfolio</a></li>
-//       <li><a href="#">Contact</a></li>
-//     </ul>
-//[/hc]
+// Vertically stacked.
 
   &--stacked {
     display: block;
@@ -48,17 +24,8 @@
     }
   }
 
-// ## Nav Banner
-
-// `.nav--banner` extends `.nav` and centers the list, e.g.:
-//[hc]
-//     <ul class="nav nav--banner">
-//       <li><a href="#">Home</a></li>
-//       <li><a href="#">About</a></li>
-//       <li><a href="#">Portfolio</a></li>
-//       <li><a href="#">Contact</a></li>
-//     </ul>
-//[/hc]
+// ## Nav Center
+// Centers nav items.
 
   &--banner {
     @extend %justify--center;
@@ -70,18 +37,7 @@
   }
 
 // ## Nav Fit
-
-// Force a nav to occupy 100% of the available width of its parent. Extends
-// `.nav`, e.g.:
-
-//[hc]
-//     <ul class="nav nav--fit">
-//       <li><a href="#">Home</a></li>
-//       <li><a href="#">About</a></li>
-//       <li><a href="#">Portfolio</a></li>
-//       <li><a href="#">Contact</a></li>
-//     </ul>
-//[/hc]
+// Fills horizonal space.
 
   &--fit {
     @extend %flex;

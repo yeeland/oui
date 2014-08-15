@@ -1,14 +1,5 @@
 // # Row
-
-// Creates a row of "n" number of elements.
-
-//[hc]
-//     <ul class="row">
-//         <li>row item</li>
-//         <li>row item</li>
-//         <li>row item</li>
-//     </ul>
-//[/hc]
+// Creates a row of "n" number of elements. Add a `flexer` to avoid problems with IE 10.
 
 %lego-row,
 .lego-row {

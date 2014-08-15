@@ -50,8 +50,8 @@
 
   // ## Grid Widths
 
-  // If a width is specificed along side the cell__grid then we need
-  // we have to disable the default `flex: 1`.
+  // If a width is specificed on a cell__grid then
+  // we have to disable the default `flex` value.
 
   // [c]
   //     <div class="lego-grid__cell width-1-3">grid cell</div>

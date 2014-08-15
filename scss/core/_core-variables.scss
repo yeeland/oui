@@ -167,6 +167,8 @@ $spacer-unit                   : 10px;
 // will output 25px. It will test to see if value is multiple of .5. If not
 // it will provide a warning.
 
+// Usage:
+
 // [c]
 //     padding: spacer(2.5);
 // [/c]

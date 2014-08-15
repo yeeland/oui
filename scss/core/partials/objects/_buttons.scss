@@ -1,10 +1,11 @@
 //# Buttons
 
 //|| Description || HTML || Example ||
-//|| Default || `<button class="button">Button</button>` || <button class="button">Button</button> ||
-//|| Primary || `<button class="button button--highlight">Button</button>` || <button class="button button--highlight">Button</button> ||
-//|| Accent || `<button class="button button--accent">Button</button>` || <button class="button button--accent">Button</button> ||
-//|| Dark || `<button class="button button--on-dark">Button</button>` || <button class="button button--on-dark">Button</button> ||
+//|| Default || `<button class="lego-button">Button</button>` || <button class="lego-button">Button</button> ||
+//|| Brand || `<button class="lego-button lego-button--brand">Button</button>` || <button class="lego-button lego-button--brand">Button</button> ||
+//|| Highlight || `<button class="lego-button lego-button--highlight">Button</button>` || <button class="lego-button lego-button--highlight">Button</button> ||
+//|| Warning || `<button class="lego-button lego-button--danger">Button</button>` || <button class="lego-button lego-button--danger">Button</button> ||
+//|| Small || `<button class="lego-button lego-button--brand lego-button--small">Button</button>` || <button class="lego-button lego-button--small lego-button--brand">Button</button> ||
 
 // ## Button Variables
 // Shadows for buttons.

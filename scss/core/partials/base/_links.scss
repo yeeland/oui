@@ -32,6 +32,7 @@ a,
 }
 
 // Targets anchors without an `href` attribute.
+
 a:not([href]) {
   color: map-get($link-color, base);
 
