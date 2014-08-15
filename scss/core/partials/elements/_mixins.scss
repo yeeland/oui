@@ -158,14 +158,15 @@
 }
 
 
-// ## Keyframes mixin.
-// @param $name Name of animation to be referenced later in "animation:" property.
+// ## Keyframes mixin
+// $name = Name of animation to be referenced later in "animation:" property.
 //
-// Example:
+//    [c]
 //     @include keyframes(fadeIn) {
 //         0% { opacity: 0; }
 //         100% { opacity: 1; }
 //     }
+//    [/c]
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
