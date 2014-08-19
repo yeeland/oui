@@ -1,9 +1,137 @@
 // # Forms
 
+//[hc]
+//     <form>
+//       <div class="lego-form__header">
+//         <h4>Form to Fill</h4>
+//         <p>Form information might go here if there was reason to do it.</p>
+//       </div>
+//       <fieldset>
+//         <ol class="lego-form-fields">
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Single Input</label>
+//             <input type="text" class="lego-text-input">
+//             <div class="lego-form-note">This is a form note.</div>
+//           </li>
+//           <li class="lego-form-field__item lego-form-error">
+//             <label class="lego-label">Address</label>
+//             <input type="text" class="lego-text-input">
+//             <div class="lego-form-note lego-form-note--error">This field is required.</div>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Textarea</label>
+//             <textarea class="lego-textarea"></textarea>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Fixed-width Input</label>
+//             <input type="text" class="lego-text-input width-150">
+//           </li>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Fixed-width Input</label>
+//             <input type="text" class="lego-text-input width-250">
+//           </li>
+//           <li class="lego-form-field__item">
+//             <div class="lego-grid lego-grid--gutter--narrow">
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//             </div>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <div class="lego-grid lego-grid--gutter--narrow">
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//             </div>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Fill Space</label>
+//             <div class="lego-grid">
+//               <div class="lego-grid__cell">
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="push-double--left">
+//                 <button class="lego-button lego-button--brand">Do This</button>
+//               </div>
+//             </div>
+//           </li>
+//         </ol>
+//       </fieldset>
+
+//       <div class="lego-or">or</div>
+
+//       <fieldset>
+//         <ol class="lego-form-fields">
+//           <li class="lego-form-field__title">Checklist</li>
+//           <li class="lego-form-field__item">
+//             <ul class="lego-input-list">
+//               <li>
+//                 <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="lego-label" for="foo-1">Send me email notifications when I am projected to or have exceeded my plan limits</label>
+//               </li>
+//               <li>
+//                 <input name="foo-2" id="foo-2" type="checkbox"> <label class="lego-label" for="foo-2">Send me email summaries of my experiment results</label>
+//               </li>
+//             </ul>
+//           </li>
+//         </ol>
+//       </fieldset>
+//       <fieldset>
+//         <div class="lego-form-field__title">Form Field Title</div>
+//         <ol class="lego-form-fields">
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Select one thing or another</label>
+//             <select name="zoo" id="zoo">
+//               <option value="one">This is option one</option>
+//               <option value="two">And this is option two</option>
+//             </select>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <ul class="lego-input-list">
+//               <li>
+//                 <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="lego-label" for="bar-1">Radio 1</label>
+//               </li>
+//               <li>
+//                 <input name="radio-1" id="bar-2" type="radio"> <label class="lego-label" for="bar-2">Radio 2</label>
+//               </li>
+//               <li>
+//                 <input name="radio-1" id="bar-3" type="radio"> <label class="lego-label" for="bar-3">Radio 3</label>
+//               </li>
+//             </ul>
+//           </li>
+//         </ol>
+//       </fieldset>
+//       <div class="lego-form__footer lego-button-row lego-button-row--right">
+//         <button class="lego-button">Cancel</button>
+//         <button class="lego-button lego-button--highlight">Submit</button>
+//       </div>
+//     </form>
+//[/hc]
+
+
 // ## Text inputs
 //
 // Instead of a `[type]` selector for each kind of form input, we just use a
 // class to target any/every one, e.g.:
+
+
+//[c]
+//     <input type="text" class="lego-text-input">
+//[/c]
+
 
 .lego-text-input,
 .lego-textarea {

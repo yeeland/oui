@@ -1,17 +1,23 @@
+// # Lego Desktop
+// Root file driving the desktop CSS.
+
 @import 'compass';
 
-// ### Core and Desktop variables
+// ## Core and Desktop variables
 // Import `core` and `desktop` variables
+
 @import 'core/core-variables';
 @import 'desktop/desktop-variables';
 
-// ### Core and Desktop partials
+// ## Core and Desktop partials
 // Import `core` and `desktop` partials
+
 @import 'core/core-partials';
 @import 'desktop/desktop-partials';
 
-// ### Trumps
+// ## Trumps
 // Trumps use `!important` classes for overrides and should always be loaded last.
+
 @import 'core/partials/trumps/background';
 @import 'core/partials/trumps/layout';
 @import 'core/partials/trumps/margin';
