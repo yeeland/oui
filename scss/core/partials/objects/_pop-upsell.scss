@@ -1,5 +1,57 @@
-// # Poptips
-// Information bubbles on hover. Almost always used with postition: absolute.
+// # Pop Upsell
+// Information bubbles on hover. Almost always used with `postition: absolute`.
+
+// ## Examples
+
+//[hc]
+//     <ul class="lego-pop-upsell lego-pop-upsell--arrow-bottom">
+//       <li class="lego-pop-upsell__content">
+//         <div class="lego-pop-upsell__title">Feature Name</div>
+//         <p>Ipsa officiis error minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//       <li class="lego-pop-upsell__link">
+//         <a href="#">Upgrade to use this feature</a>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-pop-upsell lego-pop-upsell--arrow-top">
+//       <li class="lego-pop-upsell__content">
+//         <div class="lego-pop-upsell__title">Feature Name</div>
+//         <p>Ipsa officiis error minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//       <li class="lego-pop-upsell__link">
+//         <a href="#">Upgrade to use this feature</a>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-pop-upsell lego-pop-upsell--arrow-right">
+//       <li class="lego-pop-upsell__content">
+//         <div class="lego-pop-upsell__title">Feature Name</div>
+//         <p>Ipsa officiis error minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//       <li class="lego-pop-upsell__link">
+//         <a href="#">Upgrade to use this feature</a>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-pop-upsell lego-pop-upsell--arrow-left">
+//       <li class="lego-pop-upsell__content">
+//         <div class="lego-pop-upsell__title">Feature Name</div>
+//         <p>Ipsa officiis error minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//       <li class="lego-pop-upsell__link">
+//         <a href="#">Upgrade to use this feature</a>
+//       </li>
+//     </ul>
+//[/hc]
+
+// ## SCSS
 
 $pop-upsell-background: map-get($ui-color, white);
 $pop-upsell-border: map-get($ui-color, medium);

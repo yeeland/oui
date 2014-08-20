@@ -5,9 +5,7 @@
 
 .lego-grid,
 .lego-pane-group,
-.lego-row,
 .lego-button-group,
-.lego-button-row,
 .lego-media,
 .lego-nav,
 .lego-nav--fit,
@@ -19,7 +17,6 @@
 
 .lego-grid__cell,
 .lego-pane--flex,
-.lego-row__flexer,
 .lego-media__body,
 .lego-nav--fit > li,
 .flex-1 {
@@ -92,13 +89,16 @@
 
 .lego-pane--full {
   height: 100%; }
-
 .lego-pane--scroll-y {
   overflow-y: auto; }
 
-.lego-fence {
+.lego-fence--soft {
   padding-left: 20px;
   padding-right: 20px; }
+
+.lego-fence--push {
+  margin-left: 20px;
+  margin-right: 20px; }
 
 .width-1 {
   width: 100%; }
@@ -575,39 +575,8 @@ li > ol {
   font-size: 18px;
   padding-left: 5px; }
 
-.lego-dropdown, .lego-pop-upsell,
-.lego-block-list-group,
-.lego-block-list {
-  list-style: none;
-  margin-left: 0; }
-  .lego-dropdown > li, .lego-pop-upsell > li,
-  .lego-block-list-group > li,
-  .lego-block-list > li {
-    padding: 5px 10px;
-    border-bottom: 1px solid #ededed; }
-  .lego-dropdown__block-link, .lego-pop-upsell__link a,
-  .lego-block-list__link {
-    display: block;
-    padding: 5px 10px;
-    margin-top: -5px;
-    margin-bottom: -5px;
-    margin-left: -10px;
-    margin-right: -10px; }
-    .lego-dropdown__block-link:hover, .lego-pop-upsell__link a:hover,
-    .lego-block-list__link:hover {
-      background-color: #f2f7fc; }
-
-.lego-dropdown, .lego-pop-upsell,
-.lego-block-list-group {
-  border: 1px solid #cccccc;
-  border-radius: 2px; }
-  .lego-dropdown > li:last-child, .lego-pop-upsell > li:last-child,
-  .lego-block-list-group > li:last-child {
-    border: 0; }
-
 .lego-attention {
   padding: 15px;
-  margin-bottom: 20px;
   border-radius: 2px;
   border: 1px solid #8abee3;
   background: #f2f7fc; }
@@ -693,6 +662,54 @@ li > ol {
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent; }
 
+.lego-dropdown, .lego-pop-upsell,
+.lego-block-list-group,
+.lego-block-list {
+  list-style: none;
+  margin-left: 0; }
+  .lego-dropdown > li, .lego-pop-upsell > li,
+  .lego-block-list-group > li,
+  .lego-block-list > li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ededed; }
+  .lego-dropdown__block-link, .lego-pop-upsell__link a,
+  .lego-block-list__link {
+    display: block;
+    padding: 5px 10px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: -10px;
+    margin-right: -10px; }
+    .lego-dropdown__block-link:hover, .lego-pop-upsell__link a:hover,
+    .lego-block-list__link:hover {
+      background-color: #f2f7fc; }
+
+.lego-dropdown, .lego-pop-upsell,
+.lego-block-list-group {
+  border: 1px solid #cccccc;
+  border-radius: 2px; }
+  .lego-dropdown > li:last-child, .lego-pop-upsell > li:last-child,
+  .lego-block-list-group > li:last-child {
+    border: 0; }
+
+.border--top {
+  border-top: 1px solid #cccccc;
+  margin-top: 9px;
+  padding-top: 10px; }
+
+.border--bottom {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 9px;
+  padding-bottom: 10px; }
+
+.border--left {
+  border-left: 1px solid #cccccc;
+  padding-left: 10px; }
+
+.border--right {
+  border-right: 1px solid #cccccc;
+  padding-right: 10px; }
+
 .lego-button {
   display: inline-block;
   vertical-align: middle;
@@ -768,7 +785,7 @@ li > ol {
   .lego-button--small {
     padding: 4px 10px;
     height: 24px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1; }
   .lego-button--full {
     width: 100%;
@@ -827,24 +844,6 @@ li > ol {
   .lego-button-row--center .lego-button {
     margin-left: 5px;
     margin-right: 5px; }
-
-.border--top {
-  border-top: 1px solid #cccccc;
-  margin-top: 9px;
-  padding-top: 10px; }
-
-.border--bottom {
-  border-bottom: 1px solid #cccccc;
-  margin-bottom: 9px;
-  padding-bottom: 10px; }
-
-.border--left {
-  border-left: 1px solid #cccccc;
-  padding-left: 10px; }
-
-.border--right {
-  border-right: 1px solid #cccccc;
-  padding-right: 10px; }
 
 .lego-dropdown-group {
   font-size: 12px;
@@ -1083,6 +1082,7 @@ li > ol {
     border-radius: 2px 2px 0 0;
     color: #7f7f7f;
     font-weight: 500;
+    background-color: white;
     cursor: pointer; }
     .lego-tabs-nav__item:hover, .lego-tabs-nav__item--active {
       color: #1d7ebd; }

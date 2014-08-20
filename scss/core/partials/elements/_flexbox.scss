@@ -1,10 +1,24 @@
 // # Flexbox
-// Flexbox support is full on Chrome, Firefox and Safari (with prefix).
-// Support is nearly full for IE 10 with minor caveats. The biggest of
-// which is that flex children without a width or flex value
-// will not wrap.
-
+// Flexbox support is full on Chrome, Firefox and Safari (with prefix) and nearly full for IE 10.
+//
+// - With IE10 at least one of the flex children need to have a width or flex value otherwise the content in those children will not wrap. However, if none of children will collide, no width or flex value is needed.
+//
 // `flex-grow` is not supported by IE10, `justify-content` is the next best thing.
+//
+// Use in Sass with:
+//
+//[c]
+//     .foo {
+//          @extend %flex;
+//     }
+//[/c]
+//
+// or as classes directly in the HTML.
+//
+//[c]
+//     <div class="flex">item</div>
+//[/c]
+
 
 %flex,
 .flex {

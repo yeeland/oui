@@ -166,13 +166,31 @@
 
 // ## Last Item Margin
 
-// Per (http://css-tricks.com/spacing-the-bottom-of-modules/)[http://css-tricks.com/spacing-the-bottom-of-modules/] this removes
-// the margin from the last child that would otherwise create too much space
+// Per [http://css-tricks.com/spacing-the-bottom-of-modules/](http://css-tricks.com/spacing-the-bottom-of-modules/)
+// this removes the margin from the last child that would otherwise create too much space
 // inside a element with bottom padding.
+
+// Given the following HTML the second paragraph would ordinarily have a default bottom margin.
+
+//[c]
+//     <div class="foo">
+//       <p>This is a paragraph with default bottom margin.</p>
+//       <p>This is a paragraph with a killed bottom margin.</p>
+//     </div>
+//[/c]
+
+// But with the `%kill-last-child-margin` extended to it that margin will go away.
+
+//[c]
+//     .foo {
+//       @extend %kill-last-child-margin;
+//     }
+//[/c]
 
 %kill-last-child-margin {
   & > *:last-child,
-  & > *:last-child > *:last-child {
+  & > *:last-child > *:last-child,
+  & > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0;
   }
 }

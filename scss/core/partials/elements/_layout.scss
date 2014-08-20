@@ -11,25 +11,34 @@
   }
 }
 
-.lego-pane--full {
-  height: 100%;
-}
-
 %lego-pane,
 .lego-pane {
+
+  &--full {
+    height: 100%;
+  }
 
   &--flex {
     @extend %flex-1;
   }
+
+  &--scroll-y {
+    overflow-y: auto;
+  }
 }
 
-%lego-pane--scroll-y,
-.lego-pane--scroll-y {
-  overflow-y: auto;
-}
+// ### Lego Fence
+// This adds padding or margin to full-width items
+// to move them away from the walls for their container.
 
-%lego-fence,
-.lego-fence {
+%lego-fence--soft,
+.lego-fence--soft {
   padding-left: spacer(2);
   padding-right: spacer(2);
+}
+
+%lego-fence--push,
+.lego-fence--push {
+  margin-left: spacer(2);
+  margin-right: spacer(2);
 }

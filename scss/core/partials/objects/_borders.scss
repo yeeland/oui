@@ -1,5 +1,28 @@
 // # Borders
-// This adds a border directly to an element.
+// This adds a border and additional spacing directly to an element.
+
+// ## Examples
+
+//[hc]
+//      <div class="border--top">Border on top</div>
+//[/hc]
+
+//[hc]
+//      <div class="border--bottom">Border on bottom</div>
+//[/hc]
+
+//[hc]
+//      <div class="border--right">Border on right</div>
+//[/hc]
+
+//[hc]
+//      <div class="border--left">Border on left</div>
+//[/hc]
+
+// ## SCSS
+
+// ### Border Top/Bottom
+// These add padding on top and bottom.
 
 %border--top,
 .border--top {
@@ -15,7 +38,7 @@
   padding-bottom: spacer(1);
 }
 
-// ## Border Left/Right
+// ### Border Left/Right
 // These don't add margin so they remain flush with right/left side.
 
 %border--left,

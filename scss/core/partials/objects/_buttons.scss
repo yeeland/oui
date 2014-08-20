@@ -1,13 +1,96 @@
 //# Buttons
 
-//|| Description || HTML || Example ||
-//|| Default || `<button class="lego-button">Button</button>` || <button class="lego-button">Button</button> ||
-//|| Brand || `<button class="lego-button lego-button--brand">Button</button>` || <button class="lego-button lego-button--brand">Button</button> ||
-//|| Highlight || `<button class="lego-button lego-button--highlight">Button</button>` || <button class="lego-button lego-button--highlight">Button</button> ||
-//|| Warning || `<button class="lego-button lego-button--danger">Button</button>` || <button class="lego-button lego-button--danger">Button</button> ||
-//|| Small || `<button class="lego-button lego-button--brand lego-button--small">Button</button>` || <button class="lego-button lego-button--small lego-button--brand">Button</button> ||
+// ## Examples
 
-// ## Button Variables
+// ### Button Row Left
+//[hc]
+//     <div class="lego-button-row--left">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--brand">Go</button>
+//       <button class="lego-button lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--danger">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Row Center
+//[hc]
+//     <div class="lego-button-row--center">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--brand">Go</button>
+//       <button class="lego-button lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--danger">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Row Right
+//[hc]
+//     <div class="lego-button-row--right">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--brand">Go</button>
+//       <button class="lego-button lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--danger">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Row Left with Small Buttons
+//[hc]
+//     <div class="lego-button-row--left">
+//       <button class="lego-button lego-button--small">Go</button>
+//       <button class="lego-button lego-button--small lego-button--brand">Go</button>
+//       <button class="lego-button lego-button--small lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--small lego-button--danger">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Full
+//[hc]
+//     <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//[/hc]
+
+// ### Full Spread Buttons
+//[hc]
+//     <div class="lego-grid lego-grid--gutter">
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//       </div>
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//       </div>
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//       </div>
+//     </div>
+//[/hc]
+
+// ### Button Disabled
+//[hc]
+//     <div class="lego-button-row--left">
+//       <button class="lego-button lego-button--disabled">Go</button>
+//       <button class="lego-button lego-button--brand lego-button--disabled">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Group
+//[hc]
+//     <div class="lego-button-group">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Group with Active
+//[hc]
+//     <div class="lego-button-group">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--brand">Go</button>
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
+// ## SCSS
+
+// ### Button Variables
 // Shadows for buttons.
 
 %lego-button,
@@ -35,7 +118,7 @@
     outline: none;
   }
 
-  // ## Button Styles
+  // ### Button Styles
   // Button color variations.
 
   background: #f8f8f8;
@@ -56,8 +139,6 @@
   &:focus {
     color: map-get($font-color, medium);
   }
-
-  // Brand Button
 
   &--brand {
     background: map-get($background-color, brand);
@@ -122,13 +203,13 @@
     }
   }
 
-  // ## Button Sizes
+  // ### Button Sizes
   // Button size variations.
 
   &--small {
     padding: 4px spacer(1);
     height: 24px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1;
   }
 
@@ -144,7 +225,7 @@
     padding-left: spacer(1);
   }
 
-  // ## Inactive Button
+  // ### Inactive Button
   // Disabled state.
 
   &[disabled],

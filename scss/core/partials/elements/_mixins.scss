@@ -36,22 +36,24 @@
 
 // ## CSS Arrows
 
-// CSS arrows!!! But... before you read on, you might want to grab a coffee...
-//
 // This mixin creates a CSS arrow on a given element. We can have the arrow
 // appear in one of 12 locations, 3 positions for each side.
 //
 // You pass this position in along with a desired arrow color and optional
 // border color, for example:
 //
-// `@include arrow(top, left, red)`
+//[c]
+//      @include arrow(top, left, red)
+//[/c]
 //
 // for just a single, red arrow, or:
 //
-// `@include arrow(bottom, center, red, black)`
+//[c]
+//      @include arrow(bottom, center, red, black)
+//[/c]
 //
 // which will create a red triangle with a black border which sits at the bottom
-// center of the element. Call the mixin thus:
+// center of the element. Call the mixin this way:
 //
 //     .foo {
 //         @include arrow(top, left, #BADA55, #ACE);

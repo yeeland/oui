@@ -1,6 +1,40 @@
 // # Tabs
 // Creates a set of tabs.
 
+// ## Examples
+
+//[hc]
+//     <div class="lego-tabs">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item lego-tabs-nav__item--active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//[/hc]
+
+//[hc]
+//     <div class="lego-tabs lego-tabs--small">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item lego-tabs-nav__item--active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//[/hc]
+
+//[hc]
+//     <div class="lego-tabs lego-tabs--small lego-tabs--center">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item lego-tabs-nav__item--active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//[/hc]
+
+// ## SCSS
+
 .lego-tabs-nav {
   @extend %flex;
   border-bottom: 1px solid map-get($ui-color, base);
@@ -15,6 +49,7 @@
     border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
     color: map-get($font-color, medium);
     font-weight: map-get($font-weight, bold);
+    background-color: map-get($background-color, white);
     cursor: pointer;
 
     &:hover,
@@ -24,8 +59,7 @@
 
     &--active {
 
-      // Provides the white bar under the active tab.
-      &:after {
+      &:after { // Creates the white bar under the active tab.
         content: '';
         display: block;
         height: 1px;
