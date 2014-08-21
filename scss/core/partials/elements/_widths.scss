@@ -1,11 +1,28 @@
 // # Widths
 
-// Width sizes in human readable format. Extend or add as helper class.
+// Used most frequently in grids for flexible columns.
+
+// ## Examples
+
+//[hc]
+//     <div class="lego-grid">
+//       <div class="lego-grid__cell width-3-5">
+//         <div class="docs-placeholder">3/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//     </div>
+//[/hc]
+
 
 // ### Whole
-//[c]
-//     <div class="width-1">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1,
 .width-1 {
@@ -13,9 +30,9 @@
 }
 
 // ### Halves
-//[c]
-//     <div class="width-1-2">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-2"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-2,
 .width-1-2 {
@@ -23,9 +40,9 @@
 }
 
 // ### Thirds
-//[c]
-//     <div class="width-2-3">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-3"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-3,
 .width-1-3 {
@@ -38,9 +55,9 @@
 }
 
 // ### Fourths
-//[c]
-//     <div class="width-3-4s">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-4"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-4,
 .width-1-4 {
@@ -57,9 +74,9 @@
 }
 
 // ### Fifths
-//[c]
-//     <div class="width-3-5">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-5"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-5,
 .width-1-5 {
@@ -82,9 +99,9 @@
 }
 
 // ### Sixths
-//[c]
-//     <div class="width-1-6">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-6"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-6,
 .width-1-6 {
@@ -109,9 +126,9 @@
 }
 
 // ### Eighths
-//[c]
-//     <div class="width-3-8">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-8"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-8,
 .width-1-8 {
@@ -146,9 +163,9 @@
 }
 
 // ### Tenths
-//[c]
-//     <div class="width-3-10">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-10"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-10,
 .width-1-10 {
@@ -191,9 +208,9 @@
 }
 
 // ### Twelths
-//[c]
-//     <div class="width-3-12">content</div>
-//[/c]
+//[hc]
+//     <div class="width-1-12"><div class="docs-placeholder"></div></div>
+//[/hc]
 
 %width-1-12,
 .width-1-12 {

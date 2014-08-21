@@ -51,7 +51,7 @@
 // Adds text-decoration: underline to text.
 
 //[c]
-//     <p>content is <span class="underline">underlined</span></p>
+//     <div>content is <span class="underline">underlined</span></div>
 //[/c]
 
 .underline {
@@ -61,7 +61,7 @@
 // Adds text-decoration: line-through;.
 
 //[c]
-//     <p><span class="strike">strike</span> the content as needed</p>
+//     <div><span class="strike">strike</span> the content as needed</div>
 //[/c]
 
 .strike {
@@ -72,7 +72,7 @@
 // Mute text to a ligher shade of gray.
 
 //[hc]
-//     <p class="muted">This text is muted</p>
+//     <div class="muted">This text is muted</div>
 //[/hc]
 
 .muted {
@@ -83,7 +83,7 @@
 // Align items to the right where they imply progression/movement forward, e.g.:
 
 //[hc]
-//     <p class="proceed"><a href="#">Read more...</a></p>
+//     <div class="proceed"><a href="#">Read more...</a></div>
 //[/hc]
 
 .proceed {
@@ -94,7 +94,7 @@
 // Truncates item to a single line, adding ellipsis at the end.
 
 //[hc]
-//     <p class="truncate">Long string will be truncated.</p>
+//     <div class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam vero.</div>
 //[/hc]
 
 .truncate {
@@ -129,7 +129,7 @@
 // Break or don't break long strings.
 
 //[hc]
-//     <a href=# class="force-break">alongunbrokenstringthatgoeson</a>
+//     <a href=# class="force-break">alongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoeson</a>
 //[/hc]
 
 .force-break {
