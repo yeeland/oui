@@ -21,9 +21,6 @@ define('app/directives/poptip',['require','jquery'],function(require) {
       var $el = $(this.el);
       var $tmpl = $(tmpl);
 
-      // console.log('height: ' + $el.height());
-      // console.log('width: ' + $el.width());
-
       var direction = $el.attr('data-dir');
       var content = $el.attr('data-content');
       $tmpl.addClass(ARROW_CLASS_TEMPLATE + direction);
@@ -39,25 +36,44 @@ define('app/directives/poptip',['require','jquery'],function(require) {
       $el.on('mouseenter', function() {
         // this.methods._show($tmpl);
         var $el = $(this.el);
-        var left = 0;
-        var top = 0;
 
         var pos = $el.position();
 
-        console.log(direction);
+        var left = pos.left;
+        var top = pos.top;
 
+        //For non orientation specific directions(right,left) we want to 
         if (direction.indexOf('-') === -1) {
           if (direction === 'right') {
-            left -= $tmpl.width() + $el.width();
+            left -= $tmpl.outerWidth(true);
           } else {
-            left += $tmpl.width() - $el.width();
+            left += $el.outerWidth(true);
           }
-          top -= $el.height() / 2;
+          //Align the arrow correctly
+          top += (($el.outerHeight(true) / 2) - ($tmpl.innerHeight() / 2));
+        } else {
+
+          var parts = direction.split('-');
+
+          if (parts[0] === 'top') {
+            top += $el.outerHeight(true);
+          } else {
+             // top -= ($el.outerHeight(true) + $tmpl.outerHeight(true));
+             top -= ($tmpl.outerHeight(true));
+          }
+
+          switch(parts[1]) {
+            case 'right':
+              left -= ($tmpl.outerWidth(true) - $el.outerWidth(true));
+              break;
+            case 'center':
+              // left -= ($tmpl.outerWidth() / 2);
+              left += (($el.outerWidth(true) / 2) - ($tmpl.innerWidth() / 2));
+
+              break;
+          }
+
         }
-
-        left += pos.left;
-        top += pos.top;
-
         $tmpl.css({
           'left': left,
           'top': top
