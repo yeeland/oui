@@ -1,0 +1,43 @@
+// # Accordion
+// A vertical accordion with any number of panels.
+
+.accordion {
+  @extend %flex;
+  @extend %flex-direction--column;
+
+  &__item {
+    @extend %flex;
+    @extend %flex-direction--column;
+    overflow: hidden;
+    height: 32px;
+
+    &--active {
+      @extend %flex-1;
+
+      .accordion__link {
+        border-bottom: map-get($ui-color, base);
+        cursor: default;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 6px spacer(2);
+    border-top: map-get($ui-color, base);
+    background: map-get($background-color, light);
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  &__content-wrap {
+    @extend %flex-1;
+    overflow-y: auto;
+  }
+
+  &__content {
+    padding: spacer(2);
+  }
+}
