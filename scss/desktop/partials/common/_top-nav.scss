@@ -3,7 +3,6 @@
   background-color: map-get($background-color, brand-dark);
   color: map-get($font-color, white);
   padding: 0 spacer(2);
-  margin-bottom: spacer(2);
 
   &__item {
     margin-right: spacer(2);
