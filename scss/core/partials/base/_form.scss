@@ -133,6 +133,10 @@
 //[/c]
 
 
+.lego-form--small {
+  font-size: map-get($font-size, micro);
+}
+
 .lego-text-input,
 .lego-textarea {
   width: 100%;
@@ -194,13 +198,14 @@ fieldset {
 .lego-label {
   display: block;
   margin-bottom: spacer(0.5);
-  font-weight: map-get($font-weight, normal);
+  font-weight: map-get($font-weight, bold);
 
   &--optional:after {
     content: "(Optional)";
     margin-left: spacer(0.5);
     color: map-get($font-color, muted);
     font-size: map-get($font-size, micro);
+    font-weight: map-get($font-weight, normal);
   }
 }
 

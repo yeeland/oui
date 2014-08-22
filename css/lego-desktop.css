@@ -340,10 +340,13 @@ p {
 b {
   font-weight: 500; }
 
+.lego-form--small {
+  font-size: 10px; }
+
 .lego-text-input,
 .lego-textarea {
   width: 100%;
-  border: 1px solid #cccccc;
+  border: 1px solid #e0e0e0;
   border-radius: 2px;
   padding: 7px;
   vertical-align: middle;
@@ -381,12 +384,13 @@ fieldset {
 .lego-label {
   display: block;
   margin-bottom: 5px;
-  font-weight: 400; }
+  font-weight: 500; }
   .lego-label--optional:after {
     content: "(Optional)";
     margin-left: 5px;
     color: #a5a5a5;
-    font-size: 10px; }
+    font-size: 10px;
+    font-weight: 400; }
 
 .lego-input-list {
   list-style: none;
@@ -414,7 +418,7 @@ fieldset {
   position: relative; }
   .lego-or:before, .lego-or:after {
     content: '';
-    border-top: 1px dotted #cccccc;
+    border-top: 1px dotted #e0e0e0;
     width: 40%;
     position: absolute;
     left: 0;
@@ -456,7 +460,7 @@ img[height] {
   border-radius: 100%; }
 
 .img--border {
-  border: 1px solid #cccccc; }
+  border: 1px solid #e0e0e0; }
 
 .img--right {
   float: right;
@@ -570,12 +574,12 @@ li > ol {
   overflow: hidden;
   height: 32px; }
   .accordion__item--active .accordion__link {
-    border-bottom: #cccccc;
+    border-bottom: #e0e0e0;
     cursor: default; }
 .accordion__link {
   display: block;
   padding: 6px 20px;
-  border-top: #cccccc;
+  border-top: 1px solid #e0e0e0;
   background: #ededed; }
   .accordion__link:first-child {
     border-top: 0; }
@@ -695,28 +699,28 @@ li > ol {
 
 .lego-dropdown, .lego-pop-upsell,
 .lego-block-list-group {
-  border: 1px solid #cccccc;
+  border: 1px solid #e0e0e0;
   border-radius: 2px; }
   .lego-dropdown > li:last-child, .lego-pop-upsell > li:last-child,
   .lego-block-list-group > li:last-child {
     border: 0; }
 
 .border--top {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #e0e0e0;
   margin-top: 9px;
   padding-top: 10px; }
 
 .border--bottom {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 9px;
   padding-bottom: 10px; }
 
 .border--left {
-  border-left: 1px solid #cccccc;
+  border-left: 1px solid #e0e0e0;
   padding-left: 10px; }
 
 .border--right {
-  border-right: 1px solid #cccccc;
+  border-right: 1px solid #e0e0e0;
   padding-right: 10px; }
 
 .lego-button {
@@ -737,7 +741,7 @@ li > ol {
   line-height: 1;
   background: #f8f8f8;
   color: #7f7f7f;
-  border-color: #cccccc; }
+  border-color: #e0e0e0; }
   .lego-button:hover,
   .lego-button:active,
   .lego-button:visited,
@@ -815,7 +819,7 @@ li > ol {
     cursor: default;
     background: #f8f8f8;
     color: #7f7f7f;
-    border-color: #cccccc;
+    border-color: #e0e0e0;
     opacity: 0.4; }
 
 .lego-button-group .lego-button {
@@ -964,7 +968,7 @@ li > ol {
   .lego-pill--running {
     background: #90b71c; }
   .lego-pill--draft {
-    background: #cccccc; }
+    background: #e0e0e0; }
 
 .lego-pop-tip {
   background: #262626;
@@ -1063,7 +1067,7 @@ li > ol {
 .lego-rule {
   border: 0;
   height: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #e0e0e0;
   margin-top: 9px;
   margin-bottom: 10px; }
   .lego-rule--dotted {
@@ -1075,12 +1079,12 @@ li > ol {
   margin-right: 10px; }
 
 .lego-tabs-nav {
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid #e0e0e0; }
   .lego-tabs-nav__item {
     position: relative;
     text-align: center;
     padding: 10px 15px;
-    border: 1px solid #cccccc;
+    border: 1px solid #e0e0e0;
     border-right: none;
     border-bottom: 0;
     color: #7f7f7f;
@@ -1091,7 +1095,7 @@ li > ol {
       border-radius: 2px 0 0 0; }
     .lego-tabs-nav__item:last-child {
       border-radius: 0 2px 0 0;
-      border-right: 1px solid #cccccc; }
+      border-right: 1px solid #e0e0e0; }
     .lego-tabs-nav__item:hover, .lego-tabs-nav__item--active {
       color: #1d7ebd; }
     .lego-tabs-nav__item--active:after {
@@ -1233,7 +1237,7 @@ hgroup .hn {
 
 .lego-data-sidebar {
   width: 340px;
-  border-left: 1px solid #cccccc; }
+  border-left: 1px solid #e0e0e0; }
 
 .lego-top-nav {
   background-color: #003366;

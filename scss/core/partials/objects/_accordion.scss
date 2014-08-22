@@ -24,7 +24,7 @@
   &__link {
     display: block;
     padding: 6px spacer(2);
-    border-top: map-get($ui-color, base);
+    border-top: 1px solid map-get($ui-color, base);
     background: map-get($background-color, light);
 
     &:first-child {
