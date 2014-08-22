@@ -98,3 +98,13 @@
   }
 }
 
+.lego-tabs--sub {
+  .lego-tabs-nav__item {
+    border: none;
+
+    &--active:after {
+      height: 2px;
+      background: map-get($background-color, brand);
+    }
+  }
+}

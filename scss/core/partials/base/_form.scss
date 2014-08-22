@@ -195,7 +195,15 @@ fieldset {
   display: block;
   margin-bottom: spacer(0.5);
   font-weight: map-get($font-weight, normal);
+
+  &--optional:after {
+    content: "(Optional)";
+    margin-left: spacer(0.5);
+    color: map-get($font-color, muted);
+    font-size: map-get($font-size, micro);
+  }
 }
+
 
 
 //  Groups of checkboxes and radios.
