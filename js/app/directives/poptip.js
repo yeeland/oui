@@ -13,10 +13,6 @@ define('app/directives/poptip',['require','jquery'],function(require) {
 
     isEmpty: true,
 
-    data: {
-      $tmpl : ''
-    },
-
     bind: function() {
       var $el = $(this.el);
       var $tmpl = $(tmpl);
@@ -34,7 +30,8 @@ define('app/directives/poptip',['require','jquery'],function(require) {
       });
 
       $el.on('mouseenter', function() {
-        // this.methods._show($tmpl);
+
+        //TODO: Break all of this out, it is gross
         var $el = $(this.el);
 
         //Place the tip in the DOM to measure it
@@ -79,7 +76,6 @@ define('app/directives/poptip',['require','jquery'],function(require) {
               left -= ($tmpl.outerWidth(true) - $el.outerWidth(true));
               break;
             case 'center':
-              // left -= ($tmpl.outerWidth() / 2);
               left += (($el.outerWidth(true) / 2) - ($tmpl.innerWidth() / 2));
 
               break;
