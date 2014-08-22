@@ -37,17 +37,30 @@ define('app/directives/poptip',['require','jquery'],function(require) {
         // this.methods._show($tmpl);
         var $el = $(this.el);
 
+        //Place the tip in the DOM to measure it
+        $tmpl.css({
+          'display' : 'block',
+          'visibility' : 'hidden'
+        });
+
         var pos = $el.position();
+
+        //Determine the size of the CSS arrow
+        var arrowWidth = window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('width');
+        var arrowHeight = window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('height');
+
+        arrowWidth = Math.floor(arrowWidth.substr(0, arrowWidth.length - 2));
+        arrowHeight = Math.floor(arrowHeight.substr(0, arrowHeight.length - 2));
 
         var left = pos.left;
         var top = pos.top;
 
-        //For non orientation specific directions(right,left) we want to 
+        //For non orientation specific directions(right,left) we want to
         if (direction.indexOf('-') === -1) {
           if (direction === 'right') {
-            left -= $tmpl.outerWidth(true);
+            left -= ($tmpl.outerWidth(true) + arrowWidth);
           } else {
-            left += $el.outerWidth(true);
+            left += ($el.outerWidth(true) + arrowWidth);
           }
           //Align the arrow correctly
           top += (($el.outerHeight(true) / 2) - ($tmpl.innerHeight() / 2));
@@ -56,10 +69,9 @@ define('app/directives/poptip',['require','jquery'],function(require) {
           var parts = direction.split('-');
 
           if (parts[0] === 'top') {
-            top += $el.outerHeight(true);
+            top += $el.outerHeight(true) + arrowHeight;
           } else {
-             // top -= ($el.outerHeight(true) + $tmpl.outerHeight(true));
-             top -= ($tmpl.outerHeight(true));
+             top -= ($tmpl.outerHeight(true)) + arrowHeight;
           }
 
           switch(parts[1]) {
@@ -74,11 +86,12 @@ define('app/directives/poptip',['require','jquery'],function(require) {
           }
 
         }
+
         $tmpl.css({
           'left': left,
-          'top': top
+          'top': top,
+          'visibility' : 'visible'
         });
-        $tmpl.show();
 
       }.bind(this));
 
