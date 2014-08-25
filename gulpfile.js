@@ -6,7 +6,7 @@ var gutil = require('gulp-util');
 
 var paths = {
   'scripts' : ['js/**/*.js', '!out/lego.min.js'],
-  'styles' : ['core/partials/**/*.scss', 'core/*.scss']
+  'styles' : ['scss/core/partials/**/*.scss', 'scss/core/*.scss', 'scss/*.scss', 'scss/desktop/*.scss', 'scss/**/*.scss']
 };
 
 gulp.task('lint:js', function() {
@@ -29,8 +29,8 @@ gulp.task('lint:styles', function() {
 });
 
 gulp.task('build:styles', function() {
-  gulp.src('scss/lego.scss')
-    .pipe(shell(['sass --compass scss/lego.scss:out/lego.css']))
+  gulp.src('scss/lego-desktop.scss')
+    .pipe(shell(['sass --compass scss/lego-desktop.scss:out/lego.css']))
     .on('error', gutil.log)
     .on('error', gutil.beep);
 });

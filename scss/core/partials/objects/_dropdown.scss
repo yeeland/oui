@@ -89,6 +89,12 @@
   display: inline-block;
   position: relative;
   vertical-align: top;
+
+  &.shown {
+    .lego-dropdown {
+      visibility: visible;
+    }
+  }
 }
 
 %lego-dropdown,
@@ -103,6 +109,9 @@
   z-index: 1;
   margin-top: 2px;
   text-align: left;
+  visibility: hidden;
+
+
 
   &__item {
     white-space: nowrap;

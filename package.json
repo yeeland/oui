@@ -17,10 +17,15 @@
     "type": "git",
     "url": "https://github.com/optimizely/lego.git"
   },
-  "author": "",
+  "author": "Cheston Lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/optimizely/lego/issues"
   },
-  "homepage": "https://github.com/optimizely/lego"
+  "homepage": "https://github.com/optimizely/lego",
+  "devDependencies": {},
+  "keywords": [
+    "lego",
+    "components"
+  ]
 }
