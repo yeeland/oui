@@ -42,15 +42,23 @@
   &__item {
     position: relative;
     text-align: center;
-    margin-right: spacer(0.5);
     padding: spacer(1) spacer(1.5);
     border: 1px solid map-get($ui-color, base);
+    border-right: none;
     border-bottom: 0;
-    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
     color: map-get($font-color, medium);
     font-weight: map-get($font-weight, bold);
     background-color: map-get($background-color, white);
     cursor: pointer;
+
+    &:first-child {
+      border-radius: map-get($border-radius, base) 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 map-get($border-radius, base) 0 0;
+      border-right: 1px solid map-get($ui-color, base);
+    }
 
     &:hover,
     &--active {
@@ -90,3 +98,13 @@
   }
 }
 
+.lego-tabs--sub {
+  .lego-tabs-nav__item {
+    border: none;
+
+    &--active:after {
+      height: 2px;
+      background: map-get($background-color, brand);
+    }
+  }
+}

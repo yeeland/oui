@@ -20,6 +20,7 @@ $grey-35                       : tint($base-black, 65%);
 $grey-30                       : tint($base-black, 70%);
 $grey-25                       : tint($base-black, 75%);
 $grey-20                       : tint($base-black, 80%);
+$grey-12                       : tint($base-black, 88%);
 $grey-07                       : tint($base-black, 93%);
 $grey-03                       : tint($base-black, 97%);
 
@@ -27,7 +28,7 @@ $grey-03                       : tint($base-black, 97%);
 // These are colors can be used on UI elements like borders.
 
 $ui-color: (
-  base                         : $grey-20,
+  base                         : $grey-12,
   white                        : $base-white,
   light                        : $grey-07,
   medium                       : $grey-40,

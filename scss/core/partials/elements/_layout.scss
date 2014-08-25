@@ -19,6 +19,10 @@
   }
 
   &--flex {
+    @extend %flex;
+  }
+
+  &--flex-1 {
     @extend %flex-1;
   }
 
