@@ -5,7 +5,7 @@
 
 .lego-grid,
 .lego-pane-group,
-.lego-pane--flex, .accordion, .accordion__item,
+.lego-pane--flex, .accordion, .accordion__item, .accordion__link,
 .lego-button-group,
 .lego-media,
 .lego-nav,
@@ -53,7 +53,7 @@
   -ms-flex-pack: center;
   justify-content: center; }
 
-.lego-grid--center,
+.lego-grid--center, .accordion__link,
 .align-items--center {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -573,16 +573,26 @@ li > ol {
 .accordion__item {
   overflow: hidden;
   height: 32px; }
+  .accordion__item:last-child {
+    border-bottom: none; }
   .accordion__item--active .accordion__link {
-    border-bottom: #e0e0e0;
+    background: white;
+    color: #262626;
+    border-bottom: 0;
     cursor: default; }
+    .accordion__item--active .accordion__link:hover {
+      background: none; }
+  .accordion__item--active + .accordion__item {
+    border-top: 1px solid #e0e0e0; }
 .accordion__link {
-  display: block;
-  padding: 6px 20px;
-  border-top: 1px solid #e0e0e0;
-  background: #ededed; }
-  .accordion__link:first-child {
-    border-top: 0; }
+  padding: 0 20px;
+  background: #f7f7f7;
+  line-height: 1;
+  height: 32px;
+  border-bottom: 1px solid #e0e0e0; }
+  .accordion__link:hover {
+    background: #ededed;
+    color: #262626; }
 .accordion__content-wrap {
   overflow-y: auto; }
 .accordion__content {
@@ -863,6 +873,8 @@ li > ol {
   display: inline-block;
   position: relative;
   vertical-align: top; }
+  .lego-dropdown-group.shown .lego-dropdown {
+    visibility: visible; }
 
 .lego-dropdown {
   background: white;
@@ -873,7 +885,8 @@ li > ol {
   left: auto;
   z-index: 1;
   margin-top: 2px;
-  text-align: left; }
+  text-align: left;
+  visibility: hidden; }
   .lego-dropdown__item {
     white-space: nowrap;
     color: #262626; }
