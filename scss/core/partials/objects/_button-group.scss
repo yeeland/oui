@@ -1,16 +1,58 @@
-// ## Button Group
-// For buttons that are flush against each other.
+// # Button Group
+// For buttons that are flush against each other. Also possible to include an text input.
+
+// ## Example
+
+// ### Button Group
+//[hc]
+//     <div class="lego-button-group">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Group with Active
+//[hc]
+//     <div class="lego-button-group">
+//       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--brand">Go</button>
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
+// ### Button Group with Text Input
+//[hc]
+//     <div class="lego-button-group">
+//       <button class="lego-button">Select <span class="lego-arrow-inline--down"></span></button>
+//       <input type="text" class="lego-text-input">
+//     </div>
+//[/hc]
+
+// ### Button Group with Text Input
+//[hc]
+//     <div class="lego-button-group">
+//       <input type="text" class="lego-text-input">
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
 
 %lego-button-group,
 .lego-button-group {
   @extend %flex;
 
-  .lego-button {
+  > * {
     margin-left: 0;
     border-radius: 0;
 
-    &:not(:last-child) {
-      border-right: 0;
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &:hover,
+    &:focus {
+        position: relative;
     }
 
     &:first-child {
@@ -20,23 +62,14 @@
     &:last-child {
       border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
     }
+  }
 
-    &:hover + .lego-button {
-      border-left-color: map-get($ui-color, medium);
-    }
+  > .lego-button--brand {
+    position: relative;
+  }
 
-    &--brand {
-      cursor: default;
-      background: map-get($background-color, brand);
-
-      + .lego-button,
-      &:hover + .lego-button {
-        border-left-color: map-get($ui-color, brand-dark);
-      }
-    }
-
-    &:hover + .lego-button--brand {
-        border-left-color: map-get($ui-color, brand-dark);
-    }
+  > .lego-text-input {
+    @extend %flex-1;
+    width: auto;
   }
 }

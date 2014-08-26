@@ -50,28 +50,24 @@ h3,
 .gamma {
   font-size: map-get($font-size, gamma);
   letter-spacing: map-get($letter-spacing, tight);
-  font-weight: map-get($font-weight, light);
   line-height: 1.2;
 }
 
 h4,
 .delta {
   font-size: map-get($font-size, delta);
-  font-weight: map-get($font-weight, light);
   line-height: 1.2;
 }
 
 h5,
 .epsilon {
   font-size: map-get($font-size, epsilon);
-  font-weight: map-get($font-weight, light);
   line-height: 1.2;
 }
 
 h6,
 .zeta {
   font-size: map-get($font-size, zeta);
-  font-weight: map-get($font-weight, light);
 }
 
 // ## Heading Margin Defaults
@@ -86,18 +82,22 @@ h2 {
 
 h3 {
   margin-bottom: spacer(1.5);
+  font-weight: map-get($font-weight, bold);
 }
 
 h4 {
   margin-bottom: spacer(1);
+  font-weight: map-get($font-weight, bold);
 }
 
 h5 {
   margin-bottom: spacer(1.5);
+  font-weight: map-get($font-weight, bold);
 }
 
 h6 {
   margin-bottom: spacer(0.5);
+  font-weight: map-get($font-weight, bold);
   text-transform: uppercase;
 }
 

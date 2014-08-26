@@ -70,23 +70,6 @@
 //     </div>
 //[/hc]
 
-// ### Button Group
-//[hc]
-//     <div class="lego-button-group">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button">Go</button>
-//     </div>
-//[/hc]
-
-// ### Button Group with Active
-//[hc]
-//     <div class="lego-button-group">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
-//       <button class="lego-button">Go</button>
-//     </div>
-//[/hc]
 
 // ## SCSS
 
@@ -128,6 +111,7 @@
   &:hover {
     background: #fff;
     border-color: map-get($ui-color, medium);
+    color: map-get($font-color, base);
   }
 
   &:active {
@@ -148,6 +132,7 @@
     &:hover {
       background: #1d88cf;
       border-color: map-get($ui-color, brand-dark);
+      color: map-get($font-color, white);
     }
 
     &:active {
@@ -169,6 +154,7 @@
     &:hover {
       background: #88d13f;
       border-color: #4f9a00;
+      color: map-get($font-color, white);
     }
 
     &:active {
@@ -190,6 +176,7 @@
     &:hover {
       background: #e8545b;
       border-color: #a20000;
+      color: map-get($font-color, white);
     }
 
     &:active {

@@ -1,24 +1,85 @@
 // # Accordion
 // A vertical accordion with any number of panels.
 
-$accordion-link-height: 32px;
+// There are two dependencies:
+
+// - The parent div must be `display:flex`;
+// - The parent div must have height, usually accomplished with a `flex: 1`;
+
+// The wrapping `<div class="doc-accordion-example">` here has been added for purposes of the documentation and should be removed.
+
+//[hc]
+//     <!-- Remove this outer div --->
+//     <div class="doc-accordion-example">
+//      <ul class="accordion">
+//        <li class="accordion__item">
+//          <a class="accordion__link" href="#">Item One</a>
+//          <div class="accordion__content-wrap">
+//            <div class="accordion__content">
+//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//            </div>
+//          </div>
+//        </li>
+//        <li class="accordion__item  accordion__item--active">
+//          <a class="accordion__link" href="#">Item Two</a>
+//          <div class="accordion__content-wrap">
+//            <div class="accordion__content">
+//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//            </div>
+//          </div>
+//        </li>
+//        <li class="accordion__item">
+//          <a class="accordion__link" href="#">Item Three</a>
+//          <div class="accordion__content-wrap">
+//            <div class="accordion__content">
+//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//            </div>
+//          </div>
+//        </li>
+//      </ul>
+//     </div>
+//[/hc]
+
 
 .accordion {
+  $accordion-link-height: 32px;
+
   @extend %flex;
   @extend %flex-direction--column;
 
-  &__item {
+  &__link {
     @extend %flex;
-    @extend %flex-direction--column;
-    overflow: hidden;
+    @extend %align-items--center;
+    padding: 0 spacer(2);
+    background: map-get($background-color, faint);
+    line-height: 1;
     height: $accordion-link-height;
+    border-bottom: 1px solid map-get($ui-color, base);
+    font-weight: map-get($font-weight, bold);
+    text-transform: uppercase;
+
+    &:hover {
+      background: map-get($background-color, light);
+      color: map-get($font-color, base);
+    }
 
     &:last-child {
       border-bottom: none;
     }
+  }
+
+  &__item {
+    @extend %flex;
+    @extend %flex-direction--column;
+    height: $accordion-link-height;
+    overflow: hidden;
 
     &--active {
       @extend %flex-1;
+
+      + .accordion__item {
+        border-top: 1px solid map-get($ui-color, base);
+      }
 
       .accordion__link {
         background: map-get($background-color, white);
@@ -30,25 +91,6 @@ $accordion-link-height: 32px;
           background: none;
         }
       }
-
-      + .accordion__item {
-        border-top: 1px solid map-get($ui-color, base);
-      }
-    }
-  }
-
-  &__link {
-    @extend %flex;
-    @extend %align-items--center;
-    padding: 0 spacer(2);
-    background: map-get($background-color, faint);
-    line-height: 1;
-    height: $accordion-link-height;
-    border-bottom: 1px solid map-get($ui-color, base);
-
-    &:hover {
-      background: map-get($background-color, light);
-      color: map-get($font-color, base);
     }
   }
 
