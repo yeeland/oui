@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "CSS/JS component library for Optimizely",
   "main": "gulpfile.js",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-jshint": "^1.8.2",
     "gulp-requirejs": "^0.1.3",
@@ -23,7 +23,6 @@
     "url": "https://github.com/optimizely/lego/issues"
   },
   "homepage": "https://github.com/optimizely/lego",
-  "devDependencies": {},
   "keywords": [
     "lego",
     "components"

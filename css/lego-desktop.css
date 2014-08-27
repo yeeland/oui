@@ -1134,6 +1134,11 @@ li > ol {
     height: 2px;
     background: #1d7ebd; }
 
+.lego-tabs-pane {
+  display: none; }
+  .lego-tabs-pane__item--active {
+    display: block; }
+
 html {
   font-size: 12px;
   font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Verdana, sans-serif;

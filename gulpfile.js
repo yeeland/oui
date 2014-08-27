@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
+var uglify = require('gulp-uglify');
 var rjs = require('gulp-requirejs');
 var jshint = require('gulp-jshint');
 var gutil = require('gulp-util');
@@ -43,7 +44,6 @@ gulp.task('build:js', function() {
     findNestedDependencies: true,
 
     out: 'lego.min.js',
-    // optimize: 'uglify2',
     optimize: 'none',
 
     include: ['main.js'],
@@ -53,6 +53,12 @@ gulp.task('build:js', function() {
   })
   .on('error', gutil.log)
   .on('error', gutil.beep)
+  // .pipe(uglify({
+  //   compress: {
+  //     drop_debugger: true,
+  //     drop_console : true
+  //   }
+  // }))
   .pipe(gulp.dest('./out/'));
 });
 

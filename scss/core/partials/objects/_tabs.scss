@@ -108,3 +108,12 @@
     }
   }
 }
+
+.lego-tabs-pane {
+  display: none;
+
+  &__item--active {
+
+    display: block;
+  }
+}

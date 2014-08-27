@@ -16,7 +16,6 @@ define(function() {
    * @param {HTMLElement} el the dropdown container
    */
   service.show = function(el) {
-    console.log('show');
     var eventNS = ".dropdown-" + (new Date()).valueOf();
 
     $(el)
@@ -41,7 +40,6 @@ define(function() {
    * @param {HTMLElement} el the dropdown container
    */
   service.hide = function(el) {
-    console.log('hide');
     var eventNS = $(el).data('eventNS');
 
     if (eventNS) {
@@ -56,13 +54,12 @@ define(function() {
    * @param {HTMLElement} el the dropdown container
    */
   service.toggle = function(el) {
-    console.log('Toggle');
     if ($(el).hasClass(SHOWN_CLASS)) {
       this.hide(el);
     } else {
       this.show(el);
     }
-  }
+  };
 
   return service;
 });
