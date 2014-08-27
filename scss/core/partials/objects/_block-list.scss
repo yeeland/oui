@@ -49,6 +49,15 @@
       background-color: map-get($background-color, brand-light);
     }
   }
+
+  // Removes padding on left/right so items are not indented.
+
+  &--flush {
+    li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 // ### Block List Group

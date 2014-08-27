@@ -37,7 +37,7 @@
 
 .lego-tabs-nav {
   @extend %flex;
-  border-bottom: 1px solid map-get($ui-color, base);
+  border-bottom: 3px solid map-get($ui-color, base);
 
   &__item {
     position: relative;
@@ -52,11 +52,11 @@
     cursor: pointer;
 
     &:first-child {
-      border-radius: map-get($border-radius, base) 0 0 0;
+      border-radius: map-get($border-radius, big) 0 0 0;
     }
 
     &:last-child {
-      border-radius: 0 map-get($border-radius, base) 0 0;
+      border-radius: 0 map-get($border-radius, big) 0 0;
       border-right: 1px solid map-get($ui-color, base);
     }
 
@@ -70,18 +70,23 @@
       &:after { // Creates the white bar under the active tab.
         content: '';
         display: block;
-        height: 1px;
+        height: 3px;
         background: map-get($background-color, white);
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -1px;
+        bottom: -3px;
       }
     }
   }
 }
 
 .lego-tabs--small {
+
+  .lego-tabs-nav {
+    border-width: 1px;
+  }
+
   .lego-tabs-nav__item {
     padding: spacer(0.5) spacer(1);
     font-size: map-get($font-size, micro);
@@ -105,6 +110,7 @@
     &--active:after {
       height: 2px;
       background: map-get($background-color, brand);
+      bottom: -1px;
     }
   }
 }
