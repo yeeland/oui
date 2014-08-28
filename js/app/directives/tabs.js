@@ -10,7 +10,7 @@ define(function() {
     isEmpty: true,
 
     bind: function() {
-      $(el).find('[' + tabService.TAB_RELATION + ']').each(function(idx, tab) {
+      $(this.el).find('[' + tabService.TAB_RELATION + ']').each(function(idx, tab) {
         $(tab).on('click', tabService.show.bind(tabService, tab));
       });
     }

@@ -14,7 +14,11 @@ require.config({
   }
 });
 
-require(['tests/test1.js'], function() {
-  mocha.run();
+require(['tests/services/tab.js'], function() {
+  if (typeof mochaPhantomJS !== "undefined") {
+    mochaPhantomJS.run();
+  } else {
+    mocha.run();
+  }
 });
 

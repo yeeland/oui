@@ -3,6 +3,7 @@ require.config({
   paths: {
     'jquery' : 'lib/jquery',
     'lodash' : 'lib/lodash',
-    'vue' : 'lib/vue'
+    'vue' : 'lib/vue',
+    // 'text': 'lib/text'
   }
 });

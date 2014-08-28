@@ -19,20 +19,23 @@ define(function() {
     var currentActive = document.getElementsByClassName(ACTIVE_NAV_CLASS)[0];
 
     if (typeof currentActive !== 'undefined') {
-      this.hide(currentActive);
+      this._hide(currentActive);
     }
 
     $el.addClass(ACTIVE_NAV_CLASS);
-    $('[' + this.TAB_RELATION + '="' + contentIdent + '"]').addClass(ACTIVE_TAB_CLASS);
+    $('.lego-tabs-pane__item[' + this.TAB_RELATION + '="' + contentIdent + '"]').addClass(ACTIVE_TAB_CLASS);
 
+    return el;
   };
 
-  service.hide = function(el) {
+  service._hide = function(el) {
     var $el = $(el);
     var contentIdent = $el.attr(this.TAB_RELATION);
 
     $el.removeClass(ACTIVE_NAV_CLASS);
-    $('[' + this.TAB_RELATION + '="' + contentIdent + '"]').removeClass(ACTIVE_TAB_CLASS);
+    $('.lego-tabs-pane__item[' + this.TAB_RELATION + '="' + contentIdent + '"]').removeClass(ACTIVE_TAB_CLASS);
+
+    return el;
   };
 
   return service;
