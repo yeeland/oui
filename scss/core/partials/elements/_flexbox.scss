@@ -1,7 +1,7 @@
 // # Flexbox
 // Flexbox support is full on Chrome, Firefox and Safari (with prefix) and nearly full for IE 10.
 //
-// - With IE10 at least one of the flex children need to have a width or flex value otherwise the content in those children will not wrap. However, if none of children will collide, no width or flex value is needed.
+// - With IE10 at least one of the flex children needs to have a width or flex value otherwise the content in those children will not wrap. However, if none of children will collide, no width or flex value is needed.
 //
 // `flex-grow` is not supported by IE10, `justify-content` is the next best thing.
 //

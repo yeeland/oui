@@ -12,5 +12,5 @@ p {
 }
 
 b {
-  font-weight: 500;
+  font-weight: map-get($font-weight, bold);
 }

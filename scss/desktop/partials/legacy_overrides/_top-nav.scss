@@ -1,0 +1,33 @@
+// # Top Nav Overrides
+// Overrides for the old nav bar.
+
+#top {
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-top {
+    a {
+      font-size: 13px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .dropdown-menu-top {
+
+    a {
+      font-size: 12px;
+      color: #444;
+
+      &:hover {
+        color: #444;
+        text-decoration: underline;
+      }
+    }
+  }
+}
