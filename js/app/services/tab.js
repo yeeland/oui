@@ -5,37 +5,39 @@
  */
 
 define(function() {
-  var ACTIVE_NAV_CLASS = 'lego-tabs-nav__item--active';
-  var ACTIVE_TAB_CLASS = 'lego-tabs-pane__item--active';
 
   var service = {};
-  //Expose the tab relation class for the directive/tab
+
+  service.ACTIVE_CLASS = 'tab-active';
   service.TAB_RELATION = 'data-tab-related';
 
-  service.show = function(el) {
-    var $el = $(el);
-    var contentIdent = $el.attr(this.TAB_RELATION);
+  service.show = function(nav, tab) {
+    var $nav = $(nav);
+    var $tab = $(tab);
 
-    var currentActive = document.getElementsByClassName(ACTIVE_NAV_CLASS)[0];
-
-    if (typeof currentActive !== 'undefined') {
-      this._hide(currentActive);
+    if ($nav.hasClass(this.ACTIVE_CLASS)) {
+      return;
     }
 
-    $el.addClass(ACTIVE_NAV_CLASS);
-    $('.lego-tabs-pane__item[' + this.TAB_RELATION + '="' + contentIdent + '"]').addClass(ACTIVE_TAB_CLASS);
+    var currActiveNav = $nav.siblings('.' + this.ACTIVE_CLASS);
+    var currActiveTab = $tab.siblings('.' + this.ACTIVE_CLASS);
 
-    return el;
+    if (currActiveNav && currActiveTab) {
+      this._hide(currActiveNav, currActiveTab);
+    }
+
+    $nav.addClass(this.ACTIVE_CLASS);
+    $tab.addClass(this.ACTIVE_CLASS);
+
+    return nav;
   };
 
-  service._hide = function(el) {
-    var $el = $(el);
-    var contentIdent = $el.attr(this.TAB_RELATION);
+  service._hide = function(nav, tab) {
 
-    $el.removeClass(ACTIVE_NAV_CLASS);
-    $('.lego-tabs-pane__item[' + this.TAB_RELATION + '="' + contentIdent + '"]').removeClass(ACTIVE_TAB_CLASS);
+    $(nav).removeClass(this.ACTIVE_CLASS);
+    $(tab).removeClass(this.ACTIVE_CLASS);
 
-    return el;
+    return nav;
   };
 
   return service;

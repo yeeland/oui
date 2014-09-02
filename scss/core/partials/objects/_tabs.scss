@@ -61,11 +61,11 @@
     }
 
     &:hover,
-    &--active {
+    &.tab-active {
       color: map-get($font-color, brand);
     }
 
-    &--active {
+    &.tab-active {
 
       &:after { // Creates the white bar under the active tab.
         content: '';
@@ -107,7 +107,7 @@
   .lego-tabs-nav__item {
     border: none;
 
-    &--active:after {
+    &.tab-active:after {
       height: 2px;
       background: map-get($background-color, brand);
       bottom: -1px;
@@ -118,8 +118,7 @@
 .lego-tabs-pane {
   display: none;
 
-  &__item--active {
-
+  &.tab-active {
     display: block;
   }
 }
