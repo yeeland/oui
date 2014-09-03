@@ -9,7 +9,7 @@ define(function() {
   var service = {};
 
   service.ACTIVE_CLASS = 'tab-active';
-  service.TAB_RELATION = 'data-tab-related';
+  service.TAB_RELATION_ATTR = 'data-tab-related';
 
   service.show = function(nav, tab) {
     var $nav = $(nav);
