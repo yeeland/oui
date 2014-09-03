@@ -54,7 +54,7 @@
 // ## SCSS
 
 $pop-upsell-background: map-get($ui-color, white);
-$pop-upsell-border: map-get($ui-color, medium);
+$pop-upsell-border: map-get($ui-color, base);
 
 .lego-pop-upsell {
   @extend %lego-block-list-group;

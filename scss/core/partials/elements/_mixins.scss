@@ -25,11 +25,15 @@
 }
 
 // ## Dead Center
-// Centers object via position absolute using element width/height.
+// Centers an element using relative or absolute positioning.
 
-@mixin dead-center() {
+//[c]
+//      @include dead-center(relative);
+//[/c]
+
+@mixin dead-center($position_value) {
   @include transform(translateX(-50%) translateY(-50%));
-  position: relative;
+  position: $position_value;
   top: 50%;
   left: 50%;
 }

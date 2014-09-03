@@ -92,6 +92,18 @@
         }
       }
     }
+
+    &--empty {
+      .accordion__content-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .accordion__content {
+        flex: 1;
+      }
+    }
   }
 
   &__content-wrap {

@@ -16,34 +16,5 @@ body {
 }
 
 body {
-  color: inherit;  // Legacy app.css override.
-  background: inherit;  // Legacy app.css override.
-  line-height: inherit;  // Legacy app.css override.
-  font-size: inherit;  // Legacy app.css override.
-  font-weight: inherit;  // Legacy app.css override.
-  font-family: inherit;  // Legacy app.css override.
-  width: auto;  // Legacy app.css override.
-  min-width: map-get($layout-width, body);  // Legacy app.css override.
-}
-
-li {
-  color: inherit; // Legacy app.css override.
-  font-size: inherit; // Legacy app.css override.
-  font-weight: inherit; // Legacy app.css override.
-  line-height: inherit; // Legacy app.css override.
-  list-style-position: inherit; // Legacy app.css override.
-  margin: 0; // Legacy app.css override.
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: inherit; // Legacy app.css override.
-}
-
-p {
-  font-size: inherit;
+  min-width: map-get($layout-width, body);
 }
