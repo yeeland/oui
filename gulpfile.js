@@ -13,7 +13,7 @@ var paths = {
 };
 
 gulp.task('test:js', function() {
-  return gulp.src('js/test/index.html')
+  gulp.src('js/test/index.html')
   .pipe(mochaPhantomJS())
   .on('error', gutil.beep);
 });
@@ -39,7 +39,7 @@ gulp.task('lint:styles', function() {
 
 gulp.task('build:styles', function() {
   gulp.src('scss/lego-desktop.scss')
-    .pipe(shell(['sass --compass scss/lego-desktop.scss:css/lego-desktop.css']))
+    .pipe(shell(['sass --compass --sourcemap scss/lego-desktop.scss:css/lego-desktop.css']))
     .on('error', gutil.log)
     .on('error', gutil.beep);
 });
@@ -75,6 +75,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('lint', ['lint:styles', 'lint:js']);
+gulp.task('test', ['test:js']);
 gulp.task('build', ['build:styles', 'build:js']);
 
 gulp.task('default', ['lint', 'build:styles', 'build:js']);
