@@ -4,12 +4,19 @@ var uglify = require('gulp-uglify');
 var rjs = require('gulp-requirejs');
 var jshint = require('gulp-jshint');
 var gutil = require('gulp-util');
+var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
 var paths = {
   'scripts' : ['js/**/*.js', '!out/lego.min.js'],
   'styles' : ['scss/**/*.scss']
   // 'styles' : ['scss/core/partials/objects/**/*.scss', 'scss/core/partials/**/*.scss', 'scss/core/*.scss', 'scss/*.scss', 'scss/desktop/*.scss', 'scss/**/*.scss']
 };
+
+gulp.task('test:js', function() {
+  return gulp.src('js/test/index.html')
+  .pipe(mochaPhantomJS())
+  .on('error', gutil.beep);
+});
 
 gulp.task('lint:js', function() {
   gulp.src(['js/**/*.js', 'js/*.js', '!js/lib/*.js'])
