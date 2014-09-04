@@ -1,54 +1,55 @@
 // # Poptips
+
 // Information bubbles on hover. Almost always used with postition: absolute.
 
 // ## Examples
 
 //[hc]
-// <button v-poptip data-dir="top-left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="top-left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="top-center" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="top-center" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="top-right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="top-right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="bottom-left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="bottom-left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="bottom-center" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="bottom-center" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="bottom-right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="bottom-right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="right" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 //[hc]
-// <button v-poptip data-dir="left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
-//     Hover Me
-// </button>
+//     <button v-poptip data-dir="left" data-content="This is a pop-tip. Use only limited text." class="lego-button">
+//         Hover Me
+//     </button>
 //[/hc]
 
 $lego-pop-tip-background: map-get($ui-color, dark);
