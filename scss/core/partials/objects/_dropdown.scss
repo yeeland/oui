@@ -5,8 +5,8 @@
 
 // ### Dropdown Default
 //[hc]
-//     <div class="lego-dropdown-group">
-//       <button class="lego-button">
+//     <div class="lego-dropdown-group" v-dropdown>
+//       <button class="lego-button" data-toggle-dropdown>
 //         Dropdown <span class="lego-arrow-inline--down"></span>
 //       </button>
 //       <ul class="lego-dropdown">
@@ -26,8 +26,8 @@
 
 //[hc]
 //     <div style="text-align:right">
-//       <div class="lego-dropdown-group">
-//         <button class="lego-button">
+//       <div class="lego-dropdown-group" v-dropdown>
+//         <button class="lego-button" data-toggle-dropdown>
 //           Dropdown <span class="lego-arrow-inline--down"></span>
 //         </button>
 //         <ul class="lego-dropdown lego-dropdown--right">
@@ -46,8 +46,8 @@
 // ### Dropdown with non-links
 
 //[hc]
-//     <div class="lego-dropdown-group">
-//       <button class="lego-button">
+//     <div class="lego-dropdown-group" v-dropdown>
+//       <button class="lego-button" data-toggle-dropdown>
 //         Dropdown <span class="lego-arrow-inline--down"></span>
 //       </button>
 //       <ul class="lego-dropdown">
@@ -65,8 +65,8 @@
 // ### Dropdown with Filter
 
 //[hc]
-//     <div class="lego-dropdown-group">
-//       <button class="lego-button">
+//     <div class="lego-dropdown-group" v-dropdown>
+//       <button class="lego-button" data-toggle-dropdown>
 //         Dropdown <span class="lego-arrow-inline--down"></span>
 //       </button>
 //       <ul class="lego-dropdown">
