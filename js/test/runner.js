@@ -14,7 +14,7 @@ require.config({
   }
 });
 
-require(['tests/services/tab.js'], function() {
+require(['tests/services/tab.js', 'tests/services/dropdown.js'], function() {
   if (typeof mochaPhantomJS !== "undefined") {
     mochaPhantomJS.run();
   } else {

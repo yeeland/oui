@@ -11,7 +11,14 @@ define(function() {
   service.ACTIVE_CLASS = 'tab-active';
   service.TAB_RELATION_ATTR = 'data-tab-related';
 
-  service.show = function(nav, tab) {
+  /**
+   * Take in a navigation element & tab content element
+   * and make them active while disabling the previous active tab
+   *
+   * @param nav HTMLElement The <li> element representing the newly active tab
+   * @param tab HTMLElement The <div> element representing the newly active tab content
+   */
+  service.activate = function(nav, tab) {
     var $nav = $(nav);
     var $tab = $(tab);
 
@@ -32,6 +39,13 @@ define(function() {
     return nav;
   };
 
+
+  /**
+   * Strip active class from matched nav & content elements
+   *
+   * @param nav HTMLElement The <li> element representing the no longer active tab
+   * @param tab HTMLElement The <div> element representing the newly active tab content
+   */
   service._hide = function(nav, tab) {
 
     $(nav).removeClass(this.ACTIVE_CLASS);

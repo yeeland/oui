@@ -19,7 +19,7 @@ define(function(require) {
         expect(activatedNav).to.not.equal($('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]);
         expect(activatedPane).to.not.equal($('.lego-tabs-pane__item' + ACTIVE_CLASS)[0]);
 
-        Tab.show(activatedNav, activatedPane);
+        Tab.activate(activatedNav, activatedPane);
 
         // Ensure that they are now the currently active items
         expect($el.find('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]).to.equal(activatedNav);
@@ -40,7 +40,7 @@ define(function(require) {
         expect(activatedNav).to.equal($('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]);
         expect(activatedPane).to.equal($('.lego-tabs-pane__item' + ACTIVE_CLASS)[0]);
 
-        Tab.show(activatedNav);
+        Tab.activate(activatedNav);
 
         expect($el.find('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]).to.equal(activatedNav);
         expect($el.find('.lego-tabs-pane__item' + ACTIVE_CLASS)[0]).to.equal(activatedPane);
@@ -108,7 +108,7 @@ define(function(require) {
         expect(activatedNav).to.not.equal($('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]);
         expect(activatedPane).to.not.equal($('.lego-tabs-pane__item' + ACTIVE_CLASS)[0]);
 
-        Tab.show(activatedNav, activatedPane);
+        Tab.activate(activatedNav, activatedPane);
 
         // Ensure that they are now the currently active items
         expect($el.find('.lego-tabs-nav__item' + ACTIVE_CLASS)[0]).to.equal(activatedNav);

@@ -1,5 +1,41 @@
 /**
- * Tab directive to handle events
+ * Tab directive to handle finding relationship between tabs & content and
+ * activating nav/content elements.
+ *
+ * Relationships can be made via data attribute('data-tab-realted')
+ * or by the order of the nav element and it's assoicated tab content block.
+ *
+ * Example of data attribute relationship
+ *
+ * <div v-tabs="tabsContainer2">
+ *   <ul>
+ *     <li class="tab-active" data-tab-related="two">Tab Two</li>
+ *     <li data-tab-related="one">Tab One</li>
+ *     <li data-tab-related="three">Tab Three</li>
+ *   </ul>
+ * </div>
+ *
+ *  <div class="lego-tab-content" id="tabsContainer2">
+ *    <div class="tab-active" data-tab-related="one">One</div>
+ *    <div data-tab-related="three">Three</div>
+ *    <div data-tab-related="two">Two</div>
+ *  </div>
+ *
+ * Example of order based relationship
+ *
+ *   <div v-tabs="tabsContainer">
+ *    <ul>
+ *      <li class="tab-active">Tab One</li>
+ *      <li>Tab Two</li>
+ *      <li>Tab Three</li>
+ *    </ul>
+ *  </div>
+ *
+ *  <div id="tabsContainer">
+ *    <div class="tab-active">One</div>
+ *    <div>Two</div>
+ *    <div>Three</div>
+ *  </div>
  *
  * @author Cheston Lee
  */
@@ -31,7 +67,7 @@ define(function() {
           }
        }
 
-       tabService.show(e.target, tab);
+       tabService.activate(e.target, tab);
 
       }.bind(this));
     }
