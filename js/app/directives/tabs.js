@@ -45,7 +45,12 @@ define(function() {
   return {
     isEmpty: true,
     bind: function() {
+
       this.tabContainer = $('#' + this.expression);
+
+      if (this.tabContainer.length === 0) {
+        return;
+      }
 
       $(this.el).on('click', function(e) {
         var tab = null;
@@ -58,13 +63,14 @@ define(function() {
         } else {
           //Determine the target's position in the nav list in order to 'show'
           //the proper tab.
-          var lis = Array.prototype.slice.call($el.find('li'), this);
+          var lis = $.makeArray($el.find('li'));
           var idx = lis.indexOf(e.target);
 
           // We figured out which nav element number this was, now find the matching tab
-          if (idx !== -1) {
-            tab = this.tabContainer.find('div')[idx];
+          if (idx === -1) {
+            return;
           }
+          tab = this.tabContainer.find('div')[idx];
        }
 
        tabService.activate(e.target, tab);
