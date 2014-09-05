@@ -29,7 +29,7 @@ define(function() {
     var currActiveNav = $nav.siblings('.' + this.ACTIVE_CLASS);
     var currActiveTab = $tab.siblings('.' + this.ACTIVE_CLASS);
 
-    if (currActiveNav && currActiveTab) {
+    if (currActiveNav.length === 1 && currActiveTab.length === 1) {
       currActiveNav.removeClass(this.ACTIVE_CLASS);
       currActiveTab.removeClass(this.ACTIVE_CLASS);
     }

@@ -66,7 +66,7 @@ define(function() {
           var lis = $.makeArray($el.find('li'));
           var idx = lis.indexOf(e.target);
 
-          // We figured out which nav element number this was, now find the matching tab
+          // Bail if we cannot find the list item
           if (idx === -1) {
             return;
           }
