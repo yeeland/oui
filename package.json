@@ -1,8 +1,11 @@
 {
   "name": "lego",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CSS/JS component library for Optimizely",
   "main": "gulpfile.js",
+  "dependencies" : {
+    "bower" : "^1.3.5"
+  },
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-jshint": "^1.8.2",
@@ -13,13 +16,14 @@
     "mocha-phantomjs": "^3.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec ./js/test/index.html",
+    "postinstall" : "bower install"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/optimizely/lego.git"
   },
-  "author": "Cheston Lee",
+  "author": "TomGenoni, Cheston Lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/optimizely/lego/issues"

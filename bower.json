@@ -1,9 +1,10 @@
 {
   "name": "lego",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/optimizely/lego",
   "authors": [
-    "Cheston Lee <cheston@optimizely.com>"
+    "Cheston Lee <cheston@optimizely.com>",
+    "Tom Genoni <tom.genoni@optimizely.com>"
   ],
   "description": "CSS/JS library for Optimizely",
   "license": "MIT",
@@ -15,10 +16,13 @@
     "tests"
   ],
   "dependencies": {
+    "requirejs": "~2.1.14",
+    "requirejs-text": "~2.0.12"
+  },
+  "devDependencies": {
     "expect": "~0.3.1",
     "mocha": "~1.21.3",
-    "requirejs": "~2.1.14",
     "sinon": "~1.10.3",
-    "requirejs-text": "~2.0.12"
+    "jquery": "~2.1.0"
   }
 }
