@@ -17,12 +17,15 @@
   ],
   "dependencies": {
     "requirejs": "~2.1.14",
-    "requirejs-text": "~2.0.12"
+    "requirejs-text": "~2.0.12",
+    "vue": "~0.10.6",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "almond": "~0.3.0"
   },
   "devDependencies": {
     "expect": "~0.3.1",
     "mocha": "~1.21.3",
-    "sinon": "~1.10.3",
-    "jquery": "~2.1.0"
+    "sinon": "~1.10.3"
   }
 }
