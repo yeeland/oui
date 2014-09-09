@@ -1,8 +1,8 @@
 require.config({
   baseUrl: '../',
   paths: {
-    'jquery' : 'lib/jquery',
-    'vue' : 'lib/vue'
+    'jquery' : 'lib/jquery.min',
+    'vue' : 'lib/vue.min'
   },
   shim: {
     'jquery' : {

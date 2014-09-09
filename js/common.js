@@ -1,8 +1,8 @@
 require.config({
   baseUrl: '.',
   paths: {
-    'jquery' : 'lib/jquery',
-    'lodash' : 'lib/lodash',
-    'vue' : 'lib/vue'
+    'jquery' : 'lib/jquery.min',
+    'lodash' : 'lib/lodash.min',
+    'vue' : 'lib/vue.min'
   }
 });

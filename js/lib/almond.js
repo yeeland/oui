@@ -1,1 +1,1 @@
-../../bower_components/almond/almond.js
+../../node_modules/almond/almond.js
