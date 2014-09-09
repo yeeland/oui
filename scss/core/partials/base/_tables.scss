@@ -221,6 +221,16 @@
         cursor: pointer;
       }
     }
+
+    > thead > tr > th:first-child,
+    > tbody > tr > td:first-child {
+      padding-left: spacer(1);
+    }
+
+    > thead > tr > th:last-child,
+    > tbody > tr > td:last-child {
+      padding-right: spacer(1);
+    }
   }
 }
 
