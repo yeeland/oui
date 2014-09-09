@@ -12,7 +12,7 @@ define(function(require) {
   return {
      component: require('app/components'),
      directive: require('app/directives'),
-     effect: require('app/effects')
+     // effect: require('app/effects')
      // partial: require('app/partials'),
      // filter: require('app/filters')
   };
