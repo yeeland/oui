@@ -11,8 +11,8 @@
 //[hc]
 //     <!-- Remove this outer div --->
 //     <div class="doc-accordion-example">
-//      <ul class="accordion">
-//        <li class="accordion__item">
+//      <ul class="accordion" v-accordion>
+//        <li class="accordion__item" v-effect="accordion">
 //          <a class="accordion__link" href="#">Item One</a>
 //          <div class="accordion__content-wrap">
 //            <div class="accordion__content">
@@ -20,7 +20,7 @@
 //            </div>
 //          </div>
 //        </li>
-//        <li class="accordion__item  accordion__item--active">
+//        <li class="accordion__item  accordion__item--active" v-effect="accordion">
 //          <a class="accordion__link" href="#">Item Two</a>
 //          <div class="accordion__content-wrap">
 //            <div class="accordion__content">
@@ -28,7 +28,7 @@
 //            </div>
 //          </div>
 //        </li>
-//        <li class="accordion__item">
+//        <li class="accordion__item" v-effect="accordion">
 //          <a class="accordion__link" href="#">Item Three</a>
 //          <div class="accordion__content-wrap">
 //            <div class="accordion__content">
