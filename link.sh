@@ -1,6 +1,8 @@
 #!/bin/sh
-rm src/js/lib/*.js
+rm -rf src/js/lib
 rm src/js/text.js
+
+mkdir src/js/lib/
 
 ln -s ../../node_modules/requirejs-text/text.js src/js/text.js
 ln -s ../../../node_modules/almond/almond.js src/js/lib/almond.js
