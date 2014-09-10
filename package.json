@@ -26,6 +26,7 @@
   },
   "scripts": {
     "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec ./js/test/index.html",
+    "preinstall": "bundler install",
     "postinstall": "sh ./link.sh"
   },
   "repository": {
