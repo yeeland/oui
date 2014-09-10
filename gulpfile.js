@@ -7,19 +7,19 @@ var gutil = require('gulp-util');
 var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
 var paths = {
-  'scripts' : ['js/**/*.js', '!out/lego.min.js'],
-  'styles' : ['scss/**/*.scss']
+  'scripts' : ['src/js/**/*.js', '!dist/js/lego.min.js'],
+  'styles' : ['src/scss/**/*.scss']
   // 'styles' : ['scss/core/partials/objects/**/*.scss', 'scss/core/partials/**/*.scss', 'scss/core/*.scss', 'scss/*.scss', 'scss/desktop/*.scss', 'scss/**/*.scss']
 };
 
 gulp.task('test:js', function() {
-  gulp.src('js/test/index.html')
+  gulp.src('src/js/test/index.html')
   .pipe(mochaPhantomJS())
   .on('error', gutil.beep);
 });
 
 gulp.task('lint:js', function() {
-  gulp.src(['js/**/*.js', 'js/*.js', '!js/lib/*.js'])
+  gulp.src(['src/js/**/*.js', 'src/js/*.js', '!src/js/lib/*.js'])
     .pipe(jshint())
     .on('error', gutil.log)
     .on('error', gutil.beep)
@@ -38,16 +38,16 @@ gulp.task('lint:styles', function() {
 });
 
 gulp.task('build:styles', function() {
-  gulp.src('scss/lego-desktop.scss')
-    .pipe(shell(['sass --compass --sourcemap scss/lego-desktop.scss:css/lego-desktop.css']))
+  gulp.src('src/scss/lego-desktop.scss')
+    .pipe(shell(['sass --compass --sourcemap src/scss/lego-desktop.scss:dist/css/lego-desktop.css']))
     .on('error', gutil.log)
     .on('error', gutil.beep);
 });
 
 gulp.task('build:js', function() {
   rjs({
-    baseUrl: 'js',
-    mainConfigFile: 'js/common.js',
+    baseUrl: 'src/js',
+    mainConfigFile: 'src/js/common.js',
     findNestedDependencies: true,
 
     out: 'lego.min.js',
@@ -66,7 +66,7 @@ gulp.task('build:js', function() {
   //     drop_console : true
   //   }
   // }))
-  .pipe(gulp.dest('./out/'));
+  .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('watch', function() {

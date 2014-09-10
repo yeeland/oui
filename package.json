@@ -2,7 +2,7 @@
   "name": "lego",
   "version": "1.0.0",
   "description": "CSS/JS component library for Optimizely",
-  "main": "out/lego.min.js",
+  "main": "dist/js/lego.min.js",
   "dependencies": {
     "almond": "^0.3.0",
     "jquery": "^2.1.1",
@@ -25,7 +25,7 @@
     "mocha-phantomjs": "^3.5.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec ./js/test/index.html",
+    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec src/js/test/index.html",
     "preinstall": "bundler install",
     "postinstall": "sh ./link.sh"
   },
