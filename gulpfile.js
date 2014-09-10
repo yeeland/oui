@@ -70,8 +70,13 @@ gulp.task('build:js', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.scripts, ['build:js']);
-  gulp.watch(paths.styles, ['build:styles']);
+  gulp.watch(paths.scripts, ['build:js'])
+  .on('error', gutil.log)
+  .on('error', gutil.beep);
+
+  gulp.watch(paths.styles, ['build:styles'])
+  .on('error', gutil.log)
+  .on('error', gutil.beep);
 });
 
 gulp.task('lint', ['lint:styles', 'lint:js']);
