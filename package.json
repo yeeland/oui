@@ -25,7 +25,8 @@
     "mocha-phantomjs": "^3.5.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec ./js/test/index.html"
+    "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec ./js/test/index.html",
+    "postinstall": "sh ./link.sh"
   },
   "repository": {
     "type": "git",

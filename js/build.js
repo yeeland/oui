@@ -9,6 +9,6 @@
 
     include: ['app/directives/poptip'],
     insertRequire: ['main.js'],
-    name: '../../node_modules/almond/almond.js',
+    name: 'js/lib/almond.js',
     wrap: true
 })
