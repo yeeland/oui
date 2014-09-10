@@ -1,7 +1,3 @@
-bower_components
 node_modules
-out
-css
 .sass-cache
-_site
 npm-debug.log
