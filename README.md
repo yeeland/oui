@@ -3,7 +3,7 @@ Lego
 
 Refactored, component-based Sass/HTML and vue.js.
 
-Currently this repo contains the modular Sass library that will serve as the foundation for building out objects on optimizely.com.
+Currently this repo contains the modular Sass library that will serve as the foundation for building out objects on optimizely.com and other projects.
 
 ## Requirements
 
