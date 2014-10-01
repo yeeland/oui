@@ -461,7 +461,7 @@ Variables set by <code>core</code> can also be overriden here as needed.</p>
 
 <pre><code>$layout-width: (
   body                : 1120px,
-  data-sidebar        : 500px
+  data-sidebar        : 450px
 );
 </code></pre>
 
@@ -472,16 +472,16 @@ Variables set by <code>core</code> can also be overriden here as needed.</p>
   micro               : 10px,
   milli               : 11px,
 
-  alpha               : 36px, // h1
-  beta                : 30px, // h2
-  gamma               : 24px, // h3
-  delta               : 20px, // h4
-  epsilon             : 16px, // h5
+  alpha               : 28px, // h1
+  beta                : 24px, // h2
+  gamma               : 20px, // h3
+  delta               : 16px, // h4
+  epsilon             : 14px, // h5
   zeta                : 12px, // h6
 
-  kilo                : 70px, // Extra large fonts.
-  mega                : 86px,
-  giga                : 96px
+  kilo                : 40px, // Extra large fonts.
+  mega                : 50px,
+  giga                : 65px
 );
 </code></pre>
 
@@ -2338,7 +2338,7 @@ element is not suitable.</p>
 .lego-input-list .lego-label {
   display: table-cell;
   padding-left: spacer(1);
-  font-weight: map-get($font-weight, normal);
+  font-weight: map-get($font-weight, light);
 }
 
 .lego-input--disabled {
@@ -3642,7 +3642,7 @@ $border-transparent: 4px solid transparent;
 
   &gt; li {
     padding: spacer(0.5) spacer(1);
-    border-bottom: 1px solid map-get($ui-color, light);
+    border-top: 1px solid map-get($ui-color, light);
   }
 </code></pre>
 
@@ -3683,7 +3683,7 @@ $border-transparent: 4px solid transparent;
   border: 1px solid map-get($ui-color, base);
   border-radius: map-get($border-radius, base);
 
-  &gt; li:last-child {
+  &gt; li:first-child {
     border: 0;
   }
 }

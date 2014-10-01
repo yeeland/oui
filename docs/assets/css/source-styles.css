@@ -396,7 +396,7 @@ b {
   margin-top: 30px; }
 
 .lego-form__title {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
   line-height: 1; }
 
@@ -411,7 +411,7 @@ fieldset {
   margin-bottom: 40px; }
 
 .lego-form-field__title {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 5px; }
 
 .lego-label {
@@ -440,7 +440,7 @@ fieldset {
 .lego-input-list .lego-label {
   display: table-cell;
   padding-left: 10px;
-  font-weight: 400; }
+  font-weight: 300; }
 
 .lego-input--disabled {
   background-color: #ededed; }
@@ -743,7 +743,7 @@ li > ol {
   .lego-block-list-group > li,
   .lego-block-list > li {
     padding: 5px 10px;
-    border-bottom: 1px solid #ededed; }
+    border-top: 1px solid #ededed; }
   .lego-dropdown__block-link, .lego-pop-upsell__link a,
   .lego-block-list__link {
     display: block;
@@ -763,8 +763,8 @@ li > ol {
 .lego-block-list-group {
   border: 1px solid #e0e0e0;
   border-radius: 2px; }
-  .lego-dropdown > li:last-child, .lego-pop-upsell > li:last-child,
-  .lego-block-list-group > li:last-child {
+  .lego-dropdown > li:first-child, .lego-pop-upsell > li:first-child,
+  .lego-block-list-group > li:first-child {
     border: 0; }
 
 .border--top {
@@ -963,7 +963,7 @@ li > ol {
   .lego-dialog__footer {
     border-top: 1px solid #ededed; }
   .lego-dialog__title {
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: -1px;
     color: #003366;
     line-height: 1; }
@@ -1215,32 +1215,32 @@ body {
 
 h1,
 .alpha {
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: -1px;
   font-weight: 300;
   line-height: 1.1; }
 
 h2,
 .beta {
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: -1px;
   font-weight: 300;
   line-height: 1.1; }
 
 h3,
 .gamma {
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: -1px;
   line-height: 1.2; }
 
 h4,
 .delta {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2; }
 
 h5,
 .epsilon {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2; }
 
 h6,
@@ -1280,16 +1280,16 @@ hgroup .hn {
   font-size: 10px; }
 
 .giga {
-  font-size: 96px; }
+  font-size: 65px; }
 
 .mega {
-  font-size: 86px; }
+  font-size: 50px; }
 
 .kilo {
-  font-size: 70px; }
+  font-size: 40px; }
 
 .lego-data-sidebar {
-  width: 500px;
+  width: 450px;
   border-left: 1px solid #e0e0e0; }
 
 .lego-top-nav {
