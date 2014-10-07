@@ -1,5 +1,28 @@
 // # Steps
-// A type of progress bar showing steps through a flow.
+// A type of progress bar showing steps through a flow. Use with a width helper class if needed so that it fits cleanly.
+
+// ## Example
+
+//[hc]
+//     <ul class="lego-steps width-1-5">
+//       <li class="lego-steps__item lego-steps__item--active">
+//         <div class="lego-steps__dot"></div>
+//         <div class="lego-steps__label">Step One Label</div>
+//       </li>
+//       <li class="lego-steps__item lego-steps__item--active">
+//         <div class="lego-steps__dot"></div>
+//         <div class="lego-steps__label">Step Two Label</div>
+//       </li>
+//       <li class="lego-steps__item lego-steps__item--active">
+//         <div class="lego-steps__dot"></div>
+//         <div class="lego-steps__label">Step Three Label</div>
+//       </li>
+//       <li class="lego-steps__item">
+//         <div class="lego-steps__dot"></div>
+//         <div class="lego-steps__label">Step Four Label</div>
+//       </li>
+//     </ul>
+//[/hc]
 
 // ## SCSS
 
@@ -9,16 +32,35 @@
   @extend %justify--center;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+
+  &__dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    @include transform(translateX(-50%));
+    left: 50%;
+    border-radius: 50%;
+    background: map-get($ui-color, base);
+    border: 3px solid map-get($ui-color, base);
+    background: map-get($ui-color, white);
+    z-index: 1;
+  }
+
+  &__label {
+    text-align: center;
+    font-weight: map-get($font-weight, bold);
+    color: map-get($font-color, muted);
+  }
 
   &__item {
+    @extend %flex-1;
     padding-top: spacer(2);
     position: relative;
-    flex: 1;
 
-    &:after {
-      content: "";
-      height: 1px;
+    &:before {
+      content: '';
+      height: 3px;
       background: map-get($ui-color, base);
       width: 100%;
       position: absolute;
@@ -27,38 +69,24 @@
     }
 
     &--active {
-      &:after {
+      &:before {
         background: map-get($ui-color, brand);
       }
 
       .lego-steps__dot {
         background: map-get($ui-color, brand);
+        border-color: map-get($ui-color, brand);
+      }
+
+      .lego-steps__label {
+        color: map-get($font-color, brand);
       }
     }
 
     &:first-child {
-      &:after {
+      &:before {
         display: none;
       }
     }
   }
-
-
-  &__dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: map-get($ui-color, base);
-    left: 50%;
-    top: -5px;
-    margin-left: -5px;
-    z-index: 1;
-  }
-
-  &__label {
-    text-align: center;
-  }
-
-
 }

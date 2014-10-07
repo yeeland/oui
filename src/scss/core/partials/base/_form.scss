@@ -89,7 +89,7 @@
 
 //       <fieldset>
 //         <ol class="lego-form-fields">
-//           <li class="lego-form-field__title">Checklist</li>
+//           <li class="lego-label">Checklist</li>
 //           <li class="lego-form-field__item">
 //             <ul class="lego-input-list">
 //               <li>
@@ -103,7 +103,7 @@
 //         </ol>
 //       </fieldset>
 //       <fieldset>
-//         <div class="lego-form-field__title">Form Field Title</div>
+//         <div class="lego-label">Form Field Title</div>
 //         <ol class="lego-form-fields">
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Select one thing or another</label>
@@ -238,14 +238,6 @@ fieldset {
   margin-bottom: spacer(4);
 }
 
-// ## Form Field Titles
-// Used if a larger title is needed and the usual `label` won't do or is not available.
-
-.lego-form-field__title {
-  font-size: map-get($font-size, epsilon);
-  margin-bottom: spacer(0.5);
-}
-
 //## Labels
 //
 // Define a `.label` class as well as a `<label>` element. This means we can apply
@@ -265,8 +257,6 @@ fieldset {
     font-weight: map-get($font-weight, normal);
   }
 }
-
-
 
 //  Groups of checkboxes and radios.
 

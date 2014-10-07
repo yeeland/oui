@@ -127,6 +127,36 @@
   margin-left: spacer(3) !important;
 }
 
+.push-quad {
+  margin: spacer(4) !important;
+}
+
+.push-quad--top {
+  margin-top: spacer(4) !important;
+}
+
+.push-quad--right {
+  margin-right: spacer(4) !important;
+}
+
+.push-quad--bottom {
+  margin-bottom: spacer(4) !important;
+}
+
+.push-quad--left {
+  margin-left: spacer(4) !important;
+}
+
+.push-quad--ends {
+  margin-top: spacer(4) !important;
+  margin-bottom: spacer(4) !important;
+}
+
+.push-quad--sides {
+  margin-right: spacer(4) !important;
+  margin-left: spacer(4) !important;
+}
+
 // ## Zero Margins
 
 //[c]

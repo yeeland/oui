@@ -124,8 +124,34 @@
 }
 
 .soft-triple--sides {
-  padding-right: spacer(3) !important;
-  padding-left: spacer(3) !important;
+  padding-right: spacer(4) !important;
+  padding-left: spacer(4) !important;
+}
+
+.soft-quad--top {
+  padding-top: spacer(4) !important;
+}
+
+.soft-quad--right {
+  padding-right: spacer(4) !important;
+}
+
+.soft-quad--bottom {
+  padding-bottom: spacer(4) !important;
+}
+
+.soft-quad--left {
+  padding-left: spacer(4) !important;
+}
+
+.soft-quad--ends {
+  padding-top: spacer(4) !important;
+  padding-bottom: spacer(4) !important;
+}
+
+.soft-quad--sides {
+  padding-right: spacer(4) !important;
+  padding-left: spacer(4) !important;
 }
 
 // ## Zero Paddings
