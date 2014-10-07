@@ -1,0 +1,64 @@
+// # Steps
+// A type of progress bar showing steps through a flow.
+
+// ## SCSS
+
+%lego-steps,
+.lego-steps {
+  @extend %flex;
+  @extend %justify--center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  &__item {
+    padding-top: spacer(2);
+    position: relative;
+    flex: 1;
+
+    &:after {
+      content: "";
+      height: 1px;
+      background: map-get($ui-color, base);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 50%;
+    }
+
+    &--active {
+      &:after {
+        background: map-get($ui-color, brand);
+      }
+
+      .lego-steps__dot {
+        background: map-get($ui-color, brand);
+      }
+    }
+
+    &:first-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+
+  &__dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: map-get($ui-color, base);
+    left: 50%;
+    top: -5px;
+    margin-left: -5px;
+    z-index: 1;
+  }
+
+  &__label {
+    text-align: center;
+  }
+
+
+}
