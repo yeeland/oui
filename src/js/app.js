@@ -6,7 +6,7 @@ define(function(require) {
   var appFactory = require('app_factory');
 
   Vue.config({
-    // debug: true,
+    debug: true,
     // use `[[ prop ]]` style delimiters since django uses {{
     delimiters: ['[', ']']
   });

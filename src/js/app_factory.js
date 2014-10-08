@@ -45,6 +45,7 @@ define(function(require) {
       if (validKeys.indexOf(key) !== -1) {
         _.forEach(map, function(def, id) {
           // register Vue.component(componentId, { ... })
+          console.log(key, id, def);
           Vue[key](id, def);
         });
       }

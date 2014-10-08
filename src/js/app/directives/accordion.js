@@ -6,7 +6,6 @@ define(function() {
       show: true
     },
     bind: function() {
-      console.log(accordionService);
       var $el = $(this.el);
 
       $el.find('> li > a').on('click', function(e) {

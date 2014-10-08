@@ -14,6 +14,7 @@ define('app/directives/poptip',['require','jquery'],function(require) {
     isEmpty: true,
 
     bind: function() {
+      console.log('BIND');
       var $el = $(this.el);
       var $tmpl = $(tmpl);
 

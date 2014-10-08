@@ -1,5 +1,8 @@
 define(function(require) {
-  var app = require('app');
-  var appConfig = require('app_config');
-  app.run(appConfig);
+  var $ = require('jquery');
+  $(document).ready(function() {
+    var app = require('app');
+    var appConfig = require('app_config');
+    app.run(appConfig);
+  });
 });
