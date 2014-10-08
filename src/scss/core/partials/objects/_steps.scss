@@ -4,12 +4,12 @@
 // ## Example
 
 //[hc]
-//     <ul class="lego-steps width-1-5">
-//       <li class="lego-steps__item lego-steps__item--active">
+//     <ul class="lego-steps width-9-10">
+//       <li class="lego-steps__item lego-steps__item--complete">
 //         <div class="lego-steps__dot"></div>
 //         <div class="lego-steps__label">Step One Label</div>
 //       </li>
-//       <li class="lego-steps__item lego-steps__item--active">
+//       <li class="lego-steps__item lego-steps__item--complete">
 //         <div class="lego-steps__dot"></div>
 //         <div class="lego-steps__label">Step Two Label</div>
 //       </li>
@@ -49,7 +49,7 @@
 
   &__label {
     text-align: center;
-    font-weight: map-get($font-weight, bold);
+    font-weight: map-get($font-weight, normal);
     color: map-get($font-color, muted);
   }
 
@@ -83,10 +83,23 @@
       }
     }
 
+    &--complete {
+
+      &:before {
+        background: map-get($ui-color, brand);
+      }
+
+      .lego-steps__dot {
+        border-color: map-get($ui-color, brand);
+      }
+    }
+
+    // Prevents line showing up on step.
     &:first-child {
       &:before {
         display: none;
       }
     }
   }
+
 }

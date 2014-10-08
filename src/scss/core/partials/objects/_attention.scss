@@ -25,6 +25,18 @@
 //     </div>
 //[/hc]
 
+// ### Good News
+// For alterting a user to information that's good.
+
+//[hc]
+//     <div class="lego-attention lego-attention--good-news text--center push-double--bottom">
+//         This is a note.
+//     </div>
+//     <div class="lego-attention lego-attention--good-news">
+//       <p>This is a longer note adipisicing elit. Recusandae ipsum tenetur est quisquam beatae aliquam facere molestiae reiciendis aperiam molestias consequuntur voluptatum corporis voluptas laudantium dolor, nam quam laboriosam harum.</p>
+//     </div>
+//[/hc]
+
 // ### Error
 // For error states or bad news.
 
@@ -47,6 +59,11 @@
   &--warning {
     border-color: map-get($ui-color, warning);
     background-color: map-get($background-color, warning);
+  }
+
+  &--good-news {
+    border-color: map-get($ui-color, good-news);
+    background-color: map-get($background-color, good-news);
   }
 
   &--error {
