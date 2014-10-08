@@ -993,7 +993,6 @@ li > ol {
   height: 18px;
   text-align: center;
   display: inline-block;
-  position: relative;
   border-radius: 50%; }
   .lego-help-dot:after {
     content: "?"; }
@@ -1375,6 +1374,11 @@ hgroup .hn {
 .lego-data-sidebar {
   width: 450px;
   border-left: 1px solid #e0e0e0; }
+
+.lego-layout--single-column {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px; }
 
 .lego-top-nav {
   background-color: #003366;
