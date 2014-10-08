@@ -171,3 +171,13 @@
     display: block;
   }
 }
+
+.lego-tabs-container {
+  margin-bottom: spacer(2);
+
+  .lego-tabs-pane {
+    padding: spacer(2);
+    border: 1px solid map-get($ui-color, base);
+    border-top: none;
+  }
+}

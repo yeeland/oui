@@ -21,15 +21,21 @@
 
 %lego-list,
 .lego-list {
-  margin-left: spacer(2.5);
   margin-bottom: spacer(1);
 
   &--bullet {
+    margin-left: spacer(2);
     list-style-type: disc;
   }
 
   &--numbered {
+    margin-left: spacer(2.5);
     list-style-type: decimal;
+  }
+
+  &--lower-alpha {
+    margin-left: spacer(2.5);
+    list-style-type: lower-alpha;
   }
 }
 

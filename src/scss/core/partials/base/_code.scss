@@ -1,0 +1,22 @@
+// # Code
+// For monospace code snippets, both inline and multiline.
+
+//[hc]
+//     Text can have <span class="link">link color</span> when not a HTML anchor.
+//[/hc]
+
+.lego-pre {
+  margin-bottom: spacer(1);
+
+  code {
+    padding: spacer(1);
+    background: map-get($background-color, faint);
+    overflow-x: auto;
+    display: block;
+    border-radius: map-get($border-radius, base);
+  }
+}
+
+code {
+  font-family: map-get($font-family, monospace);
+}
