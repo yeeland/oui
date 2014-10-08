@@ -36,6 +36,21 @@
 //[/hc]
 
 //[hc]
+//     <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="tabs-container" class="lego-tabs-container">
+//         <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//         <div class="lego-tabs-pane">Tab Content Two</div>
+//         <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
+//[/hc]
+
+//[hc]
 //     <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
 //       <ul class="lego-tabs-nav">
 //         <li class="lego-tabs-nav__item tab-active">Tab One</li>
