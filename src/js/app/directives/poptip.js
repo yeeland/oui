@@ -14,7 +14,6 @@ define('app/directives/poptip',['require','jquery'],function(require) {
     isEmpty: true,
 
     bind: function() {
-      console.log('BIND');
       var $el = $(this.el);
       var $tmpl = $(tmpl);
 
@@ -44,11 +43,12 @@ define('app/directives/poptip',['require','jquery'],function(require) {
         var pos = $el.position();
 
         //Determine the size of the CSS arrow
-        var arrowWidth = window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('width');
-        var arrowHeight = window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('height');
+        var arrowWidth = parseInt(window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('width'));
+        var arrowHeight = parseInt(window.getComputedStyle($tmpl.get(0), ':before').getPropertyValue('height'));
 
-        arrowWidth = Math.floor(arrowWidth.substr(0, arrowWidth.length - 2));
-        arrowHeight = Math.floor(arrowHeight.substr(0, arrowHeight.length - 2));
+        // Hack for FF/IE that reports computed values as 'auto' not px values and divide by 2 to get the actual offset
+        arrowWidth = (isNaN(arrowWidth) ? '12' : arrowWidth) / 2;
+        arrowHeight = (isNaN(arrowHeight) ? '12' : arrowHeight) / 2;
 
         var left = pos.left;
         var top = pos.top;
