@@ -5,12 +5,26 @@ var rjs = require('gulp-requirejs');
 var jshint = require('gulp-jshint');
 var gutil = require('gulp-util');
 var mochaPhantomJS = require('gulp-mocha-phantomjs');
+var svgSymbols = require('gulp-svg-symbols');
+
+// SVG Generator
+var svgSource = 'src/img/svg-icons/*.svg';
+var svgDestination = 'dist/img/'
 
 var paths = {
   'scripts' : ['src/js/**/*.js', '!dist/js/lego.min.js'],
   'styles' : ['src/scss/**/*.scss']
   // 'styles' : ['scss/core/partials/objects/**/*.scss', 'scss/core/partials/**/*.scss', 'scss/core/*.scss', 'scss/*.scss', 'scss/desktop/*.scss', 'scss/**/*.scss']
 };
+
+gulp.task('svg', function () {
+  return gulp.src(svgSource)
+    .pipe(svgSymbols({
+      title:      false,
+      templates: ['default-svg', 'default-demo']
+    }))
+    .pipe(gulp.dest(svgDestination));
+});
 
 gulp.task('test:js', function() {
   gulp.src('src/js/test/index.html')
