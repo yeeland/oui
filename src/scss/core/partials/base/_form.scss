@@ -19,6 +19,10 @@
 //             <div class="lego-form-note lego-form-note--error">This field is required.</div>
 //           </li>
 //           <li class="lego-form-field__item">
+//             <label class="lego-label">Diabled Input</label>
+//             <input type="text" class="lego-text-input" disabled>
+//           </li>
+//           <li class="lego-form-field__item">
 //             <label class="lego-label">URL</label>
 //             <div class="lego-text-input-control">
 //               <input type="text" class="lego-text-input">
@@ -164,6 +168,10 @@
 
   &:focus {
     border-color: $input-focus-border-color;
+  }
+
+  &[disabled] {
+    background: map-get($background-color, faint);
   }
 }
 

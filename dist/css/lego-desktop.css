@@ -379,6 +379,9 @@ code {
   .lego-text-input:focus,
   .lego-textarea:focus {
     border-color: #8abee3; }
+  .lego-text-input[disabled],
+  .lego-textarea[disabled] {
+    background: #f7f7f7; }
 
 .lego-text-input-control .lego-text-input {
   padding-right: 25px; }
