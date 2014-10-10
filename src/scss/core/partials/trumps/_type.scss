@@ -2,9 +2,9 @@
 
 // ## Font Weights
 
-//[c]
-//     <div class="weight--light">content</div>
-//[/c]
+//[hc]
+//     <div class="weight--light">This is light text.</div>
+//[/hc]
 
 .weight--light {
   font-weight: 300 !important;
@@ -19,12 +19,27 @@
 }
 
 
+// ## Font Style
+
+//[hc]
+//     <div class="style--italic">This is italic text.</div>
+//[/hc]
+
+.style--italic {
+  font-style: italic !important;
+}
+
+.style--normal {
+  font-style: normal !important;
+}
+
+
 // ## Font Lighter
 // Make font color lighter.
 
-//[c]
-//     <div class="light-font-color">content</div>
-//[/c]
+//[hc]
+//     <div class="light-font-color">This is a light color.</div>
+//[/hc]
 
 .light-font-color {
   color: map-get($font-color, light) !important;
@@ -39,9 +54,9 @@
 // Add a help cursor to any element that gives the user extra information on
 // `:hover`.
 
-//[c]
-//     <div class="informative">content</div>
-//[/c]
+//[hc]
+//     <div class="informative">Hover over me for a help cursor.</div>
+//[/hc]
 
 .informative {
   cursor: help !important;
@@ -50,9 +65,9 @@
 // ## Underline
 // Adds text-decoration: underline to text.
 
-//[c]
-//     <div>content is <span class="underline">underlined</span></div>
-//[/c]
+//[hc]
+//     <div>You can <span class="underline">underline</span> words.</div>
+//[/hc]
 
 .underline {
   text-decoration: underline;
@@ -60,9 +75,9 @@
 
 // Adds text-decoration: line-through;.
 
-//[c]
-//     <div><span class="strike">strike</span> the content as needed</div>
-//[/c]
+//[hc]
+//     <div>You can <span class="strike">strike</span> words.</div>
+//[/hc]
 
 .strike {
   text-decoration: line-through;
@@ -72,7 +87,7 @@
 // Mute text to a ligher shade of gray.
 
 //[hc]
-//     <div class="muted">This text is muted</div>
+//     <div class="muted">This is a muted color. Can be applied to anything.</div>
 //[/hc]
 
 .muted {

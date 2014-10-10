@@ -1812,6 +1812,12 @@ p {
 .weight--bold {
   font-weight: 500 !important; }
 
+.style--italic {
+  font-style: italic !important; }
+
+.style--normal {
+  font-style: normal !important; }
+
 .light-font-color {
   color: #bfbfbf !important; }
 
@@ -1906,5 +1912,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */
