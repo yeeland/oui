@@ -104,12 +104,12 @@
   // ### Button Styles
   // Button color variations.
 
-  background: #f8f8f8;
+  background: #f3f3f3;
   color: map-get($font-color, medium);
   border-color: map-get($ui-color, base);
 
   &:hover {
-    background: #fff;
+    background: #eee;
     border-color: map-get($ui-color, medium);
     color: map-get($font-color, base);
   }
