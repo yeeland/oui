@@ -4,6 +4,13 @@
 // ## Editiable
 // Text that can be edited, like project titles.
 
+//[hc]
+//
+//     <!-- Does not matter which Element -->
+//     <p v-editable-text>This Text is Editable</p>
+//
+//[/hc]
+
 .editable {
 
   &:hover {
