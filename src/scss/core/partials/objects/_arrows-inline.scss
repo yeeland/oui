@@ -49,3 +49,9 @@ $border-transparent: 4px solid transparent;
     border-bottom: $border-transparent;
   }
 }
+
+// This is a vertical alignment fix when used to the right of `.lego-icon`.
+
+.lego-icon + [class^="lego-arrow-inline"] {
+  vertical-align: super;
+}
