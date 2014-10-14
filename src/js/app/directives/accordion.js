@@ -1,3 +1,8 @@
+/**
+ * Directive for simple accordion
+ *
+ * @author Cheston Lee
+ */
 define(function() {
   var accordionService = require('app/services/accordion');
 

@@ -24,8 +24,6 @@ define(function() {
       var self = this,
         el = self.el;
 
-      // Make the content editable
-      $(el).attr('contenteditable', true);
       // Apply LEGO ClassName
       $(el).addClass('editable');
 
