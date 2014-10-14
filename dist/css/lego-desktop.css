@@ -585,6 +585,8 @@ li > ol {
     font-size: 10px;
     color: #a5a5a5;
     text-align: left; }
+  .lego-table td {
+    vertical-align: top; }
   .lego-table [rowspan] {
     vertical-align: middle; }
   .lego-table [rowspan="1"] {
