@@ -70,7 +70,7 @@ define(function() {
           if (idx === -1) {
             return;
           }
-          tab = this.tabContainer.find('div')[idx];
+          tab = this.tabContainer.children('div')[idx];
        }
 
        tabService.activate(e.target, tab);
