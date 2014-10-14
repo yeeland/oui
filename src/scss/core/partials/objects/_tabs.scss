@@ -152,6 +152,7 @@
   }
 
   .lego-tabs-nav__item {
+    text-transform: uppercase;
     padding: spacer(0.5) spacer(1);
     font-size: map-get($font-size, micro);
   }

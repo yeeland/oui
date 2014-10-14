@@ -42,7 +42,7 @@
 
 
 .accordion {
-  $accordion-link-height: 32px;
+  $accordion-link-height: 26px;
 
   @extend %flex;
   @extend %flex-direction--column;
@@ -50,12 +50,13 @@
   &__link {
     @extend %flex;
     @extend %align-items--center;
+    font-size: map-get($font-size, milli);
     padding: 0 spacer(2);
     background: map-get($background-color, faint);
     line-height: 1;
     height: $accordion-link-height;
-    border-bottom: 1px solid map-get($ui-color, base);
-    font-weight: map-get($font-weight, bold);
+    box-shadow: inset 0 1px 0 map-get($ui-color, base);
+    font-weight: map-get($font-weight, normal);
     text-transform: uppercase;
 
     &:hover {
@@ -63,8 +64,11 @@
       color: map-get($font-color, base);
     }
 
-    &:last-child {
-      border-bottom: none;
+    &:before {
+      content: "+";
+      margin-left: -(spacer(1));
+      width: spacer(1);
+      display: inline-block;
     }
   }
 
@@ -74,21 +78,25 @@
     height: $accordion-link-height;
     overflow: hidden;
 
+    &:first-child .accordion__link {
+      box-shadow: none;
+    }
+
     &--active {
       @extend %flex-1;
 
-      + .accordion__item {
-        border-top: 1px solid map-get($ui-color, base);
-      }
-
       .accordion__link {
         background: map-get($background-color, white);
-        color: map-get($font-color, base);
+        color: map-get($font-color, muted);
         border-bottom: 0;
         cursor: default;
 
         &:hover {
           background: none;
+        }
+
+        &:before {
+          display: none;
         }
       }
     }
