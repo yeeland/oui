@@ -48,6 +48,8 @@
   @extend %flex-direction--column;
 
   &__link {
+    @include transition-property(height);
+    @include transition-duration(map-get($transition-duration, base));
     @extend %flex;
     @extend %align-items--center;
     font-size: map-get($font-size, milli);
@@ -86,18 +88,8 @@
       @extend %flex-1;
 
       .accordion__link {
-        background: map-get($background-color, white);
-        color: map-get($font-color, muted);
-        border-bottom: 0;
-        cursor: default;
-
-        &:hover {
-          background: none;
-        }
-
-        &:before {
-          display: none;
-        }
+        height: 0;
+        overflow: hidden;
       }
     }
 
@@ -112,12 +104,6 @@
         flex: 1;
       }
     }
-  }
-
-  &__empty-message {
-    text-align: center;
-    color: map-get($font-color, muted);
-    font-size: map-get($font-size, epsilon);
   }
 
   &__content-wrap {

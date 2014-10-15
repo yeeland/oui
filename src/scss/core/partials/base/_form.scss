@@ -230,6 +230,7 @@
   font-size: map-get($font-size, gamma);
   margin-bottom: spacer(1);
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .lego-form-fields {

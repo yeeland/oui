@@ -1,6 +1,15 @@
+// # Layout
+// Major layout elements for the desktop.
+
 .lego-data-sidebar {
   width: map-get($layout-width, data-sidebar);
-  border-left: 1px solid map-get($ui-color, base);
+  box-shadow: -1px -0 0 map-get($ui-color, base); // IE 10: border causes horizontal scrollbar.
+
+  // IE 10: Have to restate width in child or width won't be honored.
+
+  .accordion {
+    width: map-get($layout-width, data-sidebar);
+  }
 }
 
 // You can use with a width class if you want to further constrain the width.

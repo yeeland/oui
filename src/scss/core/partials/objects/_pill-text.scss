@@ -19,22 +19,16 @@ $pill-width: (
   border-radius: 1em;
   padding: 3px spacer(0.5);
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 8px;
   line-height: 1;
   font-weight: map-get($font-weight, semi);
   letter-spacing: map-get($letter-spacing, loose);
   text-align: center;
-
-  &--paused {
-    background: map-get($ui-color, warning);
-  }
+  margin-top: 2px; // For horizontal alignment. Inline-block requires widths. Lesser of two evils.
+  white-space: nowrap;
 
   &--running {
     background: map-get($ui-color, good-news);
-  }
-
-  &--draft {
-    background: map-get($ui-color, brand);
   }
 
   &--on,
