@@ -114,6 +114,12 @@
     }
   }
 
+  &__empty-message {
+    text-align: center;
+    color: map-get($font-color, muted);
+    font-size: map-get($font-size, epsilon);
+  }
+
   &__content-wrap {
     @extend %flex-1;
     overflow-y: auto;
@@ -122,4 +128,5 @@
   &__content {
     padding: spacer(2);
   }
+
 }

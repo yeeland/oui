@@ -1,46 +1,29 @@
 // # Pill Text
-// Reverse text with rounded corners. For short words and numbers.
+// Reverse text with rounded corners. For short words and numbers inside tables or other widths.
 
 // ## Examples
 
 //[hc]
-//     <span class="lego-pill">Freeform Text</span>
-//[/hc]
-
-//[hc]
-//     <span class="lego-pill lego-pill--draft">Draft</span>
-//[/hc]
-
-//[hc]
-//     <span class="lego-pill lego-pill--paused">Paused</span>
-//[/hc]
-
-//[hc]
-//     <span class="lego-pill lego-pill--running">Running</span>
+//     <div class="lego-pill">Freeform Text</div>
 //[/hc]
 
 // ## SCSS
 
-$status-pill-width: 70px; // Width of paused and running pills.
+$pill-width: (
+  on-off        : 40px
+);
 
 .lego-pill {
-  background: map-get($background-color, medium);
+  background: map-get($background-color, muted);
   color: map-get($font-color, white);
   border-radius: 1em;
-  padding: 3px spacer(1);
+  padding: 3px spacer(0.5);
   text-transform: uppercase;
   font-size: 9px;
   line-height: 1;
   font-weight: map-get($font-weight, semi);
   letter-spacing: map-get($letter-spacing, loose);
   text-align: center;
-  display: inline-block;
-
-  &--paused,
-  &--running,
-  &--draft {
-    width: $status-pill-width;
-  }
 
   &--paused {
     background: map-get($ui-color, warning);
@@ -51,6 +34,19 @@ $status-pill-width: 70px; // Width of paused and running pills.
   }
 
   &--draft {
-    background: map-get($ui-color, base);
+    background: map-get($ui-color, brand);
+  }
+
+  &--on,
+  &--off {
+    width: map-get($pill-width, on-off);
+  }
+
+  &--on {
+    background: map-get($ui-color, good-news);
+  }
+
+  &--off {
+    background: map-get($background-color, muted);
   }
 }

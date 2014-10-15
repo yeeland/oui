@@ -671,6 +671,10 @@ li > ol {
     align-items: center; }
   .accordion__item--empty .accordion__content {
     flex: 1; }
+.accordion__empty-message {
+  text-align: center;
+  color: #a5a5a5;
+  font-size: 14px; }
 .accordion__content-wrap {
   overflow-y: auto; }
 .accordion__content {
@@ -685,7 +689,7 @@ li > ol {
     border-color: #ffd40c;
     background-color: #fcf8e3; }
   .lego-attention--good-news {
-    border-color: #90b71c;
+    border-color: #7abd37;
     background-color: #e9f6c3; }
   .lego-attention--error {
     border-color: #e8545b;
@@ -1074,24 +1078,27 @@ li > ol {
   color: #262626; }
 
 .lego-pill {
-  background: #7f7f7f;
+  background: #a5a5a5;
   color: white;
   border-radius: 1em;
-  padding: 3px 10px;
+  padding: 3px 5px;
   text-transform: uppercase;
   font-size: 9px;
   line-height: 1;
   letter-spacing: 1px;
-  text-align: center;
-  display: inline-block; }
-  .lego-pill--paused, .lego-pill--running, .lego-pill--draft {
-    width: 70px; }
+  text-align: center; }
   .lego-pill--paused {
     background: #ffd40c; }
   .lego-pill--running {
-    background: #90b71c; }
+    background: #7abd37; }
   .lego-pill--draft {
-    background: #e0e0e0; }
+    background: #1d7ebd; }
+  .lego-pill--on, .lego-pill--off {
+    width: 40px; }
+  .lego-pill--on {
+    background: #7abd37; }
+  .lego-pill--off {
+    background: #a5a5a5; }
 
 .lego-pop-tip {
   background: #262626;
@@ -1894,7 +1901,7 @@ p {
   line-height: 1.8 !important; }
 
 .good-news {
-  color: #90b71c; }
+  color: #7abd37; }
 
 .warning {
   color: #ffd40c; }
@@ -1937,5 +1944,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */
