@@ -486,17 +486,17 @@ fieldset {
     left: auto;
     right: 0; }
 
-.lego-form-error .lego-label {
+.lego-form-bad-news .lego-label {
   color: #e8545b; }
-.lego-form-error [type=text],
-.lego-form-error [type=password] {
+.lego-form-bad-news [type=text],
+.lego-form-bad-news [type=password] {
   border-color: #e8545b; }
 
 .lego-form-note {
   padding-top: 5px;
   font-size: 10px; }
 
-.lego-form-note--error {
+.lego-form-note--bad-news {
   color: #e8545b; }
 
 img {
@@ -706,7 +706,7 @@ li > ol {
   .lego-attention--good-news {
     border-color: #7abd37;
     background-color: #e9f6c3; }
-  .lego-attention--error {
+  .lego-attention--bad-news {
     border-color: #e8545b;
     background-color: #e8545b;
     color: white; }
@@ -1528,7 +1528,7 @@ p {
 .background--warning {
   background-color: #fcf8e3 !important; }
 
-.background--error {
+.background--bad-news {
   background-color: #f9e3e4 !important; }
 
 .background--good-news {
@@ -1943,7 +1943,7 @@ p {
 .warning {
   color: #ffd40c; }
 
-.error {
+.bad-news {
   color: #e8545b; }
 
 .width-50 {

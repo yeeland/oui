@@ -206,7 +206,7 @@
   color: map-get($font-color, warning);
 }
 
-%error,
-.error {
-  color: map-get($font-color, error);
+%bad-news,
+.bad-news {
+  color: map-get($font-color, bad-news);
 }
