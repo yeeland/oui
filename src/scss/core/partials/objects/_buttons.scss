@@ -108,12 +108,14 @@
   color: map-get($font-color, medium);
   border-color: map-get($ui-color, base);
 
+  + .lego-button--hover,
   &:hover {
     background: #eee;
     border-color: map-get($ui-color, medium);
     color: map-get($font-color, base);
   }
 
+  + .lego-button--active,
   &:active {
     background: #eee;
     border-color: map-get($ui-color, medium);
@@ -129,12 +131,14 @@
     border-color: map-get($ui-color, brand-dark);
     color: map-get($font-color, white);
 
+    + .lego-button--hover,
     &:hover {
       background: #1d88cf;
       border-color: map-get($ui-color, brand-dark);
       color: map-get($font-color, white);
     }
 
+    + .lego-button--active,
     &:active {
       background: #196598;
       border-color: #196598;
@@ -151,12 +155,14 @@
     border-color: #4f9a00;
     color: map-get($font-color, white);
 
+    + .lego-button--hover,
     &:hover {
       background: #88d13f;
       border-color: #4f9a00;
       color: map-get($font-color, white);
     }
 
+    + .lego-button--active,
     &:active {
       background: #598a28;
       border-color: #598a28;
@@ -173,12 +179,14 @@
     border-color: #a20000;
     color: map-get($font-color, white);
 
+    + .lego-button--hover,
     &:hover {
       background: #e8545b;
       border-color: #a20000;
       color: map-get($font-color, white);
     }
 
+    + .lego-button--active,
     &:active {
       background: #9c383d;
       border-color: #9c383d;
