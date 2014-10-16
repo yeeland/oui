@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "description": "CSS/JS component library for Optimizely",
   "main": "dist/js/lego.min.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "almond": "^0.3.0",
     "jquery": "^2.1.1",
     "lodash": "^2.4.1",
     "requirejs": "^2.1.15",
     "requirejs-text": "^2.0.12",
-    "vue": "^0.10.6"
-  },
-  "devDependencies": {
+    "vue": "^0.10.6",
     "expect.js": "^0.3.1",
     "gulp": "^3.8.6",
     "gulp-jshint": "^1.8.2",

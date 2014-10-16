@@ -30,7 +30,6 @@ define('app/directives/poptip',['require','jquery'],function(require) {
       });
 
       $el.on('mouseenter', function() {
-
         //TODO: Break all of this out, it is gross
         var $el = $(this.el);
 
@@ -92,7 +91,7 @@ define('app/directives/poptip',['require','jquery'],function(require) {
 
       }.bind(this));
 
-      $el.on('mouseout', function() {
+      $el.on('mouseleave', function() {
         $tmpl.hide();
 
       }.bind(this));
