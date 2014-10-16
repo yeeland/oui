@@ -1934,6 +1934,9 @@ p {
 .line--loose {
   line-height: 1.8 !important; }
 
+.word-break {
+  word-break: break-all !important; }
+
 .good-news {
   color: #7abd37; }
 
