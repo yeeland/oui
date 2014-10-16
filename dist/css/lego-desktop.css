@@ -950,6 +950,11 @@ li > ol {
     border-color: #e0e0e0;
     opacity: 0.4; }
 
+a.lego-button {
+  padding-top: 8px; }
+  a.lego-button--small {
+    padding-top: 6px; }
+
 .lego-button-group > * {
   margin-left: 0;
   border-radius: 0; }
@@ -1450,7 +1455,11 @@ hgroup .hn {
 .lego-table--dashboard thead > tr > th:last-child,
 .lego-table--dashboard tbody > tr > td:last-child {
   padding-right: 20px; }
+.lego-table--dashboard tbody > tr > td {
+  padding-top: 10px;
+  padding-bottom: 10px; }
 .lego-table--dashboard .cell-truncate__text {
+  bottom: 10px;
   left: 20px;
   color: #a5a5a5;
   font-size: 10px; }

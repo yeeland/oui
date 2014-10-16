@@ -17,8 +17,14 @@
     }
   }
 
+  tbody > tr > td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .cell-truncate {
     &__text {
+      bottom: spacer(1);
       left: spacer(2);
       color: map-get($font-color, muted);
       font-size: map-get($font-size, micro);

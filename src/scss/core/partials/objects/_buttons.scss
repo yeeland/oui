@@ -230,3 +230,13 @@
     opacity: 0.4;
   }
 }
+
+// ### Anchors as buttons
+
+a.lego-button {
+  padding-top: 8px;
+
+  &--small {
+    padding-top: 6px;
+  }
+}
