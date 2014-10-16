@@ -5,22 +5,13 @@
   @extend %lego-media;
 
   .lego-media__img {
-    position: relative;
+    box-shadow: 0 0 map-get($shadow, base);
   }
 
-  &__badge {
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    background: url(../i/integrations-badge-2x.png);
-    background-size: 100% auto;
-    width: 70px;
-    height: 73px;
-    font-weight: map-get($font-weight, normal);
-    color: map-get($font-color, white);
-  }
-
-  &__text {
-    transform: rotate(45deg);
+  &__level {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 400;
   }
 }

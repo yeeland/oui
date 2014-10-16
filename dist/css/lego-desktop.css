@@ -645,7 +645,7 @@ li > ol {
   border-radius: 2px; }
 .editable:after {
   content: '\270E';
-  font-size: 18px;
+  font-size: 1em;
   padding-left: 5px; }
 
 .monospace {
@@ -955,6 +955,10 @@ li > ol {
   position: relative; }
 .lego-button-group > .lego-text-input {
   width: auto; }
+.lego-button-group .lego-button--highlight,
+.lego-button-group .lego-button--danger,
+.lego-button-group .lego-button--brand {
+  z-index: 1; }
 
 .lego-button-row--left .lego-button {
   margin-right: 10px; }
@@ -1416,10 +1420,10 @@ hgroup .hn {
   font-size: 40px; }
 
 .lego-data-sidebar {
-  width: 400px;
+  width: 370px;
   box-shadow: -1px 0 0 #e0e0e0; }
   .lego-data-sidebar .accordion {
-    width: 400px; }
+    width: 370px; }
 
 .lego-layout--single-column {
   margin-left: auto;
@@ -1427,7 +1431,7 @@ hgroup .hn {
   max-width: 640px; }
 
 .lego-sections__item {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .lego-table--dashboard thead > tr > th:first-child,
 .lego-table--dashboard tbody > tr > td:first-child {
@@ -1437,19 +1441,12 @@ hgroup .hn {
   padding-right: 20px; }
 
 .lego-integration-icon .lego-media__img {
-  position: relative; }
-.lego-integration-icon__badge {
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  background: url(../i/integrations-badge-2x.png);
-  background-size: 100% auto;
-  width: 70px;
-  height: 73px;
-  font-weight: 400;
-  color: white; }
-.lego-integration-icon__text {
-  transform: rotate(45deg); }
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+.lego-integration-icon__level {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 400; }
 
 .lego-top-nav {
   background-color: #003366;
