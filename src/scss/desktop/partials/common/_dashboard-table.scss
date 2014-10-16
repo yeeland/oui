@@ -16,4 +16,12 @@
       padding-right: spacer(2);
     }
   }
+
+  .cell-truncate {
+    &__text {
+      left: spacer(2);
+      color: map-get($font-color, muted);
+      font-size: map-get($font-size, micro);
+    }
+  }
 }

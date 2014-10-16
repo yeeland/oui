@@ -243,3 +243,39 @@
 .lego-table-row--active {
   background-color: map-get($background-color, brand-light);
 }
+
+// ## Table Cell Truncation
+// This is somewhat hacky way to provide truncation inside a flexible table cell. Extend and/or override if default styles don't work.
+
+//[c]
+//     <td class="cell-truncate">
+//       <div class="cell-truncate__text">This is the text you on want truncated.</div>
+//     </td>
+//[/c]
+
+// If you have truncated text underneath non-truncated text use the following. Note the source order of title/text is reversed. This is so that the CSS can make room for the absolutely positioned truncated text.
+
+//[c]
+//     <td class="cell-truncate">
+//       <div class="cell-truncate__text">This is the text you on want truncated and will actually appear under the title.</div>
+//       <div class="cell-truncate__title">This is the title of the element</div>
+//     </td>
+//[/c]
+
+
+%cell-truncate,
+.cell-truncate {
+  position: relative;
+
+  &__text + &__title {
+    margin-bottom: spacer(1.5);
+  }
+
+  &__text {
+    @extend %truncate;
+    position: absolute;
+    bottom: spacer(0.5);
+    left: 0;
+    right: 0
+  }
+}

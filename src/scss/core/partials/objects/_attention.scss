@@ -51,7 +51,7 @@
 
 .lego-attention {
   @extend %kill-last-child-margin;
-  padding: spacer(1.5);
+  padding: spacer(1);
   border-radius: map-get($border-radius, base);
   border: 1px solid map-get($ui-color, brand-light);
   background: map-get($background-color, brand-light);

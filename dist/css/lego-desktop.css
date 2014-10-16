@@ -640,6 +640,17 @@ li > ol {
 .lego-table-row--active {
   background-color: #f2f7fc; }
 
+.cell-truncate {
+  position: relative; }
+  .cell-truncate__text +
+  .cell-truncate__title {
+    margin-bottom: 15px; }
+  .cell-truncate__text {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0; }
+
 .editable:hover {
   color: #a5a5a5;
   border-radius: 2px; }
@@ -696,7 +707,7 @@ li > ol {
   padding: 20px; }
 
 .lego-attention {
-  padding: 15px;
+  padding: 10px;
   border-radius: 2px;
   border: 1px solid #8abee3;
   background: #f2f7fc; }
@@ -1439,6 +1450,10 @@ hgroup .hn {
 .lego-table--dashboard thead > tr > th:last-child,
 .lego-table--dashboard tbody > tr > td:last-child {
   padding-right: 20px; }
+.lego-table--dashboard .cell-truncate__text {
+  left: 20px;
+  color: #a5a5a5;
+  font-size: 10px; }
 
 .lego-integration-icon .lego-media__img {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
@@ -1905,6 +1920,7 @@ p {
 .proceed {
   text-align: right !important; }
 
+.cell-truncate__text,
 .truncate {
   white-space: nowrap;
   overflow: hidden;
