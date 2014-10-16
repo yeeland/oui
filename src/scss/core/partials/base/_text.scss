@@ -22,11 +22,10 @@
 
   &:after {
     content: '\270E';
-    font-size: 18px;
+    font-size: 1em;
     padding-left: spacer(0.5);
   }
 }
-
 
 .monospace {
   font-family: map-get($font-family, monospace);

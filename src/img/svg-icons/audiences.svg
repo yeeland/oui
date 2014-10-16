@@ -52,10 +52,10 @@
 	<rect display="inline" width="12" height="32"/>
 	<rect x="20" display="inline" width="12" height="32"/>
 </g>
-<g id="duplicate">
-	<path d="M22,32H2c-1.1,0-2-0.9-2-2V9.9c0-1.1,0.9-2,2-2h20c1.1,0,2,0.9,2,2V30C24,31.1,23.1,32,22,32z"/>
-	<path d="M30,0H10C8.9,0,8,0.9,8,2v2h18c1.1,0,2,0.8,2,1.9V24h2c1.1,0,2-0.8,2-1.9V2C32,0.9,31.1,0,30,0z"/>
-	<polygon fill="#FFFFFF" points="18,18 14,18 14,14 10,14 10,18 6,18 6,22 10,22 10,26 14,26 14,22 18,22 	"/>
+<g id="duplicate" display="none">
+	<path display="inline" d="M22,32H2c-1.1,0-2-0.9-2-2V9.9c0-1.1,0.9-2,2-2h20c1.1,0,2,0.9,2,2V30C24,31.1,23.1,32,22,32z"/>
+	<path display="inline" d="M30,0H10C8.9,0,8,0.9,8,2v2h18c1.1,0,2,0.8,2,1.9V24h2c1.1,0,2-0.8,2-1.9V2C32,0.9,31.1,0,30,0z"/>
+	<polygon display="inline" fill="#FFFFFF" points="18,18 14,18 14,14 10,14 10,18 6,18 6,22 10,22 10,26 14,26 14,22 18,22 	"/>
 </g>
 <g id="integrations" display="none">
 	<path display="inline" d="M23.5,8.5C22,3.6,17.4,0,12,0C5.4,0,0,5.4,0,12c0,5.4,3.6,10,8.5,11.5C10,28.4,14.6,32,20,32
@@ -72,5 +72,8 @@
 	<rect x="8" y="18" display="inline" width="24" height="4"/>
 	<rect y="26" display="inline" width="4" height="4"/>
 	<rect x="8" y="26" display="inline" width="24" height="4"/>
+</g>
+<g id="placeholder">
+	<circle cx="16" cy="16" r="16"/>
 </g>
 </svg>

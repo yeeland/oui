@@ -38,13 +38,13 @@
 //[/hc]
 
 // ### Error
-// For error states or bad news.
+// For bad-news states or bad news.
 
 //[hc]
-//     <div class="lego-attention lego-attention--error text--center push-double--bottom">
+//     <div class="lego-attention lego-attention--bad-news text--center push-double--bottom">
 //         This is a note.
 //     </div>
-//     <div class="lego-attention lego-attention--error">
+//     <div class="lego-attention lego-attention--bad-news">
 //       <p>This is a longer note adipisicing elit. Recusandae ipsum tenetur est quisquam beatae aliquam facere molestiae reiciendis aperiam molestias consequuntur voluptatum corporis voluptas laudantium dolor, nam quam laboriosam harum.</p>
 //     </div>
 //[/hc]
@@ -66,9 +66,9 @@
     background-color: map-get($background-color, good-news);
   }
 
-  &--error {
-    border-color: map-get($ui-color, error);
-    background-color: map-get($ui-color, error);
+  &--bad-news {
+    border-color: map-get($ui-color, bad-news);
+    background-color: map-get($ui-color, bad-news);
     color: map-get($font-color, white);
   }
 }

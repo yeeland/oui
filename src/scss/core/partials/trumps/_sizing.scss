@@ -1,28 +1,37 @@
 // # Width Trumps
 // Use rarely, for form elements only as a last resort.
 
+// IE10: The `-ms-flex-preferred-size` values are to overcome any `flex:...` values the element may have.
+// Otherwise the width collapses in IE.
+
 .width-50 {
   width: 50px !important;
+  -ms-flex-preferred-size: 50px !important;
 }
 
 .width-100 {
   width: 100px !important;
+  -ms-flex-preferred-size: 100px !important;
 }
 
 .width-150 {
   width: 150px !important;
+  -ms-flex-preferred-size: 150px !important;
 }
 
 .width-200 {
   width: 200px !important;
+  -ms-flex-preferred-size: 200px !important;
 }
 
 .width-250 {
   width: 250px !important;
+  -ms-flex-preferred-size: 250px !important;
 }
 
 .width-300 {
   width: 300px !important;
+  -ms-flex-preferred-size: 300px !important;
 }
 
 

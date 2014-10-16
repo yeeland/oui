@@ -182,6 +182,12 @@
 }
 
 
+// ## Text wrapping &amp; breaking.
+
+.word-break {
+  word-break: break-all !important;
+}
+
 // ## Text Color
 // Use for both text and on icons.
 
@@ -200,7 +206,7 @@
   color: map-get($font-color, warning);
 }
 
-%error,
-.error {
-  color: map-get($font-color, error);
+%bad-news,
+.bad-news {
+  color: map-get($font-color, bad-news);
 }

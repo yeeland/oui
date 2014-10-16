@@ -13,10 +13,10 @@
 //             <input type="text" class="lego-text-input">
 //             <div class="lego-form-note">This is a form note.</div>
 //           </li>
-//           <li class="lego-form-field__item lego-form-error">
+//           <li class="lego-form-field__item lego-form-bad-news">
 //             <label class="lego-label">Address</label>
 //             <input type="text" class="lego-text-input">
-//             <div class="lego-form-note lego-form-note--error">This field is required.</div>
+//             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
 //           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Diabled Input</label>
@@ -230,6 +230,7 @@
   font-size: map-get($font-size, gamma);
   margin-bottom: spacer(1);
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .lego-form-fields {
@@ -327,14 +328,14 @@ fieldset {
 
 // ## Form Errors
 
-.lego-form-error {
+.lego-form-bad-news {
   .lego-label {
-    color: map-get($font-color, error);
+    color: map-get($font-color, bad-news);
   }
 
   [type=text],
   [type=password] {
-    border-color: map-get($ui-color, error);
+    border-color: map-get($ui-color, bad-news);
   }
 }
 
@@ -344,6 +345,6 @@ fieldset {
   font-size: map-get($font-size, micro);
 }
 
-.lego-form-note--error {
-  color: map-get($font-color, error);
+.lego-form-note--bad-news {
+  color: map-get($font-color, bad-news);
 }

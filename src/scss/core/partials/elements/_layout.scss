@@ -55,6 +55,12 @@
   &--scroll-y {
     overflow-y: auto;
   }
+
+  &--empty {
+    @extend %flex;
+    @extend %justify--center;
+    @extend %align-items--center;
+  }
 }
 
 // ### Lego Fence
@@ -71,4 +77,10 @@
 .lego-fence--push {
   margin-left: spacer(2);
   margin-right: spacer(2);
+}
+
+.empty-state-message {
+  color: map-get($font-color, muted);
+  font-size: map-get($font-size, epsilon);
+  text-align: center;
 }

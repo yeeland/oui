@@ -33,8 +33,8 @@
   background-color: map-get($background-color, warning) !important;
 }
 
-.background--error {
-  background-color: map-get($background-color, error) !important;
+.background--bad-news {
+  background-color: map-get($background-color, bad-news) !important;
 }
 
 .background--good-news {

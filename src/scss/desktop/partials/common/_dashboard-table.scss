@@ -1,0 +1,19 @@
+// # Dashboard Table
+// Adds extra padding to first/last table cell so it can run full bleed.
+
+.lego-table--dashboard {
+  @extend %lego-table--rule;
+  @extend %lego-table--hover;
+
+  thead > tr > th,
+  tbody > tr > td {
+
+    &:first-child {
+      padding-left: spacer(2);
+    }
+
+    &:last-child {
+      padding-right: spacer(2);
+    }
+  }
+}
