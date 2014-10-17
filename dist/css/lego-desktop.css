@@ -640,17 +640,6 @@ li > ol {
 .lego-table-row--active {
   background-color: #f7f7f7; }
 
-.cell-truncate {
-  position: relative; }
-  .cell-truncate__text +
-  .cell-truncate__title {
-    margin-bottom: 15px; }
-  .cell-truncate__text {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0; }
-
 .editable:hover {
   color: #a5a5a5;
   border-radius: 2px; }
@@ -1457,6 +1446,17 @@ hgroup .hn {
 .lego-sections__item {
   margin-bottom: 20px; }
 
+.cell-truncate {
+  position: relative; }
+  .cell-truncate__text +
+  .cell-truncate__title {
+    margin-bottom: 15px; }
+  .cell-truncate__text {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0; }
+
 .lego-table--dashboard thead > tr > th:first-child,
 .lego-table--dashboard tbody > tr > td:first-child {
   padding-left: 20px; }
@@ -1529,6 +1529,8 @@ p {
   padding-bottom: 10px; }
   #top .nav-top a:hover {
     color: #fff; }
+  #top .nav-top a img {
+    display: inline-block; }
 #top .dropdown-menu-top a {
   font-size: 12px;
   color: #444; }
