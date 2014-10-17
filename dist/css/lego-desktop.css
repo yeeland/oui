@@ -638,7 +638,7 @@ li > ol {
     padding-right: 10px; }
 
 .lego-table-row--active {
-  background-color: #f2f7fc; }
+  background-color: #f7f7f7; }
 
 .cell-truncate {
   position: relative; }
@@ -1593,6 +1593,15 @@ p {
 
 .text--right {
   text-align: right !important; }
+
+.display--block {
+  display: block !important; }
+
+.display--inline-block {
+  display: inline-block !important; }
+
+.display--inline {
+  display: inline !important; }
 
 .vertical-align--top {
   vertical-align: top !important; }

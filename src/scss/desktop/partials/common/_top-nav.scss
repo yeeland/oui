@@ -1,3 +1,6 @@
+// # Top Nav
+// Styling for top nav.
+
 .lego-top-nav {
   @extend %flex;
   background-color: map-get($background-color, brand-dark);

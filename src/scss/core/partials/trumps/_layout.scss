@@ -54,6 +54,25 @@
   text-align: right !important;
 }
 
+// ## Display
+
+//[c]
+//     <div class="display--inline-block">content</div>
+//[/c]
+
+.display--block {
+  display: block !important;
+}
+
+.display--inline-block {
+  display: inline-block !important;
+}
+
+.display--inline {
+  display: inline !important;
+}
+
+
 // ## Vertical Alignment for table cells.
 
 //[c]

@@ -39,7 +39,7 @@ $ui-color: (
   brand-light                  : #8abee3,
   brand-dark                   : #036,
   warning                      : #ffd40c,
-  bad-news                        : #e8545b,
+  bad-news                     : #e8545b,
   good-news                    : #7abd37,
   good-news-light              : #90b71c
 );
@@ -68,7 +68,7 @@ $background-color: (
   brand-dark                   : map-get($ui-color, brand-dark),
   brand-light                  : #f2f7fc,
   warning                      : lighten(#f7ecb5, 10%),
-  bad-news                        : lighten(#c1272d, 48%),
+  bad-news                     : lighten(#c1272d, 48%),
   good-news                    : lighten(#90b71c, 45%)
 );
 
@@ -85,7 +85,7 @@ $font-color: (
   brand                        : map-get($ui-color, brand),
   brand-dark                   : map-get($ui-color, brand-dark),
   warning                      : map-get($ui-color, warning),
-  bad-news                        : map-get($ui-color, bad-news),
+  bad-news                     : map-get($ui-color, bad-news),
   good-news                    : map-get($ui-color, good-news)
 );
 

@@ -241,7 +241,7 @@
 // Added to the table row.
 
 .lego-table-row--active {
-  background-color: map-get($background-color, brand-light);
+  background-color: map-get($background-color, faint);
 }
 
 // ## Table Cell Truncation
