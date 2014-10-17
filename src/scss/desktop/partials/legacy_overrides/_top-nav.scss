@@ -1,5 +1,5 @@
-// # Top Nav Overrides
-// Overrides for the old nav bar.
+// # Top Nav
+// These override LEGO to restore legacy styling.
 
 #top {
   .logo {
@@ -14,6 +14,10 @@
 
       &:hover {
         color: #fff;
+      }
+
+      img {
+        display: inline-block;
       }
     }
   }
