@@ -106,7 +106,7 @@
   &__item {
     position: relative;
     text-align: center;
-    padding: spacer(1) spacer(1.5);
+    padding: spacer(1) spacer(2);
     border: 1px solid map-get($ui-color, base);
     border-right: none;
     border-bottom: 0;
@@ -153,7 +153,7 @@
 
   .lego-tabs-nav__item {
     text-transform: uppercase;
-    padding: spacer(0.5) spacer(1);
+    padding: spacer(0.5) spacer(1.5);
     font-size: map-get($font-size, micro);
   }
 }

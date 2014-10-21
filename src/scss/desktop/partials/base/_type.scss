@@ -34,7 +34,6 @@ h1,
 .alpha {
   font-size: map-get($font-size, alpha);
   letter-spacing: map-get($letter-spacing, tight);
-  font-weight: map-get($font-weight, light);
   line-height: 1.1;
 }
 
@@ -42,7 +41,6 @@ h2,
 .beta {
   font-size: map-get($font-size, beta);
   letter-spacing: map-get($letter-spacing, tight);
-  font-weight: map-get($font-weight, light);
   line-height: 1.1;
 }
 
@@ -82,12 +80,10 @@ h2 {
 
 h3 {
   margin-bottom: spacer(1.5);
-  font-weight: map-get($font-weight, bold);
 }
 
 h4 {
   margin-bottom: spacer(1);
-  font-weight: map-get($font-weight, bold);
 }
 
 h5 {
