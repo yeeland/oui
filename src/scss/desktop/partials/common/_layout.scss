@@ -2,6 +2,7 @@
 // Major layout elements for the desktop.
 
 .lego-data-sidebar {
+  background: map-get($background-color, faint);
   width: map-get($layout-width, data-sidebar);
   box-shadow: -1px -0 0 map-get($ui-color, base); // IE 10: border causes horizontal scrollbar.
 
