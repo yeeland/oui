@@ -15,17 +15,32 @@
 
   &:hover {
     color: map-get($font-color, muted);
-    border-radius: map-get($border-radius, base);
+
+    &:after {
+      color: map-get($font-color, brand);
+    }
   }
 
-  // Pencil icon to go here.
+  // Pencil icon.
 
   &:after {
     content: '\270E';
     font-size: 1em;
     padding-left: spacer(0.5);
   }
+
+  &[contenteditable="true"],
+  &[contenteditable="true"]:hover {
+    margin: -(spacer(0.5));
+    padding: spacer(0.5);
+    border-radius: map-get($border-radius, big);
+    color: map-get($font-color, base);
+    background: map-get($background-color, light);
+    outline: 0;
+  }
 }
+
+// For code examples.
 
 .monospace {
   font-family: map-get($font-family, monospace);

@@ -28,9 +28,10 @@ $grey-03                       : tint($base-black, 97%);
 // These are colors can be used on UI elements like borders.
 
 $ui-color: (
-  base                         : $grey-12,
   white                        : $base-white,
+  faint                        : $grey-03,
   light                        : $grey-07,
+  base                         : $grey-12,
   medium                       : $grey-40,
   dark                         : $grey-85,
   black                        : $base-black,
@@ -40,8 +41,7 @@ $ui-color: (
   brand-dark                   : #036,
   warning                      : #ffd40c,
   bad-news                     : #e8545b,
-  good-news                    : #7abd37,
-  good-news-light              : #90b71c
+  good-news                    : #90b71c
 );
 
 // ### Link Colors
@@ -77,6 +77,7 @@ $background-color: (
 $font-color: (
   base                         : $grey-85,
   white                        : $base-white,
+  faint                        : $grey-12,
   light                        : $grey-25,
   muted                        : $grey-35,
   medium                       : $grey-50,

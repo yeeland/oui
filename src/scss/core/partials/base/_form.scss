@@ -265,6 +265,11 @@ fieldset {
     font-size: map-get($font-size, micro);
     font-weight: map-get($font-weight, normal);
   }
+
+  &--rule {
+    border-bottom: 1px solid map-get($ui-color, base);
+    padding-bottom: spacer(0.5);
+  }
 }
 
 //  Groups of checkboxes and radios.

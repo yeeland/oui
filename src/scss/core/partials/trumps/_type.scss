@@ -34,22 +34,6 @@
 }
 
 
-// ## Font Lighter
-// Make font color lighter.
-
-//[hc]
-//     <div class="light-font-color">This is a light color.</div>
-//[/hc]
-
-.light-font-color {
-  color: map-get($font-color, light) !important;
-}
-
-.reverse-font-color {
-  color: map-get($font-color, white) !important;
-}
-
-
 // ## Help Cursor
 // Add a help cursor to any element that gives the user extra information on
 // `:hover`.
@@ -83,15 +67,23 @@
   text-decoration: line-through;
 }
 
-// ## Muted Color
-// Mute text to a ligher shade of gray.
+// ## Font Colors
+// Mute text or reverse for dark backgrounds.
 
 //[hc]
 //     <div class="muted">This is a muted color. Can be applied to anything.</div>
 //[/hc]
 
+.reverse {
+  color: map-get($font-color, white) !important;
+}
+
 .muted {
   color: map-get($font-color, muted);
+}
+
+.faint {
+  color: map-get($font-color, faint);
 }
 
 // ## Proceed (Align Right)

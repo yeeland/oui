@@ -106,13 +106,13 @@
   &__item {
     position: relative;
     text-align: center;
-    padding: spacer(1) spacer(2);
+    padding: spacer(1) spacer(1.5);
     border: 1px solid map-get($ui-color, base);
     border-right: none;
     border-bottom: 0;
     color: map-get($font-color, medium);
     font-weight: map-get($font-weight, bold);
-    background-color: map-get($background-color, white);
+    background-color: map-get($background-color, faint);
     cursor: pointer;
 
     &:first-child {
@@ -130,6 +130,7 @@
     }
 
     &.tab-active {
+      background-color: map-get($background-color, white);
 
       &:after { // Creates the white bar under the active tab.
         content: '';
@@ -152,6 +153,7 @@
   }
 
   .lego-tabs-nav__item {
+    background-color: transparent;
     text-transform: uppercase;
     padding: spacer(0.5) spacer(1.5);
     font-size: map-get($font-size, micro);

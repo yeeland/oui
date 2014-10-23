@@ -11,6 +11,9 @@
     <symbol id="clipboard" viewBox="0 0 32 32">
       <circle cx="16" cy="16" r="16"/>
     </symbol>
+    <symbol id="close" viewBox="0 0 32 32">
+      <path d="M25.9 8.9l-2.8-2.8-7.1 7.1-7.1-7.1-2.8 2.8 7.1 7.1-7.1 7.1 2.8 2.8 7.1-7.1 7.1 7.1 2.8-2.8-7.1-7.1z"/>
+    </symbol>
     <symbol id="collaborators" viewBox="0 0 32 32">
       <circle cx="16" cy="16" r="16"/>
     </symbol>

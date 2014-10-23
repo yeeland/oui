@@ -84,3 +84,12 @@
   font-size: map-get($font-size, epsilon);
   text-align: center;
 }
+
+// ## Full Screen
+// Make an element fill the window.
+
+.full-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
