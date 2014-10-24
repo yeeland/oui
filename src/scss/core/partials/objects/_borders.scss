@@ -21,6 +21,15 @@
 
 // ## SCSS
 
+// ### Border All
+// With default padding.
+
+%border--all,
+.border--all {
+  border: 1px solid map-get($ui-color, base);
+  padding: spacer(1);
+}
+
 // ### Border Top/Bottom
 // These add padding on top and bottom.
 
