@@ -2,9 +2,17 @@
 
 // Links will use the `map-get($link-color, base)`. You can also apply a `.link` class to an element.
 
+// ## HTML Examples
+
 //[hc]
 //     Text can have <span class="link">link color</span> when not a HTML anchor.
 //[/hc]
+
+//[hc]
+//     Links can be <a href="#" class="link--disabled">disabled</a> if need be.
+//[/hc]
+
+// ## SCSS
 
 a,
 %link,
@@ -30,6 +38,19 @@ a,
     color: lighten(map-get($link-color, brand-light), 15%) !important;
   }
 }
+
+%link--disabled,
+.link--disabled {
+  color: map-get($font-color, muted);
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: map-get($font-color, muted);
+    cursor: default;
+  }
+}
+
 
 // Targets anchors without an `href` attribute.
 

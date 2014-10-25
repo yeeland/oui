@@ -563,6 +563,14 @@ a,
   .link--reverse:hover {
     color: #c8e0f2 !important; }
 
+.link--disabled {
+  color: #a5a5a5; }
+  .link--disabled:visited,
+  .link--disabled:hover,
+  .link--disabled:active {
+    color: #a5a5a5;
+    cursor: default; }
+
 a:not([href]) {
   color: #1d7ebd; }
   a:not([href]):visited, a:not([href]):hover, a:not([href]):active {
