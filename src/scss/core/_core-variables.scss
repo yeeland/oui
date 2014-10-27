@@ -21,7 +21,7 @@ $grey-30                       : tint($base-black, 70%);
 $grey-25                       : tint($base-black, 75%);
 $grey-20                       : tint($base-black, 80%);
 $grey-12                       : tint($base-black, 88%);
-$grey-07                       : tint($base-black, 93%);
+$grey-06                       : tint($base-black, 94%);
 $grey-03                       : tint($base-black, 97%);
 
 // ### Base Colors
@@ -30,7 +30,7 @@ $grey-03                       : tint($base-black, 97%);
 $ui-color: (
   white                        : $base-white,
   faint                        : $grey-03,
-  light                        : $grey-07,
+  light                        : $grey-06,
   base                         : $grey-12,
   medium                       : $grey-40,
   dark                         : $grey-85,
@@ -60,7 +60,7 @@ $background-color: (
   base                         : $base-white,
   white                        : $base-white,
   faint                        : $grey-03,
-  light                        : $grey-07,
+  light                        : $grey-06,
   muted                        : $grey-35,
   medium                       : $grey-50,
 

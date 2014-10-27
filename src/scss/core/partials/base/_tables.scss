@@ -193,12 +193,25 @@
 
   &--rule {
 
-    > thead > th {
-      padding-bottom: spacer(1);
+    > thead {
+
+      > th {
+        padding-bottom: spacer(1);
+      }
+
+      > tr {
+        border-bottom: 1px solid map-get($ui-color, base);
+      }
     }
 
     > tbody > tr {
-      border-top: 1px solid map-get($ui-color, light);
+      border-bottom: 1px solid map-get($ui-color, light);
+
+      // If no `thead` is present we'll have a border top.
+
+      &:first-child {
+        border-bottom: 1px solid map-get($ui-color, light);
+      }
     }
 
   }
