@@ -1,0 +1,39 @@
+// # Disclose
+// Similar to an accordion but any number of items can be opened closed independently.
+
+.lego-disclose {
+
+  &__link {
+    display: block;
+  }
+
+  &__symbol {
+    width: 10px;
+    display: inline-block;
+
+    &:before {
+      content: '+';
+    }
+  }
+
+  // By default item is closed.
+
+  &__content {
+    display: none;
+  }
+
+  &__item {
+    &--active {
+
+      .lego-disclose__content {
+        display: block;
+      }
+
+      .lego-disclose__symbol {
+        &:before {
+          content: '-';
+        }
+      }
+    }
+  }
+}

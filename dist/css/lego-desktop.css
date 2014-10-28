@@ -1053,6 +1053,20 @@ a.lego-button {
     right: 0;
     left: auto; }
 
+.lego-disclose__link {
+  display: block; }
+.lego-disclose__symbol {
+  width: 10px;
+  display: inline-block; }
+  .lego-disclose__symbol:before {
+    content: '+'; }
+.lego-disclose__content {
+  display: none; }
+.lego-disclose__item--active .lego-disclose__content {
+  display: block; }
+.lego-disclose__item--active .lego-disclose__symbol:before {
+  content: '-'; }
+
 .lego-dialog {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   width: 700px; }
