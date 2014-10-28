@@ -12,29 +12,21 @@ $layout-width: (
 );
 
 // ### Font Sizes
+// These are defined in core but different values can be overriden here.
 
-$font-size: (
-  base                : 12px,
-  micro               : 10px,
-  milli               : 11px,
+// $font-size: (
+//   base                : 12px,
+//   micro               : 10px,
+//   milli               : 11px,
 
-  alpha               : 28px, // h1
-  beta                : 24px, // h2
-  gamma               : 20px, // h3
-  delta               : 16px, // h4
-  epsilon             : 14px, // h5
-  zeta                : 12px, // h6
+//   alpha               : 28px, // h1
+//   beta                : 24px, // h2
+//   gamma               : 20px, // h3
+//   delta               : 16px, // h4
+//   epsilon             : 14px, // h5
+//   zeta                : 12px, // h6
 
-  kilo                : 40px, // Extra large fonts.
-  mega                : 50px,
-  giga                : 65px
-);
-
-// ### Line Heights
-// Specifying variable instead of inside map so it can be used by line-height mixin.
-
-$line-height: (
-  base                : 1.6,
-  tight               : 1.2,
-  loose               : 1.8
-);
+//   kilo                : 40px, // Extra large fonts.
+//   mega                : 50px,
+//   giga                : 65px
+// );
