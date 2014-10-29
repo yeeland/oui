@@ -22,6 +22,7 @@ define('app/directives/poptip',['require','jquery'],function(require) {
 
       // Create array of the direction.
       var arrowParts = direction.split('-');
+      var arrowLocation = '';
 
       // We have to swap the text given in 'direction' so that the arrow class is correct.
       // Testing here to see if we have two values, e.g. 'top-left', if so only change the first.
@@ -32,15 +33,15 @@ define('app/directives/poptip',['require','jquery'],function(require) {
           arrowParts[0] = "top";
         }
         // Recombine the directions to create the class.
-        var arrowLocation = arrowParts.join('-');
+        arrowLocation = arrowParts.join('-');
 
       } else {
         // In this case only one direction has been passed in: right or left.
         // Test and change right/left direction.
         if (direction === "right") {
-          var arrowLocation = "left";
+          arrowLocation = "left";
         } else {
-          var arrowLocation = "right";
+          arrowLocation = "right";
         }
       }
 

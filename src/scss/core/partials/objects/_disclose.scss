@@ -1,7 +1,7 @@
 // # Disclose
 // Similar to an accordion but any number of items can be opened closed independently.
 
-
+//[hc]
 //     <ul class="lego-disclose" v-disclose>
 //       <li class="lego-disclose__item">
 //         <a href="#" class="lego-disclose__link">
@@ -22,9 +22,10 @@
 //         </div>
 //       </li>
 //     </ul>
-
+//[/hc]
 
 .lego-disclose {
+  @extend %kill-last-child-margin;
 
   &__link {
     display: block;
