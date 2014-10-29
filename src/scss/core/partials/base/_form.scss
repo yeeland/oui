@@ -270,6 +270,11 @@ fieldset {
     border-bottom: 1px solid map-get($ui-color, base);
     padding-bottom: spacer(0.5);
   }
+
+  &--disabled {
+    color: map-get($font-color, muted);
+    cursor: default !important;
+  }
 }
 
 //  Groups of checkboxes and radios.
@@ -343,7 +348,6 @@ fieldset {
     border-color: map-get($ui-color, bad-news);
   }
 }
-
 
 .lego-form-note {
   padding-top: spacer(0.5);

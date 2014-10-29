@@ -455,6 +455,9 @@ fieldset {
   .lego-label--rule {
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 5px; }
+  .lego-label--disabled {
+    color: #a5a5a5;
+    cursor: default !important; }
 
 .lego-input-list {
   list-style: none;
