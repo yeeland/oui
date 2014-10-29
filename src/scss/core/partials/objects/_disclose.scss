@@ -27,11 +27,11 @@
   &__item {
     &--active {
 
-      .lego-disclose__content {
+      > .lego-disclose__content {
         display: block;
       }
 
-      .lego-disclose__symbol {
+      > .lego-disclose__link > .lego-disclose__symbol {
         &:before {
           content: '-';
         }

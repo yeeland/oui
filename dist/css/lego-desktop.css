@@ -1067,9 +1067,9 @@ a.lego-button {
     content: '+'; }
 .lego-disclose__content {
   display: none; }
-.lego-disclose__item--active .lego-disclose__content {
+.lego-disclose__item--active > .lego-disclose__content {
   display: block; }
-.lego-disclose__item--active .lego-disclose__symbol:before {
+.lego-disclose__item--active > .lego-disclose__link > .lego-disclose__symbol:before {
   content: '-'; }
 
 .lego-dialog {

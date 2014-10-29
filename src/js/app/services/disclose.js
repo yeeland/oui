@@ -11,8 +11,6 @@ define(function() {
   function activate(el, target) {
     var $target = $(target);
 
-    console.log("foo");
-
     var contentPane = $target.parent('.lego-disclose__item');
 
     if ( contentPane.hasClass(ACTIVE_DISCLOSE_CLASS) ) {
