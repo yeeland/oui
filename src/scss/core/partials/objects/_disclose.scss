@@ -1,6 +1,29 @@
 // # Disclose
 // Similar to an accordion but any number of items can be opened closed independently.
 
+
+//     <ul class="lego-disclose" v-disclose>
+//       <li class="lego-disclose__item">
+//         <a href="#" class="lego-disclose__link">
+//           <span class="lego-disclose__symbol"></span>
+//           Title of Disclosure
+//         </a>
+//         <div class="lego-disclose__content">
+//           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt reiciendis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.
+//         </div>
+//       </li>
+//       <li class="lego-disclose__item">
+//         <a href="#" class="lego-disclose__link">
+//           <span class="lego-disclose__symbol"></span>
+//           Title of Disclosure
+//         </a>
+//         <div class="lego-disclose__content">
+//           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt reiciendis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.
+//         </div>
+//       </li>
+//     </ul>
+
+
 .lego-disclose {
 
   &__link {
@@ -8,13 +31,14 @@
   }
 
   &__symbol {
-    width: 10px;
+    width: spacer(1);
     display: inline-block;
+    @include transition(map-get($transition-duration,base));
 
     &:before {
       line-height: 1;
-      font-size: map-get($font-size, delta);
-      content: '+';
+      font-size: map-get($font-size, micro);
+      content: '\25B6';
     }
   }
 
@@ -25,6 +49,8 @@
   }
 
   &__item {
+    margin-bottom: spacer(1);
+
     &--active {
 
       > .lego-disclose__content {
@@ -32,9 +58,7 @@
       }
 
       > .lego-disclose__link > .lego-disclose__symbol {
-        &:before {
-          content: '-';
-        }
+        @include transform(rotate(90deg));
       }
     }
   }
