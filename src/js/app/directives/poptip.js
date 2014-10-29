@@ -19,6 +19,8 @@ define('app/directives/poptip',['require','jquery'],function(require) {
 
       var direction = $el.attr('data-dir');
       var content = $el.attr('data-content');
+
+      // Create array of the direction.
       var arrowParts = direction.split('-');
 
       // We have to swap the text given in 'direction' so that the arrow class is correct.
