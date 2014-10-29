@@ -55,9 +55,9 @@ define('app/directives/poptip',['require','jquery'],function(require) {
         //For non orientation specific directions(right,left) we want to
         if (direction.indexOf('-') === -1) {
           if (direction === 'right') {
-            left -= ($tmpl.outerWidth(true) + arrowWidth);
-          } else {
             left += ($el.outerWidth(true) + arrowWidth);
+          } else {
+            left -= ($tmpl.outerWidth(true) + arrowWidth);
           }
           //Align the arrow correctly
           top += (($el.outerHeight(true) / 2) - ($tmpl.innerHeight() / 2));
@@ -66,9 +66,9 @@ define('app/directives/poptip',['require','jquery'],function(require) {
           var parts = direction.split('-');
 
           if (parts[0] === 'top') {
-            top += $el.outerHeight(true) + arrowHeight;
+            top -= ($tmpl.outerHeight(true)) + arrowHeight;
           } else {
-             top -= ($tmpl.outerHeight(true)) + arrowHeight;
+            top += $el.outerHeight(true) + arrowHeight;
           }
 
           switch(parts[1]) {
