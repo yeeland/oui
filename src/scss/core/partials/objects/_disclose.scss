@@ -12,6 +12,8 @@
     display: inline-block;
 
     &:before {
+      line-height: 1;
+      font-size: map-get($font-size, delta);
       content: '+';
     }
   }

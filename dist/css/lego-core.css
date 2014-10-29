@@ -1048,6 +1048,8 @@ a.lego-button {
   width: 10px;
   display: inline-block; }
   .lego-disclose__symbol:before {
+    line-height: 1;
+    font-size: 16px;
     content: '+'; }
 .lego-disclose__content {
   display: none; }
