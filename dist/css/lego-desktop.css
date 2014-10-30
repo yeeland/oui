@@ -681,6 +681,8 @@ li > ol {
   color: #262626;
   background: #efefef;
   outline: 0; }
+  .editable[contenteditable="true"]:after, .editable[contenteditable="true"]:hover:after {
+    display: none; }
 
 .monospace {
   font-family: monospace; }
@@ -1103,7 +1105,6 @@ a.lego-button {
     line-height: 1; }
 
 .lego-help-dot {
-  background: #a5a5a5;
   color: white;
   width: 16px;
   height: 16px;
@@ -1412,6 +1413,13 @@ a.lego-button {
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-top: none; }
+
+.lego-tag {
+  color: #a5a5a5; }
+  .lego-tag:visited {
+    color: #a5a5a5; }
+  .lego-tag:hover {
+    color: #8abee3; }
 
 html {
   font-size: 12px;
@@ -2095,5 +2103,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */

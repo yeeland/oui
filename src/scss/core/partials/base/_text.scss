@@ -6,7 +6,7 @@
 
 //[hc]
 //
-//     <!-- Does not matter which Element -->
+//     <!-- Can be applied to any element -->
 //     <p v-editable-text>This Text is Editable</p>
 //
 //[/hc]
@@ -17,26 +17,11 @@
     color: map-get($font-color, muted);
 
     &:after {
-      color: map-get($font-color, brand);
+      color: map-get($font-color, muted);
+      content: '\270E';
+      font-size: 1em;
+      padding-left: spacer(0.5);
     }
-  }
-
-  // Pencil icon.
-
-  &:after {
-    content: '\270E';
-    font-size: 1em;
-    padding-left: spacer(0.5);
-  }
-
-  &[contenteditable="true"],
-  &[contenteditable="true"]:hover {
-    margin: -(spacer(0.5));
-    padding: spacer(0.5);
-    border-radius: map-get($border-radius, big);
-    color: map-get($font-color, base);
-    background: map-get($background-color, light);
-    outline: 0;
   }
 }
 

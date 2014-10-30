@@ -670,6 +670,8 @@ li > ol {
   color: #262626;
   background: #efefef;
   outline: 0; }
+  .editable[contenteditable="true"]:after, .editable[contenteditable="true"]:hover:after {
+    display: none; }
 
 .monospace {
   font-family: monospace; }
@@ -1049,17 +1051,26 @@ a.lego-button {
   display: block; }
 .lego-disclose__symbol {
   width: 10px;
-  display: inline-block; }
+  display: inline-block;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
   .lego-disclose__symbol:before {
     line-height: 1;
-    font-size: 16px;
-    content: '+'; }
+    font-size: 10px;
+    content: '\25B6'; }
 .lego-disclose__content {
   display: none; }
-.lego-disclose__item--active > .lego-disclose__content {
-  display: block; }
-.lego-disclose__item--active > .lego-disclose__link > .lego-disclose__symbol:before {
-  content: '-'; }
+.lego-disclose__item {
+  margin-bottom: 10px; }
+  .lego-disclose__item--active > .lego-disclose__content {
+    display: block; }
+  .lego-disclose__item--active > .lego-disclose__link > .lego-disclose__symbol {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .lego-dialog {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -1083,7 +1094,6 @@ a.lego-button {
     line-height: 1; }
 
 .lego-help-dot {
-  background: #a5a5a5;
   color: white;
   width: 16px;
   height: 16px;
@@ -1393,6 +1403,13 @@ a.lego-button {
     border: 1px solid #e0e0e0;
     border-top: none; }
 
+.lego-tag {
+  color: #a5a5a5; }
+  .lego-tag:visited {
+    color: #a5a5a5; }
+  .lego-tag:hover {
+    color: #8abee3; }
+
 .background--white {
   background-color: white !important; }
 
@@ -1622,11 +1639,11 @@ a.lego-button {
   margin-right: 0 !important;
   margin-left: 0 !important; }
 
-.lego-form-fields > *:last-child, .lego-attention > *:last-child, .lego-dialog__body > *:last-child,
+.lego-form-fields > *:last-child, .lego-attention > *:last-child, .lego-disclose > *:last-child, .lego-dialog__body > *:last-child,
 .lego-island > *:last-child,
-.lego-media__body > *:last-child, .lego-pop-upsell__content > *:last-child, .lego-form-fields > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child,
+.lego-media__body > *:last-child, .lego-pop-upsell__content > *:last-child, .lego-form-fields > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child, .lego-disclose > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child,
 .lego-island > *:last-child > *:last-child,
-.lego-media__body > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child, .lego-form-fields > *:last-child > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child > *:last-child,
+.lego-media__body > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child, .lego-form-fields > *:last-child > *:last-child > *:last-child, .lego-attention > *:last-child > *:last-child > *:last-child, .lego-disclose > *:last-child > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child > *:last-child,
 .lego-island > *:last-child > *:last-child > *:last-child,
 .lego-media__body > *:last-child > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child > *:last-child {
   margin-bottom: 0; }

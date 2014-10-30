@@ -154,6 +154,12 @@
     font-size: map-get($font-size, micro);
     color: map-get($font-color, muted);
     text-align: left;
+
+    // For columns that are sortable.
+
+    &[field] {
+      cursor: pointer;
+    }
   }
 
   td {

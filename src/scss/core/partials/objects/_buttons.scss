@@ -215,11 +215,6 @@
     text-align: center;
   }
 
-  &--squish {
-    padding-right: spacer(1);
-    padding-left: spacer(1);
-  }
-
   // ### Inactive Button
   // Disabled state.
 
@@ -235,7 +230,7 @@
     background: #f8f8f8;
     color: map-get($font-color, medium);
     border-color: map-get($ui-color, base);
-    opacity: 0.4;
+    opacity: 0.5;
   }
 }
 

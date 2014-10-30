@@ -4,13 +4,13 @@
 // ## Example
 
 //[hc]
-//     <span class="lego-help-dot" v-poptip data-dir="bottom-center" data-content="This should be short text, no more than a sentence."></span>
+//     <span class="lego-help-dot" v-poptip data-dir="top-center" data-content="This should be short text, no more than a sentence."></span>
 //[/hc]
 
 // ## SCSS
 
 .lego-help-dot {
-  background: map-get($font-color, muted);
+  background: map-get($ui-color, muted);
   color: map-get($font-color, white);
   width: 16px;
   height: 16px;
