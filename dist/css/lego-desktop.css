@@ -615,6 +615,8 @@ li > ol {
     font-size: 10px;
     color: #a5a5a5;
     text-align: left; }
+    .lego-table th[field] {
+      cursor: pointer; }
   .lego-table td {
     vertical-align: top; }
   .lego-table [rowspan] {
@@ -669,20 +671,10 @@ li > ol {
 .editable:hover {
   color: #a5a5a5; }
   .editable:hover:after {
-    color: #1d7ebd; }
-.editable:after {
-  content: '\270E';
-  font-size: 1em;
-  padding-left: 5px; }
-.editable[contenteditable="true"], .editable[contenteditable="true"]:hover {
-  margin: -5px;
-  padding: 5px;
-  border-radius: 4px;
-  color: #262626;
-  background: #efefef;
-  outline: 0; }
-  .editable[contenteditable="true"]:after, .editable[contenteditable="true"]:hover:after {
-    display: none; }
+    color: #a5a5a5;
+    content: '\270E';
+    font-size: 1em;
+    padding-left: 5px; }
 
 .monospace {
   font-family: monospace; }
@@ -973,9 +965,6 @@ li > ol {
     padding-right: 0;
     padding-left: 0;
     text-align: center; }
-  .lego-button--squish {
-    padding-right: 10px;
-    padding-left: 10px; }
   .lego-button[disabled],
   .lego-button[disabled]:hover,
   .lego-button[disabled]:active,
@@ -988,7 +977,7 @@ li > ol {
     background: #f8f8f8;
     color: #7f7f7f;
     border-color: #e0e0e0;
-    opacity: 0.4; }
+    opacity: 0.5; }
 
 a.lego-button {
   padding-top: 8px; }
@@ -1420,6 +1409,16 @@ a.lego-button {
     color: #a5a5a5; }
   .lego-tag:hover {
     color: #8abee3; }
+
+.lego-throbber {
+  width: 50px;
+  height: 50px; }
+  .lego-throbber--small {
+    width: 20px;
+    height: 20px; }
+  .lego-throbber--large {
+    width: 80px;
+    height: 80px; }
 
 html {
   font-size: 12px;
