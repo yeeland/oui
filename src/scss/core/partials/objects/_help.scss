@@ -10,7 +10,7 @@
 // ## SCSS
 
 .lego-help-dot {
-  background: map-get($ui-color, muted);
+  background: map-get($background-color, muted);
   color: map-get($font-color, white);
   width: 16px;
   height: 16px;
