@@ -104,44 +104,41 @@
   // ### Button Styles
   // Button color variations.
 
-  background: #f3f3f3;
-  color: map-get($font-color, medium);
+  background: linear-gradient(#f7f7f7, #eee);
+  color: map-get($font-color, base);
   border-color: map-get($ui-color, base);
 
   &.lego-button--hover,
   &:hover {
-    background: #eee;
-    border-color: map-get($ui-color, medium);
-    color: map-get($font-color, base);
+    background: linear-gradient(#fff, #eee);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   }
 
   &.lego-button--active,
   &:active {
-    background: #eee;
-    border-color: map-get($ui-color, medium);
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.2);
+    border-color: #bbb;
   }
 
   &:visited,
   &:focus {
-    color: map-get($font-color, medium);
+    color: map-get($font-color, base);
   }
 
   &--brand {
-    background: map-get($background-color, brand);
-    border-color: map-get($ui-color, brand-dark);
+    background: linear-gradient(#147cc5, #1270b1);
+    border-color: #00558d;
     color: map-get($font-color, white);
 
     &.lego-button--hover,
     &:hover {
-      background: #1d88cf;
-      border-color: map-get($ui-color, brand-dark);
-      color: map-get($font-color, white);
+      background: linear-gradient(#038ae6, #1270b1);
     }
 
     &.lego-button--active,
     &:active {
-      background: #196598;
-      border-color: #196598;
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
+      border-color: #00558d;
     }
 
     &:visited,
@@ -151,21 +148,19 @@
   }
 
   &--highlight {
-    background: #7abd37;
-    border-color: #4f9a00;
+    background: linear-gradient(#a1cd1e, #91b81c);
+    border-color: #719505;
     color: map-get($font-color, white);
 
     &.lego-button--hover,
     &:hover {
-      background: #88d13f;
-      border-color: #4f9a00;
-      color: map-get($font-color, white);
+      background: linear-gradient(#a3d60c, #91b81c);
     }
 
     &.lego-button--active,
     &:active {
-      background: #598a28;
-      border-color: #598a28;
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
+      border-color: #719505;
     }
 
     &:visited,
@@ -175,21 +170,19 @@
   }
 
   &--danger {
-    background: #d04b51;
-    border-color: #a20000;
+    background: linear-gradient(#aa280d, #991e04);
+    border-color: #641100;
     color: map-get($font-color, white);
 
     &.lego-button--hover,
     &:hover {
-      background: #e8545b;
-      border-color: #a20000;
-      color: map-get($font-color, white);
+      background: linear-gradient(#c02c0c, #991e04);
     }
 
     &.lego-button--active,
     &:active {
-      background: #9c383d;
-      border-color: #9c383d;
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
+      border-color: #641100;
     }
 
     &:visited,
@@ -227,6 +220,7 @@
   &--disabled:active,
   &--disabled:focus {
     cursor: default;
+    box-shadow: none;
     background: #f8f8f8;
     color: map-get($font-color, medium);
     border-color: map-get($ui-color, base);
