@@ -18,6 +18,7 @@
   position: fixed;
   top: 30px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   box-shadow: 0 2px map-get($shadow, light);
   opacity: 0;
