@@ -729,20 +729,21 @@ li > ol {
   border-radius: 2px;
   border: 1px solid #e0e0e0;
   background: #f7f7f7; }
-  .lego-notification,
+  .lego-notification--brand,
   .lego-attention--brand {
     border-color: #8abee3;
     background-color: #f2f7fc; }
   .lego-attention--warning {
     border-color: #ffd40c;
     background-color: #fcf8e3; }
+  .lego-notification--good-news,
   .lego-attention--good-news {
     border-color: #90b71c;
     background-color: #e9f6c3; }
+  .lego-notification--bad-news,
   .lego-attention--bad-news {
     border-color: #e8545b;
-    background-color: #e8545b;
-    color: white; }
+    background-color: #f9e3e4; }
 
 .lego-pop-tip--arrow-top-center, .lego-pop-tip--arrow-top-left, .lego-pop-tip--arrow-top-right, .lego-pop-upsell--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right, .lego-pop-upsell--arrow-left, .lego-pop-upsell--arrow-right, .lego-pop-tip--arrow-bottom-center, .lego-pop-tip--arrow-bottom-left, .lego-pop-tip--arrow-bottom-right, .lego-pop-upsell--arrow-bottom {
   position: relative; }
@@ -1556,15 +1557,17 @@ hgroup .hn {
   transition: opacity 0.3s;
   padding: 5px 10px;
   font-size: 11px;
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  opacity: 0; }
-  .lego-notification--active {
-    opacity: 1; }
+  text-align: center; }
+  .lego-notification--wrap {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1002; }
+  .lego-notification + .lego-notification {
+    margin-top: 5px; }
 
 .tagger {
   font-style: italic;

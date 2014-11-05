@@ -4,26 +4,55 @@
 // ## Example
 
 //[c]
-//     <div class="lego-notification lego-notification--active">You added a new collaborator.</div>
+//     <div class="lego-notification--wrap">
+//       <div class="lego-notification">
+//         This is a notification.
+//       </div>
+//       <div class="lego-notification lego-notification--brand">
+//         This is a notification.
+//       </div>
+//       <div class="lego-notification lego-notification--good-news">
+//         This is a notification asdfas.
+//       </div>
+//       <div class="lego-notification lego-notification--bad-news">
+//         This is a notification.
+//       </div>
+//     </div>
 //[/c]
 
 // ## SCSS
 
+
 .lego-notification {
   @extend %lego-attention;
-  @extend %lego-attention--brand;
   @include transition(opacity map-get($transition-duration, base));
   padding: spacer(0.5) spacer(1);
   font-size: map-get($font-size, milli);
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
   box-shadow: 0 2px map-get($shadow, light);
-  opacity: 0;
+  text-align: center;
 
-  &--active {
-    opacity: 1;
+  &--brand {
+    @extend %lego-attention--brand;
+  }
+
+  &--good-news {
+    @extend %lego-attention--good-news;
+  }
+
+  &--bad-news {
+    @extend %lego-attention--bad-news;
+  }
+
+  &--wrap {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: map-get($z-index, notification);
+  }
+
+  + .lego-notification {
+    margin-top: spacer(0.5);
   }
 }

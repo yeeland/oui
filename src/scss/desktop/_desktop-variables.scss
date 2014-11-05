@@ -11,6 +11,13 @@ $layout-width: (
   single-column       : 640px
 );
 
+// ### Desktop z-index
+// All z-index values should live here.
+
+$z-index: (
+  notification       : 1002 // Higher than nav bar. Legacy fix.
+);
+
 // ### Font Sizes
 // These are defined in core but different values can be overriden here.
 

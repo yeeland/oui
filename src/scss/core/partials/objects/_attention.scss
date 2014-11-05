@@ -86,7 +86,6 @@
 
   &--bad-news {
     border-color: map-get($ui-color, bad-news);
-    background-color: map-get($ui-color, bad-news);
-    color: map-get($font-color, white);
+    background-color: map-get($background-color, bad-news);
   }
 }
