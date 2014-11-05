@@ -1,0 +1,33 @@
+// # Spinner
+// Loading spinner available at a few sizes. spinner color is embedded in the SVG.
+
+// ## Example
+
+//[hc]
+//     <svg class="lego-spinner--large">
+//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
+//     </svg>
+//     <svg class="lego-spinner">
+//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
+//     </svg>
+//     <svg class="lego-spinner--small">
+//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
+//     </svg>
+//[/hc]
+
+// ## SCSS
+
+.lego-spinner {
+  width: 50px;
+  height: 50px;
+
+  &--small {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--large {
+    width: 80px;
+    height: 80px;
+  }
+}

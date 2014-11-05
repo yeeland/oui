@@ -1,0 +1,20 @@
+// # Notification
+// Shows a small notification at the top of the screen.
+
+.lego-notification {
+  @extend %lego-attention;
+  @extend %lego-attention--brand;
+  @include transition(opacity map-get($transition-duration, base));
+  padding: spacer(0.5) spacer(1);
+  font-size: map-get($font-size, milli);
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+  }
+}
