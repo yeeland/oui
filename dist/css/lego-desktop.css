@@ -391,7 +391,7 @@ code {
     padding-bottom: 2px; }
   .lego-text-input:focus,
   .lego-textarea:focus {
-    border-color: #8abee3; }
+    border-color: #9acce2; }
   .lego-text-input[disabled],
   .lego-textarea[disabled] {
     background: #f7f7f7; }
@@ -549,22 +549,22 @@ img[height] {
 
 a,
 .link {
-  color: #1d7ebd;
+  color: #0081ba;
   cursor: pointer; }
   a:visited, a:active,
   .link:visited,
   .link:active {
-    color: #1d7ebd; }
+    color: #0081ba; }
   a:hover,
   .link:hover {
-    color: #2e99df; }
+    color: #00a4ed; }
 
 .lego-top-nav a,
 .link--reverse {
   color: white !important; }
   .lego-top-nav a:hover,
   .link--reverse:hover {
-    color: #c8e0f2 !important; }
+    color: #d5eaf3 !important; }
 
 .link--disabled {
   color: #a5a5a5; }
@@ -575,9 +575,9 @@ a,
     cursor: default; }
 
 a:not([href]) {
-  color: #1d7ebd; }
+  color: #0081ba; }
   a:not([href]):visited, a:not([href]):hover, a:not([href]):active {
-    color: #1d7ebd;
+    color: #0081ba;
     cursor: default; }
 
 .lego-list {
@@ -731,14 +731,14 @@ li > ol {
   background: #f7f7f7; }
   .lego-notification--brand,
   .lego-attention--brand {
-    border-color: #8abee3;
+    border-color: #9acce2;
     background-color: #f2f7fc; }
   .lego-attention--warning {
     border-color: #ffd40c;
     background-color: #fcf8e3; }
   .lego-notification--good-news,
   .lego-attention--good-news {
-    border-color: #90b71c;
+    border-color: #97c70a;
     background-color: #e9f6c3; }
   .lego-notification--bad-news,
   .lego-attention--bad-news {
@@ -1240,19 +1240,19 @@ a.lego-button {
   .lego-pop-upsell__title {
     font-weight: 500; }
   .lego-pop-upsell__link {
-    background: #1d7ebd; }
+    background: #0081ba; }
     .lego-pop-upsell__link a {
       color: white; }
       .lego-pop-upsell__link a:hover {
-        background: #1d7ebd; }
+        background: #0081ba; }
   .lego-pop-upsell--arrow-top:before {
     border-bottom-color: #e0e0e0 !important; }
   .lego-pop-upsell--arrow-top:after {
     border-bottom-color: white !important; }
   .lego-pop-upsell--arrow-bottom:before {
-    border-top-color: #1d7ebd !important; }
+    border-top-color: #0081ba !important; }
   .lego-pop-upsell--arrow-bottom:after {
-    border-top-color: #1d7ebd !important; }
+    border-top-color: #0081ba !important; }
   .lego-pop-upsell--arrow-left:before {
     border-right-color: #e0e0e0 !important; }
   .lego-pop-upsell--arrow-left:after {
@@ -1274,7 +1274,7 @@ a.lego-button {
     -webkit-transition: width 0.3s;
     transition: width 0.3s;
     height: 100%;
-    background: #1d7ebd;
+    background: #0081ba;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     line-height: 20px;
     color: white;
@@ -1344,16 +1344,16 @@ a.lego-button {
       top: 0;
       right: 50%; }
     .lego-steps__item--active:before {
-      background: #1d7ebd; }
+      background: #0081ba; }
     .lego-steps__item--active .lego-steps__dot {
-      background: #1d7ebd;
-      border-color: #1d7ebd; }
+      background: #0081ba;
+      border-color: #0081ba; }
     .lego-steps__item--active .lego-steps__label {
-      color: #1d7ebd; }
+      color: #0081ba; }
     .lego-steps__item--complete:before {
-      background: #1d7ebd; }
+      background: #0081ba; }
     .lego-steps__item--complete .lego-steps__dot {
-      border-color: #1d7ebd; }
+      border-color: #0081ba; }
     .lego-steps__item:first-child:before {
       display: none; }
 
@@ -1376,7 +1376,7 @@ a.lego-button {
       border-radius: 0 4px 0 0;
       border-right: 1px solid #e0e0e0; }
     .lego-tabs-nav__item:hover, .lego-tabs-nav__item.tab-active {
-      color: #1d7ebd; }
+      color: #0081ba; }
     .lego-tabs-nav__item.tab-active {
       background-color: white; }
       .lego-tabs-nav__item.tab-active:after {
@@ -1403,7 +1403,7 @@ a.lego-button {
   border: none; }
   .lego-tabs--sub .lego-tabs-nav__item.tab-active:after {
     height: 2px;
-    background: #1d7ebd;
+    background: #0081ba;
     bottom: -1px; }
 
 .lego-tabs-pane {
@@ -1423,7 +1423,7 @@ a.lego-button {
   .lego-tag:visited {
     color: #a5a5a5; }
   .lego-tag:hover {
-    color: #8abee3; }
+    color: #9acce2; }
 
 html {
   font-size: 12px;
@@ -1669,7 +1669,7 @@ p {
   background-color: #7f7f7f !important; }
 
 .background--brand {
-  background-color: #1d7ebd !important; }
+  background-color: #0081ba !important; }
 
 .background--brand-dark {
   background-color: #003366 !important; }
@@ -2100,7 +2100,7 @@ p {
   word-break: break-all !important; }
 
 .good-news {
-  color: #90b71c; }
+  color: #97c70a; }
 
 .warning {
   color: #ffd40c; }
