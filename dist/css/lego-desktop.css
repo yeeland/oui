@@ -1352,7 +1352,7 @@ a.lego-button {
   border-width: 1px; }
 .lego-tabs--small .lego-tabs-nav__item {
   background-color: transparent;
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-size: 11px; }
 
 .lego-tabs--center .lego-tabs-nav__item:first-child {
@@ -2076,5 +2076,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */

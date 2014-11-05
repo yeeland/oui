@@ -1,0 +1,28 @@
+// # Dialog Fixes
+// Fixing styles in non-Lego dialogs.
+
+form.standard p,
+.dialog .content p,
+.message-dialog .content p {
+  font-size: 13px;
+}
+
+.entity-list-item-description {
+  font-size: 12px !important;
+}
+
+.url-validator-text {
+  font-weight: 300;
+}
+
+.url-targeting .twisty-container div.twisty {
+  top: 0.4em;
+}
+
+.dialog__header * + p {
+  margin-top: 10px;
+}
+
+.dialog-backdrop .dialog-frame .dialog__title {
+  font-size: 24px;
+}

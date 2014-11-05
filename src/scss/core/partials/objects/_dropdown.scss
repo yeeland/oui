@@ -114,6 +114,10 @@
   &__item {
     white-space: nowrap;
     color: map-get($font-color, base);
+
+    &--active {
+      background: map-get($background-color, faint);
+    }
   }
 
   &__block-link {

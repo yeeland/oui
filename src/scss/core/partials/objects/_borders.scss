@@ -27,7 +27,6 @@
 %border--all,
 .border--all {
   border: 1px solid map-get($ui-color, base);
-  padding: spacer(1);
 }
 
 // ### Border Top/Bottom
@@ -36,15 +35,11 @@
 %border--top,
 .border--top {
   border-top: 1px solid map-get($ui-color, base);
-  margin-top: spacer(1) - 1px;
-  padding-top: spacer(1);
 }
 
 %border--bottom,
 .border--bottom {
   border-bottom: 1px solid map-get($ui-color, base);
-  margin-bottom: spacer(1) - 1px;
-  padding-bottom: spacer(1);
 }
 
 // ### Border Left/Right
@@ -53,11 +48,9 @@
 %border--left,
 .border--left {
   border-left: 1px solid map-get($ui-color, base);
-  padding-left: spacer(1);
 }
 
 %border--right,
 .border--right {
   border-right: 1px solid map-get($ui-color, base);
-  padding-right: spacer(1);
 }
