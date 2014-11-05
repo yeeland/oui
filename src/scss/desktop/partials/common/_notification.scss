@@ -1,6 +1,14 @@
 // # Notification
 // Shows a small notification at the top of the screen.
 
+// ## Example
+
+//[c]
+//     <div class="lego-notification lego-notification--active">You added a new collaborator.</div>
+//[/c]
+
+// ## SCSS
+
 .lego-notification {
   @extend %lego-attention;
   @extend %lego-attention--brand;
