@@ -76,6 +76,7 @@
 // ### Button Variables
 // Shadows for buttons.
 
+
 %lego-button,
 .lego-button {
   display: inline-block;
@@ -225,6 +226,24 @@
     color: map-get($font-color, medium);
     border-color: map-get($ui-color, base);
     opacity: 0.5;
+
+    + .lego-button--brand {
+      border-color: #00558d;
+      background: #147cc5;
+      color: #fff;
+    }
+
+    + .lego-button--highlight {
+      border-color: #719505;
+      background: #a1cd1e;
+      color: #fff;
+    }
+
+    + .lego-button--danger {
+      border-color: #641100;
+      background: #aa280d;
+      color: #fff;
+    }
   }
 }
 
