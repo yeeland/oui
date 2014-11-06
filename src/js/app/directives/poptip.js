@@ -86,7 +86,7 @@ define(function() {
           'visibility' : 'hidden'
         });
 
-        var pos = $el.position();
+        var offset = $el.offset();
 
         //Determine the size of the CSS arrow
         var arrowWidth = parseInt(window.getComputedStyle(this.tip.get(0), ':before').getPropertyValue('width'));
@@ -96,8 +96,8 @@ define(function() {
         arrowWidth = (isNaN(arrowWidth) ? '12' : arrowWidth) / 2;
         arrowHeight = (isNaN(arrowHeight) ? '12' : arrowHeight) / 2;
 
-        var left = pos.left;
-        var top = pos.top;
+        var left = offset.left;
+        var top = offset.top;
 
         //For non orientation specific directions(right,left) we want to
         if (direction.indexOf('-') === -1) {
