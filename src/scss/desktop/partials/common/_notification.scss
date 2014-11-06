@@ -30,6 +30,9 @@
   font-size: map-get($font-size, milli);
   box-shadow: 0 2px map-get($shadow, light);
   text-align: center;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
 
   &--brand {
     @extend %lego-attention--brand;
@@ -37,6 +40,10 @@
 
   &--good-news {
     @extend %lego-attention--good-news;
+  }
+
+  &--warning {
+    @extend %lego-attention--warning;
   }
 
   &--bad-news {
@@ -47,12 +54,14 @@
     position: fixed;
     top: spacer(3);
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
     z-index: map-get($z-index, notification);
   }
 
   + .lego-notification {
     margin-top: spacer(0.5);
+  }
+
+  &--active {
+    opacity: 1;
   }
 }
