@@ -497,17 +497,17 @@ fieldset {
     right: 0; }
 
 .lego-form-bad-news .lego-label {
-  color: #e8545b; }
+  color: #c6400c; }
 .lego-form-bad-news [type=text],
 .lego-form-bad-news [type=password] {
-  border-color: #e8545b; }
+  border-color: #c6400c; }
 
 .lego-form-note {
   padding-top: 5px;
   font-size: 10px; }
 
 .lego-form-note--bad-news {
-  color: #e8545b; }
+  color: #c6400c; }
 
 img {
   display: block; }
@@ -743,7 +743,7 @@ li > ol {
     background-color: #e9f6c3; }
   .lego-notification--bad-news,
   .lego-attention--bad-news {
-    border-color: #e8545b;
+    border-color: #c6400c;
     background-color: #f9e3e4; }
 
 .lego-pop-tip--arrow-top-center, .lego-pop-tip--arrow-top-left, .lego-pop-tip--arrow-top-right, .lego-pop-upsell--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right, .lego-pop-upsell--arrow-left, .lego-pop-upsell--arrow-right, .lego-pop-tip--arrow-bottom-center, .lego-pop-tip--arrow-bottom-left, .lego-pop-tip--arrow-bottom-right, .lego-pop-upsell--arrow-bottom {
@@ -2120,7 +2120,7 @@ p {
   color: #ffd40c; }
 
 .bad-news {
-  color: #e8545b; }
+  color: #c6400c; }
 
 .width-50 {
   width: 50px !important;
