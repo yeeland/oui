@@ -1587,7 +1587,8 @@ hgroup .hn {
   font-style: italic;
   font-size: 10px;
   color: #a5a5a5;
-  letter-spacing: normal; }
+  letter-spacing: normal;
+  white-space: nowrap; }
 
 .lego-top-nav {
   background-color: #003366;
@@ -2163,5 +2164,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */

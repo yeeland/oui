@@ -6,4 +6,5 @@
   font-size: map-get($font-size, micro);
   color: map-get($font-color, muted);
   letter-spacing: normal;
+  white-space: nowrap;
 }
