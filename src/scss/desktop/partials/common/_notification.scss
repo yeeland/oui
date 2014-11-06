@@ -45,7 +45,7 @@
 
   &--wrap {
     position: fixed;
-    top: 30px;
+    top: spacer(3);
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);

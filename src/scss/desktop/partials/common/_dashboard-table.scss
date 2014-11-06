@@ -68,4 +68,23 @@
       font-size: map-get($font-size, micro);
     }
   }
+
+  // Adds a color bar to the left of the first table-cell.
+
+  .lego-table-row--active {
+
+    td:first-child {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: map-get($ui-color, brand);
+      }
+    }
+  }
 }
