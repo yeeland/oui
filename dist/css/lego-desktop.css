@@ -733,6 +733,7 @@ li > ol {
   .lego-attention--brand {
     border-color: #9acce2;
     background-color: #f2f7fc; }
+  .lego-notification--warning,
   .lego-attention--warning {
     border-color: #ffd40c;
     background-color: #fcf8e3; }
@@ -1568,16 +1569,19 @@ hgroup .hn {
   padding: 5px 10px;
   font-size: 11px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  text-align: center; }
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0; }
   .lego-notification--wrap {
     position: fixed;
     top: 30px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
     z-index: 1002; }
   .lego-notification + .lego-notification {
     margin-top: 5px; }
+  .lego-notification--active {
+    opacity: 1; }
 
 .tagger {
   font-style: italic;

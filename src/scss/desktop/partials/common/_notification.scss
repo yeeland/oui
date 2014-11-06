@@ -11,6 +11,9 @@
 //       <div class="lego-notification lego-notification--brand">
 //         This is a notification.
 //       </div>
+//       <div class="lego-notification lego-notification--warning">
+//         This is a notification asdfas.
+//       </div>
 //       <div class="lego-notification lego-notification--good-news">
 //         This is a notification asdfas.
 //       </div>
@@ -38,12 +41,12 @@
     @extend %lego-attention--brand;
   }
 
-  &--good-news {
-    @extend %lego-attention--good-news;
-  }
-
   &--warning {
     @extend %lego-attention--warning;
+  }
+
+  &--good-news {
+    @extend %lego-attention--good-news;
   }
 
   &--bad-news {
