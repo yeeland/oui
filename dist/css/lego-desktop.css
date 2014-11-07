@@ -885,7 +885,7 @@ li > ol {
   border-style: solid;
   border-width: 1px;
   line-height: 1;
-  background: linear-gradient(#f7f7f7, #eeeeee);
+  background: linear-gradient(#ffffff, #eeeeee);
   color: #262626;
   border-color: #e0e0e0; }
   .lego-button:hover,
@@ -895,7 +895,7 @@ li > ol {
     outline: none; }
   .lego-button.lego-button--hover,
   .lego-button:hover {
-    background: linear-gradient(#ffffff, #eeeeee);
+    background: linear-gradient(#ffffff, #e5e5e5);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
   .lego-button.lego-button--active,
   .lego-button:active {

@@ -104,13 +104,13 @@
   // ### Button Styles
   // Button color variations.
 
-  background: linear-gradient(#f7f7f7, #eee);
+  background: linear-gradient(#fff, #eee);
   color: map-get($font-color, base);
   border-color: map-get($ui-color, base);
 
   &.lego-button--hover,
   &:hover {
-    background: linear-gradient(#fff, #eee);
+    background: linear-gradient(#fff, #e5e5e5);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
 
