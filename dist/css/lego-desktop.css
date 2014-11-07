@@ -369,7 +369,8 @@ b {
     background: #f7f7f7;
     overflow-x: auto;
     display: block;
-    border-radius: 2px; }
+    border-radius: 2px;
+    border: 1px solid #e0e0e0; }
 
 code {
   font-family: monospace; }
@@ -1525,6 +1526,20 @@ hgroup .hn {
 .lego-sections__item {
   margin-bottom: 25px; }
 
+.lego-code-copy {
+  position: relative; }
+  .lego-code-copy .lego-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 0; }
+  .lego-code-copy:hover .lego-button {
+    opacity: 1; }
+
 .cell-truncate {
   position: relative; }
   .cell-truncate__text +
@@ -1758,6 +1773,18 @@ p {
 
 .no-border--left {
   border-left: none !important; }
+
+.max-scroll--small {
+  max-height: 100px !important;
+  overflow-y: scroll !important; }
+
+.max-scroll--medium {
+  max-height: 200px !important;
+  overflow-y: scroll !important; }
+
+.max-scroll--large {
+  max-height: 300px !important;
+  overflow-y: scroll !important; }
 
 .push {
   margin: 10px !important; }

@@ -1,0 +1,34 @@
+// # Code Copy
+// Adds a copy code button that hovers over a pre code block.
+
+// ## Example
+
+//[hc]
+//     <div class="lego-code-copy">
+//     <pre class="lego-pre"><code id="sample-code">this is the multiline code
+//      we'll be copying </code></pre>
+//       <button data-clipboard-target="sample-code" class="lego-button" v-poptip data-dir="top-center" data-content="Copy">
+//         <svg class="lego-icon">
+//           <use xlink:href="#clipboard"></use>
+//         </svg>
+//       </button>
+//     </div>
+//[/hc]
+
+// ## SCSS
+
+.lego-code-copy {
+  position: relative;
+
+  .lego-button {
+    position: absolute;
+    top: spacer(0.5);
+    right: spacer(0.5);
+    @include transition(opacity map-get($transition-duration, base));
+    opacity: 0;
+  }
+
+  &:hover .lego-button {
+    opacity: 1;
+  }
+}

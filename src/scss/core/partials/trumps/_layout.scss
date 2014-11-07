@@ -114,3 +114,23 @@
 .no-border--left {
   border-left: none !important;
 }
+
+
+// ## Max Scroll
+// Set a max-height to provide scrolling.
+
+.max-scroll--small {
+  max-height: 100px !important;
+  overflow-y: scroll !important;
+}
+
+.max-scroll--medium {
+  max-height: 200px !important;
+  overflow-y: scroll !important;
+}
+
+.max-scroll--large {
+  max-height: 300px !important;
+  overflow-y: scroll !important;
+}
+

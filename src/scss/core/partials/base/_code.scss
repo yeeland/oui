@@ -14,6 +14,7 @@
     overflow-x: auto;
     display: block;
     border-radius: map-get($border-radius, base);
+    border: 1px solid map-get($ui-color, base);
   }
 }
 
