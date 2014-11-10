@@ -40,14 +40,25 @@
   &__link {
     display: block;
     padding: spacer(0.5) spacer(1);
-    margin-top: -(spacer(0.5));
-    margin-bottom: -(spacer(0.5));
     margin-left: -(spacer(1));
     margin-right: -(spacer(1));
 
     &:hover {
       background-color: map-get($background-color, brand-light);
     }
+
+    &--active {
+      background-color: map-get($background-color, faint);
+    }
+
+    &:first-child {
+      margin-top: -(spacer(0.5));
+    }
+
+    &:last-child {
+      margin-bottom: -(spacer(0.5));
+    }
+
   }
 
   // Removes padding on left/right so items are not indented.

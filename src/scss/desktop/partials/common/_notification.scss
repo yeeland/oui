@@ -28,7 +28,7 @@
 
 .lego-notification {
   @extend %lego-attention;
-  @include transition(opacity map-get($transition-duration, base));
+  @include transition(opacity map-get($transition-duration, fast));
   padding: spacer(0.5) spacer(1);
   font-size: map-get($font-size, milli);
   box-shadow: 0 2px map-get($shadow, light);

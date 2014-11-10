@@ -173,7 +173,9 @@ $dialog: (
 // ### Transitions
 
 $transition-duration: (
-  base                         : 0.3s
+  fast                         : 0.1s,
+  base                         : 0.3s,
+  slow                         : 0.5s
 );
 
 // ## Form Variables

@@ -24,7 +24,7 @@
     position: absolute;
     top: spacer(0.5);
     right: spacer(0.5);
-    @include transition(opacity map-get($transition-duration, base));
+    @include transition(opacity map-get($transition-duration, fast));
     opacity: 0;
   }
 

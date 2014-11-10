@@ -1,0 +1,47 @@
+.lego-project-drawer {
+  @extend %flex;
+  @extend %flex-direction--column;
+  @include transition(left map-get($transition-duration, base));
+  background: map-get($background-color, white);
+  box-shadow: 1px 0 map-get($shadow, light);
+  width: map-get($layout-width, project-drawer);
+  position: absolute;
+  top: 0;
+  left: -(map-get($layout-width, project-drawer) + 10);
+  bottom: 0;
+
+  &--active {
+    left: 0;
+  }
+
+  .lego-project-drawer__header {
+    padding: spacer(2);
+    position: relative;
+
+    .lego-icon {
+      position: absolute;
+      top: spacer(2);
+      right: spacer(2);
+      cursor: pointer;
+    }
+  }
+
+  .lego-block-list {
+    @extend %flex-1;
+    overflow-y: scroll;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    .lego-block-list__link {
+      margin: 0;
+      padding: spacer(0.5) spacer(2);
+    }
+  }
+}
