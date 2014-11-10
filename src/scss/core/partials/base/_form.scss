@@ -23,17 +23,20 @@
 //             <input type="text" class="lego-text-input" disabled>
 //           </li>
 //           <li class="lego-form-field__item">
-//             <label class="lego-label">URL</label>
-//             <div class="lego-text-input-control">
-//               <input type="text" class="lego-text-input">
-//               <i class="icon-remove fa fa-times"></i>
-//               <i class="icon-add fa fa-plus"></i>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Add/Remove Row</label>
+//             <div class="lego-grid align-items--center">
+//               <div class="lego-grid__cell">
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <svg class="lego-icon push--left cursor--pointer">
+//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//               </svg>
+//               <svg class="lego-icon push--left cursor--pointer">
+//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+//               </svg>
 //             </div>
-//             <div class="lego-text-input-control">
-//               <input type="text" class="lego-text-input">
-//               <i class="icon-remove fa fa-times"></i>
-//               <i class="icon-add fa fa-plus"></i>
-//             </div>
+//           </li>
 //           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Textarea</label>
@@ -48,7 +51,7 @@
 //             <input type="text" class="lego-text-input width-250">
 //           </li>
 //           <li class="lego-form-field__item">
-//             <div class="lego-grid lego-grid--gutter--narrow">
+//             <div class="lego-grid lego-grid--gutter">
 //               <div class="lego-grid__cell">
 //                 <label class="lego-label">Split Inputs</label>
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
@@ -60,7 +63,22 @@
 //             </div>
 //           </li>
 //           <li class="lego-form-field__item">
-//             <div class="lego-grid lego-grid--gutter--narrow">
+//             <div class="lego-grid lego-grid--gutter">
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Split Inputs</label>
+//                 <select name="zoo" id="zoo" class="lego-select">
+//                   <option value="one">This is option one</option>
+//                   <option value="two">And this is option two</option>
+//                 </select>
+//               </div>
+//             </div>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <div class="lego-grid lego-grid--gutter">
 //               <div class="lego-grid__cell">
 //                 <label class="lego-label">Split Inputs</label>
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
@@ -86,6 +104,20 @@
 //               </div>
 //             </div>
 //           </li>
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Fill Space</label>
+//             <div class="lego-grid">
+//               <div class="lego-grid__cell">
+//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
+//               </div>
+//               <div class="push-double--left">
+//                 <select name="zoo" id="zoo" class="lego-select">
+//                   <option value="one">This is option one</option>
+//                   <option value="two">And this is option two</option>
+//                 </select>
+//               </div>
+//             </div>
+//           </li>
 //         </ol>
 //       </fieldset>
 
@@ -107,11 +139,10 @@
 //         </ol>
 //       </fieldset>
 //       <fieldset>
-//         <div class="lego-label">Form Field Title</div>
 //         <ol class="lego-form-fields">
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Select one thing or another</label>
-//             <select name="zoo" id="zoo">
+//             <select name="zoo" id="zoo" class="lego-select">
 //               <option value="one">This is option one</option>
 //               <option value="two">And this is option two</option>
 //             </select>
@@ -175,30 +206,6 @@
   }
 }
 
-// This creates add/remove controls for text inputs.
-
-.lego-text-input-control {
-  @extend %flex;
-  @extend %align-items--center;
-
-  .lego-text-input {
-    padding-right: spacer(2.5);
-  }
-
-  .icon-remove {
-    margin-left: -(spacer(2));
-    cursor: pointer;
-  }
-
-  .icon-add {
-    margin-left: spacer(2);
-    cursor: pointer;
-  }
-
-  + .lego-text-input-control {
-    margin-top: spacer(1);
-  }
-}
 
 // Using background-image here to avoid hacky CSS.
 .lego-text-input--search {
@@ -216,6 +223,16 @@
   &--tall {
     height: 100px;
   }
+}
+
+.lego-select {
+  display: inline-block;
+  height: map-get($button, height-default);
+  line-height: map-get($button, height-default);
+  background: map-get($background-color, white);
+  border: 1px solid map-get($ui-color, base);
+  border-radius: map-get($border-radius, base);
+  padding: 7px;
 }
 
 .lego-form__header {
