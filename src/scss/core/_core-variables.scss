@@ -182,13 +182,12 @@ $transition-duration: (
 
 $input-focus-border-color      : map-get($ui-color, brand-light);
 
-// ## Buttons
+// ### Buttons
 
 $button: (
   height-default               : 31px,
   height-small                 : 24px
 );
-
 
 // ## Spacing Unit
 // Defines spacing for paddings and margins.

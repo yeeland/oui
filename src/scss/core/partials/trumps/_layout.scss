@@ -115,7 +115,6 @@
   border-left: none !important;
 }
 
-
 // ## Max Scroll
 // Set a max-height to provide scrolling.
 
@@ -132,6 +131,13 @@
 .max-scroll--large {
   max-height: 300px !important;
   overflow-y: auto !important;
+}
+
+// ## Max Width
+// Set a max-width for content.
+
+.max-width--large {
+  max-width: 800px !important;
 }
 
 // ## Cursors

@@ -1823,6 +1823,9 @@ p {
   max-height: 300px !important;
   overflow-y: auto !important; }
 
+.max-width--large {
+  max-width: 800px !important; }
+
 .cursor--pointer {
   cursor: pointer !important; }
 
