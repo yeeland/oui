@@ -121,16 +121,16 @@
 
 .max-scroll--small {
   max-height: 100px !important;
-  overflow-y: scroll !important;
+  overflow-y: auto !important;
 }
 
 .max-scroll--medium {
   max-height: 200px !important;
-  overflow-y: scroll !important;
+  overflow-y: auto !important;
 }
 
 .max-scroll--large {
   max-height: 300px !important;
-  overflow-y: scroll !important;
+  overflow-y: auto !important;
 }
 

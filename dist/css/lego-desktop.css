@@ -1605,7 +1605,7 @@ hgroup .hn {
       right: 20px;
       cursor: pointer; }
   .lego-project-drawer .lego-block-list {
-    overflow-y: scroll; }
+    overflow-y: auto; }
     .lego-project-drawer .lego-block-list li {
       margin: 0;
       padding: 0; }
@@ -1815,15 +1815,15 @@ p {
 
 .max-scroll--small {
   max-height: 100px !important;
-  overflow-y: scroll !important; }
+  overflow-y: auto !important; }
 
 .max-scroll--medium {
   max-height: 200px !important;
-  overflow-y: scroll !important; }
+  overflow-y: auto !important; }
 
 .max-scroll--large {
   max-height: 300px !important;
-  overflow-y: scroll !important; }
+  overflow-y: auto !important; }
 
 .push {
   margin: 10px !important; }

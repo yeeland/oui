@@ -7,7 +7,7 @@
   width: map-get($layout-width, project-drawer);
   position: absolute;
   top: 0;
-  left: -(map-get($layout-width, project-drawer) + 10);
+  left: -(map-get($layout-width, project-drawer) + 10); // Extra space to clear the shadow.
   bottom: 0;
 
   &--active {
@@ -28,7 +28,7 @@
 
   .lego-block-list {
     @extend %flex-1;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     li {
       margin: 0;
