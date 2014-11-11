@@ -162,6 +162,36 @@
 //           </li>
 //         </ol>
 //       </fieldset>
+//       <fieldset>
+//         <ol class="lego-form-fields">
+//           <li class="lego-form-field__item">
+//             <label class="lego-label">Horizontal Inputs</label>
+//             <p>Use these only for short inputs where there's no chance they will wrap.</p>
+//             <ul class="lego-input-list lego-input-list--horizontal">
+//               <li>
+//                 <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="lego-label" for="bar-1">Radio 1</label>
+//               </li>
+//               <li>
+//                 <input name="radio-1" id="bar-2" type="radio" disabled> <label class="lego-label lego-label--disabled" for="bar-2">Radio 2 with disabled label</label>
+//               </li>
+//               <li>
+//                 <input name="radio-1" id="bar-3" type="radio"> <label class="lego-label" for="bar-3">Radio 3</label>
+//               </li>
+//             </ul>
+//           </li>
+//           <li class="lego-label">Checklist</li>
+//           <li class="lego-form-field__item">
+//             <ul class="lego-input-list lego-input-list--horizontal">
+//               <li>
+//                 <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="lego-label" for="foo-1">Short option</label>
+//               </li>
+//               <li>
+//                 <input name="foo-2" id="foo-2" type="checkbox"> <label class="lego-label" for="foo-2">Another short option</label>
+//               </li>
+//             </ul>
+//           </li>
+//         </ol>
+//       </fieldset>
 //       <div class="lego-form__footer lego-button-row lego-button-row--right">
 //         <button class="lego-button">Cancel</button>
 //         <button class="lego-button lego-button--highlight">Submit</button>
@@ -294,6 +324,15 @@ fieldset {
   }
 }
 
+// Labels in lego-input-lists
+
+.lego-check-label,
+.lego-input-list .lego-label {
+  display: table-cell;
+  padding-left: spacer(1);
+  font-weight: map-get($font-weight, light);
+}
+
 //  Groups of checkboxes and radios.
 
 .lego-input-list {
@@ -309,20 +348,24 @@ fieldset {
     display: table-cell;
   }
 
-  // This collapses spacing when lego-input-list is a matrix.
-
   .lego-label {
     width: 100%;
   }
-}
 
-// Labels in lego-input-lists
+  // Horizontal version of inputs.
 
-.lego-check-label,
-.lego-input-list .lego-label {
-  display: table-cell;
-  padding-left: spacer(1);
-  font-weight: map-get($font-weight, light);
+  &--horizontal {
+
+    > li {
+      padding-right: spacer(2);
+      display: inline-block;
+    }
+
+    .lego-label {
+      display: inline;
+      padding-left: 6px; // Should be 10px but this compensates for white space.
+    }
+  }
 }
 
 .lego-input--disabled {

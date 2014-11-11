@@ -458,6 +458,12 @@ fieldset {
     color: #a5a5a5;
     cursor: default !important; }
 
+.lego-check-label,
+.lego-input-list .lego-label {
+  display: table-cell;
+  padding-left: 10px;
+  font-weight: 300; }
+
 .lego-input-list {
   list-style: none;
   margin: 0; }
@@ -468,12 +474,12 @@ fieldset {
     display: table-cell; }
   .lego-input-list .lego-label {
     width: 100%; }
-
-.lego-check-label,
-.lego-input-list .lego-label {
-  display: table-cell;
-  padding-left: 10px;
-  font-weight: 300; }
+  .lego-input-list--horizontal > li {
+    padding-right: 20px;
+    display: inline-block; }
+  .lego-input-list--horizontal .lego-label {
+    display: inline;
+    padding-left: 6px; }
 
 .lego-input--disabled {
   background-color: #efefef; }
