@@ -4,9 +4,15 @@
 // ## Example
 
 //[hc]
-//     <div class="lego-spinner"></div>
-//     <div class="lego-spinner lego-spinner--small"></div>
+//     <div class="lego-spinner-wrap">
+//       <div class="lego-spinner"></div>
+//     </div>
+//     <div class="lego-spinner-wrap">
+//       <div class="lego-spinner lego-spinner--small"></div>
+//     </div>
 //[/hc]
+
+// Note: To position spinner target `.lego-spinner-wrap`.
 
 // ## SCSS
 
