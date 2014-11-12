@@ -70,7 +70,7 @@
   }
 
   &--center {
-    @extend %justify--center;
+    @extend %justify-content--center;
 
     > li {
       margin-left: spacer(0.5);

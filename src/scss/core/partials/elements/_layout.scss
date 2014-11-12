@@ -60,7 +60,7 @@
 
   &--empty {
     @extend %flex;
-    @extend %justify--center;
+    @extend %justify-content--center;
     @extend %align-items--center;
   }
 }

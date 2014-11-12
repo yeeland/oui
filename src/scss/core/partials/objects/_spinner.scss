@@ -12,9 +12,32 @@
 //     </div>
 //[/hc]
 
+// ### With Overlay
+// This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
+
+//[hc]
+//     <div class="lego-overlay">
+//       <div class="lego-spinner lego-spinner--small"></div>
+//     </div>
+//[/hc]
+
 // Note: To position spinner target `.lego-spinner-wrap`.
 
 // ## SCSS
+
+.lego-overlay {
+  @extend %flex;
+  @extend %justify-content--center;
+  @extend %align-items--center;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
 
 @-webkit-keyframes lego-spin {
   100% { -webkit-transform: rotate(360deg) } // Safari

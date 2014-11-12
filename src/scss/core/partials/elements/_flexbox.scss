@@ -55,15 +55,15 @@
   flex-direction: column;
 }
 
-%justify--space-between,
-.justify--space-between {
+%justify-content--space-between,
+.justify-content--space-between {
   -webkit-justify-content: space-between; // Safari
   -ms-flex-pack: justify; // IE 10
   justify-content: space-between;
 }
 
-%justify--center,
-.justify--center {
+%justify-content--center,
+.justify-content--center {
   -webkit-justify-content: center; // Safari
   -ms-flex-pack: center; // IE 10
   justify-content: center;

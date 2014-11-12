@@ -11,7 +11,7 @@
 .lego-button-group,
 .lego-media,
 .lego-nav,
-.lego-nav--fit,
+.lego-nav--fit, .lego-overlay,
 .lego-stat-group,
 .lego-steps, .lego-tabs-nav, .lego-project-drawer, .lego-top-nav,
 .flex {
@@ -48,21 +48,21 @@
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.justify--space-between {
+.justify-content--space-between {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .lego-pane--empty,
-.lego-nav--center, .lego-pagination,
+.lego-nav--center, .lego-pagination, .lego-overlay,
 .lego-steps, .lego-tabs--center .lego-tabs-nav,
-.justify--center {
+.justify-content--center {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
 .lego-grid--center,
-.lego-pane--empty, .accordion__link,
+.lego-pane--empty, .accordion__link, .lego-overlay,
 .align-items--center {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1342,6 +1342,16 @@ a.lego-button {
 
 .lego-search--active .lego-icon {
   display: block; }
+
+.lego-overlay {
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center; }
 
 @-webkit-keyframes lego-spin {
   100% {
