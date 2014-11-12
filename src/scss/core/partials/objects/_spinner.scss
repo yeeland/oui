@@ -1,33 +1,57 @@
 // # Spinner
-// Loading spinner available at a few sizes. spinner color is embedded in the SVG.
+// Loading spinner available at a few sizes. spinner color is embedded in the div.
 
 // ## Example
 
 //[hc]
-//     <svg class="lego-spinner--large">
-//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
-//     </svg>
-//     <svg class="lego-spinner">
-//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
-//     </svg>
-//     <svg class="lego-spinner--small">
-//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spinner"></use>
-//     </svg>
+//     <div class="lego-spinner"></div>
+//     <div class="lego-spinner lego-spinner--small"></div>
 //[/hc]
 
 // ## SCSS
 
-.lego-spinner {
-  width: 50px;
-  height: 50px;
+@-webkit-keyframes lego-spin {
+  100% { -webkit-transform: rotate(360deg) } // Safari
+}
 
-  &--small {
-    width: 20px;
-    height: 20px;
+@keyframes lego-spin {
+  100% { transform: rotate(360deg) }
+}
+
+.lego-spinner {
+  display: inline-block;
+  width: map-get($spinner, size-default);
+  height: map-get($spinner, size-default);
+  border-radius: 50%;
+  border: map-get($spinner, border-width) solid map-get($spinner, border-color-light);
+  position: relative;
+  -webkit-animation: lego-spin map-get($spinner, speed) infinite linear;
+  animation: lego-spin map-get($spinner, speed) infinite linear;
+
+  &:before {
+    content: "";
+    width: map-get($spinner, size-default);
+    height: map-get($spinner, size-default);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -(map-get($spinner, border-width));
+    top: -(map-get($spinner, border-width));
+    border-width: map-get($spinner, border-width);
+    border-style: solid;
+    border-right-color: map-get($spinner, border-color-light);
+    border-top-color: map-get($spinner, border-color-light);
+    border-left-color: map-get($ui-color, brand);
+    border-bottom-color: map-get($spinner, border-color-light);
   }
 
-  &--large {
-    width: 80px;
-    height: 80px;
+  &--small {
+    width: map-get($spinner, size-small);
+    height: map-get($spinner, size-small);
+
+    &:before {
+      width: map-get($spinner, size-small);
+      height: map-get($spinner, size-small);
+    }
   }
 }

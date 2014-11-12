@@ -1316,15 +1316,42 @@ a.lego-button {
   .lego-rule--dashed {
     border-top-style: dashed; }
 
+@-webkit-keyframes lego-spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes lego-spin {
+  100% {
+    transform: rotate(360deg); } }
 .lego-spinner {
-  width: 50px;
-  height: 50px; }
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #d1e5f2;
+  position: relative;
+  -webkit-animation: lego-spin 800ms infinite linear;
+  animation: lego-spin 800ms infinite linear; }
+  .lego-spinner:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-right-color: #d1e5f2;
+    border-top-color: #d1e5f2;
+    border-left-color: #0081ba;
+    border-bottom-color: #d1e5f2; }
   .lego-spinner--small {
-    width: 20px;
-    height: 20px; }
-  .lego-spinner--large {
-    width: 80px;
-    height: 80px; }
+    width: 26px;
+    height: 26px; }
+    .lego-spinner--small:before {
+      width: 26px;
+      height: 26px; }
 
 .lego-stat {
   margin-right: 10px; }

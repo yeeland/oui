@@ -189,6 +189,16 @@ $button: (
   height-small                 : 24px
 );
 
+// ### Spinner
+
+$spinner: (
+  size-default               : 40px,
+  size-small                 : 26px,
+  border-width               : 4px,
+  border-color-light         : #d1e5f2,
+  speed                      : 800ms
+);
+
 // ## Spacing Unit
 // Defines spacing for paddings and margins.
 
