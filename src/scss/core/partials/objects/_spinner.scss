@@ -1,5 +1,5 @@
 // # Spinner
-// Loading spinner available at a few sizes. spinner color is embedded in the div.
+// Loading spinner. Target `lego-spinner-wrap` to position as needed.
 
 // ## Example
 
@@ -16,6 +16,7 @@
 // This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
 
 //[hc]
+//     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
 //     <div class="lego-overlay">
 //       <div class="lego-spinner lego-spinner--small"></div>
 //     </div>
