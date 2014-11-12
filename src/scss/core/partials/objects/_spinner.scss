@@ -51,13 +51,9 @@
     border-bottom-color: map-get($spinner, border-color-light);
   }
 
-  &--small {
+  &--small,
+  &--small:before {
     width: map-get($spinner, size-small);
     height: map-get($spinner, size-small);
-
-    &:before {
-      width: map-get($spinner, size-small);
-      height: map-get($spinner, size-small);
-    }
   }
 }
