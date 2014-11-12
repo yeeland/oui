@@ -7,7 +7,7 @@
 .lego-grid,
 .lego-pane-group,
 .lego-pane--flex,
-.lego-pane--empty, .accordion, .accordion__link, .accordion__item,
+.lego-pane--empty, .lego-array, .accordion, .accordion__link, .accordion__item,
 .lego-button-group,
 .lego-media,
 .lego-nav,
@@ -20,7 +20,7 @@
   display: flex; }
 
 .lego-grid__cell,
-.lego-pane--flex-1, .accordion__item--active, .accordion__content-wrap,
+.lego-pane--flex-1, .lego-array__item, .accordion__item--active, .accordion__content-wrap,
 .lego-button-group > .lego-text-input,
 .lego-media__body,
 .lego-nav--fit > li,
@@ -101,6 +101,16 @@
   height: 100%; }
 .lego-pane--scroll-y {
   overflow-y: auto; }
+
+.lego-array__item {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .lego-array__item:first-child {
+    margin-left: 0; }
+  .lego-array__item:last-child {
+    margin-right: 0; }
 
 .lego-fence--soft {
   padding-left: 20px;

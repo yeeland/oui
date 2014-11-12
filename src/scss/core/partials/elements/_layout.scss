@@ -28,6 +28,8 @@
 
 // ## SCSS
 
+// ### Panes
+
 %lego-pane-group,
 .lego-pane-group {
   @extend %flex;
@@ -60,6 +62,42 @@
     @extend %flex;
     @extend %justify--center;
     @extend %align-items--center;
+  }
+}
+
+// ### Array
+// Row of any number of items at equal height and width.
+
+// [hc]
+//     <div class="lego-array">
+//       <div class="lego-array__item">
+//         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+//       </div>
+//       <div class="lego-array__item">
+//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi eum suscipit necessitatibus iure nam architecto.
+//       </div>
+//       <div class="lego-array__item">
+//         Lorem ipsum dolor sit amet.
+//       </div>
+//     </div>
+// [/hc]
+
+.lego-array {
+  @extend %flex;
+
+  &__item {
+    @extend %flex-1;
+    border: 1px solid map-get($ui-color, base);
+    padding: spacer(2);
+    margin-left: spacer(1);
+    margin-right: spacer(1);
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
