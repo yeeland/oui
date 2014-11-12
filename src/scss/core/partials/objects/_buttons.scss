@@ -99,6 +99,7 @@
   &:visited,
   &:focus {
     outline: none;
+    color: map-get($font-color, base);
   }
 
   // ### Button Styles
@@ -141,6 +142,8 @@
       border-color: #00558d;
     }
 
+    &:hover,
+    &:active,
     &:visited,
     &:focus {
       color: map-get($font-color, white);
@@ -163,6 +166,8 @@
       border-color: #719505;
     }
 
+    &:hover,
+    &:active,
     &:visited,
     &:focus {
       color: map-get($font-color, white);
@@ -185,6 +190,8 @@
       border-color: #641100;
     }
 
+    &:hover,
+    &:active,
     &:visited,
     &:focus {
       color: map-get($font-color, white);

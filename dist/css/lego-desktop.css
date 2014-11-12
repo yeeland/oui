@@ -902,7 +902,8 @@ li > ol {
   .lego-button:active,
   .lego-button:visited,
   .lego-button:focus {
-    outline: none; }
+    outline: none;
+    color: #262626; }
   .lego-button.lego-button--hover,
   .lego-button:hover {
     background: linear-gradient(#ffffff, #e5e5e5);
@@ -925,6 +926,8 @@ li > ol {
     .lego-button--brand:active {
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
       border-color: #00558d; }
+    .lego-button--brand:hover,
+    .lego-button--brand:active,
     .lego-button--brand:visited,
     .lego-button--brand:focus {
       color: white; }
@@ -939,6 +942,8 @@ li > ol {
     .lego-button--highlight:active {
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
       border-color: #719505; }
+    .lego-button--highlight:hover,
+    .lego-button--highlight:active,
     .lego-button--highlight:visited,
     .lego-button--highlight:focus {
       color: white; }
@@ -953,6 +958,8 @@ li > ol {
     .lego-button--danger:active {
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
       border-color: #641100; }
+    .lego-button--danger:hover,
+    .lego-button--danger:active,
     .lego-button--danger:visited,
     .lego-button--danger:focus {
       color: white; }
