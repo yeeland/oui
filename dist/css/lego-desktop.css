@@ -518,7 +518,8 @@ fieldset {
   color: #c6400c; }
 
 img {
-  display: block; }
+  display: block;
+  max-width: 100%; }
 
 figure > img {
   display: block; }

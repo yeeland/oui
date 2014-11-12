@@ -3,6 +3,12 @@
 
 @import 'compass';
 
+// # Third Party
+// Importing helpers.
+
+@import 'library/retina/retina-sprites'
+@import 'library/retina/retina-background-image'
+
 // ## Core variables
 // Import `core` variables
 
@@ -22,4 +28,3 @@
 @import 'core/partials/trumps/padding';
 @import 'core/partials/trumps/type';
 @import 'core/partials/trumps/sizing';
-
