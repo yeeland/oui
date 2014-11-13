@@ -10,6 +10,9 @@
 //     <div class="lego-spinner-wrap">
 //       <div class="lego-spinner lego-spinner--small"></div>
 //     </div>
+//     <div class="lego-spinner-wrap">
+//       <div class="lego-spinner lego-spinner--tiny"></div>
+//     </div>
 //[/hc]
 
 // ### With Overlay
@@ -79,5 +82,17 @@
   &--small:before {
     width: map-get($spinner, size-small);
     height: map-get($spinner, size-small);
+    border-width: map-get($spinner, border-width-small);
+    left: -(map-get($spinner, border-width-small));
+    top: -(map-get($spinner, border-width-small));
+  }
+
+  &--tiny,
+  &--tiny:before {
+    width: map-get($spinner, size-tiny);
+    height: map-get($spinner, size-tiny);
+    border-width: map-get($spinner, border-width-tiny);
+    left: -(map-get($spinner, border-width-tiny));
+    top: -(map-get($spinner, border-width-tiny));
   }
 }

@@ -1385,7 +1385,16 @@ a.lego-button {
     border-bottom-color: #d1e5f2; }
   .lego-spinner--small, .lego-spinner--small:before {
     width: 26px;
-    height: 26px; }
+    height: 26px;
+    border-width: 3px;
+    left: -3px;
+    top: -3px; }
+  .lego-spinner--tiny, .lego-spinner--tiny:before {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    left: -2px;
+    top: -2px; }
 
 .lego-stat {
   margin-right: 10px; }
