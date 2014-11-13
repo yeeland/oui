@@ -3,12 +3,4 @@
 
 .lego-tag {
   color: map-get($font-color, muted);
-
-  &:visited {
-    color: map-get($font-color, muted);
-  }
-
-  &:hover {
-    color: map-get($link-color, brand-light);
-  }
 }
