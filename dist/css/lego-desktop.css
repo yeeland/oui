@@ -1637,6 +1637,8 @@ hgroup .hn {
     bottom: 5px;
     left: 0;
     right: 0; }
+  .cell-truncate__title {
+    font-weight: 500; }
 
 .lego-table--dashboard thead > tr > th:first-child,
 .lego-table--dashboard tbody > tr > td:first-child {

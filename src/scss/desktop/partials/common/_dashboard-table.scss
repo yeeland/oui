@@ -35,6 +35,10 @@
     left: 0;
     right: 0
   }
+
+  &__title {
+    font-weight: map-get($font-weight, bold);
+  }
 }
 
 // Adds extra padding to first/last table cell so it can run full bleed.
