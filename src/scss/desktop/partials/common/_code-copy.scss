@@ -28,7 +28,11 @@
     opacity: 0;
   }
 
-  &:hover .lego-button {
+  // Targetting hover, active classes due to zero clipboard stealing state.
+
+  &:hover .lego-button,
+  .lego-button--hover,
+  .lego-button--active {
     opacity: 1;
   }
 }
