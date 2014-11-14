@@ -387,13 +387,19 @@ fieldset {
   }
 }
 
-// ## Date Picker
+// ## Icons in inputs
+// This places an svg icon "inside" an input, to the right.
 
-.lego-date-picker {
+.lego-icon-input {
   @extend %flex;
   @extend %align-items--center;
 
-  .lego-date-picker__icon {
+  > input {
+    z-index: 1;
+    background: transparent;
+  }
+
+  .lego-icon-input__icon {
     margin-left: -(spacer(2.5));
     line-height: 1;
   }

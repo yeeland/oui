@@ -7,7 +7,7 @@
 .lego-grid,
 .lego-pane-group,
 .lego-pane--flex,
-.lego-pane--empty, .lego-array, .lego-date-picker, .accordion, .accordion__link, .accordion__item,
+.lego-pane--empty, .lego-array, .lego-icon-input, .accordion, .accordion__link, .accordion__item,
 .lego-button-group,
 .lego-media,
 .lego-nav,
@@ -62,7 +62,7 @@
   justify-content: center; }
 
 .lego-grid--center,
-.lego-pane--empty, .lego-date-picker, .accordion__link, .lego-overlay,
+.lego-pane--empty, .lego-icon-input, .accordion__link, .lego-overlay,
 .align-items--center {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -504,7 +504,10 @@ fieldset {
     left: auto;
     right: 0; }
 
-.lego-date-picker .lego-date-picker__icon {
+.lego-icon-input > input {
+  z-index: 1;
+  background: transparent; }
+.lego-icon-input .lego-icon-input__icon {
   margin-left: -25px;
   line-height: 1; }
 
