@@ -213,6 +213,8 @@
   font-size: map-get($font-size, micro);
 }
 
+%lego-text-input,
+%lego-textarea,
 .lego-text-input,
 .lego-textarea {
   width: 100%;
@@ -382,6 +384,18 @@ fieldset {
   &:after {
     left: auto;
     right: 0;
+  }
+}
+
+// ## Date Picker
+
+.lego-date-picker {
+  @extend %flex;
+  @extend %align-items--center;
+
+  .lego-date-picker__icon {
+    margin-left: -(spacer(2.5));
+    line-height: 1;
   }
 }
 
