@@ -1231,7 +1231,8 @@ a.lego-button {
   font-size: 10px;
   padding: 5px 10px;
   max-width: 250px;
-  display: inline-block; }
+  display: inline-block;
+  z-index: 3001; }
   .lego-pop-tip--arrow-top-center:before {
     border-bottom-color: #262626 !important; }
   .lego-pop-tip--arrow-top-center:after {

@@ -16,5 +16,6 @@ $layout-width: (
 // All z-index values should live here.
 
 $z-index: (
-  notification       : 1002 // Higher than nav bar. Legacy fix.
+  notification       : 1002, // Higher than nav bar. Legacy fix.
+  poptip             : 3001 // Higher than old dialogs. Legacy fix.
 );

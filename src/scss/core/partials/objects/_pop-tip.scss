@@ -74,6 +74,7 @@ $lego-pop-tip-background: map-get($ui-color, dark);
   padding: spacer(0.5) spacer(1);
   max-width: 250px;
   display: inline-block;
+  z-index: map-get($z-index, poptip); // Desktop variable, not Lego.
 
   // Arrow options.
 
