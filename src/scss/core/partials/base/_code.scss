@@ -20,4 +20,8 @@
 
 code {
   font-family: map-get($font-family, monospace);
+  background: map-get($background-color, faint);
+  border-radius: map-get($border-radius, base);
+  border: 1px solid map-get($ui-color, base);
+  padding: 1px 3px;
 }

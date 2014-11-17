@@ -147,3 +147,9 @@
   cursor: pointer !important;
 }
 
+// ## Text Area No Resize
+// Prevent resizing of textarea. Use only if absolutely necessary.
+
+.no-resize {
+  resize: none !important;
+}
