@@ -70,6 +70,22 @@
 //     </div>
 //[/hc]
 
+// ### Button with Icon
+//[hc]
+//     <div class="lego-button-row--left">
+//       <button class="lego-button lego-button--icon">
+//         <svg class="lego-icon">
+//           <use xlink:href="#sync"></use>
+//         </svg>
+//       </button>
+//       <button class="lego-button lego-button--icon">
+//         <svg class="lego-icon">
+//           <use xlink:href="#sync"></use>
+//         </svg> Refresh
+//       </button>
+//     </div>
+//[/hc]
+
 
 // ## SCSS
 
@@ -213,6 +229,17 @@
     padding-right: 0;
     padding-left: 0;
     text-align: center;
+  }
+
+  // ### With Icon
+  // Some extra help is needed to get the icon and text to line up.
+
+  &--icon {
+    line-height: 1.4;
+
+    .lego-icon {
+      vertical-align: sub;
+    }
   }
 
   // ### Inactive Button

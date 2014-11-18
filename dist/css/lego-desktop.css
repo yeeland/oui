@@ -984,6 +984,10 @@ li > ol {
     padding-right: 0;
     padding-left: 0;
     text-align: center; }
+  .lego-button--icon {
+    line-height: 1.4; }
+    .lego-button--icon .lego-icon {
+      vertical-align: sub; }
   .lego-button[disabled],
   .lego-button[disabled]:hover,
   .lego-button[disabled]:active,
