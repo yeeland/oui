@@ -1,0 +1,89 @@
+// # Datepicker Skin
+// Overrides jQuery's default styling for the Datepicker.
+
+#ui-datepicker-div {
+  display: none;
+  background: map-get($background-color, white);
+  border: 1px solid map-get($ui-color, base);
+  padding: spacer(2);
+  font-size: map-get($font-size, epsilon);
+  overflow: hidden;
+
+  &.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+  }
+
+  .ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0;
+  }
+
+  .ui-datepicker-group {
+    float: left;
+    font-size: map-get($font-size, zeta);
+  }
+
+  .ui-datepicker-group-first {
+    padding-right: spacer(2);
+    border-right: 1px solid map-get($ui-color, base);
+  }
+
+  .ui-datepicker-group-last {
+    padding-left: spacer(2);
+  }
+
+  .ui-datepicker-title {
+    font-weight: map-get($font-weight, bold);
+    margin-bottom: spacer(1);
+    text-align: center;
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+
+    th {
+      color: map-get($font-color, light);
+      font-weight: map-get($font-weight, normal);
+      font-size: map-get($font-size, milli);
+      text-transform: uppercase;
+    }
+
+    td {
+      text-align: center;
+      font-size: map-get($font-size, milli);
+
+      a {
+        display: block;
+        padding: 4px;
+        border: 1px solid transparent;
+      }
+    }
+
+    .ui-state-active,
+    .ui-state-hover {
+      border: 1px solid map-get($ui-color, brand);
+      background: map-get($background-color, brand-light);
+      border-radius: 2px;
+    }
+  }
+
+  .ui-datepicker-buttonpane { // Hiding nav buttons.
+    display: none;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    position: absolute;
+    top: spacer(1);
+    cursor: pointer;
+  }
+
+  .ui-datepicker-prev {
+    left: spacer(1);
+  }
+
+  .ui-datepicker-next {
+    right: spacer(1);
+  }
+}

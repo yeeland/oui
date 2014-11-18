@@ -3,15 +3,17 @@
 
 @import 'compass';
 
-// ## Retina Sprite Maker
-
-@import 'library/sprites/retina-sprites';
-
 // ## Core and Desktop variables
 // Import `core` and `desktop` variables
 
 @import 'core/core-variables';
 @import 'desktop/desktop-variables';
+
+// ## Libraries
+// 3rd party code.
+
+@import 'library/sprites/retina-sprites';
+@import 'library/jquery-ui/datepicker';
 
 // ## Core and Desktop partials
 // Import `core` and `desktop` partials
