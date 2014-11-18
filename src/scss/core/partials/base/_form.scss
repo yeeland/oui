@@ -217,6 +217,7 @@
 %lego-textarea,
 .lego-text-input,
 .lego-textarea {
+  @include transition(border-color map-get($transition-duration, base));
   width: 100%;
   border: 1px solid map-get($ui-color, base);
   border-radius: map-get($border-radius, base);

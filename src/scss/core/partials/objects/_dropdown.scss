@@ -82,6 +82,20 @@
 //     </div>
 //[/hc]
 
+// ### Dropdown with Input
+
+//[hc]
+//     <div class="lego-dropdown-group" v-dropdown>
+//       <input type="text" class="lego-text-input" data-toggle-dropdown />
+//       <ul class="lego-dropdown">
+//         <li class="lego-dropdown__item">
+//           <a href="#" class="lego-dropdown__block-link">Item One</a>
+//           <a href="#" class="lego-dropdown__block-link">Item Two</a>
+//         </li>
+//       </ul>
+//     </div>
+//[/hc]
+
 // ## SCSS
 
 .lego-dropdown-group {
