@@ -64,7 +64,7 @@
     .ui-state-hover {
       border: 1px solid map-get($ui-color, brand);
       background: map-get($background-color, brand-light);
-      border-radius: 2px;
+      border-radius: map-get($border-radius, base);
     }
   }
 
@@ -75,15 +75,47 @@
   .ui-datepicker-prev,
   .ui-datepicker-next {
     position: absolute;
-    top: spacer(1);
+    top: 22px; // Moving into correct position.
     cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid map-get($ui-color, brand);
+      background: map-get($background-color, brand-light);
+      border-radius: map-get($border-radius, base);
+    }
+
+    &:before {
+      @extend %lego-arrow-inline;
+      position: absolute;
+      top: 5px;
+      content: "";
+    }
+
+    .ui-icon {
+      display: block;
+      text-indent: -99999px; // Moving default prev/next text off screen.
+      overflow: hidden;
+    }
   }
 
   .ui-datepicker-prev {
-    left: spacer(1);
+    left: spacer(2.5);
+
+    &:before {
+      @extend %lego-arrow-inline--left;
+      left: 2px;
+    }
   }
 
   .ui-datepicker-next {
-    right: spacer(1);
+    right: spacer(2.5);
+
+    &:before {
+      @extend %lego-arrow-inline--right;
+      left: 3px;
+    }
   }
 }

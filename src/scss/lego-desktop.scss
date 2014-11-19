@@ -9,17 +9,21 @@
 @import 'core/core-variables';
 @import 'desktop/desktop-variables';
 
-// ## Libraries
-// 3rd party code.
+// ## Sprites
+// Retina and non-retina classes.
 
 @import 'library/sprites/retina-sprites';
-@import 'library/jquery-ui/datepicker';
 
 // ## Core and Desktop partials
 // Import `core` and `desktop` partials
 
 @import 'core/core-partials';
 @import 'desktop/desktop-partials';
+
+// ## Libraries
+// 3rd party code.
+
+@import 'library/jquery-ui/datepicker';
 
 // ## Trumps
 // Trumps use `!important` classes for overrides and should always be loaded last.
