@@ -1,0 +1,41 @@
+//# Dashboard Overrides
+// Overriding LEGO to restore legacy styling.
+
+
+#content.dashboard {
+  #project-container {
+
+    .box > .header,
+    .callout > .header {
+      height: 95px;
+    }
+
+    .box .tabs li,
+    .callout .tabs li {
+      font-size: 11px;
+      padding-bottom: 6px;
+    }
+  }
+
+  .show-archive {
+    width: 333px !important;
+  }
+
+  #create-button {
+    font-size: 12px !important;
+  }
+
+  .list table tr.experiment td.goal span {
+    width: 34px
+  }
+
+  #project-code {
+    width: 416px !important;
+    margin-bottom: 10px;
+  }
+}
+
+.menu div.submenu div.content,
+#changer-container div.change-menu div.submenu div.content {
+  padding-bottom: 30px !important;
+}

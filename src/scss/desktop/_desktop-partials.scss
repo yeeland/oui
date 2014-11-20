@@ -13,6 +13,10 @@
 
 // ## Legacy Overrides
 // This is all overrides to app.css
+
+@import 'partials/legacy_overrides/dashboard';
 @import 'partials/legacy_overrides/dialogs';
+@import 'partials/legacy_overrides/editor';
 @import 'partials/legacy_overrides/general';
+@import 'partials/legacy_overrides/results';
 @import 'partials/legacy_overrides/top-nav';
