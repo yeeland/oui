@@ -80,22 +80,27 @@
   -ms-flex-align: start;
   align-items: flex-start; }
 
-.lego-grid--gutter {
+.lego-matrix,
+.lego-grid {
   margin-left: -20px; }
-  .lego-grid--gutter > .lego-grid__cell {
+  .lego-grid__cell {
     padding-left: 20px; }
-.lego-grid--gutter--narrow {
-  margin-left: -10px; }
-  .lego-grid--gutter--narrow > .lego-grid__cell {
-    padding-left: 10px; }
-.lego-grid--gutter--wide {
-  margin-left: -40px; }
-  .lego-grid--gutter--wide > .lego-grid__cell {
-    padding-left: 40px; }
-.lego-grid__cell[class*="width-"] {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none; }
+  .lego-grid--gutter--narrow {
+    margin-left: -10px; }
+    .lego-grid--gutter--narrow > .lego-grid__cell {
+      padding-left: 10px; }
+  .lego-grid--gutter--wide {
+    margin-left: -40px; }
+    .lego-grid--gutter--wide > .lego-grid__cell {
+      padding-left: 40px; }
+  .lego-grid--flush {
+    margin-left: 0; }
+    .lego-grid--flush > .lego-grid__cell {
+      padding-left: 0; }
+  .lego-grid__cell[class*="width-"] {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none; }
 
 .lego-pane--full {
   height: 100%; }
@@ -383,7 +388,11 @@ b {
     border: 1px solid #e0e0e0; }
 
 code {
-  font-family: monospace; }
+  font-family: monospace;
+  background: #f7f7f7;
+  border-radius: 2px;
+  border: 1px solid #e0e0e0;
+  padding: 1px 3px; }
 
 .lego-form--small {
   font-size: 10px; }
@@ -1200,9 +1209,9 @@ a.lego-button {
   vertical-align: sub; }
 
 .lego-matrix {
-  margin-left: -10px; }
+  margin-left: -20px; }
   .lego-matrix > li {
-    padding-left: 10px; }
+    padding-left: 20px; }
 
 .lego-media__img {
   margin-right: 10px; }
@@ -1933,6 +1942,9 @@ p {
 
 .cursor--pointer {
   cursor: pointer !important; }
+
+.no-resize {
+  resize: none !important; }
 
 .push {
   margin: 10px !important; }
