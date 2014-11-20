@@ -6,6 +6,7 @@
 //[hc]
 //     <div class="lego-button-row--left">
 //       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
 //       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
 //       <button class="lego-button lego-button--danger">Go</button>
@@ -16,6 +17,7 @@
 //[hc]
 //     <div class="lego-button-row--center">
 //       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
 //       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
 //       <button class="lego-button lego-button--danger">Go</button>
@@ -26,6 +28,7 @@
 //[hc]
 //     <div class="lego-button-row--right">
 //       <button class="lego-button">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
 //       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
 //       <button class="lego-button lego-button--danger">Go</button>
@@ -36,6 +39,7 @@
 //[hc]
 //     <div class="lego-button-row--left">
 //       <button class="lego-button lego-button--small">Go</button>
+//       <button class="lego-button lego-button--small lego-button--basic">Go</button>
 //       <button class="lego-button lego-button--small lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--small lego-button--highlight">Go</button>
 //       <button class="lego-button lego-button--small lego-button--danger">Go</button>
@@ -92,54 +96,53 @@
   border-radius: map-get($border-radius, base);
   border-style: solid;
   border-width: 1px;
-  line-height: 1;
+  line-height: 1; 
 
   &:hover,
   &:active,
   &:visited,
   &:focus {
     outline: none;
-    color: map-get($font-color, base);
+    color: map-get($font-color, dark);
   }
 
   // ### Button Styles
   // Button color variations.
 
-  background: linear-gradient(#fff, #eee);
-  color: map-get($font-color, base);
+  background: map-get($ui-color, light);
+  color: map-get($font-color, dark);
   border-color: map-get($ui-color, base);
 
   &.lego-button--hover,
   &:hover {
-    background: linear-gradient(#fff, #e5e5e5);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background:linear-gradient(map-get($ui-color, light), map-get($ui-color, base)) ;
   }
 
   &.lego-button--active,
   &:active {
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
-    border-color: #bbb;
+    background:linear-gradient(map-get($ui-color, base), map-get($ui-color, light)) ;
   }
 
   &:visited,
   &:focus {
-    color: map-get($font-color, base);
+    color: map-get($font-color, dark);
   }
 
   &--brand {
-    background: linear-gradient(#147cc5, #1270b1);
-    border-color: #00558d;
+    background: map-get($ui-color, brand);
     color: map-get($font-color, white);
+    border-color: map-get($ui-color, brand-shadow);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 0 map-get($ui-color, brand-shadow);
 
     &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#038ae6, #1270b1);
+      background: linear-gradient(#0897D7, map-get($ui-color, brand));
     }
 
     &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #00558d;
+      background: linear-gradient(map-get($ui-color, brand), #0897D7);
     }
 
     &:hover,
@@ -151,19 +154,45 @@
   }
 
   &--highlight {
-    background: linear-gradient(#a1cd1e, #91b81c);
-    border-color: #719505;
+    background: map-get($ui-color, green);
     color: map-get($font-color, white);
+    border-color: map-get($ui-color, green-dark);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 0 map-get($ui-color, green-dark);
 
     &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#a3d60c, #91b81c);
+      background: linear-gradient(#A8DB4C, map-get($ui-color, green));
     }
 
     &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #719505;
+      background: linear-gradient(map-get($ui-color, green), #A8DB4C);
+    }
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: map-get($font-color, white);
+    }
+  }
+
+  &--basic {
+    background: map-get($ui-color, brand-medium);
+    color: map-get($font-color, white);
+    border-color: map-get($ui-color, brand-dark);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 0 map-get($ui-color, brand-dark);
+
+    &.lego-button--hover,
+    &:hover {
+      background:linear-gradient(map-get($ui-color, brand-medium-light), map-get($ui-color, brand-medium)) ;
+    }
+
+    &.lego-button--active,
+    &:active {
+      background:linear-gradient(map-get($ui-color, brand-medium), map-get($ui-color, brand-medium-light));
     }
 
     &:hover,
@@ -175,19 +204,19 @@
   }
 
   &--danger {
-    background: linear-gradient(#aa280d, #991e04);
-    border-color: #641100;
+    background: map-get($ui-color, bad-news);
     color: map-get($font-color, white);
+    border-color: #912C05;
+    box-shadow: 0 2px 0 #912C05;
 
     &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#c02c0c, #991e04);
+      background: linear-gradient(#E04D14, map-get($ui-color, bad-news));
     }
 
     &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #641100;
+      background: linear-gradient(map-get($ui-color, bad-news), #E04D14);
     }
 
     &:hover,

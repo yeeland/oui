@@ -1,3 +1,4 @@
+
 // # Core Variables
 // Variables for all elements and objects in core should be listed here.
 
@@ -37,8 +38,17 @@ $ui-color: (
   black                        : $base-black,
 
   brand                        : #0081ba,
+  // used for shadow of light blue buttons
+  brand-shadow                 : #045C83,
   brand-light                  : #9acce2,
-  brand-dark                   : #036,
+  // used for darker blue buttons
+  brand-medium                 : #3B5871,
+  // used for darker blue buttons hover
+  brand-medium-light           : #64738A,
+  brand-dark                   : #00415D,
+  green                        : #95C63D,
+  green-dark                   : #6A9F0A,
+  green-light                  : #A6D551,
   warning                      : #ffd40c,
   bad-news                     : #c6400c,
   good-news                    : #97c70a
