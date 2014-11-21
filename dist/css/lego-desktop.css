@@ -775,31 +775,63 @@ li > ol {
     border-color: #c6400c;
     background-color: #f9e3e4; }
 
-.lego-pop-tip--arrow-top-center, .lego-pop-tip--arrow-top-left, .lego-pop-tip--arrow-top-right, .lego-pop-upsell--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right, .lego-pop-upsell--arrow-left, .lego-pop-upsell--arrow-right, .lego-pop-tip--arrow-bottom-center, .lego-pop-tip--arrow-bottom-left, .lego-pop-tip--arrow-bottom-right, .lego-pop-upsell--arrow-bottom {
+.lego-pop-tip--arrow-top-center, .lego-pop-tip--arrow-top-left, .lego-pop-tip--arrow-top-right,
+.lego-popover--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right,
+.lego-popover--arrow-left,
+.lego-popover--arrow-right, .lego-pop-tip--arrow-bottom-center, .lego-pop-tip--arrow-bottom-left, .lego-pop-tip--arrow-bottom-right,
+.lego-popover--arrow-bottom {
   position: relative; }
-  .lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before, .lego-pop-upsell--arrow-top:before, .lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before, .lego-pop-upsell--arrow-left:before, .lego-pop-upsell--arrow-right:before, .lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before, .lego-pop-upsell--arrow-bottom:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after, .lego-pop-upsell--arrow-top:after, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-left:after, .lego-pop-upsell--arrow-right:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after, .lego-pop-upsell--arrow-bottom:after {
+  .lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before,
+  .lego-popover--arrow-top:before, .lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before,
+  .lego-popover--arrow-left:before,
+  .lego-popover--arrow-right:before, .lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before,
+  .lego-popover--arrow-bottom:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after,
+  .lego-popover--arrow-top:after, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after,
+  .lego-popover--arrow-left:after,
+  .lego-popover--arrow-right:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after,
+  .lego-popover--arrow-bottom:after {
     content: '';
     position: absolute;
     border-collapse: separate;
     pointer-events: none; }
-  .lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before, .lego-pop-upsell--arrow-top:before, .lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before, .lego-pop-upsell--arrow-left:before, .lego-pop-upsell--arrow-right:before, .lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before, .lego-pop-upsell--arrow-bottom:before {
+  .lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before,
+  .lego-popover--arrow-top:before, .lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before,
+  .lego-popover--arrow-left:before,
+  .lego-popover--arrow-right:before, .lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before,
+  .lego-popover--arrow-bottom:before {
     border: 6px solid transparent; }
-  .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after, .lego-pop-upsell--arrow-top:after, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-left:after, .lego-pop-upsell--arrow-right:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after, .lego-pop-upsell--arrow-bottom:after {
+  .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after,
+  .lego-popover--arrow-top:after, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after,
+  .lego-popover--arrow-left:after,
+  .lego-popover--arrow-right:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after,
+  .lego-popover--arrow-bottom:after {
     border: 5px solid transparent; }
 
-.lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before, .lego-pop-upsell--arrow-top:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after, .lego-pop-upsell--arrow-top:after {
+.lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-top-right:before,
+.lego-popover--arrow-top:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-top-right:after,
+.lego-popover--arrow-top:after {
   bottom: 100%; }
 
-.lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before, .lego-pop-upsell--arrow-left:before, .lego-pop-upsell--arrow-right:before, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-left:after, .lego-pop-upsell--arrow-right:after {
+.lego-pop-tip--arrow-left:before, .lego-pop-tip--arrow-right:before,
+.lego-popover--arrow-left:before,
+.lego-popover--arrow-right:before, .lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after,
+.lego-popover--arrow-left:after,
+.lego-popover--arrow-right:after {
   top: 50%;
   margin-top: -6px; }
-.lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-left:after, .lego-pop-upsell--arrow-right:after {
+.lego-pop-tip--arrow-left:after, .lego-pop-tip--arrow-right:after,
+.lego-popover--arrow-left:after,
+.lego-popover--arrow-right:after {
   margin-top: -5px; }
 
-.lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before, .lego-pop-upsell--arrow-bottom:before, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after, .lego-pop-upsell--arrow-bottom:after {
+.lego-pop-tip--arrow-bottom-center:before, .lego-pop-tip--arrow-bottom-left:before, .lego-pop-tip--arrow-bottom-right:before,
+.lego-popover--arrow-bottom:before, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-tip--arrow-bottom-left:after, .lego-pop-tip--arrow-bottom-right:after,
+.lego-popover--arrow-bottom:after {
   top: 100%; }
 
-.lego-pop-tip--arrow-left:before, .lego-pop-upsell--arrow-left:before, .lego-pop-tip--arrow-left:after, .lego-pop-upsell--arrow-left:after {
+.lego-pop-tip--arrow-left:before,
+.lego-popover--arrow-left:before, .lego-pop-tip--arrow-left:after,
+.lego-popover--arrow-left:after {
   right: 100%; }
 
 .lego-pop-tip--arrow-top-left:before, .lego-pop-tip--arrow-bottom-left:before {
@@ -807,10 +839,16 @@ li > ol {
 .lego-pop-tip--arrow-top-left:after, .lego-pop-tip--arrow-bottom-left:after {
   left: 6px; }
 
-.lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-bottom-center:before, .lego-pop-upsell--arrow-top:before, .lego-pop-upsell--arrow-bottom:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-upsell--arrow-top:after, .lego-pop-upsell--arrow-bottom:after {
+.lego-pop-tip--arrow-top-center:before, .lego-pop-tip--arrow-bottom-center:before,
+.lego-popover--arrow-top:before,
+.lego-popover--arrow-bottom:before, .lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-bottom-center:after,
+.lego-popover--arrow-top:after,
+.lego-popover--arrow-bottom:after {
   left: 50%;
   margin-left: -6px; }
-.lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-bottom-center:after, .lego-pop-upsell--arrow-top:after, .lego-pop-upsell--arrow-bottom:after {
+.lego-pop-tip--arrow-top-center:after, .lego-pop-tip--arrow-bottom-center:after,
+.lego-popover--arrow-top:after,
+.lego-popover--arrow-bottom:after {
   margin-left: -5px; }
 
 .lego-pop-tip--arrow-top-right:before, .lego-pop-tip--arrow-bottom-right:before {
@@ -818,7 +856,9 @@ li > ol {
 .lego-pop-tip--arrow-top-right:after, .lego-pop-tip--arrow-bottom-right:after {
   right: 6px; }
 
-.lego-pop-tip--arrow-right:before, .lego-pop-upsell--arrow-right:before, .lego-pop-tip--arrow-right:after, .lego-pop-upsell--arrow-right:after {
+.lego-pop-tip--arrow-right:before,
+.lego-popover--arrow-right:before, .lego-pop-tip--arrow-right:after,
+.lego-popover--arrow-right:after {
   left: 100%; }
 
 .lego-arrow-inline--up,
@@ -849,42 +889,46 @@ li > ol {
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent; }
 
-.lego-dropdown, .lego-pop-upsell,
+.lego-dropdown,
+.lego-popover,
 .lego-block-list-group,
 .lego-block-list {
   list-style: none;
   margin-left: 0; }
-  .lego-dropdown > li, .lego-pop-upsell > li,
+  .lego-dropdown > li,
+  .lego-popover > li,
   .lego-block-list-group > li,
   .lego-block-list > li {
     padding: 5px 10px;
     border-top: 1px solid #efefef; }
-  .lego-dropdown__block-link, .lego-pop-upsell__link a,
+  .lego-dropdown__block-link,
   .lego-block-list__link {
     display: block;
     padding: 5px 10px;
     margin-left: -10px;
     margin-right: -10px; }
-    .lego-dropdown__block-link:hover, .lego-pop-upsell__link a:hover,
+    .lego-dropdown__block-link:hover,
     .lego-block-list__link:hover {
       background-color: #f2f7fc; }
     .lego-block-list__link--active {
       background-color: #f7f7f7; }
-    .lego-dropdown__block-link:first-child, .lego-pop-upsell__link a:first-child,
+    .lego-dropdown__block-link:first-child,
     .lego-block-list__link:first-child {
       margin-top: -5px; }
-    .lego-dropdown__block-link:last-child, .lego-pop-upsell__link a:last-child,
+    .lego-dropdown__block-link:last-child,
     .lego-block-list__link:last-child {
       margin-bottom: -5px; }
   .lego-block-list--flush li {
     padding-left: 0;
     padding-right: 0; }
 
-.lego-dropdown, .lego-pop-upsell,
+.lego-dropdown,
+.lego-popover,
 .lego-block-list-group {
   border: 1px solid #e0e0e0;
   border-radius: 2px; }
-  .lego-dropdown > li:first-child, .lego-pop-upsell > li:first-child,
+  .lego-dropdown > li:first-child,
+  .lego-popover > li:first-child,
   .lego-block-list-group > li:first-child {
     border: 0; }
 
@@ -1283,33 +1327,27 @@ a.lego-button {
   .lego-pop-tip--arrow-right:after {
     border-left-color: #262626 !important; }
 
-.lego-pop-upsell {
+.lego-popover {
   max-width: 250px;
   display: inline-block;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
-  .lego-pop-upsell__title {
+  .lego-popover__title {
     font-weight: 500; }
-  .lego-pop-upsell__link {
-    background: #0081ba; }
-    .lego-pop-upsell__link a {
-      color: white; }
-      .lego-pop-upsell__link a:hover {
-        background: #0081ba; }
-  .lego-pop-upsell--arrow-top:before {
+  .lego-popover--arrow-top:before {
     border-bottom-color: #e0e0e0 !important; }
-  .lego-pop-upsell--arrow-top:after {
+  .lego-popover--arrow-top:after {
     border-bottom-color: white !important; }
-  .lego-pop-upsell--arrow-bottom:before {
-    border-top-color: #0081ba !important; }
-  .lego-pop-upsell--arrow-bottom:after {
-    border-top-color: #0081ba !important; }
-  .lego-pop-upsell--arrow-left:before {
+  .lego-popover--arrow-bottom:before {
+    border-top-color: #e0e0e0 !important; }
+  .lego-popover--arrow-bottom:after {
+    border-top-color: white !important; }
+  .lego-popover--arrow-left:before {
     border-right-color: #e0e0e0 !important; }
-  .lego-pop-upsell--arrow-left:after {
+  .lego-popover--arrow-left:after {
     border-right-color: white !important; }
-  .lego-pop-upsell--arrow-right:before {
+  .lego-popover--arrow-right:before {
     border-left-color: #e0e0e0 !important; }
-  .lego-pop-upsell--arrow-right:after {
+  .lego-popover--arrow-right:after {
     border-left-color: white !important; }
 
 .lego-progress {
@@ -2087,13 +2125,16 @@ p {
 .lego-form-fields > *:last-child, .lego-notification > *:last-child,
 .lego-attention > *:last-child, .lego-disclose > *:last-child, .lego-dialog__body > *:last-child,
 .lego-island > *:last-child,
-.lego-media__body > *:last-child, .lego-pop-upsell__content > *:last-child, .lego-form-fields > *:last-child > *:last-child, .lego-notification > *:last-child > *:last-child,
+.lego-media__body > *:last-child,
+.lego-popover__content > *:last-child, .lego-form-fields > *:last-child > *:last-child, .lego-notification > *:last-child > *:last-child,
 .lego-attention > *:last-child > *:last-child, .lego-disclose > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child,
 .lego-island > *:last-child > *:last-child,
-.lego-media__body > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child, .lego-form-fields > *:last-child > *:last-child > *:last-child, .lego-notification > *:last-child > *:last-child > *:last-child,
+.lego-media__body > *:last-child > *:last-child,
+.lego-popover__content > *:last-child > *:last-child, .lego-form-fields > *:last-child > *:last-child > *:last-child, .lego-notification > *:last-child > *:last-child > *:last-child,
 .lego-attention > *:last-child > *:last-child > *:last-child, .lego-disclose > *:last-child > *:last-child > *:last-child, .lego-dialog__body > *:last-child > *:last-child > *:last-child,
 .lego-island > *:last-child > *:last-child > *:last-child,
-.lego-media__body > *:last-child > *:last-child > *:last-child, .lego-pop-upsell__content > *:last-child > *:last-child > *:last-child {
+.lego-media__body > *:last-child > *:last-child > *:last-child,
+.lego-popover__content > *:last-child > *:last-child > *:last-child {
   margin-bottom: 0; }
 
 .soft {
