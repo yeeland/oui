@@ -101,47 +101,48 @@
 
 .lego-tabs-nav {
   @extend %flex;
-  border-bottom: 3px solid map-get($ui-color, base);
+  border-bottom: 1px solid map-get($ui-color, base);
 
   &__item {
     position: relative;
     text-align: center;
-    padding: spacer(1) spacer(1.5);
+    padding: spacer(.5) spacer(1.5);
+    margin: 0 spacer(.5);
     border: 1px solid map-get($ui-color, base);
-    border-right: none;
+    border-radius: map-get($border-radius, big) map-get($border-radius, big) 0 0;
     border-bottom: 0;
-    color: map-get($font-color, medium);
+    color: map-get($font-color, brand-dark);
     font-weight: map-get($font-weight, bold);
     background-color: map-get($background-color, faint);
     cursor: pointer;
 
     &:first-child {
-      border-radius: map-get($border-radius, big) 0 0 0;
+      margin-left: 0;
     }
 
-    &:last-child {
-      border-radius: 0 map-get($border-radius, big) 0 0;
-      border-right: 1px solid map-get($ui-color, base);
-    }
+    // &:last-child {
+    //   border-radius: 0 map-get($border-radius, big) 0 0;
+    //   border-right: 1px solid map-get($ui-color, base);
+    // }
 
     &:hover,
     &.tab-active {
-      color: map-get($font-color, brand);
     }
 
     &.tab-active {
-      background-color: map-get($background-color, white);
+      background-color: map-get($background-color, brand-dark);
+      color: map-get($font-color, white);
 
-      &:after { // Creates the white bar under the active tab.
-        content: '';
-        display: block;
-        height: 3px;
-        background: map-get($background-color, white);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -3px;
-      }
+      // &:after { // Creates the white bar under the active tab.
+      //   content: '';
+      //   display: block;
+      //   height: 3px;
+      //   background: map-get($background-color, white);
+      //   position: absolute;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: -3px;
+      // }
     }
   }
 }
@@ -153,7 +154,7 @@
   }
 
   .lego-tabs-nav__item {
-    background-color: transparent;
+    // background-color: transparent;
     padding: spacer(0.5) spacer(1);
     font-size: map-get($font-size, milli);
   }

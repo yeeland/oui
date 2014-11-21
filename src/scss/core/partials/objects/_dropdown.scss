@@ -95,6 +95,11 @@
       visibility: visible;
     }
   }
+  
+  .lego-button {
+    background: map-get($background-color, white);
+    box-shadow: none;
+  }
 }
 
 %lego-dropdown,
@@ -127,5 +132,10 @@
   &--right {
     right: 0;
     left: auto;
+  }
+
+  .lego-button {
+    background: map-get($background-color, white);
+    box-shadow: none;
   }
 }

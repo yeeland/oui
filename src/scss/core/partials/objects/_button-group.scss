@@ -72,6 +72,10 @@
   > .lego-text-input {
     @extend %flex-1;
     width: auto;
+
+    ~ .lego-button {
+      box-shadow: none;
+    }
   }
 
   // If inside a button group bring the colored buttons to the top so that the borders are intact.

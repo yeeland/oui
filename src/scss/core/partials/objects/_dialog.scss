@@ -29,6 +29,7 @@
 
 .lego-dialog {
   box-shadow: 0 0 map-get($shadow, big);
+  border-radius: map-get($border-radius, base);
   width: map-get($dialog, width-base);
 
   &--narrow {
@@ -45,23 +46,15 @@
     padding: spacer(2);
   }
 
-  &__header,
-  &__footer {
-    background-color: map-get($background-color, faint);
-  }
-
   &__header {
-    border-bottom: 1px solid map-get($ui-color, light);
-  }
-
-  &__footer {
-    border-top: 1px solid map-get($ui-color, light);
+    background-color: map-get($background-color, brand-dark);
+    border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
   }
 
   &__title {
     font-size: map-get($font-size, gamma);
     letter-spacing: -1px;
-    color: map-get($font-color, brand-dark);
+    color: map-get($font-color, white);
     line-height: 1;
   }
 

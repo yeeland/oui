@@ -33,22 +33,16 @@ $ui-color: (
   faint                        : $grey-03,
   light                        : $grey-06,
   base                         : $grey-12,
+  silver                       : $grey-20,
   medium                       : $grey-40,
   dark                         : $grey-85,
   black                        : $base-black,
 
   brand                        : #0081ba,
-  // used for shadow of light blue buttons
-  brand-shadow                 : #045C83,
   brand-light                  : #9acce2,
-  // used for darker blue buttons
-  brand-medium                 : #3B5871,
-  // used for darker blue buttons hover
-  brand-medium-light           : #64738A,
   brand-dark                   : #00415D,
-  green                        : #95C63D,
-  green-dark                   : #6A9F0A,
-  green-light                  : #A6D551,
+  blue                         : #3B5871,
+  green                        : #0B9D76,
   warning                      : #ffd40c,
   bad-news                     : #c6400c,
   good-news                    : #97c70a
@@ -106,7 +100,7 @@ $font-color: (
 // These defaults can be overriden by custom variables.
 
 $font-size: (
-  base                : 12px,
+  base                : 13px,
   micro               : 10px,
   milli               : 11px,
 
@@ -135,7 +129,7 @@ $line-height: (
 // ### Font Family
 
 $font-family: (
-  base                         : unquote("'Gotham SSm A', 'Gotham SSm B', Helvetica, Verdana, sans-serif"),
+  base                         : unquote("'Proxima Nova', Helvetica, Verdana, sans-serif"),
   monospace                    : monospace
 );
 
@@ -144,7 +138,7 @@ $font-family: (
 $font-weight: (
   light                        : 300,
   normal                       : 400,
-  bold                         : 500
+  bold                         : 600
 );
 
 // ### Font Spacing
@@ -195,7 +189,7 @@ $input-focus-border-color      : map-get($ui-color, brand-light);
 // ### Buttons
 
 $button: (
-  height-default               : 31px,
+  height-default               : 32px,
   height-small                 : 24px
 );
 
