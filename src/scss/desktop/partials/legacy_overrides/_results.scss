@@ -1,3 +1,59 @@
 //# Results Overrides
 // Overriding LEGO to restore legacy styling.
 
+#report-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.titles .name {
+  font-weight: 300;
+}
+
+.sub-header-nav > li {
+  font-size: inherit;
+}
+
+.title-container {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 300;
+}
+
+body.results2 .conclusion-summary .conclusion-message {
+  margin-top: 8px;
+}
+
+body.results2 .primary-metric {
+  font-size: 12px;
+}
+
+.white-button.small {
+  height: 30px;
+}
+
+li.white-button.small > * {
+  position: relative;
+  top: -2px;
+}
+
+body.results2 #saved-reports h6 {
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+#navigation-container h5 {
+  margin: 0;
+}
+
+.page-loading-container,
+.viewer-loading-container {
+  img {
+    display: inline-block;
+  }
+}
+
+#explorer-controls a {
+  cursor: pointer;
+  font-size: 16px;
+}
