@@ -44,7 +44,6 @@ define(function() {
           arrowLocation = 'top-center';
           break;
         // Fallthrough and default to top
-        case 'top':
         default:
           arrowLocation = 'bottom-center';
       }
