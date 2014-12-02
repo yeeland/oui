@@ -88,6 +88,6 @@
     background: map-get($background-color, black);
     color: map-get($ui-color, white);
     border: 2px solid map-get($ui-color, white);
-    box-shadow: 0 0 map-get($shadow, base);
+    box-shadow: 0 0 map-get($shadow, big);
   }
 }
