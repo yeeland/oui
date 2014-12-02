@@ -369,13 +369,16 @@ html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   color: #262626;
-  background-color: #fff; }
+  background-color: white; }
 
 p {
   margin-bottom: 10px; }
 
 b {
   font-weight: 500; }
+
+code {
+  font-family: monospace; }
 
 .lego-pre {
   margin-bottom: 10px; }
@@ -387,8 +390,7 @@ b {
     border-radius: 2px;
     border: 1px solid #e0e0e0; }
 
-code {
-  font-family: monospace;
+.lego-code {
   background: #f7f7f7;
   border-radius: 2px;
   border: 1px solid #e0e0e0;
@@ -430,7 +432,7 @@ code {
   display: inline-block;
   height: 31px;
   line-height: 31px;
-  background: #fff;
+  background: white;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   padding: 7px; }
@@ -590,7 +592,7 @@ a,
 
 .lego-top-nav a,
 .link--reverse {
-  color: #fff !important; }
+  color: white !important; }
   .lego-top-nav a:hover,
   .link--reverse:hover {
     color: #d5eaf3 !important; }
@@ -942,7 +944,7 @@ li > ol {
   .lego-button--brand {
     background: linear-gradient(#147cc5, #1270b1);
     border-color: #00558d;
-    color: #fff; }
+    color: white; }
     .lego-button--brand.lego-button--hover,
     .lego-button--brand:hover {
       background: linear-gradient(#038ae6, #1270b1); }
@@ -954,11 +956,11 @@ li > ol {
     .lego-button--brand:active,
     .lego-button--brand:visited,
     .lego-button--brand:focus {
-      color: #fff; }
+      color: white; }
   .lego-button--highlight {
     background: linear-gradient(#a1cd1e, #91b81c);
     border-color: #719505;
-    color: #fff; }
+    color: white; }
     .lego-button--highlight.lego-button--hover,
     .lego-button--highlight:hover {
       background: linear-gradient(#a3d60c, #91b81c); }
@@ -970,11 +972,11 @@ li > ol {
     .lego-button--highlight:active,
     .lego-button--highlight:visited,
     .lego-button--highlight:focus {
-      color: #fff; }
+      color: white; }
   .lego-button--danger {
     background: linear-gradient(#aa280d, #991e04);
     border-color: #641100;
-    color: #fff; }
+    color: white; }
     .lego-button--danger.lego-button--hover,
     .lego-button--danger:hover {
       background: linear-gradient(#c02c0c, #991e04); }
@@ -986,7 +988,7 @@ li > ol {
     .lego-button--danger:active,
     .lego-button--danger:visited,
     .lego-button--danger:focus {
-      color: #fff; }
+      color: white; }
   .lego-button--small {
     padding: 4px 10px;
     height: 24px;
@@ -1100,7 +1102,7 @@ a.lego-button {
     visibility: visible; }
 
 .lego-dropdown {
-  background: #fff;
+  background: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   min-width: 100%;
   position: absolute;
@@ -1162,14 +1164,14 @@ a.lego-button {
   .lego-dialog__title {
     font-size: 20px;
     letter-spacing: -1px;
-    color: #036;
+    color: #003366;
     line-height: 1; }
   .lego-dialog__body {
     padding-bottom: 30px; }
 
 .lego-help-dot {
   background: #a5a5a5;
-  color: #fff;
+  color: white;
   width: 16px;
   height: 16px;
   text-align: center;
@@ -1243,7 +1245,7 @@ a.lego-button {
 
 .lego-pop-tip {
   background: #262626;
-  color: #fff;
+  color: white;
   border-radius: 2px;
   font-size: 10px;
   padding: 5px 10px;
@@ -1292,13 +1294,13 @@ a.lego-button {
   .lego-pop-upsell__link {
     background: #0081ba; }
     .lego-pop-upsell__link a {
-      color: #fff; }
+      color: white; }
       .lego-pop-upsell__link a:hover {
         background: #0081ba; }
   .lego-pop-upsell--arrow-top:before {
     border-bottom-color: #e0e0e0 !important; }
   .lego-pop-upsell--arrow-top:after {
-    border-bottom-color: #fff !important; }
+    border-bottom-color: white !important; }
   .lego-pop-upsell--arrow-bottom:before {
     border-top-color: #0081ba !important; }
   .lego-pop-upsell--arrow-bottom:after {
@@ -1306,11 +1308,11 @@ a.lego-button {
   .lego-pop-upsell--arrow-left:before {
     border-right-color: #e0e0e0 !important; }
   .lego-pop-upsell--arrow-left:after {
-    border-right-color: #fff !important; }
+    border-right-color: white !important; }
   .lego-pop-upsell--arrow-right:before {
     border-left-color: #e0e0e0 !important; }
   .lego-pop-upsell--arrow-right:after {
-    border-left-color: #fff !important; }
+    border-left-color: white !important; }
 
 .lego-progress {
   background: #f7f7f7;
@@ -1327,7 +1329,7 @@ a.lego-button {
     background: #0081ba;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     line-height: 20px;
-    color: #fff;
+    color: white;
     font-size: 11px;
     text-align: center;
     min-width: 20px; }
@@ -1442,7 +1444,7 @@ a.lego-button {
     border-radius: 50%;
     background: #e0e0e0;
     border: 3px solid #e0e0e0;
-    background: #fff;
+    background: white;
     z-index: 1; }
   .lego-steps__label {
     text-align: center;
@@ -1494,12 +1496,12 @@ a.lego-button {
     .lego-tabs-nav__item:hover, .lego-tabs-nav__item.tab-active {
       color: #0081ba; }
     .lego-tabs-nav__item.tab-active {
-      background-color: #fff; }
+      background-color: white; }
       .lego-tabs-nav__item.tab-active:after {
         content: '';
         display: block;
         height: 3px;
-        background: #fff;
+        background: white;
         position: absolute;
         left: 0;
         right: 0;
@@ -1695,7 +1697,7 @@ hgroup .hn {
   -o-transition: left 0.3s;
   -webkit-transition: left 0.3s;
   transition: left 0.3s;
-  background: #fff;
+  background: white;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
   width: 320px;
   position: absolute;
@@ -1753,8 +1755,8 @@ hgroup .hn {
   white-space: nowrap; }
 
 .lego-top-nav {
-  background-color: #036;
-  color: #fff;
+  background-color: #003366;
+  color: white;
   padding: 0 20px; }
   .lego-top-nav__item {
     margin-right: 20px; }
@@ -1805,6 +1807,103 @@ form.standard p,
 .dialog-backdrop .dialog-frame .dialog__title {
   font-size: 24px; }
 
+#settings-dialog #user-table thead td {
+  font-size: 12px; }
+
+#settings-dialog .invite-container label {
+  font-size: 14px; }
+
+#settings-dialog .invite-container #additional-projects label span {
+  font-size: 14px; }
+
+.dialog .content .header h1, .message-dialog .content .header h1, .dialog .content .header h2, .message-dialog .content .header h2 {
+  font-size: 30px;
+  font-weight: 100; }
+
+.dialog .content h3, .message-dialog .content h3 {
+  font-size: 18px; }
+
+#settings-dialog #user-table tbody td.user-email {
+  font-size: 14px; }
+
+#settings-dialog .project-name div.right {
+  font-size: 16px; }
+
+.log-viewer-datepicker-container {
+  font-size: 14px; }
+
+#settings-dialog .invite-container input[type="text"] {
+  font-size: 14px; }
+
+#settings-dialog .invite-container #invite-message {
+  font-size: 12px; }
+
+#settings-dialog #user-table .others-button a {
+  font-size: 12px;
+  font-weight: 200; }
+
+#settings-dialog .invite-container span.error {
+  display: block; }
+
+#settings-dialog #send-invite {
+  margin-bottom: 22px; }
+
+#settings-dialog .invite-container #additional-projects-intro {
+  font-size: 12px; }
+
+#container.edit {
+  font-size: 1.35em; }
+  #container.edit .variations__list__item > a {
+    color: #6b6b6b !important; }
+  #container.edit .variations__list__item--create a {
+    color: #AAA !important; }
+
+.loading-message-container .loading-progress {
+  height: 13px; }
+.loading-message-container .ui-progressbar .ui-progressbar-value {
+  height: 120%; }
+.loading-message-container #load-fail-messages .alert-box {
+  font-size: 12px;
+  line-height: 17px; }
+.loading-message-container pre#project-code {
+  margin-bottom: 10px; }
+.loading-message-container code {
+  background: none;
+  border: none;
+  font-size: 12px; }
+
+#variation-code-popup #show-variation-code-button {
+  padding-bottom: 17px; }
+
+#changer-container.ui-draggable div.change-menu div.submenu div.content {
+  padding-bottom: 8px !important; }
+
+#changer-container div.change-window div.footer a {
+  width: auto; }
+
+.dropdown-item img {
+  display: inline; }
+
+.toolbar__title.editable:hover {
+  color: #006eb6; }
+  .toolbar__title.editable:hover:after {
+    content: ''; }
+
+.help-button:hover div.help-bubble {
+  text-indent: 0; }
+
+#goals-dialog.expanded > div.content div.shrink-message {
+  height: auto !important; }
+
+#goals-dialog.expanded > div.content div.click-goal-controls {
+  height: 106px !important; }
+
+#goals-dialog.expanded > div.content div.frame-container {
+  bottom: 27px !important; }
+
+#upsell-subscribe > a > img {
+  display: inline; }
+
 body {
   color: inherit;
   background: inherit;
@@ -1834,6 +1933,49 @@ p {
   font-size: inherit;
   line-height: inherit; }
 
+#report-title {
+  font-size: 24px;
+  font-weight: 300; }
+
+.titles .name {
+  font-weight: 300; }
+
+.sub-header-nav > li {
+  font-size: inherit; }
+
+.title-container {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 300; }
+
+body.results2 .conclusion-summary .conclusion-message {
+  margin-top: 8px; }
+
+body.results2 .primary-metric {
+  font-size: 12px; }
+
+.white-button.small {
+  height: 30px; }
+
+li.white-button.small > * {
+  position: relative;
+  top: -2px; }
+
+body.results2 #saved-reports h6 {
+  font-size: inherit;
+  text-transform: uppercase; }
+
+#navigation-container h5 {
+  margin: 0; }
+
+.page-loading-container img,
+.viewer-loading-container img {
+  display: inline-block; }
+
+#explorer-controls a {
+  cursor: pointer;
+  font-size: 16px; }
+
 #top .logo {
   margin-bottom: 0; }
 #top .nav-top > li > a {
@@ -1856,7 +1998,7 @@ p {
   padding-left: 8px 13px 8px; }
 
 .background--white {
-  background-color: #fff !important; }
+  background-color: white !important; }
 
 .background--faint {
   background-color: #f7f7f7 !important; }
@@ -1874,7 +2016,7 @@ p {
   background-color: #0081ba !important; }
 
 .background--brand-dark {
-  background-color: #036 !important; }
+  background-color: #003366 !important; }
 
 .background--warning {
   background-color: #fcf8e3 !important; }
@@ -2278,7 +2420,7 @@ p {
   text-decoration: line-through; }
 
 .reverse {
-  color: #fff !important; }
+  color: white !important; }
 
 .muted {
   color: #a5a5a5; }
@@ -2379,5 +2521,3 @@ p {
 
 .height-300 {
   height: 300px !important; }
-
-/*# sourceMappingURL=lego-desktop.css.map */
