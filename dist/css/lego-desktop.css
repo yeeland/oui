@@ -1769,7 +1769,7 @@ hgroup .hn {
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
   width: 320px;
   position: absolute;
-  top: 0;
+  top: 40px;
   left: -330px;
   bottom: 0; }
   .lego-project-drawer--active {

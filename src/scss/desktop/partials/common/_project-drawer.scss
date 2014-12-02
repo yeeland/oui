@@ -6,7 +6,7 @@
   box-shadow: 1px 0 map-get($shadow, light);
   width: map-get($layout-width, project-drawer);
   position: absolute;
-  top: 0;
+  top: 40px; // Clearing nav bar spacing.
   left: -(map-get($layout-width, project-drawer) + 10); // Extra space to clear the shadow.
   bottom: 0;
 
