@@ -1,6 +1,11 @@
 // # Grids
 // Fluid and nestable grid system, e.g.:
 
+// ## Examples
+
+// ### Grid Gutter
+// If you want a gutter between grid items.
+
 //[hc]
 //     <div class="lego-grid">
 //       <div class="lego-grid__cell width-3-5">
@@ -14,24 +19,6 @@
 //       </div>
 //     </div>
 //[/hc]
-
-// ## Grid Gutter
-// If you want a gutter between grid items.
-
-//[hc]
-//     <div class="lego-grid lego-grid--gutter">
-//       <div class="lego-grid__cell width-3-5">
-//         <div class="docs-placeholder">3/5</div>
-//       </div>
-//       <div class="lego-grid__cell width-1-5">
-//         <div class="docs-placeholder">1/5</div>
-//       </div>
-//       <div class="lego-grid__cell width-1-5">
-//         <div class="docs-placeholder">1/5</div>
-//       </div>
-//     </div>
-//[/hc]
-
 
 //[hc]
 //     <div class="lego-grid lego-grid--gutter--narrow">
@@ -47,7 +34,6 @@
 //     </div>
 //[/hc]
 
-
 //[hc]
 //     <div class="lego-grid lego-grid--gutter--wide">
 //       <div class="lego-grid__cell width-3-5">
@@ -62,21 +48,48 @@
 //     </div>
 //[/hc]
 
+// ### Grid Flush
+
+//[hc]
+//     <div class="lego-grid lego-grid--flush">
+//       <div class="lego-grid__cell width-3-5">
+//         <div class="docs-placeholder">3/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//     </div>
+//[/hc]
+
+// ### Different Widths
+
+//[hc]
+//     <div class="lego-grid">
+//       <div class="lego-grid__cell width-3-5">
+//         <div class="docs-placeholder">3/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//       <div class="lego-grid__cell width-1-5">
+//         <div class="docs-placeholder">1/5</div>
+//       </div>
+//     </div>
+//[/hc]
+
+
 %lego-grid,
 .lego-grid {
   @extend %flex;
   @extend %flex-wrap--wrap;
+  margin-left: -(spacer(2));
 
   &__cell {
     @extend %flex-1;
-  }
-
-  &--gutter {
-    margin-left: -(spacer(2));
-
-    > .lego-grid__cell {
-      padding-left: spacer(2);
-    }
+    padding-left: spacer(2);
   }
 
   &--gutter--narrow {
@@ -92,6 +105,14 @@
 
     > .lego-grid__cell {
       padding-left: spacer(4);
+    }
+  }
+
+  &--flush {
+    margin-left: 0;
+
+    > .lego-grid__cell {
+      padding-left: 0;
     }
   }
 

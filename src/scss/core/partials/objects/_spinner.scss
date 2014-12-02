@@ -18,12 +18,12 @@
 // ### With Overlay
 // This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
 
-//[hc]
+//[c]
 //     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
 //     <div class="lego-overlay">
 //       <div class="lego-spinner lego-spinner--small"></div>
 //     </div>
-//[/hc]
+//[/c]
 
 // Note: To position spinner target `.lego-spinner-wrap`.
 

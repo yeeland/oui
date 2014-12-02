@@ -1,0 +1,79 @@
+// # Popover
+// Information bubbles on hover. Almost always used with `postition: absolute`.
+
+// ## Examples
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-bottom">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Feature Name</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-top">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Feature Name</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-right">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Feature Name</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-left">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Feature Name</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+// ## SCSS
+
+$popover-background: map-get($ui-color, white);
+$popover-border: map-get($ui-color, base);
+
+%lego-popover,
+.lego-popover {
+  @extend %lego-block-list-group;
+  max-width: 250px;
+  display: inline-block;
+  box-shadow: 0 2px map-get($shadow, light);
+
+  &__content {
+    @extend %kill-last-child-margin;
+  }
+
+  &__title {
+    font-weight: map-get($font-weight, bold);
+  }
+
+  // Arrow options.
+
+  &--arrow-top {
+    @include arrow(top, center, $popover-background, $popover-border);
+  }
+
+  &--arrow-bottom {
+    @include arrow(bottom, center, $popover-background, $popover-border);
+  }
+
+  &--arrow-left {
+    @include arrow(left, center, $popover-background, $popover-border);
+  }
+
+  &--arrow-right {
+    @include arrow(right, center, $popover-background, $popover-border);
+  }
+}
