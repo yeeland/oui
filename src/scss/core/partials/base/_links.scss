@@ -30,9 +30,34 @@ a,
   }
 }
 
+%link--dark,
+.link--dark {
+  color: map-get($font-color, base);
+  cursor: pointer;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: map-get($link-color, base);
+  }
+}
+
+%link--bad-news,
+.link--bad-news {
+  color: map-get($font-color, base);
+  cursor: pointer;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: map-get($link-color, bad-news);
+  }
+}
+
 %link--reverse,
 .link--reverse {
   color: map-get($link-color, white) !important;
+  cursor: pointer;
 
   &:hover {
     color: lighten(map-get($link-color, brand-light), 15%) !important;

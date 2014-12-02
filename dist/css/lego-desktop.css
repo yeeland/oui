@@ -588,9 +588,26 @@ a,
   .link:hover {
     color: #00a4ed; }
 
+.link--dark {
+  color: #262626;
+  cursor: pointer; }
+  .link--dark:visited,
+  .link--dark:hover,
+  .link--dark:active {
+    color: #0081ba; }
+
+.link--bad-news {
+  color: #262626;
+  cursor: pointer; }
+  .link--bad-news:visited,
+  .link--bad-news:hover,
+  .link--bad-news:active {
+    color: #c6400c; }
+
 .lego-top-nav a,
 .link--reverse {
-  color: white !important; }
+  color: white !important;
+  cursor: pointer; }
   .lego-top-nav a:hover,
   .link--reverse:hover {
     color: #d5eaf3 !important; }

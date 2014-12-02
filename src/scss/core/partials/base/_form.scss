@@ -29,7 +29,7 @@
 //               <div class="lego-grid__cell">
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
 //               </div>
-//               <svg class="lego-icon push--left cursor--pointer">
+//               <svg class="lego-icon push-double--left cursor--pointer">
 //                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
 //               </svg>
 //               <svg class="lego-icon push--left cursor--pointer">
@@ -37,6 +37,47 @@
 //               </svg>
 //             </div>
 //           </li>
+//           <li class="lego-form-field__item">
+//             <div class="lego-grid">
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">Add/Remove Row</label>
+//                 <input type="text" class="lego-text-input">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <label class="lego-label">&nbsp;</label>
+//                 <div class="lego-grid align-items--center">
+//                   <div class="lego-grid__cell">
+//                     <input type="text" class="lego-text-input">
+//                   </div>
+//                   <svg class="lego-icon push-double--left link--dark">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//                   </svg>
+//                   <svg class="lego-icon push--left link--bad-news">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+//                   </svg>
+//                 </div>
+//               </div>
+//             </div>
+//           </li>
+//           <li class="lego-form-field__item">
+//             <div class="lego-grid">
+//               <div class="lego-grid__cell">
+//                 <input type="text" class="lego-text-input">
+//               </div>
+//               <div class="lego-grid__cell">
+//                 <div class="lego-grid align-items--center">
+//                   <div class="lego-grid__cell">
+//                     <input type="text" class="lego-text-input">
+//                   </div>
+//                   <svg class="lego-icon push-double--left link--dark">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//                   </svg>
+//                   <svg class="lego-icon push--left link--bad-news">
+//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+//                   </svg>
+//                 </div>
+//               </div>
+//             </div>
 //           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Textarea</label>
@@ -51,7 +92,7 @@
 //             <input type="text" class="lego-text-input width-250">
 //           </li>
 //           <li class="lego-form-field__item">
-//             <div class="lego-grid lego-grid--gutter">
+//             <div class="lego-grid">
 //               <div class="lego-grid__cell">
 //                 <label class="lego-label">Split Inputs</label>
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
@@ -63,7 +104,7 @@
 //             </div>
 //           </li>
 //           <li class="lego-form-field__item">
-//             <div class="lego-grid lego-grid--gutter">
+//             <div class="lego-grid">
 //               <div class="lego-grid__cell">
 //                 <label class="lego-label">Split Inputs</label>
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
@@ -78,7 +119,7 @@
 //             </div>
 //           </li>
 //           <li class="lego-form-field__item">
-//             <div class="lego-grid lego-grid--gutter">
+//             <div class="lego-grid">
 //               <div class="lego-grid__cell">
 //                 <label class="lego-label">Split Inputs</label>
 //                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
