@@ -63,6 +63,7 @@ $background-color: (
   light                        : $grey-06,
   muted                        : $grey-35,
   medium                       : $grey-50,
+  black                        : $base-black,
 
   brand                        : map-get($ui-color, brand),
   brand-dark                   : map-get($ui-color, brand-dark),
