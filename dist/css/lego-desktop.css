@@ -1934,8 +1934,10 @@ form.standard p,
 #changer-container div.change-window div.footer a {
   width: auto; }
 
-.dropdown-item img {
-  display: inline; }
+#option-menu .dropdown-item {
+  font-weight: 400; }
+  #option-menu .dropdown-item img {
+    display: inline; }
 
 .toolbar__title.editable:hover {
   color: #006eb6; }

@@ -30,7 +30,7 @@
   }
 
   pre#project-code {
-    margin-bottom: 10px;	
+    margin-bottom: 10px;
   }
 
   code {
@@ -46,15 +46,19 @@
 
 #changer-container.ui-draggable div.change-menu div.submenu div.content {
   padding-bottom: 8px !important;
-};
+}
 
 #changer-container div.change-window div.footer a {
   width: auto;
 }
 
-.dropdown-item {
-  img {
-    display: inline;
+#option-menu {
+  .dropdown-item {
+    font-weight: 400;
+
+    img {
+      display: inline;
+    }
   }
 }
 
