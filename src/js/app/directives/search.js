@@ -4,7 +4,7 @@
  * @author Tom Genoni
  */
 define(function() {
-  var discloseService = require('app/services/search');
+  var searchService = require('app/services/search');
 
   return {
     data: {
@@ -16,8 +16,6 @@ define(function() {
       $el.find('input').on('keyup', function(e) {
         searchService.activate(this.el, e.target);
       }.bind(this));
-
-
     }
   };
 });

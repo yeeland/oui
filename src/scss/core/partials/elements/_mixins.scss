@@ -28,14 +28,13 @@
 // Centers an element using relative or absolute positioning.
 
 //[c]
-//      @include dead-center(relative);
+//      @include flex-center;
 //[/c]
 
-@mixin dead-center($position_value) {
-  @include transform(translateX(-50%) translateY(-50%));
-  position: $position_value;
-  top: 50%;
-  left: 50%;
+@mixin flex-center {
+  @extend %flex;
+  @extend %justify-content--center;
+  @extend %align-items--center;
 }
 
 // ## CSS Arrows

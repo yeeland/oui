@@ -1,5 +1,5 @@
 /**
- * Service for simple disclosure
+ * Service for handle search filters
  *
  * @author Tom Genoni
  */

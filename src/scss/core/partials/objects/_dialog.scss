@@ -22,12 +22,18 @@
 //         <button class="lego-button">Cancel</button>
 //         <button class="lego-button lego-button--brand">Done</button>
 //       </div>
+//       <div class="lego-dialog__close">
+//         <svg class="lego-icon">
+//           <use xlink:href="#close"></use>
+//         </svg>
+//       </div>
 //     </div>
 //[/hc]
 
 // ## SCSS
 
 .lego-dialog {
+  position: relative;
   box-shadow: 0 0 map-get($shadow, big);
   width: map-get($dialog, width-base);
 
@@ -68,5 +74,20 @@
   &__body {
     @extend %kill-last-child-margin;
     padding-bottom: spacer(3);
+  }
+
+  &__close {
+    @include flex-center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: map-get($background-color, black);
+    color: map-get($ui-color, white);
+    border: 2px solid map-get($ui-color, white);
+    box-shadow: 0 0 map-get($shadow, big);
   }
 }
