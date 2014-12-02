@@ -23,61 +23,48 @@
 //             <input type="text" class="lego-text-input" disabled>
 //           </li>
 //           <li class="lego-form-field__item">
-//           <li class="lego-form-field__item">
 //             <label class="lego-label">Add/Remove Row</label>
-//             <div class="lego-grid align-items--center">
-//               <div class="lego-grid__cell">
-//                 <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//               </div>
-//               <svg class="lego-icon push-double--left cursor--pointer">
-//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//               </svg>
-//               <svg class="lego-icon push--left cursor--pointer">
-//                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//               </svg>
-//             </div>
-//           </li>
-//           <li class="lego-form-field__item">
-//             <div class="lego-grid">
-//               <div class="lego-grid__cell">
-//                 <label class="lego-label">Add/Remove Row</label>
-//                 <input type="text" class="lego-text-input">
-//               </div>
-//               <div class="lego-grid__cell">
-//                 <label class="lego-label">&nbsp;</label>
-//                 <div class="lego-grid align-items--center">
-//                   <div class="lego-grid__cell">
-//                     <input type="text" class="lego-text-input">
+//             <table class="lego-table width-1">
+//               <tr>
+//                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
+//                 <td><input type="text" class="lego-text-input"></td>
+//                 <td class="cell-collapse vertical-align--middle">
+//                   <div class="flex">
+//                     <svg class="lego-icon link--dark">
+//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//                     </svg>
 //                   </div>
-//                   <svg class="lego-icon push-double--left link--dark">
-//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//                   </svg>
-//                   <svg class="lego-icon push--left link--bad-news">
-//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//                   </svg>
-//                 </div>
-//               </div>
-//             </div>
-//           </li>
-//           <li class="lego-form-field__item">
-//             <div class="lego-grid">
-//               <div class="lego-grid__cell">
-//                 <input type="text" class="lego-text-input">
-//               </div>
-//               <div class="lego-grid__cell">
-//                 <div class="lego-grid align-items--center">
-//                   <div class="lego-grid__cell">
-//                     <input type="text" class="lego-text-input">
+//                 </td>
+//               </tr>
+//               <tr>
+//                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
+//                 <td><input type="text" class="lego-text-input"></td>
+//                 <td class="cell-collapse vertical-align--middle">
+//                   <div class="flex">
+//                     <svg class="lego-icon link--dark">
+//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//                     </svg>
+//                     <svg class="lego-icon push--left link--bad-news">
+//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+//                     </svg>
 //                   </div>
-//                   <svg class="lego-icon push-double--left link--dark">
-//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//                   </svg>
-//                   <svg class="lego-icon push--left link--bad-news">
-//                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//                   </svg>
-//                 </div>
-//               </div>
-//             </div>
+//                 </td>
+//               </tr>
+//               <tr>
+//                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
+//                 <td><input type="text" class="lego-text-input"></td>
+//                 <td class="cell-collapse vertical-align--middle">
+//                   <div class="flex">
+//                     <svg class="lego-icon link--dark">
+//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+//                     </svg>
+//                     <svg class="lego-icon push--left link--bad-news">
+//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+//                     </svg>
+//                   </div>
+//                 </td>
+//               </tr>
+//             </table>
 //           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Textarea</label>
