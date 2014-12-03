@@ -27,6 +27,10 @@ form.standard p,
   font-size: 24px;
 }
 
+#create-dimensions-dialog label {
+  font-size: 12px;
+}
+
 #settings-dialog #user-table thead td {
 	font-size: 12px;
 }
@@ -39,9 +43,16 @@ form.standard p,
 	font-size: 14px;
 }
 
-.dialog .content .header h1, .message-dialog .content .header h1, .dialog .content .header h2, .message-dialog .content .header h2 {
+.dialog .content .header h1,
+.message-dialog .content .header h1,
+.dialog .content .header h2,
+.message-dialog .content .header h2 {
 	font-size: 30px;
 	font-weight: 100;
+}
+
+.dialog .toggle-switch {
+  font-size: 14px !important;
 }
 
 .dialog .content h3, .message-dialog .content h3 {
