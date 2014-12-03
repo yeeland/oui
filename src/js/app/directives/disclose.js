@@ -13,7 +13,7 @@ define(function() {
     bind: function() {
       var $el = $(this.el);
 
-      $el.find('> li > a').on('click', function(e) {
+      $el.find('> a').on('click', function(e) {
         e.preventDefault();
         discloseService.activate(this.el, e.target);
       }.bind(this));

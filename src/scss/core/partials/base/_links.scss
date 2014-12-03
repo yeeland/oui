@@ -36,8 +36,11 @@ a,
   cursor: pointer;
 
   &:visited,
-  &:hover,
   &:active {
+    color: map-get($font-color, base);
+  }
+
+  &:hover {
     color: map-get($link-color, base);
   }
 }
