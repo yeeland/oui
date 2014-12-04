@@ -4,7 +4,20 @@
  * @author Tom Genoni
  */
 define(function() {
-  var discloseService = require('app/services/disclose');
+
+  var ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
+
+  function discloseActivate(el, target) {
+    var $target = $(target);
+
+    var contentPane = $target.parent('.lego-disclose__item');
+
+    if ( contentPane.hasClass(ACTIVE_DISCLOSE_CLASS) ) {
+      contentPane.removeClass(ACTIVE_DISCLOSE_CLASS);
+    } else {
+      contentPane.addClass(ACTIVE_DISCLOSE_CLASS);
+    }
+  }
 
   return {
     data: {
@@ -15,7 +28,7 @@ define(function() {
 
       $el.find('> a').on('click', function(e) {
         e.preventDefault();
-        discloseService.activate(this.el, e.target);
+        discloseActivate(this.el, e.target);
       }.bind(this));
     }
   };

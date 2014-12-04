@@ -30,7 +30,7 @@
   }
 
   &__symbol {
-    @include transition(transform map-get($transition-duration,base));
+    @include transition(transform map-get($transition-duration, base));
     width: spacer(1);
     display: inline-block;
 
