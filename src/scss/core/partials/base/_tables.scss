@@ -240,7 +240,7 @@
     > tbody > tr {
 
       &:hover {
-        background-color: map-get($background-color, brand-light);
+        background-color: map-get($background-color, blue-optimum-light);
         cursor: pointer;
       }
     }

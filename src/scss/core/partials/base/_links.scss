@@ -35,7 +35,7 @@ a,
   color: map-get($link-color, white) !important;
 
   &:hover {
-    color: lighten(map-get($link-color, brand-light), 15%) !important;
+    color: lighten(map-get($link-color, blue-optimum-light), 15%) !important;
   }
 }
 

@@ -1,67 +1,68 @@
 //# Buttons
 
+//[hc]
+//     <div>
+//       <button class="lego-button lego-button--basic">Go</button>
+//       <button class="lego-button lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--outline">Go</button>
+//       <button class="lego-button">Go</button>
+//     </div>
+//[/hc]
+
 // ## Examples
 
 // ### Button Row Left
 //[hc]
 //     <div class="lego-button-row--left">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--basic">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
+//       <button class="lego-button lego-button--outline">Go</button>
 //     </div>
 //[/hc]
 
 // ### Button Row Center
 //[hc]
 //     <div class="lego-button-row--center">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--basic">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
+//       <button class="lego-button lego-button--outline">Go</button>
 //     </div>
 //[/hc]
 
 // ### Button Row Right
 //[hc]
 //     <div class="lego-button-row--right">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--basic">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
+//       <button class="lego-button lego-button--basic">Go</button>
+//       <button class="lego-button lego-button--outline">Go</button>
 //     </div>
 //[/hc]
 
 // ### Button Row Left with Small Buttons
 //[hc]
 //     <div class="lego-button-row--left">
-//       <button class="lego-button lego-button--small">Go</button>
-//       <button class="lego-button lego-button--small lego-button--basic">Go</button>
-//       <button class="lego-button lego-button--small lego-button--brand">Go</button>
 //       <button class="lego-button lego-button--small lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--small lego-button--danger">Go</button>
+//       <button class="lego-button lego-button--small lego-button--basic">Go</button>
+//       <button class="lego-button lego-button--small lego-button--outline">Go</button>
 //     </div>
 //[/hc]
 
 // ### Button Full
 //[hc]
-//     <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//     <button class="lego-button lego-button--basic lego-button--full">Go</button>
 //[/hc]
 
 // ### Full Spread Buttons
 //[hc]
 //     <div class="lego-grid lego-grid--gutter">
 //       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//           <button class="lego-button lego-button--basic lego-button--full">Go</button>
 //       </div>
 //       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//           <button class="lego-button lego-button--basic lego-button--full">Go</button>
 //       </div>
 //       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
+//           <button class="lego-button lego-button--basic lego-button--full">Go</button>
 //       </div>
 //     </div>
 //[/hc]
@@ -70,7 +71,9 @@
 //[hc]
 //     <div class="lego-button-row--left">
 //       <button class="lego-button lego-button--disabled">Go</button>
-//       <button class="lego-button lego-button--brand lego-button--disabled">Go</button>
+//       <button class="lego-button lego-button--basic lego-button--disabled">Go</button>
+//       <button class="lego-button lego-button--highlight lego-button--disabled">Go</button>
+//       <button class="lego-button lego-button--outline lego-button--disabled">Go</button>
 //     </div>
 //[/hc]
 
@@ -92,7 +95,7 @@
   margin: 0;
   padding: 0 spacer(1);
   height: map-get($button, height-default);
-  font-weight: map-get($font-weight, normal);
+  font-weight: map-get($font-weight, bold);
   border-radius: map-get($border-radius, base);
   border-style: solid;
   border-width: 1px;
@@ -103,59 +106,29 @@
   &:visited,
   &:focus {
     outline: none;
-    color: map-get($font-color, dark);
   }
 
   // ### Button Styles
   // Button color variations.
 
   background: map-get($ui-color, light);
-  color: map-get($font-color, brand-dark);
+  color: map-get($font-color, base);
   border-color: map-get($ui-color, silver);
-  box-shadow: inset 0 -2px 0 map-get($ui-color, silver);
 
   &.lego-button--hover,
   &:hover {
-    background:linear-gradient(map-get($ui-color, light), map-get($ui-color, base)) ;
+    color: map-get($font-color,  dark);
   }
 
   &.lego-button--active,
   &:active {
-    background:linear-gradient(map-get($ui-color, base), map-get($ui-color, light)) ;
+    color: map-get($font-color, base);
+    box-shadow: inset 0 0 3px map-get($ui-color, medium);
   }
 
   &:visited,
   &:focus {
-    color: map-get($font-color, dark);
-  }
-
-  &--brand {
-    background: map-get($ui-color, brand);
-    color: map-get($font-color, white);
-    border-color: #045C83;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0 -2px 0 #045C83;
-
-    &.lego-button--hover,
-    &:hover {
-      background: #008CCA;
-      border-color: #046691;
-      box-shadow: inset 0 -2px 0 #046691;
-    }
-
-    &.lego-button--active,
-    &:active {
-      background: #0070A1;
-      border-color: #005479;
-      box-shadow: inset 0 -2px 0 #005479;
-    }
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      color: map-get($font-color, white);
-    }
+    color: map-get($font-color, base);
   }
 
   &--highlight {
@@ -188,11 +161,11 @@
   }
 
   &--basic {
-    background: map-get($ui-color, blue);
+    background: map-get($ui-color, blue-ocean-light);
     color: map-get($font-color, white);
-    border-color: map-get($ui-color, brand-dark);
+    border-color: map-get($ui-color, blue-ocean);
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0 -2px 0 map-get($ui-color, brand-dark);
+    box-shadow: inset 0 -2px 0 map-get($ui-color, blue-ocean);
 
     &.lego-button--hover,
     &:hover {
@@ -216,8 +189,28 @@
     }
   }
 
+  &--outline {
+    background: none;
+    color: map-get($font-color, blue-ocean);
+    border: 1px solid map-get($ui-color, blue-ocean);
+
+    &.lego-button--hover,
+    &:hover {
+      background: none;
+      color: map-get($font-color, blue-ocean);
+      box-shadow: 0 0 2px map-get($ui-color, blue-ocean);
+    }
+
+    &.lego-button--active,
+    &:active {
+      background: map-get($background-color, blue-ocean);
+      color: map-get($font-color, white);
+      box-shadow: none;
+    }
+  }
+
   &--danger {
-    background: map-get($ui-color, bad-news);
+    background: map-get($ui-color, red);
     color: map-get($font-color, white);
     border-color: #912C05;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
@@ -225,12 +218,12 @@
 
     &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#E04D14, map-get($ui-color, bad-news));
+      background: linear-gradient(#E04D14, map-get($ui-color, red));
     }
 
     &.lego-button--active,
     &:active {
-      background: linear-gradient(map-get($ui-color, bad-news), #E04D14);
+      background: linear-gradient(map-get($ui-color, red), #E04D14);
     }
 
     &:hover,
@@ -270,27 +263,19 @@
   &--disabled:active,
   &--disabled:focus {
     cursor: default;
-    background: #f8f8f8;
-    color: map-get($font-color, medium);
-    border-color: map-get($ui-color, base);
     opacity: 0.5;
 
-    + .lego-button--brand {
-      border-color: #00558d;
-      background: #147cc5;
-      color: #fff;
+    // TODO: (kelly) finish this
+    + .lego-button--basic:hover {
+      background: map-get($background-color, blue-ocean-light);
     }
 
-    + .lego-button--highlight {
-      border-color: #719505;
-      background: #a1cd1e;
-      color: #fff;
+    + .lego-button--highlight:hover {
+      background: map-get($background-color, blue-ocean-green);
     }
 
-    + .lego-button--danger {
-      border-color: #641100;
-      background: #aa280d;
-      color: #fff;
+    + .lego-button--outline:hover {
+      box-shadow: none;
     }
   }
 }

@@ -3,7 +3,7 @@
 
 .lego-top-nav {
   @extend %flex;
-  background-color: map-get($background-color, brand-dark);
+  background-color: map-get($background-color, blue-ocean);
   color: map-get($font-color, white);
   padding: 0 spacer(2);
 

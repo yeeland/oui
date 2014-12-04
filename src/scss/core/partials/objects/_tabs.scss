@@ -111,7 +111,7 @@
     border: 1px solid map-get($ui-color, base);
     border-radius: map-get($border-radius, big) map-get($border-radius, big) 0 0;
     border-bottom: 0;
-    color: map-get($font-color, brand-dark);
+    color: map-get($font-color, blue-ocean);
     font-weight: map-get($font-weight, bold);
     background-color: map-get($background-color, faint);
     cursor: pointer;
@@ -130,7 +130,7 @@
     }
 
     &.tab-active {
-      background-color: map-get($background-color, brand-dark);
+      background-color: map-get($background-color, blue-ocean);
       color: map-get($font-color, white);
 
       // &:after { // Creates the white bar under the active tab.
@@ -176,7 +176,7 @@
 
     &.tab-active:after {
       height: 2px;
-      background: map-get($background-color, brand);
+      background: map-get($background-color, blue-optimum);
       bottom: -1px;
     }
   }

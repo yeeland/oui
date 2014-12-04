@@ -70,22 +70,22 @@
   background: map-get($background-color, faint);
 
   &--brand {
-    border-color: map-get($ui-color, brand-light);
-    background-color: map-get($background-color, brand-light);
+    border-color: map-get($ui-color, blue-optimum-light);
+    background-color: map-get($background-color, blue-optimum-light);
   }
 
   &--warning {
-    border-color: map-get($ui-color, warning);
+    border-color: map-get($ui-color, yellow);
     background-color: map-get($background-color, warning);
   }
 
   &--good-news {
-    border-color: map-get($ui-color, good-news);
+    border-color: tint(map-get($ui-color, green-winning), 60%);
     background-color: map-get($background-color, good-news);
   }
 
   &--bad-news {
-    border-color: map-get($ui-color, bad-news);
+    border-color: tint(map-get($ui-color, red), 60%);
     background-color: map-get($background-color, bad-news);
   }
 }

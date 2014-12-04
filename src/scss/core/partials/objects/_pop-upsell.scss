@@ -71,14 +71,14 @@ $pop-upsell-border: map-get($ui-color, base);
   }
 
   &__link {
-    background: map-get($background-color, brand);
+    background: map-get($background-color, blue-optimum);
 
     a {
       @extend %lego-block-list__link;
       color: map-get($font-color, white);
 
       &:hover {
-        background: map-get($background-color, brand);
+        background: map-get($background-color, blue-optimum);
       }
     }
   }
@@ -90,7 +90,7 @@ $pop-upsell-border: map-get($ui-color, base);
   }
 
   &--arrow-bottom {
-    @include arrow(bottom, center, map-get($background-color, brand), map-get($background-color, brand));
+    @include arrow(bottom, center, map-get($background-color, blue-optimum), map-get($background-color, blue-optimum));
   }
 
   &--arrow-left {
