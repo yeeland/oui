@@ -386,7 +386,7 @@ code {
   font-family: monospace; }
 
 .lego-form--small {
-  font-size: 10px; }
+  font-size: 13px; }
 
 .lego-text-input,
 .lego-textarea {
@@ -429,7 +429,7 @@ code {
   margin-top: 30px; }
 
 .lego-form__title {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
   line-height: 1;
   letter-spacing: -1px; }
@@ -452,7 +452,7 @@ fieldset {
     content: '(Optional)';
     margin-left: 5px;
     color: #bdc0c1;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400; }
   .lego-label--rule {
     border-bottom: 1px solid #e8e9e9;
@@ -509,7 +509,7 @@ fieldset {
 
 .lego-form-note {
   padding-top: 5px;
-  font-size: 10px; }
+  font-size: 13px; }
 
 .lego-form-note--bad-news {
   color: #e1364b; }
@@ -618,7 +618,7 @@ li > ol {
   .lego-table th {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 13px;
     color: #bdc0c1;
     text-align: left; }
     .lego-table th[field] {
@@ -733,7 +733,7 @@ li > ol {
 .lego-attention {
   padding: 10px;
   border-radius: 2px;
-  border: 1px solid #e8e9e9;
+  border: 1px solid #d9dbdb;
   background: #f9f9f9; }
   .lego-notification--brand,
   .lego-attention--brand {
@@ -1062,7 +1062,7 @@ a.lego-button {
     margin-right: 5px; }
 
 .lego-dropdown-group {
-  font-size: 13px;
+  font-size: 14px;
   display: inline-block;
   position: relative;
   vertical-align: top; }
@@ -1106,7 +1106,7 @@ a.lego-button {
   transition: 0.3s; }
   .lego-disclose__symbol:before {
     line-height: 1;
-    font-size: 10px;
+    font-size: 13px;
     content: '\25B6'; }
 .lego-disclose__content {
   display: none; }
@@ -1134,7 +1134,7 @@ a.lego-button {
     background-color: #00415d;
     border-radius: 2px 2px 0 0; }
   .lego-dialog__title {
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: -1px;
     color: #fff;
     line-height: 1; }
@@ -1217,7 +1217,7 @@ a.lego-button {
   background: #606669;
   color: #fff;
   border-radius: 2px;
-  font-size: 10px;
+  font-size: 13px;
   padding: 5px 10px;
   max-width: 250px;
   display: inline-block; }
@@ -1491,7 +1491,7 @@ a.lego-button {
     color: #b4e4ff; }
 
 html {
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Proxima Nova', Helvetica, Verdana, sans-serif;
   line-height: 1.6;
   font-weight: 300; }
@@ -1505,7 +1505,7 @@ body {
 
 h1,
 .alpha {
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: -1px;
   line-height: 1.1; }
 
@@ -1517,13 +1517,13 @@ h2,
 
 h3,
 .gamma {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: -1px;
   line-height: 1.2; }
 
 h4,
 .delta {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2; }
 
 h5,
@@ -1533,7 +1533,7 @@ h5,
 
 h6,
 .zeta {
-  font-size: 12px; }
+  font-size: 13px; }
 
 h1 {
   margin-bottom: 20px; }
@@ -1563,7 +1563,7 @@ hgroup .hn {
   font-size: 11px; }
 
 .micro {
-  font-size: 10px; }
+  font-size: 13px; }
 
 .giga {
   font-size: 65px; }
@@ -1572,7 +1572,7 @@ hgroup .hn {
   font-size: 50px; }
 
 .kilo {
-  font-size: 40px; }
+  font-size: 42px; }
 
 .lego-data-sidebar {
   background: #f9f9f9;
@@ -1627,7 +1627,7 @@ hgroup .hn {
   bottom: 10px;
   left: 20px;
   color: #bdc0c1;
-  font-size: 10px; }
+  font-size: 13px; }
 .lego-table--dashboard .lego-table-row--active td:first-child {
   position: relative; }
   .lego-table--dashboard .lego-table-row--active td:first-child:after {
@@ -1696,7 +1696,7 @@ hgroup .hn {
 
 .tagger {
   font-style: italic;
-  font-size: 10px;
+  font-size: 13px;
   color: #bdc0c1;
   letter-spacing: normal;
   white-space: nowrap; }

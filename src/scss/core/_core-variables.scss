@@ -112,18 +112,18 @@ $font-color: (
 // These defaults can be overriden by custom variables.
 
 $font-size: (
-  base                : 13px,
-  micro               : 10px,
+  base                : 14px,
+  micro               : 13px,
   milli               : 11px,
 
-  alpha               : 28px, // h1
+  alpha               : 26px, // h1
   beta                : 24px, // h2
-  gamma               : 20px, // h3
-  delta               : 16px, // h4
+  gamma               : 22px, // h3
+  delta               : 18px, // h4
   epsilon             : 14px, // h5
-  zeta                : 12px, // h6
+  zeta                : 13px, // h6
 
-  kilo                : 40px, // Extra large fonts.
+  kilo                : 42px, // Extra large fonts.
   mega                : 50px,
   giga                : 65px
 );
