@@ -34,6 +34,7 @@ $ui-color: (
   light                        : $grey-06,
   base                         : $grey-12,
   silver                       : $grey-20,
+  gunmetal                     : $grey-25,
   medium                       : $grey-40,
   dark                         : $grey-85,
   black                        : $base-black,
@@ -198,7 +199,7 @@ $transition-duration: (
 
 // ## Form Variables
 
-$input-focus-border-color      : map-get($ui-color, blue-optimum-light);
+$input-focus-box-shadow        : 0 0 4px map-get($ui-color, silver);
 
 // ### Buttons
 

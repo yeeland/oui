@@ -15,7 +15,7 @@
 //           </li>
 //           <li class="lego-form-field__item lego-form-bad-news">
 //             <label class="lego-label">Address</label>
-//             <input type="text" class="lego-text-input">
+//             <input type="text" class="lego-text-input lego-form-bad-news">
 //             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
 //           </li>
 //           <li class="lego-form-field__item">
@@ -193,7 +193,7 @@
 //         </ol>
 //       </fieldset>
 //       <div class="lego-form__footer lego-button-row lego-button-row--right">
-//         <button class="lego-button">Cancel</button>
+//         <button class="lego-button lego-button--outline">Cancel</button>
 //         <button class="lego-button lego-button--highlight">Submit</button>
 //       </div>
 //     </form>
@@ -216,7 +216,7 @@
 .lego-text-input,
 .lego-textarea {
   width: 100%;
-  border: 1px solid map-get($ui-color, base);
+  border: 1px solid map-get($ui-color, gunmetal);
   border-radius: map-get($border-radius, base);
   padding: 7px;
   vertical-align: middle;
@@ -228,7 +228,7 @@
   }
 
   &:focus {
-    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
   }
 
   &[disabled] {
@@ -253,6 +253,10 @@
   border: 1px solid map-get($ui-color, base);
   border-radius: map-get($border-radius, base);
   padding: 7px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .lego-form__header {

@@ -391,7 +391,7 @@ code {
 .lego-text-input,
 .lego-textarea {
   width: 100%;
-  border: 1px solid #e8e9e9;
+  border: 1px solid #d0d2d3;
   border-radius: 2px;
   padding: 7px;
   vertical-align: middle;
@@ -402,7 +402,7 @@ code {
     padding-bottom: 2px; }
   .lego-text-input:focus,
   .lego-textarea:focus {
-    border-color: #9acce2; }
+    box-shadow: 0 0 4px #d9dbdb; }
   .lego-text-input[disabled],
   .lego-textarea[disabled] {
     background: #f9f9f9; }
@@ -421,6 +421,8 @@ code {
   border: 1px solid #e8e9e9;
   border-radius: 2px;
   padding: 7px; }
+  .lego-select:focus {
+    outline: none; }
 
 .lego-form__header {
   margin-bottom: 20px; }
