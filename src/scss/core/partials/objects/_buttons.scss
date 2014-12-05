@@ -265,18 +265,40 @@
     cursor: default;
     opacity: 0.5;
 
-    // TODO: (kelly) finish this
-    + .lego-button--basic:hover {
-      background: map-get($background-color, blue-ocean-light);
+    + .lego-button--basic {
+      &:hover,
+      &:active {
+        background: map-get($ui-color, blue-ocean-light);
+        border-color: map-get($ui-color, blue-ocean);
+        box-shadow: inset 0 -2px 0 map-get($ui-color, blue-ocean);
+      }
     }
 
-    + .lego-button--highlight:hover {
-      background: map-get($background-color, blue-ocean-green);
+    + .lego-button--highlight {
+      &:hover,
+      &:active {
+        background: map-get($ui-color, green);
+        border-color: #098664;
+        box-shadow: inset 0 -2px 0 #098664;
+      }
     }
 
-    + .lego-button--outline:hover {
-      box-shadow: none;
+    + .lego-button--outline {
+      &:hover {
+        box-shadow: none;
+      }
+
+      &:active {
+        color: map-get($font-color, blue-ocean);
+        border: 1px solid map-get($ui-color, blue-ocean);
+        background: none;
+      }
     }
+  }
+
+  &[disabled]:active,
+  &--disabled:active,{
+    box-shadow: none;
   }
 }
 
