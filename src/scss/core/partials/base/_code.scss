@@ -5,6 +5,10 @@
 //     Text can have <code>code snippets</code> in a sentence.
 //[/hc]
 
+code {
+  font-family: map-get($font-family, monospace);
+}
+
 .lego-pre {
   margin-bottom: spacer(1);
 
@@ -18,8 +22,7 @@
   }
 }
 
-code {
-  font-family: map-get($font-family, monospace);
+.lego-code {
   background: map-get($background-color, faint);
   border-radius: map-get($border-radius, base);
   border: 1px solid map-get($ui-color, base);

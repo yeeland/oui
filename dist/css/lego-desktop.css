@@ -377,6 +377,9 @@ p {
 b {
   font-weight: 500; }
 
+code {
+  font-family: monospace; }
+
 .lego-pre {
   margin-bottom: 10px; }
   .lego-pre code {
@@ -387,8 +390,7 @@ b {
     border-radius: 2px;
     border: 1px solid #e0e0e0; }
 
-code {
-  font-family: monospace;
+.lego-code {
   background: #f7f7f7;
   border-radius: 2px;
   border: 1px solid #e0e0e0;
@@ -1835,6 +1837,27 @@ hgroup .hn {
     display: block;
     padding: 10px 0; }
 
+#content.dashboard #project-container .box > .header,
+#content.dashboard #project-container .callout > .header {
+  height: 95px; }
+#content.dashboard #project-container .box .tabs li,
+#content.dashboard #project-container .callout .tabs li {
+  font-size: 11px;
+  padding-bottom: 6px; }
+#content.dashboard .show-archive {
+  width: 333px !important; }
+#content.dashboard #create-button {
+  font-size: 12px !important; }
+#content.dashboard .list table tr.experiment td.goal span {
+  width: 34px; }
+#content.dashboard #project-code {
+  width: 416px !important;
+  margin-bottom: 10px; }
+
+.menu div.submenu div.content,
+#changer-container div.change-menu div.submenu div.content {
+  padding-bottom: 30px !important; }
+
 form.standard p,
 .dialog .content p,
 .message-dialog .content p {
@@ -1854,6 +1877,116 @@ form.standard p,
 
 .dialog-backdrop .dialog-frame .dialog__title {
   font-size: 24px; }
+
+#create-dimensions-dialog label {
+  font-size: 12px; }
+
+#settings-dialog #user-table thead td {
+  font-size: 12px; }
+
+#settings-dialog .invite-container label {
+  font-size: 14px; }
+
+#settings-dialog .invite-container #additional-projects label span {
+  font-size: 14px; }
+
+.dialog .content .header h1,
+.message-dialog .content .header h1,
+.dialog .content .header h2,
+.message-dialog .content .header h2 {
+  font-size: 30px;
+  font-weight: 100; }
+
+.dialog .toggle-switch {
+  font-size: 14px !important; }
+
+.dialog .content h3, .message-dialog .content h3 {
+  font-size: 18px; }
+
+#settings-dialog #user-table tbody td.user-email {
+  font-size: 14px; }
+
+#settings-dialog .project-name div.right {
+  font-size: 16px; }
+
+.log-viewer-datepicker-container {
+  font-size: 14px; }
+
+#settings-dialog .invite-container input[type="text"] {
+  font-size: 14px; }
+
+#settings-dialog .invite-container #invite-message {
+  font-size: 12px; }
+
+#settings-dialog #user-table .others-button a {
+  font-size: 12px;
+  font-weight: 200; }
+
+#settings-dialog .invite-container span.error {
+  display: block; }
+
+#settings-dialog #send-invite {
+  margin-bottom: 22px; }
+
+#settings-dialog .invite-container #additional-projects-intro {
+  font-size: 12px; }
+
+#container.edit {
+  font-size: 1.35em; }
+  #container.edit .variations__list__item > a {
+    color: #6b6b6b !important; }
+  #container.edit .variations__list__item--create a {
+    color: #AAA !important; }
+
+.loading-message-container .loading-progress {
+  height: 13px; }
+.loading-message-container .ui-progressbar .ui-progressbar-value {
+  height: 120%; }
+.loading-message-container #load-fail-messages .alert-box {
+  font-size: 12px;
+  line-height: 17px; }
+.loading-message-container pre#project-code {
+  margin-bottom: 10px; }
+.loading-message-container code {
+  background: none;
+  border: none;
+  font-size: 12px; }
+
+#variation-code-popup #show-variation-code-button {
+  padding-bottom: 17px; }
+
+#changer-container.ui-draggable div.change-menu div.submenu div.content {
+  padding-bottom: 8px !important; }
+
+#changer-container div.change-window div.footer a {
+  width: auto; }
+
+#variation-menu .dropdown-item,
+#option-menu .dropdown-item {
+  font-weight: 400; }
+  #variation-menu .dropdown-item img,
+  #option-menu .dropdown-item img {
+    display: inline; }
+
+.toolbar__title.editable:hover {
+  color: #006eb6; }
+  .toolbar__title.editable:hover:after {
+    content: ''; }
+
+.help-button:hover div.help-bubble {
+  text-indent: 0; }
+
+#goals-dialog.expanded > div.content div.shrink-message {
+  height: auto !important; }
+
+#goals-dialog.expanded > div.content div.click-goal-controls {
+  height: 106px !important; }
+
+#goals-dialog.expanded > div.content div.frame-container {
+  bottom: 27px !important; }
+
+#upsell-subscribe > a > img {
+  display: inline; }
 
 body {
   color: inherit;
@@ -1883,6 +2016,49 @@ h6 {
 p {
   font-size: inherit;
   line-height: inherit; }
+
+#report-title {
+  font-size: 24px;
+  font-weight: 300; }
+
+.titles .name {
+  font-weight: 300; }
+
+.sub-header-nav > li {
+  font-size: inherit; }
+
+.title-container {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 300; }
+
+body.results2 .conclusion-summary .conclusion-message {
+  margin-top: 8px; }
+
+body.results2 .primary-metric {
+  font-size: 12px; }
+
+.white-button.small {
+  height: 30px; }
+
+li.white-button.small > * {
+  position: relative;
+  top: -2px; }
+
+body.results2 #saved-reports h6 {
+  font-size: inherit;
+  text-transform: uppercase; }
+
+#navigation-container h5 {
+  margin: 0; }
+
+.page-loading-container img,
+.viewer-loading-container img {
+  display: inline-block; }
+
+#explorer-controls a {
+  cursor: pointer;
+  font-size: 16px; }
 
 #top .logo {
   margin-bottom: 0; }

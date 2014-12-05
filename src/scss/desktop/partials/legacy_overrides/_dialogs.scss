@@ -1,5 +1,5 @@
-// # Dialog Fixes
-// Fixing styles in non-Lego dialogs.
+//# Dialog Overrides
+// Overriding LEGO to restore legacy styling.
 
 form.standard p,
 .dialog .content p,
@@ -25,4 +25,73 @@ form.standard p,
 
 .dialog-backdrop .dialog-frame .dialog__title {
   font-size: 24px;
+}
+
+#create-dimensions-dialog label {
+  font-size: 12px;
+}
+
+#settings-dialog #user-table thead td {
+	font-size: 12px;
+}
+
+#settings-dialog .invite-container label {
+	font-size: 14px;
+}
+
+#settings-dialog .invite-container #additional-projects label span {
+	font-size: 14px;
+}
+
+.dialog .content .header h1,
+.message-dialog .content .header h1,
+.dialog .content .header h2,
+.message-dialog .content .header h2 {
+	font-size: 30px;
+	font-weight: 100;
+}
+
+.dialog .toggle-switch {
+  font-size: 14px !important;
+}
+
+.dialog .content h3, .message-dialog .content h3 {
+	font-size: 18px;
+}
+
+#settings-dialog #user-table tbody td.user-email {
+	font-size: 14px;
+}
+
+#settings-dialog .project-name div.right {
+	font-size: 16px;
+}
+
+.log-viewer-datepicker-container {
+	font-size: 14px;
+}
+
+#settings-dialog .invite-container input[type="text"] {
+	font-size: 14px;
+}
+
+#settings-dialog .invite-container #invite-message {
+	font-size: 12px;
+}
+
+#settings-dialog #user-table .others-button a {
+	font-size: 12px;
+	font-weight: 200;
+}
+
+#settings-dialog .invite-container span.error {
+	display: block;
+}
+
+#settings-dialog #send-invite {
+	margin-bottom: 22px;
+}
+
+#settings-dialog .invite-container #additional-projects-intro {
+	font-size: 12px;
 }

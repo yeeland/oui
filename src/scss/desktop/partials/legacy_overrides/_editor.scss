@@ -1,0 +1,92 @@
+//# Editor Overrides
+// Overriding LEGO to restore legacy styling.
+
+#container.edit {
+  font-size: 1.35em;
+
+  .variations__list__item>a {
+    color: #6b6b6b !important;
+  }
+
+  .variations__list__item--create a {
+    color: #AAA !important;
+  }
+}
+
+.loading-message-container {
+  .loading-progress {
+    height: 13px;
+  }
+
+  .ui-progressbar .ui-progressbar-value {
+    height: 120%;
+  }
+
+  #load-fail-messages {
+    .alert-box {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  pre#project-code {
+    margin-bottom: 10px;
+  }
+
+  code {
+    background: none;
+    border: none;
+    font-size: 12px;
+  }
+}
+
+#variation-code-popup #show-variation-code-button {
+  padding-bottom: 17px;
+}
+
+#changer-container.ui-draggable div.change-menu div.submenu div.content {
+  padding-bottom: 8px !important;
+}
+
+#changer-container div.change-window div.footer a {
+  width: auto;
+}
+
+#variation-menu,
+#option-menu {
+  .dropdown-item {
+    font-weight: 400;
+
+    img {
+      display: inline;
+    }
+  }
+}
+
+.toolbar__title.editable:hover {
+  color: #006eb6;
+
+  &:after {
+    content: '';
+  }
+}
+
+.help-button:hover div.help-bubble {
+  text-indent: 0;
+}
+
+#goals-dialog.expanded > div.content div.shrink-message {
+  height: auto !important;
+}
+
+#goals-dialog.expanded > div.content div.click-goal-controls {
+  height: 106px !important;
+}
+
+#goals-dialog.expanded > div.content div.frame-container {
+  bottom: 27px !important;
+}
+
+#upsell-subscribe > a > img {
+  display: inline;
+}
