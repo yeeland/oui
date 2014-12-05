@@ -20,13 +20,16 @@ a,
   color: map-get($link-color, base);
   cursor: pointer;
 
-  &:visited,
-  &:active {
+  &:hover {
+    color: map-get($link-color, hover);
+  }
+
+  &:visited {
     color: map-get($link-color, base);
   }
 
-  &:hover {
-    color: lighten(map-get($link-color, base), 10%);
+  &:active {
+    color: map-get($link-color, active)
   }
 }
 

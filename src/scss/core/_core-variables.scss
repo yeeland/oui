@@ -64,7 +64,9 @@ $ui-color: (
 // For anchor links.
 
 $link-color: (
-  base                         : map-get($ui-color, blue-optimum),
+  base                         : #0088c1,
+  hover                        : #90c2e3,
+  active                       : #015A8B,
   blue-optimum                 : map-get($ui-color, blue-optimum),
   blue-optimum-light           : lighten(map-get($ui-color, blue-optimum), 50%),
   white                        : map-get($ui-color, $base-white)

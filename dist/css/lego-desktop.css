@@ -555,15 +555,17 @@ img[height] {
 
 a,
 .link {
-  color: #0074b4;
+  color: #0088c1;
   cursor: pointer; }
-  a:visited, a:active,
-  .link:visited,
-  .link:active {
-    color: #0074b4; }
   a:hover,
   .link:hover {
-    color: #0095e7; }
+    color: #90c2e3; }
+  a:visited,
+  .link:visited {
+    color: #0088c1; }
+  a:active,
+  .link:active {
+    color: #015A8B; }
 
 .lego-top-nav a,
 .link--reverse {
@@ -581,9 +583,9 @@ a,
     cursor: default; }
 
 a:not([href]) {
-  color: #0074b4; }
+  color: #0088c1; }
   a:not([href]):visited, a:not([href]):hover, a:not([href]):active {
-    color: #0074b4;
+    color: #0088c1;
     cursor: default; }
 
 .lego-list {
