@@ -557,12 +557,12 @@ a,
 .link {
   color: #0088c1;
   cursor: pointer; }
-  a:hover,
-  .link:hover {
-    color: #90c2e3; }
   a:visited,
   .link:visited {
     color: #0088c1; }
+  a:hover,
+  .link:hover {
+    color: #90c2e3; }
   a:active,
   .link:active {
     color: #015A8B; }
