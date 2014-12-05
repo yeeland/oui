@@ -8,6 +8,17 @@
   padding: spacer(2);
   font-size: map-get($font-size, epsilon);
   overflow: hidden;
+  border-radius: 0 !important;
+
+  .ui-widget-header {
+    background: none; // Legacy override.
+    border: none; // Legacy override.
+    padding: 0; // Legacy override.
+  }
+
+  .ui-datepicker-header {
+    position: relative;
+  }
 
   &.ui-datepicker-multi-2 .ui-datepicker-group {
     width: 50%;
@@ -35,12 +46,13 @@
 
   .ui-datepicker-title {
     font-weight: map-get($font-weight, bold);
-    margin-bottom: spacer(1);
+    margin-bottom: 0;
     text-align: center;
   }
 
   .ui-datepicker-calendar {
     width: 100%;
+    margin: 0;
 
     th {
       color: map-get($font-color, light);
@@ -50,18 +62,21 @@
     }
 
     td {
-      text-align: center;
       font-size: map-get($font-size, milli);
 
       a,
       &.ui-state-disabled span {
+        text-align: center;
         display: block;
         padding: 4px;
         border: 1px solid transparent;
+        background: #fff !important;
+        color: map-get($link-color, base);
       }
 
       &.ui-state-disabled span {
         color: map-get($font-color, light);
+        background: #fff !important;
       }
     }
 
@@ -80,7 +95,7 @@
   .ui-datepicker-prev,
   .ui-datepicker-next {
     position: absolute;
-    top: 22px; // Moving into correct position.
+    top: 2px; // Moving into correct position.
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -103,6 +118,8 @@
       display: block;
       text-indent: -99999px; // Moving default prev/next text off screen.
       overflow: hidden;
+      position: static; // Legacy override.
+      background: none; // Legacy override.
     }
 
     &.ui-state-disabled {
@@ -111,7 +128,7 @@
   }
 
   .ui-datepicker-prev {
-    left: spacer(2.5);
+    left: 0;
 
     &:before {
       @extend %lego-arrow-inline--left;
@@ -120,7 +137,7 @@
   }
 
   .ui-datepicker-next {
-    right: spacer(2.5);
+    right: 0;
 
     &:before {
       @extend %lego-arrow-inline--right;
