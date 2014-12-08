@@ -54,7 +54,7 @@
 //[/hc]
 
 .underline {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 // Adds text-decoration: line-through;.
@@ -64,7 +64,7 @@
 //[/hc]
 
 .strike {
-  text-decoration: line-through;
+  text-decoration: line-through !important;
 }
 
 // ## Font Colors
@@ -79,11 +79,11 @@
 }
 
 .muted {
-  color: map-get($font-color, muted);
+  color: map-get($font-color, muted) !important;
 }
 
 .faint {
-  color: map-get($font-color, faint);
+  color: map-get($font-color, faint) !important;
 }
 
 // ## Proceed (Align Right)
@@ -191,15 +191,15 @@
 
 %good-news,
 .good-news {
-  color: map-get($font-color, good-news);
+  color: map-get($font-color, good-news) !important;
 }
 
 %warning,
 .warning {
-  color: map-get($font-color, warning);
+  color: map-get($font-color, warning) !important;
 }
 
 %bad-news,
 .bad-news {
-  color: map-get($font-color, bad-news);
+  color: map-get($font-color, bad-news) !important;
 }

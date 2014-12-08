@@ -46,8 +46,6 @@
 //     ...
 //[/c]
 
-// ## SCSS
-
 @mixin make-sprite($name, $img-path, $img-path-2x) {
 
   $img-normal: sprite-map($img-path, $spacing: 10px);
