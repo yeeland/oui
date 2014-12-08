@@ -17,6 +17,10 @@
     }
   }
 
+  .lock {
+    display: inline-block;
+  }
+
   .show-archive {
     width: 333px !important;
   }
@@ -29,8 +33,16 @@
     width: 34px
   }
 
+  #project-code-web {
+    margin-bottom: 10px;
+  }
+
   #project-code {
     width: 416px !important;
+    margin-bottom: 10px;
+  }
+
+  #projectcode-conatiner .button-group {
     margin-bottom: 10px;
   }
 }
