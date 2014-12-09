@@ -44,7 +44,8 @@
     margin-right: -(spacer(1));
 
     &:hover {
-      background-color: map-get($background-color, blue-optimum-light);
+      background-color: tint(map-get($background-color, blue-optimum), 15%);
+      color: map-get($font-color, white);
     }
 
     &--active {

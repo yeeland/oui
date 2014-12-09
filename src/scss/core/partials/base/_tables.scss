@@ -164,6 +164,10 @@
 
   td {
     vertical-align: top;
+
+    &.numerical {
+      font-size: map-get($font-size, numerical);
+    }
   }
 
   // ## Cell Alignments

@@ -85,7 +85,7 @@
   }
 
   &--bad-news {
-    border-color: tint(map-get($ui-color, red), 60%);
+    border-color: tint(map-get($ui-color, orange), 40%);
     background-color: map-get($background-color, bad-news);
   }
 }

@@ -87,7 +87,7 @@ $background-color: (
   blue-ocean                   : map-get($ui-color, blue-ocean),
   blue-optimum-light           : tint(map-get($ui-color, blue-optimum), 95%),
   warning                      : tint(map-get($ui-color, yellow), 85%),
-  bad-news                     : tint(map-get($ui-color, red), 90%),
+  bad-news                     : tint(map-get($ui-color, orange), 85%),
   good-news                    : tint(map-get($ui-color, green-winning), 95%)
 );
 
@@ -118,6 +118,7 @@ $font-size: (
   base                : 14px,
   micro               : 13px,
   milli               : 11px,
+  numerical           : 15px,
 
   alpha               : 26px, // h1
   beta                : 24px, // h2
@@ -204,7 +205,7 @@ $input-focus-box-shadow        : 0 0 4px map-get($ui-color, silver);
 // ### Buttons
 
 $button: (
-  height-default               : 32px,
+  height-default               : 34px,
   height-small                 : 24px
 );
 

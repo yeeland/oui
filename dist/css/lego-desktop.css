@@ -415,8 +415,8 @@ code {
 
 .lego-select {
   display: inline-block;
-  height: 32px;
-  line-height: 32px;
+  height: 34px;
+  line-height: 34px;
   background: #fff;
   border: 1px solid #e8e9e9;
   border-radius: 2px;
@@ -629,6 +629,8 @@ li > ol {
       cursor: pointer; }
   .lego-table td {
     vertical-align: top; }
+    .lego-table td.numerical {
+      font-size: 15px; }
   .lego-table [rowspan] {
     vertical-align: middle; }
   .lego-table [rowspan="1"] {
@@ -753,8 +755,8 @@ li > ol {
     background-color: #f3faf5; }
   .lego-notification--bad-news,
   .lego-attention--bad-news {
-    border-color: #f3aeb7;
-    background-color: #fceaed; }
+    border-color: #f7a89c;
+    background-color: #fde9e6; }
 
 .lego-pop-tip--arrow-top-center, .lego-pop-tip--arrow-top-left, .lego-pop-tip--arrow-top-right, .lego-pop-upsell--arrow-top, .lego-pop-tip--arrow-left, .lego-pop-tip--arrow-right, .lego-pop-upsell--arrow-left, .lego-pop-upsell--arrow-right, .lego-pop-tip--arrow-bottom-center, .lego-pop-tip--arrow-bottom-left, .lego-pop-tip--arrow-bottom-right, .lego-pop-upsell--arrow-bottom {
   position: relative; }
@@ -848,7 +850,8 @@ li > ol {
     margin-right: -10px; }
     .lego-dropdown__block-link:hover, .lego-pop-upsell__link a:hover,
     .lego-block-list__link:hover {
-      background-color: #f2f8fb; }
+      background-color: #2688bf;
+      color: #fff; }
     .lego-block-list__link--active {
       background-color: #f9f9f9; }
     .lego-dropdown__block-link:first-child, .lego-pop-upsell__link a:first-child,
@@ -894,7 +897,7 @@ li > ol {
   border: 0;
   margin: 0;
   padding: 0 10px;
-  height: 32px;
+  height: 34px;
   font-weight: 600;
   border-radius: 2px;
   border-style: solid;
@@ -1139,10 +1142,12 @@ a.lego-button {
   margin-top: 2px;
   text-align: left;
   visibility: hidden; }
-  .lego-dropdown__item {
+  .lego-dropdown__item,
+  .lego-dropdown__item a {
     white-space: nowrap;
     color: #444B4F; }
-    .lego-dropdown__item--active {
+    .lego-dropdown__item--active,
+    .lego-dropdown__item a--active {
       background: #f9f9f9; }
   .lego-dropdown--right {
     right: 0;
@@ -1864,7 +1869,7 @@ p {
   background-color: #fdf4e5 !important; }
 
 .background--bad-news {
-  background-color: #fceaed !important; }
+  background-color: #fde9e6 !important; }
 
 .background--good-news {
   background-color: #f3faf5 !important; }

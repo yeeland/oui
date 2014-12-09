@@ -95,7 +95,7 @@
       visibility: visible;
     }
   }
-  
+
   .lego-button {
     background: map-get($background-color, white);
     box-shadow: none;
@@ -116,7 +116,8 @@
   text-align: left;
   visibility: hidden;
 
-  &__item {
+  &__item,
+  &__item a {
     white-space: nowrap;
     color: map-get($font-color, base);
 
