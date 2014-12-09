@@ -33,21 +33,18 @@
 h1,
 .alpha {
   font-size: map-get($font-size, alpha);
-  letter-spacing: map-get($letter-spacing, tight);
   line-height: 1.1;
 }
 
 h2,
 .beta {
   font-size: map-get($font-size, beta);
-  letter-spacing: map-get($letter-spacing, tight);
   line-height: 1.1;
 }
 
 h3,
 .gamma {
   font-size: map-get($font-size, gamma);
-  letter-spacing: map-get($letter-spacing, tight);
   line-height: 1.2;
 }
 
