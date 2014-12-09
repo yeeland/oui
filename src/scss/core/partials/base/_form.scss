@@ -13,11 +13,6 @@
 //             <input type="text" class="lego-text-input">
 //             <div class="lego-form-note">This is a form note.</div>
 //           </li>
-//           <li class="lego-form-field__item lego-form-bad-news">
-//             <label class="lego-label">Address</label>
-//             <input type="text" class="lego-text-input">
-//             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
-//           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Diabled Input</label>
 //             <input type="text" class="lego-text-input" disabled>
@@ -66,6 +61,20 @@
 //               </tr>
 //             </table>
 //           </li>
+//         </ol>
+//       </fieldset>
+//       <div class="lego-form__footer lego-button-row lego-button-row--right">
+//         <button class="lego-button">Cancel</button>
+//         <button class="lego-button lego-button--highlight">Submit</button>
+//       </div>
+//     </form>
+//[/hc]
+
+
+//[hc]
+//     <form>
+//       <fieldset>
+//         <ol class="lego-form-fields">
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Textarea</label>
 //             <textarea class="lego-textarea"></textarea>
@@ -224,6 +233,36 @@
 //         <button class="lego-button">Cancel</button>
 //         <button class="lego-button lego-button--highlight">Submit</button>
 //       </div>
+//     </form>
+//[/hc]
+
+//[hc]
+//     <form>
+//       <div class="lego-form__header">
+//         <div class="lego-form__title">Error States</div>
+//       </div>
+//       <fieldset>
+//         <ol class="lego-form-fields">
+//           <li class="lego-form-field__item lego-form-bad-news">
+//             <label class="lego-label">Address</label>
+//             <input type="text" class="lego-text-input">
+//             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
+//           </li>
+//           <li class="lego-form-field__item lego-form-bad-news">
+//             <label class="lego-label">Fill Space</label>
+//             <select name="zoo" id="zoo" class="lego-select">
+//               <option value="one">This is option one</option>
+//               <option value="two">And this is option two</option>
+//             </select>
+//             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
+//           </li>
+//           <li class="lego-form-field__item lego-form-bad-news">
+//             <label class="lego-label">Textarea</label>
+//             <textarea class="lego-textarea"></textarea>
+//             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
+//           </li>
+//         </ol>
+//       </fieldset>
 //     </form>
 //[/hc]
 
@@ -443,7 +482,9 @@ fieldset {
   }
 
   [type=text],
-  [type=password] {
+  [type=password],
+  .lego-select,
+  .lego-textarea {
     border-color: map-get($ui-color, bad-news);
   }
 }

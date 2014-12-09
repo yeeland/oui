@@ -529,7 +529,9 @@ fieldset {
 .lego-form-bad-news .lego-label {
   color: #c6400c; }
 .lego-form-bad-news [type=text],
-.lego-form-bad-news [type=password] {
+.lego-form-bad-news [type=password],
+.lego-form-bad-news .lego-select,
+.lego-form-bad-news .lego-textarea {
   border-color: #c6400c; }
 
 .lego-form-note {
@@ -1626,19 +1628,16 @@ body {
 h1,
 .alpha {
   font-size: 28px;
-  letter-spacing: -1px;
   line-height: 1.1; }
 
 h2,
 .beta {
   font-size: 24px;
-  letter-spacing: -1px;
   line-height: 1.1; }
 
 h3,
 .gamma {
   font-size: 20px;
-  letter-spacing: -1px;
   line-height: 1.2; }
 
 h4,
@@ -1844,14 +1843,20 @@ hgroup .hn {
 #content.dashboard #project-container .callout .tabs li {
   font-size: 11px;
   padding-bottom: 6px; }
+#content.dashboard .lock {
+  display: inline-block; }
 #content.dashboard .show-archive {
   width: 333px !important; }
 #content.dashboard #create-button {
   font-size: 12px !important; }
 #content.dashboard .list table tr.experiment td.goal span {
   width: 34px; }
+#content.dashboard #project-code-web {
+  margin-bottom: 10px; }
 #content.dashboard #project-code {
   width: 416px !important;
+  margin-bottom: 10px; }
+#content.dashboard #projectcode-conatiner .button-group {
   margin-bottom: 10px; }
 
 .menu div.submenu div.content,
