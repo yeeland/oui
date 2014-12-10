@@ -78,9 +78,9 @@ a,
 }
 
 
-// Targets anchors without an `href` attribute.
+// Targets anchors without an `href` attribute and not a lego-button.
 
-a:not([href]) {
+a:not([href]):not(.lego-button) {
   color: map-get($link-color, base);
 
   &:visited,

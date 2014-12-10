@@ -625,9 +625,9 @@ a,
     color: #a5a5a5;
     cursor: default; }
 
-a:not([href]) {
+a:not([href]):not(.lego-button) {
   color: #0081ba; }
-  a:not([href]):visited, a:not([href]):hover, a:not([href]):active {
+  a:not([href]):not(.lego-button):visited, a:not([href]):not(.lego-button):hover, a:not([href]):not(.lego-button):active {
     color: #0081ba;
     cursor: default; }
 
@@ -1773,7 +1773,8 @@ hgroup .hn {
   position: absolute;
   top: 40px;
   left: -330px;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 2999; }
   .lego-project-drawer--active {
     left: 0; }
   .lego-project-drawer .lego-project-drawer__header {
