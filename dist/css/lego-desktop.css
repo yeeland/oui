@@ -2250,6 +2250,9 @@ body.results2 #saved-reports h6 {
 .display--inline {
   display: inline !important; }
 
+.display--none {
+  display: none !important; }
+
 .vertical-align--top {
   vertical-align: top !important; }
 
