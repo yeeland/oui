@@ -715,6 +715,13 @@ li > ol {
   .lego-table--hover > thead > tr > th:last-child,
   .lego-table--hover > tbody > tr > td:last-child {
     padding-right: 10px; }
+  .lego-table--add-row__controls {
+    vertical-align: middle !important;
+    width: 65px; }
+    .lego-table--add-row__controls .flex {
+      width: 100%; }
+      .lego-table--add-row__controls .flex .link--bad-news {
+        margin-left: auto; }
 
 .lego-table-row--active {
   background-color: #f7f7f7; }

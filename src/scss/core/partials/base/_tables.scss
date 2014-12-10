@@ -255,6 +255,23 @@
       padding-right: spacer(1);
     }
   }
+
+  // Add/Remove Rows
+
+  &--add-row {
+    &__controls {
+      vertical-align: middle !important;
+      width: 65px;
+
+      .flex {
+        width: 100%;
+
+        .link--bad-news {
+          margin-left: auto;
+        }
+      }
+    }
+  }
 }
 
 // Added to the table row.

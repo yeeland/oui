@@ -19,11 +19,11 @@
 //           </li>
 //           <li class="lego-form-field__item">
 //             <label class="lego-label">Add/Remove Row</label>
-//             <table class="lego-table width-1">
+//             <table class="lego-table lego-table--add-row width-1">
 //               <tr>
 //                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
 //                 <td><input type="text" class="lego-text-input"></td>
-//                 <td class="cell-collapse vertical-align--middle">
+//                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
 //                     <svg class="lego-icon link--dark">
 //                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
@@ -34,12 +34,12 @@
 //               <tr>
 //                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
 //                 <td><input type="text" class="lego-text-input"></td>
-//                 <td class="cell-collapse vertical-align--middle">
+//                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
 //                     <svg class="lego-icon link--dark">
 //                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
 //                     </svg>
-//                     <svg class="lego-icon push--left link--bad-news">
+//                     <svg class="lego-icon  link--bad-news">
 //                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
 //                     </svg>
 //                   </div>
@@ -48,12 +48,12 @@
 //               <tr>
 //                 <td class="soft--bottom"><input type="text" class="lego-text-input"></td>
 //                 <td><input type="text" class="lego-text-input"></td>
-//                 <td class="cell-collapse vertical-align--middle">
+//                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
 //                     <svg class="lego-icon link--dark">
 //                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
 //                     </svg>
-//                     <svg class="lego-icon push--left link--bad-news">
+//                     <svg class="lego-icon link--bad-news">
 //                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
 //                     </svg>
 //                   </div>
