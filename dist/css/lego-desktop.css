@@ -363,7 +363,11 @@ input[type="submit"] {
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
+<<<<<<< HEAD
   color: #444B4F;
+=======
+  color: #262626;
+>>>>>>> 7e874a7db697fabe7f6904fa018b3082b9067638
   background-color: #fff; }
 
 p {

@@ -38,6 +38,12 @@ define(function() {
       $el.on('click', ACTIVATOR_SELECTOR, dropdownService.show.bind(dropdownService, this.el));
       $el.on('click', TOGGLE_SELECTOR, dropdownService.toggle.bind(dropdownService, this.el));
       $el.on('click', HIDE_SELECTOR, dropdownService.hide.bind(dropdownService, this.el));
+    },
+    unbind: function() {
+      var $el = $(this.el);
+      $el.off('click', ACTIVATOR_SELECTOR, dropdownService.show);
+      $el.off('click', TOGGLE_SELECTOR, dropdownService.toggle);
+      $el.off('click', HIDE_SELECTOR, dropdownService.hide);
     }
   };
 });

@@ -4,6 +4,7 @@
  * @author Tom Genoni
  */
 
+//TODO: Cause the text to show after the animation has completed
 define(function() {
 
   var ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
