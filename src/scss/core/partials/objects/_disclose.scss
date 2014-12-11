@@ -38,7 +38,7 @@
 
     &:before {
       line-height: 1;
-      font-size: map-get($font-size, micro);
+      font-size: 10px;
       content: '\25B6';
     }
   }

@@ -69,7 +69,7 @@
   border: 1px solid map-get($ui-color, silver);
   background: map-get($background-color, faint);
 
-  &--brand {
+  &--basic {
     border-color: map-get($ui-color, blue-optimum-light);
     background-color: map-get($background-color, blue-optimum-light);
   }

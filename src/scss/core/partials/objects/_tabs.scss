@@ -120,29 +120,25 @@
       margin-left: 0;
     }
 
-    // &:last-child {
-    //   border-radius: 0 map-get($border-radius, big) 0 0;
-    //   border-right: 1px solid map-get($ui-color, base);
-    // }
-
     &:hover,
     &.tab-active {
     }
 
     &.tab-active {
       background-color: map-get($background-color, blue-ocean);
+      border-color: map-get($ui-color, blue-ocean);
       color: map-get($font-color, white);
 
-      // &:after { // Creates the white bar under the active tab.
-      //   content: '';
-      //   display: block;
-      //   height: 3px;
-      //   background: map-get($background-color, white);
-      //   position: absolute;
-      //   left: 0;
-      //   right: 0;
-      //   bottom: -3px;
-      // }
+      &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+      }
     }
   }
 }
@@ -154,9 +150,8 @@
   }
 
   .lego-tabs-nav__item {
-    // background-color: transparent;
     padding: spacer(0.5) spacer(1);
-    font-size: map-get($font-size, milli);
+    font-size: map-get($font-size, micro);
   }
 }
 
@@ -172,12 +167,19 @@
 
 .lego-tabs--sub {
   .lego-tabs-nav__item {
+    font-weight: map-get($font-weight, normal);
     border: none;
+    background-color: transparent;
+    color: map-get($font-color, blue-ocean);
 
-    &.tab-active:after {
-      height: 2px;
-      background: map-get($background-color, blue-optimum);
-      bottom: -1px;
+    &.tab-active {
+      font-weight: map-get($font-weight, bold);
+
+      &:after {
+        background: map-get($background-color, blue-ocean);
+        height: 2px;
+        bottom: -1px;
+      }
     }
   }
 }

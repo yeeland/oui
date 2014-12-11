@@ -66,6 +66,11 @@
 
     > li {
       margin-right: 0;
+      margin-top: spacer(1);
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 

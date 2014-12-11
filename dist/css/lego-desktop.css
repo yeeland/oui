@@ -363,11 +363,7 @@ input[type="submit"] {
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-<<<<<<< HEAD
   color: #444B4F;
-=======
-  color: #262626;
->>>>>>> 7e874a7db697fabe7f6904fa018b3082b9067638
   background-color: #fff; }
 
 p {
@@ -745,8 +741,8 @@ li > ol {
   border-radius: 2px;
   border: 1px solid #d9dbdb;
   background: #f9f9f9; }
-  .lego-notification--brand,
-  .lego-attention--brand {
+  .lego-notification--basic,
+  .lego-attention--basic {
     border-color: #9acce2;
     background-color: #f2f8fb; }
   .lego-notification--warning,
@@ -1171,7 +1167,7 @@ a.lego-button {
   transition: 0.3s; }
   .lego-disclose__symbol:before {
     line-height: 1;
-    font-size: 13px;
+    font-size: 10px;
     content: '\25B6'; }
 .lego-disclose__content {
   display: none; }
@@ -1212,7 +1208,7 @@ a.lego-button {
   text-align: center;
   display: inline-block;
   border-radius: 50%;
-  font-size: 10px; }
+  font-size: 11px; }
   .lego-help-dot:after {
     content: "?"; }
 
@@ -1254,6 +1250,8 @@ a.lego-button {
   margin-right: 10px; }
 .lego-media__img--rev {
   margin-left: 10px; }
+.lego-media__body {
+  margin-top: -2px; }
 
 .lego-nav > li {
   margin-right: 10px; }
@@ -1262,7 +1260,10 @@ a.lego-button {
 .lego-nav--stacked {
   display: block; }
   .lego-nav--stacked > li {
-    margin-right: 0; }
+    margin-right: 0;
+    margin-top: 10px; }
+    .lego-nav--stacked > li:first-child {
+      margin-top: 0; }
 .lego-nav--center > li {
   margin-left: 5px;
   margin-right: 5px; }
@@ -1279,7 +1280,7 @@ a.lego-button {
   color: #444B4F; }
 
 .lego-pop-tip {
-  background: #606669;
+  background: #444B4F;
   color: #fff;
   border-radius: 2px;
   font-size: 13px;
@@ -1287,37 +1288,37 @@ a.lego-button {
   max-width: 250px;
   display: inline-block; }
   .lego-pop-tip--arrow-top-center:before {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-top-center:after {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-top-left:before {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-top-left:after {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-top-right:before {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-top-right:after {
-    border-bottom-color: #606669 !important; }
+    border-bottom-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-center:before {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-center:after {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-left:before {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-left:after {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-right:before {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-bottom-right:after {
-    border-top-color: #606669 !important; }
+    border-top-color: #444B4F !important; }
   .lego-pop-tip--arrow-left:before {
-    border-right-color: #606669 !important; }
+    border-right-color: #444B4F !important; }
   .lego-pop-tip--arrow-left:after {
-    border-right-color: #606669 !important; }
+    border-right-color: #444B4F !important; }
   .lego-pop-tip--arrow-right:before {
-    border-left-color: #606669 !important; }
+    border-left-color: #444B4F !important; }
   .lego-pop-tip--arrow-right:after {
-    border-left-color: #606669 !important; }
+    border-left-color: #444B4F !important; }
 
 .lego-pop-upsell {
   max-width: 250px;
@@ -1352,7 +1353,7 @@ a.lego-button {
   background: #f9f9f9;
   height: 20px;
   border-radius: 2px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
   .lego-progress__bar {
     -moz-transition: width 0.3s;
@@ -1361,7 +1362,7 @@ a.lego-button {
     transition: width 0.3s;
     height: 100%;
     background: #0074b4;
-    box-shadow: inset 0 -2px 0 #026F9F;
+    box-shadow: inset 0 -2px 0 #015A81;
     line-height: 20px;
     color: #fff;
     font-size: 11px;
@@ -1452,6 +1453,8 @@ a.lego-button {
 
 .lego-stat {
   margin-right: 10px; }
+  .lego-stat .stat__value {
+    font-size: 15px; }
 
 .lego-steps {
   margin-left: auto;
@@ -1518,23 +1521,38 @@ a.lego-button {
       margin-left: 0; }
     .lego-tabs-nav__item.tab-active {
       background-color: #00415d;
+      border-color: #00415d;
       color: #fff; }
+      .lego-tabs-nav__item.tab-active:after {
+        content: '';
+        display: block;
+        height: 3px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px; }
 
 .lego-tabs--small .lego-tabs-nav {
   border-width: 1px; }
 .lego-tabs--small .lego-tabs-nav__item {
   padding: 5px 10px;
-  font-size: 11px; }
+  font-size: 13px; }
 
 .lego-tabs--center .lego-tabs-nav__item:first-child {
   margin-left: 5px; }
 
 .lego-tabs--sub .lego-tabs-nav__item {
-  border: none; }
-  .lego-tabs--sub .lego-tabs-nav__item.tab-active:after {
-    height: 2px;
-    background: #0074b4;
-    bottom: -1px; }
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: #00415d; }
+  .lego-tabs--sub .lego-tabs-nav__item.tab-active {
+    font-weight: 600; }
+    .lego-tabs--sub .lego-tabs-nav__item.tab-active:after {
+      background: #00415d;
+      height: 2px;
+      bottom: -1px; }
 
 .lego-tabs-pane {
   display: none; }
@@ -1558,7 +1576,7 @@ a.lego-button {
 html {
   font-size: 14px;
   font-family: 'Proxima Nova', Helvetica, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   font-weight: 300; }
 
 html,
@@ -2307,7 +2325,7 @@ p {
   line-height: 1.2 !important; }
 
 .line--loose {
-  line-height: 1.8 !important; }
+  line-height: 1.6 !important; }
 
 .word-break {
   word-break: break-all !important; }

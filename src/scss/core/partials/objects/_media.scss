@@ -67,5 +67,8 @@
   &__body {
     @extend %flex-1;
     @extend %kill-last-child-margin;
+
+    // Proxima Nova has a lower baseline, so this compensates for the drop next to images
+    margin-top: -2px;
   }
 }

@@ -30,4 +30,8 @@
 %lego-stat,
 .lego-stat {
   margin-right: spacer(1);
+
+  .stat__value {
+    font-size: map-get($font-size, numerical);
+  }
 }
