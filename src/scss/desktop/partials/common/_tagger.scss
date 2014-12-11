@@ -1,6 +1,10 @@
 // # Tagger
 // A small tag to idenify items.
 
+//[hc]
+//     <div class="tagger">This is a tag.</div>
+//[/hc]
+
 .tagger {
   font-style: italic;
   font-size: map-get($font-size, micro);

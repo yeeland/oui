@@ -1,6 +1,21 @@
 // # Background Trumps
 // Adding background colors via classes.
 
+//[hc]
+//     <ul class="lego-matrix lego-matrix--1-3">
+//       <li><div class="docs-placeholder background--white">background--white</div></li>
+//       <li><div class="docs-placeholder background--faint">background--faint</div></li>
+//       <li><div class="docs-placeholder background--light">background--light</div></li>
+//       <li><div class="docs-placeholder background--muted">background--muted</div></li>
+//       <li><div class="docs-placeholder background--medium">background--medium</div></li>
+//       <li><div class="docs-placeholder background--blue-optimum reverse">background--blue-optimum</div></li>
+//       <li><div class="docs-placeholder background--blue-ocean reverse">background--blue-ocean</div></li>
+//       <li><div class="docs-placeholder background--warning">background--warning</div></li>
+//       <li><div class="docs-placeholder background--bad-news">background--bad-news</div></li>
+//       <li><div class="docs-placeholder background--good-news">background--good-news</div></li>
+//     </ul>
+//[/hc]
+
 .background--white {
   background-color: map-get($background-color, white) !important;
 }
