@@ -1715,6 +1715,52 @@ hgroup .hn {
 .lego-sections__item {
   margin-bottom: 25px; }
 
+.lego-project-drawer {
+  -moz-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+  background: white;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  position: absolute;
+  top: 40px;
+  left: -330px;
+  bottom: 0;
+  z-index: 2999; }
+  .lego-project-drawer--active {
+    left: 0; }
+  .lego-project-drawer .lego-project-drawer__header {
+    padding: 20px;
+    position: relative; }
+    .lego-project-drawer .lego-project-drawer__header .lego-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer; }
+  .lego-project-drawer .lego-block-list {
+    overflow-y: auto; }
+    .lego-project-drawer .lego-block-list li {
+      margin: 0;
+      padding: 0; }
+      .lego-project-drawer .lego-block-list li:first-child {
+        border-top: none; }
+    .lego-project-drawer .lego-block-list .lego-block-list__link {
+      margin: 0;
+      padding: 5px 20px; }
+
+.lego-top-nav {
+  background-color: #003366;
+  color: white;
+  padding: 0 20px; }
+  .lego-top-nav__item {
+    margin-right: 20px; }
+    .lego-top-nav__item:last-child {
+      margin-right: 0; }
+  .lego-top-nav a {
+    display: block;
+    padding: 10px 0; }
+
 .lego-code-copy {
   position: relative; }
   .lego-code-copy .lego-button {
@@ -1769,40 +1815,6 @@ hgroup .hn {
     width: 3px;
     background: #0081ba; }
 
-.lego-project-drawer {
-  -moz-transition: left 0.3s;
-  -o-transition: left 0.3s;
-  -webkit-transition: left 0.3s;
-  transition: left 0.3s;
-  background: white;
-  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  position: absolute;
-  top: 40px;
-  left: -330px;
-  bottom: 0;
-  z-index: 2999; }
-  .lego-project-drawer--active {
-    left: 0; }
-  .lego-project-drawer .lego-project-drawer__header {
-    padding: 20px;
-    position: relative; }
-    .lego-project-drawer .lego-project-drawer__header .lego-icon {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer; }
-  .lego-project-drawer .lego-block-list {
-    overflow-y: auto; }
-    .lego-project-drawer .lego-block-list li {
-      margin: 0;
-      padding: 0; }
-      .lego-project-drawer .lego-block-list li:first-child {
-        border-top: none; }
-    .lego-project-drawer .lego-block-list .lego-block-list__link {
-      margin: 0;
-      padding: 5px 20px; }
-
 .lego-notification {
   -moz-transition: opacity 0.1s;
   -o-transition: opacity 0.1s;
@@ -1831,18 +1843,6 @@ hgroup .hn {
   color: #a5a5a5;
   letter-spacing: normal;
   white-space: nowrap; }
-
-.lego-top-nav {
-  background-color: #003366;
-  color: white;
-  padding: 0 20px; }
-  .lego-top-nav__item {
-    margin-right: 20px; }
-    .lego-top-nav__item:last-child {
-      margin-right: 0; }
-  .lego-top-nav a {
-    display: block;
-    padding: 10px 0; }
 
 #content.dashboard #project-container .box > .header,
 #content.dashboard #project-container .callout > .header {
