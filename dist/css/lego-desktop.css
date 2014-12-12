@@ -1,3 +1,4 @@
+.lego-switch__wrapper:after,
 .cf:after {
   content: '';
   display: table;
@@ -13,7 +14,7 @@
 .lego-nav,
 .lego-nav--fit, .lego-overlay,
 .lego-stat-group,
-.lego-steps, .lego-tabs-nav, .lego-project-drawer, .lego-top-nav,
+.lego-steps, .lego-switch, .lego-tabs-nav, .lego-project-drawer, .lego-top-nav,
 .flex {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1502,6 +1503,24 @@ a.lego-button {
       border-color: #0074b4; }
     .lego-steps__item:first-child:before {
       display: none; }
+
+.lego-switch__wrapper {
+  background: #d9dbdb;
+  border: 1px solid #d0d2d3;
+  border-radius: 4px; }
+.lego-switch__item {
+  position: relative;
+  text-align: center;
+  padding: 5px 15px;
+  color: #00415d;
+  cursor: pointer;
+  text-transform: uppercase;
+  float: left; }
+  .lego-switch__item-active {
+    border: 1px solid #b4b7b8;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1); }
 
 .lego-tabs-nav {
   border-bottom: 1px solid #e8e9e9; }

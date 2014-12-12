@@ -1,0 +1,43 @@
+// # Switch
+// Creates an on/off toggle.
+
+// ## Example
+
+//[hc]
+//     <div class="lego-switch">
+//       <ul class="lego-switch__wrapper">
+//          <li class="lego-switch__item lego-switch__item-active">On</li>
+//          <li class="lego-switch__item">Off</li>
+//       </ul>
+//     </div>
+//[/hc]
+
+// ## SCSS
+
+.lego-switch {
+  @extend %flex;
+
+  &__wrapper {
+    @extend %cf;
+    background: map-get($background-color, silver);
+    border: 1px solid map-get($ui-color, gunmetal);
+    border-radius: map-get($border-radius, big);
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    padding: spacer(.5) spacer(1.5);
+    color: map-get($font-color, blue-ocean);
+    cursor: pointer;
+    text-transform: uppercase;
+    float: left;
+
+    &-active {
+      border: 1px solid map-get($ui-color, medium);
+      border-radius: map-get($border-radius, big);
+      background: white;
+      box-shadow: 1px 0px map-get($shadow, light);
+    }
+  }
+}
