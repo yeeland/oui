@@ -70,8 +70,8 @@
   background: map-get($background-color, faint);
 
   &--basic {
-    border-color: map-get($ui-color, blue-optimum-light);
-    background-color: map-get($background-color, blue-optimum-light);
+    border-color: map-get($ui-color, blue-medium-light);
+    background-color: map-get($background-color, blue-medium-light);
   }
 
   &--warning {
@@ -80,7 +80,7 @@
   }
 
   &--good-news {
-    border-color: tint(map-get($ui-color, green-winning), 60%);
+    border-color: tint(map-get($ui-color, good-news), 60%);
     background-color: map-get($background-color, good-news);
   }
 

@@ -111,7 +111,7 @@
     border: 1px solid map-get($ui-color, base);
     border-radius: map-get($border-radius, big) map-get($border-radius, big) 0 0;
     border-bottom: 0;
-    color: map-get($font-color, blue-ocean);
+    color: map-get($font-color, blue-dark);
     font-weight: map-get($font-weight, bold);
     background-color: map-get($background-color, faint);
     cursor: pointer;
@@ -125,8 +125,8 @@
     }
 
     &.tab-active {
-      background-color: map-get($background-color, blue-ocean);
-      border-color: map-get($ui-color, blue-ocean);
+      background-color: map-get($background-color, blue-dark);
+      border-color: map-get($ui-color, blue-dark);
       color: map-get($font-color, white);
 
       &:after {
@@ -170,13 +170,13 @@
     font-weight: map-get($font-weight, normal);
     border: none;
     background-color: transparent;
-    color: map-get($font-color, blue-ocean);
+    color: map-get($font-color, blue-dark);
 
     &.tab-active {
       font-weight: map-get($font-weight, bold);
 
       &:after {
-        background: map-get($background-color, blue-ocean);
+        background: map-get($background-color, blue-dark);
         height: 2px;
         bottom: -1px;
       }

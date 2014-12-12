@@ -40,17 +40,16 @@ $ui-color: (
   black                        : $base-black,
 
   // Primary colors
-  blue-ocean                   : #00415d,
-  blue-ocean-light             : #3b5871,
+  blue-dark                    : #00415d,
   green                        : #0b9d76,
 
   // Secondary colors
-  blue-optimum                 : #0074b4,
-  blue-optimum-light           : #9acce2,
+  blue-medium                  : #0074b4,
+  blue-medium-light            : #9acce2,
 
   // Tertiary colors
-  red                          : #e1364b,
-  green-winning                : #14a54a,
+  bad-news                     : #e1364b,
+  good-news                    : #14a54a,
   yellow                       : #f4b852,
   orange                       : #f26f5a,
   pink                         : #ef5c9e,
@@ -68,8 +67,8 @@ $link-color: (
   base                         : #0088c1,
   hover                        : #90c2e3,
   active                       : #015A8B,
-  blue-optimum                 : map-get($ui-color, blue-optimum),
-  blue-optimum-light           : lighten(map-get($ui-color, blue-optimum), 50%),
+  blue-medium                  : map-get($ui-color, blue-medium),
+  blue-medium-light            : lighten(map-get($ui-color, blue-medium), 50%),
   white                        : map-get($ui-color, $base-white)
 );
 
@@ -84,12 +83,12 @@ $background-color: (
   muted                        : $grey-35,
   medium                       : $grey-50,
 
-  blue-optimum                 : map-get($ui-color, blue-optimum),
-  blue-ocean                   : map-get($ui-color, blue-ocean),
-  blue-optimum-light           : tint(map-get($ui-color, blue-optimum), 95%),
+  blue-medium                  : map-get($ui-color, blue-medium),
+  blue-dark                    : map-get($ui-color, blue-dark),
+  blue-medium-light            : tint(map-get($ui-color, blue-medium), 95%),
   warning                      : tint(map-get($ui-color, yellow), 85%),
   bad-news                     : tint(map-get($ui-color, orange), 85%),
-  good-news                    : tint(map-get($ui-color, green-winning), 95%)
+  good-news                    : tint(map-get($ui-color, good-news), 95%)
 );
 
 // ### Font Colors
@@ -103,11 +102,11 @@ $font-color: (
   medium                       : $grey-50,
   dark                         : $grey-85,
 
-  blue-optimum                 : map-get($ui-color, blue-optimum),
-  blue-ocean                   : map-get($ui-color, blue-ocean),
+  blue-medium                  : map-get($ui-color, blue-medium),
+  blue-dark                    : map-get($ui-color, blue-dark),
   warning                      : map-get($ui-color, warning),
-  bad-news                     : map-get($ui-color, red),
-  good-news                    : map-get($ui-color, green-winning)
+  bad-news                     : map-get($ui-color, bad-news),
+  good-news                    : map-get($ui-color, good-news)
 );
 
 // ## Fonts

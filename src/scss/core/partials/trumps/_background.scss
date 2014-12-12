@@ -8,8 +8,8 @@
 //       <li><div class="docs-placeholder background--light">background--light</div></li>
 //       <li><div class="docs-placeholder background--muted">background--muted</div></li>
 //       <li><div class="docs-placeholder background--medium">background--medium</div></li>
-//       <li><div class="docs-placeholder background--blue-optimum reverse">background--blue-optimum</div></li>
-//       <li><div class="docs-placeholder background--blue-ocean reverse">background--blue-ocean</div></li>
+//       <li><div class="docs-placeholder background--blue-medium reverse">background--blue-medium</div></li>
+//       <li><div class="docs-placeholder background--blue-dark reverse">background--blue-dark</div></li>
 //       <li><div class="docs-placeholder background--warning">background--warning</div></li>
 //       <li><div class="docs-placeholder background--bad-news">background--bad-news</div></li>
 //       <li><div class="docs-placeholder background--good-news">background--good-news</div></li>
@@ -36,12 +36,12 @@
   background-color: map-get($background-color, medium) !important;
 }
 
-.background--blue-optimum {
-  background-color: map-get($background-color, blue-optimum) !important;
+.background--blue-medium {
+  background-color: map-get($background-color, blue-medium) !important;
 }
 
-.background--blue-ocean {
-  background-color: map-get($background-color, blue-ocean) !important;
+.background--blue-dark {
+  background-color: map-get($background-color, blue-dark) !important;
 }
 
 .background--warning {

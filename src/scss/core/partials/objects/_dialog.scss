@@ -47,7 +47,7 @@
   }
 
   &__header {
-    background-color: map-get($background-color, blue-ocean);
+    background-color: map-get($background-color, blue-dark);
     border-radius: map-get($border-radius, base) map-get($border-radius, base) 0 0;
   }
 

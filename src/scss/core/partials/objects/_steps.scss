@@ -70,27 +70,27 @@
 
     &--active {
       &:before {
-        background: map-get($ui-color, blue-optimum);
+        background: map-get($ui-color, blue-medium);
       }
 
       .lego-steps__dot {
-        background: map-get($ui-color, blue-optimum);
-        border-color: map-get($ui-color, blue-optimum);
+        background: map-get($ui-color, blue-medium);
+        border-color: map-get($ui-color, blue-medium);
       }
 
       .lego-steps__label {
-        color: map-get($font-color, blue-optimum);
+        color: map-get($font-color, blue-medium);
       }
     }
 
     &--complete {
 
       &:before {
-        background: map-get($ui-color, blue-optimum);
+        background: map-get($ui-color, blue-medium);
       }
 
       .lego-steps__dot {
-        border-color: map-get($ui-color, blue-optimum);
+        border-color: map-get($ui-color, blue-medium);
       }
     }
 

@@ -4,6 +4,7 @@
 //     <div>
 //       <button class="lego-button lego-button--basic">Go</button>
 //       <button class="lego-button lego-button--highlight">Go</button>
+//       <button class="lego-button lego-button--danger">Go</button>
 //       <button class="lego-button lego-button--outline">Go</button>
 //       <button class="lego-button">Go</button>
 //     </div>
@@ -161,11 +162,11 @@
   }
 
   &--basic {
-    background: map-get($ui-color, blue-ocean-light);
+    background: #3b5871;
     color: map-get($font-color, white);
-    border-color: map-get($ui-color, blue-ocean);
+    border-color: map-get($ui-color, blue-dark);
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0 -2px 0 map-get($ui-color, blue-ocean);
+    box-shadow: inset 0 -2px 0 map-get($ui-color, blue-dark);
 
     &.lego-button--hover,
     &:hover {
@@ -191,39 +192,40 @@
 
   &--outline {
     background: none;
-    color: map-get($font-color, blue-ocean);
-    border: 1px solid map-get($ui-color, blue-ocean);
+    color: map-get($font-color, blue-dark);
+    border: 1px solid map-get($ui-color, blue-dark);
 
     &.lego-button--hover,
     &:hover {
       background: none;
-      color: map-get($font-color, blue-ocean);
-      box-shadow: 0 0 2px map-get($ui-color, blue-ocean);
+      color: map-get($font-color, blue-dark);
+      box-shadow: 0 0 2px map-get($ui-color, blue-dark);
     }
 
     &.lego-button--active,
     &:active {
-      background: map-get($background-color, blue-ocean);
+      background: map-get($background-color, blue-dark);
       color: map-get($font-color, white);
       box-shadow: none;
     }
   }
 
   &--danger {
-    background: map-get($ui-color, red);
+    background: map-get($ui-color, bad-news);
     color: map-get($font-color, white);
     border-color: #912C05;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: inset 0 -2px 0 #912C05;
+    box-shadow: inset 0 -2px 0 #AA1C2F;
 
     &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#E04D14, map-get($ui-color, red));
+      background: #EF4156;
     }
 
     &.lego-button--active,
     &:active {
-      background: linear-gradient(map-get($ui-color, red), #E04D14);
+      background: #C32F45;
+      box-shadow: inset 0 -2px 0 #8D1B2D
     }
 
     &:hover,
@@ -268,9 +270,9 @@
     + .lego-button--basic {
       &:hover,
       &:active {
-        background: map-get($ui-color, blue-ocean-light);
-        border-color: map-get($ui-color, blue-ocean);
-        box-shadow: inset 0 -2px 0 map-get($ui-color, blue-ocean);
+        background: #3b5871;
+        border-color: map-get($ui-color, blue-dark);
+        box-shadow: inset 0 -2px 0 map-get($ui-color, blue-dark);
       }
     }
 
@@ -289,8 +291,8 @@
       }
 
       &:active {
-        color: map-get($font-color, blue-ocean);
-        border: 1px solid map-get($ui-color, blue-ocean);
+        color: map-get($font-color, blue-dark);
+        border: 1px solid map-get($ui-color, blue-dark);
         background: none;
       }
     }
