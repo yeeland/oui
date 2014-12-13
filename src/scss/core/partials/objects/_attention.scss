@@ -13,14 +13,14 @@
 //     </div>
 //[/hc]
 
-// ### Brand
-// For general notifications using the brand color.
+// ### primary
+// For general notifications using the primary color.
 
 //[hc]
-//     <div class="lego-attention lego-attention--brand text--center push-double--bottom">
+//     <div class="lego-attention lego-attention--primary text--center push-double--bottom">
 //         This is a note.
 //     </div>
-//     <div class="lego-attention lego-attention--brand">
+//     <div class="lego-attention lego-attention--primary">
 //       <p>This is a longer note adipisicing elit. Recusandae ipsum tenetur est quisquam beatae aliquam facere molestiae reiciendis aperiam molestias consequuntur voluptatum corporis voluptas laudantium dolor, nam quam laboriosam harum.</p>
 //     </div>
 //[/hc]
@@ -69,7 +69,7 @@
   border: 1px solid map-get($ui-color, silver);
   background: map-get($background-color, faint);
 
-  &--basic {
+  &--primary {
     border-color: map-get($ui-color, blue-medium-light);
     background-color: map-get($background-color, blue-medium-light);
   }

@@ -8,7 +8,7 @@
 //       <div class="lego-notification">
 //         This is a notification.
 //       </div>
-//       <div class="lego-notification lego-notification--basic">
+//       <div class="lego-notification lego-notification--primary">
 //         This is a notification.
 //       </div>
 //       <div class="lego-notification lego-notification--warning">
@@ -37,8 +37,8 @@
   transform: translateX(-50%);
   opacity: 0;
 
-  &--basic {
-    @extend %lego-attention--basic;
+  &--primary {
+    @extend %lego-attention--primary;
   }
 
   &--warning {

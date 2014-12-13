@@ -97,7 +97,6 @@
   }
 
   .lego-button {
-    background: map-get($background-color, white);
     box-shadow: none;
   }
 }
@@ -107,6 +106,7 @@
   @extend %lego-block-list-group;
   background: map-get($background-color, white);
   box-shadow: 0 2px map-get($shadow, light);
+  font-weight: map-get($font-weight, normal);
   min-width: 100%;
   position: absolute;
   top: 100%;
