@@ -1002,7 +1002,7 @@ li > ol {
   .lego-button--small {
     padding: 4px 10px;
     height: 24px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1; }
   .lego-button--full {
     width: 100%;
@@ -1508,23 +1508,26 @@ a.lego-button {
     .lego-steps__item:first-child:before {
       display: none; }
 
-.lego-switch__wrapper {
-  background: #d9dbdb;
-  border: 1px solid #d0d2d3;
-  border-radius: 4px; }
-.lego-switch__item {
-  position: relative;
-  text-align: center;
-  padding: 5px 15px;
-  color: #00415d;
-  cursor: pointer;
-  text-transform: uppercase;
-  float: left; }
-  .lego-switch__item-active {
-    border: 1px solid #b4b7b8;
-    border-radius: 4px;
-    background: white;
-    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1); }
+.lego-switch {
+  font-size: 11px;
+  font-weight: 400; }
+  .lego-switch__wrapper {
+    background: #d9dbdb;
+    border: 1px solid #d0d2d3;
+    border-radius: 4px; }
+  .lego-switch__item {
+    position: relative;
+    text-align: center;
+    padding: 3px 15px;
+    color: #00415d;
+    cursor: pointer;
+    text-transform: uppercase;
+    float: left; }
+    .lego-switch__item-active {
+      border: 1px solid #b4b7b8;
+      border-radius: 4px;
+      background: white;
+      box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1); }
 
 .lego-tabs-nav {
   border-bottom: 1px solid #e8e9e9; }

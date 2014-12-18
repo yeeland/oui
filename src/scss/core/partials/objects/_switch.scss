@@ -16,6 +16,8 @@
 
 .lego-switch {
   @extend %flex;
+  font-size: map-get($font-size, milli);
+  font-weight: map-get($font-weight, normal);
 
   &__wrapper {
     @extend %cf;
@@ -27,7 +29,7 @@
   &__item {
     position: relative;
     text-align: center;
-    padding: spacer(.5) spacer(1.5);
+    padding: 3px spacer(1.5);
     color: map-get($font-color, blue-dark);
     cursor: pointer;
     text-transform: uppercase;
