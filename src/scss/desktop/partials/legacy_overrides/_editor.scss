@@ -63,6 +63,10 @@
   }
 }
 
+#variation-code-popup {
+  @include box-sizing(content-box);
+}
+
 .toolbar__title.editable:hover {
   color: #006eb6;
 
