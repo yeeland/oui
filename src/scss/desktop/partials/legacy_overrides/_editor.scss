@@ -40,6 +40,10 @@
   }
 }
 
+#variation-code-popup {
+  @include box-sizing(content-box);
+}
+
 #variation-code-popup #show-variation-code-button {
   padding-bottom: 17px;
 }

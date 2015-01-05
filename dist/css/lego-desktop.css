@@ -1238,7 +1238,7 @@ a.lego-button {
   .lego-dialog__title {
     font-size: 20px;
     letter-spacing: -1px;
-    color: #003366;
+    color: #036;
     line-height: 1; }
   .lego-dialog__body {
     padding-bottom: 30px; }
@@ -1750,7 +1750,7 @@ hgroup .hn {
       padding: 5px 20px; }
 
 .lego-top-nav {
-  background-color: #003366;
+  background-color: #036;
   color: white;
   padding: 0 20px; }
   .lego-top-nav__item {
@@ -1944,6 +1944,9 @@ form.standard p,
 #settings-dialog .invite-container #additional-projects-intro {
   font-size: 12px; }
 
+#upsell-subscribe img {
+  display: inline; }
+
 #container.edit {
   font-size: 1.35em; }
   #container.edit .variations__list__item > a {
@@ -1964,6 +1967,11 @@ form.standard p,
   background: none;
   border: none;
   font-size: 12px; }
+
+#variation-code-popup {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
 
 #variation-code-popup #show-variation-code-button {
   padding-bottom: 17px; }
@@ -2209,7 +2217,7 @@ body.results2 #saved-reports h6 {
   background-color: #0081ba !important; }
 
 .background--brand-dark {
-  background-color: #003366 !important; }
+  background-color: #036 !important; }
 
 .background--warning {
   background-color: #fcf8e3 !important; }
@@ -2720,3 +2728,5 @@ body.results2 #saved-reports h6 {
 
 .height-300 {
   height: 300px !important; }
+
+/*# sourceMappingURL=lego-desktop.css.map */
