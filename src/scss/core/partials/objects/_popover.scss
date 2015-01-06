@@ -4,40 +4,113 @@
 // ## Examples
 
 //[hc]
-//     <ul class="lego-popover lego-popover--arrow-bottom">
+//     <ul class="lego-popover lego-popover--arrow-top-left">
 //       <li class="lego-popover__content">
-//         <div class="lego-popover__title">Feature Name</div>
+//         <div class="lego-popover__title">Title</div>
 //         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
 //       </li>
 //     </ul>
 //[/hc]
 
 //[hc]
-//     <ul class="lego-popover lego-popover--arrow-top">
+//     <ul class="lego-popover lego-popover--arrow-top-center">
 //       <li class="lego-popover__content">
-//         <div class="lego-popover__title">Feature Name</div>
+//         <div class="lego-popover__title">Title</div>
 //         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
 //       </li>
 //     </ul>
 //[/hc]
 
 //[hc]
-//     <ul class="lego-popover lego-popover--arrow-right">
+//     <ul class="lego-popover lego-popover--arrow-top-right">
 //       <li class="lego-popover__content">
-//         <div class="lego-popover__title">Feature Name</div>
+//         <div class="lego-popover__title">Title</div>
 //         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
 //       </li>
 //     </ul>
 //[/hc]
 
 //[hc]
-//     <ul class="lego-popover lego-popover--arrow-left">
+//     <ul class="lego-popover lego-popover--arrow-right-top">
 //       <li class="lego-popover__content">
-//         <div class="lego-popover__title">Feature Name</div>
+//         <div class="lego-popover__title">Title</div>
 //         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
 //       </li>
 //     </ul>
 //[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-right-center">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-right-bottom">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-bottom-right">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-bottom-center">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-bottom-left">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-left-bottom">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-left-center">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
+//[hc]
+//     <ul class="lego-popover lego-popover--arrow-left-top">
+//       <li class="lego-popover__content">
+//         <div class="lego-popover__title">Title</div>
+//         <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+//       </li>
+//     </ul>
+//[/hc]
+
 
 $popover-background: map-get($ui-color, white);
 $popover-border: map-get($ui-color, base);
@@ -57,21 +130,53 @@ $popover-border: map-get($ui-color, base);
     font-weight: map-get($font-weight, bold);
   }
 
-  // Arrow options.
+  // Arrow options. 12 possible positions.
 
-  &--arrow-top {
+  &--arrow-top-left {
+    @include arrow(top, left, $popover-background, $popover-border);
+  }
+
+  &--arrow-top-center {
     @include arrow(top, center, $popover-background, $popover-border);
   }
 
-  &--arrow-bottom {
+  &--arrow-top-right {
+    @include arrow(top, right, $popover-background, $popover-border);
+  }
+
+  &--arrow-right-top {
+    @include arrow(right, top, $popover-background, $popover-border);
+  }
+
+  &--arrow-right-center {
+    @include arrow(right, center, $popover-background, $popover-border);
+  }
+
+  &--arrow-right-bottom {
+    @include arrow(right, bottom, $popover-background, $popover-border);
+  }
+
+  &--arrow-bottom-right {
+    @include arrow(bottom, right, $popover-background, $popover-border);
+  }
+
+  &--arrow-bottom-center {
     @include arrow(bottom, center, $popover-background, $popover-border);
   }
 
-  &--arrow-left {
+  &--arrow-bottom-left {
+    @include arrow(bottom, left, $popover-background, $popover-border);
+  }
+
+  &--arrow-left-bottom {
+    @include arrow(left, bottom, $popover-background, $popover-border);
+  }
+
+  &--arrow-left-center {
     @include arrow(left, center, $popover-background, $popover-border);
   }
 
-  &--arrow-right {
-    @include arrow(right, center, $popover-background, $popover-border);
+  &--arrow-left-top {
+    @include arrow(left, top, $popover-background, $popover-border);
   }
 }
