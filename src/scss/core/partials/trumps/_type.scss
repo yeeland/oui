@@ -46,6 +46,19 @@
   cursor: help !important;
 }
 
+// ## Pointer Cursor
+// Add a pointer cursor to any element to indicate on `:hover` that element is
+// clickable.
+
+//[hc]
+//     <div class="pointer">Hover over me for a pointer cursor.</div>
+//[/hc]
+
+.pointer {
+  cursor: pointer !important;
+}
+
+
 // ## Underline
 // Adds text-decoration: underline to text.
 
