@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -rf src/js/lib
-rm src/js/text.js
+rm -f src/js/text.js
 
 mkdir src/js/lib/
 
