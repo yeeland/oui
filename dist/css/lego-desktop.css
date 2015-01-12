@@ -108,8 +108,6 @@
   overflow-y: auto; }
 
 .lego-array__item {
-  border: 1px solid #e0e0e0;
-  padding: 20px;
   margin-left: 10px;
   margin-right: 10px; }
   .lego-array__item:first-child {
@@ -2778,13 +2776,16 @@ body.results2 #saved-reports h6 {
 .word-break {
   word-break: break-all !important; }
 
-.good-news {
+.color--brand {
+  color: #0081ba !important; }
+
+.color--good-news {
   color: #97c70a !important; }
 
-.warning {
+.color--warning {
   color: #ffd40c !important; }
 
-.bad-news {
+.color--bad-news {
   color: #c6400c !important; }
 
 .width-50 {

@@ -185,21 +185,29 @@
 // Use for both text and on icons.
 
 //[hc]
-//     <div href="#" class="good-news">This is good news text</div>
+//     <p href="#" class="color--brand">This is brand color text</p>
+//     <p href="#" class="color--good-news">This is good news text</p>
+//     <p href="#" class="color--warning">This is warning text</p>
+//     <p href="#" class="color--bad-news">This is bad news text</p>
 //[/hc]
 
 
-%good-news,
-.good-news {
+%color--brand,
+.color--brand {
+  color: map-get($font-color, brand) !important;
+}
+
+%color--good-news,
+.color--good-news {
   color: map-get($font-color, good-news) !important;
 }
 
-%warning,
-.warning {
+%color--warning,
+.color--warning {
   color: map-get($font-color, warning) !important;
 }
 
-%bad-news,
-.bad-news {
+%color--bad-news,
+.color--bad-news {
   color: map-get($font-color, bad-news) !important;
 }
