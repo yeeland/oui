@@ -1,4 +1,4 @@
-// # Width Trumps
+// # Width &amp; Height Trumps
 // Use rarely, for form elements only as a last resort.
 
 // IE10: The `-ms-flex-preferred-size` values are to overcome any `flex:...` values the element may have.
@@ -39,9 +39,38 @@
   -ms-flex-preferred-size: 300px !important;
 }
 
+// ## Min Width Trumps
 
-// # Height Trumps
-// Use rarely, for form elements only as a last resort.
+.min-width-50 {
+  min-width: 50px !important;
+}
+
+.min-width-75 {
+  min-width: 75px !important;
+}
+
+.min-width-100 {
+  min-width: 100px !important;
+}
+
+.min-width-150 {
+  min-width: 150px !important;
+}
+
+.min-width-200 {
+  min-width: 200px !important;
+}
+
+.min-width-250 {
+  min-width: 250px !important;
+}
+
+.min-width-300 {
+  min-width: 300px !important;
+}
+
+
+// ## Height Trumps
 
 .height-50 {
   height: 50px !important;
@@ -69,4 +98,34 @@
 
 .height-300 {
   height: 300px !important;
+}
+
+// ## Min Height Trumps
+
+.min-height-50 {
+  min-height: 50px !important;
+}
+
+.min-height-75 {
+  min-height: 75px !important;
+}
+
+.min-height-100 {
+  min-height: 100px !important;
+}
+
+.min-height-150 {
+  min-height: 150px !important;
+}
+
+.min-height-200 {
+  min-height: 200px !important;
+}
+
+.min-height-250 {
+  min-height: 250px !important;
+}
+
+.min-height-300 {
+  min-height: 300px !important;
 }
