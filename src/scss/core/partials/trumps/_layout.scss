@@ -38,9 +38,9 @@
 
 // ## Text Alignment
 
-//[c]
-//     <div class="text--left">content</div>
-//[/c]
+//[hc]
+//     <div class="text--right">content</div>
+//[/hc]
 
 .text--left {
   text-align: left !important;
@@ -76,6 +76,19 @@
   display: none !important;
 }
 
+// ## Faded
+// Sets opacity to 0.5. Useful for a simulated disabled state.
+
+//[hc]
+//     <div class="faded push--bottom">This text is faded. As is the icon below.</div>
+//     <svg class="lego-icon faded">
+//       <use xlink:href="#collaborators"></use>
+//     </svg>
+//[/hc]
+
+.faded {
+  opacity: 0.5 !important;
+}
 
 // ## Vertical Alignment for table cells.
 
