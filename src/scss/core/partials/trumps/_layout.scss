@@ -170,3 +170,21 @@
 .no-resize {
   resize: none !important;
 }
+
+
+// ## Position
+// Change the positioning of element.
+
+.position--relative {
+  position: relative !important;
+}
+
+.position--absolute {
+  position: absolute !important;
+}
+
+.position--fixed {
+  position: fixed !important;
+}
+
+

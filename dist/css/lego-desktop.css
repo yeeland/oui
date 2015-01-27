@@ -2421,6 +2421,15 @@ body.results2 #saved-reports h6 {
 .no-resize {
   resize: none !important; }
 
+.position--relative {
+  position: relative !important; }
+
+.position--absolute {
+  position: absolute !important; }
+
+.position--fixed {
+  position: fixed !important; }
+
 .push {
   margin: 10px !important; }
 
