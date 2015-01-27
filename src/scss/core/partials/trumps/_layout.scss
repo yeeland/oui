@@ -171,7 +171,6 @@
   resize: none !important;
 }
 
-
 // ## Position
 // Change the positioning of element.
 
@@ -187,4 +186,11 @@
   position: fixed !important;
 }
 
+
+// ## Visibility
+// Change the positioning of element.
+
+.visibility--hidden {
+  visibility: hidden !important;
+}
 
