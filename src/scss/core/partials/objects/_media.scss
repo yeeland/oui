@@ -56,10 +56,12 @@
 
   &__img {
     margin-right: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
   }
 
   &__img--rev {
     margin-left: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
   }
 
   &__body {

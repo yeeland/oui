@@ -278,7 +278,21 @@
   }
 }
 
-// ### Anchors as buttons
+
+// ### Buttons like Anchors
+// Button that appears to an anchor link.
+
+.lego-button--link {
+  @extend %link;
+  -webkit-font-smoothing: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: 0;
+}
+
+// ### Anchors like Buttons
+// Anchors that appear to be buttons.
 
 a.lego-button {
   padding-top: 8px;
