@@ -25,6 +25,8 @@
 // Create sections for consitent spacing, especially in the sidebar.
 
 .lego-sections {
+  @extend %kill-last-child-margin;
+
   &__item {
     margin-bottom: spacer(2.5);
   }
