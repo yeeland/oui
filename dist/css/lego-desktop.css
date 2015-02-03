@@ -1842,6 +1842,12 @@ hgroup .hn {
 .lego-sections__item {
   margin-bottom: 25px; }
 
+.max-width--reading {
+  max-width: 800px; }
+
+.max-width--page {
+  max-width: 1120px; }
+
 .lego-project-drawer {
   -moz-transition: left 0.3s;
   -o-transition: left 0.3s;
