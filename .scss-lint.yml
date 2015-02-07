@@ -37,6 +37,9 @@ linters:
     enabled: false
   SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4.
     enabled: false
+  SelectorFormat: # Selector should follow the hyphenated BEM syntax.
+    convention: hyphenated_BEM
+    enabled: true
   Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
     enabled: true
   SingleLinePerSelector: # Each selector in a comma sequence should be on its own line.
