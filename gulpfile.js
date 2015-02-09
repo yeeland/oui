@@ -4,8 +4,7 @@ var svgSymbols = require('gulp-svg-symbols');
 var scsslint = require('gulp-scss-lint');
 
 var paths = {
-  'styles' : 'src/scss/**/*.scss',
-  'stylesIgnore' : '!src/scss/library/**/*.scss',
+  'styles' : ['src/scss/**/*.scss', '!src/scss/library/**/*.scss', '!src/scss/desktop/partials/legacy_overrides/**/*.scss'],
   'svgSource' : 'src/img/svg-icons/*.svg',
   'svgDest' : 'dist/img/'
 };
@@ -24,7 +23,7 @@ gulp.task('svg', function () {
 // Runs SCSS linter.
 // gulp link
 gulp.task('lint', function() {
-  gulp.src([paths.styles, paths.stylesIgnore])
+  gulp.src(paths.styles)
     .pipe(scsslint({
       'config': '.scss-lint.yml'
     }));
