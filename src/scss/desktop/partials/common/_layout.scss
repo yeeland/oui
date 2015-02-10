@@ -31,3 +31,16 @@
     margin-bottom: spacer(2.5);
   }
 }
+
+// ### Max Width Containers
+// Create sections for consitent spacing, especially in the sidebar.
+
+.max-width--reading {
+  max-width: map-get($layout-width, reading);
+}
+
+// Full page container.
+
+.max-width--page {
+  max-width: map-get($layout-width, body);
+}
