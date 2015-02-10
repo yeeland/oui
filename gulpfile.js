@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var svgSymbols = require('gulp-svg-symbols');
 var scsslint = require('gulp-scss-lint');
+var symlink = require('gulp-symlink');
 
 var paths = {
   'styles' : [
@@ -33,4 +34,10 @@ gulp.task('lint', function() {
     }));
 });
 
-gulp.task('default', ['lint']);
+// Moves thei
+gulp.task('hook', function () {
+  return gulp.src('.pre-commit')
+    .pipe(symlink('.git/hooks/', 'pre-commit'));
+});
+
+gulp.task('default');

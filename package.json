@@ -8,6 +8,7 @@
     "gulp": "^3.8.8",
     "gulp-svg-symbols": "^0.3.1",
     "gulp-scss-lint": "^0.1.6",
+    "gulp-symlink": "^2.1.0",
     "gulp-util": "^3.0.0"
   },
   "repository": {
