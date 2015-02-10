@@ -1,0 +1,14 @@
+// ## Selector
+// For big blocky selections, such as those in the Create New Project dialog and in the welcome flow.
+
+.lego-selector {
+  @extend %lego-array;
+
+  &__item {
+    @extend %lego-array__item;
+    text-align: center;
+    border: 1px solid map-get($ui-color, base);
+
+    &
+  }
+}
