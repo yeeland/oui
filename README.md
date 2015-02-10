@@ -14,6 +14,15 @@ This will install the Gulp dependencies. Then run:
 
 This will run the 'hook' task that creates a pre-commit hook. This hook runs a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the Lego SCSS is consistent.
 
+If the the linter finds issues you'll see messages in your terminal like this:
+
+    [13:56:12] Using gulpfile /Library/WebServer/Documents/lego/gulpfile.js
+    [13:56:12] Starting 'lint'...
+    [13:56:12] Finished 'lint' after 4.32 ms
+    [13:56:15] 1 issues found in /Library/WebServer/Documents/lego/src/scss/desktop/_desktop-partials.scss
+    [13:56:15] /Library/WebServer/Documents/lego/src/scss/desktop/_desktop-partials.scss:24 [W] Files should end with a trailing newline
+
+Here the 'lint' process ran and found 1 issue, providing the file, line number, and reason for the problem.
 
 ### Generating the SVG Icon Sprite
 
