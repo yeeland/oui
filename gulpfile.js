@@ -37,7 +37,7 @@ gulp.task('lint', function() {
 // Moves thei
 gulp.task('hook', function () {
   return gulp.src('.pre-commit')
-    .pipe(symlink('.git/hooks/', 'pre-commit'));
+  .pipe(symlink('.git/hooks/pre-commit')) // Write to the destination folder
 });
 
 gulp.task('default');
