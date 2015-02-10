@@ -87,5 +87,6 @@
     color: map-get($ui-color, white);
     border: 2px solid map-get($ui-color, white);
     box-shadow: 0 0 map-get($shadow, big);
+    z-index: 1;
   }
 }
