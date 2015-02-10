@@ -36,14 +36,14 @@
     width: 32px;
     height: 32px;
   }
+
+  // This is a vertical alignment fix when used to the right of `.lego-icon`.
+
+  + [class^="lego-arrow-inline"] {
+    vertical-align: super;
+  }
 }
 
-// ### Icon Alignment Fixes
-// This is a vertical alignment fix when used to the right of `.lego-icon`.
-
-.lego-icon + [class^="lego-arrow-inline"] {
-  vertical-align: super;
-}
 
 // Fix for icons inside buttons with text.
 

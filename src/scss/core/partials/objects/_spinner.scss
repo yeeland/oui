@@ -42,11 +42,15 @@
 }
 
 @-webkit-keyframes lego-spin {
-  100% { -webkit-transform: rotate(360deg) } // Safari
+  100% {
+    -webkit-transform: rotate(360deg); // Safari
+  }
 }
 
 @keyframes lego-spin {
-  100% { transform: rotate(360deg) }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .lego-spinner {
@@ -60,7 +64,7 @@
   animation: lego-spin map-get($spinner, speed) infinite linear;
 
   &:before {
-    content: "";
+    content: '';
     width: map-get($spinner, size-default);
     height: map-get($spinner, size-default);
     border-radius: 50%;

@@ -34,10 +34,10 @@ gulp.task('lint', function() {
     }));
 });
 
-// Moves thei
+// Symlink the .pre-commit file.
 gulp.task('hook', function () {
   return gulp.src('.pre-commit')
   .pipe(symlink('.git/hooks/pre-commit')) // Write to the destination folder
 });
 
-gulp.task('default');
+gulp.task('default',['hook']);
