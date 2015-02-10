@@ -87,6 +87,7 @@
     color: map-get($ui-color, white);
     border: 2px solid map-get($ui-color, white);
     box-shadow: 0 0 map-get($shadow, big);
+    // This is needed to bring the close icon above the dialog background
     z-index: 1;
   }
 }
