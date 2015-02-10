@@ -20,7 +20,7 @@
 .lego-pagination {
   @extend %justify-content--center;
 
-  & > li {
+  > li {
     padding: spacer(0.5);
   }
 

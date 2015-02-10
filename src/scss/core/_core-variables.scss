@@ -8,7 +8,7 @@
 // variables below that use these black and grey values.
 
 $base-black                    : #000;
-$base-white                    : #fff;
+$base-white                    : #FFF;
 $grey-90                       : tint($base-black, 10%);
 $grey-85                       : tint($base-black, 15%);
 $grey-80                       : tint($base-black, 20%);
@@ -36,12 +36,12 @@ $ui-color: (
   dark                         : $grey-85,
   black                        : $base-black,
 
-  brand                        : #0081ba,
-  brand-light                  : #9acce2,
+  brand                        : #0081BA,
+  brand-light                  : #9ACCE2,
   brand-dark                   : #036,
-  warning                      : #ffd40c,
-  bad-news                     : #c6400c,
-  good-news                    : #97c70a
+  warning                      : #FFD40C,
+  bad-news                     : #C6400C,
+  good-news                    : #97C70A
 );
 
 // ### Link Colors
@@ -68,10 +68,10 @@ $background-color: (
 
   brand                        : map-get($ui-color, brand),
   brand-dark                   : map-get($ui-color, brand-dark),
-  brand-light                  : #f2f7fc,
-  warning                      : lighten(#f7ecb5, 10%),
-  bad-news                     : lighten(#c1272d, 48%),
-  good-news                    : lighten(#90b71c, 45%)
+  brand-light                  : #F2F7FC,
+  warning                      : lighten(#F7ECB5, 10%),
+  bad-news                     : lighten(#C1272D, 48%),
+  good-news                    : lighten(#90B71C, 45%)
 );
 
 // ### Font Colors
@@ -98,20 +98,20 @@ $font-color: (
 // These defaults can be overriden by custom variables.
 
 $font-size: (
-  base                : 12px,
-  micro               : 10px,
-  milli               : 11px,
+  base                         : 12px,
+  micro                        : 10px,
+  milli                        : 11px,
 
-  alpha               : 28px, // h1
-  beta                : 24px, // h2
-  gamma               : 20px, // h3
-  delta               : 16px, // h4
-  epsilon             : 14px, // h5
-  zeta                : 12px, // h6
+  alpha                        : 28px, // h1
+  beta                         : 24px, // h2
+  gamma                        : 20px, // h3
+  delta                        : 16px, // h4
+  epsilon                      : 14px, // h5
+  zeta                         : 12px, // h6
 
-  kilo                : 40px, // Extra large fonts.
-  mega                : 50px,
-  giga                : 65px
+  kilo                         : 40px, // Extra large fonts.
+  mega                         : 50px,
+  giga                         : 65px
 );
 
 // ### Line Heights
@@ -119,9 +119,9 @@ $font-size: (
 // These defaults can be overriden by custom variables.
 
 $line-height: (
-  base                : 1.6,
-  tight               : 1.2,
-  loose               : 1.8
+  base                         : 1.6,
+  tight                        : 1.2,
+  loose                        : 1.8
 );
 
 // ### Font Family
@@ -194,14 +194,14 @@ $button: (
 // ### Spinner
 
 $spinner: (
-  size-default               : 40px,
-  size-small                 : 26px,
-  size-tiny                  : 16px,
-  border-width               : 4px,
-  border-width-small         : 3px,
-  border-width-tiny          : 2px,
-  border-color-light         : #d1e5f2,
-  speed                      : 800ms
+  size-default                 : 40px,
+  size-small                   : 26px,
+  size-tiny                    : 16px,
+  border-width                 : 4px,
+  border-width-small           : 3px,
+  border-width-tiny            : 2px,
+  border-color-light           : #D1E5F2,
+  speed                        : 800ms
 );
 
 // ## Spacing Unit

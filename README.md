@@ -1,5 +1,36 @@
 # Lego Component Library
 
+## Getting Started
+
+### Install Pre-Commit Hook
+
+After cloning this repo run:
+
+    npm install
+
+This will install the Gulp dependencies. Then run:
+
+    gulp
+
+This will run the 'hook' task that creates a pre-commit hook. This hook runs a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the Lego SCSS is consistent.
+
+
+### Generating the SVG Icon Sprite
+
+When adding new icons to the library place the individual svg files into:
+
+    src/img/svg-icons
+
+and then run:
+
+    gulp svg
+
+The resulting sprite will be built to:
+
+    dist/img/svg-symbols.svg
+
+This is the file that is included as the first child of the body on every page of Optimizely.
+
 ## Introduction
 
 LEGO stands for Low-level Elements and Global Objects. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...
@@ -16,7 +47,6 @@ By achieving these goals our code becomes...
 1. **Smaller and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)er.** Since we're constantly reusing low-level objects to build larger ones, often with Sass' <code>@extend</code> functionality, we cut down on CSS bloat. Less code means fewer bugs.
 
 
-
 ## Building Your Site with LEGO
 
 LEGO consists of two parts:
@@ -24,7 +54,7 @@ LEGO consists of two parts:
 1. **Core**
     - Platform and device agnostic code that is used as the foundation for any site.
     - This code lives in the LEGO repository and is a dependency for platform code.
-2. **Platform**
+2. **Custom**
     - Platform or device specific built on top of Core.
     - This code lives in the platform repo, pulling Core as a dependency.
 

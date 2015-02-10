@@ -6,7 +6,7 @@
 @mixin font-size($font-size, $line-height-bool: true) {
   font-size: $font-size;
   @if $line-height-bool == true {
-    line-height: ceil( $font-size / map-get($line-height, base) ) * map-get($line-height, base) / $font-size;
+    line-height: ceil($font-size / map-get($line-height, base)) * map-get($line-height, base) / $font-size;
   }
 }
 
@@ -17,8 +17,7 @@
   @if $value == antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  @else {
+  } @else {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
