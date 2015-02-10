@@ -4,7 +4,11 @@ var svgSymbols = require('gulp-svg-symbols');
 var scsslint = require('gulp-scss-lint');
 
 var paths = {
-  'styles' : ['src/scss/**/*.scss', '!src/scss/library/**/*.scss', '!src/scss/desktop/partials/legacy_overrides/**/*.scss'],
+  'styles' : [
+    'src/scss/**/*.scss',
+    '!src/scss/library/**/*.scss',
+    '!src/scss/desktop/partials/legacy_overrides/**/*.scss'
+  ],
   'svgSource' : 'src/img/svg-icons/*.svg',
   'svgDest' : 'dist/img/'
 };
