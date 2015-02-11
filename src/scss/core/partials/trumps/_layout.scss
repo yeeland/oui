@@ -164,6 +164,10 @@
   cursor: pointer !important;
 }
 
+.cursor--text {
+  cursor: text !important;
+}
+
 // ## Text Area No Resize
 // Prevent resizing of textarea. Use only if absolutely necessary.
 
@@ -194,3 +198,11 @@
   visibility: hidden !important;
 }
 
+// ## Prevent User Selection
+// Text inside element will not be selectable by the user.
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
