@@ -297,12 +297,20 @@
     padding-bottom: 2px;
   }
 
+  &:hover {
+    border-color: map-get($ui-color, medium);
+  }
+
   &:focus {
     border-color: $input-focus-border-color;
   }
 
   &[disabled] {
     background: map-get($background-color, faint);
+
+    &:hover {
+      border-color: map-get($ui-color, base);
+    }
   }
 }
 
@@ -316,6 +324,7 @@
 }
 
 .lego-select {
+  @include transition(border-color map-get($transition-duration, base));
   display: inline-block;
   height: map-get($button, height-default);
   line-height: map-get($button, height-default);
@@ -323,6 +332,18 @@
   border: 1px solid map-get($ui-color, base);
   border-radius: map-get($border-radius, base);
   padding: 7px;
+
+  &:hover {
+    border-color: map-get($ui-color, medium);
+  }
+
+  &[disabled] {
+    background: map-get($background-color, faint);
+
+    &:hover {
+      border-color: map-get($ui-color, base);
+    }
+  }
 }
 
 .lego-form__header {

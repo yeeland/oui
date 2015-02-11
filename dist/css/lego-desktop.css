@@ -415,12 +415,18 @@ code {
   .lego-textarea--small {
     padding-top: 2px;
     padding-bottom: 2px; }
+  .lego-text-input:hover,
+  .lego-textarea:hover {
+    border-color: #999999; }
   .lego-text-input:focus,
   .lego-textarea:focus {
     border-color: #9acce2; }
   .lego-text-input[disabled],
   .lego-textarea[disabled] {
     background: #f7f7f7; }
+    .lego-text-input[disabled]:hover,
+    .lego-textarea[disabled]:hover {
+      border-color: #e0e0e0; }
 
 .lego-textarea {
   height: 62px;
@@ -429,6 +435,10 @@ code {
     height: 100px; }
 
 .lego-select {
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
   display: inline-block;
   height: 31px;
   line-height: 31px;
@@ -436,6 +446,12 @@ code {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   padding: 7px; }
+  .lego-select:hover {
+    border-color: #999999; }
+  .lego-select[disabled] {
+    background: #f7f7f7; }
+    .lego-select[disabled]:hover {
+      border-color: #e0e0e0; }
 
 .lego-form__header {
   margin-bottom: 20px; }
