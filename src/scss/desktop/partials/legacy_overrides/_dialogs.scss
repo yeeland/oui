@@ -1,6 +1,10 @@
 //# Dialog Overrides
 // Overriding LEGO to restore legacy styling.
 
+.dialog .lego-dialog {
+  width: auto;
+}
+
 form.standard p,
 .dialog .content p,
 .message-dialog .content p {
