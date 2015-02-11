@@ -339,6 +339,7 @@
 
   &[disabled] {
     background: map-get($background-color, faint);
+    cursor: default;
 
     &:hover {
       border-color: map-get($ui-color, base);

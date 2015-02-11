@@ -449,7 +449,8 @@ code {
   .lego-select:hover {
     border-color: #999999; }
   .lego-select[disabled] {
-    background: #f7f7f7; }
+    background: #f7f7f7;
+    cursor: default; }
     .lego-select[disabled]:hover {
       border-color: #e0e0e0; }
 
