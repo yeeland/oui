@@ -1,0 +1,34 @@
+// ## Selector
+// For big blocky selections, such as those in the Create New Project dialog and in the welcome flow.
+
+// [hc]
+// <div class="lego-selector">
+//   <div class="lego-selector__item">
+//     <img src="web-project.svg" class="anchor--middle push-double--ends">
+//     <h4>Web Project</h4>
+//     <p>Test and optimize web sites.</p>
+//   </div>
+//   <div class="lego-selector__item selector-selected">
+//     <img src="web-project.svg" class="anchor--middle push-double--ends">
+//     <h4>iOS Project</h4>
+//     <p>Test and optimize native iOS apps.</p>
+//   </div>
+// </div>
+// [/hc]
+
+.lego-selector {
+ @extend %lego-array;
+
+ &__item {
+   @extend %lego-array__item;
+   text-align: center;
+   border: 1px solid map-get($ui-color, base);
+
+   &:hover,
+   &.selector-selected {
+    border: 1px solid map-get($ui-color, brand);
+    background-color: map-get($background-color, brand-light);
+    cursor: pointer;
+   }
+ }
+}
