@@ -1406,6 +1406,19 @@ a.lego-button {
 .lego-tabs-nav__item .lego-icon {
   vertical-align: sub; }
 
+.icon-status--active:before, .icon-status--bad-news:before, .icon-status--good-news:before, .icon-status--empty:before {
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px; }
+.icon-status--active:before {
+  background: #0081ba; }
+.icon-status--bad-news:before {
+  background: #c60c0c; }
+.icon-status--good-news:before {
+  background: #97c70a; }
+
 .lego-matrix {
   margin-left: -20px; }
   .lego-matrix > li {
