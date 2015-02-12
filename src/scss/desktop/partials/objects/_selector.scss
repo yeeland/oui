@@ -17,7 +17,7 @@
 // [/hc]
 
 .lego-selector {
- @extend %lego-array;
+  @extend %lego-array;
 
   &__item {
     @extend %lego-array__item;
