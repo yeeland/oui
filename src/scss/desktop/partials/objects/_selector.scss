@@ -19,16 +19,16 @@
 .lego-selector {
  @extend %lego-array;
 
- &__item {
-   @extend %lego-array__item;
-   text-align: center;
-   border: 1px solid map-get($ui-color, base);
+  &__item {
+    @extend %lego-array__item;
+    text-align: center;
+    border: 1px solid map-get($ui-color, base);
 
-   &:hover,
-   &--active {
-    border: 1px solid map-get($ui-color, brand);
-    background-color: map-get($background-color, brand-light);
-    cursor: pointer;
-   }
- }
+    &:hover,
+    &--active {
+      border: 1px solid map-get($ui-color, brand);
+      background-color: map-get($background-color, brand-light);
+      cursor: pointer;
+    }
+  }
 }
