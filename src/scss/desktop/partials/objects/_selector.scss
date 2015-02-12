@@ -8,7 +8,7 @@
 //     <h4>Web Project</h4>
 //     <p>Test and optimize web sites.</p>
 //   </div>
-//   <div class="lego-selector__item selector-selected">
+//   <div class="lego-selector__item lego-selector__item--active">
 //     <img src="web-project.svg" class="anchor--middle push-double--ends">
 //     <h4>iOS Project</h4>
 //     <p>Test and optimize native iOS apps.</p>
@@ -25,7 +25,7 @@
    border: 1px solid map-get($ui-color, base);
 
    &:hover,
-   &.selector-selected {
+   &--active {
     border: 1px solid map-get($ui-color, brand);
     background-color: map-get($background-color, brand-light);
     cursor: pointer;
