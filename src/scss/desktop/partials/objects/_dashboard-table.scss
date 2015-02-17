@@ -31,7 +31,7 @@
     left: 0;
     right: 0;
 
-    + &__title {
+    & + .cell-truncate__title {
       margin-bottom: spacer(1.5);
     }
   }
