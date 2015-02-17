@@ -24,16 +24,16 @@
 .cell-truncate {
   position: relative;
 
+  &__text + &__title {
+    margin-bottom: spacer(1.5);
+  }
+
   &__text {
     @extend %truncate;
     position: absolute;
     bottom: spacer(0.5);
     left: 0;
     right: 0;
-
-    & + .cell-truncate__title {
-      margin-bottom: spacer(1.5);
-    }
   }
 
   &__title {
