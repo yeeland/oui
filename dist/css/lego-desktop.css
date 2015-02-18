@@ -381,7 +381,8 @@ code {
   font-family: monospace; }
 
 .lego-pre {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  white-space: pre-wrap; }
   .lego-pre code {
     padding: 10px;
     background: #f7f7f7;
@@ -2972,3 +2973,5 @@ body.results2 #saved-reports h6 {
 
 .min-height-300 {
   min-height: 300px !important; }
+
+/*# sourceMappingURL=lego-desktop.css.map */
