@@ -44,3 +44,10 @@
 .max-width--page {
   max-width: map-get($layout-width, body);
 }
+
+// # No Page Min
+// Restore normal page layout by adding to `<body>` tag.
+
+.no-min-width {
+  min-width: 0;
+}

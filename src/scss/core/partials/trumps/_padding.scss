@@ -102,6 +102,10 @@
   padding-left: spacer(2) !important;
 }
 
+.soft-triple {
+  padding: spacer(3) !important;
+}
+
 .soft-triple--top {
   padding-top: spacer(3) !important;
 }
@@ -126,6 +130,10 @@
 .soft-triple--sides {
   padding-right: spacer(3) !important;
   padding-left: spacer(3) !important;
+}
+
+.soft-quad {
+  padding: spacer(4) !important;
 }
 
 .soft-quad--top {

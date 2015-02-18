@@ -12,6 +12,17 @@
 //     </ul>
 //[/hc]
 
+// ### Block List with Bottom Border
+
+//[hc]
+//     <ul class="lego-block-list lego-block-list--all">
+//       <li>Foo</li>
+//       <li>Bar</li>
+//       <li>Baz</li>
+//       <li><a href="#" class="lego-block-list__link">Foo Bar Baz</a></li>
+//     </ul>
+//[/hc]
+
 // ### Block List with Boundry
 
 //[hc]
@@ -67,6 +78,13 @@
       padding-right: 0;
     }
   }
+
+  &--all {
+    li:last-child {
+      border-bottom: 1px solid map-get($ui-color, light);
+    }
+  }
+
 }
 
 // ### Block List Group
