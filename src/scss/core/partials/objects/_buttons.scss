@@ -47,6 +47,11 @@
 //     <button class="lego-button lego-button--brand lego-button--full">Go</button>
 //[/hc]
 
+// ### Button Round
+//[hc]
+//     <button class="lego-button lego-button--brand lego-button--round">+</button>
+//[/hc]
+
 // ### Full Spread Buttons
 //[hc]
 //     <div class="lego-grid lego-grid--gutter">
@@ -227,6 +232,15 @@
     padding-right: 0;
     padding-left: 0;
     text-align: center;
+  }
+
+  // ### Button Shapes
+  // Button shape variations.
+
+  &--round {
+    border-radius: 50%;
+    padding: 3px;
+    height: map-get($button, height-small);
   }
 
   // ### With Icon
