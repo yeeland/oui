@@ -3,3 +3,5 @@ node_modules
 npm-debug.log
 src/js/lib/*.js
 src/js/text.js
+.DS_Store
+.DS_Store?
