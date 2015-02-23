@@ -1183,8 +1183,12 @@ li > ol {
     text-align: center; }
   .lego-button--round {
     border-radius: 50%;
-    padding: 3px;
-    height: 24px; }
+    height: 24px;
+    width: 24px;
+    padding: 0; }
+    .lego-button--round .lego-icon {
+      height: 12px;
+      width: 12px; }
   .lego-button--icon {
     line-height: 1.4; }
     .lego-button--icon .lego-icon {
