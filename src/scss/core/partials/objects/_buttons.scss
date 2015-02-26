@@ -286,7 +286,7 @@
     background: #F8F8F8;
     color: map-get($font-color, medium);
     border-color: map-get($ui-color, base);
-    opacity: 0.5;
+    opacity: map-get($opacity, medium);
 
     + .lego-button--brand {
       border-color: #00558D;

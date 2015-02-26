@@ -1,20 +1,25 @@
 // ## Selector
 // For big blocky selections, such as those in the Create New Project dialog and in the welcome flow.
 
-// [hc]
-// <div class="lego-selector">
-//   <div class="lego-selector__item">
-//     <img src="web-project.svg" class="anchor--middle push-double--ends">
-//     <h4>Web Project</h4>
-//     <p>Test and optimize web sites.</p>
-//   </div>
-//   <div class="lego-selector__item lego-selector__item--active">
-//     <img src="web-project.svg" class="anchor--middle push-double--ends">
-//     <h4>iOS Project</h4>
-//     <p>Test and optimize native iOS apps.</p>
-//   </div>
-// </div>
-// [/hc]
+//[hc]
+//     <div class="lego-selector">
+//       <div class="lego-selector__item">
+//         <img src="web-project.svg" class="anchor--middle push-double--ends">
+//         <h4>Web Project</h4>
+//         <p>Test and optimize web sites.</p>
+//       </div>
+//       <div class="lego-selector__item lego-selector__item--active">
+//         <img src="web-project.svg" class="anchor--middle push-double--ends">
+//         <h4>iOS Project</h4>
+//         <p>Test and optimize native iOS apps.</p>
+//       </div>
+//       <div class="lego-selector__item lego-selector__item--locked">
+//         <img src="web-project.svg" class="anchor--middle push-double--ends">
+//         <h4>Android Project</h4>
+//         <p>Test and optimize native Android apps.</p>
+//       </div>
+//     </div>
+//[/hc]
 
 .lego-selector {
   @extend %lego-array;
