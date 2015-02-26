@@ -2031,6 +2031,35 @@ hgroup .hn {
     border: 1px solid #0081BA;
     background-color: #F2F7FC;
     cursor: pointer; }
+  .lego-selector__item--locked {
+    opacity: 0.5;
+    position: relative; }
+    .lego-selector__item--locked:before {
+      content: '';
+      width: 25px;
+      height: 22px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NjMgMjY1IDMyIDMyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC00NjMgMjY1IDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJncmlkIj4NCjwvZz4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0tNDM3LDI3N2MwLTUuNS00LjUtMTAtMTAtMTBzLTEwLDQuNS0xMCwxMGMtMS4yLDAtMiwwLjktMiwydjE2YzAsMS4xLDAuOCwyLDEuOSwyaDIwYzEuMSwwLDItMC45LDItMnYtMTYNCglDLTQzNSwyNzcuOS00MzUuOSwyNzctNDM3LDI3N3ogTS00NDUsMjg4LjR2Mi42YzAsMS4xLTAuOSwyLTIsMnMtMi0wLjktMi0ydi0yLjZjLTEuMi0wLjYtMi0xLjktMi0zLjRjMC0yLjIsMS44LTQsNC00czQsMS44LDQsNA0KCUMtNDQzLDI4Ni41LTQ0NCwyODcuNy00NDUsMjg4LjR6IE0tNDQxLjEsMjc3aC0yaC0yaC00aC0yaC0zYzAtMy45LDMuMS03LDctN2MzLjksMCw3LDMuMSw3LDdILTQ0MS4xeiIvPg0KPC9zdmc+DQo=);
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+      z-index: 1; }
+    .lego-selector__item--locked:after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      top: 0;
+      right: 0;
+      border-bottom: 40px solid transparent;
+      border-right: 40px solid #7f7f7f; }
+    .lego-selector__item--locked:hover {
+      border: 1px solid #e0e0e0;
+      background-color: #FFF;
+      cursor: default; }
 
 .tagger {
   font-style: italic;
