@@ -87,7 +87,7 @@
 //[/hc]
 
 .faded {
-  opacity: 0.5 !important;
+  opacity: map-get($opacity, medium) !important;
 }
 
 // ## Vertical Alignment for table cells.
