@@ -69,6 +69,13 @@
   justify-content: center;
 }
 
+%justify-content--flex-end,
+.justify-content--flex-end {
+  -webkit-justify-content: flex-end; // Safari
+  -ms-flex-pack: end; // IE 10
+  justify-content: flex-end;
+}
+
 %align-items--center,
 .align-items--center {
   -webkit-align-items: center; // Safari
