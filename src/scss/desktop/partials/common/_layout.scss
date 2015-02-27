@@ -48,6 +48,7 @@
 // Full page container.
 
 .max-width--page {
+  width: 100%; // Needed because flex children won't fill space by default.
   max-width: map-get($layout-width, body);
 }
 

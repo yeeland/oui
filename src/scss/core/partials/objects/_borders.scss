@@ -40,6 +40,13 @@
   border-bottom: 1px solid map-get($ui-color, base);
 }
 
+%border--ends,
+.border--ends {
+  @extend %border--top;
+  @extend %border--bottom;
+}
+
+
 // ### Border Left/Right
 // These don't add margin so they remain flush with right/left side.
 
@@ -51,4 +58,10 @@
 %border--right,
 .border--right {
   border-right: 1px solid map-get($ui-color, base);
+}
+
+%border--sides,
+.border--sides {
+  @extend %border--left;
+  @extend %border--right;
 }
