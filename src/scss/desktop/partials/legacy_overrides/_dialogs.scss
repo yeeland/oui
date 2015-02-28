@@ -1,7 +1,8 @@
 //# Dialog Overrides
 // Overriding LEGO to restore legacy styling.
 
-.dialog .lego-dialog {
+.dialog .lego-dialog,
+.dialog--narrow .lego-dialog {
   width: auto;
 }
 
