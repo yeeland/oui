@@ -33,14 +33,17 @@
 .lego-dialog {
   position: relative;
   box-shadow: 0 0 map-get($shadow, big);
+  min-width: map-get($dialog, width-base);
   width: map-get($dialog, width-base);
 
   &--narrow {
+    min-width: map-get($dialog, width-narrow);
     width: map-get($dialog, width-narrow);
   }
 
   &--wide {
-    width: map-get($dialog, width-wide);
+    min-width: map-get($dialog, width-narrow);
+    width: map-get($dialog, width-narrow);
   }
 
   &__header,
@@ -71,6 +74,7 @@
 
   &__body {
     @extend %kill-last-child-margin;
+    background: map-get($background-color, white);
     padding-bottom: spacer(3);
   }
 
@@ -87,7 +91,7 @@
     color: map-get($ui-color, white);
     border: 2px solid map-get($ui-color, white);
     box-shadow: 0 0 map-get($shadow, big);
-    // This is needed to bring the close icon above the dialog background
+    // This is needed to bring the close icon above the dialog background.
     z-index: 1;
   }
 }
