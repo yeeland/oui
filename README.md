@@ -10,7 +10,7 @@ After cloning this repo run:
 
 This will install the Gulp dependencies. Then run:
 
-    gulp
+    gulp hook
 
 This will run the 'hook' task that creates a pre-commit hook. This hook runs a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the Lego SCSS is consistent.
 
@@ -23,6 +23,20 @@ If the the linter finds issues you'll see messages in your terminal like this:
     [13:56:15] /Library/WebServer/Documents/lego/src/scss/desktop/_desktop-partials.scss:24 [W] Files should end with a trailing newline
 
 Here the 'lint' process ran and found 1 issue, providing the file, line number, and reason for the problem.
+
+You can also run:
+
+    gulp lint
+
+at any time to check your files before you commit.
+
+### Run the Compass Watch Process
+
+To have Lego build to the `dist` directory run:
+
+    gulp
+
+This runs the default process that both compiles sass and watches the `scss` directory for changes.
 
 ### Generating the SVG Icon Sprite
 

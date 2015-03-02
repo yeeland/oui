@@ -1,18 +1,29 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var svgSymbols = require('gulp-svg-symbols');
-var scsslint = require('gulp-scss-lint');
-var symlink = require('gulp-symlink');
+var compass     = require('gulp-compass'),
+    gulp        = require('gulp'),
+    gutil       = require('gulp-util'),
+    notify      = require('gulp-notify'),
+    svgSymbols  = require('gulp-svg-symbols'),
+    scsslint    = require('gulp-scss-lint'),
+    symlink     = require('gulp-symlink'),
+    path        = require("path");
+
+
 
 var paths = {
-  'styles' : [
-    'src/scss/**/*.scss',
-    '!src/scss/library/**/*.scss',
-    '!src/scss/desktop/partials/legacy_overrides/**/*.scss'
-  ],
-  'svgSource' : 'src/img/svg-icons/*.svg',
-  'svgDest' : 'dist/img/'
+  svgSource : 'src/img/svg-icons/*.svg',
+  svgDest : 'dist/img/',
+  css: './dist/css/',
+  sass: './src/scss/'
 };
+
+function swallowError(error) {
+  this.emit('end');
+}
+
+function reportError(error) {
+  notify.onError().apply(this, arguments);
+  this.emit('end');
+}
 
 // Creates SVG sprite and demo page.
 // gulp svg
@@ -42,4 +53,21 @@ gulp.task('hook', function () {
     }));
 });
 
-gulp.task('default',['hook']);
+//  compass: compile sass to css
+//===========================================
+
+gulp.task('compass', function() {
+  gulp.src('./src/scss/*.scss')
+    .pipe(compass({
+      css: paths.css,
+      sass: paths.sass
+    }))
+    .on('error', reportError);
+});
+
+gulp.task('watch', function() {
+  // Watch task for sass
+  gulp.watch(path.join(paths.sass, '**/*.scss'), ['compass']);
+});
+
+gulp.task('default',['compass','watch']);
