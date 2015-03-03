@@ -1,5 +1,12 @@
 # Lego Component Library
 
+## Cheat Sheet
+
+- **`gulp`** : Runs the default compass watch process.
+- **`gulp hook`** : Installs the linter pre-commit hook (please do this!).
+- **`gulp lint`** : Runs the SCSS linter.
+- **`gulp svg`** : Creates svg sprite.
+
 ## Getting Started
 
 ### Install Pre-Commit Hook

@@ -7,9 +7,13 @@ var compass     = require('gulp-compass'),
     symlink     = require('gulp-symlink'),
     path        = require("path");
 
-
-
 var paths = {
+  // Limiting linter to first-part directories.
+  'styles' : [
+      'src/scss/**/*.scss',
+      '!src/scss/library/**/*.scss',
+      '!src/scss/desktop/partials/legacy_overrides/**/*.scss'
+  ],
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
   css: './dist/css/',
@@ -49,7 +53,7 @@ gulp.task('lint', function() {
 gulp.task('hook', function () {
   return gulp.src('.pre-commit')
     .pipe(symlink('.git/hooks/pre-commit', {
-            force: true
+      force: true
     }));
 });
 
