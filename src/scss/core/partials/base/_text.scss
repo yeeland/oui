@@ -31,7 +31,13 @@
   font-family: map-get($font-family, monospace);
 }
 
-// Content that is applied as a pseudo-element and defined as an attribute. This is useful for preventing an element's text from being copied to the clipboard.
+// ## Pseudo Content
+
+// Content that is applied as a pseudo-element and defined as an attribute on an empty element. This is useful for preventing an element's text from being copied to the clipboard.
+
+//[hc]
+//     <span data-lego-pseudo-content="+"></span> Some text
+//[/hc]
 
 [data-lego-pseudo-content]:before {
   content: attr(data-lego-pseudo-content);
