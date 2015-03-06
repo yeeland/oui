@@ -332,6 +332,7 @@
   border: 1px solid map-get($ui-color, base);
   border-radius: map-get($border-radius, base);
   padding: 7px;
+  max-width: 100%;
 
   &:hover {
     border-color: map-get($ui-color, medium);
