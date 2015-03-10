@@ -55,7 +55,7 @@
     background: $img-normal;
     display: inline-block;
     @include bp-retina {
-      background: $img-retina;
+      background: $img-retina no-repeat;
       @include background-size(image-width(sprite-path($img-normal)) image-height(sprite-path($img-normal)));
     }
   }

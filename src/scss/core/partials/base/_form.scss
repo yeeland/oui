@@ -244,12 +244,12 @@
 //       <fieldset>
 //         <ol class="lego-form-fields">
 //           <li class="lego-form-field__item lego-form-bad-news">
-//             <label class="lego-label">Address</label>
+//             <label class="lego-label lego-label--required">Address</label>
 //             <input type="text" class="lego-text-input">
 //             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
 //           </li>
 //           <li class="lego-form-field__item lego-form-bad-news">
-//             <label class="lego-label">Fill Space</label>
+//             <label class="lego-label lego-label--required">Fill Space</label>
 //             <select name="zoo" id="zoo" class="lego-select">
 //               <option value="one">This is option one</option>
 //               <option value="two">And this is option two</option>
@@ -257,7 +257,7 @@
 //             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
 //           </li>
 //           <li class="lego-form-field__item lego-form-bad-news">
-//             <label class="lego-label">Textarea</label>
+//             <label class="lego-label lego-label--required">Textarea</label>
 //             <textarea class="lego-textarea"></textarea>
 //             <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
 //           </li>
