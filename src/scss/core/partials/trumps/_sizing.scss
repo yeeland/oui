@@ -301,6 +301,38 @@
   -ms-flex-preferred-size: 300px !important;
 }
 
+
+// ## Max Width Trumps
+
+.max-width-50 {
+  max-width: 50px !important;
+}
+
+.max-width-75 {
+  max-width: 75px !important;
+}
+
+.max-width-100 {
+  max-width: 100px !important;
+}
+
+.max-width-150 {
+  max-width: 150px !important;
+}
+
+.max-width-200 {
+  max-width: 200px !important;
+}
+
+.max-width-250 {
+  max-width: 250px !important;
+}
+
+.max-width-300 {
+  max-width: 300px !important;
+}
+
+
 // ## Min Width Trumps
 
 .min-width-50 {
@@ -361,6 +393,7 @@
 .height-300 {
   height: 300px !important;
 }
+
 
 // ## Min Height Trumps
 
