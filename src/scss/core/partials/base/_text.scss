@@ -39,6 +39,6 @@
 //     <span data-lego-pseudo-content="+"></span> Some text
 //[/hc]
 
-[data-lego-pseudo-content]:before {
+[data-lego-pseudo-content]::before {
   content: attr(data-lego-pseudo-content);
 }
