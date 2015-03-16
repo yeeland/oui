@@ -388,7 +388,7 @@ fieldset {
   margin-bottom: spacer(0.5);
   font-weight: map-get($font-weight, bold);
 
-  &--optional:after {
+  &--optional::after {
     content: '(Optional)';
     margin-left: spacer(0.5);
     color: map-get($font-color, muted);
@@ -396,7 +396,7 @@ fieldset {
     font-weight: map-get($font-weight, normal);
   }
 
-  &--required:after {
+  &--required::after {
     content: '*';
     margin-left: spacer(0.5);
     color: map-get($font-color, bad-news);
@@ -473,8 +473,8 @@ fieldset {
   margin: spacer(1.5) auto;
   position: relative;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     border-top: 1px dotted map-get($ui-color, base);
     width: 40%;
@@ -483,7 +483,7 @@ fieldset {
     top: 50%;
   }
 
-  &:after {
+  &::after {
     left: auto;
     right: 0;
   }

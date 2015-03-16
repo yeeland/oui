@@ -107,7 +107,7 @@
       border-radius: map-get($border-radius, base);
     }
 
-    &:before {
+    &::before {
       @extend %lego-arrow-inline;
       position: absolute;
       top: 5px;
@@ -130,7 +130,7 @@
   .ui-datepicker-prev {
     left: 0;
 
-    &:before {
+    &::before {
       @extend %lego-arrow-inline--left;
       left: 2px;
     }
@@ -139,7 +139,7 @@
   .ui-datepicker-next {
     right: 0;
 
-    &:before {
+    &::before {
       @extend %lego-arrow-inline--right;
       left: 3px;
     }

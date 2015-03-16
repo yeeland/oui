@@ -106,7 +106,7 @@
   &--bad-news,
   &--good-news,
   &--empty {
-    &:before {
+    &::before {
       content: '';
       border-radius: map-get($border-radius, full);
       display: inline-block;
@@ -115,15 +115,15 @@
     }
   }
 
-  &--active:before {
+  &--active::before {
     background: map-get($ui-color, brand);
   }
 
-  &--bad-news:before {
+  &--bad-news::before {
     background: map-get($ui-color, bad-news);
   }
 
-  &--good-news:before {
+  &--good-news::before {
     background: map-get($ui-color, good-news);
   }
 }

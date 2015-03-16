@@ -34,7 +34,7 @@
     width: spacer(1);
     display: inline-block;
 
-    &:before {
+    &::before {
       line-height: 1;
       font-size: map-get($font-size, micro);
       content: '\25B6';

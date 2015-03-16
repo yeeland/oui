@@ -130,7 +130,7 @@
     &.tab-active {
       background-color: map-get($background-color, white);
 
-      &:after { // Creates the white bar under the active tab.
+      &::after { // Creates the white bar under the active tab.
         content: '';
         display: block;
         height: 3px;
@@ -171,7 +171,7 @@
   .lego-tabs-nav__item {
     border: 0;
 
-    &.tab-active:after {
+    &.tab-active::after {
       height: 2px;
       background: map-get($background-color, brand);
       bottom: -1px;

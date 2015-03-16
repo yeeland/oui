@@ -26,19 +26,19 @@ $arrow: $arrow-size - $arrow-border;
 %arrow {
   position: relative;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     border-collapse: separate;
     pointer-events: none; // Added to preview hover issues. FF/Saf/Chrome/IE 10+.
   }
 
-  &:before {
+  &::before {
     border: $border solid transparent;
   }
 
-  &:after {
+  &::after {
     border: $arrow solid transparent;
   }
 }
@@ -48,8 +48,8 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--top {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     bottom: 100%;
   }
 }
@@ -57,11 +57,11 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--upper {
   @extend %arrow;
 
-  &:before {
+  &::before {
     top: $arrow;
   }
 
-  &:after {
+  &::after {
     top: $border;
   }
 }
@@ -69,13 +69,13 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--middle {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     top: 50%;
     margin-top: -$border;
   }
 
-  &:after {
+  &::after {
     margin-top: -$arrow;
   }
 }
@@ -83,11 +83,11 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--lower {
   @extend %arrow;
 
-  &:before {
+  &::before {
     bottom: $arrow;
   }
 
-  &:after {
+  &::after {
     bottom: $border;
   }
 }
@@ -95,8 +95,8 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--bottom {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     top: 100%;
   }
 }
@@ -104,8 +104,8 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--near {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     right: 100%;
   }
 }
@@ -113,11 +113,11 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--left {
   @extend %arrow;
 
-  &:before {
+  &::before {
     left: $arrow;
   }
 
-  &:after {
+  &::after {
     left: $border;
   }
 }
@@ -125,13 +125,13 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--center {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     left: 50%;
     margin-left: -$border;
   }
 
-  &:after {
+  &::after {
     margin-left: -$arrow;
   }
 }
@@ -139,11 +139,11 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--right {
   @extend %arrow;
 
-  &:before {
+  &::before {
     right: $arrow;
   }
 
-  &:after {
+  &::after {
     right: $border;
   }
 }
@@ -151,8 +151,8 @@ $arrow: $arrow-size - $arrow-border;
 %arrow--far {
   @extend %arrow;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     left: 100%;
   }
 }

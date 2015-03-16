@@ -56,7 +56,7 @@
     padding-top: spacer(2);
     position: relative;
 
-    &:before {
+    &::before {
       content: '';
       height: 3px;
       background: map-get($ui-color, base);
@@ -67,7 +67,7 @@
     }
 
     &--active {
-      &:before {
+      &::before {
         background: map-get($ui-color, brand);
       }
 
@@ -83,7 +83,7 @@
 
     &--complete {
 
-      &:before {
+      &::before {
         background: map-get($ui-color, brand);
       }
 
@@ -94,7 +94,7 @@
 
     // Prevents line showing up on step.
     &:first-child {
-      &:before {
+      &::before {
         display: none;
       }
     }

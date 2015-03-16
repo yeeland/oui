@@ -70,7 +70,7 @@
 .toolbar__title.editable:hover {
   color: #006eb6;
 
-  &:after {
+  &::after {
     display: none;
   }
 }

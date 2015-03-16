@@ -63,7 +63,7 @@
   -webkit-animation: lego-spin map-get($spinner, speed) infinite linear;
   animation: lego-spin map-get($spinner, speed) infinite linear;
 
-  &:before {
+  &::before {
     content: '';
     width: map-get($spinner, size-default);
     height: map-get($spinner, size-default);
@@ -81,7 +81,7 @@
   }
 
   &--small,
-  &--small:before {
+  &--small::before {
     width: map-get($spinner, size-small);
     height: map-get($spinner, size-small);
     border-width: map-get($spinner, border-width-small);
@@ -90,7 +90,7 @@
   }
 
   &--tiny,
-  &--tiny:before {
+  &--tiny::before {
     width: map-get($spinner, size-tiny);
     height: map-get($spinner, size-tiny);
     border-width: map-get($spinner, border-width-tiny);

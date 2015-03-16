@@ -67,11 +67,11 @@
   @if $arrow-edge == top {
     @extend %arrow--top;
 
-    &:before {
+    &::before {
       border-bottom-color: $border-color!important;
     }
 
-    &:after {
+    &::after {
       border-bottom-color: $arrow-color!important;
     }
 
@@ -91,11 +91,11 @@
   @if $arrow-edge == right {
     @extend %arrow--far;
 
-    &:before {
+    &::before {
       border-left-color: $border-color!important;
     }
 
-    &:after {
+    &::after {
       border-left-color: $arrow-color!important;
     }
 
@@ -115,11 +115,11 @@
   @if $arrow-edge == bottom {
     @extend %arrow--bottom;
 
-    &:before {
+    &::before {
       border-top-color: $border-color!important;
     }
 
-    &:after {
+    &::after {
       border-top-color: $arrow-color!important;
     }
 
@@ -139,11 +139,11 @@
   @if $arrow-edge == left {
     @extend %arrow--near;
 
-    &:before {
+    &::before {
       border-right-color: $border-color!important;
     }
 
-    &:after {
+    &::after {
       border-right-color: $arrow-color!important;
     }
 

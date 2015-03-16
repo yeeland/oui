@@ -16,7 +16,7 @@
   &:hover {
     color: map-get($font-color, muted);
 
-    &:after {
+    &::after {
       color: map-get($font-color, muted);
       content: '\270E';
       font-size: 1em;

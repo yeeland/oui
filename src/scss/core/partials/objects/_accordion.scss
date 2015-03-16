@@ -65,7 +65,7 @@
       color: map-get($font-color, base);
     }
 
-    &:before {
+    &::before {
       content: '+';
       margin-left: -(spacer(1));
       width: spacer(1);

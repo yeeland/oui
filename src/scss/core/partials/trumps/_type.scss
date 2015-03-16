@@ -118,7 +118,7 @@
 //     <a href=# class="go">Read more</a>
 //[/hc]
 
-.go:after {
+.go::after {
   content: '\00A0' '\00BB' !important;
 }
 
