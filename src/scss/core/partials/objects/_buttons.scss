@@ -47,6 +47,11 @@
 //     <button class="lego-button lego-button--brand lego-button--full">Go</button>
 //[/hc]
 
+// ### Button as Link
+//[hc]
+//     This <button class="lego-button--link">link</button> is a button.
+//[/hc]
+
 // ### Button Round
 //[hc]
 //     <button class="lego-button lego-button--small lego-button--round color--good-news">
@@ -248,8 +253,8 @@
 
   &--round {
     border-radius: 50%;
-    height: map-get($button, height-small);
     // Using the same dimension for height and width so that the button is always round
+    height: map-get($button, height-small);
     width: map-get($button, height-small);
     padding: 0;
 
@@ -259,15 +264,17 @@
     }
   }
 
-  // ### With Icon
-  // Some extra help is needed to get the icon and text to line up.
+  // ### Button as Link
+  // Styling a button to look like an anchor link.
 
-  &--icon {
-    line-height: 1.4;
-
-    .lego-icon {
-      vertical-align: sub;
-    }
+  &--link {
+    @extend %link;
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: map-get($font-family, base);
+    cursor: pointer;
+    outline: 0;
   }
 
   // ### Inactive Button
@@ -306,19 +313,6 @@
       color: #FFF;
     }
   }
-}
-
-
-// ### Buttons like Anchors
-// Button that appears to an anchor link.
-
-.lego-button--link {
-  @extend %link;
-  -webkit-font-smoothing: inherit;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  outline: 0;
 }
 
 // ### Anchors like Buttons
