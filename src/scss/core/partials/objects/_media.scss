@@ -51,8 +51,8 @@
 
 %lego-media,
 .lego-media {
-  @extend %flex;
-  @extend %align-items--flex-start;
+  @include display(flex);
+  @include align-items(flex-start);;
 
   &__img {
     margin-right: spacer(1);
@@ -65,7 +65,7 @@
   }
 
   &__body {
-    @extend %flex-1;
+    @include flex(1);
     @extend %kill-last-child-margin;
   }
 }

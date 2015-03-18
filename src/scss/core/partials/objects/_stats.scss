@@ -22,7 +22,7 @@
 
 %lego-stat-group,
 .lego-stat-group {
-  @extend %flex;
+  @include display(flex);
 }
 
 %lego-stat,

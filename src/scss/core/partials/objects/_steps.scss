@@ -26,8 +26,8 @@
 
 %lego-steps,
 .lego-steps {
-  @extend %flex;
-  @extend %justify-content--center;
+  @include display(flex);
+  @include justify-content(center);;
   margin-left: auto;
   margin-right: auto;
 
@@ -52,7 +52,7 @@
   }
 
   &__item {
-    @extend %flex-1;
+    @include flex(1);
     padding-top: spacer(2);
     position: relative;
 

@@ -1,6 +1,6 @@
 .lego-project-drawer {
-  @extend %flex;
-  @extend %flex-direction--column;
+  @include display(flex);
+  @include flex-direction(column);;
   @include transition(left map-get($transition-duration, base));
   background: map-get($background-color, white);
   box-shadow: 1px 0 map-get($shadow, light);
@@ -28,7 +28,7 @@
   }
 
   .lego-block-list {
-    @extend %flex-1;
+    @include flex(1);
     overflow-y: auto;
 
     li {

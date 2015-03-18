@@ -28,9 +28,9 @@
 // Note: To position spinner target `.lego-spinner-wrap`.
 
 .lego-overlay {
-  @extend %flex;
-  @extend %justify-content--center;
-  @extend %align-items--center;
+  @include display(flex);
+  @include justify-content(center);;
+  @include align-items(center);
   background: rgba(255, 255, 255, 0.6);
   position: absolute;
   top: 0;
