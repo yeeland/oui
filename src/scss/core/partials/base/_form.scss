@@ -519,3 +519,8 @@ fieldset {
 .lego-form-note--bad-news {
   color: map-get($font-color, bad-news);
 }
+
+// This prevents Firefox from adding an ugly red boxshadow around require inputs.
+[required] {
+  box-shadow: none;
+}
