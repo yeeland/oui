@@ -11,7 +11,7 @@ linters:
   DeclarationOrder: # Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order.
     enabled: true
   DuplicateProperty: # Catches duplicate properities.
-    enabled: true
+    enabled: false
   ElsePlacement: # @else should be placed on same line as previous curly brace.
     enabled: true
   EmptyLineBetweenBlocks: # Rule declaration should be preceded by an empty line.
