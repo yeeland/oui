@@ -264,6 +264,17 @@
     }
   }
 
+  // ### With Icon
+  // Some extra help is needed to get the icon and text to line up.
+
+  &--icon {
+    line-height: 1.4;
+
+    .lego-icon {
+      vertical-align: sub;
+    }
+  }
+
   // ### Button as Link
   // Styling a button to look like an anchor link.
 
