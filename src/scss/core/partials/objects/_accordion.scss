@@ -43,14 +43,14 @@
 .accordion {
   $accordion-link-height: 26px;
 
-  @extend %flex;
-  @extend %flex-direction--column;
+  @include display(flex);
+  @include flex-direction(column);;
 
   &__link {
     @include transition-property(height);
     @include transition-duration(map-get($transition-duration, base));
-    @extend %flex;
-    @extend %align-items--center;
+    @include display(flex);
+    @include align-items(center);
     font-size: map-get($font-size, milli);
     padding: 0 spacer(2);
     background: map-get($background-color, faint);
@@ -74,8 +74,8 @@
   }
 
   &__item {
-    @extend %flex;
-    @extend %flex-direction--column;
+    @include display(flex);
+    @include flex-direction(column);;
     height: $accordion-link-height;
     overflow: hidden;
 
@@ -84,7 +84,7 @@
     }
 
     &--active {
-      @extend %flex-1;
+      @include flex(1);
 
       .accordion__link {
         height: 0;
@@ -106,7 +106,7 @@
   }
 
   &__content-wrap {
-    @extend %flex-1;
+    @include flex(1);
     overflow-y: auto;
   }
 

@@ -98,7 +98,7 @@
 //[/hc]
 
 .lego-tabs-nav {
-  @extend %flex;
+  @include display(flex);
   border-bottom: 3px solid map-get($ui-color, base);
 
   &__item {
@@ -159,7 +159,7 @@
 
 .lego-tabs--center {
   .lego-tabs-nav {
-    @extend %justify-content--center;
+    @include justify-content(center);;
   }
 
   .lego-tabs-nav__item:first-child {

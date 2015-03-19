@@ -30,10 +30,10 @@
 
 %lego-pane-group,
 .lego-pane-group {
-  @extend %flex;
+  @include display(flex);
 
   &--column {
-    @extend %flex-direction--column;
+    @include flex-direction(column);;
   }
 }
 
@@ -45,11 +45,11 @@
   }
 
   &--flex {
-    @extend %flex;
+    @include display(flex);
   }
 
   &--flex-1 {
-    @extend %flex-1;
+    @include flex(1);
   }
 
   &--scroll-y {
@@ -57,9 +57,9 @@
   }
 
   &--empty {
-    @extend %flex;
-    @extend %justify-content--center;
-    @extend %align-items--center;
+    @include display(flex);
+    @include justify-content(center);;
+    @include align-items(center);
   }
 }
 
@@ -83,10 +83,10 @@
 
 %lego-array,
 .lego-array {
-  @extend %flex;
+  @include display(flex);
 
   &__item {
-    @extend %flex-1;
+    @include flex(1);
     margin-left: spacer(1);
     margin-right: spacer(1);
 

@@ -10,7 +10,7 @@
 
   a {
     @extend %lego-block-list__link;
-    @extend %align-items--center;
+    @include align-items(center);
   }
 
   .lego-icon {

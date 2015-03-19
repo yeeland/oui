@@ -493,8 +493,8 @@ fieldset {
 // This places an svg icon "inside" an input, to the right.
 
 .lego-icon-input {
-  @extend %flex;
-  @extend %align-items--center;
+  @include display(flex);
+  @include align-items(center);
 
   > input {
     z-index: 1;
