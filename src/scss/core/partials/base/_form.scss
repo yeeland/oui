@@ -520,7 +520,9 @@ fieldset {
   color: map-get($font-color, bad-news);
 }
 
+// ## Form Validation Browser Overrides
 // This prevents Firefox from adding an ugly red box shadow around required inputs.
+
 [required] {
   box-shadow: none;
 }
