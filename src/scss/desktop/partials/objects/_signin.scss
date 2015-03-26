@@ -1,0 +1,20 @@
+// .signin
+// To handle the need for the /signin page to be responsive
+@include breakpoint($max: 992px) {
+  .signin {
+    #top {
+      .nav-top {
+        display: none;
+      }
+    }
+
+    .signin-button__submit {
+      width: 50%;
+    }
+
+    .sign-in-links {
+      display: none;
+    }
+  }
+}
+
