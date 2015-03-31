@@ -210,6 +210,13 @@ $spinner: (
   speed                        : 800ms
 );
 
+// ### Z-index Values
+// This can be overriden by the application.
+
+$z-index: (
+  poptip             : 100
+);
+
 // ## Spacing Unit
 // Defines spacing for paddings and margins.
 
