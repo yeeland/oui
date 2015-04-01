@@ -65,6 +65,10 @@
       color: map-get($font-color, base);
     }
 
+    &:focus {
+      outline: none;
+    }
+
     &::before {
       content: '+';
       margin-left: -(spacer(1));
@@ -85,11 +89,6 @@
 
     &--active {
       @include flex(1);
-
-      .accordion__link {
-        height: 0;
-        overflow: hidden;
-      }
     }
 
     &--empty {
