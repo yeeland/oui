@@ -68,7 +68,7 @@
   }
 
   &--center {
-    @include justify-content(center);;
+    @include justify-content(center);
 
     > li {
       margin-left: spacer(0.5);

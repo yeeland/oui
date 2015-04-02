@@ -44,7 +44,7 @@
   $accordion-link-height: 26px;
 
   @include display(flex);
-  @include flex-direction(column);;
+  @include flex-direction(column);
 
   &__link {
     @include transition-property(height);
@@ -79,7 +79,7 @@
 
   &__item {
     @include display(flex);
-    @include flex-direction(column);;
+    @include flex-direction(column);
     height: $accordion-link-height;
     overflow: hidden;
 

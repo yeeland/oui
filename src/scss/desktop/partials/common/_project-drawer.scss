@@ -1,6 +1,6 @@
 .lego-project-drawer {
   @include display(flex);
-  @include flex-direction(column);;
+  @include flex-direction(column);
   @include transition(left map-get($transition-duration, base));
   background: map-get($background-color, white);
   box-shadow: 1px 0 map-get($shadow, light);
