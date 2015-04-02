@@ -533,8 +533,7 @@ fieldset {
     color: map-get($font-color, good-news);
   }
 
-  [type=text],
-  [type=password],
+  .lego-text-input,
   .lego-select,
   .lego-textarea {
     border-color: map-get($ui-color, good-news);
@@ -546,8 +545,7 @@ fieldset {
     color: map-get($font-color, bad-news);
   }
 
-  [type=text],
-  [type=password],
+  .lego-text-input,
   .lego-select,
   .lego-textarea {
     border-color: map-get($ui-color, bad-news);
@@ -559,8 +557,7 @@ fieldset {
     color: map-get($font-color, warning);
   }
 
-  [type=text],
-  [type=password],
+  .lego-text-input,
   .lego-select,
   .lego-textarea {
     border-color: map-get($ui-color, warning);
