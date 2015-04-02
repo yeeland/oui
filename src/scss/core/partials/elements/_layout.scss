@@ -31,9 +31,12 @@
 %lego-pane-group,
 .lego-pane-group {
   @include display(flex);
+  // This deals with the way FF handles display:flex defaults and overflow.
+  // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
+  min-height: 0;
 
   &--column {
-    @include flex-direction(column);;
+    @include flex-direction(column);
   }
 }
 
@@ -58,7 +61,7 @@
 
   &--empty {
     @include display(flex);
-    @include justify-content(center);;
+    @include justify-content(center);
     @include align-items(center);
   }
 }
