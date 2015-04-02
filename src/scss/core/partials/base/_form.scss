@@ -507,29 +507,61 @@ fieldset {
   }
 }
 
-
-// ## Form Errors
-
-.lego-form-bad-news {
-  .lego-label {
-    color: map-get($font-color, bad-news);
-  }
-
-  [type=text],
-  [type=password],
-  .lego-select,
-  .lego-textarea {
-    border-color: map-get($ui-color, bad-news);
-  }
-}
+// ## Form Notes
 
 .lego-form-note {
   padding-top: spacer(0.5);
   font-size: map-get($font-size, micro);
 }
 
+.lego-form-note--good-news {
+  color: map-get($font-color, good-news);
+}
+
 .lego-form-note--bad-news {
   color: map-get($font-color, bad-news);
+}
+
+.lego-form-note--warning {
+  color: map-get($font-color, warning);
+}
+
+// ## Form Validations
+
+.lego-form-good-news {
+  .lego-label {
+    color: map-get($font-color, good-news);
+  }
+
+  .lego-text-input,
+  .lego-select,
+  .lego-textarea {
+    border-color: map-get($ui-color, good-news);
+  }
+}
+
+.lego-form-bad-news {
+  .lego-label {
+    color: map-get($font-color, bad-news);
+  }
+
+  .lego-text-input,
+  .lego-select,
+  .lego-textarea {
+    border-color: map-get($ui-color, bad-news);
+  }
+}
+
+.lego-form-warning {
+  .lego-label {
+    color: map-get($font-color, warning);
+  }
+
+  .lego-text-input,
+  .lego-select,
+  .lego-textarea {
+    border-color: map-get($ui-color, warning);
+  }
 }
 
 // ## Form Validation Browser Overrides
