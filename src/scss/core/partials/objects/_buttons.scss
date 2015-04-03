@@ -324,6 +324,12 @@
       color: #FFF;
     }
   }
+
+  &.link--bad-news:hover,
+  &.link--bad-news:active,
+  &.link--bad-news:focus {
+    color: map-get($font-color, bad-news);
+  }
 }
 
 // ### Anchors like Buttons
