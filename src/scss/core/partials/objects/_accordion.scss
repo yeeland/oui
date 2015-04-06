@@ -91,7 +91,7 @@
       @include flex(1);
 
       .accordion__link {
-        color: map-get($font-color, muted);
+        color: map-get($font-color, base);
         cursor: default;
 
         &:hover {
