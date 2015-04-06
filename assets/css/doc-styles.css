@@ -1,0 +1,427 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-weight: 400;
+}
+
+/* Layout */
+
+body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#doc-nav,
+#doc-entries {
+    overflow: auto;
+}
+
+#doc-entries {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.doc-entry:first-child .doc-row:first-child > * {
+  padding-top: 50px;
+}
+
+.doc-row {
+  position: relative;
+  background: #f5f2f0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  margin-left: 60%;
+}
+
+.doc-text {
+  padding: 20px 20px 20px 0;
+}
+
+.doc-pre {
+  padding: 20px;
+}
+
+.doc-text {
+  border-top: 1px solid #eee;
+  background: #fff;
+  width: 150%;
+  margin-left: -150%;
+}
+
+.doc-pre {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* The divider above the right col code blocks */
+.doc-row:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #E6F2FF;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+.doc-path {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 10px;
+    font-family: "Source Code Pro";
+    margin-bottom: 15px;
+    opacity: .5;
+}
+
+.doc-path div:first-child {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/* Right Nav */
+
+#doc-nav {
+    width: 220px;
+    padding: 50px 15px 50px 50px;
+    font-size: 12px;
+}
+
+#doc-nav a {
+    display: block;
+    color: #666;
+}
+#doc-nav a:hover {
+    color: #0081ba;
+}
+
+#doc-nav .section {
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+/* Root Elements */
+
+.doc-text > ul,
+.doc-text > ol {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.doc-text > ul > li {
+    list-style-type: disc;
+    font-size: 12px;
+}
+
+.doc-text > ol > li {
+    list-style-type: decimal;
+    font-size: 12px;
+}
+
+/* Code */
+
+code {
+    font-size: 11px;
+    font-family: "Source Code Pro";
+}
+
+pre > code {
+    border: none;
+}
+
+li > code,
+p > code {
+    background: #f9f9f9;
+    display: inline-block;
+    padding: 0 2px;
+    border: 1px solid #eee;
+}
+
+.doc-ex-html {
+    padding: 20px;
+    margin-right: 27px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Prism Overrides */
+
+pre[class*="language-"] {
+  margin: 0;
+  padding: 20px;
+  background: #F6FBFF;
+  border-left: 1px solid #E6F2FF;
+  width: 100%
+}
+
+.doc-pre + pre[class*="language-"] {
+  background: none;
+}
+
+.doc-ex-code > pre {
+  border: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+.doc-ex-code {
+  margin-bottom: 20px;
+}
+
+.doc-ex-code pre {
+  padding: 20px;
+}
+
+.doc-ex-html + .doc-ex-code {
+    margin-top: -21px;
+    position: relative;
+    margin-right: 27px;
+}
+
+.doc-pre code {
+    background: none;
+    border: none;
+}
+
+/* Fonts & Spacing*/
+
+.doc-text > p {
+    margin-bottom: 10px;
+}
+
+.doc-text > h1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.doc-text > h2 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 0;
+}
+
+.doc-text > h1:first-child,
+.doc-text > h2:first-child,
+.doc-text > h3:first-child {
+    margin-top:0;
+}
+
+.doc-text > h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    letter-spacing: 0;
+}
+.doc-text > h3 + p {
+    margin-top: -10px;
+}
+
+/* Extras */
+
+.doc-placeholder,
+.doc-layout-item {
+    background: #eee;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 11px;
+    padding: 3px 10px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+    min-height: 23px;
+}
+
+.doc-layout-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.clippy-wrap {
+    text-align: right;
+    margin-bottom: -30px;
+  }
+
+.clippy {
+    background: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-left: 1px solid #fff;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+    border-radius: 0 2px 2px 0;
+    color: #666;
+    outline: none;
+}
+
+.clippy.zeroclipboard-is-hover {
+    background: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.clippy.zeroclipboard-is-active {
+    background: none;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Specific Example Overrides */
+
+.lego-dialog {
+    width: auto;
+}
+
+.doc-accordion-example {
+    height: 300px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+
+/* Icon Examples */
+
+#icon-examples {
+    margin: 0 !important;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#icon-examples li {
+    list-style-type: none !important;
+    position: relative;
+    margin: 0 18px 18px 0 ;
+    width: 100px;
+    padding-bottom: 48px;
+}
+
+#icon-examples .doc-ex-html {
+    padding: 10px;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+}
+
+#icon-examples .doc-ex-code {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1;
+    margin: 0;
+}
+
+#icon-examples .clippy-wrap {
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#icon-examples .clippy {
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+/* Playground */
+
+.playground-button {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  padding: 5px 10px;
+  line-height: 1;
+  background: #eee;
+  cursor: pointer;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 3px 3px 0 0;
+}
+
+.playground-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.playground-close:hover {
+    opacity: 1;
+}
+
+.playground {
+  position: fixed;
+  left: 0;
+  bottom: -400px;
+  right: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: bottom 300ms;
+  background: #fff;
+  z-index: 9999;
+}
+
+.playground--active {
+  bottom: 0;
+}
+
+.CodeMirror {
+  line-height: 1.4;
+  background: #f9f9f9;
+  box-shadow: inset -1px 0 5px rgba(0,0,0,.05);
+}
+
+.CodeMirror,
+.playground-render {
+  height: 400px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  resize: none;
+  border: none;
+  border-top: 2px solid #ddd;
+}
+
+.playground-render {
+  padding: 20px;
+}
