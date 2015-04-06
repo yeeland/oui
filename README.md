@@ -1,3 +1,5 @@
+# Repo for Prototype Version of LEGO
+
 # Lego Component Library
 
 ## Cheat Sheet
