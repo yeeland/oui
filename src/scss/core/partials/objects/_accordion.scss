@@ -89,6 +89,19 @@
 
     &--active {
       @include flex(1);
+
+      .accordion__link {
+        color: map-get($font-color, muted);
+        cursor: default;
+
+        &:hover {
+          background: map-get($background-color, faint);
+        }
+
+        &:before {
+          opacity: 0;
+        }
+      }
     }
 
     &--empty {
