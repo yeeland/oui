@@ -266,7 +266,9 @@
       .flex {
         width: 100%;
 
-        .link--bad-news {
+        // TODO (kelly): remove link--bad-news once all forms in the product have been converted to use the new button
+        .link--bad-news,
+        .lego-button--remove {
           margin-left: auto;
         }
       }

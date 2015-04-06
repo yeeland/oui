@@ -325,9 +325,15 @@
     }
   }
 
-  &.link--bad-news:hover,
-  &.link--bad-news:active,
-  &.link--bad-news:focus {
+  &--add,
+  &--remove {
+    @extend %lego-button--small;
+    @extend %lego-button--round;
+  }
+
+  &--remove:hover,
+  &--remove:active,
+  &--remove:focus {
     color: map-get($font-color, bad-news);
   }
 }
