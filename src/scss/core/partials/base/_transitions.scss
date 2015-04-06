@@ -1,0 +1,124 @@
+// # Transitions
+// A collection of transitions that can be added to elements.
+
+// ## Fade
+
+//[h]
+//    <div id="fade-example" class="lego-attention lego-attention--brand lego-fade lego-fade--active">I will fade in.</div>
+//    <button onclick="$('#fade-example').toggleClass('lego-fade--active')" class="lego-button lego-button--small push--top">Toggle fade</button>
+//[/h]
+
+// ## Translate-to-[direction]
+
+// These classes hide elements, and then slides them onscreen in the direction
+// specified in the class name when the `translate-to-[direction]--active` class is applied.
+
+// **Gotchas:**
+
+// - The parent must have `overflow: hidden;`, otherwise the element will
+//   still be visible when translated offscreen.
+// - These classes use a CSS `transition` on the `transform` property, which
+//   means they still take up space in the normal document flow. If you don't
+//   want them to take up space, you'll have to add `display: none` or `height: 0`
+//   after the transition completes (via JS).
+// - Because they use the `transition` property, elements added to the DOM via
+//   JS won't be animated in. For that, you'll have to use the `animate` property.
+
+// ### Translate-to-Top
+
+// Transitions the element in from the bottom to the top.
+
+//[h]
+//    <div style="overflow: hidden">
+//        <div id="translate-top-example" class="lego-attention lego-attention--brand lego-translate-to-top lego-translate-to-top--active">
+//            I will slide in from the bottom to the top.
+//        </div>
+//    </div>
+//    <button onclick="$('#translate-top-example').toggleClass('lego-translate-to-top--active')" class="lego-button lego-button--small push--top">Toggle translate</button>
+//[/h]
+
+// ### Translate-to-Right
+
+// Transitions the element in from the left to the right.
+
+//[h]
+//    <div style="overflow: hidden">
+//        <div id="translate-right-example" class="lego-attention lego-attention--brand lego-translate-to-right lego-translate-to-right--active">
+//            I will slide in from left to right.
+//        </div>
+//    </div>
+//    <button onclick="$('#translate-right-example').toggleClass('lego-translate-to-right--active')" class="lego-button lego-button--small push--top">Toggle translate</button>
+//[/h]
+
+// ### Translate-to-Bottom
+
+// Transitions the element in from the top to the bottom.
+
+//[h]
+//    <div style="overflow: hidden">
+//        <div id="translate-bottom-example" class="lego-attention lego-attention--brand lego-translate-to-bottom lego-translate-to-bottom--active">
+//            I will slide in from the top to the bottom.
+//        </div>
+//    </div>
+//    <button onclick="$('#translate-bottom-example').toggleClass('lego-translate-to-bottom--active')" class="lego-button lego-button--small push--top">Toggle translate</button>
+//[/h]
+
+// ### Translate-to-Left
+
+// Transitions the element in from the right to the left.
+
+//[h]
+//    <div style="overflow: hidden">
+//        <div id="translate-left-example" class="lego-attention lego-attention--brand lego-translate-to-left lego-translate-to-left--active">
+//            I will slide in from right to left.
+//        </div>
+//    </div>
+//    <button onclick="$('#translate-left-example').toggleClass('lego-translate-to-left--active')" class="lego-button lego-button--small push--top">Toggle translate</button>
+//[/h]
+
+$active-modifier: "active";
+
+.lego-fade {
+  @include transition(opacity map-get($transition-duration, fast) linear);
+  opacity: 0;
+
+  &--#{$active-modifier} {
+    opacity: 1;
+  }
+}
+
+.lego-translate-to-top {
+  @include transition(transform map-get($transition-duration, slow) ease);
+  @include transform(translateY(100%));
+
+  &--#{$active-modifier} {
+    @include transform(translateY(0%));
+  }
+}
+
+.lego-translate-to-right {
+  @include transition(transform map-get($transition-duration, slow) ease);
+  @include transform(translateX(-100%));
+
+  &--#{$active-modifier} {
+    @include transform(translateX(0%));
+  }
+}
+
+.lego-translate-to-bottom {
+  @include transition(transform map-get($transition-duration, slow) ease);
+  @include transform(translateY(-100%));
+
+  &--#{$active-modifier} {
+    @include transform(translateY(0%));
+  }
+}
+
+.lego-translate-to-left {
+  @include transition(transform map-get($transition-duration, slow) ease);
+  @include transform(translateX(100%));
+
+  &--#{$active-modifier} {
+    @include transform(translateX(0%));
+  }
+}
