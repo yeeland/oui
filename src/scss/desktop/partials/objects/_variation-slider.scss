@@ -1,0 +1,39 @@
+// # Variation Slider
+// Used in the editor to show more variations when they don't all fit on the screen
+
+.lego-variation-slider {
+  position:relative;
+
+  .lego-tabs {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .lego-tabs-nav {
+    border-bottom: none;
+    min-width: min-content;
+    min-width: -webkit-min-content;
+    display: flex;
+  }
+
+  .lego-tabs-nav__item {
+    min-width: 110px;
+  }
+
+  &--button-forward,
+  &--button-backward {
+    @extend %lego-button;
+    position:absolute;
+    border-radius: 0;
+  }
+
+  &--button-forward {
+    right: 0;
+  }
+
+  &--button-backward {
+    left: 0;
+  }
+}
