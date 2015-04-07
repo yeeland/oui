@@ -165,6 +165,7 @@ p > code {
     border: 1px solid #eee;
     margin-bottom: 20px;
     position: relative;
+    color:#668d9e;
 }
 
 /* Prism Overrides */
