@@ -25,9 +25,11 @@
 //                 <td><input type="text" class="lego-text-input"></td>
 //                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
-//                     <svg class="lego-icon link--dark">
-//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//                     </svg>
+//                     <button class="lego-button lego-button--add">
+//                       <svg class="lego-icon">
+//                         <use xlink:href="#add"></use>
+//                       </svg>
+//                     </button>
 //                   </div>
 //                 </td>
 //               </tr>
@@ -36,12 +38,16 @@
 //                 <td><input type="text" class="lego-text-input"></td>
 //                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
-//                     <svg class="lego-icon link--dark">
-//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//                     </svg>
-//                     <svg class="lego-icon  link--bad-news">
-//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//                     </svg>
+//                     <button class="lego-button lego-button--add">
+//                       <svg class="lego-icon">
+//                         <use xlink:href="#add"></use>
+//                       </svg>
+//                     </button>
+//                     <button class="lego-button lego-button--remove">
+//                       <svg class="lego-icon">
+//                         <use xlink:href="#close"></use>
+//                       </svg>
+//                     </button>
 //                   </div>
 //                 </td>
 //               </tr>
@@ -50,12 +56,16 @@
 //                 <td><input type="text" class="lego-text-input"></td>
 //                 <td class="lego-table--add-row__controls">
 //                   <div class="flex">
-//                     <svg class="lego-icon link--dark">
-//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//                     </svg>
-//                     <svg class="lego-icon link--bad-news">
-//                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//                     </svg>
+//                     <button class="lego-button lego-button--add">
+//                       <svg class="lego-icon">
+//                         <use xlink:href="#add"></use>
+//                       </svg>
+//                     </button>
+//                     <button class="lego-button lego-button--remove">
+//                       <svg class="lego-icon">
+//                         <use xlink:href="#close"></use>
+//                       </svg>
+//                     </button>
 //                   </div>
 //                 </td>
 //               </tr>

@@ -324,6 +324,18 @@
       color: #FFF;
     }
   }
+
+  &--add,
+  &--remove {
+    @extend %lego-button--small;
+    @extend %lego-button--round;
+  }
+
+  &--remove:hover,
+  &--remove:active,
+  &--remove:focus {
+    color: map-get($font-color, bad-news);
+  }
 }
 
 // ### Anchors like Buttons

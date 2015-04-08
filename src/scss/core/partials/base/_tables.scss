@@ -261,12 +261,14 @@
   &--add-row {
     &__controls {
       vertical-align: middle !important;
-      width: 65px;
+      width: 75px;
 
       .flex {
         width: 100%;
 
-        .link--bad-news {
+        // TODO (kelly): remove link--bad-news once all forms in the product have been converted to use the new button
+        .link--bad-news,
+        .lego-button--remove {
           margin-left: auto;
         }
       }
