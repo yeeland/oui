@@ -30,13 +30,13 @@
   }
 
   &__symbol {
-    @include transition(transform map-get($transition-duration, base));
+    @include transition(transform map-fetch($transition-duration, base));
     width: spacer(1);
     display: inline-block;
 
     &::before {
       line-height: 1;
-      font-size: map-get($font-size, micro);
+      font-size: map-fetch($font-size, micro);
       content: '\25B6';
     }
   }

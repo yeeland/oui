@@ -64,17 +64,17 @@
 //     </button>
 //[/hc]
 
-$lego-pop-tip-background: map-get($ui-color, dark);
+$lego-pop-tip-background: map-fetch($ui-color, dark);
 
 .lego-pop-tip {
   background: $lego-pop-tip-background;
-  color: map-get($font-color, white);
-  border-radius: map-get($border-radius, base);
-  font-size: map-get($font-size, micro);
+  color: map-fetch($font-color, white);
+  border-radius: map-fetch($border-radius, base);
+  font-size: map-fetch($font-size, micro);
   padding: spacer(0.5) spacer(1);
   max-width: 250px;
   display: inline-block;
-  z-index: map-get($z-index, poptip); // Desktop variable, not Lego.
+  z-index: map-fetch($z-index, poptip); // Desktop variable, not Lego.
 
   // Arrow options.
 

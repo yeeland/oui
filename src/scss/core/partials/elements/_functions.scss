@@ -1,0 +1,29 @@
+@function map-extend($map, $maps...) {
+  $max: length($maps);
+  @for $i from 1 through $max {
+    $current: nth($maps, $i);
+    @each $key, $value in $current {
+      @if type-of($value) == 'map' and type-of(map-get($map, $key)) == 'map' {
+        $value: map-extend(map-get($map, $key), $value, true);
+      }
+      $map: map-merge($map, ($key: $value));
+    }
+  }
+  @return $map;
+}
+
+
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if ($length > 1) {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i));
+    }
+    @return map-fetch($value, $rest)
+  } @else {
+    @return $value;
+  }
+}

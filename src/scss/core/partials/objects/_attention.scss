@@ -83,28 +83,28 @@
 .lego-attention {
   @extend %kill-last-child-margin;
   padding: spacer(1);
-  border-radius: map-get($border-radius, base);
-  border: 1px solid map-get($ui-color, base);
-  background: map-get($background-color, faint);
+  border-radius: map-fetch($border-radius, base);
+  border: 1px solid map-fetch($ui-color, base);
+  background: map-fetch($background-color, faint);
 
   &--brand {
-    border-color: map-get($ui-color, brand-light);
-    background-color: map-get($background-color, brand-light);
+    border-color: map-fetch($ui-color, brand-light);
+    background-color: map-fetch($background-color, brand-light);
   }
 
   &--warning {
-    border-color: map-get($ui-color, warning);
-    background-color: map-get($background-color, warning);
+    border-color: map-fetch($ui-color, warning);
+    background-color: map-fetch($background-color, warning);
   }
 
   &--good-news {
-    border-color: map-get($ui-color, good-news);
-    background-color: map-get($background-color, good-news);
+    border-color: map-fetch($ui-color, good-news);
+    background-color: map-fetch($background-color, good-news);
   }
 
   &--bad-news {
-    border-color: map-get($ui-color, bad-news);
-    background-color: map-get($background-color, bad-news);
+    border-color: map-fetch($ui-color, bad-news);
+    background-color: map-fetch($background-color, bad-news);
   }
 
   &__close {

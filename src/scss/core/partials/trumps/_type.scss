@@ -75,15 +75,15 @@
 //[/hc]
 
 .reverse {
-  color: map-get($font-color, white) !important;
+  color: map-fetch($font-color, white) !important;
 }
 
 .muted {
-  color: map-get($font-color, muted) !important;
+  color: map-fetch($font-color, muted) !important;
 }
 
 .faint {
-  color: map-get($font-color, faint) !important;
+  color: map-fetch($font-color, faint) !important;
 }
 
 // ## Proceed (Align Right)
@@ -167,11 +167,11 @@
 // For adjusting line-heights.
 
 .line--tight {
-  line-height: map-get($line-height, tight) !important;
+  line-height: map-fetch($line-height, tight) !important;
 }
 
 .line--loose {
-  line-height: map-get($line-height, loose) !important;
+  line-height: map-fetch($line-height, loose) !important;
 }
 
 
@@ -194,20 +194,20 @@
 
 %color--brand,
 .color--brand {
-  color: map-get($font-color, brand) !important;
+  color: map-fetch($font-color, brand) !important;
 }
 
 %color--good-news,
 .color--good-news {
-  color: map-get($font-color, good-news) !important;
+  color: map-fetch($font-color, good-news) !important;
 }
 
 %color--warning,
 .color--warning {
-  color: map-get($font-color, warning) !important;
+  color: map-fetch($font-color, warning) !important;
 }
 
 %color--bad-news,
 .color--bad-news {
-  color: map-get($font-color, bad-news) !important;
+  color: map-fetch($font-color, bad-news) !important;
 }

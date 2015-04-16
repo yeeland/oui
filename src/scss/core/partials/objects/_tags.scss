@@ -2,5 +2,5 @@
 // Hashtags used to help identify experiments.
 
 .lego-tag {
-  color: map-get($font-color, muted);
+  color: map-fetch($font-color, muted);
 }

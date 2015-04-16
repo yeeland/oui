@@ -173,9 +173,11 @@ $opacity: (
 // ### Dialog Widths
 
 $dialog: (
-  width-base                   : 700px,
-  width-narrow                 : 500px,
-  width-wide                   : 900px
+  width:(
+    width-base                   : 700px,
+    width-narrow                 : 500px,
+    width-wide                   : 900px
+  )
 );
 
 // ### Transitions
@@ -200,13 +202,21 @@ $button: (
 // ### Spinner
 
 $spinner: (
-  size-default                 : 40px,
-  size-small                   : 26px,
-  size-tiny                    : 16px,
-  border-width                 : 4px,
-  border-width-small           : 3px,
-  border-width-tiny            : 2px,
-  border-color-light           : #D1E5F2,
+  size:(
+    default                    : 40px,
+    small                      : 26px,
+    tiny                       : 16px
+  ),
+  border:(
+    width:(
+      base                     : 4px,
+      small                    : 3px,
+      tiny                     : 2px
+    ),
+    color:(
+      light                    : #D1E5F2
+    )
+  ),
   speed                        : 800ms
 );
 
@@ -214,7 +224,7 @@ $spinner: (
 // This can be overriden by the application.
 
 $z-index: (
-  poptip             : 100
+  poptip                       : 100
 );
 
 // ## Spacing Unit

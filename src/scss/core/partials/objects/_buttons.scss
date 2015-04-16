@@ -120,9 +120,9 @@
   border: 0;
   margin: 0;
   padding: 0 spacer(1);
-  height: map-get($button, height-default);
-  font-weight: map-get($font-weight, normal);
-  border-radius: map-get($border-radius, base);
+  height: map-fetch($button, height-default);
+  font-weight: map-fetch($font-weight, normal);
+  border-radius: map-fetch($border-radius, base);
   border-style: solid;
   border-width: 1px;
   line-height: 1;
@@ -131,15 +131,15 @@
   // Button color variations.
 
   background: linear-gradient(#FFF, #EEE);
-  color: map-get($font-color, base);
-  border-color: map-get($ui-color, base);
+  color: map-fetch($font-color, base);
+  border-color: map-fetch($ui-color, base);
 
   &:hover,
   &:active,
   &:visited,
   &:focus {
     outline: none;
-    color: map-get($font-color, base);
+    color: map-fetch($font-color, base);
   }
 
   &.lego-button--hover,
@@ -156,13 +156,13 @@
 
   &:visited,
   &:focus {
-    color: map-get($font-color, base);
+    color: map-fetch($font-color, base);
   }
 
   &--brand {
     background: linear-gradient(#147CC5, #1270B1);
     border-color: #00558D;
-    color: map-get($font-color, white);
+    color: map-fetch($font-color, white);
 
     &.lego-button--hover,
     &:hover {
@@ -179,14 +179,14 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-get($font-color, white);
+      color: map-fetch($font-color, white);
     }
   }
 
   &--highlight {
     background: linear-gradient(#A1CD1E, #91B81C);
     border-color: #719505;
-    color: map-get($font-color, white);
+    color: map-fetch($font-color, white);
 
     &.lego-button--hover,
     &:hover {
@@ -203,14 +203,14 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-get($font-color, white);
+      color: map-fetch($font-color, white);
     }
   }
 
   &--danger {
     background: linear-gradient(#AA280D, #991E04);
     border-color: #641100;
-    color: map-get($font-color, white);
+    color: map-fetch($font-color, white);
 
     &.lego-button--hover,
     &:hover {
@@ -227,7 +227,7 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-get($font-color, white);
+      color: map-fetch($font-color, white);
     }
   }
 
@@ -236,7 +236,7 @@
 
   &--small {
     padding: 4px spacer(1);
-    height: map-get($button, height-small);
+    height: map-fetch($button, height-small);
     font-size: 10px;
     line-height: 1;
   }
@@ -254,8 +254,8 @@
   &--round {
     border-radius: 50%;
     // Using the same dimension for height and width so that the button is always round
-    height: map-get($button, height-small);
-    width: map-get($button, height-small);
+    height: map-fetch($button, height-small);
+    width: map-fetch($button, height-small);
     padding: 0;
 
     .lego-icon {
@@ -283,7 +283,7 @@
     background: none;
     border: 0;
     padding: 0;
-    font-family: map-get($font-family, base);
+    font-family: map-fetch($font-family, base);
     cursor: pointer;
     outline: 0;
   }
@@ -302,9 +302,9 @@
     cursor: default;
     box-shadow: none;
     background: #F8F8F8;
-    color: map-get($font-color, medium);
-    border-color: map-get($ui-color, base);
-    opacity: map-get($opacity, medium);
+    color: map-fetch($font-color, medium);
+    border-color: map-fetch($ui-color, base);
+    opacity: map-fetch($opacity, medium);
 
     + .lego-button--brand {
       border-color: #00558D;
@@ -334,7 +334,7 @@
   &--remove:hover,
   &--remove:active,
   &--remove:focus {
-    color: map-get($font-color, bad-news);
+    color: map-fetch($font-color, bad-news);
   }
 }
 

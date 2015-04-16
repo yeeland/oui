@@ -99,42 +99,42 @@
 
 .lego-tabs-nav {
   @include display(flex);
-  border-bottom: 3px solid map-get($ui-color, base);
+  border-bottom: 3px solid map-fetch($ui-color, base);
 
   &__item {
     position: relative;
     text-align: center;
     padding: spacer(1) spacer(1.5);
-    border: 1px solid map-get($ui-color, base);
+    border: 1px solid map-fetch($ui-color, base);
     border-right: 0;
     border-bottom: 0;
-    color: map-get($font-color, medium);
-    font-weight: map-get($font-weight, bold);
-    background-color: map-get($background-color, faint);
+    color: map-fetch($font-color, medium);
+    font-weight: map-fetch($font-weight, bold);
+    background-color: map-fetch($background-color, faint);
     cursor: pointer;
 
     &:first-child {
-      border-radius: map-get($border-radius, big) 0 0;
+      border-radius: map-fetch($border-radius, big) 0 0;
     }
 
     &:last-child {
-      border-radius: 0 map-get($border-radius, big) 0 0;
-      border-right: 1px solid map-get($ui-color, base);
+      border-radius: 0 map-fetch($border-radius, big) 0 0;
+      border-right: 1px solid map-fetch($ui-color, base);
     }
 
     &:hover,
     &.tab-active {
-      color: map-get($font-color, brand);
+      color: map-fetch($font-color, brand);
     }
 
     &.tab-active {
-      background-color: map-get($background-color, white);
+      background-color: map-fetch($background-color, white);
 
       &::after { // Creates the white bar under the active tab.
         content: '';
         display: block;
         height: 3px;
-        background: map-get($background-color, white);
+        background: map-fetch($background-color, white);
         position: absolute;
         left: 0;
         right: 0;
@@ -153,7 +153,7 @@
   .lego-tabs-nav__item {
     background-color: transparent;
     padding: spacer(0.5) spacer(1);
-    font-size: map-get($font-size, milli);
+    font-size: map-fetch($font-size, milli);
   }
 }
 
@@ -173,7 +173,7 @@
 
     &.tab-active::after {
       height: 2px;
-      background: map-get($background-color, brand);
+      background: map-fetch($background-color, brand);
       bottom: -1px;
     }
   }
@@ -192,7 +192,7 @@
 
   .lego-tabs-pane {
     padding: spacer(2);
-    border: 1px solid map-get($ui-color, base);
+    border: 1px solid map-fetch($ui-color, base);
     border-top: 0;
   }
 }

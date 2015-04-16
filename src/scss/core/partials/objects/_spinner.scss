@@ -41,60 +41,53 @@
   align-items: center;
 }
 
-@-webkit-keyframes lego-spin {
+@include keyframes(lego-spin) {
   100% {
-    -webkit-transform: rotate(360deg); // Safari
-  }
-}
-
-@keyframes lego-spin {
-  100% {
-    transform: rotate(360deg);
+    @include transform(rotate(360deg));
   }
 }
 
 .lego-spinner {
+  @include animation(lego-spin map-fetch($spinner, speed) infinite linear);
+  width: map-fetch($spinner, size default);
+  height: map-fetch($spinner, size default);
+  border: map-fetch($spinner, border width base) solid map-fetch($spinner, border color light);
   display: inline-block;
-  width: map-get($spinner, size-default);
-  height: map-get($spinner, size-default);
   border-radius: 50%;
-  border: map-get($spinner, border-width) solid map-get($spinner, border-color-light);
   position: relative;
-  -webkit-animation: lego-spin map-get($spinner, speed) infinite linear;
-  animation: lego-spin map-get($spinner, speed) infinite linear;
 
   &::before {
     content: '';
-    width: map-get($spinner, size-default);
-    height: map-get($spinner, size-default);
+    width: map-fetch($spinner, size default);
+    height: map-fetch($spinner, size default);
     border-radius: 50%;
     display: block;
     position: absolute;
-    left: -(map-get($spinner, border-width));
-    top: -(map-get($spinner, border-width));
-    border-width: map-get($spinner, border-width);
+    left: -(map-fetch($spinner, border width base));
+    top: -(map-fetch($spinner, border width base));
+    border-width: map-fetch($spinner, border width base);
     border-style: solid;
-    border-right-color: map-get($spinner, border-color-light);
-    border-top-color: map-get($spinner, border-color-light);
-    border-left-color: map-get($ui-color, brand);
-    border-bottom-color: map-get($spinner, border-color-light);
+    border-right-color: map-fetch($spinner, border color light);
+    border-top-color: map-fetch($spinner, border color light);
+    border-left-color: map-fetch($ui-color, brand);
+    border-bottom-color: map-fetch($spinner, border color light);
   }
 
   &--small,
   &--small::before {
-    width: map-get($spinner, size-small);
-    height: map-get($spinner, size-small);
-    border-width: map-get($spinner, border-width-small);
-    left: -(map-get($spinner, border-width-small));
-    top: -(map-get($spinner, border-width-small));
+    width: map-fetch($spinner, size-small);
+    height: map-fetch($spinner, size-small);
+    border-width: map-fetch($spinner, border width small);
+    left: -(map-fetch($spinner, border width small));
+    top: -(map-fetch($spinner, border width small));
   }
 
   &--tiny,
   &--tiny::before {
-    width: map-get($spinner, size-tiny);
-    height: map-get($spinner, size-tiny);
-    border-width: map-get($spinner, border-width-tiny);
-    left: -(map-get($spinner, border-width-tiny));
-    top: -(map-get($spinner, border-width-tiny));
+    width: map-fetch($spinner, size tiny);
+    height: map-fetch($spinner, size tiny);
+    border-width: map-fetch($spinner, border width tiny);
+    left: -(map-fetch($spinner, border width tiny));
+    top: -(map-fetch($spinner, border width tiny));
   }
 }

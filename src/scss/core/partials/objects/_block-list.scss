@@ -41,7 +41,7 @@
 
   > li {
     padding: spacer(0.5) spacer(1);
-    border-top: 1px solid map-get($ui-color, light);
+    border-top: 1px solid map-fetch($ui-color, light);
   }
 
   // For links that will take up full space of list item.
@@ -53,11 +53,11 @@
     margin-right: -(spacer(1));
 
     &:hover {
-      background-color: map-get($background-color, brand-light);
+      background-color: map-fetch($background-color, brand-light);
     }
 
     &--active {
-      background-color: map-get($background-color, faint);
+      background-color: map-fetch($background-color, faint);
     }
 
     &:first-child {
@@ -81,7 +81,7 @@
 
   &--all {
     li:last-child {
-      border-bottom: 1px solid map-get($ui-color, light);
+      border-bottom: 1px solid map-fetch($ui-color, light);
     }
   }
 
@@ -93,8 +93,8 @@
 %lego-block-list-group,
 .lego-block-list-group {
   @extend %lego-block-list;
-  border: 1px solid map-get($ui-color, base);
-  border-radius: map-get($border-radius, base);
+  border: 1px solid map-fetch($ui-color, base);
+  border-radius: map-fetch($border-radius, base);
 
   > li:first-child {
     border: 0;

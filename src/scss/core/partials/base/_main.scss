@@ -3,8 +3,8 @@
 
 html {
   @include font-smoothing(on);
-  color: map-get($font-color, base);
-  background-color: map-get($background-color, base);
+  color: map-fetch($font-color, base);
+  background-color: map-fetch($background-color, base);
 }
 
 p {
@@ -12,5 +12,5 @@ p {
 }
 
 b {
-  font-weight: map-get($font-weight, bold);
+  font-weight: map-fetch($font-weight, bold);
 }

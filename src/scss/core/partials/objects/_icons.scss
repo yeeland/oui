@@ -108,7 +108,7 @@
   &--empty {
     &::before {
       content: '';
-      border-radius: map-get($border-radius, full);
+      border-radius: map-fetch($border-radius, full);
       display: inline-block;
       width: 10px;
       height: 10px;
@@ -116,14 +116,14 @@
   }
 
   &--active::before {
-    background: map-get($ui-color, brand);
+    background: map-fetch($ui-color, brand);
   }
 
   &--bad-news::before {
-    background: map-get($ui-color, bad-news);
+    background: map-fetch($ui-color, bad-news);
   }
 
   &--good-news::before {
-    background: map-get($ui-color, good-news);
+    background: map-fetch($ui-color, good-news);
   }
 }

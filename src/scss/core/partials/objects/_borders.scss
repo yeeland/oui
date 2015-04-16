@@ -24,7 +24,7 @@
 
 %border--all,
 .border--all {
-  border: 1px solid map-get($ui-color, base);
+  border: 1px solid map-fetch($ui-color, base);
 }
 
 // ### Border Top/Bottom
@@ -32,12 +32,12 @@
 
 %border--top,
 .border--top {
-  border-top: 1px solid map-get($ui-color, base);
+  border-top: 1px solid map-fetch($ui-color, base);
 }
 
 %border--bottom,
 .border--bottom {
-  border-bottom: 1px solid map-get($ui-color, base);
+  border-bottom: 1px solid map-fetch($ui-color, base);
 }
 
 %border--ends,
@@ -52,12 +52,12 @@
 
 %border--left,
 .border--left {
-  border-left: 1px solid map-get($ui-color, base);
+  border-left: 1px solid map-fetch($ui-color, base);
 }
 
 %border--right,
 .border--right {
-  border-right: 1px solid map-get($ui-color, base);
+  border-right: 1px solid map-fetch($ui-color, base);
 }
 
 %border--sides,

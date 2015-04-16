@@ -39,16 +39,16 @@
     @include transform(translateX(-50%));
     left: 50%;
     border-radius: 50%;
-    background: map-get($ui-color, base);
-    border: 3px solid map-get($ui-color, base);
-    background: map-get($ui-color, white);
+    background: map-fetch($ui-color, base);
+    border: 3px solid map-fetch($ui-color, base);
+    background: map-fetch($ui-color, white);
     z-index: 1;
   }
 
   &__label {
     text-align: center;
-    font-weight: map-get($font-weight, normal);
-    color: map-get($font-color, muted);
+    font-weight: map-fetch($font-weight, normal);
+    color: map-fetch($font-color, muted);
   }
 
   &__item {
@@ -59,7 +59,7 @@
     &::before {
       content: '';
       height: 3px;
-      background: map-get($ui-color, base);
+      background: map-fetch($ui-color, base);
       width: 100%;
       position: absolute;
       top: 0;
@@ -68,27 +68,27 @@
 
     &--active {
       &::before {
-        background: map-get($ui-color, brand);
+        background: map-fetch($ui-color, brand);
       }
 
       .lego-steps__dot {
-        background: map-get($ui-color, brand);
-        border-color: map-get($ui-color, brand);
+        background: map-fetch($ui-color, brand);
+        border-color: map-fetch($ui-color, brand);
       }
 
       .lego-steps__label {
-        color: map-get($font-color, brand);
+        color: map-fetch($font-color, brand);
       }
     }
 
     &--complete {
 
       &::before {
-        background: map-get($ui-color, brand);
+        background: map-fetch($ui-color, brand);
       }
 
       .lego-steps__dot {
-        border-color: map-get($ui-color, brand);
+        border-color: map-fetch($ui-color, brand);
       }
     }
 

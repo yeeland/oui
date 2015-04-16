@@ -117,23 +117,23 @@
 //[/hc]
 
 
-$popover-background: map-get($ui-color, white);
-$popover-border: map-get($ui-color, base);
+$popover-background: map-fetch($ui-color, white);
+$popover-border: map-fetch($ui-color, base);
 
 %lego-popover,
 .lego-popover {
   @extend %lego-block-list-group;
-  background: map-get($background-color, white);
+  background: map-fetch($background-color, white);
   max-width: 250px;
   display: inline-block;
-  box-shadow: 0 2px map-get($shadow, light);
+  box-shadow: 0 2px map-fetch($shadow, light);
 
   &__content {
     @extend %kill-last-child-margin;
   }
 
   &__title {
-    font-weight: map-get($font-weight, bold);
+    font-weight: map-fetch($font-weight, bold);
   }
 
   // Arrow options. 12 possible positions.

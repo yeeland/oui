@@ -155,7 +155,7 @@ em,
 b,
 strong {
   font-style: normal;
-  font-weight: map-get($font-weight, bold);
+  font-weight: map-fetch($font-weight, bold);
 }
 
 // ## Forms
