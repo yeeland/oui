@@ -1,5 +1,9 @@
 # Lego Component Library
 
+In the Lego repo run:
+
+    bundle install && bundle update
+
 ## Cheat Sheet
 
 - **`gulp`** : Runs the default compass watch process.
