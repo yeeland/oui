@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
-gem 'sass'
-gem 'compass', '>=1.0.0.alpha.21'
-gem 'scss-lint'
+gem 'sass', '>=3.4.13'
+gem 'compass', '>=1.0.3'
+gem 'scss-lint', '>=0.37.0'
