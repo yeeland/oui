@@ -47,10 +47,6 @@
 //     <button class="lego-button lego-button--brand lego-button--full">Go</button>
 //[/hc]
 
-// ### Button as Link
-//[hc]
-//     This <button class="lego-button--link">link</button> is a button.
-//[/hc]
 
 // ### Button Round
 //[hc]
@@ -109,125 +105,101 @@
 // ### Button Variables
 // Shadows for buttons.
 
+
 %lego-button,
 .lego-button {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   font-family: inherit;
-  font-size: 12px;
   cursor: pointer;
   border: 0;
   margin: 0;
-  padding: 0 spacer(1);
-  height: map-fetch($button, height-default);
-  font-weight: map-fetch($font-weight, normal);
-  border-radius: map-fetch($border-radius, base);
-  border-style: solid;
-  border-width: 1px;
   line-height: 1;
 
-  // ### Button Styles
-  // Button color variations.
+  font-size: map-fetch($button, size base font-size);
+  font-weight: map-fetch($button, size base font-weight);
+  border-radius: map-fetch($button, size base border-radius);
+  height: map-fetch($button, size base height);
+  padding: 0 10px; // Use spacer.
 
-  background: linear-gradient(#FFF, #EEE);
-  color: map-fetch($font-color, base);
-  border-color: map-fetch($ui-color, base);
+
+  background-color: map-fetch($button, type default background);
+  color: map-fetch($button, type default color);
+
+  &:hover {
+    background: map-fetch($button, type default hover background);
+  }
+
+  &:active {
+    background: map-fetch($button, type default active background);
+  }
 
   &:hover,
   &:active,
   &:visited,
   &:focus {
     outline: none;
-    color: map-fetch($font-color, base);
-  }
-
-  &.lego-button--hover,
-  &:hover {
-    background: linear-gradient(#FFF, #E5E5E5);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  }
-
-  &.lego-button--active,
-  &:active {
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
-    border-color: #BBB;
-  }
-
-  &:visited,
-  &:focus {
-    color: map-fetch($font-color, base);
+    color: map-fetch($button, type default color);
   }
 
   &--brand {
-    background: linear-gradient(#147CC5, #1270B1);
-    border-color: #00558D;
-    color: map-fetch($font-color, white);
+    background-color: map-fetch($button, type brand background);
+    color: map-fetch($button, type brand color);
 
-    &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#038AE6, #1270B1);
+      background: map-fetch($button, type brand hover background);
     }
 
-    &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #00558D;
+      background: map-fetch($button, type brand active background);
     }
 
     &:hover,
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($font-color, white);
+      color: map-fetch($button, type brand color);
     }
   }
 
   &--highlight {
-    background: linear-gradient(#A1CD1E, #91B81C);
-    border-color: #719505;
-    color: map-fetch($font-color, white);
+    background-color: map-fetch($button, type highlight background);
+    color: map-fetch($button, type highlight color);
 
-    &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#A3D60C, #91B81C);
+      background: map-fetch($button, type highlight hover background);
     }
 
-    &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #719505;
+      background: map-fetch($button, type highlight active background);
     }
 
     &:hover,
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($font-color, white);
+      color: map-fetch($button, type highlight color);
     }
   }
 
   &--danger {
-    background: linear-gradient(#AA280D, #991E04);
-    border-color: #641100;
-    color: map-fetch($font-color, white);
+    background-color: map-fetch($button, type danger background);
+    color: map-fetch($button, type danger color);
 
-    &.lego-button--hover,
     &:hover {
-      background: linear-gradient(#C02C0C, #991E04);
+      background: map-fetch($button, type danger hover background);
     }
 
-    &.lego-button--active,
     &:active {
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      border-color: #641100;
+      background: map-fetch($button, type danger active background);
     }
 
     &:hover,
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($font-color, white);
+      color: map-fetch($button, type danger color);
     }
   }
 
@@ -235,10 +207,11 @@
   // Button size variations.
 
   &--small {
-    padding: 4px spacer(1);
-    height: map-fetch($button, height-small);
-    font-size: 10px;
-    line-height: 1;
+    font-size: map-fetch($button, size small font-size);
+    font-weight: map-fetch($button, size small font-weight);
+    border-radius: map-fetch($button, size small border-radius);
+    height: map-fetch($button, size small height);
+    padding: 0 7px; // Use spacer.
   }
 
   &--full {
@@ -246,22 +219,6 @@
     padding-right: 0;
     padding-left: 0;
     text-align: center;
-  }
-
-  // ### Button Shapes
-  // Button shape variations.
-
-  &--round {
-    border-radius: 50%;
-    // Using the same dimension for height and width so that the button is always round
-    height: map-fetch($button, height-small);
-    width: map-fetch($button, height-small);
-    padding: 0;
-
-    .lego-icon {
-      height: 12px;
-      width: 12px;
-    }
   }
 
   // ### With Icon
@@ -275,21 +232,8 @@
     }
   }
 
-  // ### Button as Link
-  // Styling a button to look like an anchor link.
-
-  &--link {
-    @extend %link;
-    background: none;
-    border: 0;
-    padding: 0;
-    font-family: map-fetch($font-family, base);
-    cursor: pointer;
-    outline: 0;
-  }
-
-  // ### Inactive Button
-  // Disabled state.
+  // ### Disabled State
+  // Used either an attribute or a class, depending on the use case.
 
   &[disabled],
   &[disabled]:hover,
@@ -307,44 +251,18 @@
     opacity: map-fetch($opacity, medium);
 
     + .lego-button--brand {
-      border-color: #00558D;
-      background: #147CC5;
-      color: #FFF;
+      background-color: map-fetch($button, type brand background);
+      color: map-fetch($button, type brand color);
     }
 
     + .lego-button--highlight {
-      border-color: #719505;
-      background: #A1CD1E;
-      color: #FFF;
+      background-color: map-fetch($button, type highlight background);
+      color: map-fetch($button, type highlight color);
     }
 
     + .lego-button--danger {
-      border-color: #641100;
-      background: #AA280D;
-      color: #FFF;
+      background-color: map-fetch($button, type danger background);
+      color: map-fetch($button, type danger color);
     }
-  }
-
-  &--add,
-  &--remove {
-    @extend %lego-button--small;
-    @extend %lego-button--round;
-  }
-
-  &--remove:hover,
-  &--remove:active,
-  &--remove:focus {
-    color: map-fetch($font-color, bad-news);
-  }
-}
-
-// ### Anchors like Buttons
-// Anchors that appear to be buttons.
-
-a.lego-button {
-  padding-top: 8px;
-
-  &--small {
-    padding-top: 6px;
   }
 }

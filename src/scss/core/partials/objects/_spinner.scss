@@ -75,8 +75,8 @@
 
   &--small,
   &--small::before {
-    width: map-fetch($spinner, size-small);
-    height: map-fetch($spinner, size-small);
+    width: map-fetch($spinner, size small);
+    height: map-fetch($spinner, size small);
     border-width: map-fetch($spinner, border width small);
     left: -(map-fetch($spinner, border width small));
     top: -(map-fetch($spinner, border width small));

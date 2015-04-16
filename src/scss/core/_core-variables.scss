@@ -48,11 +48,11 @@ $ui-color: (
 // For anchor links.
 
 $link-color: (
-  base                         : map-get($ui-color, brand),
-  brand                        : map-get($ui-color, brand),
-  brand-light                  : map-get($ui-color, brand-light),
-  bad-news                     : map-get($ui-color, bad-news),
-  white                        : map-get($ui-color, $base-white)
+  base                         : map-fetch($ui-color, brand),
+  brand                        : map-fetch($ui-color, brand),
+  brand-light                  : map-fetch($ui-color, brand-light),
+  bad-news                     : map-fetch($ui-color, bad-news),
+  white                        : map-fetch($ui-color, $base-white)
 );
 
 // ### Background colors
@@ -66,8 +66,8 @@ $background-color: (
   medium                       : $grey-50,
   black                        : $base-black,
 
-  brand                        : map-get($ui-color, brand),
-  brand-dark                   : map-get($ui-color, brand-dark),
+  brand                        : map-fetch($ui-color, brand),
+  brand-dark                   : map-fetch($ui-color, brand-dark),
   brand-light                  : #F2F7FC,
   warning                      : lighten(#F7ECB5, 10%),
   bad-news                     : lighten(#C1272D, 48%),
@@ -85,11 +85,11 @@ $font-color: (
   medium                       : $grey-50,
   dark                         : $grey-85,
 
-  brand                        : map-get($ui-color, brand),
-  brand-dark                   : map-get($ui-color, brand-dark),
-  warning                      : map-get($ui-color, warning),
-  bad-news                     : map-get($ui-color, bad-news),
-  good-news                    : map-get($ui-color, good-news)
+  brand                        : map-fetch($ui-color, brand),
+  brand-dark                   : map-fetch($ui-color, brand-dark),
+  warning                      : map-fetch($ui-color, warning),
+  bad-news                     : map-fetch($ui-color, bad-news),
+  good-news                    : map-fetch($ui-color, good-news)
 );
 
 // ## Fonts
@@ -190,15 +190,70 @@ $transition-duration: (
 
 // ## Form Variables
 
-$input-focus-border-color      : map-get($ui-color, brand-light);
+$input-focus-border-color      : map-fetch($ui-color, brand-light);
 
 // ### Buttons
 
 $button: (
-  height-default               : 31px,
-  height-small                 : 24px
+  size: (
+    base: (
+      height                   : 31px,
+      font-size                : 13px,
+      padding                  : 0 10px,
+      font-weight              : 400,
+      border-radius            : 3px
+    ),
+    small: (
+      height: 25px,
+      font-size: 11px,
+      padding: 0 7px,
+      font-weight: 400,
+      border-radius: 2px
+    ),
+  ),
+  type: (
+    default: (
+      background: #EEE,
+      color: #262626,
+      hover:(
+        background: #DDD
+      ),
+      active:(
+        background: #CCC
+      )
+    ),
+    brand: (
+      background: #147CC5,
+      color: map-fetch($ui-color, white),
+      hover:(
+        background: #1270B1
+      ),
+      active:(
+        background: #08568B
+      )
+    ),
+    highlight: (
+      background: #A1CD1E,
+      color: map-fetch($ui-color, white),
+      hover:(
+        background: #91B81C
+      ),
+      active:(
+        background: #719505
+      )
+    ),
+    danger: (
+      background: #AA280D,
+      color: map-fetch($ui-color, white),
+      hover:(
+        background: #991E04
+      ),
+      active:(
+        background: #641100
+      )
+    )
+  )
 );
-
 // ### Spinner
 
 $spinner: (
