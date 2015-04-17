@@ -1,106 +1,84 @@
-//# Buttons
-
-// ## Examples
+// ---
+// title: Buttons
+// description: These are the default button styles.
+// ---
 
 // ### Button Row Left
-//[hc]
-//     <div class="lego-button-row--left">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
-//       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
-//     </div>
-//[/hc]
+
+// <div class="example language-html">
+//   <div class="lego-button-row--left">
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button lego-button--brand">Button</button>
+//     <button class="lego-button lego-button--highlight">Button</button>
+//     <button class="lego-button lego-button--danger">Button</button>
+//   </div>
+// </div>
 
 // ### Button Row Center
-//[hc]
-//     <div class="lego-button-row--center">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
-//       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
-//     </div>
-//[/hc]
+
+// <div class="example html">
+//   <div class="lego-button-row--center">
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button lego-button--brand">Button</button>
+//     <button class="lego-button lego-button--highlight">Button</button>
+//     <button class="lego-button lego-button--danger">Button</button>
+//   </div>
+// </div>
 
 // ### Button Row Right
-//[hc]
-//     <div class="lego-button-row--right">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
-//       <button class="lego-button lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--danger">Go</button>
-//     </div>
-//[/hc]
 
-// ### Button Row Left with Small Buttons
-//[hc]
-//     <div class="lego-button-row--left">
-//       <button class="lego-button lego-button--small">Go</button>
-//       <button class="lego-button lego-button--small lego-button--brand">Go</button>
-//       <button class="lego-button lego-button--small lego-button--highlight">Go</button>
-//       <button class="lego-button lego-button--small lego-button--danger">Go</button>
-//     </div>
-//[/hc]
+// <div class="example html">
+//   <div class="lego-button-row--right">
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button lego-button--brand">Button</button>
+//     <button class="lego-button lego-button--highlight">Button</button>
+//     <button class="lego-button lego-button--danger">Button</button>
+//   </div>
+// </div>
+
+// ### Button Small
+
+// <div class="example html">
+//   <div class="lego-button-row--left">
+//     <button class="lego-button lego-button--small">Button</button>
+//     <button class="lego-button lego-button--small lego-button--brand">Button</button>
+//     <button class="lego-button lego-button--small lego-button--highlight">Button</button>
+//     <button class="lego-button lego-button--small lego-button--danger">Button</button>
+//   </div>
+// </div>
 
 // ### Button Full
-//[hc]
-//     <button class="lego-button lego-button--brand lego-button--full">Go</button>
-//[/hc]
 
-
-// ### Button Round
-//[hc]
-//     <button class="lego-button lego-button--small lego-button--round color--good-news">
-//       <svg class="lego-icon">
-//         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-//       </svg>
-//     </button>
-//     <button class="lego-button lego-button--small lego-button--round color--bad-news">
-//       <svg class="lego-icon">
-//         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
-//       </svg>
-//     </button>
-//[/hc]
+// <div class="example html">
+//     <button class="lego-button lego-button--brand lego-button--full">Button</button>
+// </div>
 
 // ### Full Spread Buttons
-//[hc]
-//     <div class="lego-grid lego-grid--gutter">
-//       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
-//       </div>
-//       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
-//       </div>
-//       <div class="lego-grid__cell">
-//           <button class="lego-button lego-button--brand lego-button--full">Go</button>
-//       </div>
+
+// <div class="example html">
+//   <div class="lego-grid lego-grid--gutter">
+//     <div class="lego-grid__cell">
+//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
 //     </div>
-//[/hc]
+//     <div class="lego-grid__cell">
+//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//     </div>
+//     <div class="lego-grid__cell">
+//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//     </div>
+//   </div>
+// </div>
 
 // ### Button Disabled
-//[hc]
-//     <div class="lego-button-row--left">
-//       <button class="lego-button lego-button--disabled">Go</button>
-//       <button class="lego-button lego-button--brand lego-button--disabled">Go</button>
-//     </div>
-//[/hc]
 
-// ### Button with Icon
-//[hc]
-//     <div class="lego-button-row--left">
-//       <button class="lego-button lego-button--icon">
-//         <svg class="lego-icon">
-//           <use xlink:href="#sync"></use>
-//         </svg>
-//       </button>
-//       <button class="lego-button lego-button--icon">
-//         <svg class="lego-icon">
-//           <use xlink:href="#sync"></use>
-//         </svg> Refresh
-//       </button>
-//     </div>
-//[/hc]
+// <div class="example html">
+//   <div class="lego-button-row--left">
+//     <button class="lego-button lego-button--disabled">Button</button>
+//     <button class="lego-button lego-button--brand lego-button--disabled">Button</button>
+//   </div>
+// </div>
 
+// [---]
 
 // ### Button Variables
 // Shadows for buttons.

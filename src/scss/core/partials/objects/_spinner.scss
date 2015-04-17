@@ -1,31 +1,31 @@
-// # Spinner
-// Loading spinner. Target `lego-spinner-wrap` to position as needed.
+// ---
+// title: Spinner
+// description: Loading spinner. Target '.lego-spinner-wrap' to position as needed.
+// ---
 
-// ## Example
-
-//[hc]
-//     <div class="lego-spinner-wrap">
-//       <div class="lego-spinner"></div>
-//     </div>
-//     <div class="lego-spinner-wrap">
-//       <div class="lego-spinner lego-spinner--small"></div>
-//     </div>
-//     <div class="lego-spinner-wrap">
-//       <div class="lego-spinner lego-spinner--tiny"></div>
-//     </div>
-//[/hc]
+// <div class="example html">
+//   <div class="lego-spinner-wrap">
+//     <div class="lego-spinner"></div>
+//   </div>
+//   <div class="lego-spinner-wrap">
+//     <div class="lego-spinner lego-spinner--small"></div>
+//   </div>
+//   <div class="lego-spinner-wrap">
+//     <div class="lego-spinner lego-spinner--tiny"></div>
+//   </div>
+// </div>
 
 // ### With Overlay
 // This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
 
-//[c]
-//     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
-//     <div class="lego-overlay">
-//       <div class="lego-spinner lego-spinner--small"></div>
+//     <div style="position:relative">
+//       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
+//       <div class="lego-overlay">
+//         <div class="lego-spinner lego-spinner--small"></div>
+//       </div>
 //     </div>
-//[/c]
 
-// Note: To position spinner target `.lego-spinner-wrap`.
+// [---]
 
 .lego-overlay {
   @include display(flex);

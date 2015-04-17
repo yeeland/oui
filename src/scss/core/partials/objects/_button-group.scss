@@ -1,41 +1,47 @@
-// # Button Group
-// For buttons that are flush against each other. Also possible to include an text input.
-
-// ## Example
+// ---
+// title: Button Group
+// description: For buttons that are flush against each other. Also possible to include an text input.
+// ---
 
 // ### Button Group
-//[hc]
-//     <div class="lego-button-group">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button">Go</button>
-//     </div>
-//[/hc]
+
+// <div class="example html">
+//   <div class="lego-button-group">
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button">Button</button>
+//   </div>
+// </div>
 
 // ### Button Group with Active
-//[hc]
-//     <div class="lego-button-group">
-//       <button class="lego-button">Go</button>
-//       <button class="lego-button lego-button--brand">Go</button>
-//       <button class="lego-button">Go</button>
-//     </div>
-//[/hc]
+
+// <div class="example html">
+//   <div class="lego-button-group">
+//     <button class="lego-button">Button</button>
+//     <button class="lego-button lego-button--brand">Button</button>
+//     <button class="lego-button">Button</button>
+//   </div>
+// </div>
 
 // ### Button Group with Text Input
-//[hc]
-//     <div class="lego-button-group">
-//       <button class="lego-button">Select <span class="lego-arrow-inline--down"></span></button>
-//       <input type="text" class="lego-text-input">
-//     </div>
-//[/hc]
+
+// <div class="example html">
+//   <div class="lego-button-group">
+//     <button class="lego-button">Select <span class="lego-arrow-inline--down"></span></button>
+//     <input type="text" class="lego-text-input">
+//   </div>
+// </div>
 
 // ### Button Group with Text Input
-//[hc]
-//     <div class="lego-button-group">
-//       <input type="text" class="lego-text-input">
-//       <button class="lego-button">Go</button>
-//     </div>
-//[/hc]
+
+// <div class="example html">
+//   <div class="lego-button-group">
+//     <input type="text" class="lego-text-input">
+//     <button class="lego-button">Button</button>
+//   </div>
+// </div>
+
+// [---]
 
 %lego-button-group,
 .lego-button-group {

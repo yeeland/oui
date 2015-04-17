@@ -1,43 +1,45 @@
-// # Matrix
-// Creates rows of elements with one parent, extending `lego-grid`.
+// ---
+// title: Matrix
+// description: Creates rows of elements with one parent, extending `lego-grid`.
+// ---
 
-// ## Examples
+// <div class="example html">
+//   <ul class="lego-matrix lego-matrix--1-2">
+//     <li><div class="doc-placeholder">matrix 1</div></li>
+//     <li><div class="doc-placeholder">matrix 2</div></li>
+//     <li><div class="doc-placeholder">matrix 3</div></li>
+//     <li><div class="doc-placeholder">matrix 4</div></li>
+//     <li><div class="doc-placeholder">matrix 5</div></li>
+//     <li><div class="doc-placeholder">matrix 6</div></li>
+//     <li><div class="doc-placeholder">matrix 7</div></li>
+//   </ul>
+// </div>
 
-//[hc]
-//     <ul class="lego-matrix lego-matrix--1-2">
-//       <li><div class="doc-placeholder">matrix 1</div></li>
-//       <li><div class="doc-placeholder">matrix 2</div></li>
-//       <li><div class="doc-placeholder">matrix 3</div></li>
-//       <li><div class="doc-placeholder">matrix 4</div></li>
-//       <li><div class="doc-placeholder">matrix 5</div></li>
-//       <li><div class="doc-placeholder">matrix 6</div></li>
-//       <li><div class="doc-placeholder">matrix 7</div></li>
-//     </ul>
-//[/hc]
+// <div class="example html">
+//   <ul class="lego-matrix lego-matrix--1-3">
+//     <li><div class="doc-placeholder">matrix 1</div></li>
+//     <li><div class="doc-placeholder">matrix 2</div></li>
+//     <li><div class="doc-placeholder">matrix 3</div></li>
+//     <li><div class="doc-placeholder">matrix 4</div></li>
+//     <li><div class="doc-placeholder">matrix 5</div></li>
+//     <li><div class="doc-placeholder">matrix 6</div></li>
+//     <li><div class="doc-placeholder">matrix 7</div></li>
+//   </ul>
+// </div>
 
-//[hc]
-//     <ul class="lego-matrix lego-matrix--1-3">
-//       <li><div class="doc-placeholder">matrix 1</div></li>
-//       <li><div class="doc-placeholder">matrix 2</div></li>
-//       <li><div class="doc-placeholder">matrix 3</div></li>
-//       <li><div class="doc-placeholder">matrix 4</div></li>
-//       <li><div class="doc-placeholder">matrix 5</div></li>
-//       <li><div class="doc-placeholder">matrix 6</div></li>
-//       <li><div class="doc-placeholder">matrix 7</div></li>
-//     </ul>
-//[/hc]
+// <div class="example html">
+//   <ul class="lego-matrix lego-matrix--1-4">
+//     <li><div class="doc-placeholder">matrix 1</div></li>
+//     <li><div class="doc-placeholder">matrix 2</div></li>
+//     <li><div class="doc-placeholder">matrix 3</div></li>
+//     <li><div class="doc-placeholder">matrix 4</div></li>
+//     <li><div class="doc-placeholder">matrix 5</div></li>
+//     <li><div class="doc-placeholder">matrix 6</div></li>
+//     <li><div class="doc-placeholder">matrix 7</div></li>
+//   </ul>
+// </div>
 
-//[hc]
-//     <ul class="lego-matrix lego-matrix--1-4">
-//       <li><div class="doc-placeholder">matrix 1</div></li>
-//       <li><div class="doc-placeholder">matrix 2</div></li>
-//       <li><div class="doc-placeholder">matrix 3</div></li>
-//       <li><div class="doc-placeholder">matrix 4</div></li>
-//       <li><div class="doc-placeholder">matrix 5</div></li>
-//       <li><div class="doc-placeholder">matrix 6</div></li>
-//       <li><div class="doc-placeholder">matrix 7</div></li>
-//     </ul>
-//[/hc]
+// [---]
 
 @mixin lego-matrix($responsive: null) {
   @extend %lego-grid;

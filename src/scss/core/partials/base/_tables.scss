@@ -1,136 +1,136 @@
-// # Tables
-// Tables will often require heavier use of helper classes than normal. This helps keeps
-// the number of core table variations low.
-
-// ## HTML Examples
+// ---
+// title: Tables
+// description: Tables will often require heavier use of helper classes than normal.
+// ---
 
 // ### Basic Table
 
-//[hc]
-//     <table class="lego-table">
-//       <thead>
-//         <tr>
-//           <th>Experiment</th>
-//           <th class="numerical">Numbers</th>
-//           <th class="cell-collapse">Status</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>Experiment name one</td>
-//           <td class="numerical">258</td>
-//           <td>Up</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name two that runs longer</td>
-//           <td class="numerical">19</td>
-//           <td>Down</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name three</td>
-//           <td class="numerical">400</td>
-//           <td>Up</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//[/hc]
+// <div class="example html">
+//   <table class="lego-table">
+//     <thead>
+//       <tr>
+//         <th>Experiment</th>
+//         <th class="numerical">Numbers</th>
+//         <th class="cell-collapse">Status</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr>
+//         <td>Experiment name one</td>
+//         <td class="numerical">258</td>
+//         <td>Up</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name two that runs longer</td>
+//         <td class="numerical">19</td>
+//         <td>Down</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name three</td>
+//         <td class="numerical">400</td>
+//         <td>Up</td>
+//       </tr>
+//     </tbody>
+//   </table>
+// </div>
 
 
 // ### Table Walled
 
-//[hc]
-//     <table class="lego-table lego-table--wall">
-//       <thead>
-//         <tr>
-//           <th>Experiment</th>
-//           <th class="numerical">Numbers</th>
-//           <th class="cell-collapse">Status</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>Experiment name one</td>
-//           <td class="numerical">258</td>
-//           <td>Up</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name two that runs longer</td>
-//           <td class="numerical">19</td>
-//           <td>Down</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name three</td>
-//           <td class="numerical">400</td>
-//           <td>Up</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//[/hc]
+// <div class="example html">
+//   <table class="lego-table lego-table--wall">
+//     <thead>
+//       <tr>
+//         <th>Experiment</th>
+//         <th class="numerical">Numbers</th>
+//         <th class="cell-collapse">Status</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr>
+//         <td>Experiment name one</td>
+//         <td class="numerical">258</td>
+//         <td>Up</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name two that runs longer</td>
+//         <td class="numerical">19</td>
+//         <td>Down</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name three</td>
+//         <td class="numerical">400</td>
+//         <td>Up</td>
+//       </tr>
+//     </tbody>
+//   </table>
+// </div>
 
 
 // ### Table Rule
 
-//[hc]
-//     <table class="lego-table lego-table--rule">
-//       <thead>
-//         <tr>
-//           <th>Experiment</th>
-//           <th class="numerical">Numbers</th>
-//           <th class="cell-collapse">Status</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>Experiment name one</td>
-//           <td class="numerical">258</td>
-//           <td>Up</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name two that runs longer</td>
-//           <td class="numerical">19</td>
-//           <td>Down</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name three</td>
-//           <td class="numerical">400</td>
-//           <td>Up</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//[/hc]
+// <div class="example html">
+//   <table class="lego-table lego-table--rule">
+//     <thead>
+//       <tr>
+//         <th>Experiment</th>
+//         <th class="numerical">Numbers</th>
+//         <th class="cell-collapse">Status</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr>
+//         <td>Experiment name one</td>
+//         <td class="numerical">258</td>
+//         <td>Up</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name two that runs longer</td>
+//         <td class="numerical">19</td>
+//         <td>Down</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name three</td>
+//         <td class="numerical">400</td>
+//         <td>Up</td>
+//       </tr>
+//     </tbody>
+//   </table>
+// </div>
 
 
 // ### Table Rule with Active Row and Hover
 
-//[hc]
-//     <table class="lego-table lego-table--rule lego-table--hover">
-//       <thead>
-//         <tr>
-//           <th>Experiment</th>
-//           <th class="numerical">Numbers</th>
-//           <th class="cell-collapse">Status</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         <tr>
-//           <td>Experiment name one</td>
-//           <td class="numerical">258</td>
-//           <td>Up</td>
-//         </tr>
-//         <tr class="lego-table-row--active">
-//           <td>Experiment name two that runs longer</td>
-//           <td class="numerical">19</td>
-//           <td>Down</td>
-//         </tr>
-//         <tr>
-//           <td>Experiment name three</td>
-//           <td class="numerical">400</td>
-//           <td>Up</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//[/hc]
+// <div class="example html">
+//   <table class="lego-table lego-table--rule lego-table--hover">
+//     <thead>
+//       <tr>
+//         <th>Experiment</th>
+//         <th class="numerical">Numbers</th>
+//         <th class="cell-collapse">Status</th>
+//       </tr>
+//     </thead>
+//     <tbody>
+//       <tr>
+//         <td>Experiment name one</td>
+//         <td class="numerical">258</td>
+//         <td>Up</td>
+//       </tr>
+//       <tr class="lego-table-row--active">
+//         <td>Experiment name two that runs longer</td>
+//         <td class="numerical">19</td>
+//         <td>Down</td>
+//       </tr>
+//       <tr>
+//         <td>Experiment name three</td>
+//         <td class="numerical">400</td>
+//         <td>Up</td>
+//       </tr>
+//     </tbody>
+//   </table>
+// </div>
 
+// [---]
 
 %lego-table,
 .lego-table {
@@ -153,6 +153,7 @@
     font-weight: map-fetch($font, weight bold);
     font-size: map-fetch($font, size micro);
     color: map-fetch($color, text muted);
+    letter-spacing: 1px;
     text-align: left;
 
     // For columns that are sortable.

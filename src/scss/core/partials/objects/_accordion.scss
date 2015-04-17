@@ -1,5 +1,7 @@
-// # Accordion
-// A vertical accordion with any number of panels.
+// ---
+// title: Accordion
+// description: A vertical accordion with any number of panels.
+// ---
 
 // There are two dependencies:
 
@@ -8,36 +10,36 @@
 
 // The wrapping `<div class="doc-accordion-example">` here has been added for purposes of the documentation and should be removed.
 
-//[hc]
-//     <div class="doc-accordion-example">
-//      <ul class="accordion" v-accordion>
-//        <li class="accordion__item" v-effect="accordion">
-//          <a class="accordion__link" href="#">Item One</a>
-//          <div class="accordion__content-wrap">
-//            <div class="accordion__content">
-//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
-//            </div>
-//          </div>
-//        </li>
-//        <li class="accordion__item  accordion__item--active" v-effect="accordion">
-//          <a class="accordion__link" href="#">Item Two</a>
-//          <div class="accordion__content-wrap">
-//            <div class="accordion__content">
-//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
-//            </div>
-//          </div>
-//        </li>
-//        <li class="accordion__item" v-effect="accordion">
-//          <a class="accordion__link" href="#">Item Three</a>
-//          <div class="accordion__content-wrap">
-//            <div class="accordion__content">
-//              <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
-//            </div>
-//          </div>
-//        </li>
-//      </ul>
-//     </div>
-//[/hc]
+// <div class="example html doc-accordion-example">
+//   <ul class="accordion" v-accordion>
+//     <li class="accordion__item" v-effect="accordion">
+//       <a class="accordion__link" href="#">Item One</a>
+//       <div class="accordion__content-wrap">
+//         <div class="accordion__content">
+//           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//         </div>
+//       </div>
+//     </li>
+//     <li class="accordion__item  accordion__item--active" v-effect="accordion">
+//       <a class="accordion__link" href="#">Item Two</a>
+//       <div class="accordion__content-wrap">
+//         <div class="accordion__content">
+//           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//         </div>
+//       </div>
+//     </li>
+//     <li class="accordion__item" v-effect="accordion">
+//       <a class="accordion__link" href="#">Item Three</a>
+//       <div class="accordion__content-wrap">
+//         <div class="accordion__content">
+//           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or define new audiences for targeting. Learn more.</p>
+//         </div>
+//       </div>
+//     </li>
+//   </ul>
+// </div>
+
+// [---]
 
 
 .accordion {

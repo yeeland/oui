@@ -10,7 +10,7 @@
 // For purposes of this documentation the following example has its width set to `auto`.
 // Real world usage will always have widths.
 
-//[hc]
+// <div class="example html">
 //     <div class="lego-dialog">
 //       <div class="lego-dialog__header">
 //         <div class="lego-dialog__title">Dialog Title</div>
@@ -28,7 +28,7 @@
 //         </svg>
 //       </div>
 //     </div>
-//[/hc]
+// </div>
 
 .lego-dialog {
   position: relative;

@@ -4,12 +4,12 @@
 // ## Editiable
 // Text that can be edited, like project titles.
 
-//[hc]
+// <div class="example html">
 //
 //     <!-- Can be applied to any element -->
 //     <p v-editable-text>This Text is Editable</p>
 //
-//[/hc]
+// </div>
 
 .editable {
 
@@ -35,9 +35,9 @@
 
 // Content that is applied as a pseudo-element and defined as an attribute on an empty element. This is useful for preventing an element's text from being copied to the clipboard.
 
-//[hc]
+// <div class="example html">
 //     <span data-lego-pseudo-content="+"></span> Some text
-//[/hc]
+// </div>
 
 [data-lego-pseudo-content]::before {
   content: attr(data-lego-pseudo-content);
