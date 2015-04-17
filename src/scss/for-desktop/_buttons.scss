@@ -22,7 +22,7 @@
     background: none;
     border: 0;
     padding: 0;
-    font-family: map-fetch($font-family, base);
+    font-family: map-fetch($font, family base);
     cursor: pointer;
     outline: 0;
   }
@@ -36,7 +36,7 @@
   &--remove:hover,
   &--remove:active,
   &--remove:focus {
-    color: map-fetch($font-color, bad-news);
+    color: map-fetch($font, color bad-news);
   }
 }
 

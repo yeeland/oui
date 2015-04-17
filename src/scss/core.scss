@@ -1,8 +1,10 @@
 // # Lego Desktop
 // Root file driving the desktop CSS.
 
-@import 'compass/css3';
+// Compass polyfills
+@import 'core/core-polyfills';
 
+// ## Core functions and mixins
 @import 'core/partials/elements/functions';
 @import 'core/partials/elements/mixins';
 
@@ -11,8 +13,8 @@
 
 @import 'core/core-variables';
 
-// // ## Sprites
-// // Retina and non-retina classes.
+// ## Sprites
+// Retina and non-retina classes.
 
 @import 'library/sprites/retina-sprites';
 

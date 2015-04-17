@@ -124,15 +124,15 @@
   padding: 0 10px; // Use spacer.
 
 
-  background-color: map-fetch($button, type default background);
-  color: map-fetch($button, type default color);
+  background-color: map-fetch($button, type base background);
+  color: map-fetch($button, type base color);
 
   &:hover {
-    background: map-fetch($button, type default hover background);
+    background: map-fetch($button, type base hover background);
   }
 
   &:active {
-    background: map-fetch($button, type default active background);
+    background: map-fetch($button, type base active background);
   }
 
   &:hover,
@@ -140,7 +140,7 @@
   &:visited,
   &:focus {
     outline: none;
-    color: map-fetch($button, type default color);
+    color: map-fetch($button, type base color);
   }
 
   &--brand {
@@ -243,11 +243,11 @@
   &--disabled:hover,
   &--disabled:active,
   &--disabled:focus {
-    cursor: default;
+    cursor: base;
     box-shadow: none;
     background: #F8F8F8;
-    color: map-fetch($font-color, medium);
-    border-color: map-fetch($ui-color, base);
+    color: map-fetch($font, color medium);
+    border-color: map-fetch($color-ui, base);
     opacity: map-fetch($opacity, medium);
 
     + .lego-button--brand {

@@ -12,9 +12,9 @@
 %lego-island,
 .lego-island {
   @extend %kill-last-child-margin;
-  border: 1px solid map-fetch($ui-color, light);
+  border: 1px solid map-fetch($color-ui, light);
   border-radius: map-fetch($border-radius, base);
-  background: map-fetch($background-color, faint);
+  background: map-fetch($color-background, faint);
   padding: spacer(1);
 
   &--center {

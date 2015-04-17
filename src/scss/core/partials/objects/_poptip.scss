@@ -64,49 +64,47 @@
 //     </button>
 //[/hc]
 
-$lego-pop-tip-background: map-fetch($ui-color, dark);
-
 .lego-pop-tip {
-  background: $lego-pop-tip-background;
-  color: map-fetch($font-color, white);
+  background: map-fetch($pop-tip, background);
+  color: map-fetch($font, color white);
   border-radius: map-fetch($border-radius, base);
-  font-size: map-fetch($font-size, micro);
+  font-size: map-fetch($font, size micro);
   padding: spacer(0.5) spacer(1);
-  max-width: 250px;
+  max-width: map-fetch($pop-tip, max-width);
   display: inline-block;
   z-index: map-fetch($z-index, poptip); // Desktop variable, not Lego.
 
   // Arrow options.
 
   &--arrow-top-center {
-    @include arrow(top, center, $lego-pop-tip-background);
+    @include arrow(top, center, map-fetch($pop-tip, background));
   }
 
   &--arrow-top-left {
-    @include arrow(top, left, $lego-pop-tip-background);
+    @include arrow(top, left, map-fetch($pop-tip, background));
   }
 
   &--arrow-top-right {
-    @include arrow(top, right, $lego-pop-tip-background);
+    @include arrow(top, right, map-fetch($pop-tip, background));
   }
 
   &--arrow-bottom-center {
-    @include arrow(bottom, center, $lego-pop-tip-background);
+    @include arrow(bottom, center, map-fetch($pop-tip, background));
   }
 
   &--arrow-bottom-left {
-    @include arrow(bottom, left, $lego-pop-tip-background);
+    @include arrow(bottom, left, map-fetch($pop-tip, background));
   }
 
   &--arrow-bottom-right {
-    @include arrow(bottom, right, $lego-pop-tip-background);
+    @include arrow(bottom, right, map-fetch($pop-tip, background));
   }
 
   &--arrow-left {
-    @include arrow(left, center, $lego-pop-tip-background);
+    @include arrow(left, center, map-fetch($pop-tip, background));
   }
 
   &--arrow-right {
-    @include arrow(right, center, $lego-pop-tip-background);
+    @include arrow(right, center, map-fetch($pop-tip, background));
   }
 }

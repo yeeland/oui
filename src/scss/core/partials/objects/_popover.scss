@@ -116,15 +116,11 @@
 //     </ul>
 //[/hc]
 
-
-$popover-background: map-fetch($ui-color, white);
-$popover-border: map-fetch($ui-color, base);
-
 %lego-popover,
 .lego-popover {
   @extend %lego-block-list-group;
-  background: map-fetch($background-color, white);
-  max-width: 250px;
+  background: map-fetch($color-background, white);
+  max-width: map-fetch($popover, max-width);
   display: inline-block;
   box-shadow: 0 2px map-fetch($shadow, light);
 
@@ -133,56 +129,56 @@ $popover-border: map-fetch($ui-color, base);
   }
 
   &__title {
-    font-weight: map-fetch($font-weight, bold);
+    font-weight: map-fetch($font, weight bold);
   }
 
   // Arrow options. 12 possible positions.
 
   &--arrow-top-left {
-    @include arrow(top, left, $popover-background, $popover-border);
+    @include arrow(top, left, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-top-center {
-    @include arrow(top, center, $popover-background, $popover-border);
+    @include arrow(top, center, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-top-right {
-    @include arrow(top, right, $popover-background, $popover-border);
+    @include arrow(top, right, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-right-top {
-    @include arrow(right, top, $popover-background, $popover-border);
+    @include arrow(right, top, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-right-center {
-    @include arrow(right, center, $popover-background, $popover-border);
+    @include arrow(right, center, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-right-bottom {
-    @include arrow(right, bottom, $popover-background, $popover-border);
+    @include arrow(right, bottom, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-bottom-right {
-    @include arrow(bottom, right, $popover-background, $popover-border);
+    @include arrow(bottom, right, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-bottom-center {
-    @include arrow(bottom, center, $popover-background, $popover-border);
+    @include arrow(bottom, center, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-bottom-left {
-    @include arrow(bottom, left, $popover-background, $popover-border);
+    @include arrow(bottom, left, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-left-bottom {
-    @include arrow(left, bottom, $popover-background, $popover-border);
+    @include arrow(left, bottom, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-left-center {
-    @include arrow(left, center, $popover-background, $popover-border);
+    @include arrow(left, center, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 
   &--arrow-left-top {
-    @include arrow(left, top, $popover-background, $popover-border);
+    @include arrow(left, top, map-fetch($popover, background), map-fetch($popover, border-color) );
   }
 }

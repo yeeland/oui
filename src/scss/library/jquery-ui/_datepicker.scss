@@ -3,10 +3,10 @@
 
 #ui-datepicker-div {
   display: none;
-  background: map-fetch($background-color, white);
-  border: 1px solid map-fetch($ui-color, base);
+  background: map-fetch($color-background, white);
+  border: 1px solid map-fetch($color-ui, base);
   padding: spacer(2);
-  font-size: map-fetch($font-size, epsilon);
+  font-size: map-fetch($font, size epsilon);
   overflow: hidden;
   border-radius: 0 !important;
 
@@ -32,12 +32,12 @@
 
   .ui-datepicker-group {
     float: left;
-    font-size: map-fetch($font-size, zeta);
+    font-size: map-fetch($font, size zeta);
   }
 
   .ui-datepicker-group-first {
     padding-right: spacer(2);
-    border-right: 1px solid map-fetch($ui-color, base);
+    border-right: 1px solid map-fetch($color-ui, base);
   }
 
   .ui-datepicker-group-last {
@@ -45,7 +45,7 @@
   }
 
   .ui-datepicker-title {
-    font-weight: map-fetch($font-weight, bold);
+    font-weight: map-fetch($font, weight bold);
     margin-bottom: 0;
     text-align: center;
   }
@@ -55,14 +55,14 @@
     margin: 0;
 
     th {
-      color: map-fetch($font-color, light);
-      font-weight: map-fetch($font-weight, normal);
-      font-size: map-fetch($font-size, milli);
+      color: map-fetch($font, color light);
+      font-weight: map-fetch($font, weight normal);
+      font-size: map-fetch($font, size milli);
       text-transform: uppercase;
     }
 
     td {
-      font-size: map-fetch($font-size, milli);
+      font-size: map-fetch($font, size milli);
 
       a,
       &.ui-state-disabled span {
@@ -71,19 +71,19 @@
         padding: 4px;
         border: 1px solid transparent;
         background: #fff !important;
-        color: map-fetch($link-color, base);
+        color: map-fetch($color-link, base);
       }
 
       &.ui-state-disabled span {
-        color: map-fetch($font-color, light);
+        color: map-fetch($font, color light);
         background: #fff !important;
       }
     }
 
     .ui-state-active,
     .ui-state-hover {
-      border: 1px solid map-fetch($ui-color, brand);
-      background: map-fetch($background-color, brand-light);
+      border: 1px solid map-fetch($color-ui, brand);
+      background: map-fetch($color-background, brand-light);
       border-radius: map-fetch($border-radius, base);
     }
   }
@@ -102,8 +102,8 @@
     border: 1px solid transparent;
 
     &:hover {
-      border: 1px solid map-fetch($ui-color, brand);
-      background: map-fetch($background-color, brand-light);
+      border: 1px solid map-fetch($color-ui, brand);
+      background: map-fetch($color-background, brand-light);
       border-radius: map-fetch($border-radius, base);
     }
 

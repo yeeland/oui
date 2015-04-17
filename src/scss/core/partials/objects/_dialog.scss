@@ -51,27 +51,27 @@
 
   &__header,
   &__footer {
-    background-color: map-fetch($background-color, faint);
+    background-color: map-fetch($color-background, faint);
   }
 
   &__header {
-    border-bottom: 1px solid map-fetch($ui-color, light);
+    border-bottom: 1px solid map-fetch($color-ui, light);
   }
 
   &__footer {
-    border-top: 1px solid map-fetch($ui-color, light);
+    border-top: 1px solid map-fetch($color-ui, light);
   }
 
   &__title {
-    font-size: map-fetch($font-size, gamma);
+    font-size: map-fetch($font, size gamma);
     letter-spacing: -1px;
-    color: map-fetch($font-color, brand-dark);
+    color: map-fetch($font, color brand-dark);
     line-height: 1;
   }
 
   &__body {
     @extend %kill-last-child-margin;
-    background: map-fetch($background-color, white);
+    background: map-fetch($color-background, white);
     padding-bottom: spacer(3);
   }
 
@@ -84,11 +84,10 @@
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
-    background: map-fetch($background-color, black);
-    color: map-fetch($ui-color, white);
-    border: 2px solid map-fetch($ui-color, white);
+    background: map-fetch($color-background, black);
+    color: map-fetch($color-ui, white);
+    border: 2px solid map-fetch($color-ui, white);
     box-shadow: 0 0 map-fetch($shadow, big);
-    // This is needed to bring the close icon above the dialog background.
-    z-index: 1;
+    z-index: 1; // This is needed to bring the close icon above the dialog background.
   }
 }

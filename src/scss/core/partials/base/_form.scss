@@ -287,7 +287,7 @@
 //[/c]
 
 .lego-form--small {
-  font-size: map-fetch($font-size, micro);
+  font-size: map-fetch($font, size micro);
 }
 
 %lego-text-input,
@@ -296,7 +296,7 @@
 .lego-textarea {
   @include transition(border-color map-fetch($transition-duration, base));
   width: 100%;
-  border: 1px solid map-fetch($ui-color, base);
+  border: 1px solid map-fetch($color-ui, base);
   border-radius: map-fetch($border-radius, base);
   padding: 7px;
   vertical-align: middle;
@@ -308,7 +308,7 @@
   }
 
   &:hover {
-    border-color: map-fetch($ui-color, medium);
+    border-color: map-fetch($color-ui, medium);
   }
 
   &:focus {
@@ -316,10 +316,10 @@
   }
 
   &[disabled] {
-    background: map-fetch($background-color, faint);
+    background: map-fetch($color-background, faint);
 
     &:hover {
-      border-color: map-fetch($ui-color, base);
+      border-color: map-fetch($color-ui, base);
     }
   }
 }
@@ -336,24 +336,24 @@
 .lego-select {
   @include transition(border-color map-fetch($transition-duration, base));
   display: inline-block;
-  height: map-fetch($button, height-default);
-  line-height: map-fetch($button, height-default);
-  background: map-fetch($background-color, white);
-  border: 1px solid map-fetch($ui-color, base);
+  height: map-fetch($button, size base height);
+  line-height: map-fetch($button, size base height);
+  background: map-fetch($color-background, white);
+  border: 1px solid map-fetch($color-ui, base);
   border-radius: map-fetch($border-radius, base);
   padding: 7px;
   max-width: 100%;
 
   &:hover {
-    border-color: map-fetch($ui-color, medium);
+    border-color: map-fetch($color-ui, medium);
   }
 
   &[disabled] {
-    background: map-fetch($background-color, faint);
+    background: map-fetch($color-background, faint);
     cursor: default;
 
     &:hover {
-      border-color: map-fetch($ui-color, base);
+      border-color: map-fetch($color-ui, base);
     }
   }
 }
@@ -367,7 +367,7 @@
 }
 
 .lego-form__title {
-  font-size: map-fetch($font-size, gamma);
+  font-size: map-fetch($font, size gamma);
   margin-bottom: spacer(1);
   line-height: 1;
   letter-spacing: -1px;
@@ -396,34 +396,34 @@ fieldset {
 .lego-label {
   display: block;
   margin-bottom: spacer(0.5);
-  font-weight: map-fetch($font-weight, bold);
+  font-weight: map-fetch($font, weight bold);
 
   &--optional::after {
     content: '(Optional)';
     margin-left: spacer(0.5);
-    color: map-fetch($font-color, muted);
-    font-size: map-fetch($font-size, micro);
-    font-weight: map-fetch($font-weight, normal);
+    color: map-fetch($font, color muted);
+    font-size: map-fetch($font, size micro);
+    font-weight: map-fetch($font, weight normal);
   }
 
   &--required::after {
     content: '*';
     margin-left: spacer(0.5);
-    color: map-fetch($font-color, bad-news);
-    font-weight: map-fetch($font-weight, normal);
-    font-size: map-fetch($font-size, delta);
+    color: map-fetch($font, color bad-news);
+    font-weight: map-fetch($font, weight normal);
+    font-size: map-fetch($font, size delta);
     line-height: 1;
     position: relative;
     top: 2px; // Corrects position.
   }
 
   &--rule {
-    border-bottom: 1px solid map-fetch($ui-color, base);
+    border-bottom: 1px solid map-fetch($color-ui, base);
     padding-bottom: spacer(0.5);
   }
 
   &--disabled {
-    color: map-fetch($font-color, muted);
+    color: map-fetch($font, color muted);
     cursor: default !important;
   }
 }
@@ -434,7 +434,7 @@ fieldset {
 .lego-input-list .lego-label {
   display: table-cell;
   padding-left: spacer(1);
-  font-weight: map-fetch($font-weight, light);
+  font-weight: map-fetch($font, weight light);
 }
 
 //  Groups of checkboxes and radios.
@@ -473,12 +473,12 @@ fieldset {
 }
 
 .lego-input--disabled {
-  background-color: map-fetch($background-color, light);
+  background-color: map-fetch($color-background, light);
 }
 
 .lego-or {
   text-align: center;
-  color: map-fetch($font-color, base);
+  color: map-fetch($font, color base);
   text-transform: uppercase;
   margin: spacer(1.5) auto;
   position: relative;
@@ -486,7 +486,7 @@ fieldset {
   &::before,
   &::after {
     content: '';
-    border-top: 1px dotted map-fetch($ui-color, base);
+    border-top: 1px dotted map-fetch($color-ui, base);
     width: 40%;
     position: absolute;
     left: 0;
@@ -521,56 +521,56 @@ fieldset {
 
 .lego-form-note {
   padding-top: spacer(0.5);
-  font-size: map-fetch($font-size, micro);
+  font-size: map-fetch($font, size micro);
 }
 
 .lego-form-note--good-news {
-  color: map-fetch($font-color, good-news);
+  color: map-fetch($font, color good-news);
 }
 
 .lego-form-note--bad-news {
-  color: map-fetch($font-color, bad-news);
+  color: map-fetch($font, color bad-news);
 }
 
 .lego-form-note--warning {
-  color: map-fetch($font-color, warning);
+  color: map-fetch($font, color warning);
 }
 
 // ## Form Validations
 
 .lego-form-good-news {
   .lego-label {
-    color: map-fetch($font-color, good-news);
+    color: map-fetch($font, color good-news);
   }
 
   .lego-text-input,
   .lego-select,
   .lego-textarea {
-    border-color: map-fetch($ui-color, good-news);
+    border-color: map-fetch($color-ui, good-news);
   }
 }
 
 .lego-form-bad-news {
   .lego-label {
-    color: map-fetch($font-color, bad-news);
+    color: map-fetch($font, color bad-news);
   }
 
   .lego-text-input,
   .lego-select,
   .lego-textarea {
-    border-color: map-fetch($ui-color, bad-news);
+    border-color: map-fetch($color-ui, bad-news);
   }
 }
 
 .lego-form-warning {
   .lego-label {
-    color: map-fetch($font-color, warning);
+    color: map-fetch($font, color warning);
   }
 
   .lego-text-input,
   .lego-select,
   .lego-textarea {
-    border-color: map-fetch($ui-color, warning);
+    border-color: map-fetch($color-ui, warning);
   }
 }
 

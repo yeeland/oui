@@ -21,7 +21,7 @@
 
 // ## Map Fetch
 // Retrieves values from any map, nested or not.
-// https://gist.github.com/jlong/8760275
+// Adapted from https://gist.github.com/jlong/8760275 - added errors.
 
 @function map-fetch($map, $keys) {
   $key: nth($keys, 1);
@@ -32,8 +32,14 @@
     @for $i from 2 through $length {
       $rest: append($rest, nth($keys, $i));
     }
+    @if ($value == null) {
+      @error "The value '#{$key}' doesn't exist in the map.";
+    }
     @return map-fetch($value, $rest)
   } @else {
+    @if ($value == null) {
+      @error "The value '#{$key}' doesn't exist in the map.";
+    }
     @return $value;
   }
 }

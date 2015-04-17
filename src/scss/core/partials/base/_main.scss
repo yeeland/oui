@@ -2,9 +2,11 @@
 // High level defaults establishing font and color.
 
 html {
-  @include font-smoothing(on);
-  color: map-fetch($font-color, base);
-  background-color: map-fetch($background-color, base);
+  color: map-fetch($font, color base);
+  background-color: map-fetch($color-background, base);
+  font-family: map-fetch($font, family base);
+  font-size: map-fetch($font, size base);
+  line-height: map-fetch($font, line-height base);
 }
 
 p {
@@ -12,5 +14,5 @@ p {
 }
 
 b {
-  font-weight: map-fetch($font-weight, bold);
+  font-weight: map-fetch($font, weight bold);
 }

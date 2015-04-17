@@ -1,6 +1,6 @@
 // # Links
 
-// Links will use the `map-fetch($link-color, base)`. You can also apply a `.link` class to an element.
+// Links will use the `map-fetch($color-link, base)`. You can also apply a `.link` class to an element.
 
 // ## HTML Examples
 
@@ -15,64 +15,64 @@
 a,
 %link,
 .link {
-  color: map-fetch($link-color, base);
+  color: map-fetch($color-link, base);
   cursor: pointer;
 
   &:visited,
   &:active {
-    color: map-fetch($link-color, base);
+    color: map-fetch($color-link, base);
   }
 
   &:hover {
-    color: lighten(map-fetch($link-color, base), 10%);
+    color: lighten(map-fetch($color-link, base), 10%);
   }
 }
 
 %link--dark,
 .link--dark {
-  color: map-fetch($font-color, base);
+  color: map-fetch($font, color base);
   cursor: pointer;
 
   &:visited,
   &:active {
-    color: map-fetch($font-color, base);
+    color: map-fetch($font, color base);
   }
 
   &:hover {
-    color: map-fetch($link-color, base);
+    color: map-fetch($color-link, base);
   }
 }
 
 %link--bad-news,
 .link--bad-news {
-  color: map-fetch($font-color, base);
+  color: map-fetch($font, color base);
   cursor: pointer;
 
   &:visited,
   &:hover,
   &:active {
-    color: map-fetch($link-color, bad-news);
+    color: map-fetch($color-link, bad-news);
   }
 }
 
 %link--reverse,
 .link--reverse {
-  color: map-fetch($link-color, white) !important;
+  color: map-fetch($color-link, white) !important;
   cursor: pointer;
 
   &:hover {
-    color: lighten(map-fetch($link-color, brand-light), 15%) !important;
+    color: lighten(map-fetch($color-link, brand-light), 15%) !important;
   }
 }
 
 %link--disabled,
 .link--disabled {
-  color: map-fetch($font-color, muted);
+  color: map-fetch($font, color muted);
 
   &:visited,
   &:hover,
   &:active {
-    color: map-fetch($font-color, muted);
+    color: map-fetch($font, color muted);
     cursor: default;
   }
 }
@@ -81,12 +81,12 @@ a,
 // Targets anchors without an `href` attribute and not a lego-button.
 
 a:not([href]):not(.lego-button) {
-  color: map-fetch($link-color, base);
+  color: map-fetch($color-link, base);
 
   &:visited,
   &:hover,
   &:active {
-    color: map-fetch($link-color, base);
+    color: map-fetch($color-link, base);
     cursor: default;
   }
 }

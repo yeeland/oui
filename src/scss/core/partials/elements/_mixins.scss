@@ -1,15 +1,5 @@
 // # Mixins
 
-// ## Font Size
-// Computes a custom line-height for a given size, unless bool set to false.
-
-@mixin font-size($font-size, $line-height-bool: true) {
-  font-size: $font-size;
-  @if $line-height-bool == true {
-    line-height: ceil($font-size / map-fetch($line-height, base)) * map-fetch($line-height, base) / $font-size;
-  }
-}
-
 // ## Font Smoothing
 // Better rendering of fonts on OS X. Does not affect IE.
 

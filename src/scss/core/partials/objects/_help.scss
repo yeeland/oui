@@ -8,8 +8,8 @@
 //[/hc]
 
 .lego-help-dot {
-  background: map-fetch($background-color, muted);
-  color: map-fetch($font-color, white);
+  background: map-fetch($color-background, muted);
+  color: map-fetch($font, color white);
   width: 16px;
   height: 16px;
   text-align: center;

@@ -33,6 +33,6 @@
   }
 
   &__current > a {
-    color: map-fetch($font-color, base);
+    color: map-fetch($font, color base);
   }
 }

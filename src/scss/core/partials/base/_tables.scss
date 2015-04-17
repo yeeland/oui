@@ -150,9 +150,9 @@
 
   th {
     text-transform: uppercase;
-    font-weight: map-fetch($font-weight, bold);
-    font-size: map-fetch($font-size, micro);
-    color: map-fetch($font-color, muted);
+    font-weight: map-fetch($font, weight bold);
+    font-size: map-fetch($font, size micro);
+    color: map-fetch($font, color muted);
     text-align: left;
 
     // For columns that are sortable.
@@ -206,17 +206,17 @@
       }
 
       > tr {
-        border-bottom: 1px solid map-fetch($ui-color, base);
+        border-bottom: 1px solid map-fetch($color-ui, base);
       }
     }
 
     > tbody > tr {
-      border-bottom: 1px solid map-fetch($ui-color, light);
+      border-bottom: 1px solid map-fetch($color-ui, light);
 
       // If no `thead` is present we'll have a border top.
 
       &:first-child {
-        border-bottom: 1px solid map-fetch($ui-color, light);
+        border-bottom: 1px solid map-fetch($color-ui, light);
       }
     }
 
@@ -226,7 +226,7 @@
 
     > thead > tr > th,
     > tbody > tr > td {
-      border-left: 1px solid map-fetch($ui-color, light);
+      border-left: 1px solid map-fetch($color-ui, light);
       padding-right: spacer(1);
 
       &:first-child {
@@ -240,7 +240,7 @@
     > tbody > tr {
 
       &:hover {
-        background-color: map-fetch($background-color, brand-light);
+        background-color: map-fetch($color-background, brand-light);
         cursor: pointer;
       }
     }
@@ -279,5 +279,5 @@
 // Added to the table row.
 
 .lego-table-row--active {
-  background-color: map-fetch($background-color, faint);
+  background-color: map-fetch($color-background, faint);
 }
