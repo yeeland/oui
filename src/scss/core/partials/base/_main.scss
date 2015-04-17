@@ -2,8 +2,8 @@
 // High level defaults establishing font and color.
 
 html {
-  color: map-fetch($font, color base);
-  background-color: map-fetch($color-background, base);
+  color: map-fetch($color, text base);
+  background-color: map-fetch($color, background base);
   font-family: map-fetch($font, family base);
   font-size: map-fetch($font, size base);
   line-height: map-fetch($font, line-height base);

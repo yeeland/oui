@@ -24,17 +24,9 @@ $grey-12                     : tint($base-black, 88%);
 $grey-06                     : tint($base-black, 94%);
 $grey-03                     : tint($base-black, 97%);
 
-// ### Base Colors
-// These are colors can be used on UI elements like borders.
+// IMPORTANT: Do not use these $root-color variables.
 
-$color-ui: (
-  white                      : $base-white,
-  faint                      : $grey-03,
-  light                      : $grey-06,
-  base                       : $grey-12,
-  medium                     : $grey-40,
-  dark                       : $grey-85,
-  black                      : $base-black,
+$root-color: (
   brand                      : #0081BA,
   brand-light                : #9ACCE2,
   brand-dark                 : #036,
@@ -43,29 +35,68 @@ $color-ui: (
   good-news                  : #97C70A
 );
 
-$color-link: (
-  base                       : map-fetch($color-ui, brand),
-  brand                      : map-fetch($color-ui, brand),
-  brand-light                : map-fetch($color-ui, brand-light),
-  bad-news                   : map-fetch($color-ui, bad-news),
-  white                      : $base-white
+// ### Base Colors
+// These are colors can be used on UI elements like borders.
+
+$color: (
+
+  ui: (
+    white                    : $base-white,
+    faint                    : $grey-03,
+    light                    : $grey-06,
+    base                     : $grey-12,
+    medium                   : $grey-40,
+    dark                     : $grey-85,
+    black                    : $base-black,
+    brand                    : map-fetch($root-color, brand),
+    brand-light              : map-fetch($root-color, brand-light),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    warning                  : map-fetch($root-color, warning),
+    bad-news                 : map-fetch($root-color, bad-news),
+    good-news                : map-fetch($root-color, good-news)
+  ),
+
+  link: (
+    base                     : map-fetch($root-color, brand),
+    brand                    : map-fetch($root-color, brand),
+    brand-light              : map-fetch($root-color, brand-light),
+    bad-news                 : map-fetch($root-color, bad-news),
+    white                    : $base-white
+  ),
+
+  background: (
+    base                     : $base-white,
+    white                    : $base-white,
+    faint                    : $grey-03,
+    light                    : $grey-06,
+    muted                    : $grey-35,
+    medium                   : $grey-50,
+    black                    : $base-black,
+    brand                    : map-fetch($root-color, brand),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    brand-light              : #F2F7FC,
+    warning                  : lighten(#F7ECB5, 10%),
+    bad-news                 : lighten(#C1272D, 48%),
+    good-news                : lighten(#90B71C, 45%)
+  ),
+
+  text: (
+    base                     : $grey-85,
+    white                    : $base-white,
+    faint                    : $grey-12,
+    light                    : $grey-25,
+    muted                    : $grey-35,
+    medium                   : $grey-50,
+    dark                     : $grey-85,
+    brand                    : map-fetch($root-color, brand),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    warning                  : map-fetch($root-color, warning),
+    bad-news                 : map-fetch($root-color, bad-news),
+    good-news                : map-fetch($root-color, good-news)
+  )
+
 );
 
-$color-background: (
-  base                       : $base-white,
-  white                      : $base-white,
-  faint                      : $grey-03,
-  light                      : $grey-06,
-  muted                      : $grey-35,
-  medium                     : $grey-50,
-  black                      : $base-black,
-  brand                      : map-fetch($color-ui, brand),
-  brand-dark                 : map-fetch($color-ui, brand-dark),
-  brand-light                : #F2F7FC,
-  warning                    : lighten(#F7ECB5, 10%),
-  bad-news                   : lighten(#C1272D, 48%),
-  good-news                  : lighten(#90B71C, 45%)
-);
 
 
 // ## Fonts
@@ -111,22 +142,8 @@ $font: (
     loose                    : 1px,
     tight                    : -1px,
     extra-tight              : -2px
-  ),
-
-  color: (
-    base                     : $grey-85,
-    white                    : $base-white,
-    faint                    : $grey-12,
-    light                    : $grey-25,
-    muted                    : $grey-35,
-    medium                   : $grey-50,
-    dark                     : $grey-85,
-    brand                    : map-fetch($color-ui, brand),
-    brand-dark               : map-fetch($color-ui, brand-dark),
-    warning                  : map-fetch($color-ui, warning),
-    bad-news                 : map-fetch($color-ui, bad-news),
-    good-news                : map-fetch($color-ui, good-news)
   )
+
 );
 
 // ### Buttons
@@ -153,7 +170,7 @@ $button: (
   type: (
     base: (
       background             : #EEE,
-      color                  : map-fetch($font, color base),
+      color                  : map-fetch($color, text base),
       hover:(
         background           : #DDD
       ),
@@ -163,7 +180,7 @@ $button: (
     ),
     brand: (
       background             : #147CC5,
-      color                  : map-fetch($font, color white),
+      color                  : map-fetch($color, text white),
       hover:(
         background           : #1270B1
       ),
@@ -173,7 +190,7 @@ $button: (
     ),
     highlight: (
       background             : #A1CD1E,
-      color                  : map-fetch($font, color white),
+      color                  : map-fetch($color, text white),
       hover:(
         background           : #91B81C
       ),
@@ -183,7 +200,7 @@ $button: (
     ),
     danger: (
       background             : #AA280D,
-      color                  : map-fetch($font, color white),
+      color                  : map-fetch($color, text white),
       hover:(
         background           : #991E04
       ),
@@ -237,7 +254,7 @@ $transition-duration: (
 
 // ## Form Variables
 
-$input-focus-border-color    : map-fetch($color-ui, brand-light);
+$input-focus-border-color    : map-fetch($color, ui brand-light);
 
 // ## Accordion
 
@@ -246,15 +263,15 @@ $accordion-link-height       : 26px;
 // ## Popover
 
 $popover: (
-  background                 : map-fetch($color-ui, white),
-  border-color               : map-fetch($color-ui, base),
+  background                 : map-fetch($color, ui white),
+  border-color               : map-fetch($color, ui base),
   max-width                  : 250px
 );
 
 // ## Poptip
 
 $pop-tip: (
-  background                 : map-fetch($color-ui, dark),
+  background                 : map-fetch($color, ui dark),
   max-width                  : 250px
 );
 

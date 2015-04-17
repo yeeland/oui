@@ -119,7 +119,7 @@
 %lego-dropdown,
 .lego-dropdown {
   @extend %lego-block-list-group;
-  background: map-fetch($color-background, white);
+  background: map-fetch($color, background white);
   box-shadow: 0 2px map-fetch($shadow, light);
   min-width: 100%;
   position: absolute;
@@ -132,10 +132,10 @@
 
   &__item {
     white-space: nowrap;
-    color: map-fetch($font, color base);
+    color: map-fetch($color, text base);
 
     &--active {
-      background: map-fetch($color-background, faint);
+      background: map-fetch($color, background faint);
     }
   }
 

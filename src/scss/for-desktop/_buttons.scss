@@ -36,7 +36,7 @@
   &--remove:hover,
   &--remove:active,
   &--remove:focus {
-    color: map-fetch($font, color bad-news);
+    color: map-fetch($color, text bad-news);
   }
 }
 

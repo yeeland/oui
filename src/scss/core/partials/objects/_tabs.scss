@@ -99,18 +99,18 @@
 
 .lego-tabs-nav {
   @include display(flex);
-  border-bottom: 3px solid map-fetch($color-ui, base);
+  border-bottom: 3px solid map-fetch($color, ui base);
 
   &__item {
     position: relative;
     text-align: center;
     padding: spacer(1) spacer(1.5);
-    border: 1px solid map-fetch($color-ui, base);
+    border: 1px solid map-fetch($color, ui base);
     border-right: 0;
     border-bottom: 0;
-    color: map-fetch($font, color medium);
+    color: map-fetch($color, text medium);
     font-weight: map-fetch($font, weight bold);
-    background-color: map-fetch($color-background, faint);
+    background-color: map-fetch($color, background faint);
     cursor: pointer;
 
     &:first-child {
@@ -119,22 +119,22 @@
 
     &:last-child {
       border-radius: 0 map-fetch($border-radius, big) 0 0;
-      border-right: 1px solid map-fetch($color-ui, base);
+      border-right: 1px solid map-fetch($color, ui base);
     }
 
     &:hover,
     &.tab-active {
-      color: map-fetch($font, color brand);
+      color: map-fetch($color, text brand);
     }
 
     &.tab-active {
-      background-color: map-fetch($color-background, white);
+      background-color: map-fetch($color, background white);
 
       &::after { // Creates the white bar under the active tab.
         content: '';
         display: block;
         height: 3px;
-        background: map-fetch($color-background, white);
+        background: map-fetch($color, background white);
         position: absolute;
         left: 0;
         right: 0;
@@ -173,7 +173,7 @@
 
     &.tab-active::after {
       height: 2px;
-      background: map-fetch($color-background, brand);
+      background: map-fetch($color, background brand);
       bottom: -1px;
     }
   }
@@ -192,7 +192,7 @@
 
   .lego-tabs-pane {
     padding: spacer(2);
-    border: 1px solid map-fetch($color-ui, base);
+    border: 1px solid map-fetch($color, ui base);
     border-top: 0;
   }
 }

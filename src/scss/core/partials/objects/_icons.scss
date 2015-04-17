@@ -116,14 +116,14 @@
   }
 
   &--active::before {
-    background: map-fetch($color-ui, brand);
+    background: map-fetch($color, ui brand);
   }
 
   &--bad-news::before {
-    background: map-fetch($color-ui, bad-news);
+    background: map-fetch($color, ui bad-news);
   }
 
   &--good-news::before {
-    background: map-fetch($color-ui, good-news);
+    background: map-fetch($color, ui good-news);
   }
 }

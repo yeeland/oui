@@ -58,7 +58,7 @@ img[height] {
 
 %img--border,
 .img--border {
-  border: 1px solid map-fetch($color-ui, base);
+  border: 1px solid map-fetch($color, ui base);
 }
 
 // ## Image placement

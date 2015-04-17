@@ -19,7 +19,7 @@
 .lego-rule {
   border: 0;
   height: 0;
-  border-top: 1px solid map-fetch($color-ui, base);
+  border-top: 1px solid map-fetch($color, ui base);
   margin-top: spacer(1) - 1px;
   margin-bottom: spacer(1);
 

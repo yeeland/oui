@@ -66,7 +66,7 @@
 
 .lego-pop-tip {
   background: map-fetch($pop-tip, background);
-  color: map-fetch($font, color white);
+  color: map-fetch($color, text white);
   border-radius: map-fetch($border-radius, base);
   font-size: map-fetch($font, size micro);
   padding: spacer(0.5) spacer(1);

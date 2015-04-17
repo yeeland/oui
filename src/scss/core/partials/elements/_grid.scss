@@ -81,8 +81,7 @@
 //[/hc]
 
 
-%lego-grid,
-.lego-grid {
+@mixin lego-grid($responsive: null) {
   @include display(flex);
   @include flex-wrap(wrap);
   margin-left: -(spacer(2));
@@ -116,6 +115,24 @@
     }
   }
 
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+      margin-left: 0;
+
+      &__cell {
+        @include flex(none);
+        padding-left: 0;
+        margin-bottom: spacer(2);
+      }
+
+      &--gutter--wide,
+      &--gutter--narrow {
+        margin-left: 0;
+      }
+    }
+  }
+
   // ## Grid Alignment
   // Moves grid cells to align center or anchored at the bottom of the grid.
 
@@ -141,4 +158,9 @@
     -ms-flex: none;
     flex: none;
   }
+}
+
+%lego-grid,
+.lego-grid {
+  @include lego-grid;
 }

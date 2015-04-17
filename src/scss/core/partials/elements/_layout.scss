@@ -120,7 +120,7 @@
 }
 
 .empty-state-message {
-  color: map-fetch($font, color muted);
+  color: map-fetch($color, text muted);
   font-size: map-fetch($font, size epsilon);
   text-align: center;
 }

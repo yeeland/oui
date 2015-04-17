@@ -49,8 +49,7 @@
 //     </div>
 //[/hc]
 
-%lego-media,
-.lego-media {
+@mixin lego-media($responsive: null) {
   @include display(flex);
   @include align-items(flex-start);
 
@@ -68,4 +67,25 @@
     @extend %kill-last-child-margin;
     @include flex(1);
   }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+
+      &__img,
+      &__img--rev {
+        margin-right: 0;
+        margin-top: 0;
+      }
+
+      &__body {
+        @include flex(none);
+      }
+    }
+  }
+}
+
+%lego-media,
+.lego-media {
+  @include lego-media;
 }

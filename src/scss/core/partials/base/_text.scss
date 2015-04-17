@@ -14,10 +14,10 @@
 .editable {
 
   &:hover {
-    color: map-fetch($font, color muted);
+    color: map-fetch($color, text muted);
 
     &::after {
-      color: map-fetch($font, color muted);
+      color: map-fetch($color, text muted);
       content: '\270E';
       font-size: 1em;
       padding-left: spacer(0.5);

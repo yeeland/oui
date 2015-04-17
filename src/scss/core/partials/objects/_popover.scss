@@ -119,7 +119,7 @@
 %lego-popover,
 .lego-popover {
   @extend %lego-block-list-group;
-  background: map-fetch($color-background, white);
+  background: map-fetch($color, background white);
   max-width: map-fetch($popover, max-width);
   display: inline-block;
   box-shadow: 0 2px map-fetch($shadow, light);
