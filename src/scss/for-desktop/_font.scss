@@ -13,18 +13,14 @@ $hosting-url: 'https://dhm5hy2vn8l0l.cloudfront.net/proxima/';
 @font-face {
   font-family: 'Proxima';
   font-weight: 300;
-  src:
-    url($hosting-url + 'proximanova-light.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-light.woff') format('woff');
+  src: url($hosting-url + 'proximanova-light.woff2') format('woff2'), url($hosting-url + 'proximanova-light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Proxima';
   font-weight: 300;
   font-style: italic;
-  src:
-    url($hosting-url + 'proximanova-lightit.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-lightit.woff') format('woff');
+  src: url($hosting-url + 'proximanova-lightit.woff2') format('woff2'), url($hosting-url + 'proximanova-lightit.woff') format('woff');
 }
 
 // ### Proxima Regular
@@ -32,18 +28,14 @@ $hosting-url: 'https://dhm5hy2vn8l0l.cloudfront.net/proxima/';
 @font-face {
   font-family: 'Proxima';
   font-weight: 400;
-  src:
-    url($hosting-url + 'proximanova-reg.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-reg.woff') format('woff');
+  src: url($hosting-url + 'proximanova-reg.woff2') format('woff2'), url($hosting-url + 'proximanova-reg.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Proxima';
   font-weight: 400;
   font-style: italic;
-  src:
-    url($hosting-url + 'proximanova-regit.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-regit.woff') format('woff');
+  src: url($hosting-url + 'proximanova-regit.woff2') format('woff2'), url($hosting-url + 'proximanova-regit.woff') format('woff');
 }
 
 // ### Proxima Bold
@@ -51,16 +43,12 @@ $hosting-url: 'https://dhm5hy2vn8l0l.cloudfront.net/proxima/';
 @font-face {
   font-family: 'Proxima';
   font-weight: 500;
-  src:
-    url($hosting-url + 'proximanova-bold.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-bold.woff') format('woff');
+  src: url($hosting-url + 'proximanova-bold.woff2') format('woff2'), url($hosting-url + 'proximanova-bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Proxima';
   font-weight: 500;
   font-style: italic;
-  src:
-    url($hosting-url + 'proximanova-boldit.woff2') format('woff2'),
-    url($hosting-url + 'proximanova-boldit.woff') format('woff');
+  src: url($hosting-url + 'proximanova-boldit.woff2') format('woff2'), url($hosting-url + 'proximanova-boldit.woff') format('woff');
 }
