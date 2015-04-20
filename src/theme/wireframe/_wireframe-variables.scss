@@ -1,0 +1,19 @@
+// # Wireframe Variables
+
+// ## Colors
+// Default color for objects' borders etc.
+
+// IMPORTANT Do not use these values directly. Use the more specifically named
+// variables below that use these black and grey values.
+
+
+$root-color: map-extend($root-color,
+  (
+    brand                      : blue
+  )
+);
+
+
+.foo {
+  color: map-fetch($root-color, brand);
+}

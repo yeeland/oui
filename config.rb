@@ -1,2 +1,2 @@
 css_dir = 'dist/css/'
-sass_dir = 'src/scss/'
+sass_dir = 'src/theme/'
