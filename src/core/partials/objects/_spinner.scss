@@ -51,7 +51,7 @@
   @include animation(lego-spin map-fetch($spinner, speed) infinite linear);
   width: map-fetch($spinner, size base);
   height: map-fetch($spinner, size base);
-  border: map-fetch($spinner, border width base) solid map-fetch($spinner, border color light);
+  border: map-fetch($spinner, border width base) solid map-fetch($color, background brand-light);
   display: inline-block;
   border-radius: 50%;
   position: relative;
@@ -67,10 +67,10 @@
     top: -(map-fetch($spinner, border width base));
     border-width: map-fetch($spinner, border width base);
     border-style: solid;
-    border-right-color: map-fetch($spinner, border color light);
-    border-top-color: map-fetch($spinner, border color light);
-    border-left-color: map-fetch($spinner, border color dark);
-    border-bottom-color: map-fetch($spinner, border color light);
+    border-right-color: map-fetch($color, background brand-light);
+    border-top-color: map-fetch($color, background brand-light);
+    border-left-color: map-fetch($color, background brand);
+    border-bottom-color: map-fetch($color, background brand-light);
   }
 
   &--small,

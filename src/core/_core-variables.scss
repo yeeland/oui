@@ -4,29 +4,21 @@
 // ## Colors
 // Default color for objects' borders etc.
 
-// IMPORTANT Do not use these values directly. Use the more specifically named
-// variables below that use these black and grey values.
+// IMPORTANT Do not use these values directly in your Sass files.
+// Use the more specifically named variables below that use these root values.
 
 $base-black                  : #000;
 $base-white                  : #FFF;
-$grey-90                     : tint($base-black, 10%);
-$grey-85                     : tint($base-black, 15%);
-$grey-80                     : tint($base-black, 20%);
-$grey-70                     : tint($base-black, 30%);
-$grey-60                     : tint($base-black, 40%);
-$grey-50                     : tint($base-black, 50%);
-$grey-40                     : tint($base-black, 60%);
-$grey-35                     : tint($base-black, 65%);
-$grey-30                     : tint($base-black, 70%);
-$grey-25                     : tint($base-black, 75%);
-$grey-20                     : tint($base-black, 80%);
-$grey-12                     : tint($base-black, 88%);
-$grey-06                     : tint($base-black, 94%);
-$grey-03                     : tint($base-black, 97%);
-
-// IMPORTANT: Do not use these $root-color variables.
 
 $root-color: (
+  grey-85                    : tint($base-black, 15%),
+  grey-50                    : tint($base-black, 50%),
+  grey-40                    : tint($base-black, 60%),
+  grey-35                    : tint($base-black, 65%),
+  grey-25                    : tint($base-black, 75%),
+  grey-12                    : tint($base-black, 88%),
+  grey-06                    : tint($base-black, 94%),
+  grey-03                    : tint($base-black, 97%),
   brand                      : #0081BA,
   brand-light                : #9ACCE2,
   brand-dark                 : #036,
@@ -42,11 +34,11 @@ $color: (
 
   ui: (
     white                    : $base-white,
-    faint                    : $grey-03,
-    light                    : $grey-06,
-    base                     : $grey-12,
-    medium                   : $grey-40,
-    dark                     : $grey-85,
+    faint                    : map-fetch($root-color, grey-03),
+    light                    : map-fetch($root-color, grey-06),
+    base                     : map-fetch($root-color, grey-12),
+    medium                   : map-fetch($root-color, grey-40),
+    dark                     : map-fetch($root-color, grey-85),
     black                    : $base-black,
     brand                    : map-fetch($root-color, brand),
     brand-light              : map-fetch($root-color, brand-light),
@@ -67,27 +59,27 @@ $color: (
   background: (
     base                     : $base-white,
     white                    : $base-white,
-    faint                    : $grey-03,
-    light                    : $grey-06,
-    muted                    : $grey-35,
-    medium                   : $grey-50,
+    faint                    : map-fetch($root-color, grey-03),
+    light                    : map-fetch($root-color, grey-06),
+    muted                    : map-fetch($root-color, grey-35),
+    medium                   : map-fetch($root-color, grey-50),
     black                    : $base-black,
     brand                    : map-fetch($root-color, brand),
     brand-dark               : map-fetch($root-color, brand-dark),
     brand-light              : #F2F7FC,
-    warning                  : lighten(#F7ECB5, 10%),
-    bad-news                 : lighten(#C1272D, 48%),
-    good-news                : lighten(#90B71C, 45%)
+    warning                  : #FCF8E3,
+    bad-news                 : #F9E3E4,
+    good-news                : #E9F6C3
   ),
 
   text: (
-    base                     : $grey-85,
+    base                     : map-fetch($root-color, grey-85),
     white                    : $base-white,
-    faint                    : $grey-12,
-    light                    : $grey-25,
-    muted                    : $grey-35,
-    medium                   : $grey-50,
-    dark                     : $grey-85,
+    faint                    : map-fetch($root-color, grey-12),
+    light                    : map-fetch($root-color, grey-25),
+    muted                    : map-fetch($root-color, grey-35),
+    medium                   : map-fetch($root-color, grey-50),
+    dark                     : map-fetch($root-color, grey-85),
     brand                    : map-fetch($root-color, brand),
     brand-dark               : map-fetch($root-color, brand-dark),
     warning                  : map-fetch($root-color, warning),
@@ -96,8 +88,6 @@ $color: (
   )
 
 );
-
-
 
 // ## Fonts
 
@@ -170,7 +160,6 @@ $button: (
   type: (
     base: (
       background             : #EEE,
-      color                  : map-fetch($color, text base),
       hover:(
         background           : #DDD
       ),
@@ -180,7 +169,6 @@ $button: (
     ),
     brand: (
       background             : #147CC5,
-      color                  : map-fetch($color, text white),
       hover:(
         background           : #1270B1
       ),
@@ -190,7 +178,6 @@ $button: (
     ),
     highlight: (
       background             : #A1CD1E,
-      color                  : map-fetch($color, text white),
       hover:(
         background           : #91B81C
       ),
@@ -200,7 +187,6 @@ $button: (
     ),
     danger: (
       background             : #AA280D,
-      color                  : map-fetch($color, text white),
       hover:(
         background           : #991E04
       ),
@@ -252,10 +238,6 @@ $transition-duration: (
   slow                       : 0.5s
 );
 
-// ## Form Variables
-
-$input-focus-border-color    : map-fetch($color, ui brand-light);
-
 // ## Accordion
 
 $accordion-link-height       : 26px;
@@ -263,15 +245,12 @@ $accordion-link-height       : 26px;
 // ## Popover
 
 $popover: (
-  background                 : map-fetch($color, ui white),
-  border-color               : map-fetch($color, ui base),
   max-width                  : 250px
 );
 
 // ## Poptip
 
 $pop-tip: (
-  background                 : map-fetch($color, ui dark),
   max-width                  : 250px
 );
 
@@ -298,10 +277,6 @@ $spinner: (
       small                  : 3px,
       tiny                   : 2px
     ),
-    color:(
-      dark                   : map-fetch($color, background brand),
-      light                  : map-fetch($color, background brand-light)
-    )
   ),
   speed                      : 800ms
 );

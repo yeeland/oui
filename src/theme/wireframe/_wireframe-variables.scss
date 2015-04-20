@@ -9,38 +9,47 @@
 $color: map-extend($color,
   (
     ui: (
-      base                     : #668d9e
+      base                     : #668d9e,
+      brand                    : #668d9e
     ),
     link: (
       base                     : #668d9e,
       brand                    : #668d9e,
       brand-light              : #deeaef
     ),
-
     background: (
       brand                    : #668d9e,
       brand-light              : #deeaef
     ),
     text: (
-      base                     : #668d9e
+      base                     : #668d9e,
+      brand                    : #668d9e
     )
   )
 );
 
-
-$popover: map-extend($popover,
+$button: map-extend($button,
   (
-    border-color               : #668d9e
-  )
-);
-
-
-$spinner: map-extend($spinner,
-  (
-    border:(
-      color:(
-        dark                   : map-fetch($color, background brand),
-        light                  : map-fetch($color, background brand-light)
+    type: (
+      base: (
+        background             : #00415d,
+        color                  : map-fetch($color, text white),
+        hover:(
+          background           : #DDD
+        ),
+        active:(
+          background           : #CCC
+        )
+      ),
+      brand: (
+        background             : map-fetch($color, ui base),
+        color                  : map-fetch($color, text white),
+        hover:(
+          background           : #1270B1
+        ),
+        active:(
+          background           : #08568B
+        )
       )
     )
   )
