@@ -299,6 +299,7 @@ $spinner: (
       tiny                   : 2px
     ),
     color:(
+      dark                   : map-fetch($color, background brand),
       light                  : map-fetch($color, background brand-light)
     )
   ),

@@ -6,14 +6,42 @@
 // IMPORTANT Do not use these values directly. Use the more specifically named
 // variables below that use these black and grey values.
 
-
-$root-color: map-extend($root-color,
+$color: map-extend($color,
   (
-    brand                      : blue
+    ui: (
+      base                     : #668d9e
+    ),
+    link: (
+      base                     : #668d9e,
+      brand                    : #668d9e,
+      brand-light              : #deeaef
+    ),
+
+    background: (
+      brand                    : #668d9e,
+      brand-light              : #deeaef
+    ),
+    text: (
+      base                     : #668d9e
+    )
   )
 );
 
 
-.foo {
-  color: map-fetch($root-color, brand);
-}
+$popover: map-extend($popover,
+  (
+    border-color               : #668d9e
+  )
+);
+
+
+$spinner: map-extend($spinner,
+  (
+    border:(
+      color:(
+        dark                   : map-fetch($color, background brand),
+        light                  : map-fetch($color, background brand-light)
+      )
+    )
+  )
+);

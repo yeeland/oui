@@ -69,7 +69,7 @@
     border-style: solid;
     border-right-color: map-fetch($spinner, border color light);
     border-top-color: map-fetch($spinner, border color light);
-    border-left-color: map-fetch($color, ui brand);
+    border-left-color: map-fetch($spinner, border color dark);
     border-bottom-color: map-fetch($spinner, border color light);
   }
 
