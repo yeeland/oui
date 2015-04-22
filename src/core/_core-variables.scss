@@ -39,7 +39,6 @@ $color: (
     base                     : map-fetch($root-color, grey-12),
     medium                   : map-fetch($root-color, grey-40),
     dark                     : map-fetch($root-color, grey-85),
-    black                    : $base-black,
     brand                    : map-fetch($root-color, brand),
     brand-light              : map-fetch($root-color, brand-light),
     brand-dark               : map-fetch($root-color, brand-dark),
@@ -50,7 +49,6 @@ $color: (
 
   link: (
     base                     : map-fetch($root-color, brand),
-    brand                    : map-fetch($root-color, brand),
     brand-light              : map-fetch($root-color, brand-light),
     bad-news                 : map-fetch($root-color, bad-news),
     white                    : $base-white

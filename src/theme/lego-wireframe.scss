@@ -1,29 +1,29 @@
-// // # Lego Wireframe
-// // Root file driving the desktop CSS.
+// # Lego Wireframe
+// Root file driving the desktop CSS.
 
-// // Compass polyfills
-// @import '../core/core-polyfills';
+// Compass polyfills
+@import '../core/core-polyfills';
 
-// // ## Core functions and mixins
-// @import '../core/partials/elements/functions';
-// @import '../core/partials/elements/mixins';
+// ## Core functions and mixins
+@import '../core/partials/elements/functions';
+@import '../core/partials/elements/mixins';
 
-// // ## Core & Wireframe variables
+// ## Core & Wireframe variables
 
-// @import '../core/core-variables';
-// @import 'wireframe/wireframe-variables';
+@import '../core/core-variables';
+@import 'wireframe/wireframe-variables';
 
-// // ## Core & Wireframe partials
+// ## Core & Wireframe partials
 
-// @import '../core/core-partials';
-// @import 'wireframe/wireframe-partials';
+@import '../core/core-partials';
+@import 'wireframe/wireframe-partials';
 
-// // ## Trumps
-// // Trumps use `!important` classes for overrides and should always be loaded last.
+// ## Trumps
+// Trumps use `!important` classes for overrides and should always be loaded last.
 
-// @import '../core/partials/trumps/background';
-// @import '../core/partials/trumps/layout';
-// @import '../core/partials/trumps/margin';
-// @import '../core/partials/trumps/padding';
-// @import '../core/partials/trumps/type';
-// @import '../core/partials/trumps/sizing';
+@import '../core/partials/trumps/background';
+@import '../core/partials/trumps/layout';
+@import '../core/partials/trumps/margin';
+@import '../core/partials/trumps/padding';
+@import '../core/partials/trumps/type';
+@import '../core/partials/trumps/sizing';
