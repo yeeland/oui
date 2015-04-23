@@ -7,8 +7,6 @@
 
 @import 'partials/elements/clearfix';
 @import 'partials/elements/flexbox';
-@import 'partials/elements/grid';
-@import 'partials/elements/layout';
 
 // ## Base
 // Baseline rules.
@@ -24,35 +22,41 @@
 @import 'partials/base/tables';
 @import 'partials/base/text';
 
+// ## Elements
+// Simple, low level blocks.
+
+@import 'partials/components/arrows';
+@import 'partials/components/arrows-inline';
+@import 'partials/components/borders';
+@import 'partials/components/grid';
+@import 'partials/components/island';
+@import 'partials/components/layout';
+@import 'partials/components/matrix';
+@import 'partials/components/media';
+@import 'partials/components/nav';
+@import 'partials/components/rules';
+@import 'partials/components/stats';
+
 // ## Objects
 // Simple styled objects that can be extended or used directly in HTML.
 
 @import 'partials/objects/accordion';
 @import 'partials/objects/attention';
-@import 'partials/objects/arrows';
-@import 'partials/objects/arrows-inline';
 @import 'partials/objects/block-list';
-@import 'partials/objects/borders';
-@import 'partials/objects/buttons';
 @import 'partials/objects/button-group';
 @import 'partials/objects/button-row';
-@import 'partials/objects/dropdown';
-@import 'partials/objects/disclose';
+@import 'partials/objects/buttons';
 @import 'partials/objects/dialog';
+@import 'partials/objects/disclose';
+@import 'partials/objects/dropdown';
 @import 'partials/objects/help';
-@import 'partials/objects/island';
 @import 'partials/objects/icons';
-@import 'partials/objects/matrix';
-@import 'partials/objects/media';
-@import 'partials/objects/nav';
 @import 'partials/objects/pagination';
-@import 'partials/objects/poptip';
 @import 'partials/objects/popover';
+@import 'partials/objects/poptip';
 @import 'partials/objects/progress';
-@import 'partials/objects/rules';
 @import 'partials/objects/search';
 @import 'partials/objects/spinner';
-@import 'partials/objects/stats';
 @import 'partials/objects/steps';
 @import 'partials/objects/tabs';
 @import 'partials/objects/tags';
