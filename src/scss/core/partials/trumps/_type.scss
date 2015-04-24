@@ -185,12 +185,17 @@
 // Use for both text and on icons.
 
 //[hc]
+//     <p href="#" class="color--base">This is base color text</p>
 //     <p href="#" class="color--brand">This is brand color text</p>
 //     <p href="#" class="color--good-news">This is good news text</p>
 //     <p href="#" class="color--warning">This is warning text</p>
 //     <p href="#" class="color--bad-news">This is bad news text</p>
 //[/hc]
 
+%color--base,
+.color--base {
+  color: map-get($font-color, base) !important;
+}
 
 %color--brand,
 .color--brand {
