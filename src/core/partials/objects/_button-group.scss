@@ -47,7 +47,8 @@
 .lego-button-group {
   @include display(flex);
 
-  > * {
+  > .lego-button,
+  > .lego-text-input {
     margin-left: 0;
     margin-right: 1px;
     border-radius: 0;

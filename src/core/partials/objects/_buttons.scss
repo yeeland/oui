@@ -188,7 +188,7 @@
     font-weight: map-fetch($button, size small font-weight);
     border-radius: map-fetch($button, size small border-radius);
     height: map-fetch($button, size small height);
-    padding: 0 7px; // Use spacer.
+    padding: map-fetch($button, size small padding);
   }
 
   &--full {
