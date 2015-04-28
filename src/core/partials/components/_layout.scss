@@ -66,42 +66,6 @@
   }
 }
 
-// ### Array
-// Row of any number of items at equal height and width.
-// Background classees here only to show the items are the same height and width.
-
-// [hc]
-//     <div class="lego-array">
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-//       </div>
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi eum suscipit necessitatibus iure nam architecto.
-//       </div>
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet.
-//       </div>
-//     </div>
-// [/hc]
-
-%lego-array,
-.lego-array {
-  @include display(flex);
-
-  &__item {
-    @include flex(1);
-    margin-left: spacer(1);
-    margin-right: spacer(1);
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
 
 // ### Lego Fence
 // This adds padding or margin to full-width items

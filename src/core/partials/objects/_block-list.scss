@@ -89,6 +89,12 @@
     }
   }
 
+  &--no-border {
+    > li {
+      border-top: none;
+    }
+  }
+
 }
 
 // ### Block List Group
