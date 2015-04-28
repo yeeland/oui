@@ -93,14 +93,13 @@
   border: 0;
   margin: 0;
   line-height: 1;
-
   font-size: map-fetch($button, size base font-size);
   font-weight: map-fetch($button, size base font-weight);
   border-radius: map-fetch($button, size base border-radius);
   height: map-fetch($button, size base height);
   padding: 0 10px; // Use spacer.
 
-
+  // Unique styles for the base button start here.
   background-color: map-fetch($button, type base background);
   color: map-fetch($color, text base);
 

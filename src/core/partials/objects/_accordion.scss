@@ -51,6 +51,7 @@
     @include transition-duration(map-fetch($transition-duration, base));
     @include display(flex);
     @include align-items(center);
+    letter-spacing: map-fetch($font, letter-spacing loose);
     font-size: map-fetch($font, size milli);
     padding: 0 spacer(2);
     background: map-fetch($color, background faint);
