@@ -260,7 +260,13 @@
   // Add/Remove Rows
 
   &--add-row {
+
+    td {
+      padding-bottom: spacer(1);
+    }
+
     &__controls {
+      vertical-align: middle !important;
       width: 75px;
 
       .flex {

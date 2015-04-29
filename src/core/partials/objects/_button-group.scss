@@ -47,11 +47,13 @@
 .lego-button-group {
   @include display(flex);
 
-  > .lego-button,
-  > .lego-text-input {
+  > * {
     margin-left: 0;
-    margin-right: 1px;
     border-radius: 0;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
 
     &:hover,
     &:focus {
@@ -59,11 +61,11 @@
     }
 
     &:first-child {
-      border-radius: map-fetch($border-radius, base) 0 0 map-fetch($border-radius, base);
+      border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
     }
 
     &:last-child {
-      border-radius: 0 map-fetch($border-radius, base) map-fetch($border-radius, base) 0;
+      border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
     }
   }
 
@@ -84,3 +86,4 @@
     z-index: 1;
   }
 }
+
