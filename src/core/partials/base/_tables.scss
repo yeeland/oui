@@ -163,6 +163,10 @@
     }
   }
 
+  tbody > tr:first-child > td {
+    padding-top: 0;
+  }
+
   td {
     vertical-align: top;
   }
