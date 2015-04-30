@@ -125,6 +125,13 @@
     }
   }
 
+  // Grid cells only grow as large as the content.
+  &--natural {
+    > .lego-grid__cell {
+      @include flex(none);
+    }
+  }
+
   @if ($responsive) {
     @include breakpoint($max: $responsive) {
       display: block;
