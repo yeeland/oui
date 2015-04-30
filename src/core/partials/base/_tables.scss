@@ -148,6 +148,10 @@
     }
   }
 
+  tbody > tr:first-child > td {
+    padding-top: 0;
+  }
+
   th {
     text-transform: uppercase;
     font-weight: map-fetch($font, weight bold);
@@ -161,10 +165,6 @@
     &[field] {
       cursor: pointer;
     }
-  }
-
-  tbody > tr:first-child > td {
-    padding-top: 0;
   }
 
   td {
