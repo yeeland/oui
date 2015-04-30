@@ -433,7 +433,6 @@ fieldset {
 .lego-input-list .lego-label {
   display: table-cell;
   padding-left: spacer(1);
-  font-weight: map-fetch($font, weight light);
 }
 
 //  Groups of checkboxes and radios.
