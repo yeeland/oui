@@ -148,10 +148,6 @@
     }
   }
 
-  tbody > tr:first-child > td {
-    padding-top: 0;
-  }
-
   th {
     text-transform: uppercase;
     font-weight: map-fetch($font, weight bold);
@@ -271,10 +267,9 @@
 
     &__controls {
       vertical-align: middle !important;
-      width: 75px;
 
       .flex {
-        width: 100%;
+        width: 50px;
 
         // TODO (kelly): remove link--bad-news once all forms in the product have been converted to use the new button
         .link--bad-news,
