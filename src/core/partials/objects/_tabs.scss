@@ -109,7 +109,7 @@
     border-right: 0;
     border-bottom: 0;
     color: map-fetch($color, text medium);
-    font-weight: map-fetch($font, weight regular);
+    font-weight: 400;
     background-color: map-fetch($color, background faint);
     cursor: pointer;
 

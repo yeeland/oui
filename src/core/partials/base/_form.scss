@@ -395,21 +395,21 @@ fieldset {
 .lego-label {
   display: block;
   margin-bottom: spacer(0.5);
-  font-weight: map-fetch($font, weight semi);
+  font-weight: 500;
 
   &--optional::after {
     content: '(Optional)';
     margin-left: spacer(0.5);
     color: map-fetch($color, text muted);
     font-size: map-fetch($font, size micro);
-    font-weight: map-fetch($font, weight regular);
+    font-weight: 400;
   }
 
   &--required::after {
     content: '*';
     margin-left: spacer(0.5);
     color: map-fetch($color, text bad-news);
-    font-weight: map-fetch($font, weight regular);
+    font-weight: 400;
     font-size: map-fetch($font, size delta);
     line-height: 1;
     position: relative;
