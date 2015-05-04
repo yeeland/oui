@@ -58,7 +58,7 @@
     line-height: 1;
     height: $accordion-link-height;
     box-shadow: inset 0 1px 0 map-fetch($color, ui base);
-    font-weight: map-fetch($font, weight bold);
+    font-weight: map-fetch($font, weight semi);
     text-transform: uppercase;
 
     &:hover {

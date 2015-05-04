@@ -130,7 +130,7 @@
   }
 
   &__title {
-    font-weight: map-fetch($font, weight bold);
+    font-weight: map-fetch($font, weight semi);
   }
 
   // Arrow options. 12 possible positions.

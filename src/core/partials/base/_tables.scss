@@ -150,7 +150,7 @@
 
   th {
     text-transform: uppercase;
-    font-weight: map-fetch($font, weight bold);
+    font-weight: map-fetch($font, weight semi);
     font-size: map-fetch($font, size micro);
     color: map-fetch($color, text muted);
     letter-spacing: 1px;

@@ -1,6 +1,11 @@
 // # Lego Desktop
 // Root file driving the desktop CSS.
 
+$hosted-fonts:(
+  weights: 300 400 500,
+  italics: true
+);
+
 // Compass polyfills
 @import 'core/core-polyfills';
 
