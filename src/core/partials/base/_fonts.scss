@@ -1,0 +1,49 @@
+// # Fonts
+// Pulls in fonts from self hosting.
+
+// Usage
+// In the theme's variables file:
+
+// $hosted-fonts:(
+//   weights: 300 400 500,
+//   italics: true
+// );
+
+// Font Support
+// - woff2: Chrome 26+, Opera 23+
+// - woff: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+
+
+$hosted-fonts-available-weights:(
+  200: thin,
+  300: light,
+  400: reg,
+  500: medium,
+  600: sbold,
+  700: bold,
+  800: xbold,
+  900: black
+);
+
+$hosted-fonts-url: '//dhm5hy2vn8l0l.cloudfront.net/proxima/';
+
+@each $weight in map-get($hosted-fonts, weights) {
+
+  @font-face {
+    font-family: 'Proxima';
+    font-weight: $weight;
+    src: url($hosted-fonts-url + 'proximanova-#{map-get($hosted-fonts-available-weights, $weight)}.woff2') format('woff2'),
+         url($hosted-fonts-url + 'proximanova-#{map-get($hosted-fonts-available-weights, $weight)}.woff') format('woff');
+  }
+
+  // If italic versions should be included.
+  @if (map-get($hosted-fonts, italics) == true ) {
+    @font-face {
+      font-family: 'Proxima';
+      font-weight: $weight;
+      font-style: italic;
+      src: url($hosted-fonts-url + 'proximanova-#{map-get($hosted-fonts-available-weights, $weight)}it.woff2') format('woff2'),
+           url($hosted-fonts-url + 'proximanova-#{map-get($hosted-fonts-available-weights, $weight)}it.woff') format('woff');
+    }
+  }
+}
