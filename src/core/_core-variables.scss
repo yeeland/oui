@@ -116,7 +116,7 @@ $font: (
   ),
 
   family: (
-    base                     : 'Proxima, Helvetica, Verdana, sans-serif',
+    base                     : unquote('Proxima, Helvetica, Verdana, sans-serif'),
     monospace                : monospace
   ),
 
