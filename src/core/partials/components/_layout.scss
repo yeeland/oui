@@ -55,6 +55,10 @@
     @include flex(1);
   }
 
+  &--flex-none {
+    @include flex(none);
+  }
+
   &--scroll-y {
     overflow-y: auto;
   }
