@@ -51,6 +51,7 @@
     @include transition-duration(map-get($transition-duration, base));
     @include display(flex);
     @include align-items(center);
+    @include flex(none);
     font-size: map-get($font-size, milli);
     padding: 0 spacer(2);
     background: map-get($background-color, faint);
