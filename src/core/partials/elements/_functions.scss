@@ -54,7 +54,7 @@
     $current: nth($maps, $i);
     @each $key, $value in $current {
       @if type-of($value) == 'map' and type-of(map-get($map, $key)) == 'map' {
-        $value: map-extend(map-get($map, $key), $value, true);
+        $value: map-extend(map-get($map, $key), $value);
       }
       $map: map-merge($map, ($key: $value));
     }
