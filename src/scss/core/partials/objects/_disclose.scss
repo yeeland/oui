@@ -33,6 +33,7 @@
     @include transition(transform map-get($transition-duration, base));
     width: spacer(1);
     display: inline-block;
+    pointer-events: none;
 
     &::before {
       line-height: 1;
