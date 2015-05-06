@@ -81,6 +81,10 @@
   @include flex(1);
 }
 
+.flex-none {
+  @include flex(none);
+}
+
 .flex-wrap--wrap {
   @include flex-wrap(wrap);
 }
