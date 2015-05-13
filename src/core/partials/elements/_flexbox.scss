@@ -39,6 +39,12 @@
   flex-wrap: $value;
 }
 
+@mixin flex-grow($value) {
+  -webkit-flex-grow: $value;
+  -ms-flex-grow: $value; // Doesn't work in IE 10.
+  flex-grow: $value;
+}
+
 @mixin flex-direction($value) {
   -webkit-flex-direction: $value;
   -ms-flex-direction: $value;
