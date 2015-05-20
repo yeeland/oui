@@ -198,11 +198,6 @@
 
 %color--base,
 .color--base {
-  color: map-get($font-color, base) !important;
-}
-
-%color--base,
-.color--base {
   color: map-fetch($color, text base) !important;
 }
 
