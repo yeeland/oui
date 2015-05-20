@@ -8,6 +8,8 @@ linters:
     enabled: true
   ColorKeyword: # Use color in hex rather than name.
     enabled: false
+  ColorVariable: # Color literals (keywords or hexadecimal codes) to be used only in variable declarations.
+    enabled: false
   DeclarationOrder: # Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order.
     enabled: true
   DuplicateProperty: # Catches duplicate properities.
@@ -25,26 +27,29 @@ linters:
     enabled: true
   HexValidation: # Ensure hexadecimal colors are valid (either three or six digits).
     enabled: true
+  ImportantRule: # Avoid using !important in properties.
+    enabled: false
   ImportPath: #The basenames of @imported SCSS partials should not begin with an underscore and should not include the filename extension.
     enabled: true
   Indentation: # Line should be indented 2 spaces, but was indented 4 spaces.
-    enabled: true
+    enabled: false
   LeadingZero: # `.18` should be written with a leading zero as `0.18`.
     style: include_zero
     enabled: true
   MergeableSelector: # Reports when you define the same selector twice in a single sheet.
     enabled: true
   NameFormat: # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
-    convention: BEM
-    enabled: true
+    enabled: false
   NestingDepth: # Avoid nesting selectors too deeply.
     max_depth: 4
-    enabled: true
+    enabled: false
   PlaceholderInExtend: # Always use placeholder selectors in @extend.
     enabled: true
   PropertySpelling: # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
     enabled: true
   PropertySortOrder: # Properties should be sorted in order, with vendor-prefixed extensions before the standardized CSS property.
+    enabled: false
+  QualifyingElement: # Avoid qualifying elements in selectors.
     enabled: false
   SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4.
     enabled: false
@@ -79,5 +84,7 @@ linters:
     enabled: true
   UrlQuotes: # URLs should always be enclosed within quotes.
     enabled: true
+  VendorPrefix: # Avoid vendor prefixes. That is, don't write them yourself.
+    enabled: false
   ZeroUnit: # `0px` should be written without units as `0`.
     enabled: true

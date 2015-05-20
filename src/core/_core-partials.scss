@@ -1,0 +1,64 @@
+// # Core Partials
+// This represents the bulk of the paritals used by all sites: desktop, mobile, tablet.
+// They are the building blocks of all patterns and are width and layout independent.
+
+// ## Elements
+// Abstractions that provide basic structure, generally extended into larger objects.
+
+@import 'partials/elements/clearfix';
+@import 'partials/elements/flexbox';
+
+// ## Base
+// Baseline rules.
+
+@import 'partials/base/reset';
+@import 'partials/base/main';
+
+@import 'partials/base/code';
+@import 'partials/base/form';
+@import 'partials/base/fonts';
+@import 'partials/base/images';
+@import 'partials/base/links';
+@import 'partials/base/lists';
+@import 'partials/base/tables';
+@import 'partials/base/text';
+
+// ## Elements
+// Simple, low level blocks.
+
+@import 'partials/components/arrows';
+@import 'partials/components/arrows-inline';
+@import 'partials/components/borders';
+@import 'partials/components/grid';
+@import 'partials/components/island';
+@import 'partials/components/layout';
+@import 'partials/components/matrix';
+@import 'partials/components/media';
+@import 'partials/components/nav';
+@import 'partials/components/rules';
+@import 'partials/components/stats';
+
+// ## Objects
+// Simple styled objects that can be extended or used directly in HTML.
+
+@import 'partials/objects/accordion';
+@import 'partials/objects/array';
+@import 'partials/objects/attention';
+@import 'partials/objects/block-list';
+@import 'partials/objects/buttons';
+@import 'partials/objects/button-group';
+@import 'partials/objects/button-row';
+@import 'partials/objects/dialog';
+@import 'partials/objects/disclose';
+@import 'partials/objects/dropdown';
+@import 'partials/objects/help';
+@import 'partials/objects/icons';
+@import 'partials/objects/pagination';
+@import 'partials/objects/popover';
+@import 'partials/objects/poptip';
+@import 'partials/objects/progress';
+@import 'partials/objects/search';
+@import 'partials/objects/spinner';
+@import 'partials/objects/steps';
+@import 'partials/objects/tabs';
+@import 'partials/objects/tags';
