@@ -92,17 +92,3 @@ a,
     cursor: default;
   }
 }
-
-
-// Targets anchors without an `href` attribute and not a lego-button.
-
-a:not([href]):not(.lego-button) {
-  color: map-fetch($color, link base);
-
-  &:visited,
-  &:hover,
-  &:active {
-    color: map-fetch($color, link base);
-    cursor: default;
-  }
-}
