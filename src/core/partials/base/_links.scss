@@ -43,6 +43,7 @@ a,
   }
 }
 
+// Use sparingly, such as an icon inside a link that needs a hover state (see multipage experience editor tabs for one example)
 %link--muted,
 .link--muted {
   color: map-fetch($color, text muted);
