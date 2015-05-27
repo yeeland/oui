@@ -221,7 +221,7 @@
   &--disabled:focus {
     cursor: base;
     box-shadow: none;
-    background: #F8F8F8;
+    background-color: #F8F8F8;
     color: map-fetch($color, text medium);
     border-color: map-fetch($color, ui base);
     opacity: map-fetch($opacity, medium);
