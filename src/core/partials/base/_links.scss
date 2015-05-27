@@ -43,6 +43,21 @@ a,
   }
 }
 
+%link--muted,
+.link--muted {
+  color: map-fetch($color, text muted);
+  cursor: pointer;
+
+  &:visited,
+  &:active {
+    color: map-fetch($color, text muted);
+  }
+
+  &:hover {
+    color: map-fetch($color, link base);
+  }
+}
+
 %link--bad-news,
 .link--bad-news {
   color: map-fetch($color, text base);
