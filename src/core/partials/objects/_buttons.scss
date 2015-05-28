@@ -219,7 +219,7 @@
   &--disabled:hover,
   &--disabled:active,
   &--disabled:focus {
-    cursor: base;
+    cursor: default;
     box-shadow: none;
     background-color: #F8F8F8;
     color: map-fetch($color, text medium);
