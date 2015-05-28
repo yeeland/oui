@@ -36,6 +36,7 @@
 
   &__dot {
     @include transform(translateX(-50%));
+    @include transition(all map-fetch($transition-duration, base));
     position: absolute;
     width: 16px;
     height: 16px;
