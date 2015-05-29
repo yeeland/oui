@@ -2,9 +2,10 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="16px" height="16px" viewBox="-590 386 16 16" enable-background="new -590 386 16 16" xml:space="preserve">
+	 width="32px" height="32px" viewBox="-595 381 32 32" enable-background="new -595 381 32 32" xml:space="preserve">
+<g id="grid">
+</g>
 <g id="add">
-	<polygon points="-575,395 -575,393 -581,393 -581,387 -583,387 -583,393 -589,393 -589,395 -583,395 -583,401 -581,401 -581,395 	
-		"/>
+	<polyline points="-564.2,389 -568.5,384.7 -583.7,399.9 -589.8,393.8 -594,398.1 -583.7,408.4 -583.7,408.4 	"/>
 </g>
 </svg>
