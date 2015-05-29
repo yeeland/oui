@@ -2,6 +2,7 @@ var compass     = require('gulp-compass'),
     gulp        = require('gulp'),
     gutil       = require('gulp-util'),
     notify      = require('gulp-notify'),
+    rjs         = require('gulp-requirejs'),
     svgSymbols  = require('gulp-svg-symbols'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
@@ -67,6 +68,31 @@ gulp.task('compass', function() {
       sass: paths.sass
     }))
     .on('error', reportError);
+});
+
+gulp.task('js', function() {
+  rjs({
+    baseUrl: 'src/js',
+    mainConfigFile: 'src/js/common.js',
+    findNestedDependencies: true,
+
+    out: 'lego.min.js',
+    optimize: 'none',
+
+    include: ['main.js'],
+    insertRequire: ['main.js'],
+    name: 'lib/almond',
+    wrap: true
+  })
+  .on('error', gutil.log)
+  .on('error', gutil.beep)
+  // .pipe(uglify({
+  //   compress: {
+  //     drop_debugger: true,
+  //     drop_console : true
+  //   }
+  // }))
+  .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('watch', function() {
