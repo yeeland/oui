@@ -1,8 +1,9 @@
-// # Links
+// ---
+// title: Links
+// description: Colors for links.
+// ---
 
-// Links will use the `map-fetch($color, link base)`. You can also apply a `.link` class to an element.
-
-// ## HTML Examples
+// ### HTML Examples
 
 // <div class="example html">
 //     Text can have <span class="link">link color</span> when not a HTML anchor.
@@ -11,6 +12,8 @@
 // <div class="example html">
 //     Links can be <a href="#" class="link--disabled">disabled</a> if need be.
 // </div>
+
+// [---]
 
 a,
 %link,
@@ -43,7 +46,9 @@ a,
   }
 }
 
-// Use sparingly, such as an icon inside a link that needs a hover state (see multipage experience editor tabs for one example)
+// Use sparingly, such as an icon inside a link that needs a hover state
+// (see multipage experience editor tabs for one example)
+
 %link--muted,
 .link--muted {
   color: map-fetch($color, text muted);

@@ -1,4 +1,44 @@
-// # Images
+// ---
+// title: Images
+// description: Defaults and options for images.
+// ---
+
+// ### Non Fluid
+// Non-fluid images if you specify `width` and/or `height` attributes.
+
+//
+//     <img src="image.png" width="20" height="20">
+//
+
+// ### Rounded images
+// Extend or add class to html.
+
+// <div class="example html">
+//     <img src="http://fillmurray.com/100/100" class="img--round">
+// </div>
+
+// ### Circle images
+// Extend or add class to html.
+
+// <div class="example html">
+//     <img src="http://fillmurray.com/100/100" class="img--circle">
+// </div>
+
+// ### Border images
+// Extend or add class to html.
+
+// <div class="example html">
+//     <img src="http://fillmurray.com/100/100" class="img--border">
+// </div>
+
+// ### Image placement
+// Floats images, don't use on Flexbox children.
+
+//
+//     <img src="image.png" class="img--right">
+//
+
+// [---]
 
 img {
   display: block;
@@ -16,10 +56,6 @@ a img {
 // ## Non Fluid
 // Non-fluid images if you specify `width` and/or `height` attributes.
 
-//[c]
-//     <img src="image.png" width="20" height="20">
-//[/c]
-
 img[width],
 img[height] {
   max-width: none;
@@ -27,10 +63,6 @@ img[height] {
 
 // ## Rounded images
 // Extend or add class to html.
-
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--round">
-// </div>
 
 %img--round,
 .img--round {
@@ -40,9 +72,6 @@ img[height] {
 // ## Circle images
 // Extend or add class to html.
 
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--circle">
-// </div>
 
 %img--circle,
 .img--circle {
@@ -52,9 +81,6 @@ img[height] {
 // ## Border images
 // Extend or add class to html.
 
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--border">
-// </div>
 
 %img--border,
 .img--border {
@@ -64,9 +90,6 @@ img[height] {
 // ## Image placement
 // Floats images, don't use on Flexbox children.
 
-//[c]
-//     <img src="image.png" class="img--right">
-//[/c]
 
 %img--right,
 .img--right {

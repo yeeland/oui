@@ -1,15 +1,32 @@
-// # Text
-// Special type design treatments.
+// ---
+// title: Text
+// description: Special type design treatments.
+// ---
 
-// ## Editiable
+// ### Editiable
 // Text that can be edited, like project titles.
 
 // <div class="example html">
 //
 //     <!-- Can be applied to any element -->
-//     <p v-editable-text>This Text is Editable</p>
+//     <div v-editable-text>This text will be editable</div>
 //
 // </div>
+
+// ### Monospace
+// <div class="example html">
+//     <div class="monospace">This text is monospace.</div>
+// </div>
+
+// ### Pseudo Content
+
+// Content that is applied as a pseudo-element and defined as an attribute on an empty element. This is useful for preventing an element's text from being copied to the clipboard.
+
+// <div class="example html">
+//     <span data-lego-pseudo-content="+"></span> Some text
+// </div>
+
+// [---]
 
 .editable {
 
@@ -31,13 +48,7 @@
   font-family: map-fetch($font, family monospace);
 }
 
-// ## Pseudo Content
-
-// Content that is applied as a pseudo-element and defined as an attribute on an empty element. This is useful for preventing an element's text from being copied to the clipboard.
-
-// <div class="example html">
-//     <span data-lego-pseudo-content="+"></span> Some text
-// </div>
+// Pseudo Content
 
 [data-lego-pseudo-content]::before {
   content: attr(data-lego-pseudo-content);

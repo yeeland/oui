@@ -5,15 +5,18 @@
 //
 // ### Usage
 
-// $include-fonts:(
-//   weights: 300 400 500,
-//   italics: true
-// );
+// Add this into your product's variables file. It will include the weights you specify
+// along with the italic version of the font if desired.
+
+//     $include-fonts:(
+//       weights: 300 400 500,
+//       italics: true
+//     );
 
 // ### Font Support
 //
-// - woff2: Chrome 26+, Opera 23+
-// - woff: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+// - *woff2*: Chrome 26+, Opera 23+
+// - *woff*: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
 
 // [---]
 
