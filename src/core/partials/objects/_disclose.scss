@@ -37,6 +37,8 @@
     @include transition(transform map-fetch($transition-duration, base));
     width: spacer(1);
     display: inline-block;
+    // This makes clicking the arrow icon still open the disclose object.
+    pointer-events: none;
 
     &::before {
       line-height: 1;
