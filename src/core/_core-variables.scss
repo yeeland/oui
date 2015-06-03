@@ -1,3 +1,44 @@
+// ---
+// title: Core Variables
+// description: Defaults for all objects
+// ---
+
+// [Core Variables on Github](https://github.com/optimizely/lego/blob/master/src/core/_core-variables.scss)
+
+// Most variables are nested inside an object that be any number of layers deep.
+// To grab a variable, in this case the base color for links, use `map-fetch`:
+
+//     map-fetch($color, ui link base);
+
+// To create a new variable object use:
+
+//     $layout: (
+//       width:(
+//         root-nav                  : 56px,
+//         side-stage-nav            : 300px
+//       ),
+//       reading:(
+//         max-width                 : 700px,
+//         min-width                 : 550px
+//       )
+//     );
+
+// To add to, or override, an existing variable object use `map-extend`.
+
+//     $font: map-extend($font,
+//       (
+//         size: (
+//           base                    : 14px,
+//           milli                   : 13px,
+//           micro                   : 11px,
+//           alpha                   : 32px
+//         )
+//       )
+//     );
+
+// [---]
+
+
 // # Core Variables
 // Variables for all elements and objects in core should be listed here.
 
