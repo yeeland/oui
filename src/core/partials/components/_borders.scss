@@ -1,7 +1,9 @@
-// # Borders
-// This adds a border and additional spacing directly to an element.
+// ---
+// title: Borders
+// description: This adds a border and additional spacing directly to an element
+// ---
 
-// ## Examples
+// ### Examples
 
 // <div class="example html">
 //      <div class="border--top">Border on top</div>
@@ -18,8 +20,10 @@
 // <div class="example html">
 //      <div class="border--left">Border on left</div>
 // </div>
+//
+// [---]
 
-// ### Border All
+// Border All
 // With default padding.
 
 %border--all,
@@ -27,7 +31,7 @@
   border: 1px solid map-fetch($color, ui base);
 }
 
-// ### Border Top/Bottom
+// Border Top/Bottom
 // These add padding on top and bottom.
 
 %border--top,
@@ -46,8 +50,7 @@
   @extend %border--bottom;
 }
 
-
-// ### Border Left/Right
+// Border Left/Right
 // These don't add margin so they remain flush with right/left side.
 
 %border--left,

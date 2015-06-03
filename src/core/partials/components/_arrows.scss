@@ -1,20 +1,22 @@
-// # Arrows
-
-// If you only need an inline arrow for dropdown menus or similar uses, see
+// ---
+// title: Arrows
+// description: If you only need an inline arrow for dropdown menus or similar uses, see
 // "Arrow Inline" below for ready-made classes.
+// ---
 
 // It is a common design treatment to give an element a triangular points-out
 // arrow, we typically build these with CSS. These following classes allow us to
 // generate these arbitrarily with a mixin, `@arrow()`.
-
-//[c]
+//
 //     .foo {
 //         @include arrow(top, right, red);
 //         width: 100px;
 //         height: 100px;
 //         background: red;
 //     }
-//[/c]
+//
+// [---]
+
 
 $arrow-size: 6px !default;
 $arrow-border: 1 !default;

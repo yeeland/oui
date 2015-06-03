@@ -261,6 +261,10 @@
 
   &--add-row {
 
+    tbody > tr:first-child > td {
+      padding-top: 0;
+    }
+
     td {
       padding-bottom: spacer(1);
     }
