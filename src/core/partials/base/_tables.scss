@@ -261,6 +261,11 @@
 
   &--add-row {
 
+    // Removes top padding of first row so spacing is consistent with other form elements.
+    tbody > tr:first-child > td {
+      padding-top: 0;
+    }
+
     td {
       padding-bottom: spacer(1);
     }
