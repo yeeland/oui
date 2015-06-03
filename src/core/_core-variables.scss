@@ -8,7 +8,9 @@
 // Most variables are nested inside an object that be any number of layers deep.
 // To grab a variable, in this case the base color for links, use `map-fetch`:
 
-//     map-fetch($color, ui link base);
+//     .foo {
+//       color: map-fetch($color, ui link base);
+//     }
 
 // To create a new variable object use:
 
@@ -152,7 +154,7 @@ $font: (
 
   line-height: (
     base                     : 1.6,
-    tight                    : 1.2,
+    tight                    : 1.3,
     loose                    : 1.8
   ),
 
