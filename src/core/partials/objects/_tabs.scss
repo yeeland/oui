@@ -129,6 +129,7 @@
 
     &.tab-active {
       background-color: map-fetch($color, background white);
+      cursor: default;
 
       &::after { // Creates the white bar under the active tab.
         content: '';
