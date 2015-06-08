@@ -177,6 +177,11 @@
       background: map-fetch($color, background brand);
       bottom: -1px;
     }
+
+    &.tab-disabled {
+      @extend %link--disabled;
+      cursor: default;
+    }
   }
 }
 
