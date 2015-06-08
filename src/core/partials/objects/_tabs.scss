@@ -181,10 +181,6 @@
     &.tab-disabled {
       @extend %link--disabled;
       cursor: default;
-
-      &.tab-active::after { // Hides the blue bar under the active tab.
-        background: map-fetch($color, background white);
-      }
     }
   }
 }
