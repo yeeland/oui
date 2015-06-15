@@ -12,7 +12,10 @@
 //     <fieldset>
 //       <ol class="lego-form-fields">
 //         <li class="lego-form-field__item">
-//           <label class="lego-label lego-label--optional">Single Input</label>
+//           <label class="lego-label">
+//             Single Input
+//             <span class="lego-label__optional">(Optional)</span>
+//           </label>
 //           <input type="text" class="lego-text-input">
 //           <div class="lego-form-note">This is a form note.</div>
 //         </li>
@@ -397,8 +400,7 @@ fieldset {
   margin-bottom: spacer(0.5);
   font-weight: 500;
 
-  &--optional::after {
-    content: '(Optional)';
+  &__optional {
     margin-left: spacer(0.5);
     color: map-fetch($color, text muted);
     font-size: map-fetch($font, size micro);
