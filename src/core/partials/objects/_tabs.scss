@@ -114,11 +114,11 @@
     cursor: pointer;
 
     &:first-child {
-      border-radius: map-fetch($border-radius, big) 0 0;
+      border-top-left-radius: map-fetch($border-radius, big);
     }
 
     &:last-child {
-      border-radius: 0 map-fetch($border-radius, big) 0 0;
+      border-top-right-radius: map-fetch($border-radius, big);
       border-right: 1px solid map-fetch($color, ui base);
     }
 
