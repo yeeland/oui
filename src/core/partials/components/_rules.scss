@@ -1,21 +1,19 @@
-// ---
-// title: Rules
-// description: Adds styling to an 'hr'. Use this between blocks of text or other elements to provide separation.
-// ---
 
-// <div class="example html">
+// # Rules
+// Adds styling to an 'hr'. Use this between blocks of text or other elements to provide separation.
+
+
+// [hc]
 //   <hr class="lego-rule">
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <hr class="lego-rule lego-rule--dotted">
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <hr class="lego-rule lego-rule--dashed">
-// </div>
-
-// [---]
+// [/hc]
 
 %lego-rule,
 .lego-rule {

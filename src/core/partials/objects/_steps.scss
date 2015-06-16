@@ -1,10 +1,10 @@
-// ---
-// title: Steps
-// description: A type of progress bar showing steps through a flow. Use with a width helper class if needed so that it fits cleanly.
-// ---
+
+// # Steps
+// A type of progress bar showing steps through a flow. Use with a width helper class if needed so that it fits cleanly.
 
 
-// <div class="example html">
+
+// [hc]
 //   <ul class="lego-steps width-9-10">
 //     <li class="lego-steps__item lego-steps__item--complete">
 //       <div class="lego-steps__dot"></div>
@@ -23,9 +23,8 @@
 //       <div class="lego-steps__label">Step Four Label</div>
 //     </li>
 //   </ul>
-// </div>
+// [/hc]
 
-// [---]
 
 %lego-steps,
 .lego-steps {

@@ -1,47 +1,47 @@
-// ---
-// title: Button Group
-// description: For buttons that are flush against each other. Also possible to include an text input.
-// ---
+
+// # Button Group
+// For buttons that are flush against each other. Also possible to include an text input.
+
 
 // ### Button Group
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-button-group">
 //     <button class="lego-button">Button</button>
 //     <button class="lego-button">Button</button>
 //     <button class="lego-button">Button</button>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Button Group with Active
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-button-group">
 //     <button class="lego-button">Button</button>
 //     <button class="lego-button lego-button--brand">Button</button>
 //     <button class="lego-button">Button</button>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Button Group with Text Input
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-button-group">
 //     <button class="lego-button">Select <span class="lego-arrow-inline--down"></span></button>
 //     <input type="text" class="lego-text-input">
 //   </div>
-// </div>
+// [/hc]
 
 // ### Button Group with Text Input
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-button-group">
 //     <input type="text" class="lego-text-input">
 //     <button class="lego-button">Button</button>
 //   </div>
-// </div>
+// [/hc]
 
-// [---]
+//
 
 %lego-button-group,
 .lego-button-group {

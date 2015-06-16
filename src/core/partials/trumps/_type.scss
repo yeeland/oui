@@ -2,9 +2,9 @@
 
 // ## Font Weights
 
-// <div class="example html">
+// [hc]
 //     <div class="weight--light">This is light text.</div>
-// </div>
+// [/hc]
 
 .weight--light {
   font-weight: 300 !important;
@@ -21,9 +21,9 @@
 
 // ## Font Style
 
-// <div class="example html">
+// [hc]
 //     <div class="style--italic">This is italic text.</div>
-// </div>
+// [/hc]
 
 .style--italic {
   font-style: italic !important;
@@ -38,9 +38,9 @@
 // Add a help cursor to any element that gives the user extra information on
 // `:hover`.
 
-// <div class="example html">
+// [hc]
 //     <div class="informative">Hover over me for a help cursor.</div>
-// </div>
+// [/hc]
 
 .informative {
   cursor: help !important;
@@ -49,9 +49,9 @@
 // ## Underline
 // Adds text-decoration: underline to text.
 
-// <div class="example html">
+// [hc]
 //     <div>You can <span class="underline">underline</span> words.</div>
-// </div>
+// [/hc]
 
 .underline {
   text-decoration: underline !important;
@@ -59,9 +59,9 @@
 
 // Adds text-decoration: line-through;.
 
-// <div class="example html">
+// [hc]
 //     <div>You can <span class="strike">strike</span> words.</div>
-// </div>
+// [/hc]
 
 .strike {
   text-decoration: line-through !important;
@@ -70,9 +70,9 @@
 // ## Font Colors
 // Mute text or reverse for dark backgrounds.
 
-// <div class="example html">
+// [hc]
 //     <div class="muted">This is a muted color. Can be applied to anything.</div>
-// </div>
+// [/hc]
 
 .reverse {
   color: map-fetch($color, text white) !important;
@@ -89,9 +89,9 @@
 // ## Proceed (Align Right)
 // Align items to the right where they imply progression/movement forward, e.g.:
 
-// <div class="example html">
+// [hc]
 //     <div class="proceed"><a href="#">Read more...</a></div>
-// </div>
+// [/hc]
 
 .proceed {
   text-align: right !important;
@@ -100,9 +100,9 @@
 // ## Ellipsis
 // Truncates item to a single line, adding ellipsis at the end.
 
-// <div class="example html">
+// [hc]
 //     <div class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam vero.</div>
-// </div>
+// [/hc]
 
 %truncate,
 .truncate {
@@ -114,9 +114,9 @@
 // ## Right-Angle Quote
 // Add a right-angled quote to links that imply movement, e.g.:
 
-// <div class="example html">
+// [hc]
 //     <a href=# class="go">Read more</a>
-// </div>
+// [/hc]
 
 .go::after {
   content: '\00A0' '\00BB' !important;
@@ -125,9 +125,9 @@
 // ## Uppercase
 // Apply capital case to an element.
 
-// <div class="example html">
+// [hc]
 //     <a href=# class="caps">Read more</a>
-// </div>
+// [/hc]
 
 .caps {
   text-transform: uppercase !important;
@@ -136,9 +136,9 @@
 // ## Break Word & No Wrap
 // Break or don't break long strings.
 
-// <div class="example html">
+// [hc]
 //     <a href=# class="force-break">alongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoeson</a>
-// </div>
+// [/hc]
 
 .force-break {
   word-wrap: break-word !important;
@@ -151,9 +151,9 @@
 // ## Text
 // Adjust block and inline.
 
-// <div class="example html">
+// [hc]
 //     <a href="#" class="text--block">block link</a>
-// </div>
+// [/hc]
 
 .text--block {
   display: block !important;
@@ -188,13 +188,13 @@
 // ## Text Color
 // Use for both text and on icons.
 
-// <div class="example html">
+// [hc]
 //     <p href="#" class="color--base">This is base color text</p>
 //     <p href="#" class="color--brand">This is brand color text</p>
 //     <p href="#" class="color--good-news">This is good news text</p>
 //     <p href="#" class="color--warning">This is warning text</p>
 //     <p href="#" class="color--bad-news">This is bad news text</p>
-// </div>
+// [/hc]
 
 %color--base,
 .color--base {

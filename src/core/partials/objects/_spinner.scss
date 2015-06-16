@@ -1,9 +1,9 @@
-// ---
-// title: Spinner
-// description: Loading spinner. Target '.lego-spinner-wrap' to position as needed.
-// ---
 
-// <div class="example html">
+// # Spinner
+// Loading spinner. Target '.lego-spinner-wrap' to position as needed.
+
+
+// [hc]
 //   <div class="lego-spinner-wrap">
 //     <div class="lego-spinner"></div>
 //   </div>
@@ -13,7 +13,7 @@
 //   <div class="lego-spinner-wrap">
 //     <div class="lego-spinner lego-spinner--tiny"></div>
 //   </div>
-// </div>
+// [/hc]
 
 // ### With Overlay
 // This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
@@ -25,7 +25,7 @@
 //       </div>
 //     </div>
 
-// [---]
+//
 
 .lego-overlay {
   @include display(flex);

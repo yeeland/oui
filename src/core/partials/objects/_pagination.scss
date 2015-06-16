@@ -1,9 +1,9 @@
-// ---
-// title: Pagination
-// description: This is a variatoin of the nav object.
-// ---
 
-// <div class="example html">
+// # Pagination
+// This is a variatoin of the nav object.
+
+
+// [hc]
 //   <ol class="lego-nav lego-pagination">
 //     <li class="lego-pagination__first"><a href="#">First</a></li>
 //     <li class="lego-pagination__prev"><a href="#">Previous</a></li>
@@ -15,9 +15,7 @@
 //     <li class="lego-pagination__next"><a href="/page/next">Next</a></li>
 //     <li class="lego-pagination__last"><a href="/page/last">Last</a></li>
 //   </ol>
-// </div>
-
-// [---]
+// [/hc]
 
 .lego-pagination {
   @include justify-content(center);

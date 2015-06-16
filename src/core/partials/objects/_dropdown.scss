@@ -1,7 +1,7 @@
-// ---
-// title: Dropdown
-// description: A list of links that drops down from a trigger.
-// ---
+
+// # Dropdown
+// A list of links that drops down from a trigger.
+
 
 // Dropdowns are used by default for navigation elements, interactive,
 // functional lists that show up below the trigger. This can include
@@ -10,7 +10,7 @@
 // In rare cases popovers may be used.
 
 // ### Dropdown Default
-// <div class="example html">
+// [hc]
 //   <div class="lego-dropdown-group" v-dropdown>
 //     <button class="lego-button" data-toggle-dropdown>
 //       Dropdown <span class="lego-arrow-inline--down"></span>
@@ -25,12 +25,12 @@
 //       </li>
 //     </ul>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Dropdown Right
 // Ignore the outer `div` in this example. It's used only to move the button to the right.
 
-// <div class="example html">
+// [hc]
 //   <div style="text-align:right">
 //     <div class="lego-dropdown-group" v-dropdown>
 //       <button class="lego-button" data-toggle-dropdown>
@@ -47,11 +47,11 @@
 //       </ul>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Dropdown with non-links
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-dropdown-group" v-dropdown>
 //     <button class="lego-button" data-toggle-dropdown>
 //       Dropdown <span class="lego-arrow-inline--down"></span>
@@ -66,11 +66,11 @@
 //       </li>
 //     </ul>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Dropdown with Filter
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-dropdown-group" v-dropdown>
 //     <button class="lego-button" data-toggle-dropdown>
 //       Dropdown <span class="lego-arrow-inline--down"></span>
@@ -86,11 +86,11 @@
 //       </li>
 //     </ul>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Dropdown inside Input
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-dropdown-group" v-dropdown>
 //     <input type="text" class="lego-text-input" data-toggle-dropdown />
 //     <ul class="lego-dropdown">
@@ -100,9 +100,8 @@
 //       </li>
 //     </ul>
 //   </div>
-// </div>
+// [/hc]
 
-// [---]
 
 .lego-dropdown-group {
   font-size: map-fetch($font, size base);

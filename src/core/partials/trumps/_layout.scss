@@ -46,9 +46,9 @@
 
 // ## Text Alignment
 
-// <div class="example html">
+// [hc]
 //     <div class="text--right">content</div>
-// </div>
+// [/hc]
 
 .text--left {
   text-align: left !important;
@@ -87,12 +87,12 @@
 // ## Faded
 // Sets opacity to 0.5. Useful for a simulated disabled state.
 
-// <div class="example html">
+// [hc]
 //     <div class="faded push--bottom">This text is faded. As is the icon below.</div>
 //     <svg class="lego-icon faded">
 //       <use xlink:href="#collaborators"></use>
 //     </svg>
-// </div>
+// [/hc]
 
 .faded {
   opacity: map-fetch($opacity, medium) !important;

@@ -1,10 +1,10 @@
-// ---
-// title: Stats
-// description: Simple object to display key-value statistic-like information, for example Issue counts.
-// ---
+
+// # Stats
+// Simple object to display key-value statistic-like information, for example Issue counts.
 
 
-// <div class="example html">
+
+// [hc]
 //   <div class="lego-stat-group">
 //     <div class="lego-stat">
 //       <div class="stat__value">200</div>
@@ -19,9 +19,7 @@
 //       <div class="stat__title">Followers</div>
 //     </div>
 //   </div>
-// </div>
-
-// [---]
+// [/hc]
 
 %lego-stat-group,
 .lego-stat-group {

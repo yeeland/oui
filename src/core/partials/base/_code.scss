@@ -1,9 +1,9 @@
 // # Code
 // For monospace code snippets, both inline and multiline.
 
-// <div class="example html">
+// [hc]
 //     Text can have <code>code snippets</code> in a sentence.
-// </div>
+// [/hc]
 
 code {
   font-family: map-fetch($font, family monospace);

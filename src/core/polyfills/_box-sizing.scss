@@ -1,3 +1,5 @@
+// Box sizing option.
+
 @mixin box-sizing($box) {
   @include prefixer(box-sizing, $box, webkit moz spec);
 }

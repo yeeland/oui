@@ -1,13 +1,11 @@
-// ---
-// title: Help
-// description: Buttons and icons when help is required.
-// ---
 
-// <div class="example html">
+// # Help
+// Buttons and icons when help is required.
+
+
+// [hc]
 //   This text could use some help. <span class="lego-help-dot" v-poptip data-dir="top-center" data-content="This should be short text, no more than a sentence."></span>
-// </div>
-
-// [---]
+// [/hc]
 
 .lego-help-dot {
   background: map-fetch($color, background muted);

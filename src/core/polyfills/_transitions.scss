@@ -1,16 +1,14 @@
 // Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
-// Example: @include transition (all 2s ease-in-out);
-//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
-//          @include transition-property (transform, opacity);
+//[c]
+//     @include transition (all 2s ease-in-out);
+//[/c]
 
 @mixin transition($properties...) {
-  // Fix for vendor-prefix transform property
   $needs-prefixes: false;
   $webkit: ();
   $moz: ();
   $spec: ();
 
-  // Create lists for vendor-prefixed transform
   @each $list in $properties {
     @if nth($list, 1) == 'transform' {
       $needs-prefixes: true;
@@ -62,7 +60,6 @@
 }
 
 @mixin transition-timing-function($motions...) {
-  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
   @include prefixer(transition-timing-function, $motions, webkit moz spec);
 }
 

@@ -1,31 +1,31 @@
-// ---
-// title: Media
-// description: Place any image- and text-like content side-by-side.
-// ---
 
-// <div class="example html">
+// # Media
+// Place any image- and text-like content side-by-side.
+
+
+// [hc]
 //   <div class="lego-media">
 //     <img src="http://fillmurray.com/50/50" alt="" class="lego-media__img">
 //     <div class="lego-media__body">
 //       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam corporis velit harum quia eaque accusantium nam sint fugit!</p>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
 //### Reversed
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-media">
 //     <div class="lego-media__body">
 //       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam corporis velit harum quia eaque accusantium nam sint fugit!</p>
 //     </div>
 //     <img src="http://fillmurray.com/50/50" alt="" class="lego-media__img--rev">
 //   </div>
-// </div>
+// [/hc]
 
 // ### Nested
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-media">
 //     <img src="http://fillmurray.com/50/50" alt="" class="lego-media__img">
 //     <div class="lego-media__body">
@@ -44,9 +44,7 @@
 //       </div>
 //     </div>
 //   </div>
-// </div>
-
-// [---]
+// [/hc]
 
 @mixin lego-media($responsive: null) {
   @include display(flex);

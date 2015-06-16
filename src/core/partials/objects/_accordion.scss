@@ -1,7 +1,5 @@
-// ---
-// title: Accordion
-// description: A vertical accordion with any number of panels.
-// ---
+// # Accordion
+// A vertical accordion with any number of panels.
 
 // There are two dependencies:
 
@@ -10,7 +8,7 @@
 
 // The wrapping `<div class="doc-accordion-example">` here has been added for purposes of the documentation and should be removed.
 
-// <div class="example html doc-accordion-example">
+// [hc]
 //   <ul class="accordion" v-accordion>
 //     <li class="accordion__item" v-effect="accordion">
 //       <a class="accordion__link" href="#">Item One</a>
@@ -37,10 +35,7 @@
 //       </div>
 //     </li>
 //   </ul>
-// </div>
-
-// [---]
-
+// [/hc]
 
 .accordion {
   @include display(flex);

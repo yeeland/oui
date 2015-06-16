@@ -6,7 +6,7 @@
 
 // ## Examples
 
-// <div class="example html">
+// [hc]
 //     <div class="lego-grid">
 //       <div class="lego-grid__cell width-3-5">
 //         <div class="doc-placeholder">3/5</div>
@@ -18,13 +18,13 @@
 //         <div class="doc-placeholder">1/5</div>
 //       </div>
 //     </div>
-// </div>
+// [/hc]
 
 
 // ### Whole
-// <div class="example html">
+// [hc]
 //     <div class="width-1"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1,
 .width-1 {
@@ -32,9 +32,9 @@
 }
 
 // ### Halves
-// <div class="example html">
+// [hc]
 //     <div class="width-1-2"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-2,
 .width-1-2 {
@@ -42,9 +42,9 @@
 }
 
 // ### Thirds
-// <div class="example html">
+// [hc]
 //     <div class="width-1-3"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-3,
 .width-1-3 {
@@ -57,9 +57,9 @@
 }
 
 // ### Fourths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-4"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-4,
 .width-1-4 {
@@ -76,9 +76,9 @@
 }
 
 // ### Fifths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-5"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-5,
 .width-1-5 {
@@ -101,9 +101,9 @@
 }
 
 // ### Sixths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-6"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-6,
 .width-1-6 {
@@ -128,9 +128,9 @@
 }
 
 // ### Eighths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-8"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-8,
 .width-1-8 {
@@ -165,9 +165,9 @@
 }
 
 // ### Tenths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-10"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-10,
 .width-1-10 {
@@ -210,9 +210,9 @@
 }
 
 // ### Twelths
-// <div class="example html">
+// [hc]
 //     <div class="width-1-12"><div class="doc-placeholder"></div></div>
-// </div>
+// [/hc]
 
 %width-1-12,
 .width-1-12 {

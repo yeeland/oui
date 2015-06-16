@@ -1,9 +1,9 @@
-// ---
-// title: Tabs
-// description: Creates a set of tabs.
-// ---
 
-// <div class="example html">
+// # Tabs
+// Creates a set of tabs.
+
+
+// [hc]
 //   <div class="lego-tabs" v-tabs="tabContainer">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active">Tab One</li>
@@ -16,9 +16,9 @@
 //     <div class="lego-tabs-pane">Tab Content Two</div>
 //     <div class="lego-tabs-pane">Tab Content Three</div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-tabs lego-tabs--small" v-tabs="smallTabContainer">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active">Tab One</li>
@@ -31,9 +31,9 @@
 //     <div class="lego-tabs-pane">Tab Content Two</div>
 //     <div class="lego-tabs-pane">Tab Content Three</div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active">Tab One</li>
@@ -46,9 +46,9 @@
 //     <div class="lego-tabs-pane">Tab Content Two</div>
 //     <div class="lego-tabs-pane">Tab Content Three</div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active">Tab One</li>
@@ -61,9 +61,9 @@
 //     <div class="lego-tabs-pane">Tab Content Two</div>
 //     <div class="lego-tabs-pane">Tab Content Three</div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-tabs lego-tabs--small lego-tabs--sub" v-tabs="subTabContainer">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active">Tab One</li>
@@ -76,11 +76,11 @@
 //     <div class="lego-tabs-pane">Tab Content Two</div>
 //     <div class="lego-tabs-pane">Tab Content Three</div>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Tabs with relationship defined by data attribute
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-tabs" v-tabs="dataTabContainer">
 //     <ul class="lego-tabs-nav">
 //       <li class="lego-tabs-nav__item tab-active" data-tab-related="one">Tab One</li>
@@ -93,9 +93,7 @@
 //     <div class="lego-tabs-pane" data-tab-related="two">Tab Content Two</div>
 //     <div class="lego-tabs-pane" data-tab-related="three">Tab Content Three</div>
 //   </div>
-// </div>
-
-// [---]
+// [/hc]
 
 .lego-tabs-nav {
   @include display(flex);

@@ -1,7 +1,7 @@
-// ---
-// title: Grids
-// description: Fluid and nestable grid system with responsive option.
-// ---
+
+// # Grids
+// Fluid and nestable grid system with responsive option.
+
 
 // ### Responsive
 // To include a responsive grid in your Sass...
@@ -15,7 +15,7 @@
 // ### Basic Grid
 // A gutter is set by default.
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-grid">
 //     <div class="lego-grid__cell">
 //       <div class="doc-placeholder">even width cells</div>
@@ -27,9 +27,9 @@
 //       <div class="doc-placeholder">even width cells</div>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-grid lego-grid--gutter--narrow">
 //     <div class="lego-grid__cell">
 //       <div class="doc-placeholder">even width cells</div>
@@ -41,9 +41,9 @@
 //       <div class="doc-placeholder">even width cells</div>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-grid lego-grid--gutter--wide">
 //     <div class="lego-grid__cell">
 //       <div class="doc-placeholder">even width cells</div>
@@ -55,11 +55,11 @@
 //       <div class="doc-placeholder">even width cells</div>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Grid Flush
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-grid lego-grid--flush">
 //     <div class="lego-grid__cell">
 //       <div class="doc-placeholder">even width cells</div>
@@ -71,11 +71,11 @@
 //       <div class="doc-placeholder">even width cells</div>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
 // ### Different Widths
 
-// <div class="example html">
+// [hc]
 //   <div class="lego-grid">
 //     <div class="lego-grid__cell width-3-5">
 //       <div class="doc-placeholder">3/5</div>
@@ -87,9 +87,9 @@
 //       <div class="doc-placeholder">1/5</div>
 //     </div>
 //   </div>
-// </div>
+// [/hc]
 
-// [---]
+//
 
 @mixin lego-grid($responsive: null) {
   @include display(flex);

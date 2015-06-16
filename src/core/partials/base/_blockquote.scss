@@ -1,11 +1,11 @@
 // # Blockquotes
 // For quoting blocks of content.
 
-// <div class="example html">
-//   <blockquote>
-//     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//   </blockquote>
-// </div>
+// [hc]
+//     <blockquote>
+//       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//     </blockquote>
+// [/hc]
 
 blockquote {
   border-left: 3px solid map-fetch($color, ui base);

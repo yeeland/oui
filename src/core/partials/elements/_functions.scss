@@ -23,6 +23,13 @@
 // Retrieves values from any map, nested or not.
 // Adapted from https://gist.github.com/jlong/8760275 - added errors.
 
+// Usage:
+
+// [c]
+//     color: map-fetch($color, ui base);
+// [/c]
+
+
 @function map-fetch($map, $keys) {
   $key: nth($keys, 1);
   $length: length($keys);
@@ -45,8 +52,25 @@
 }
 
 // ## Map Extend
-// Extends Sass maps.
+// Extends Sass maps. Used within products to override defaults.
 // Adapted from http://www.sitepoint.com/extra-map-functions-sass/
+
+// [c]
+//     $color: map-extend($color,
+//       (
+//         ui: (
+//           brand                    : #00415d,
+//           good-news                : #14A54A,
+//           highlight                : #0074B4,
+//           draft                    : #F4B852
+//         ),
+//         text: (
+//           good-news                : #21a350
+//         )
+//       )
+//     );
+// [/c]
+
 
 @function map-extend($map, $maps...) {
   $max: length($maps);

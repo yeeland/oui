@@ -1,42 +1,41 @@
-// ---
-// title: Block List
-// description: Create big blocky vertical lists with dividers.
-// ---
+
+// # Block List
+// Create big blocky vertical lists with dividers.
+
 
 // ### Default Block List
 
-// <div class="example html">
+// [hc]
 //   <ul class="lego-block-list">
 //     <li>Foo</li>
 //     <li>Bar</li>
 //     <li>Baz</li>
 //     <li><a href="#" class="lego-block-list__link">Foo Bar Baz</a></li>
 //   </ul>
-// </div>
+// [/hc]
 
 // ### Block List with Bottom Border
 
-// <div class="example html">
+// [hc]
 //   <ul class="lego-block-list lego-block-list--all">
 //     <li>Foo</li>
 //     <li>Bar</li>
 //     <li>Baz</li>
 //     <li><a href="#" class="lego-block-list__link">Foo Bar Baz</a></li>
 //   </ul>
-// </div>
+// [/hc]
 
 // ### Block List with Boundry
 
-// <div class="example html">
+// [hc]
 //   <ul class="lego-block-list-group">
 //     <li>Foo</li>
 //     <li>Bar</li>
 //     <li>Baz</li>
 //     <li><a href="#" class="lego-block-list__link">Foo Bar Baz</a></li>
 //   </ul>
-// </div>
+// [/hc]
 
-// [---]
 
 %lego-block-list,
 .lego-block-list {
