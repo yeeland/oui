@@ -1,81 +1,80 @@
-
 // # Buttons
 // These are the default button styles.
 
 
 // ### Button Row Left
 
-// <div class="example language-html">
-//   <div class="lego-button-row--left">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
+// [hc]
+//     <div class="lego-button-row--left">
+//       <button class="lego-button">Button</button>
+//       <button class="lego-button lego-button--brand">Button</button>
+//       <button class="lego-button lego-button--highlight">Button</button>
+//       <button class="lego-button lego-button--danger">Button</button>
+//     </div>
 // [/hc]
 
 // ### Button Row Center
 
 // [hc]
-//   <div class="lego-button-row--center">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
+//     <div class="lego-button-row--center">
+//       <button class="lego-button">Button</button>
+//       <button class="lego-button lego-button--brand">Button</button>
+//       <button class="lego-button lego-button--highlight">Button</button>
+//       <button class="lego-button lego-button--danger">Button</button>
+//     </div>
 // [/hc]
 
 // ### Button Row Right
 
 // [hc]
-//   <div class="lego-button-row--right">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
+//     <div class="lego-button-row--right">
+//       <button class="lego-button">Button</button>
+//       <button class="lego-button lego-button--brand">Button</button>
+//       <button class="lego-button lego-button--highlight">Button</button>
+//       <button class="lego-button lego-button--danger">Button</button>
+//     </div>
 // [/hc]
 
 // ### Button Small
 
 // [hc]
-//   <div class="lego-button-row--left">
-//     <button class="lego-button lego-button--small">Button</button>
-//     <button class="lego-button lego-button--small lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--small lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--small lego-button--danger">Button</button>
-//   </div>
+//     <div class="lego-button-row--left">
+//       <button class="lego-button lego-button--small">Button</button>
+//       <button class="lego-button lego-button--small lego-button--brand">Button</button>
+//       <button class="lego-button lego-button--small lego-button--highlight">Button</button>
+//       <button class="lego-button lego-button--small lego-button--danger">Button</button>
+//     </div>
 // [/hc]
 
 // ### Button Full
 
 // [hc]
-//     <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//        <button class="lego-button lego-button--brand lego-button--full">Button</button>
 // [/hc]
 
 // ### Full Spread Buttons
 
 // [hc]
-//   <div class="lego-grid lego-grid--gutter">
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//     <div class="lego-grid lego-grid--gutter">
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//       </div>
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//       </div>
+//       <div class="lego-grid__cell">
+//           <button class="lego-button lego-button--brand lego-button--full">Button</button>
+//       </div>
 //     </div>
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
-//     </div>
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
-//     </div>
-//   </div>
 // [/hc]
 
 // ### Button Disabled
 
 // [hc]
-//   <div class="lego-button-row--left">
-//     <button class="lego-button lego-button--disabled">Button</button>
-//     <button class="lego-button lego-button--brand lego-button--disabled">Button</button>
-//   </div>
+//     <div class="lego-button-row--left">
+//       <button class="lego-button lego-button--disabled">Button</button>
+//       <button class="lego-button lego-button--brand lego-button--disabled">Button</button>
+//     </div>
 // [/hc]
 
 //
@@ -100,6 +99,7 @@
   padding: map-fetch($button, size base padding);
 
   // Unique styles for the base button start here.
+
   background-color: map-fetch($button, type base background);
   color: map-fetch($color, text base);
 

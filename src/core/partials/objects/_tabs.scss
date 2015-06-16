@@ -1,98 +1,96 @@
-
 // # Tabs
 // Creates a set of tabs.
 
-
 // [hc]
-//   <div class="lego-tabs" v-tabs="tabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="tabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs" v-tabs="tabContainer">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="tabContainer">
+//       <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//       <div class="lego-tabs-pane">Tab Content Two</div>
+//       <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 // [hc]
-//   <div class="lego-tabs lego-tabs--small" v-tabs="smallTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="smallTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs lego-tabs--small" v-tabs="smallTabContainer">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="smallTabContainer">
+//       <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//       <div class="lego-tabs-pane">Tab Content Two</div>
+//       <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 // [hc]
-//   <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="tabs-container" class="lego-tabs-container">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="tabs-container" class="lego-tabs-container">
+//       <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//       <div class="lego-tabs-pane">Tab Content Two</div>
+//       <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 // [hc]
-//   <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="centerTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="centerTabContainer">
+//       <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//       <div class="lego-tabs-pane">Tab Content Two</div>
+//       <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 // [hc]
-//   <div class="lego-tabs lego-tabs--small lego-tabs--sub" v-tabs="subTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="subTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs lego-tabs--small lego-tabs--sub" v-tabs="subTabContainer">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active">Tab One</li>
+//         <li class="lego-tabs-nav__item">Tab Two</li>
+//         <li class="lego-tabs-nav__item">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="subTabContainer">
+//       <div class="lego-tabs-pane tab-active">Tab Content One</div>
+//       <div class="lego-tabs-pane">Tab Content Two</div>
+//       <div class="lego-tabs-pane">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 // ### Tabs with relationship defined by data attribute
 
 // [hc]
-//   <div class="lego-tabs" v-tabs="dataTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active" data-tab-related="one">Tab One</li>
-//       <li class="lego-tabs-nav__item" data-tab-related="two">Tab Two</li>
-//       <li class="lego-tabs-nav__item" data-tab-related="three">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="dataTabContainer">
-//     <div class="lego-tabs-pane tab-active" data-tab-related="one">Tab Content One</div>
-//     <div class="lego-tabs-pane" data-tab-related="two">Tab Content Two</div>
-//     <div class="lego-tabs-pane" data-tab-related="three">Tab Content Three</div>
-//   </div>
+//     <div class="lego-tabs" v-tabs="dataTabContainer">
+//       <ul class="lego-tabs-nav">
+//         <li class="lego-tabs-nav__item tab-active" data-tab-related="one">Tab One</li>
+//         <li class="lego-tabs-nav__item" data-tab-related="two">Tab Two</li>
+//         <li class="lego-tabs-nav__item" data-tab-related="three">Tab Three</li>
+//       </ul>
+//     </div>
+//     <div id="dataTabContainer">
+//       <div class="lego-tabs-pane tab-active" data-tab-related="one">Tab Content One</div>
+//       <div class="lego-tabs-pane" data-tab-related="two">Tab Content Two</div>
+//       <div class="lego-tabs-pane" data-tab-related="three">Tab Content Three</div>
+//     </div>
 // [/hc]
 
 .lego-tabs-nav {

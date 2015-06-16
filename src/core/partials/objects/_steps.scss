@@ -1,30 +1,26 @@
-
 // # Steps
 // A type of progress bar showing steps through a flow. Use with a width helper class if needed so that it fits cleanly.
 
-
-
 // [hc]
-//   <ul class="lego-steps width-9-10">
-//     <li class="lego-steps__item lego-steps__item--complete">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step One Label</div>
-//     </li>
-//     <li class="lego-steps__item lego-steps__item--complete">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Two Label</div>
-//     </li>
-//     <li class="lego-steps__item lego-steps__item--active">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Three Label</div>
-//     </li>
-//     <li class="lego-steps__item">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Four Label</div>
-//     </li>
-//   </ul>
+//      <ul class="lego-steps width-9-10">
+//        <li class="lego-steps__item lego-steps__item--complete">
+//          <div class="lego-steps__dot"></div>
+//          <div class="lego-steps__label">Step One Label</div>
+//        </li>
+//        <li class="lego-steps__item lego-steps__item--complete">
+//          <div class="lego-steps__dot"></div>
+//          <div class="lego-steps__label">Step Two Label</div>
+//        </li>
+//        <li class="lego-steps__item lego-steps__item--active">
+//          <div class="lego-steps__dot"></div>
+//          <div class="lego-steps__label">Step Three Label</div>
+//        </li>
+//        <li class="lego-steps__item">
+//          <div class="lego-steps__dot"></div>
+//          <div class="lego-steps__label">Step Four Label</div>
+//        </li>
+//      </ul>
 // [/hc]
-
 
 %lego-steps,
 .lego-steps {
