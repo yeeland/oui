@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased](unreleased)
 - [Added] Add Travis CI support to the LEGO repository.
+- [Patch] Update `CONTRIBUTING.md` to include information on Git tags
 
 ## [0.0.1](0.0.1) - 2015-06-24
 ### Added
