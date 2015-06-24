@@ -4,12 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## Unreleased
-### Added
-- Use semantic versioning in LEGO #58.
+## [Unreleased](unreleased)
 
-<!-- ## 0.0.1 - 2015-06-24
+## [0.0.1](0.0.1) - 2015-06-24
 ### Added
+- [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/optimizely/lego/compare/v0.0.1...v1.0.0 -->
+[unreleased]: https://github.com/optimizely/lego/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/optimizely/lego/compare/v0.0.1...HEAD
