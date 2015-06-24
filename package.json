@@ -1,6 +1,6 @@
 {
   "name": "lego",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CSS component library for Optimizely",
   "private": true,
   "main": "dist/js/lego.min.js",
