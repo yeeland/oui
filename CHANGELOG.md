@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## [Unreleased](unreleased)
+## [Unreleased][unreleased]
+### Fixed
+- [Patch] Fix the broken links in `CHANGELOG.md`. (#60)
 
-## [0.0.1](0.0.1) - 2015-06-24
+## [0.0.1][0.0.1] - 2015-06-24
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
