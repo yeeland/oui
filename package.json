@@ -2,22 +2,27 @@
   "name": "lego",
   "version": "1.0.0",
   "description": "CSS component library for Optimizely",
+  "private": true,
   "main": "dist/js/lego.min.js",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.8",
+    "gulp-bump": "^0.3.1",
     "gulp-compass": "^2.0.3",
+    "gulp-filter": "^2.0.2",
+    "gulp-git": "^1.2.4",
     "gulp-notify": "^2.2.0",
-    "gulp-svg-symbols": "^0.3.1",
     "gulp-scss-lint": "^0.1.6",
+    "gulp-svg-symbols": "^0.3.1",
     "gulp-symlink": "^2.1.0",
+    "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/optimizely/lego.git"
   },
-  "author": "Tom Genoni, Cheston Lee",
+  "author": "Tom Genoni, Cheston Lee, Daniel O'Connor",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/optimizely/lego/issues"
