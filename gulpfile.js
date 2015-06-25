@@ -8,7 +8,8 @@ var bump        = require('gulp-bump'),
     svgSymbols  = require('gulp-svg-symbols'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
-    path        = require("path");
+    sass        = require('gulp-sass'),
+    path        = require("path"),
     tagVersion  = require('gulp-tag-version');
 
 var paths = {
@@ -71,6 +72,14 @@ gulp.task('svg', function () {
     .pipe(gulp.dest(paths.svgDest));
 });
 
+gulp.task('sass', function() {
+  gulp.src('./src/core/core.scss')
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(gulp.dest('./dist/css/'));
+});
+
 // Runs SCSS linter.
 // gulp link
 gulp.task('lint', function() {
@@ -108,21 +117,4 @@ gulp.task('release', function() {
   return increaseVersion('major');
 });
 
-//  compass: compile sass to css
-//===========================================
-
-gulp.task('compass', function() {
-  gulp.src('./src/scss/*.scss')
-    .pipe(compass({
-      css: paths.css,
-      sass: paths.sass
-    }))
-    .on('error', reportError);
-});
-
-gulp.task('watch', function() {
-  // Watch task for sass
-  gulp.watch(path.join(paths.sass, '**/*.scss'), ['compass']);
-});
-
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default');
