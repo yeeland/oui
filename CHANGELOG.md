@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased](unreleased)
+- [Added] Add Travis CI support to the LEGO repository.
 
 ## [0.0.1](0.0.1) - 2015-06-24
 ### Added
