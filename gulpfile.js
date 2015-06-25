@@ -78,7 +78,8 @@ gulp.task('lint', function() {
     .pipe(scsslint({
       'bundleExec': true,
       'config': '.scss-lint.yml'
-    }));
+    }))
+    .pipe(scsslint.failReporter());
 });
 
 // Symlink the .pre-commit file.
