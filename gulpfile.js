@@ -14,9 +14,8 @@ var bump        = require('gulp-bump'),
 var paths = {
   // Limiting linter to first-part directories.
   'styles' : [
-      'src/scss/**/*.scss',
-      '!src/scss/library/**/*.scss',
-      '!src/scss/desktop/partials/legacy_overrides/**/*.scss'
+      'src/core/**/*.scss',
+      '!src/core/library/**/*.scss',
   ],
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
@@ -77,6 +76,7 @@ gulp.task('svg', function () {
 gulp.task('lint', function() {
   gulp.src(paths.styles)
     .pipe(scsslint({
+      'bundleExec': true,
       'config': '.scss-lint.yml'
     }));
 });
@@ -124,4 +124,4 @@ gulp.task('watch', function() {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['compass']);
 });
 
-gulp.task('default',['compass','watch']);
+gulp.task('default', ['compass', 'watch']);

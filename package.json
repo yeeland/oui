@@ -18,6 +18,9 @@
     "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.0"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp lint"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/optimizely/lego.git"
