@@ -1,5 +1,7 @@
 # Lego Component Library
 
+[![Build Status](https://travis-ci.org/optimizely/lego.svg?branch=master)](https://travis-ci.org/optimizely/lego)
+
 In the Lego repo run:
 
     bundle install && bundle update
@@ -160,7 +162,3 @@ For a longer discussion Harry Roberts provides a <a href="http://csswizardry.com
 - [OOCSS + Sass = The best way to CSS](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/). Some examples of bulding on existing objects using `@extend` in Sass.
 - [Hacks for dealing with specificity](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/). Some more technical details around specificity.
 - [Normalising designs for better quality CSS (Video)](https://www.youtube.com/watch?v=ldx4ZFxMEeo). A conference presentation about normalizing designs and the process from design to HTML.
-
-
-
-
