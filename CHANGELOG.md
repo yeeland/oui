@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Removed unneeded gems from Gemfile.
 - [Patch] Added `src/scss/core.scss` file so that Core could be compiled.
 - [Patch] Added `sass` task to gulpfile.js to compile Core.
+- [Patch] Added test script into package.json.
 
 ### Added
 - [Patch] Add Travis CI support to the LEGO repository.

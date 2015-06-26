@@ -20,7 +20,7 @@
     "gulp-util": "^3.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/gulp lint"
+    "test": "./node_modules/.bin/gulp lint && ./node_modules/.bin/gulp sass"
   },
   "repository": {
     "type": "git",
