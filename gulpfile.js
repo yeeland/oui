@@ -1,5 +1,4 @@
 var bump        = require('gulp-bump'),
-    compass     = require('gulp-compass'),
     filter      = require('gulp-filter'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
