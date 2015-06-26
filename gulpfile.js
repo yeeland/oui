@@ -21,17 +21,9 @@ var paths = {
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
   css: './dist/css/',
-  sass: './src/scss/'
+  core: './src/core/core.scss'
 };
 
-function swallowError(error) {
-  this.emit('end');
-}
-
-function reportError(error) {
-  notify.onError().apply(this, arguments);
-  this.emit('end');
-}
 
 // Bumping version number and tagging the repository with it.
 // Please read http://semver.org/
@@ -73,11 +65,11 @@ gulp.task('svg', function () {
 });
 
 gulp.task('sass', function() {
-  gulp.src('./src/core/core.scss')
+  gulp.src(core)
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest(css));
 });
 
 // Runs SCSS linter.

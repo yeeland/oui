@@ -1,33 +1,113 @@
-# Lego Component Library
+# LEGO Component Library
 
-## Setup
+This document contains two sets of instructions:
 
-In the Lego repo run:
+1. Including LEGO in your project
+2. Contributing new CSS to LEGO
+
+## Including LEGO in your project
+
+LEGO is published as an npm module called `optimizely-lego`. To install:
+
+```
+npm install optimizely-lego --save-dev
+```
+
+which should add the dependency to your `package.json` file.
+
+If using Gulp for your project:
+
+```javascript
+gulp.task('sass', function() {
+  gulp.src('scss/**/*.scss')
+    .pipe(sass({
+      errLogToConsole: true,
+      includePaths : [
+        require('optimizely-lego').includePath
+      ]
+    }))
+    .pipe(gulp.dest('path/to/css'));
+});
+```
+
+### Example Starter Code
+
+Download [LEGO starter code](assets/lego-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
+
+### Structure of LEGO
+
+LEGO consists of two parts:
+
+1. **Core**
+    - Base styles used as the foundation for any site.
+    - This code lives in this LEGO repository and is a dependency for platform code.
+2. **Platform (.e.g, `mobile`)**
+    - Platform or device specific built on top of Core.
+    - This code lives in the platform repo, pulling Core as a dependency.
+
+For example, if you're building a mobile site, `mobile.scss` would contain:
+```scss
+// # Mobile
+// Root file driving the Mobile CSS.
+
+// Compass polyfills
+@import 'core/core-polyfills';
+
+// ## Core functions and mixins
+@import 'core/partials/elements/functions';
+@import 'core/partials/elements/mixins';
+
+// ## Core and p13n variables
+// Import `core` and `mobile` variables
+
+@import 'core/core-variables';
+@import 'mobile/mobile-variables';
+
+// ## Core and mobile partials
+// Import `core` and `mobile` partials
+
+@import 'core/core-partials';
+@import 'mobile/mobile-partials';
+
+// ## Trumps
+// Trumps use `!important` classes for overrides and should always be loaded last.
+
+@import 'core/partials/trumps/background';
+@import 'core/partials/trumps/layout';
+@import 'core/partials/trumps/margin';
+@import 'core/partials/trumps/padding';
+@import 'core/partials/trumps/type';
+@import 'core/partials/trumps/sizing';
+```
+
+## Contributing to LEGO
+
+The following is for users planning to make contributions to LEGO.
+
+Important: see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
+
+After cloning the `lego` repo run:
 
 ```bash
 bundle install && bundle update
+npm install
+gulp hook
 ```
 
-## Cheat Sheet
+### Cheat Sheet
 
 - **`gulp`** : Runs the default compass watch process.
 - **`gulp hook`** : Installs the linter pre-commit hook (please do this!).
 - **`gulp lint`** : Runs the SCSS linter.
-- **`gulp svg`** : Creates svg sprite.
+- **`gulp svg`** : Builds svg sprite and demo page into `dist`.
+- **`gulp sass`** : Builds Core-only css file for testing into `dist`.
+- **`gulp feature | patch | release`** : For tagging releases.
 
-## Getting Started
+### Getting Started
 
-### Install Pre-Commit Hook
+#### Pre-Commit Hook &amp; Linter
 
-After cloning this repo run:
-
-    npm install
-
-This will install the Gulp dependencies. Then run:
-
-    gulp hook
-
-This will run the 'hook' task that creates a pre-commit hook. This hook runs a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the Lego SCSS is consistent.
+As part of the installation process above you should have run `gulp hook`. This will run the task that creates a git pre-commit hook. This hook fires a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the LEGO SCSS is consistent.
 
 If the the linter finds issues you'll see messages in your terminal like this:
 
@@ -45,15 +125,13 @@ You can also run:
 
 at any time to check your files before you commit.
 
-### Run the Compass Watch Process
+#### Run the Sass compile process
 
-To have Lego build to the `dist` directory run:
+To output Core CSS file to the `dist` directory run:
 
-    gulp
+    gulp sass
 
-This runs the default process that both compiles sass and watches the `scss` directory for changes.
-
-### Generating the SVG Icon Sprite
+#### Generating the SVG Icon Sprite
 
 When adding new icons to the library place the individual svg files into:
 
@@ -69,7 +147,7 @@ The resulting sprite will be built to:
 
 This is the file that is included as the first child of the body on every page of Optimizely.
 
-## Introduction
+## Philosophy
 
 LEGO stands for Low-level Elements and Global Objects. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...
 
@@ -85,66 +163,23 @@ By achieving these goals our code becomes...
 1. **Smaller and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)er.** Since we're constantly reusing low-level objects to build larger ones, often with Sass' <code>@extend</code> functionality, we cut down on CSS bloat. Less code means fewer bugs.
 
 
-## Building Your Site with LEGO
-
-LEGO consists of two parts:
-
-1. **Core**
-    - Platform and device agnostic code that is used as the foundation for any site.
-    - This code lives in the LEGO repository and is a dependency for platform code.
-2. **Custom**
-    - Platform or device specific built on top of Core.
-    - This code lives in the platform repo, pulling Core as a dependency.
-
-For example, let's say you wanted to build a mobile site. You'd create your mobile repository that pulls in LEGO Core. You'd
-
-- core
-    - _core-partials.scss
-    - _core-variables.scss
-    - partials/
-- mobile
-    - _mobile-partials.scss
-    - _mobile-variables.scss
-    - partials/
-- mobile.scss
-
-And the contents of mobile.scss:
-
-    @import 'compass';
-
-    // Import all the variables, Core first followed by the mobile-specific ones.
-    @import 'core/core-variables';
-    @import 'mobile/mobile-variables';
-
-    // Import all the partials, Core first followed by the mobile-specific ones.
-    @import 'core/core-partials';
-    @import 'mobile/mobile-partials';
-
-    // Import core trumps for override classes.
-    @import 'core/partials/trumps/background';
-    @import 'core/partials/trumps/layout';
-    @import 'core/partials/trumps/margin';
-    @import 'core/partials/trumps/padding';
-    @import 'core/partials/trumps/type';
-    @import 'core/partials/trumps/sizing';
-
-
 #### Writing Good Classes
 
 In order to write HTML and CSS classes that provide meaning for developers we're using the BEM syntax. BEM stands for Block, Element, Modifier and is becoming a popular approach to building CSS and HTML that describes an object's internal relationships.
 
-
-    <div class="lego-grid lego-grid--gutter">
-        <div class="lego-grid__cell">
-            <div class="docs-dummy-content">grid cell</div>
-        </div>
-        <div class="lego-grid__cell">
-            <div class="docs-dummy-content">grid cell</div>
-        </div>
-        <div class="lego-grid__cell">
-            <div class="docs-dummy-content">grid cell</div>
-        </div>
+```html
+<div class="lego-grid lego-grid--gutter">
+    <div class="lego-grid__cell">
+        <div class="docs-dummy-content">grid cell</div>
     </div>
+    <div class="lego-grid__cell">
+        <div class="docs-dummy-content">grid cell</div>
+    </div>
+    <div class="lego-grid__cell">
+        <div class="docs-dummy-content">grid cell</div>
+    </div>
+</div>
+```
 
 In the example above...
 
