@@ -7,6 +7,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 ### Fixed
 - [Patch] Fix the broken links in `CHANGELOG.md`. (#60)
+- [Patch] Updated README.md to include example code and usage instructions.
+- [Patch] Removed unneeded gems from Gemfile.
+- [Patch] Added `src/scss/core.scss` file so that Core could be compiled.
+- [Patch] Added `sass` task to gulpfile.js to compile Core.
 
 ### Added
 - [Patch] Add Travis CI support to the LEGO repository.
