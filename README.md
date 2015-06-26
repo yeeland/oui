@@ -89,10 +89,10 @@ Important: see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning 
 After cloning the `lego` repo run:
 
 ```bash
-bundle install && bundle update
-npm install
-gulp hook
+npm start
 ```
+
+This will run the npm `start` commands found in package.json that installs the dependencies.
 
 ### Cheat Sheet
 
@@ -162,7 +162,6 @@ By achieving these goals our code becomes...
 1. **Consistent.** Not only will developers be able to read each other's code more easily we'll have a better end-user experience across the product.
 1. **Smaller and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)er.** Since we're constantly reusing low-level objects to build larger ones, often with Sass' <code>@extend</code> functionality, we cut down on CSS bloat. Less code means fewer bugs.
 
-
 #### Writing Good Classes
 
 In order to write HTML and CSS classes that provide meaning for developers we're using the BEM syntax. BEM stands for Block, Element, Modifier and is becoming a popular approach to building CSS and HTML that describes an object's internal relationships.
@@ -191,7 +190,6 @@ Though somewhat verbose, this syntax makes it easy to determine the child/parent
 
 For a longer discussion Harry Roberts provides a <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">good introduction</a> to the syntax.
 
-
 #### Futher Reading
 
 - [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). Introduction to BEM.
@@ -199,7 +197,3 @@ For a longer discussion Harry Roberts provides a <a href="http://csswizardry.com
 - [OOCSS + Sass = The best way to CSS](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/). Some examples of bulding on existing objects using `@extend` in Sass.
 - [Hacks for dealing with specificity](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/). Some more technical details around specificity.
 - [Normalising designs for better quality CSS (Video)](https://www.youtube.com/watch?v=ldx4ZFxMEeo). A conference presentation about normalizing designs and the process from design to HTML.
-
-
-
-
