@@ -64,11 +64,11 @@ gulp.task('svg', function () {
 });
 
 gulp.task('sass', function() {
-  gulp.src(core)
+  gulp.src(paths.core)
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest(css));
+    .pipe(gulp.dest(paths.css));
 });
 
 // Runs SCSS linter.
