@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Fix the broken links in `CHANGELOG.md`. (#60)
 
+### Changed
+- [Patch] Lego-popover was dependant on lego-block-list-group for styling its border, border-radius, and padding of child elements, however this added other undesired styles to lego-popover. This change removes the link between lego-popover and lego-block-list-group.
+
 ### Added
 - [Patch] Add Travis CI support to the LEGO repository.
 - [Patch] Update `CONTRIBUTING.md` to include information on Git tags
