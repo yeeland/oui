@@ -1,0 +1,29 @@
+// # Core
+// Root file compiling only Core CSS.
+
+$include-fonts:(
+  weights: 300 400 500,
+  italics: true
+);
+
+// Compass polyfills
+@import 'core-polyfills';
+
+// ## Core functions and mixins
+@import 'partials/elements/functions';
+@import 'partials/elements/mixins';
+
+// ## Core variables
+@import 'core-variables';
+
+// ## Core partials
+@import 'core-partials';
+
+// ## Trumps
+// Trumps use `!important` classes for overrides and should always be loaded last.
+@import 'partials/trumps/background';
+@import 'partials/trumps/layout';
+@import 'partials/trumps/margin';
+@import 'partials/trumps/padding';
+@import 'partials/trumps/type';
+@import 'partials/trumps/sizing';

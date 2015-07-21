@@ -4,11 +4,12 @@
   "description": "CSS component library for Optimizely",
   "private": false,
   "main": "dist/js/lego.min.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-sass": "^2.0.2"
+  },
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-bump": "^0.3.1",
-    "gulp-compass": "^2.0.3",
     "gulp-filter": "^2.0.2",
     "gulp-git": "^1.2.4",
     "gulp-notify": "^2.2.0",
@@ -19,7 +20,8 @@
     "gulp-util": "^3.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/gulp lint"
+    "test": "./node_modules/.bin/gulp lint && ./node_modules/.bin/gulp sass",
+    "start": "bundle install && bundle update && npm install && ./node_modules/.bin/gulp hook"
   },
   "repository": {
     "type": "git",

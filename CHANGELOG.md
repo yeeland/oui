@@ -18,6 +18,14 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Add Travis CI support to the LEGO repository.
 - [Patch] Update `CONTRIBUTING.md` to include information on Git tags
+- [Patch] Updated README.md to include example code and usage instructions.
+- [Patch] Added `src/scss/core.scss` file so that Core could be compiled.
+- [Patch] Added `sass` task to gulpfile.js to compile Core.
+- [Patch] Added `npm start` script into `package.json` to run tests.
+- [Patch] Added `npm start` script into `package.json` to run install processes.
+
+### Removed
+- [Patch] Removed unneeded gems from Gemfile.
 
 ## 0.0.1 - 2015-06-24
 ### Added

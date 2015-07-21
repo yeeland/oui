@@ -1,5 +1,4 @@
 var bump        = require('gulp-bump'),
-    compass     = require('gulp-compass'),
     filter      = require('gulp-filter'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
@@ -8,7 +7,8 @@ var bump        = require('gulp-bump'),
     svgSymbols  = require('gulp-svg-symbols'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
-    path        = require("path");
+    sass        = require('gulp-sass'),
+    path        = require("path"),
     tagVersion  = require('gulp-tag-version');
 
 var paths = {
@@ -20,17 +20,9 @@ var paths = {
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
   css: './dist/css/',
-  sass: './src/scss/'
+  core: './src/core/core.scss'
 };
 
-function swallowError(error) {
-  this.emit('end');
-}
-
-function reportError(error) {
-  notify.onError().apply(this, arguments);
-  this.emit('end');
-}
 
 // Bumping version number and tagging the repository with it.
 // Please read http://semver.org/
@@ -71,6 +63,14 @@ gulp.task('svg', function () {
     .pipe(gulp.dest(paths.svgDest));
 });
 
+gulp.task('sass', function() {
+  gulp.src(paths.core)
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(gulp.dest(paths.css));
+});
+
 // Runs SCSS linter.
 // gulp link
 gulp.task('lint', function() {
@@ -108,21 +108,4 @@ gulp.task('release', function() {
   return increaseVersion('major');
 });
 
-//  compass: compile sass to css
-//===========================================
-
-gulp.task('compass', function() {
-  gulp.src('./src/scss/*.scss')
-    .pipe(compass({
-      css: paths.css,
-      sass: paths.sass
-    }))
-    .on('error', reportError);
-});
-
-gulp.task('watch', function() {
-  // Watch task for sass
-  gulp.watch(path.join(paths.sass, '**/*.scss'), ['compass']);
-});
-
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default');
