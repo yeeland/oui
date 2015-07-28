@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Added
+- [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
+
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
 
