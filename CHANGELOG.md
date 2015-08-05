@@ -11,6 +11,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add a `.cursor--move` trump for changing the cursor to `move`.
 - [Patch] Allow `.lego-overlay` to be extended with `%lego-overlay`.
 
+## Changed
+- [Release] Moved `_borders.scss` from `components` to `trumps` and added `!important`.
+
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
 
