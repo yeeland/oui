@@ -180,6 +180,10 @@
   cursor: text !important;
 }
 
+.pointer-events--none {
+  pointer-events: none !important;
+}
+
 // ## Text Area No Resize
 // Prevent resizing of textarea. Use only if absolutely necessary.
 
