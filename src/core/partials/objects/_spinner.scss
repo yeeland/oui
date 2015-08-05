@@ -27,8 +27,8 @@
 
 // [---]
 
-.lego-overlay,
-%lego-overlay {
+%lego-overlay,
+.lego-overlay {
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
