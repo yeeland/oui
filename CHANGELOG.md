@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+
+## [0.0.3][0.0.3] - 2015-08-05
 ### Added
 - [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
 - [Patch] Add a `.pointer-events--none` trump for disabling pointer events.
@@ -37,5 +39,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v0.0.2...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v0.0.3...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
+[0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
