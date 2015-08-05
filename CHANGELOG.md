@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
 - [Patch] Add a `.pointer-events--none` trump for disabling pointer events.
+- [Patch] Add a `.cursor--move` trump for changing the cursor to `move`.
 
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
