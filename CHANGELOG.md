@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Removed
+- [Release] Remove `.lego-tag` from Core. (#72)
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
