@@ -6,6 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][unreleased]
 
+### Changed
+- [Release] Renaming sizing trumps to be BEM consistent. (#69)
+
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
 - [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
