@@ -85,14 +85,16 @@
 
 %lego-button,
 .lego-button {
+  box-sizing: content-box;
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   font-family: inherit;
   cursor: pointer;
-  border: 0;
   margin: 0;
-  line-height: 1;
+  line-height: map-fetch($button, size base height);
+  border-width: 1px;
+  border-style: solid;
   font-size: map-fetch($button, size base font-size);
   font-weight: map-fetch($button, size base font-weight);
   border-radius: map-fetch($button, size base border-radius);
@@ -101,14 +103,19 @@
 
   // Unique styles for the base button start here.
   background-color: map-fetch($button, type base background);
-  color: map-fetch($color, text base);
+  border-color: map-fetch($button, type base border);
+  color: map-fetch($button, type base color);
 
   &:hover {
     background: map-fetch($button, type base hover background);
+    border-color: map-fetch($button, type base hover border);
+    color: map-fetch($button, type base hover color);
   }
 
   &:active {
     background: map-fetch($button, type base active background);
+    border-color: map-fetch($button, type base active border);
+    color: map-fetch($button, type base active color);
   }
 
   &:hover,
@@ -116,39 +123,21 @@
   &:visited,
   &:focus {
     outline: none;
-    color: map-fetch($color, text base);
-  }
-
-  &--brand {
-    background-color: map-fetch($button, type brand background);
-    color: map-fetch($color, text white);
-
-    &:hover {
-      background: map-fetch($button, type brand hover background);
-    }
-
-    &:active {
-      background: map-fetch($button, type brand active background);
-    }
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      color: map-fetch($color, text white);
-    }
   }
 
   &--highlight {
     background-color: map-fetch($button, type highlight background);
+    border-color: map-fetch($button, type highlight border);
     color: map-fetch($color, text white);
 
     &:hover {
       background: map-fetch($button, type highlight hover background);
+      border-color: map-fetch($button, type highlight hover border);
     }
 
     &:active {
       background: map-fetch($button, type highlight active background);
+      border-color: map-fetch($button, type highlight active border);
     }
 
     &:hover,
@@ -156,19 +145,107 @@
     &:visited,
     &:focus {
       color: map-fetch($color, text white);
+    }
+  }
+
+  &--outline {
+    background-color: map-fetch($button, type outline background);
+    border-color: map-fetch($button, type outline border);
+    color: map-fetch($button, type outline color);
+
+    &:hover {
+      background: map-fetch($button, type outline hover background);
+      border-color: map-fetch($button, type outline hover border);
+    }
+
+    &:active {
+      background: map-fetch($button, type outline active background);
+      border-color: map-fetch($button, type outline active border);
+    }
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: map-fetch($button, type outline color);
+    }
+  }
+
+  &--outline-reverse {
+    background-color: map-fetch($button, type outline-reverse background);
+    border-color: map-fetch($button, type outline-reverse border);
+    color: map-fetch($button, type outline-reverse color);
+
+    &:hover {
+      background: map-fetch($button, type outline-reverse hover background);
+      border-color: map-fetch($button, type outline-reverse hover border);
+    }
+
+    &:active {
+      background: map-fetch($button, type outline-reverse active background);
+      border-color: map-fetch($button, type outline-reverse active border);
+    }
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: map-fetch($button, type outline-reverse color);
+    }
+  }
+
+  &--extra {
+    background-color: map-fetch($button, type extra background);
+    border-color: map-fetch($button, type extra border);
+    color: map-fetch($color, text white);
+
+    &:hover {
+      background: map-fetch($button, type extra hover background);
+      border-color: map-fetch($button, type extra hover border);
+    }
+
+    &:active {
+      background: map-fetch($button, type extra active background);
+      border-color: map-fetch($button, type extra active border);
+    }
+
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: map-fetch($color, text white);
+    }
+  }
+
+  &--dismiss {
+    background-color: map-fetch($button, type dismiss background);
+    border-color: map-fetch($button, type dismiss border);
+    color: map-fetch($button, type dismiss color);
+
+    &:hover {
+      background: map-fetch($button, type dismiss hover background);
+      border-color: map-fetch($button, type dismiss hover border);
+    }
+
+    &:active {
+      background: map-fetch($button, type dismiss active background);
+      border-color: map-fetch($button, type dismiss active border);
     }
   }
 
   &--danger {
     background-color: map-fetch($button, type danger background);
+    border-color: map-fetch($button, type danger border);
     color: map-fetch($color, text white);
 
     &:hover {
       background: map-fetch($button, type danger hover background);
+      border-color: map-fetch($button, type danger hover border);
     }
 
     &:active {
       background: map-fetch($button, type danger active background);
+      border-color: map-fetch($button, type danger active border);
     }
 
     &:hover,
@@ -186,6 +263,7 @@
     font-size: map-fetch($button, size small font-size);
     font-weight: map-fetch($button, size small font-weight);
     border-radius: map-fetch($button, size small border-radius);
+    line-height: map-fetch($button, size small height);
     height: map-fetch($button, size small height);
     padding: map-fetch($button, size small padding);
   }
@@ -221,15 +299,10 @@
   &--disabled:focus {
     cursor: default;
     box-shadow: none;
-    background-color: #F8F8F8;
-    color: map-fetch($color, text medium);
+    background-color: #EFF0F2;
+    color: map-fetch($color, text muted);
     border-color: map-fetch($color, ui base);
     opacity: map-fetch($opacity, medium);
-
-    + .lego-button--brand {
-      background-color: map-fetch($button, type brand background);
-      color: map-fetch($color, text white);
-    }
 
     + .lego-button--highlight {
       background-color: map-fetch($button, type highlight background);
