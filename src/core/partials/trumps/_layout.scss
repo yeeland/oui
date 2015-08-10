@@ -158,6 +158,17 @@
   overflow-y: auto !important;
 }
 
+// ## Overflow
+// Scrollbars for nested elements. Often used with flex-1.
+
+.overflow-x--auto {
+  overflow-x: auto !important;
+}
+
+.overflow-y--auto {
+  overflow-y: auto !important;
+}
+
 // ## Max Width
 // Set a max-width for content.
 
