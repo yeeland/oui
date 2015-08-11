@@ -167,7 +167,7 @@ $button: (
     ),
     highlight: (
       background             : #14A54A,
-      border                 : #129C45,
+      border                 : #088E3A,
       hover:(
         background           : #14B54E,
         border               : #14A54A,
@@ -179,32 +179,32 @@ $button: (
     ),
     outline: (
       background             : transparent,
-      border                 : #3B5871,
+      border                 : #00415D,
       color                  : #00415D,
       hover:(
         background           : transparent,
-        border               : #64738A,
-        color                : #00415D,
+        border               : #8D96A8,
+        color                : #64738A,
       ),
       active:(
         background           : transparent,
-        border               : #033348,
+        border               : #00415D,
         color                : #00415D,
       )
     ),
     outline-reverse: (
       background             : transparent,
-      border                 : #F6F6F7,
-      color                  : #F6F6F7,
+      border                 : #FFFFFF,
+      color                  : #FFFFFF,
       hover:(
         background           : transparent,
-        border               : #F6F6F7,
-        color                : #F6F6F7,
+        border               : #E0E1E5,
+        color                : #E5E5E9,
       ),
       active:(
         background           : transparent,
-        border               : #F6F6F7,
-        color                : #F6F6F7,
+        border               : #FFFFFF,
+        color                : #FFFFFF,
       )
     ),
     extra: (
@@ -245,6 +245,11 @@ $button: (
         background           : #C52D42,
         border               : #8F192B,
       )
+    ),
+    disabled: (
+      background             : #EFF0F2,
+      border                 : #E5E5E9,
+      color                  : map-fetch($color, text muted)
     )
   )
 );

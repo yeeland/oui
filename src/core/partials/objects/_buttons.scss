@@ -156,18 +156,13 @@
     &:hover {
       background: map-fetch($button, type outline hover background);
       border-color: map-fetch($button, type outline hover border);
+      color: map-fetch($button, type outline hover color);
     }
 
     &:active {
       background: map-fetch($button, type outline active background);
       border-color: map-fetch($button, type outline active border);
-    }
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      color: map-fetch($button, type outline color);
+      color: map-fetch($button, type outline active color);
     }
   }
 
@@ -179,18 +174,13 @@
     &:hover {
       background: map-fetch($button, type outline-reverse hover background);
       border-color: map-fetch($button, type outline-reverse hover border);
+      color: map-fetch($button, type outline-reverse hover color);
     }
 
     &:active {
       background: map-fetch($button, type outline-reverse active background);
       border-color: map-fetch($button, type outline-reverse active border);
-    }
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      color: map-fetch($button, type outline-reverse color);
+      color: map-fetch($button, type outline-reverse active color);
     }
   }
 
@@ -299,19 +289,13 @@
   &--disabled:focus {
     cursor: default;
     box-shadow: none;
-    background-color: #EFF0F2;
-    color: map-fetch($color, text muted);
-    border-color: map-fetch($color, ui base);
-    opacity: map-fetch($opacity, medium);
+    background-color: map-fetch($button, type disabled background);
+    border-color: map-fetch($button, type disabled border);
+    color: map-fetch($button, type disabled color);
 
-    + .lego-button--highlight {
-      background-color: map-fetch($button, type highlight background);
-      color: map-fetch($color, text white);
-    }
-
-    + .lego-button--danger {
-      background-color: map-fetch($button, type danger background);
-      color: map-fetch($color, text white);
+    &.lego-button--dismiss {
+      background-color: map-fetch($button, type dismiss background);
+      border-color: map-fetch($button, type dismiss border);
     }
   }
 }
