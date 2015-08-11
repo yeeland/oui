@@ -194,8 +194,8 @@ $button: (
     ),
     outline-reverse: (
       background             : transparent,
-      border                 : #FFFFFF,
-      color                  : #FFFFFF,
+      border                 : #FFF,
+      color                  : #FFF,
       hover:(
         background           : transparent,
         border               : #E0E1E5,
@@ -203,8 +203,8 @@ $button: (
       ),
       active:(
         background           : transparent,
-        border               : #FFFFFF,
-        color                : #FFFFFF,
+        border               : #FFF,
+        color                : #FFF,
       )
     ),
     extra: (
