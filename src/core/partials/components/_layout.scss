@@ -28,8 +28,8 @@
 
 // ### Panes
 
-%lego-pane-group,
-.lego-pane-group {
+%#{$namespace}pane-group,
+.#{$namespace}pane-group {
   @include display(flex);
   // This deals with the way FF handles display:flex defaults and overflow.
   // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
@@ -40,8 +40,8 @@
   }
 }
 
-%lego-pane,
-.lego-pane {
+%#{$namespace}pane,
+.#{$namespace}pane {
 
   &--full {
     height: 100%;
@@ -79,14 +79,14 @@
 // This adds padding or margin to full-width items
 // to move them away from the walls for their container.
 
-%lego-fence--soft,
-.lego-fence--soft {
+%#{$namespace}fence--soft,
+.#{$namespace}fence--soft {
   padding-left: spacer(2);
   padding-right: spacer(2);
 }
 
-%lego-fence--push,
-.lego-fence--push {
+%#{$namespace}fence--push,
+.#{$namespace}fence--push {
   margin-left: spacer(2);
   margin-right: spacer(2);
 }

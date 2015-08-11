@@ -7,6 +7,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
+### Added
+- [Release] Add namespacing variable to Core (#68).
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added

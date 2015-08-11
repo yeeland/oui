@@ -19,7 +19,7 @@
 
 // [---]
 
-.lego-pagination {
+.#{$namespace}pagination {
   @include justify-content(center);
 
   > li {

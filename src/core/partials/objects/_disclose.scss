@@ -26,7 +26,7 @@
 
 // [---]
 
-.lego-disclose {
+.#{$namespace}disclose {
   @extend %kill-last-child-margin;
 
   &__link {
@@ -58,11 +58,11 @@
 
     &--active {
 
-      > .lego-disclose__content {
+      > .#{$namespace}disclose__content {
         display: block;
       }
 
-      > .lego-disclose__link > .lego-disclose__symbol {
+      > .#{$namespace}disclose__link > .#{$namespace}disclose__symbol {
         @include transform(rotate(90deg));
       }
     }

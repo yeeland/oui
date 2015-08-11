@@ -83,8 +83,8 @@
 // ### Button Variables
 // Shadows for buttons.
 
-%lego-button,
-.lego-button {
+%#{$namespace}button,
+.#{$namespace}button {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -203,7 +203,7 @@
   &--icon {
     line-height: 1.4;
 
-    .lego-icon {
+    .#{$namespace}icon {
       vertical-align: sub;
     }
   }
@@ -226,17 +226,17 @@
     border-color: map-fetch($color, ui base);
     opacity: map-fetch($opacity, medium);
 
-    + .lego-button--brand {
+    + .#{$namespace}button--brand {
       background-color: map-fetch($button, type brand background);
       color: map-fetch($color, text white);
     }
 
-    + .lego-button--highlight {
+    + .#{$namespace}button--highlight {
       background-color: map-fetch($button, type highlight background);
       color: map-fetch($color, text white);
     }
 
-    + .lego-button--danger {
+    + .#{$namespace}button--danger {
       background-color: map-fetch($button, type danger background);
       color: map-fetch($color, text white);
     }

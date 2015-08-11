@@ -84,7 +84,7 @@
   }
 }
 
-%lego-media,
-.lego-media {
+%#{$namespace}media,
+.#{$namespace}media {
   @include lego-media;
 }

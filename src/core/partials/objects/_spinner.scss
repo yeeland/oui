@@ -1,6 +1,6 @@
 // ---
 // title: Spinner
-// description: Loading spinner. Target '.lego-overlay' to position as needed.
+// description: Loading spinner. Target '.#{$namespace}overlay' to position as needed.
 // ---
 
 // <div class="example html">
@@ -27,8 +27,8 @@
 
 // [---]
 
-%lego-overlay,
-.lego-overlay {
+%#{$namespace}overlay,
+.#{$namespace}overlay {
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
@@ -48,7 +48,7 @@
   }
 }
 
-.lego-spinner {
+.#{$namespace}spinner {
   @include animation(lego-spin map-fetch($spinner, speed) infinite linear);
   width: map-fetch($spinner, size base);
   height: map-fetch($spinner, size base);

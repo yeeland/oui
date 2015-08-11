@@ -17,8 +17,8 @@
 
 // [---]
 
-%lego-rule,
-.lego-rule {
+%#{$namespace}rule,
+.#{$namespace}rule {
   border: 0;
   height: 0;
   border-top: 1px solid map-fetch($color, ui base);

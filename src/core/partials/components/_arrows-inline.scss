@@ -12,8 +12,8 @@
 $border-colored: 4px solid currentColor;
 $border-transparent: 4px solid transparent;
 
-%lego-arrow-inline,
-.lego-arrow-inline {
+%#{$namespace}arrow-inline,
+.#{$namespace}arrow-inline {
   display: inline-block;
   width: 0;
   height: 0;
@@ -22,28 +22,28 @@ $border-transparent: 4px solid transparent;
   vertical-align: middle;
 
   &--up {
-    @extend %lego-arrow-inline;
+    @extend %#{$namespace}arrow-inline;
     border-bottom: $border-colored;
     border-right: $border-transparent;
     border-left: $border-transparent;
   }
 
   &--down {
-    @extend %lego-arrow-inline;
+    @extend %#{$namespace}arrow-inline;
     border-top: $border-colored;
     border-right: $border-transparent;
     border-left: $border-transparent;
   }
 
   &--right {
-    @extend %lego-arrow-inline;
+    @extend %#{$namespace}arrow-inline;
     border-left: $border-colored;
     border-top: $border-transparent;
     border-bottom: $border-transparent;
   }
 
   &--left {
-    @extend %lego-arrow-inline;
+    @extend %#{$namespace}arrow-inline;
     border-right: $border-colored;
     border-top: $border-transparent;
     border-bottom: $border-transparent;

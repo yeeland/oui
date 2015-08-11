@@ -289,14 +289,14 @@
 //   <input type="text" class="lego-text-input">
 //[/c]
 
-.lego-form--small {
+.#{$namespace}form--small {
   font-size: map-fetch($font, size micro);
 }
 
-%lego-text-input,
-%lego-textarea,
-.lego-text-input,
-.lego-textarea {
+%#{$namespace}text-input,
+%#{$namespace}textarea,
+.#{$namespace}text-input,
+.#{$namespace}textarea {
   @include transition(border-color map-fetch($transition-duration, base));
   width: 100%;
   border: 1px solid map-fetch($color, ui base);
@@ -327,7 +327,7 @@
   }
 }
 
-.lego-textarea {
+.#{$namespace}textarea {
   height: 62px;
   resize: vertical;
 
@@ -336,7 +336,7 @@
   }
 }
 
-.lego-select {
+.#{$namespace}select {
   @include transition(border-color map-fetch($transition-duration, base));
   display: inline-block;
   height: map-fetch($button, size base height);
@@ -361,27 +361,27 @@
   }
 }
 
-.lego-form__header {
+.#{$namespace}form__header {
   margin-bottom: spacer(2);
 }
 
-.lego-form__footer {
+.#{$namespace}form__footer {
   margin-top: spacer(3);
 }
 
-.lego-form__title {
+.#{$namespace}form__title {
   font-size: map-fetch($font, size gamma);
   margin-bottom: spacer(1);
   line-height: 1;
 }
 
-.lego-form-fields {
+.#{$namespace}form-fields {
   @extend %kill-last-child-margin;
   list-style: none;
   margin: 0;
 }
 
-.lego-form-field__item {
+.#{$namespace}form-field__item {
   margin-bottom: spacer(1.5);
 }
 
@@ -395,7 +395,7 @@ fieldset {
 // label-like styling to meta-labels for groups of options where a `<label>`
 // element is not suitable.
 
-.lego-label {
+.#{$namespace}label {
   display: block;
   margin-bottom: spacer(0.5);
   font-weight: 500;
@@ -431,8 +431,8 @@ fieldset {
 
 // Labels in lego-input-lists
 
-.lego-check-label,
-.lego-input-list .lego-label {
+.#{$namespace}check-label,
+.#{$namespace}input-list .#{$namespace}label {
   display: table-cell;
   padding-left: spacer(1);
   font-weight: 400;
@@ -440,7 +440,7 @@ fieldset {
 
 //  Groups of checkboxes and radios.
 
-.lego-input-list {
+.#{$namespace}input-list {
   list-style: none;
   margin: 0;
 
@@ -453,7 +453,7 @@ fieldset {
     display: table-cell;
   }
 
-  .lego-label {
+  .#{$namespace}label {
     width: 100%;
   }
 
@@ -466,18 +466,18 @@ fieldset {
       display: inline-block;
     }
 
-    .lego-label {
+    .#{$namespace}label {
       display: inline;
       padding-left: 6px; // Should be 10px but this compensates for white space.
     }
   }
 }
 
-.lego-input--disabled {
+.#{$namespace}input--disabled {
   background-color: map-fetch($color, background light);
 }
 
-.lego-or {
+.#{$namespace}or {
   text-align: center;
   color: map-fetch($color, text base);
   text-transform: uppercase;
@@ -503,7 +503,7 @@ fieldset {
 // ## Icons in inputs
 // This places an svg icon "inside" an input, to the right.
 
-.lego-icon-input {
+.#{$namespace}icon-input {
   @include display(flex);
   @include align-items(center);
 
@@ -512,7 +512,7 @@ fieldset {
     background: transparent;
   }
 
-  .lego-icon-input__icon {
+  .#{$namespace}icon-input__icon {
     margin-left: -(spacer(2.5));
     line-height: 1;
   }
@@ -520,57 +520,57 @@ fieldset {
 
 // ## Form Notes
 
-.lego-form-note {
+.#{$namespace}form-note {
   padding-top: spacer(0.5);
   font-size: map-fetch($font, size micro);
 }
 
-.lego-form-note--good-news {
+.#{$namespace}form-note--good-news {
   color: map-fetch($color, text good-news);
 }
 
-.lego-form-note--bad-news {
+.#{$namespace}form-note--bad-news {
   color: map-fetch($color, text bad-news);
 }
 
-.lego-form-note--warning {
+.#{$namespace}form-note--warning {
   color: map-fetch($color, text warning);
 }
 
 // ## Form Validations
 
-.lego-form-good-news {
-  .lego-label {
+.#{$namespace}form-good-news {
+  .#{$namespace}label {
     color: map-fetch($color, text good-news);
   }
 
-  .lego-text-input,
-  .lego-select,
-  .lego-textarea {
+  .#{$namespace}text-input,
+  .#{$namespace}select,
+  .#{$namespace}textarea {
     border-color: map-fetch($color, ui good-news);
   }
 }
 
-.lego-form-bad-news {
-  .lego-label {
+.#{$namespace}form-bad-news {
+  .#{$namespace}label {
     color: map-fetch($color, text bad-news);
   }
 
-  .lego-text-input,
-  .lego-select,
-  .lego-textarea {
+  .#{$namespace}text-input,
+  .#{$namespace}select,
+  .#{$namespace}textarea {
     border-color: map-fetch($color, ui bad-news);
   }
 }
 
-.lego-form-warning {
-  .lego-label {
+.#{$namespace}form-warning {
+  .#{$namespace}label {
     color: map-fetch($color, text warning);
   }
 
-  .lego-text-input,
-  .lego-select,
-  .lego-textarea {
+  .#{$namespace}text-input,
+  .#{$namespace}select,
+  .#{$namespace}textarea {
     border-color: map-fetch($color, ui warning);
   }
 }
