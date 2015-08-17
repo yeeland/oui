@@ -51,7 +51,7 @@
   &--highlight {
     background-color: map-fetch($button, type highlight background);
     border-color: map-fetch($button, type highlight border);
-    color: map-fetch($color, text white);
+    color: map-fetch($color, text white) !important;
 
     &:hover {
       background: map-fetch($button, type highlight hover background);
@@ -67,7 +67,7 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($color, text white);
+      color: map-fetch($color, text white) !important;
     }
   }
 
@@ -110,7 +110,7 @@
   &--extra {
     background-color: map-fetch($button, type extra background);
     border-color: map-fetch($button, type extra border);
-    color: map-fetch($color, text white);
+    color: map-fetch($color, text white) !important;
 
     &:hover {
       background: map-fetch($button, type extra hover background);
@@ -126,7 +126,7 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($color, text white);
+      color: map-fetch($color, text white) !important;
     }
   }
 
@@ -149,7 +149,7 @@
   &--danger {
     background-color: map-fetch($button, type danger background);
     border-color: map-fetch($button, type danger border);
-    color: map-fetch($color, text white);
+    color: map-fetch($color, text white) !important;
 
     &:hover {
       background: map-fetch($button, type danger hover background);
@@ -165,7 +165,7 @@
     &:active,
     &:visited,
     &:focus {
-      color: map-fetch($color, text white);
+      color: map-fetch($color, text white) !important;
     }
   }
 
