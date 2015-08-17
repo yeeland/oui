@@ -6,7 +6,11 @@
   "main": "dist/js/lego.min.js",
   "dependencies": {
     "del": "^1.2.1",
-    "gulp-sass": "^2.0.2"
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.3.4"
   },
   "devDependencies": {
     "gulp": "^3.8.8",
