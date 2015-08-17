@@ -5,10 +5,14 @@
   "private": false,
   "main": "dist/js/lego.min.js",
   "dependencies": {
+    "del": "^1.2.1",
     "gulp-sass": "^2.0.2"
   },
   "devDependencies": {
     "gulp": "^3.8.8",
+    "eslint": "~0.21.2",
+    "gulp-babel": "^5.2.0",
+    "gulp-eslint": "^1.0.0",
     "gulp-bump": "^0.3.1",
     "gulp-filter": "^2.0.2",
     "gulp-git": "^1.2.4",

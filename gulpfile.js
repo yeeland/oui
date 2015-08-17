@@ -1,26 +1,27 @@
-var bump        = require('gulp-bump'),
-    filter      = require('gulp-filter'),
-    git         = require('gulp-git'),
-    gulp        = require('gulp'),
-    gutil       = require('gulp-util'),
-    notify      = require('gulp-notify'),
-    svgSymbols  = require('gulp-svg-symbols'),
-    scsslint    = require('gulp-scss-lint'),
-    symlink     = require('gulp-symlink'),
-    sass        = require('gulp-sass'),
-    path        = require("path"),
-    tagVersion  = require('gulp-tag-version');
+var bump = require('gulp-bump');
+var del = require('del');
+var filter = require('gulp-filter');
+var git = require('gulp-git');
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var notify = require('gulp-notify');
+var svgSymbols = require('gulp-svg-symbols');
+var scsslint = require('gulp-scss-lint');
+var symlink = require('gulp-symlink');
+var sass = require('gulp-sass');
+var path = require('path');
+var tagVersion = require('gulp-tag-version');
 
 var paths = {
   // Limiting linter to first-part directories.
-  'styles' : [
+  'styles': [
       'src/core/**/*.scss',
       '!src/core/library/**/*.scss',
   ],
-  svgSource : 'src/img/svg-icons/*.svg',
-  svgDest : 'dist/img/',
+  svgSource: 'src/img/svg-icons/*.svg',
+  svgDest: 'dist/img/',
   css: './dist/css/',
-  core: './src/core/core.scss'
+  core: './src/core/core.scss',
 };
 
 
@@ -54,11 +55,11 @@ function increaseVersion(importance) {
 
 // Creates SVG sprite and demo page.
 // gulp svg
-gulp.task('svg', function () {
+gulp.task('svg', function() {
   return gulp.src(paths.svgSource)
     .pipe(svgSymbols({
-      title:      false,
-      templates: ['default-svg', 'default-demo']
+      title: false,
+      templates: ['default-svg', 'default-demo'],
     }))
     .pipe(gulp.dest(paths.svgDest));
 });
@@ -66,7 +67,7 @@ gulp.task('svg', function () {
 gulp.task('sass', function() {
   gulp.src(paths.core)
     .pipe(sass({
-      errLogToConsole: true
+      errLogToConsole: true,
     }))
     .pipe(gulp.dest(paths.css));
 });
@@ -77,16 +78,16 @@ gulp.task('lint', function() {
   gulp.src(paths.styles)
     .pipe(scsslint({
       'bundleExec': true,
-      'config': '.scss-lint.yml'
+      'config': '.scss-lint.yml',
     }))
     .pipe(scsslint.failReporter());
 });
 
 // Symlink the .pre-commit file.
-gulp.task('hook', function () {
+gulp.task('hook', function() {
   return gulp.src('.pre-commit')
     .pipe(symlink('.git/hooks/pre-commit', {
-      force: true
+      force: true,
     }));
 });
 
@@ -106,6 +107,11 @@ gulp.task('feature', function() {
 // Bumps version from v0.2.1 to v1.0.0
 gulp.task('release', function() {
   return increaseVersion('major');
+});
+
+// Clean up built js files
+gulp.task('clean', function(cb) {
+  del('dist', cb);
 });
 
 gulp.task('default');
