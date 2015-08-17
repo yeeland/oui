@@ -1,84 +1,7 @@
 // ---
 // title: Buttons
-// description: These are the default button styles.
+// description: These are the default button styles. `!important` is used on colors so override default colors.
 // ---
-
-// ### Button Row Left
-
-// <div class="example language-html">
-//   <div class="lego-button-row--left">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
-// </div>
-
-// ### Button Row Center
-
-// <div class="example html">
-//   <div class="lego-button-row--center">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
-// </div>
-
-// ### Button Row Right
-
-// <div class="example html">
-//   <div class="lego-button-row--right">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--danger">Button</button>
-//   </div>
-// </div>
-
-// ### Button Small
-
-// <div class="example html">
-//   <div class="lego-button-row--left">
-//     <button class="lego-button lego-button--small">Button</button>
-//     <button class="lego-button lego-button--small lego-button--brand">Button</button>
-//     <button class="lego-button lego-button--small lego-button--highlight">Button</button>
-//     <button class="lego-button lego-button--small lego-button--danger">Button</button>
-//   </div>
-// </div>
-
-// ### Button Full
-
-// <div class="example html">
-//     <button class="lego-button lego-button--brand lego-button--full">Button</button>
-// </div>
-
-// ### Full Spread Buttons
-
-// <div class="example html">
-//   <div class="lego-grid lego-grid--gutter">
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
-//     </div>
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
-//     </div>
-//     <div class="lego-grid__cell">
-//         <button class="lego-button lego-button--brand lego-button--full">Button</button>
-//     </div>
-//   </div>
-// </div>
-
-// ### Button Disabled
-
-// <div class="example html">
-//   <div class="lego-button-row--left">
-//     <button class="lego-button lego-button--disabled">Button</button>
-//     <button class="lego-button lego-button--brand lego-button--disabled">Button</button>
-//   </div>
-// </div>
-
-// [---]
 
 // ### Button Variables
 // Shadows for buttons.
@@ -104,18 +27,18 @@
   // Unique styles for the base button start here.
   background-color: map-fetch($button, type base background);
   border-color: map-fetch($button, type base border);
-  color: map-fetch($button, type base color);
+  color: map-fetch($button, type base color) !important;
 
   &:hover {
     background: map-fetch($button, type base hover background);
     border-color: map-fetch($button, type base hover border);
-    color: map-fetch($button, type base hover color);
+    color: map-fetch($button, type base hover color) !important;
   }
 
   &:active {
     background: map-fetch($button, type base active background);
     border-color: map-fetch($button, type base active border);
-    color: map-fetch($button, type base active color);
+    color: map-fetch($button, type base active color) !important;
   }
 
   &:hover,
@@ -151,36 +74,36 @@
   &--outline {
     background-color: map-fetch($button, type outline background);
     border-color: map-fetch($button, type outline border);
-    color: map-fetch($button, type outline color);
+    color: map-fetch($button, type outline color) !important;
 
     &:hover {
       background: map-fetch($button, type outline hover background);
       border-color: map-fetch($button, type outline hover border);
-      color: map-fetch($button, type outline hover color);
+      color: map-fetch($button, type outline hover color) !important;
     }
 
     &:active {
       background: map-fetch($button, type outline active background);
       border-color: map-fetch($button, type outline active border);
-      color: map-fetch($button, type outline active color);
+      color: map-fetch($button, type outline active color) !important;
     }
   }
 
   &--outline-reverse {
     background-color: map-fetch($button, type outline-reverse background);
     border-color: map-fetch($button, type outline-reverse border);
-    color: map-fetch($button, type outline-reverse color);
+    color: map-fetch($button, type outline-reverse color) !important;
 
     &:hover {
       background: map-fetch($button, type outline-reverse hover background);
       border-color: map-fetch($button, type outline-reverse hover border);
-      color: map-fetch($button, type outline-reverse hover color);
+      color: map-fetch($button, type outline-reverse hover color) !important;
     }
 
     &:active {
       background: map-fetch($button, type outline-reverse active background);
       border-color: map-fetch($button, type outline-reverse active border);
-      color: map-fetch($button, type outline-reverse active color);
+      color: map-fetch($button, type outline-reverse active color) !important;
     }
   }
 
@@ -210,7 +133,7 @@
   &--dismiss {
     background-color: map-fetch($button, type dismiss background);
     border-color: map-fetch($button, type dismiss border);
-    color: map-fetch($button, type dismiss color);
+    color: map-fetch($button, type dismiss color) !important;
 
     &:hover {
       background: map-fetch($button, type dismiss hover background);
@@ -291,7 +214,7 @@
     box-shadow: none;
     background-color: map-fetch($button, type disabled background);
     border-color: map-fetch($button, type disabled border);
-    color: map-fetch($button, type disabled color);
+    color: map-fetch($button, type disabled color) !important;
 
     &.lego-button--dismiss {
       background-color: map-fetch($button, type dismiss background);
