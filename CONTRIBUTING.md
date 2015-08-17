@@ -18,9 +18,9 @@
 
   Where `Importance` is:
 
-  * Patch
-  * Feature
-  * Release
+  * Patch - when you make backwards-compatible bug fixes
+  * Feature - when you add functionality in a backwards-compatible manner
+  * Release - when you make incompatible API changes
 
   GitHub issue number is the number of the GitHub issue, if applicable, preceded
   by a `#`.
