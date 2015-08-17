@@ -8,6 +8,13 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
 
+### Changed
+- [Release] Major refactor of button styles and class names. New available class names are '.lego-button--highlight', '.lego-button--outline', '.lego-button--outline-reverse', '.lego-button--extra', '.lego-button--dismiss'. '.lego-button--brand' has been deprecated. Useage for classes to follow shortly. (#92) (#85) (#74)
+- [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
+
+### Removed
+- [Patch] Remove old gitignore targets from js days. (#97)
+
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
 - [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
