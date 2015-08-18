@@ -119,7 +119,7 @@
     "no-undefined": 0,
     "no-unused-vars": [1, {"vars": "local", "args": "none"}],
     "no-use-before-define": 0,
-    "indent": [1, 2, {"indentSwitchCase": true}],
+    "indent": [1, 2, {"SwitchCase": 1}],
     "brace-style": [1, "1tbs", {"allowSingleLine": true}],
     "camelcase": 0,
     "comma-spacing": 1,

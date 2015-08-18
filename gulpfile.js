@@ -134,7 +134,8 @@ gulp.task('js', function() {
 
 // Setup watch task for Javascript
 gulp.task('watch:js', function() {
-  return gulp.watch(paths.jsSource, ['lint:js', 'js']);
+  // return gulp.watch(paths.jsSource, ['lint:js', 'js']);
+  return gulp.watch(paths.jsSource, ['js']);
 });
 
 // Release breaking LEGO change
@@ -148,4 +149,5 @@ gulp.task('clean', function(cb) {
   del('dist', cb);
 });
 
-gulp.task('default');
+// gulp.task('default', ['sass', 'js']);
+gulp.task('default', ['sass']);
