@@ -9,8 +9,7 @@ import BaseController from './base';
 export default class Accordion extends BaseController {
   constructor(){
     super();
-    this.show = true;
-    this.selector = "accordion";
+    this.selector = 'accordion';
     this.service = new AccordionService();
   }
 
