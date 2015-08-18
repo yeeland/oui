@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+- [Patch] Bump font weight for .weight--bold class to 600 so its the same as a <b> tag.
 
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
