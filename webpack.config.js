@@ -6,12 +6,13 @@ module.exports = {
     output: {
         path: jsDist,
         filename: 'lego.debug.js',
-        sourceMapFilename: 'lego.js.map',
     },
     module: {
         loaders: [
           {
-            test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader',
+            test: /\.js$/, exclude: /node_modules/,
+            loader: 'babel-loader',
+            sourceMaps: true,
           },
         ],
     },
