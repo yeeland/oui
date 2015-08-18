@@ -220,3 +220,8 @@
 .color--bad-news {
   color: map-fetch($color, text bad-news) !important;
 }
+
+%color--charcoal,
+.color--charcoal {
+  color: map-fetch($color, text charcoal) !important;
+}

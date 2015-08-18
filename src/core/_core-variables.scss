@@ -12,6 +12,7 @@ $base-white                  : #FFF;
 
 $root-color: (
   grey-85                    : tint($base-black, 15%),
+  grey-78                    : tint($base-black, 22%),
   grey-50                    : tint($base-black, 50%),
   grey-40                    : tint($base-black, 60%),
   grey-35                    : tint($base-black, 65%),
@@ -38,6 +39,7 @@ $color: (
     light                    : map-fetch($root-color, grey-06),
     base                     : map-fetch($root-color, grey-12),
     medium                   : map-fetch($root-color, grey-40),
+    charcoal                 : map-fetch($root-color, grey-78),
     dark                     : map-fetch($root-color, grey-85),
     brand                    : map-fetch($root-color, brand),
     brand-light              : map-fetch($root-color, brand-light),
@@ -61,6 +63,7 @@ $color: (
     light                    : map-fetch($root-color, grey-06),
     muted                    : map-fetch($root-color, grey-35),
     medium                   : map-fetch($root-color, grey-50),
+    charcoal                 : map-fetch($root-color, grey-78),
     black                    : $base-black,
     brand                    : map-fetch($root-color, brand),
     brand-dark               : map-fetch($root-color, brand-dark),
@@ -77,6 +80,7 @@ $color: (
     light                    : map-fetch($root-color, grey-25),
     muted                    : map-fetch($root-color, grey-35),
     medium                   : map-fetch($root-color, grey-50),
+    charcoal                 : map-fetch($root-color, grey-78),
     dark                     : map-fetch($root-color, grey-85),
     brand                    : map-fetch($root-color, brand),
     brand-dark               : map-fetch($root-color, brand-dark),

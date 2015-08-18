@@ -21,6 +21,10 @@
   background-color: map-fetch($color, background medium) !important;
 }
 
+.background--charcoal {
+  background-color: map-fetch($color, background charcoal) !important;
+}
+
 .background--brand {
   background-color: map-fetch($color, background brand) !important;
 }
