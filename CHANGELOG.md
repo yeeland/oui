@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+
+## [1.0.0][1.0.0] - 2015-08-18
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
 
@@ -12,12 +14,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Major refactor of button styles and class names. New available class names are '.lego-button--highlight', '.lego-button--outline', '.lego-button--outline-reverse', '.lego-button--extra', '.lego-button--dismiss'. '.lego-button--brand' has been deprecated. Useage for classes to follow shortly. (#92) (#85) (#74)
 - [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
 - [Patch] Removed concatenation from the `@font-face` URL strings because it was breaking the SCSS parser used for documentation generation.
+- [Release] Renaming sizing trumps to be BEM consistent. (#69)
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
-
-### Changed
-- [Release] Renaming sizing trumps to be BEM consistent. (#69)
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
@@ -52,6 +52,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v1.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
+[1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0

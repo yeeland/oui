@@ -29,7 +29,7 @@
 
 1. Open the `CHANGELOG.md` and look at the "Unreleased" contributions.
 2. `git checkout master` and run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue.
-3. Update the `CHANGELOG.md` to reflect the new release.
+3. Update the `CHANGELOG.md` to reflect the new release and commit the change on `master`.
 4. Push the changes to `master` with `git push` and `git push --tags`.
 5. [Create a new release on GitHub](https://github.com/optimizely/lego/releases/new) using the version number gulp generated. Paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes.
 6. Run `npm publish ./` to push the version to NPM. You must be a LEGO contributor on NPM to do this.
