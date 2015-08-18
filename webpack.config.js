@@ -2,7 +2,7 @@ var path = require('path');
 var jsDist = __dirname + '/dist/js';
 
 module.exports = {
-    entry: './js/main.js',
+    entry: './src/js/main.js',
     output: {
         path: jsDist,
         filename: 'lego.debug.js',
