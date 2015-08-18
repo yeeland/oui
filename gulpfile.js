@@ -1,15 +1,10 @@
 var bump = require('gulp-bump');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
-var del = require('del');
 var eslint = require('gulp-eslint');
 var filter = require('gulp-filter');
 var git = require('gulp-git');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var notify = require('gulp-notify');
 var scsslint = require('gulp-scss-lint');
-var sourcemaps = require('gulp-sourcemaps');
 var svgSymbols = require('gulp-svg-symbols');
 var symlink = require('gulp-symlink');
 var sass = require('gulp-sass');
@@ -115,27 +110,6 @@ gulp.task('patch', function() {
 // Bumps version from v0.1.1 to v0.2.0
 gulp.task('feature', function() {
   return increaseVersion('minor');
-});
-
-// LEGO build task for JS.
-gulp.task('js', function() {
-  return gulp.src(paths.jsSource)
-  .pipe(sourcemaps.init())
-  .pipe(babel({
-    modules: 'common',
-  }))
-  .on('error', notify.onError({
-        message: 'Error: <%= error.message %>',
-  }))
-  .pipe(concat('lego.debug.js'))
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.jsDist));
-});
-
-// Setup watch task for Javascript
-gulp.task('watch:js', function() {
-  // return gulp.watch(paths.jsSource, ['lint:js', 'js']);
-  return gulp.watch(paths.jsSource, ['js']);
 });
 
 // Release breaking LEGO change

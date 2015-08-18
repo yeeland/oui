@@ -5,7 +5,8 @@
   "private": false,
   "main": "dist/js/lego.min.js",
   "dependencies": {
-    "gulp-sass": "^2.0.2"
+    "gulp-sass": "^2.0.2",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "babel-loader": "^5.3.2",
@@ -20,6 +21,7 @@
     "gulp-symlink": "^2.1.0",
     "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.0",
+    "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "webpack": "^1.11.0"
   },

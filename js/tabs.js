@@ -1,15 +1,16 @@
-import $ from 'jquery';
+import BaseComponent from './base';
 
-export class Tab {
-  constructor(elem) {
-    this.elem = $(elem);
-    this.selector = '[oui-component="tab-container"]';
-    this.bind();
+export default class Tab extends BaseComponent {
+  constructor() {
+    super();
+    this.contentSelector = '[oui-component="tabs"]';
+    this.tabSelector = '[oui-component="tabbedContent"]';
   }
   show() {
 
   }
-  bind() {
-
+  init() {
+    this.contentElem = $(this.contentSelector);
+    this.tabElem = $(this.tabSelector);
   }
 }
