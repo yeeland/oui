@@ -134,7 +134,7 @@ $button: (
 
   size: (
     base: (
-      height                 : 32px,
+      height                 : 34px,
       font-size              : 13px,
       padding                : 0 10px,
       font-weight            : 400,
@@ -151,105 +151,40 @@ $button: (
 
   type: (
     base: (
-      background             : #EFF0F2,
-      border                 : #E5E5E9,
-      color                  : #3B5871,
+      background             : #EEE,
       hover:(
-        background           : #EFF0F2,
-        border               : #E5E5E9,
-        color                : #64738A,
+        background           : #DDD
       ),
       active:(
-        background           : #E5E5E9,
-        border               : #DADBDB,
-        color                : #00415D
+        background           : #CCC
+      )
+    ),
+    brand: (
+      background             : #147CC5,
+      hover:(
+        background           : #1270B1
+      ),
+      active:(
+        background           : #08568B
       )
     ),
     highlight: (
-      background             : #14A54A,
-      border                 : #088E3A,
+      background             : #A1CD1E,
       hover:(
-        background           : #14B54E,
-        border               : #14A54A,
+        background           : #91B81C
       ),
       active:(
-        background           : #14904A,
-        border               : #138B47,
-      )
-    ),
-    outline: (
-      background             : transparent,
-      border                 : #00415D,
-      color                  : #00415D,
-      hover:(
-        background           : transparent,
-        border               : #8D96A8,
-        color                : #64738A,
-      ),
-      active:(
-        background           : transparent,
-        border               : #00415D,
-        color                : #00415D,
-      )
-    ),
-    outline-reverse: (
-      background             : transparent,
-      border                 : #FFF,
-      color                  : #FFF,
-      hover:(
-        background           : transparent,
-        border               : #E0E1E5,
-        color                : #E5E5E9,
-      ),
-      active:(
-        background           : transparent,
-        border               : #FFF,
-        color                : #FFF,
-      )
-    ),
-    extra: (
-      background             : #3B5871,
-      border                 : #00415D,
-      hover:(
-        background           : #64738A,
-        border               : #2C4F5E,
-      ),
-      active:(
-        background           : #00415D,
-        border               : #00415D,
-      )
-    ),
-    dismiss: (
-      background             : transparent,
-      border                 : transparent,
-      color                  : #00415D,
-      hover:(
-        background           : transparent,
-        border               : transparent,
-        color                : #00415D,
-      ),
-      active:(
-        background           : transparent,
-        border               : transparent,
-        color                : #00415D,
+        background           : #719505
       )
     ),
     danger: (
-      background             : #E1364B,
-      border                 : #AC192B,
+      background             : #AA280D,
       hover:(
-        background           : #EF495D,
-        border               : #AC192B,
+        background           : #991E04
       ),
       active:(
-        background           : #C52D42,
-        border               : #8F192B,
+        background           : #641100
       )
-    ),
-    disabled: (
-      background             : #EFF0F2,
-      border                 : #E5E5E9,
-      color                  : map-fetch($color, text muted)
     )
   )
 );
