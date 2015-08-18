@@ -5,5 +5,7 @@ window.jQuery = jQuery;
 
 import App from './app/app';
 
-var app = new App();
-// app.run();
+let app = new App();
+$(document).ready(() => {
+  app.run();
+});

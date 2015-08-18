@@ -3,17 +3,16 @@
  *
  * @author Cheston Lee
  */
-export class AccordionService {
+export default class AccordionService {
   constructor() {
     this.ACTIVE_ACCORDION_CLASS = 'accordion__item--active';
   }
 
-  activate(el, target) {
-    let $el = $(el);
+  activate($el, target) {
     let $target = $(target);
 
     let contentPane = $target.parent('.accordion__item');
-    let currentActive = $el.find('.' + ACTIVE_ACCORDION_CLASS);
+    let currentActive = $el.find(`.${this.ACTIVE_ACCORDION_CLASS}`);
     let contentHeight = currentActive.outerHeight();
 
     contentPane.animate({
@@ -28,15 +27,15 @@ export class AccordionService {
     }, {
       duration: 200,
       queue: false,
-      complete: function() {
+      complete: () => {
         contentPane.parent().children().css('height', '');
       }
     });
 
     if (currentActive.length > 0) {
-      currentActive.removeClass(ACTIVE_ACCORDION_CLASS);
+      currentActive.removeClass(this.ACTIVE_ACCORDION_CLASS);
     }
 
-    $target.parent().addClass(ACTIVE_ACCORDION_CLASS);
+    $target.parent().addClass(this.ACTIVE_ACCORDION_CLASS);
   }
 }

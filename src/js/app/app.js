@@ -2,6 +2,10 @@ import Accordion from './components/accordion';
 
 export default class App {
   constructor() {
-    debugger
+  }
+
+  run() {
+    var accordion = new Accordion();
+    accordion.bind();
   }
 }

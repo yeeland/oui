@@ -4,19 +4,22 @@
  * @author Cheston Lee
  */
 import AccordionService from '../services/accordion';
+import BaseController from './base';
 
-export class Accordion {
+export default class Accordion extends BaseController {
   constructor(){
+    super();
     this.show = true;
+    this.selector = "accordion";
     this.service = new AccordionService();
   }
 
   bind() {
-    let $el = $(this.el);
+    let $el = $(`[${this.attribute}=${this.selector}]`);
 
     $el.find('> li > a').on('click', (e) => {
       e.preventDefault();
-      this.service.activate(this.el, e.target);
+      this.service.activate($el, e.target);
     });
   }
 }
