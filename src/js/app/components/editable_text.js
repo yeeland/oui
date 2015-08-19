@@ -69,32 +69,85 @@ define(function() {
     _set: function () {
       this.vm.$set(this.key, this.el[attrToChange]);
     },
-
-    update: function (value, init) {
-      // sync back inline value if initial data is undefined
-      if (init && value === undefined) {
-        return this._set();
-      }
-
-      this.el[attrToChange] = !_.isString(value) ? '' : value;
-
-      // Since updates are async, we need to reset the position of the cursor after it fires
-      // v-model tries to do this with setTimeout(cb, 0) but if there's a filter and you type
-      // too fast, there's a race condition where the timeout can fire before
-      // update, moving the cursor back to the front. Having this here guarantees the cursor
-      // is reset after update.
-      // See the comment in self.set for additional context
-      if (this._savedSelection) {
-        selectionHelper.restoreSelection(this.el, this._savedSelection);
-      }
-    },
-
-    unbind: function () {
-      var el = this.el;
-      el.removeEventListener('input', this.onInput);
-      el.removeEventListener('keyup', this.onEsc);
-      el.removeEventListener('keydown', this.onEnter);
-      el.removeEventListener('focus', this.onFocus);
-    }
+}
   };
 });
+
+import ContentEditableSelection from '../utils/contenteditable_selection';
+
+export default class EditableText {
+  constructor() {
+    this.selectionHelper = new ContentEditableSelection();
+
+    this.ESCAPE_KEY = 27;
+    this.ENTER_KEY = 13;
+    this.attrToChange = 'textContent';
+    this.selector = 'editable_text';
+  }
+
+  bind() {
+    let $el = $(`[${this.attribute}=${this.selector}]`);
+
+    // Apply LEGO ClassName
+    $el.addClass('editable');
+
+    // On escape, reset to the initial value and deselect (blur)
+    this.onEsc = (e) => {
+      if (e.keyCode === this.ESCAPE_KEY) {
+        $el.attr(attrToChange, this.initialValue || '');
+        this._set();
+        $el.get().blur();
+      }
+    };
+    $el.on('keyup', this.onEsc);
+
+    this.onEnter = (e) => {
+      if (e.keyCode === this.ENTER_KEY) {
+        e.preventDefault();
+        $el.get().blur();
+      }
+    };
+    $el.on('keydown', this.onEnter);
+
+    // On focus, store the initial value so it can be reset on escape
+    this.onFocus = () => {
+      this.initialValue = $el.attr(attrToChange);
+    };
+    $el.on('focus', this.onFocus);
+
+    this.onInput = () => {
+      this._savedSelection = this.selectionHelper.saveSelection($el.get());
+
+      this._set();
+    };
+
+    $el.on('input', this.onInput);
+  }
+
+  unbind() {
+    let $el = $(`[${this.attribute}=${this.selector}]`);
+    $el.removeEventListener('input', this.onInput);
+    $el.removeEventListener('keyup', this.onEsc);
+    $el.removeEventListener('keydown', this.onEnter);
+    $el.removeEventListener('focus', this.onFocus)
+  }
+
+  update(value, init) {
+    let $el = $(`[${this.attribute}=${this.selector}]`);
+    // sync back inline value if initial data is undefined
+    if (init && value === undefined) {
+      return this._set();
+    }
+
+    $el.attr(attrToChange, (!_.isString(value) ? '' : value));
+
+    if (this._savedSelection) {
+      this.selectionHelper.restoreSelection($el, this._savedSelection);
+    }
+  }
+
+  _set() {
+    let $el = $(`[${this.attribute}=${this.selector}]`);
+    this.vm.$set(this.key, $el.attr(attrToChange));
+  }
+}

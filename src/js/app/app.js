@@ -1,14 +1,20 @@
 import Accordion from './components/accordion';
 import Dropdown from './components/dropdown';
+import Disclose from './components/disclose';
+import Poptip from './components/poptip';
 
 export default class App {
   constructor() {
   }
 
   run() {
-    var accordion = new Accordion();
+    let accordion = new Accordion();
     accordion.bind();
-    var dropdown = new Dropdown();
+    let dropdown = new Dropdown();
     dropdown.bind();
+    let disclose = new Disclose();
+    disclose.bind();
+    let poptip = new Poptip();
+    poptip.bind();
   }
 }

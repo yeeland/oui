@@ -2,34 +2,34 @@
  * Directive for simple disclosures
  *
  * @author Tom Genoni
+ * @author Cheston Lee(cheston@optimizely.com)
  */
-define(function() {
+import BaseController from './base';
 
-  var ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
-
-  function discloseActivate(el, target) {
-    var $target = $(target);
-
-    var contentPane = $target.parent('.lego-disclose__item');
-
-    if ( contentPane.hasClass(ACTIVE_DISCLOSE_CLASS) ) {
-      contentPane.removeClass(ACTIVE_DISCLOSE_CLASS);
-    } else {
-      contentPane.addClass(ACTIVE_DISCLOSE_CLASS);
-    }
+export default class Disclose extends BaseController {
+  constructor() {
+    super();
+    this.ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
+    this.selector = 'disclose';
   }
 
-  return {
-    data: {
-      show: true
-    },
-    bind: function() {
-      var $el = $(this.el);
+  bind() {
+    let $el = $(`[${this.attribute}=${this.selector}]`);
+    $el.find('> a').on('click', (e) => {
+      e.preventDefault();
+      this._discloseActivate($el, e.target);
+    });
+  }
 
-      $el.find('> a').on('click', function(e) {
-        e.preventDefault();
-        discloseActivate(this.el, e.target);
-      }.bind(this));
+  _discloseActivate($el, target) {
+    let $target = $(target);
+
+    let contentPane = $target.parent('.lego-disclose__item');
+
+    if ( contentPane.hasClass(this.ACTIVE_DISCLOSE_CLASS) ) {
+      contentPane.removeClass(this.ACTIVE_DISCLOSE_CLASS);
+    } else {
+      contentPane.addClass(this.ACTIVE_DISCLOSE_CLASS);
     }
-  };
-});
+  }
+}
