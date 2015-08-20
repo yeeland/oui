@@ -5,8 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
-- [Patch] Add "Charcoal" color (#383838).
-- [Patch] Bump font weight for .weight--bold class to 600 so its the same as a <b> tag.
+### Added
+- [Patch] Add "Charcoal" color `#383838`.
+
+### Removed
+- [Release] Remove `.lego-tag` from Core. (#72)
+
+### Changed
+- [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
 
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
@@ -23,6 +29,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
+>>>>>>> master
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
@@ -61,4 +68,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
-[1.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
+[2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
