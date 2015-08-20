@@ -68,4 +68,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
-[1.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
+[2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
