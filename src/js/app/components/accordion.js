@@ -6,19 +6,22 @@
 import AccordionService from '../services/accordion';
 import BaseController from './base';
 
+const NAME = 'accordion';
+
 export default class Accordion extends BaseController {
-  constructor(){
-    super();
-    this.selector = 'accordion';
+  constructor(elem){
+    super(elem);
     this.service = new AccordionService();
   }
 
-  bind() {
-    let $el = $(`[${this.attribute}=${this.selector}]`);
+  static getFullSelectorString() {
+    return `[${this.getComponentAttribute()}=${NAME}]`;
+  }
 
-    $el.find('> li > a').on('click', (e) => {
+  bind() {
+    this.$elem.find('> li > a').on('click', (e) => {
       e.preventDefault();
-      this.service.activate($el, e.target);
+      this.service.activate(this.$elem, e.target);
     });
   }
 }

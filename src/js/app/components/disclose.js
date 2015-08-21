@@ -6,30 +6,34 @@
  */
 import BaseController from './base';
 
+const NAME = 'disclose';
+const ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
+const PARENT_DISCLOSE_SELECTOR = '.lego-disclose__item';
+
 export default class Disclose extends BaseController {
-  constructor() {
-    super();
-    this.ACTIVE_DISCLOSE_CLASS = 'lego-disclose__item--active';
-    this.selector = 'disclose';
+  constructor(elem) {
+    super(elem);
+  }
+
+  static getFullSelectorString() {
+    return `[${this.getComponentAttribute()}=${NAME}]`;
   }
 
   bind() {
-    let $el = $(`[${this.attribute}=${this.selector}]`);
-    $el.find('> a').on('click', (e) => {
+    this.$elem.find('> a').on('click', (e) => {
       e.preventDefault();
-      this._discloseActivate($el, e.target);
+      this._discloseActivate(e.target);
     });
   }
 
-  _discloseActivate($el, target) {
+  _discloseActivate(target) {
     let $target = $(target);
+    let contentPane = $target.parent(PARENT_DISCLOSE_SELECTOR);
 
-    let contentPane = $target.parent('.lego-disclose__item');
-
-    if ( contentPane.hasClass(this.ACTIVE_DISCLOSE_CLASS) ) {
-      contentPane.removeClass(this.ACTIVE_DISCLOSE_CLASS);
+    if (contentPane.hasClass(ACTIVE_DISCLOSE_CLASS) ) {
+      contentPane.removeClass(ACTIVE_DISCLOSE_CLASS);
     } else {
-      contentPane.addClass(this.ACTIVE_DISCLOSE_CLASS);
+      contentPane.addClass(ACTIVE_DISCLOSE_CLASS);
     }
   }
 }

@@ -29,20 +29,24 @@
 import BaseController from './base';
 import DropdownService from '../services/dropdown';
 
+const NAME = 'dropdown';
+const ACTIVATOR_SELECTOR = '[data-show-dropdown]';
+const TOGGLE_SELECTOR = '[data-toggle-dropdown]';
+const HIDE_SELECTOR = '[data-hide-dropdown]';
+
 export default class Dropdown extends BaseController {
-  constructor() {
-    super();
-    this.ACTIVATOR_SELECTOR = '[data-show-dropdown]';
-    this.TOGGLE_SELECTOR = '[data-toggle-dropdown]';
-    this.HIDE_SELECTOR = '[data-hide-dropdown]';
-    this.selector = 'dropdown';
+  constructor(elem) {
+    super(elem);
     this.service = new DropdownService();
   }
 
   bind() {
-    let $el = $(`[${this.attribute}=${this.selector}]`);
-    $el.on('click', this.ACTIVATOR_SELECTOR, this.service.show.bind(this.service, $el));
-    $el.on('click', this.TOGGLE_SELECTOR, this.service.toggle.bind(this.service, $el));
-    $el.on('click', this.HIDE_SELECTOR, this.service.hide.bind(this.service, $el));
+    this.$elem.on('click', ACTIVATOR_SELECTOR, this.service.show.bind(this.service, this.$elem));
+    this.$elem.on('click', TOGGLE_SELECTOR, this.service.toggle.bind(this.service, this.$elem));
+    this.$elem.on('click', HIDE_SELECTOR, this.service.hide.bind(this.service, this.$elem));
+  }
+
+  static getFullSelectorString() {
+    return `[${this.getComponentAttribute()}=${NAME}]`;
   }
 }

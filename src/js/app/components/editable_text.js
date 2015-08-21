@@ -150,4 +150,13 @@ export default class EditableText {
     let $el = $(`[${this.attribute}=${this.selector}]`);
     this.vm.$set(this.key, $el.attr(attrToChange));
   }
+
+  static getSelector() {
+    return 'editable_text';
+  }
+
+  static getFullSelectorString() {
+    let selector = this.getSelector();
+    return `[${this.attribute}=${selector}]`;
+  }
 }

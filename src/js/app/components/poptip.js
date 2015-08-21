@@ -5,23 +5,24 @@
  */
 import BaseController from './base';
 
+const NAME = 'poptip';
+const TEMPLATE = '<div class="lego-pop-tip"></div>';
+const ARROW_CLASS_TEMPLATE = 'lego-pop-tip--arrow-';
+
+
 export default class Poptip extends BaseController {
-  constructor() {
-    super();
-    this.tmpl = '<div class="lego-pop-tip"></div>';
-    this.ARROW_CLASS_TEMPLATE = 'lego-pop-tip--arrow-';
+  constructor(elem) {
+    super(elem);
     this.tip = null;
-    this.selector = 'poptip';
   }
 
   bind() {
-    let $el = $(`[${this.attribute}=${this.selector}]`);
-    let direction = $el.attr('data-dir');
-    let content = $el.attr('data-content');
+    let direction = this.$elem.attr('data-dir');
+    let content = this.$elem.attr('data-content');
     let arrowLocation = this._getArrowDirection(direction);
 
-    this.tip = $(this.tmpl);
-    this.tip.addClass(this.ARROW_CLASS_TEMPLATE + arrowLocation);
+    this.tip = $(TEMPLATE);
+    this.tip.addClass(ARROW_CLASS_TEMPLATE + arrowLocation);
     this.tip.html(content);
 
     this.tip.css({
@@ -31,20 +32,18 @@ export default class Poptip extends BaseController {
       'left' : 0
     });
 
-    $el.on('mouseenter', () => {
-      let $el = $(`[${this.attribute}=${this.selector}]`);
-
+    this.$elem.on('mouseenter', () => {
       //Place the this.tip in the DOM to measure it
       this.tip.css({
         'display' : 'block',
         'visibility' : 'hidden'
       });
 
-      var offset = $el.offset();
+      let offset = this.$elem.offset();
 
       //Determine the size of the CSS arrow
-      var arrowWidth = parseInt(window.getComputedStyle(this.tip.get(0), ':before').getPropertyValue('width'));
-      var arrowHeight = parseInt(window.getComputedStyle(this.tip.get(0), ':before').getPropertyValue('height'));
+      let arrowWidth = parseInt(window.getComputedStyle(this.tip.get(0), ':before').getPropertyValue('width'));
+      let arrowHeight = parseInt(window.getComputedStyle(this.tip.get(0), ':before').getPropertyValue('height'));
 
       // Hack for FF/IE that reports computed values as 'auto' not px values and divide by 2 to get the actual offset
       arrowWidth = (isNaN(arrowWidth) ? '12' : arrowWidth) / 2;
@@ -57,37 +56,37 @@ export default class Poptip extends BaseController {
       if (direction.indexOf('-') === -1) {
         switch(direction) {
           case 'right':
-            left += ($el.outerWidth(true) + arrowWidth);
-            top += (($el.outerHeight(true) / 2) - (this.tip.innerHeight() / 2));
+            left += (this.$elem.outerWidth(true) + arrowWidth);
+            top += ((this.$elem.outerHeight(true) / 2) - (this.tip.innerHeight() / 2));
             break;
           case 'left':
             left -= (this.tip.outerWidth(true) + arrowWidth);
-            top += (($el.outerHeight(true) / 2) - (this.tip.innerHeight() / 2));
+            top += ((this.$elem.outerHeight(true) / 2) - (this.tip.innerHeight() / 2));
             break;
           case 'top':
             top -= (this.tip.outerHeight(true)) + arrowHeight;
-            left += (($el.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
+            left += ((this.$elem.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
             break;
           case 'bottom':
-            top += $el.outerHeight(true) + arrowHeight;
-            left += (($el.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
+            top += this.$elem.outerHeight(true) + arrowHeight;
+            left += ((this.$elem.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
             break;
         }
       } else {
-        var parts = direction.split('-');
+        let parts = direction.split('-');
 
         if (parts[0] === 'top') {
           top -= (this.tip.outerHeight(true)) + arrowHeight;
         } else {
-          top += $el.outerHeight(true) + arrowHeight;
+          top += this.$elem.outerHeight(true) + arrowHeight;
         }
 
         switch(parts[1]) {
           case 'right':
-            left -= (this.tip.outerWidth(true) - $el.outerWidth(true));
+            left -= (this.tip.outerWidth(true) - this.$elem.outerWidth(true));
             break;
           case 'center':
-            left += (($el.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
+            left += ((this.$elem.outerWidth(true) / 2) - (this.tip.innerWidth() / 2));
             break;
         }
       }
@@ -99,18 +98,20 @@ export default class Poptip extends BaseController {
       });
     });
 
-    $el.on('mouseleave', () => {
+    this.$elem.on('mouseleave', () => {
       this.tip.hide();
     });
 
     $('body').append(this.tip);
-    debugger
   }
 
   unbind() {
-    let $el = $(`[${this.attribute}=${this.selector}]`);
-    $el.off('mouseenter mouseout');
+    this.$elem.off('mouseenter mouseout');
     this.tip.detach();
+  }
+
+  static getFullSelectorString() {
+    return `[${this.getComponentAttribute()}=${NAME}]`;
   }
 
   /**
@@ -124,8 +125,8 @@ export default class Poptip extends BaseController {
       return 'bottom-center';
     }
     // Create array of the direction.
-    var arrowParts = direction.split('-');
-    var arrowLocation = '';
+    let arrowParts = direction.split('-');
+    let arrowLocation = '';
 
     // We have to swap the text given in 'direction' so that the arrow class is correct.
     // Testing here to see if we have two values, e.g. 'top-left', if so only change the first.

@@ -8,13 +8,22 @@ export default class App {
   }
 
   run() {
-    let accordion = new Accordion();
-    accordion.bind();
-    let dropdown = new Dropdown();
-    dropdown.bind();
-    let disclose = new Disclose();
-    disclose.bind();
-    let poptip = new Poptip();
-    poptip.bind();
+    let components = [];
+    components.push(Accordion);
+    components.push(Disclose);
+    components.push(Dropdown);
+    components.push(Poptip);
+
+    this.bindComponents(components);
+  }
+
+  bindComponents(components) {
+    components.forEach((Component) => {
+      let refs = $(Component.getFullSelectorString());
+      refs.each(function() {
+        let comp = new Component(this);
+        comp.bind();
+      });
+    });
   }
 }
