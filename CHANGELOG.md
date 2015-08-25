@@ -13,6 +13,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Changed
 - [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
+- [Patch] Updated font styles for `.lego-table th`
 
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
