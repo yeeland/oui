@@ -4,12 +4,11 @@
  * @author Cheston Lee
  */
 
-define(function() {
+const ACTIVE_CLASS = 'tab-active';
+const TAB_RELATION_ATTR = 'oui-tab-related';
 
-  var service = {};
-
-  service.ACTIVE_CLASS = 'tab-active';
-  service.TAB_RELATION_ATTR = 'data-tab-related';
+export default class Tab {
+  constructor() {}
 
   /**
    * Take in a navigation element & tab content element
@@ -18,25 +17,23 @@ define(function() {
    * @param nav {HTMLElement} The <li> element representing the newly active tab
    * @param tab {HTMLElement} The <div> element representing the newly active tab content
    */
-  service.activate = function(nav, tab) {
-    var $nav = $(nav);
-    var $tab = $(tab);
+  static activate(nav, tab) {
+    let $nav = $(nav);
+    let $tab = $(tab);
 
-    if ($nav.hasClass(this.ACTIVE_CLASS)) {
+    if ($nav.hasClass(ACTIVE_CLASS)) {
       return;
     }
 
-    var currActiveNav = $nav.siblings('.' + this.ACTIVE_CLASS);
-    var currActiveTab = $tab.siblings('.' + this.ACTIVE_CLASS);
+    let currActiveNav = $nav.siblings('.' + ACTIVE_CLASS);
+    let currActiveTab = $tab.siblings('.' + ACTIVE_CLASS);
 
     if (currActiveNav.length === 1 && currActiveTab.length === 1) {
-      currActiveNav.removeClass(this.ACTIVE_CLASS);
-      currActiveTab.removeClass(this.ACTIVE_CLASS);
+      currActiveNav.removeClass(ACTIVE_CLASS);
+      currActiveTab.removeClass(ACTIVE_CLASS);
     }
 
-    $nav.addClass(this.ACTIVE_CLASS);
-    $tab.addClass(this.ACTIVE_CLASS);
-  };
-
-  return service;
-});
+    $nav.addClass(ACTIVE_CLASS);
+    $tab.addClass(ACTIVE_CLASS)
+  }
+}

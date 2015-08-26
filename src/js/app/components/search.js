@@ -2,20 +2,26 @@
  * Directive for clearing search inputs with close button.
  *
  * @author Tom Genoni
+ * @author Cheston Lee
  */
-define(function() {
-  var searchService = require('app/services/search');
 
-  return {
-    data: {
-      show: true
-    },
-    bind: function() {
-      var $el = $(this.el);
+import BaseController from './base';
+import SearchService from '../services/search';
 
-      $el.find('input').on('keyup', function(e) {
-        searchService.activate(this.el, e.target);
-      }.bind(this));
-    }
-  };
-});
+const NAME = 'search';
+
+export default class Search extends BaseController {
+  constructor(elem) {
+    super(elem);
+  }
+
+  bind() {
+    this.$elem.find('input').on('keyup', (e) => {
+      searchService.activate(this.el, e.target);
+    });
+  }
+
+  static getFullSelectorString() {
+    return `[${this.getComponentAttribute()}=${NAME}]`;
+  }
+}

@@ -2,19 +2,16 @@
  * Service for handle search filters
  *
  * @author Tom Genoni
+ * @author Cheston Lee
  */
 
-define(function() {
+const ACTIVE_SEARCH_CLASS = 'lego-search--active';
+const NAME = 'search';
 
-  var ACTIVE_SEARCH_CLASS = 'lego-search--active';
+export default class Search {
+  constructor() {}
 
-  function activate(el, target) {
-    var $target = $(target);
-
-    console.log($target);
+  activate(el, target) {
+    let $target = $(target);
   }
-
-  return {
-    activate: activate
-  };
-});
+}

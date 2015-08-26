@@ -2,6 +2,8 @@ import Accordion from './components/accordion';
 import Dropdown from './components/dropdown';
 import Disclose from './components/disclose';
 import Poptip from './components/poptip';
+import Search from './components/search';
+import Tab from './components/tab';
 
 export default class App {
   constructor() {
@@ -13,6 +15,8 @@ export default class App {
     components.push(Disclose);
     components.push(Dropdown);
     components.push(Poptip);
+    components.push(Search);
+    components.push(Tab);
 
     this.bindComponents(components);
   }

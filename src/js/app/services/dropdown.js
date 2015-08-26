@@ -4,11 +4,12 @@
  *
  * @author Cheston Lee(cheston@optimizely.com)
  */
+
+const SHOWN_CLASS = 'shown';
+const ESCAPE_KEY = 27;
+
 export default class Dropdown {
-  constructor() {
-    this.SHOWN_CLASS = 'shown';
-    this.ESCAPE_KEY = 27;
-  }
+  constructor() {}
 
   /**
    * Shows a dropdown
@@ -17,7 +18,7 @@ export default class Dropdown {
   show($el) {
     let eventNS = ".dropdown-" + (new Date()).valueOf();
 
-    $el.addClass(this.SHOWN_CLASS)
+    $el.addClass(SHOWN_CLASS)
       .data('eventNS', eventNS);
 
     $(document).on("click" + eventNS, (event) => {
@@ -27,7 +28,7 @@ export default class Dropdown {
     });
 
     $(document).on("keyup" + eventNS, (event) => {
-      if (event.keyCode === this.ESCAPE_KEY) {
+      if (event.keyCode === ESCAPE_KEY) {
         this.hide($el);
       }
     });
@@ -44,7 +45,7 @@ export default class Dropdown {
       $(document).off(eventNS);
       $el.removeData('eventNS');
     }
-    $el.removeClass(this.SHOWN_CLASS);
+    $el.removeClass(SHOWN_CLASS);
   }
 
   /**
@@ -52,7 +53,7 @@ export default class Dropdown {
    * @param {HTMLElement} el the dropdown container
    */
   toggle($el) {
-    if ($el.hasClass(this.SHOWN_CLASS)) {
+    if ($el.hasClass(SHOWN_CLASS)) {
       this.hide($el);
     } else {
       this.show($el);
