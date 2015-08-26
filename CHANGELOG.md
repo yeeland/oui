@@ -15,6 +15,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
 - [Patch] Updated font styles for `.lego-table th`
 
+### Fixed
+- [Patch] Change the weight of `<b>` and `<strong>` tags to `600`.
+
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
 - [Release] Major refactor of button styles and class names. New available class names are '.lego-button--highlight', '.lego-button--outline', '.lego-button--outline-reverse', '.lego-button--extra', '.lego-button--dismiss'. '.lego-button--brand' has been deprecated. Useage for classes to follow shortly. (#92) (#85) (#74)
