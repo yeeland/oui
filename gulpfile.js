@@ -10,6 +10,7 @@ var symlink = require('gulp-symlink');
 var sass = require('gulp-sass');
 var path = require('path');
 var tagVersion = require('gulp-tag-version');
+var webpack = require('gulp-webpack');
 
 var paths = {
   // Limiting linter to first-part directories.
@@ -90,6 +91,12 @@ gulp.task('lint:js', function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failOnError());
+});
+
+gulp.task('js', function(done) {
+  return gulp.src(paths.jsSource + 'main.js')
+  .pipe(webpack(require('./webpack.config')))
+  .pipe(gulp.dest(paths.jsDist));
 });
 
 // Symlink the .pre-commit file.
