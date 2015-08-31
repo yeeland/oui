@@ -151,11 +151,14 @@ sub {
   bottom: -0.25em;
 }
 
-em,
+em {
+ font-style: italic;
+}
+
 b,
 strong {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 // ## Forms
