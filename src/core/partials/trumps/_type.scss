@@ -15,7 +15,7 @@
 }
 
 .weight--bold {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 
@@ -219,4 +219,9 @@
 %color--bad-news,
 .color--bad-news {
   color: map-fetch($color, text bad-news) !important;
+}
+
+%color--charcoal,
+.color--charcoal {
+  color: map-fetch($color, text charcoal) !important;
 }

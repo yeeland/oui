@@ -32,8 +32,8 @@ $hosted-fonts:(
   @font-face {
     font-family: 'Proxima';
     font-weight: $weight;
-    src: url('#{map-fetch($hosted-fonts, url)}' + 'proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff2') format('woff2'),
-         url('#{map-fetch($hosted-fonts, url)}' + 'proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff') format('woff');
+    src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff2') format('woff2'),
+         url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff') format('woff');
   }
 
   // If italic versions should be included.
@@ -42,8 +42,8 @@ $hosted-fonts:(
       font-family: 'Proxima';
       font-weight: $weight;
       font-style: italic;
-      src: url('#{map-fetch($hosted-fonts, url)}' + 'proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff2') format('woff2'),
-           url('#{map-fetch($hosted-fonts, url)}' + 'proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff') format('woff');
+      src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff2') format('woff2'),
+           url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff') format('woff');
     }
   }
 }
