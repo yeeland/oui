@@ -149,11 +149,9 @@
   }
 
   th {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: map-fetch($font, size micro);
+    font-weight: 600;
+    font-size: map-fetch($font, size milli);
     color: map-fetch($color, text muted);
-    letter-spacing: 1px;
     text-align: left;
 
     // For columns that are sortable.
