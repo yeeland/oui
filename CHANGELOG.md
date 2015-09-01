@@ -5,12 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+
+## [3.0.0][3.0.0] - 2015-09-01
 ### Added
 - [Patch] Add "Charcoal" color `#383838`.
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
 - [Patch] Added `overflow` layout classes to add scrollbars.
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
+- [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
 
 ### Removed
 - [Release] Remove `.lego-tag` from Core. (#72)
@@ -24,7 +27,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
-- [Release] Major refactor of button styles and class names. New available class names are '.lego-button--highlight', '.lego-button--outline', '.lego-button--outline-reverse', '.lego-button--extra', '.lego-button--dismiss'. '.lego-button--brand' has been deprecated. Useage for classes to follow shortly. (#92) (#85) (#74)
+- [Release] Major refactor of button styles and class names. New available class names are `.lego-button--highlight`, `lego-button--outline`, `.lego-button--outline-reverse`, `.lego-button--extra`, `.lego-button--dismiss`. `.lego-button--brand` has been deprecated. Usage for classes to follow shortly. (#92) (#85) (#74)
 - [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
 
 ## [1.0.0][1.0.0] - 2015-08-18
@@ -37,7 +40,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
->>>>>>> master
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
@@ -72,8 +74,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v3.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
 [2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
+[3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
