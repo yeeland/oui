@@ -17,7 +17,7 @@
 // or the corresponding classes directly in the HTML.
 //
 //[c]
-//     <div class="flex flex-1">item</div>
+//     <div class="flex flex--1">item</div>
 //[/c]
 
 
@@ -31,6 +31,10 @@
   -webkit-flex: $num;
   -ms-flex: $num;
   flex: $num;
+  @if ($num != '0') { // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
+    min-height: 0;
+    min-width: 0;
+  }
 }
 
 @mixin flex-wrap($value) {
@@ -77,56 +81,95 @@
   align-items: $value;
 }
 
+@mixin align-self($value) {
+  -webkit-align-self: $value;
+  @if ($value == 'flex-start') {
+    -ms-flex-item-align: start;
+  } @elseif ($value == 'flex-end') {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+  align-self: $value;
+}
+
 // ## Flex classes
 
 .flex {
   @include display(flex);
 }
 
-.flex-1 {
+.flex--row {
+  @include flex-direction(row);
+}
+
+.flex--column {
+  @include flex-direction(column);
+}
+
+.flex--1 {
   @include flex(1);
 }
 
-.flex-none {
+.flex--none {
   @include flex(none);
 }
 
-.flex-wrap--wrap {
-  @include flex-wrap(wrap);
+// Flex align
+
+.flex-align--start {
+  @include align-items(flex-start);
 }
 
-.flex-wrap--nowrap {
-  @include flex-wrap(nowrap);
+.flex-align--center {
+  @include align-items(center);
 }
 
-.flex-direction--column {
-  @include flex-direction(column)
+.flex-align--end {
+  @include align-items(flex-end);
 }
 
-.justify-content--space-between {
-  @include justify-content(space-between);
-}
+// Flex justified
+// Note: `justfied-around: space-around;` does not work in IE 10
 
-.justify-content--center {
-  @include justify-content(center);
-}
-
-.justify-content--flex-start {
+.flex-justified--start {
   @include justify-content(flex-start);
 }
 
-.justify-content--flex-end {
+.flex-justified--center {
+  @include justify-content(center);
+}
+
+.flex-justified--end {
   @include justify-content(flex-end);
 }
 
-.align-items--center {
-  @include align-items(center)
+.flex-justified--between {
+  @include justify-content(space-between);
 }
 
-.align-items--flex-start {
-  @include align-items(flex-start)
+// Flex wrap
+
+.flex-wrap {
+  @include flex-wrap(wrap);
 }
 
-.align-items--flex-end {
-  @include align-items(flex-end)
+.flex-wrap--reverse {
+  @include flex-wrap(wrap-reverse);
 }
+
+// Flex align-self
+// Note: applies to immediate children of `display:flex;` parent.
+
+.flex-self--start {
+  @include align-self(flex-start);
+}
+
+.flex-self--center {
+  @include align-self(center);
+}
+
+.flex-self--end {
+  @include align-self(flex-end);
+}
+
