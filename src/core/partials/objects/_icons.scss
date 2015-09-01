@@ -78,7 +78,7 @@
   }
   // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
 
-  + [class^="lego-arrow-inline"] {
+  + [class^="#{$namespace}-arrow-inline"] {
     vertical-align: super;
   }
 }

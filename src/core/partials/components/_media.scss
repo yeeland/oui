@@ -48,7 +48,7 @@
 
 // [---]
 
-@mixin lego-media($responsive: null) {
+@mixin media($responsive: null) {
   @include display(flex);
   @include align-items(flex-start);
 
@@ -86,5 +86,5 @@
 
 %#{$namespace}media,
 .#{$namespace}media {
-  @include lego-media;
+  @include media;
 }

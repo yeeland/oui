@@ -5,13 +5,13 @@
 
 // <div class="example html">
 //   <div class="lego-overlay">
-//     <div class="lego-spinner"></div>
+//     <div class="spin-animatener"></div>
 //   </div>
 //   <div class="lego-overlay">
-//     <div class="lego-spinner lego-spinner--small"></div>
+//     <div class="spin-animatener spin-animatener--small"></div>
 //   </div>
 //   <div class="lego-overlay">
-//     <div class="lego-spinner lego-spinner--tiny"></div>
+//     <div class="spin-animatener spin-animatener--tiny"></div>
 //   </div>
 // </div>
 
@@ -21,7 +21,7 @@
 //     <div style="position:relative">
 //       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
 //       <div class="lego-overlay">
-//         <div class="lego-spinner lego-spinner--small"></div>
+//         <div class="spin-animatener spin-animatener--small"></div>
 //       </div>
 //     </div>
 
@@ -42,14 +42,14 @@
   align-items: center;
 }
 
-@include keyframes(lego-spin) {
+@include keyframes(spin-animate) {
   100% {
     @include transform(rotate(360deg));
   }
 }
 
 .#{$namespace}spinner {
-  @include animation(lego-spin map-fetch($spinner, speed) infinite linear);
+  @include animation(spin-animate map-fetch($spinner, speed) infinite linear);
   width: map-fetch($spinner, size base);
   height: map-fetch($spinner, size base);
   border: map-fetch($spinner, border width base) solid map-fetch($color, background brand-light);
