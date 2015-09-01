@@ -1,5 +1,8 @@
-//# Main
-// High level defaults establishing font and color.
+////
+// Main
+// @description High level defaults establishing font and color.
+// @group Base
+////
 
 html {
   color: map-fetch($color, text base);

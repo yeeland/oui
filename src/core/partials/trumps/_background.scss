@@ -1,5 +1,8 @@
-// # Background Trumps
-// Adding background colors via classes.
+////
+// Background
+// @description Adding background colors via classes.
+// @group Trumps
+////
 
 .background--white {
   background-color: map-fetch($color, background white) !important;
