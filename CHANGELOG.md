@@ -20,7 +20,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [2.0.0][2.0.0] - 2015-08-18
 ### Changed
-- [Release] Major refactor of button styles and class names. New available class names are '.lego-button--highlight', '.lego-button--outline', '.lego-button--outline-reverse', '.lego-button--extra', '.lego-button--dismiss'. '.lego-button--brand' has been deprecated. Useage for classes to follow shortly. (#92) (#85) (#74)
+- [Release] Major refactor of button styles and class names. New available class names are `.lego-button--highlight`, `lego-button--outline`, `.lego-button--outline-reverse`, `.lego-button--extra`, `.lego-button--dismiss`. `.lego-button--brand` has been deprecated. Usage for classes to follow shortly. (#92) (#85) (#74)
 - [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
 
 ## [1.0.0][1.0.0] - 2015-08-18
