@@ -27,7 +27,8 @@ $hosted-fonts:(
   url: '//dhm5hy2vn8l0l.cloudfront.net/proxima/'
 );
 
-@each $weight in map-fetch($include-fonts, weights) {
+@if variable-exists(include-fonts) {
+  @each $weight in map-fetch($include-fonts, weights) {
 
   @font-face {
     font-family: 'Proxima';
