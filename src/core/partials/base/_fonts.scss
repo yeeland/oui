@@ -27,23 +27,25 @@ $hosted-fonts:(
   url: '//dhm5hy2vn8l0l.cloudfront.net/proxima/'
 );
 
-@each $weight in map-fetch($include-fonts, weights) {
+@if variable-exists(include-fonts) {
+  @each $weight in map-fetch($include-fonts, weights) {
 
-  @font-face {
-    font-family: 'Proxima';
-    font-weight: $weight;
-    src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff2') format('woff2'),
-         url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff') format('woff');
-  }
-
-  // If italic versions should be included.
-  @if (map-fetch($include-fonts, italics) == true) {
     @font-face {
       font-family: 'Proxima';
       font-weight: $weight;
-      font-style: italic;
-      src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff2') format('woff2'),
-           url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff') format('woff');
+      src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff2') format('woff2'),
+           url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}.woff') format('woff');
+    }
+
+    // If italic versions should be included.
+    @if (map-fetch($include-fonts, italics) == true) {
+      @font-face {
+        font-family: 'Proxima';
+        font-weight: $weight;
+        font-style: italic;
+        src: url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff2') format('woff2'),
+             url('#{map-fetch($hosted-fonts, url)}proximanova-#{map-fetch($hosted-fonts, weights $weight)}it.woff') format('woff');
+      }
     }
   }
 }
