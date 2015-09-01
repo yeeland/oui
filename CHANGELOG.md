@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add "Charcoal" color `#383838`.
 - [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
 - [Feature] Adding namespace variable so we can use 'lego-' or 'oui-' or no prefix. (#68)
+- [Feature] Removing `lego-` from mixins that used it: grid, matrix, media. Use of this mixin will have to be updated.
 
 ### Removed
 - [Release] Remove `.lego-tag` from Core. (#72)
