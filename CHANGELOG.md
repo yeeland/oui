@@ -7,7 +7,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 ### Added
 - [Patch] Add "Charcoal" color `#383838`.
-- [Patch] Add "Charcoal" color `#383838`.
 - [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
 
 ### Removed
