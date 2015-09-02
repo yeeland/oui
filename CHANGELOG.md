@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Added
+- [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
 
 ## [3.0.0][3.0.0] - 2015-09-01
 ### Added

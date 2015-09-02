@@ -18,12 +18,11 @@
 
   Where `Importance` is:
 
-  * Patch
-  * Feature
-  * Release
+  * Patch - Backwards-compatible bug fixes
+  * Feature - Added functionality in a backwards-compatible manner
+  * Release - Breaking changes to code or large visual design modifications. Renaming a class or redesigning the button styles, for example, would be a `Release`.
 
-  GitHub issue number is the number of the GitHub issue, if applicable, preceded
-  by a `#`.
+  GitHub issue number is the number of the GitHub issue, if applicable, preceded by a `#`. Ideally, each contribution should have a corresponding issue that provides more context.
 
 ## Releasing a new version of LEGO
 
