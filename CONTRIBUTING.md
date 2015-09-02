@@ -27,9 +27,9 @@
 
 ## Releasing a new version of LEGO
 
-1. Open the `CHANGELOG.md` and look at the "Unreleased" contributions.
-2. `git checkout master` and run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue.
-3. Update the `CHANGELOG.md` to reflect the new release and commit the change on `master`.
-4. Push the changes to `master` with `git push` and `git push --tags`.
-5. [Create a new release on GitHub](https://github.com/optimizely/lego/releases/new) using the version number gulp generated. Paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes.
+1. Run `git checkout master && git pull`.
+2. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
+3. Run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue in the new changes.
+4. Push the changes on `master` with `git push` and `git push --tags`.
+5. [Create a new release on GitHub](https://github.com/optimizely/lego/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
 6. Run `npm publish ./` to push the version to NPM. You must be a LEGO contributor on NPM to do this.
