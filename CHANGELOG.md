@@ -6,7 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][unreleased]
 ### Added
-- [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`.
+- [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
 
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
