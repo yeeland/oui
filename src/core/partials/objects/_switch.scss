@@ -1,0 +1,94 @@
+.lego-toggle {
+  display: inline-block;
+  border-radius: map-fetch($button, size base border-radius);
+  background-color: map-fetch($button, type base background);
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 0;
+
+  label {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__text {
+    @extend %lego-button;
+    @include transition(all map-fetch($transition-duration, fast) ease-out);
+    background: none;
+    position: relative;
+  }
+
+  &__slider {
+    @include transition(all map-fetch($transition-duration, fast) ease-out);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: map-fetch($color, ui white);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + label .lego-toggle__text {
+      border-color: map-fetch($button, type outline border);
+      cursor: default;
+      z-index: 1;
+
+      &:hover {
+        background: transparent;
+        color: map-fetch($button, type base color) !important;
+      }
+    }
+
+    &:not(:checked) + label .lego-toggle__text {
+      color: map-fetch($button, type disabled color) !important;
+
+      &:hover {
+        color: map-fetch($button, type base color) !important;
+      }
+    }
+  }
+
+  label:nth-of-type(1) {
+
+    .lego-toggle__text {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .lego-toggle__slider {
+      left: 100%;
+    }
+  }
+
+  label:nth-of-type(2) {
+    margin-left: -1px; // This introduces a shared 1px border between the two.
+
+    .lego-toggle__text {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .lego-toggle__slider {
+      right: 100%;
+    }
+  }
+
+  input:checked:nth-of-type(1) + label .lego-toggle__slider {
+    left: 0;
+  }
+
+  input:checked:nth-of-type(2) + label .lego-toggle__slider {
+    right: 0;
+  }
+}
+
+.lego-toggle--small {
+  .lego-toggle__text {
+    @extend %lego-button--small;
+  }
+}
