@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Fixed
+- [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 
 ## [3.1.0][3.1.0] - 2015-09-02
 ### Added
