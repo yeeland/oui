@@ -81,8 +81,8 @@
 
 // Fix for icons inside buttons with text.
 
-.lego-button + .lego-icon {
-  vertical-align: middle;
+.lego-button .lego-icon {
+  vertical-align: sub;
 }
 
 // Fix for icons inside tabs.

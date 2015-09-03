@@ -5,8 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Changed
+- [Release] Rename `.informative` to `.cursor--help`. (#73)
+
 ### Fixed
+- [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 - [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
+
+## [3.1.0][3.1.0] - 2015-09-02
+### Added
+- [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
+- [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
+
+### Changed
+- [Patch] `.lego-button--highlight` changed from green to bue
 
 ## [3.0.0][3.0.0] - 2015-09-01
 ### Added
@@ -19,6 +31,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
 - [Patch] Updated font styles for `.lego-table th`
+- [Patch] Migrate from Travis CI legacy to container-based infrastructure.
 
 ### Fixed
 - [Patch] Change the weight of `<b>` and `<strong>` tags to `600`.
@@ -38,6 +51,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
+>>>>>>> master
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
@@ -45,6 +59,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add a `.pointer-events--none` trump for disabling pointer events.
 - [Patch] Add a `.cursor--move` trump for changing the cursor to `move`.
 - [Patch] Allow `.lego-overlay` to be extended with `%lego-overlay`.
+
+## Changed
+- [Patch] Moved `_borders.scss` from `components` to `trumps` and added `!important`.
 
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
@@ -72,9 +89,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v3.0.0...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v3.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
 [2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
 [3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
+[3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0
