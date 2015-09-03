@@ -23,6 +23,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [3.0.0][3.0.0] - 2015-09-01
 ### Added
 - [Patch] Add "Charcoal" color `#383838`.
+- [Patch] `em` italic
+- [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
+- [Patch] Added `overflow` layout classes to add scrollbars.
+- [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 - [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
 
 ### Removed
