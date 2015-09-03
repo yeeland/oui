@@ -57,7 +57,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
->>>>>>> master
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
