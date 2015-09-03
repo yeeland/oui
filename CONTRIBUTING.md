@@ -1,7 +1,7 @@
 # Contributing to LEGO
 
 1. Branch off of master: `git checkout -b username/branch-name`.
-2. Make your changes, commit your code, and open a pull request against `master`. Add at least one reviewer.
+2. Make your changes, commit your code.
 3. Add your change to the "Unreleased" section of the `CHANGELOG.md` under one of the following sub-sections:
   * **Added**: for new features.
   * **Changed**: for changes in existing functionality.
@@ -23,6 +23,8 @@
   * Release - Breaking changes to code or large visual design modifications. Renaming a class or redesigning the button styles, for example, would be a `Release`.
 
   GitHub issue number is the number of the GitHub issue, if applicable, preceded by a `#`. Ideally, each contribution should have a corresponding issue that provides more context.
+
+4. Open a pull request against `master`. Add at least one reviewer.
 
 ## Releasing a new version of LEGO
 
