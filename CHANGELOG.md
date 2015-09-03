@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+
+## [3.1.0][3.1.0] - 2015-09-02
 ### Added
 - [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
 
@@ -75,9 +77,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v3.0.0...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v3.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
 [2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
 [3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
+[3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0
