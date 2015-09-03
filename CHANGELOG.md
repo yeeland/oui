@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Changed
+- [Release] Rename `.informative` to `.cursor--help`. (#73)
+
 ### Fixed
 - [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 
@@ -47,6 +50,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
+>>>>>>> master
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
