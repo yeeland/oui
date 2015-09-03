@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 ### Example Starter Code
 
-Download [LEGO starter code](assets/lego-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
+Download [LEGO starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
 
 ### Structure of LEGO
 
