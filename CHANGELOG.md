@@ -9,7 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
 
 ### Changed
-- [Patch] `lego-button--highlight` changed from green to bue
+- [Patch] `.lego-button--highlight` changed from green to bue
 
 ## [3.0.0][3.0.0] - 2015-09-01
 ### Added
