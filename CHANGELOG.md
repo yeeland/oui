@@ -25,6 +25,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
 - [Patch] Updated font styles for `.lego-table th`
+- [Patch] Migrate from Travis CI legacy to container-based infrastructure.
 
 ### Fixed
 - [Patch] Change the weight of `<b>` and `<strong>` tags to `600`.
