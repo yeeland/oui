@@ -17,11 +17,11 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 - [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
+- [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
 
 ## [3.1.0][3.1.0] - 2015-09-02
 ### Added
 - [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
-- [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
 
 ### Changed
 - [Patch] `.lego-button--highlight` changed from green to bue
