@@ -338,6 +338,7 @@
 
 .lego-select {
   @include transition(border-color map-fetch($transition-duration, base));
+  box-sizing: content-box;
   display: inline-block;
   height: map-fetch($button, size base height);
   line-height: map-fetch($button, size base height);
