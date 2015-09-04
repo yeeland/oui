@@ -18,6 +18,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 - [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
 - [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
+- [Patch] Fixes height of `lego-select` by adding `box-sizing: content-box;` so height will be calculated the same as `lego-button`.
 
 ## [3.1.0][3.1.0] - 2015-09-02
 ### Added
