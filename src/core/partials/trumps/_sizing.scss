@@ -24,10 +24,13 @@
 // </div>
 
 
-// ### Whole
-// <div class="example html">
-//     <div class="width--1-1"><div class="doc-placeholder"></div></div>
-// </div>
+/// Whole
+/// @description Sets the width to 100%. Duh!
+/// @author Daniel O'Connor
+/// @example html
+///   <div class="example html">
+///      <div class="width--1-1"><div class="doc-placeholder"></div></div>
+///   </div>
 
 %width--1-1,
 .width--1-1 {
