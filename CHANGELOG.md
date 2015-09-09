@@ -6,12 +6,11 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][unreleased]
 ### Added
-- [Feature] Adding `overflow` trumps.
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
 - [Release] Provide an optional namespacing variable. (#68)
 - [Release] Make add/remove table row more robust, fix bugs. (#119)
-- [Patch] Added `overflow` layout classes to add scrollbars.
+- [Feature] Added `overflow` layout classes to add scrollbars.
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 
 ### Changed
