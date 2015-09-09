@@ -16,8 +16,8 @@
 //     </div>
 // [/hc]
 
-%lego-array,
-.lego-array {
+%#{$namespace}array,
+.#{$namespace}array {
   @include display(flex);
 
   &__item {

@@ -49,8 +49,8 @@
 
 // [---]
 
-%lego-nav,
-.lego-nav {
+%#{$namespace}nav,
+.#{$namespace}nav {
   @include display(flex);
 
   > li {

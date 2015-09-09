@@ -6,8 +6,8 @@
 // ### Button Variables
 // Shadows for buttons.
 
-%lego-button,
-.lego-button {
+%#{$namespace}button,
+.#{$namespace}button {
   box-sizing: content-box;
   display: inline-block;
   vertical-align: middle;
@@ -194,10 +194,13 @@
   &--icon {
     line-height: 1.4;
 
-    .lego-icon {
+    .#{$namespace}icon {
       vertical-align: sub;
     }
   }
+
+  // ### Disabled State
+  // Used either an attribute or a class, depending on the use case.
 
   // ### Disabled State
   // Used either an attribute or a class, depending on the use case.
@@ -216,7 +219,7 @@
     border-color: map-fetch($button, type disabled border);
     color: map-fetch($button, type disabled color) !important;
 
-    &.lego-button--dismiss {
+    &.#{$namespace}button--dismiss {
       background-color: map-fetch($button, type dismiss background);
       border-color: map-fetch($button, type dismiss border);
     }

@@ -23,12 +23,12 @@
 
 // [---]
 
-%lego-stat-group,
-.lego-stat-group {
+%#{$namespace}stat-group,
+.#{$namespace}stat-group {
   @include display(flex);
 }
 
-%lego-stat,
-.lego-stat {
+%#{$namespace}stat,
+.#{$namespace}stat {
   margin-right: spacer(1);
 }

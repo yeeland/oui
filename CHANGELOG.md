@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
+- [Release] Provide an optional namespacing variable. (#68)
 - [Patch] Added `overflow` layout classes to add scrollbars.
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 
@@ -31,6 +32,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Add "Charcoal" color `#383838`.
 - [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
+- [Feature] Adding namespace variable so we can use 'lego-' or 'oui-' or no prefix. (#68)
+- [Feature] Removing `lego-` from mixins that used it: grid, matrix, media. Use of this mixin will have to be updated.
 
 ### Removed
 - [Release] Remove `.lego-tag` from Core. (#72)
@@ -51,6 +54,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [1.0.0][1.0.0] - 2015-08-18
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
+### Added
+- [Release] Add namespacing variable to Core (#68).
 
 ### Changed
 - [Patch] Removed concatenation from the `@font-face` URL strings because it was breaking the SCSS parser used for documentation generation.

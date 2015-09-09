@@ -27,8 +27,8 @@
 
 // [---]
 
-%lego-steps,
-.lego-steps {
+%#{$namespace}steps,
+.#{$namespace}steps {
   @include display(flex);
   @include justify-content(center);
   margin-left: auto;
@@ -74,12 +74,12 @@
         background: map-fetch($color, ui brand);
       }
 
-      .lego-steps__dot {
+      .#{$namespace}steps__dot {
         background: map-fetch($color, ui brand);
         border-color: map-fetch($color, ui brand);
       }
 
-      .lego-steps__label {
+      .#{$namespace}steps__label {
         color: map-fetch($color, text brand);
       }
     }
@@ -90,7 +90,7 @@
         background: map-fetch($color, ui brand);
       }
 
-      .lego-steps__dot {
+      .#{$namespace}steps__dot {
         border-color: map-fetch($color, ui brand);
       }
     }

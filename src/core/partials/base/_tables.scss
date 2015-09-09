@@ -132,8 +132,8 @@
 
 // [---]
 
-%lego-table,
-.lego-table {
+%#{$namespace}table,
+.#{$namespace}table {
   width: 100%;
   font-size: inherit;
 
@@ -280,7 +280,7 @@
 
         // TODO (kelly): remove link--bad-news once all forms in the product have been converted to use the new button
         .link--bad-news,
-        .lego-button--remove {
+        .#{$namespace}button--remove {
           margin-left: auto;
         }
       }
@@ -290,6 +290,6 @@
 
 // Added to the table row.
 
-.lego-table-row--active {
+.#{$namespace}table-row--active {
   background-color: map-fetch($color, background faint);
 }

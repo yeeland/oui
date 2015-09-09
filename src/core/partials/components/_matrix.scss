@@ -41,8 +41,8 @@
 
 // [---]
 
-@mixin lego-matrix($responsive: null) {
-  @extend %lego-grid;
+@mixin matrix($responsive: null) {
+  @extend %#{$namespace}grid;
   margin-left: -(spacer(2));
 
   > li {
@@ -81,7 +81,7 @@
   }
 }
 
-%lego-matrix,
-.lego-matrix {
-  @include lego-matrix;
+%#{$namespace}matrix,
+.#{$namespace}matrix {
+  @include matrix;
 }
