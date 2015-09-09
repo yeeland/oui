@@ -20,7 +20,7 @@
 
 // [---]
 
-.lego-progress {
+.#{$namespace}progress {
   background: map-fetch($color, background faint);
   height: map-fetch($progress-bar, height);
   border-radius: map-fetch($border-radius, base);
@@ -28,7 +28,7 @@
   overflow: hidden;
 
   &--bad-news {
-    .lego-progress__bar {
+    .#{$namespace}progress__bar {
       background: map-fetch($color, ui bad-news);
     }
   }

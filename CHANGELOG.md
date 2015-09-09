@@ -6,7 +6,65 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][unreleased]
 ### Added
-- [Patch] Adding `overflow` trumps.
+- [Feature] Adding `overflow` trumps.
+- [Patch] `em` italic
+- [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
+- [Release] Provide an optional namespacing variable. (#68)
+- [Release] Make add/remove table row more robust, fix bugs. (#119)
+- [Patch] Added `overflow` layout classes to add scrollbars.
+- [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
+
+### Changed
+- [Release] Rename `.informative` to `.cursor--help`. (#73)
+
+### Fixed
+- [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
+- [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
+- [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
+- [Patch] Fixes height of `lego-select` by adding `box-sizing: content-box;` so height will be calculated the same as `lego-button`.
+
+## [3.1.0][3.1.0] - 2015-09-02
+### Added
+- [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
+
+### Changed
+- [Patch] `.lego-button--highlight` changed from green to bue
+
+## [3.0.0][3.0.0] - 2015-09-01
+### Added
+- [Patch] Add "Charcoal" color `#383838`.
+- [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
+- [Feature] Adding namespace variable so we can use 'lego-' or 'oui-' or no prefix. (#68)
+- [Feature] Removing `lego-` from mixins that used it: grid, matrix, media. Use of this mixin will have to be updated.
+
+### Removed
+- [Release] Remove `.lego-tag` from Core. (#72)
+
+### Changed
+- [Patch] Bump font weight for `.weight--bold` class to `600` so its the same as a `<b>` tag.
+- [Patch] Updated font styles for `.lego-table th`
+- [Patch] Migrate from Travis CI legacy to container-based infrastructure.
+
+### Fixed
+- [Patch] Change the weight of `<b>` and `<strong>` tags to `600`.
+
+## [2.0.0][2.0.0] - 2015-08-18
+### Changed
+- [Release] Major refactor of button styles and class names. New available class names are `.lego-button--highlight`, `lego-button--outline`, `.lego-button--outline-reverse`, `.lego-button--extra`, `.lego-button--dismiss`. `.lego-button--brand` has been deprecated. Usage for classes to follow shortly. (#92) (#85) (#74)
+- [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
+
+## [1.0.0][1.0.0] - 2015-08-18
+### Fixed
+- [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
+### Added
+- [Release] Add namespacing variable to Core (#68).
+
+### Changed
+- [Patch] Removed concatenation from the `@font-face` URL strings because it was breaking the SCSS parser used for documentation generation.
+- [Release] Renaming sizing trumps to be BEM consistent. (#69)
+
+### Removed
+- [Patch] Remove old gitignore targets from js days. (#97)
 
 ## [0.0.3][0.0.3] - 2015-08-05
 ### Added
@@ -14,6 +72,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add a `.pointer-events--none` trump for disabling pointer events.
 - [Patch] Add a `.cursor--move` trump for changing the cursor to `move`.
 - [Patch] Allow `.lego-overlay` to be extended with `%lego-overlay`.
+
+## Changed
+- [Patch] Moved `_borders.scss` from `components` to `trumps` and added `!important`.
 
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
@@ -41,6 +102,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v3.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
+[1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
+[2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
+[3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
+[3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0

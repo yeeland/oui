@@ -132,8 +132,8 @@
 
 // [---]
 
-%lego-table,
-.lego-table {
+%#{$namespace}table,
+.#{$namespace}table {
   width: 100%;
   font-size: inherit;
 
@@ -149,11 +149,9 @@
   }
 
   th {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: map-fetch($font, size micro);
+    font-weight: 600;
+    font-size: map-fetch($font, size milli);
     color: map-fetch($color, text muted);
-    letter-spacing: 1px;
     text-align: left;
 
     // For columns that are sortable.
@@ -258,6 +256,7 @@
   }
 
   // Add/Remove Rows
+  // In button rows use a placeholder button with `visibility--hidden` in the `--controls` cell to maintain spacing.
 
   &--add-row {
 
@@ -270,28 +269,16 @@
       padding-bottom: spacer(1);
     }
 
+    //
     &__controls {
-      vertical-align: middle !important;
-
-      .flex {
-        width: 60px;
-
-        > * {
-          @include flex(none);
-        }
-
-        // TODO (kelly): remove link--bad-news once all forms in the product have been converted to use the new button
-        .link--bad-news,
-        .lego-button--remove {
-          margin-left: auto;
-        }
-      }
+      width: 1%;
+      white-space: nowrap;
     }
   }
 }
 
 // Added to the table row.
 
-.lego-table-row--active {
+.#{$namespace}table-row--active {
   background-color: map-fetch($color, background faint);
 }

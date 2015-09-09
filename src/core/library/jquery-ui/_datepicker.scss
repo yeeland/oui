@@ -108,7 +108,7 @@
     }
 
     &::before {
-      @extend %lego-arrow-inline;
+      @extend %#{$namespace}arrow-inline;
       position: absolute;
       top: 5px;
       content: "";
@@ -131,7 +131,7 @@
     left: 0;
 
     &::before {
-      @extend %lego-arrow-inline--left;
+      @extend %#{$namespace}arrow-inline--left;
       left: 2px;
     }
   }
@@ -140,7 +140,7 @@
     right: 0;
 
     &::before {
-      @extend %lego-arrow-inline--right;
+      @extend %#{$namespace}arrow-inline--right;
       left: 3px;
     }
   }

@@ -9,7 +9,7 @@ code {
   font-family: map-fetch($font, family monospace);
 }
 
-.lego-pre {
+.#{$namespace}pre {
   margin-bottom: spacer(1);
   white-space: pre-wrap;
 
@@ -23,7 +23,7 @@ code {
   }
 }
 
-.lego-code {
+.#{$namespace}code {
   background: map-fetch($color, background faint);
   border-radius: map-fetch($border-radius, base);
   border: 1px solid map-fetch($color, ui base);

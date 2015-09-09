@@ -43,8 +43,8 @@
 
 // [---]
 
-%lego-button-group,
-.lego-button-group {
+%#{$namespace}button-group,
+.#{$namespace}button-group {
   @include display(flex);
 
   > * {
@@ -69,20 +69,20 @@
     }
   }
 
-  > .lego-button--brand {
+  > .#{$namespace}button--brand {
     position: relative;
   }
 
-  > .lego-text-input {
+  > .#{$namespace}text-input {
     @include flex(1);
     width: auto;
   }
 
   // If inside a button group bring the colored buttons to the top so that the borders are intact.
 
-  .lego-button--highlight,
-  .lego-button--danger,
-  .lego-button--brand {
+  .#{$namespace}button--highlight,
+  .#{$namespace}button--danger,
+  .#{$namespace}button--brand {
     z-index: 1;
   }
 }

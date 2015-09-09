@@ -117,8 +117,8 @@
 
 // [---]
 
-%lego-popover,
-.lego-popover {
+%#{$namespace}popover,
+.#{$namespace}popover {
   border: 1px solid map-fetch($color, ui base);
   border-radius: map-fetch($border-radius, base);
   background: map-fetch($color, background white);

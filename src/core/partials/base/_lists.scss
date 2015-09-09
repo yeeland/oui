@@ -19,8 +19,8 @@
 // </div>
 
 
-%lego-list,
-.lego-list {
+%#{$namespace}list,
+.#{$namespace}list {
   margin-bottom: spacer(1);
 
   &--bullet {

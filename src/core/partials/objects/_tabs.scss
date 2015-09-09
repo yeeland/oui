@@ -97,7 +97,7 @@
 
 // [---]
 
-.lego-tabs-nav {
+.#{$namespace}tabs-nav {
   @include display(flex);
   border-bottom: 3px solid map-fetch($color, ui base);
 
@@ -145,31 +145,31 @@
   }
 }
 
-.lego-tabs--small {
+.#{$namespace}tabs--small {
 
-  .lego-tabs-nav {
+  .#{$namespace}tabs-nav {
     border-width: 1px;
   }
 
-  .lego-tabs-nav__item {
+  .#{$namespace}tabs-nav__item {
     background-color: transparent;
     padding: spacer(0.5) spacer(1);
     font-size: map-fetch($font, size milli);
   }
 }
 
-.lego-tabs--center {
-  .lego-tabs-nav {
+.#{$namespace}tabs--center {
+  .#{$namespace}tabs-nav {
     @include justify-content(center);
   }
 
-  .lego-tabs-nav__item:first-child {
+  .#{$namespace}tabs-nav__item:first-child {
     margin-left: spacer(0.5);
   }
 }
 
-.lego-tabs--sub {
-  .lego-tabs-nav__item {
+.#{$namespace}tabs--sub {
+  .#{$namespace}tabs-nav__item {
     border: 0;
 
     &.tab-active::after {
@@ -185,7 +185,7 @@
   }
 }
 
-.lego-tabs-pane {
+.#{$namespace}tabs-pane {
   display: none;
 
   &.tab-active {
@@ -193,10 +193,10 @@
   }
 }
 
-.lego-tabs-container {
+.#{$namespace}tabs-container {
   margin-bottom: spacer(2);
 
-  .lego-tabs-pane {
+  .#{$namespace}tabs-pane {
     padding: spacer(2);
     border: 1px solid map-fetch($color, ui base);
     border-top: 0;

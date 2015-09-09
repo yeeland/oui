@@ -15,7 +15,7 @@
 }
 
 .weight--bold {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 
@@ -33,18 +33,6 @@
   font-style: normal !important;
 }
 
-
-// ## Help Cursor
-// Add a help cursor to any element that gives the user extra information on
-// `:hover`.
-
-// <div class="example html">
-//     <div class="informative">Hover over me for a help cursor.</div>
-// </div>
-
-.informative {
-  cursor: help !important;
-}
 
 // ## Underline
 // Adds text-decoration: underline to text.
@@ -219,4 +207,9 @@
 %color--bad-news,
 .color--bad-news {
   color: map-fetch($color, text bad-news) !important;
+}
+
+%color--charcoal,
+.color--charcoal {
+  color: map-fetch($color, text charcoal) !important;
 }

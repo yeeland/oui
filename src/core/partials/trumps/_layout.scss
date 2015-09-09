@@ -116,6 +116,20 @@
   vertical-align: bottom !important;
 }
 
+// ## Overflow
+// Force scroll bars when overflowed.
+
+.overflow--hidden {
+  overflow: hidden !important;
+}
+
+.overflow-x--auto {
+  overflow-x: auto !important;
+}
+
+.overflow-y--auto {
+  overflow-y: auto !important;
+}
 
 // ## Remove Borders
 // Remove borders from all or just one side.
@@ -158,17 +172,6 @@
   overflow-y: auto !important;
 }
 
-// ## Overflow
-// Scrollbars for nested elements. Often used with flex-1.
-
-.overflow-x--auto {
-  overflow-x: auto !important;
-}
-
-.overflow-y--auto {
-  overflow-y: auto !important;
-}
-
 // ## Max Width
 // Set a max-width for content.
 
@@ -181,6 +184,10 @@
 
 .cursor--default {
   cursor: default !important;
+}
+
+.cursor--help {
+  cursor: help !important;
 }
 
 .cursor--move {

@@ -1,9 +1,9 @@
 // # Dialog
 // Dialog boxes and overlays with three width options:
 
-// - `.lego-dialog` is the default
-// - `.lego-dialog--wide`
-// - `.lego-dialog--narrow`
+// - `.#{$namespace}dialog` is the default
+// - `.#{$namespace}dialog--wide`
+// - `.#{$namespace}dialog--narrow`
 
 // ## Example
 
@@ -30,7 +30,7 @@
 //     </div>
 // </div>
 
-.lego-dialog {
+.#{$namespace}dialog {
   position: relative;
   box-shadow: 0 0 map-fetch($shadow, big);
   width: map-fetch($dialog, width base);
