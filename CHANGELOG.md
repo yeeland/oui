@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
 - [Release] Provide an optional namespacing variable. (#68)
+- [Patch] Added two layout mixins/classes for centering. (#116)
 - [Patch] Added `overflow` layout classes to add scrollbars.
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 
