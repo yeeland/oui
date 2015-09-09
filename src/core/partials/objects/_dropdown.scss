@@ -104,22 +104,22 @@
 
 // [---]
 
-.lego-dropdown-group {
+.#{$namespace}dropdown-group {
   font-size: map-fetch($font, size base);
   display: inline-block;
   position: relative;
   vertical-align: top;
 
   &.shown {
-    .lego-dropdown {
+    .#{$namespace}dropdown {
       visibility: visible;
     }
   }
 }
 
-%lego-dropdown,
-.lego-dropdown {
-  @extend %lego-block-list-group;
+%#{$namespace}dropdown,
+.#{$namespace}dropdown {
+  @extend %#{$namespace}block-list-group;
   background: map-fetch($color, background white);
   box-shadow: 0 2px map-fetch($shadow, light);
   min-width: 100%;
@@ -141,7 +141,7 @@
   }
 
   &__block-link {
-    @extend %lego-block-list__link;
+    @extend %#{$namespace}block-list__link;
   }
 
   &--right {

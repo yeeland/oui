@@ -1,12 +1,12 @@
 // ## Button Row
 // For buttons that align left or right with space between them.
 
-%lego-button-row,
-.lego-button-row {
+%#{$namespace}button-row,
+.#{$namespace}button-row {
 
   &--left {
 
-    .lego-button {
+    .#{$namespace}button {
       margin-right: spacer(1);
 
       &:last-child {
@@ -18,7 +18,7 @@
   &--right {
     text-align: right;
 
-    .lego-button {
+    .#{$namespace}button {
       margin-left: spacer(1);
 
       &:first-child {
@@ -30,7 +30,7 @@
   &--center {
     text-align: center;
 
-    .lego-button {
+    .#{$namespace}button {
       margin-left: spacer(0.5);
       margin-right: spacer(0.5);
     }

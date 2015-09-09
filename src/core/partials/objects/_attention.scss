@@ -90,8 +90,8 @@
 // [---]
 
 
-%lego-attention,
-.lego-attention {
+%#{$namespace}attention,
+.#{$namespace}attention {
   @extend %kill-last-child-margin;
   padding: spacer(1);
   border-radius: map-fetch($border-radius, base);

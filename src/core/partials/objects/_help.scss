@@ -9,7 +9,7 @@
 
 // [---]
 
-.lego-help-dot {
+.#{$namespace}help-dot {
   background: map-fetch($color, background muted);
   color: map-fetch($color, text white);
   width: 16px;
