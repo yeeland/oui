@@ -256,6 +256,7 @@
   }
 
   // Add/Remove Rows
+  // In button rows use a placeholder button with `visibility--hidden` in the `--controls` cell to maintain spacing.
 
   &--add-row {
 
@@ -268,6 +269,7 @@
       padding-bottom: spacer(1);
     }
 
+    //
     &__controls {
       width: 1%;
       white-space: nowrap;
