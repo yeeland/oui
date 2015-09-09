@@ -41,13 +41,6 @@
     color: map-fetch($button, type base active color) !important;
   }
 
-  &:hover,
-  &:active,
-  &:visited,
-  &:focus {
-    outline: none;
-  }
-
   &--highlight {
     background-color: map-fetch($button, type highlight background);
     border-color: map-fetch($button, type highlight border);

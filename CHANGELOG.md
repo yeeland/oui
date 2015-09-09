@@ -16,6 +16,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Rename `.informative` to `.cursor--help`. (#73)
 
 ### Fixed
+- [Patch] Removing `outline: none` from buttons. (#89)
 - [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 - [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
 - [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
