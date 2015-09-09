@@ -11,12 +11,14 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Provide an optional namespacing variable. (#68)
 - [Patch] Added two layout mixins/classes for centering. (#116)
 - [Patch] Added `overflow` layout classes to add scrollbars.
+- [Release] Make add/remove table row more robust, fix bugs. (#119)
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 
 ### Changed
 - [Release] Rename `.informative` to `.cursor--help`. (#73)
 
 ### Fixed
+- [Patch] Removing `outline: none` from buttons. (#89)
 - [Patch] Clarify the "Releasing a new version of LEGO" steps. (#111)
 - [Patch] Clarify `CONTRIBUTING.md` to suggest only pushing the newly created tag. (#107)
 - [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
