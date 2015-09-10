@@ -15,7 +15,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding class to make input/textarea disabled appearance the same when using classes or disabled attr. (#117)
 
 ### Changed
-- [Patch] Removed `.input--disabled` in favor of extending both `.text-input` & `.textarea` with `--disabled`. (#117)
+- [Release] Removed `.input--disabled` in favor of extending both `.text-input` & `.textarea` with `--disabled`. (#117)
 - [Release] Rename `.informative` to `.cursor--help`. (#73)
 
 ### Fixed
