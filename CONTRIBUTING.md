@@ -47,7 +47,7 @@ In order to give engineers time to refactor deprecated classesm, the UI Engineer
 
 2. Make the needed changes in the application HTML timed as close as possible to the OUI release containing the breaking change.
 3. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
-4. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated` file.
+4. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated.scss` partial.
 
 ## Releasing a new version of LEGO
 
