@@ -7,8 +7,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 
 ### Deprecated
-- [Release] Adding `_layout--deprecated.scss` to temporarily retain the `lego-pane...` classes (#70)
-- [Release] Adding `_sizing--deprecated.scss` to temporarily retain the `width/height-` trumps. (#69)
+- [Patch] Adding `_layout--deprecated.scss` to temporarily retain the `lego-pane...` classes (#70)
+- [Patch] Adding `_sizing--deprecated.scss` to temporarily retain the `width/height-` trumps. (#69)
 
 ## [4.0.0][4.0.0] - 2015-09-14
 ### Added

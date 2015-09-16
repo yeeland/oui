@@ -26,9 +26,9 @@
 
 4. Open a pull request against `master`. Add at least one reviewer.
 
-## Breaking Changes & Deprecating Code
+## Breaking changes & deprecating code
 
-In order to give engineers time to refactor deprecated classesm, the UI Engineer introducing breaking changes should do the following:
+In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
 
 1. Move the deprecated code into a new partial in Core, adding `--deprecated` to its filename:
 
@@ -43,9 +43,9 @@ In order to give engineers time to refactor deprecated classesm, the UI Engineer
   _sizing--deprecated.scss
   ```
 
-  Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code.
+  Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code. If there are class collisions between old and new, older code will win until it's removed.
 
-2. Make the needed changes in the application HTML timed as close as possible to the OUI release containing the breaking change.
+2. Make the needed changes in the application HTML after the release.
 3. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
 4. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated` file.
 
