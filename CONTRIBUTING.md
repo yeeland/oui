@@ -28,7 +28,7 @@
 
 ## Breaking changes & deprecating code
 
-In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
+This applies any time classes are being renamined and you want old and new code to be running simultaneously, for example, changing `width-100` to `width--1100`. In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
 
 1. Move the deprecated code into a new partial in Core, adding `--deprecated` to its filename:
 
@@ -43,7 +43,7 @@ In order to give engineers time to refactor deprecated classes, the UI Engineer 
   _sizing--deprecated.scss
   ```
 
-  Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code. If there are class collisions between old and new, older code will win until it's removed.
+  Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code.
 
 2. Make the needed changes in the application HTML after the release.
 3. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
