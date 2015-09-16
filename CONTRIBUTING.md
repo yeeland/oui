@@ -45,6 +45,7 @@ This applies any time classes are being renamined and you want old and new code 
 
   Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code.
 
+2. Add a line into `## [Unreleased][unreleased]` section in the CHANGLOG.md explaining the change.
 2. Make the needed changes in the application HTML after the release.
 3. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
 4. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated.scss` partial.
