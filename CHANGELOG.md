@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+### Fixed
+- [Patch] Added back a reference to the `_borders.scss` file. (#127)
 
 ## [4.0.0][4.0.0] - 2015-09-14
 ### Added

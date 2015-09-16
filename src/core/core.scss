@@ -22,6 +22,7 @@ $include-fonts:(
 // ## Trumps
 // Trumps use `!important` classes for overrides and should always be loaded last.
 @import 'partials/trumps/background';
+@import 'partials/trumps/borders';
 @import 'partials/trumps/layout';
 @import 'partials/trumps/margin';
 @import 'partials/trumps/padding';
