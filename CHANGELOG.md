@@ -8,6 +8,11 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
 
+### Deprecated
+- [Patch] Adding `_layout--deprecated.scss` to temporarily retain the `lego-pane...` classes (#70)
+- [Patch] Adding `_sizing--deprecated.scss` to temporarily retain the `width/height-` trumps. (#69)
+- [Patch] Adding instructions in CONTRIBUTING.md about how to handle deprecated code.
+
 ## [4.0.0][4.0.0] - 2015-09-14
 ### Added
 - [Patch] `em` italic
