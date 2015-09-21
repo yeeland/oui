@@ -318,10 +318,14 @@
     border-color: map-fetch($color, ui brand-light);
   }
 
-  &[disabled] {
+  &[disabled],
+  &--disabled {
     background: map-fetch($color, background faint);
+    color: map-fetch($color, ui medium);
+    cursor: default;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: map-fetch($color, ui base);
     }
   }
@@ -472,10 +476,6 @@ fieldset {
       padding-left: 6px; // Should be 10px but this compensates for white space.
     }
   }
-}
-
-.#{$namespace}input--disabled {
-  background-color: map-fetch($color, background light);
 }
 
 .#{$namespace}or {

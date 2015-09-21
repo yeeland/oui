@@ -73,6 +73,7 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 // Trumps use `!important` classes for overrides and should always be loaded last.
 
 @import 'core/partials/trumps/background';
+@import 'core/partials/trumps/borders';
 @import 'core/partials/trumps/layout';
 @import 'core/partials/trumps/margin';
 @import 'core/partials/trumps/padding';
