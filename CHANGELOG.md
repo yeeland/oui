@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+
+## [4.0.1][4.0.1] - 2015-09-22
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
 - [Patch] Fixes bug in previous release that caused the height of `lego-select` to be too large in FF/IE.
@@ -115,7 +117,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v4.0.0...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v4.0.1...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
@@ -123,3 +125,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
 [3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0
 [4.0.0]: https://github.com/optimizely/lego/compare/v3.1.0...v4.0.0
+[4.0.1]: https://github.com/optimizely/lego/compare/v4.0.0...v4.0.1
