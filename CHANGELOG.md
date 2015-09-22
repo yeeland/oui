@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
+- [Patch] Fixes bug in previous release that caused the height of `lego-select` to be too large in FF/IE.
 
 ### Deprecated
 - [Patch] Adding `_layout--deprecated.scss` to temporarily retain the `lego-pane...` classes (#70)

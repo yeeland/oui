@@ -345,11 +345,10 @@
   box-sizing: content-box;
   display: inline-block;
   height: map-fetch($button, size base height);
-  line-height: map-fetch($button, size base height);
   background: map-fetch($color, background white);
   border: 1px solid map-fetch($color, ui base);
   border-radius: map-fetch($border-radius, base);
-  padding: 7px;
+  padding: 0 spacer(0.5);
   max-width: 100%;
 
   &:hover {
