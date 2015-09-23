@@ -5,11 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
-
-## [4.0.1][4.0.1] - 2015-09-22
 ### Added
 - [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
 
+## [4.0.1][4.0.1] - 2015-09-22
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
 - [Patch] Fixes bug in previous release that caused the height of `lego-select` to be too large in FF/IE.
