@@ -4,7 +4,7 @@
 // ## Namespace
 // Provide a name space for most classes.
 
-$namespace                   : '';
+$namespace                   : 'lego-';
 
 // ## Colors
 // Default color for objects' borders etc.
@@ -145,7 +145,14 @@ $button: (
     base: (
       height                 : 32px,
       font-size              : 13px,
-      padding                : 0 10px,
+      padding                : 0 15px,
+      font-weight            : 400,
+      border-radius          : 3px
+    ),
+    large: (
+      height                 : 40px,
+      font-size              : 15px,
+      padding                : 0 20px,
       font-weight            : 400,
       border-radius          : 3px
     ),
@@ -160,43 +167,43 @@ $button: (
 
   type: (
     base: (
-      background             : #EFF0F2,
-      border                 : #E5E5E9,
-      color                  : #3B5871,
+      background             : #F6F6F7,
+      border                 : #CDD0D8,
+      color                  : map-fetch($color, text base),
       hover:(
-        background           : #EFF0F2,
-        border               : #E5E5E9,
-        color                : #64738A,
+        box-shadow           : 1px 1px 2px 0 rgba(0, 0, 0, 0.16),
       ),
       active:(
-        background           : #E5E5E9,
-        border               : #DADBDB,
-        color                : #00415D
+        background           : #64738A,
+        border               : #3B5871,
+        color                : #FFF,
+        box-shadow           : inset 1px 0 3px 0 rgba(0, 0, 0, 0.5),
+        text-shadow          : 0 1px 1px rgba(0, 0, 0, 0.5),
       )
     ),
     highlight: (
-      background             : #0074B4,
-      border                 : #0268A0,
+      background             : #0F75B2,
+      border                 : #0E699F,
+      text-shadow            : 1px 0 1px rgba(0, 0 , 0, 0.2),
       hover:(
         background           : #0081BA,
         border               : #0176A9,
       ),
       active:(
-        background           : #026FA0,
-        border               : #036895,
+        background           : #0074B4,
+        border               : #005584,
+        box-shadow           : inset 0 1px 3px 0 rgba(0, 0, 0, 0.5),
       )
     ),
     outline: (
       background             : transparent,
-      border                 : #00415D,
-      color                  : #00415D,
+      border                 : #8D96A8,
+      color                  : #64738A,
       hover:(
-        background           : transparent,
-        border               : #8D96A8,
-        color                : #64738A,
+        border               : #0074B4,
+        color                : #0074B4,
       ),
       active:(
-        background           : transparent,
         border               : #00415D,
         color                : #00415D,
       )
@@ -216,43 +223,26 @@ $button: (
         color                : #FFF,
       )
     ),
-    extra: (
-      background             : #3B5871,
-      border                 : #00415D,
-      hover:(
-        background           : #64738A,
-        border               : #2C4F5E,
-      ),
-      active:(
-        background           : #00415D,
-        border               : #00415D,
-      )
-    ),
-    dismiss: (
-      background             : transparent,
-      border                 : transparent,
-      color                  : #00415D,
-      hover:(
-        background           : transparent,
-        border               : transparent,
-        color                : #00415D,
-      ),
-      active:(
-        background           : transparent,
-        border               : transparent,
-        color                : #00415D,
-      )
-    ),
     danger: (
-      background             : #E1364B,
-      border                 : #AC192B,
+      background             : #E8464E,
+      border                 : #AA161E,
+      text-shadow            : 0 1px 1px rgba(0, 0 , 0, 0.3),
       hover:(
-        background           : #EF495D,
+        background           : #F35E65,
         border               : #AC192B,
       ),
       active:(
-        background           : #C52D42,
+        background           : #CB2D35,
         border               : #8F192B,
+      )
+    ),
+    plain: (
+      color                  : #00415D,
+      hover:(
+        color                : #8D96A8,
+      ),
+      active:(
+        color                : #00415D,
       )
     ),
     disabled: (
