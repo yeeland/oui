@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][unreleased]
+- [Patch] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
+- [Patch] Adding `_buttons--deprecated.scss` to temporarily retain the `button--dismiss` styling.
 
 ## [4.0.1][4.0.1] - 2015-09-22
 ### Fixed
