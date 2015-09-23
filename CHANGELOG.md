@@ -7,6 +7,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][unreleased]
 
 ## [4.0.1][4.0.1] - 2015-09-22
+### Added
+- [Patch] Adding `gulp watch` process so that Sass changes will compile automatically.
+
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
 - [Patch] Fixes bug in previous release that caused the height of `lego-select` to be too large in FF/IE.
