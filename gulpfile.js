@@ -71,6 +71,11 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(paths.css));
 });
 
+// Watch tasks
+gulp.task('watch', function() {
+  gulp.watch('src/core/**/*.scss', ['sass']);
+});
+
 // Runs SCSS linter.
 // gulp link
 gulp.task('lint', function() {
