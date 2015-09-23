@@ -8,7 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [4.0.1][4.0.1] - 2015-09-22
 ### Added
-- [Patch] Adding `gulp watch` process so that Sass changes will compile automatically.
+- [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
 
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
