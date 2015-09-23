@@ -10,6 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding `_buttons--deprecated.scss` to temporarily retain the `button--dismiss` styling.
 
 ## Changed
+- [Patch] Removed unneeded `!important` on colors by using `:visited` to fix conflicts with anchors styled as buttons.
 - [Patch] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
 
 ## [4.0.1][4.0.1] - 2015-09-22
