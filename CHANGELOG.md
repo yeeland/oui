@@ -13,7 +13,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## Changed
 - [Patch] Removed unneeded `!important` on colors by using `:visited` to fix conflicts with anchors styled as buttons.
-- [Patch] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
+- [Release] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
 - [Patch] Removing `button--extra`. It is not used in the app and is not needed.
 
 ## [4.0.1][4.0.1] - 2015-09-22
