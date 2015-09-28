@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## [Unreleased][unreleased]
+## [5.0.0][5.0.0] - 2015-09-28
 ### Added
 - [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
 
