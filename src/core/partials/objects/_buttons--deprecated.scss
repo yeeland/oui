@@ -1,0 +1,32 @@
+// Deprecated Buttons
+// `--dismiss` is now `--plain`
+
+%#{$namespace}button,
+.#{$namespace}button {
+
+  &--dismiss {
+    color: map-fetch($button, type plain color);
+    border-color: transparent;
+    background-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+
+    &:hover {
+      color: map-fetch($button, type plain hover color);
+    }
+
+    &:active {
+      color: map-fetch($button, type plain active color);
+    }
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

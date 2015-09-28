@@ -8,6 +8,14 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
 
+### Deprecated
+- [Patch] Adding `_buttons--deprecated.scss` to temporarily retain the `button--dismiss` styling.
+
+## Changed
+- [Patch] Removed unneeded `!important` on colors by using `:visited` to fix conflicts with anchors styled as buttons.
+- [Release] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
+- [Patch] Removing `button--extra`. It is not used in the app and is not needed.
+
 ## [4.0.1][4.0.1] - 2015-09-22
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)

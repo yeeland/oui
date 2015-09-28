@@ -3,9 +3,6 @@
 // description: These are the default button styles. `!important` is used on colors so override default colors.
 // ---
 
-// ### Button Variables
-// Shadows for buttons.
-
 %#{$namespace}button,
 .#{$namespace}button {
   box-sizing: content-box;
@@ -27,24 +24,30 @@
   // Unique styles for the base button start here.
   background-color: map-fetch($button, type base background);
   border-color: map-fetch($button, type base border);
-  color: map-fetch($button, type base color) !important;
+  color: map-fetch($button, type base color);
 
-  &:hover {
-    background: map-fetch($button, type base hover background);
-    border-color: map-fetch($button, type base hover border);
-    color: map-fetch($button, type base hover color) !important;
+  &:visited {
+    color: map-fetch($button, type base color);
   }
 
+  &:hover {
+    box-shadow: map-fetch($button, type base hover box-shadow);
+  }
+
+  &.is-active,
   &:active {
     background: map-fetch($button, type base active background);
     border-color: map-fetch($button, type base active border);
-    color: map-fetch($button, type base active color) !important;
+    color: map-fetch($button, type base active color);
+    box-shadow: map-fetch($button, type base active box-shadow);
+    text-shadow: map-fetch($button, type base active text-shadow);
   }
 
   &--highlight {
     background-color: map-fetch($button, type highlight background);
     border-color: map-fetch($button, type highlight border);
-    color: map-fetch($color, text white) !important;
+    color: map-fetch($color, text white);
+    text-shadow: map-fetch($button, type highlight text-shadow);
 
     &:hover {
       background: map-fetch($button, type highlight hover background);
@@ -54,95 +57,70 @@
     &:active {
       background: map-fetch($button, type highlight active background);
       border-color: map-fetch($button, type highlight active border);
+      box-shadow: map-fetch($button, type highlight active box-shadow);
     }
 
+    &:visited,
     &:hover,
     &:active,
-    &:visited,
     &:focus {
-      color: map-fetch($color, text white) !important;
+      color: map-fetch($color, text white);
     }
   }
 
   &--outline {
     background-color: map-fetch($button, type outline background);
     border-color: map-fetch($button, type outline border);
-    color: map-fetch($button, type outline color) !important;
+    color: map-fetch($button, type outline color);
+
+    &:visited {
+      color: map-fetch($button, type outline color);
+    }
 
     &:hover {
-      background: map-fetch($button, type outline hover background);
+      background-color: map-fetch($button, type outline background);
       border-color: map-fetch($button, type outline hover border);
-      color: map-fetch($button, type outline hover color) !important;
+      color: map-fetch($button, type outline hover color);
+      text-shadow: none;
+      box-shadow: none;
     }
 
     &:active {
-      background: map-fetch($button, type outline active background);
+      background-color: map-fetch($button, type outline background);
       border-color: map-fetch($button, type outline active border);
-      color: map-fetch($button, type outline active color) !important;
+      color: map-fetch($button, type outline active color);
+      text-shadow: none;
+      box-shadow: none;
     }
   }
 
   &--outline-reverse {
     background-color: map-fetch($button, type outline-reverse background);
     border-color: map-fetch($button, type outline-reverse border);
-    color: map-fetch($button, type outline-reverse color) !important;
+    color: map-fetch($button, type outline-reverse color);
+
+    &:visited {
+      color: map-fetch($button, type outline-reverse color);
+    }
 
     &:hover {
       background: map-fetch($button, type outline-reverse hover background);
       border-color: map-fetch($button, type outline-reverse hover border);
-      color: map-fetch($button, type outline-reverse hover color) !important;
+      color: map-fetch($button, type outline-reverse hover color);
     }
 
     &:active {
       background: map-fetch($button, type outline-reverse active background);
       border-color: map-fetch($button, type outline-reverse active border);
-      color: map-fetch($button, type outline-reverse active color) !important;
-    }
-  }
-
-  &--extra {
-    background-color: map-fetch($button, type extra background);
-    border-color: map-fetch($button, type extra border);
-    color: map-fetch($color, text white) !important;
-
-    &:hover {
-      background: map-fetch($button, type extra hover background);
-      border-color: map-fetch($button, type extra hover border);
-    }
-
-    &:active {
-      background: map-fetch($button, type extra active background);
-      border-color: map-fetch($button, type extra active border);
-    }
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      color: map-fetch($color, text white) !important;
-    }
-  }
-
-  &--dismiss {
-    background-color: map-fetch($button, type dismiss background);
-    border-color: map-fetch($button, type dismiss border);
-    color: map-fetch($button, type dismiss color) !important;
-
-    &:hover {
-      background: map-fetch($button, type dismiss hover background);
-      border-color: map-fetch($button, type dismiss hover border);
-    }
-
-    &:active {
-      background: map-fetch($button, type dismiss active background);
-      border-color: map-fetch($button, type dismiss active border);
+      color: map-fetch($button, type outline-reverse active color);
     }
   }
 
   &--danger {
     background-color: map-fetch($button, type danger background);
     border-color: map-fetch($button, type danger border);
-    color: map-fetch($color, text white) !important;
+    color: map-fetch($color, text white);
+    text-shadow: map-fetch($button, type danger text-shadow);
 
     &:hover {
       background: map-fetch($button, type danger hover background);
@@ -154,11 +132,54 @@
       border-color: map-fetch($button, type danger active border);
     }
 
+    &:visited,
     &:hover,
     &:active,
-    &:visited,
     &:focus {
-      color: map-fetch($color, text white) !important;
+      color: map-fetch($color, text white);
+    }
+  }
+
+  &--plain {
+    color: map-fetch($button, type plain color);
+    border-color: transparent;
+    background-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+
+    &:hover {
+      color: map-fetch($button, type plain hover color);
+    }
+
+    &:active {
+      color: map-fetch($button, type plain active color);
+    }
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &--toggle {
+
+    &:hover {
+      color: map-fetch($button, type base color);
+    }
+
+    &:active,
+    &.is-active:hover {
+      color: map-fetch($button, type base active color);
+    }
+
+    &:not(:hover):not(.is-active) {
+      border-color: transparent;
+      background-color: transparent;
     }
   }
 
@@ -172,6 +193,15 @@
     line-height: map-fetch($button, size small height);
     height: map-fetch($button, size small height);
     padding: map-fetch($button, size small padding);
+  }
+
+  &--large {
+    font-size: map-fetch($button, size large font-size);
+    font-weight: map-fetch($button, size large font-weight);
+    border-radius: map-fetch($button, size large border-radius);
+    line-height: map-fetch($button, size large height);
+    height: map-fetch($button, size large height);
+    padding: map-fetch($button, size large padding);
   }
 
   &--full {
@@ -199,10 +229,8 @@
   // Used either an attribute or a class, depending on the use case.
 
   &[disabled],
-  &[disabled]:hover,
-  &[disabled]:active,
-  &[disabled]:focus,
   &--disabled,
+  &--disabled:visited,
   &--disabled:hover,
   &--disabled:active,
   &--disabled:focus {
@@ -210,11 +238,17 @@
     box-shadow: none;
     background-color: map-fetch($button, type disabled background);
     border-color: map-fetch($button, type disabled border);
-    color: map-fetch($button, type disabled color) !important;
+    color: map-fetch($button, type disabled color);
+    text-shadow: none;
+    box-shadow: none;
 
-    &.#{$namespace}button--dismiss {
-      background-color: map-fetch($button, type dismiss background);
-      border-color: map-fetch($button, type dismiss border);
+    &.#{$namespace}button--plain, {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.#{$namespace}button--outline-reverse, {
+      background-color: transparent;
     }
   }
 }
