@@ -74,6 +74,7 @@
   max-width: map-fetch($pop-tip, max-width);
   display: inline-block;
   z-index: map-fetch($z-index, poptip);
+  font-weight: 600;
 
   // Arrow options.
 
