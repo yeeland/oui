@@ -127,7 +127,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v4.0.1...HEAD
+[unreleased]: https://github.com/optimizely/lego/compare/v5.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
@@ -136,3 +136,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0
 [4.0.0]: https://github.com/optimizely/lego/compare/v3.1.0...v4.0.0
 [4.0.1]: https://github.com/optimizely/lego/compare/v4.0.0...v4.0.1
+[5.0.0]: https://github.com/optimizely/lego/compare/v4.0.1...v5.0.0
