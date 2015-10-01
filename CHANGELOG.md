@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## Unreleased
+## [Unreleased][Unreleased]
 ### Changed
 - [Patch] Updating weight of poptips from not specified to `600`.
+- [Release] `matrix` mixin now has optional value to specify number of columns and an optional pixel value for responsive, e.g. `matrix(3, 300px)`.
 
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added
