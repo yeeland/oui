@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
+## Unreleased
+### Changed
+- [Patch] Updating weight of poptips from not specified to `600`.
+
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added
 - [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
@@ -32,7 +36,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
 - [Release] Provide an optional namespacing variable. (#68)
-- [Feture] Added two layout mixins/classes for centering. (#116)
+- [Feature] Added two layout mixins/classes for centering. (#116)
 - [Release] Make add/remove table row more robust, fix bugs. (#119)
 - [Patch] Added `height--1-1` trump class to allow for `height: 100%`.
 - [Patch] Adding class to make input/textarea disabled appearance the same when using classes or disabled attr. (#117)
