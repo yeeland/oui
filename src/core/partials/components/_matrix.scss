@@ -16,7 +16,7 @@
   @if ($number) {
     &--1-#{$number} {
       > li {
-        width: percentage(1/$number)
+        width: percentage(1/$number);
       }
     }
   }
