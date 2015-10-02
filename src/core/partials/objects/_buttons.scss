@@ -204,6 +204,16 @@
     padding: map-fetch($button, size large padding);
   }
 
+  &--narrow {
+    padding-left: spacer(1);
+    padding-right: spacer(1);
+  }
+
+  &--tight {
+    padding-left: spacer(0.5);
+    padding-right: spacer(0.5);
+  }
+
   &--full {
     width: 100%;
     padding-right: 0;
