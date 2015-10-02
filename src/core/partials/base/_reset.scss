@@ -1,4 +1,5 @@
 // # Reset
+// Using inuit.css reset.
 
 // ## Box-sizing
 // Reset all elements to use the border-box model.
@@ -204,8 +205,6 @@ select {
 // 2. Correct font size not being inherited in all browsers.
 // 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
 
-// <!---->
-
 button,
 input,
 select,
@@ -228,8 +227,6 @@ input[type="search"]::-webkit-search-decoration {
 // 2. Correct inability to style clickable `input` types in iOS.
 // 3. Improve usability and consistency of cursor style between image-type
 //    `input` and others.
-
-// <!---->
 
 button,
 html input[type="button"], // 1
