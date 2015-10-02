@@ -7,6 +7,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## Unreleased
 ### Changed
 - [Patch] Updating weight of poptips from not specified to `600`.
+- [Patch] Border-radius on buttons now all `2px`.
+
+### Added
+- [Patch] Adding `narrow` and `tight` button variations so left/right padding can be made smaller.
 
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added
