@@ -1,4 +1,5 @@
 var bump        = require('gulp-bump'),
+    browserSync = require('browser-sync'),
     filter      = require('gulp-filter'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
@@ -51,6 +52,16 @@ function increaseVersion(importance) {
     // Tag it in the repository
     .pipe(tagVersion());
 }
+
+gulp.task('html-tests', function() {
+  browserSync({
+    server: {
+      baseDir: '.'
+    },
+    port: 3030
+  });
+});
+
 
 // Creates SVG sprite and demo page.
 // gulp svg
