@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Buttons</title>
-  <link rel="stylesheet" href="../dist/core.css">
+  <link rel="stylesheet" href="../dist/css/core.css">
 
   <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   <script>
@@ -18,6 +18,7 @@
   </script>
 
   <style>
+
     html {
       background: #f9f9f9;
     }
@@ -193,7 +194,6 @@
       <button class="button button--small button--plain">Continue</button>
     </div>
 
-
     <h3 class="push--bottom">Buttons Default</h3>
 
     <div class="button-row--left push-double--bottom">
@@ -204,22 +204,49 @@
       <button class="button button--plain">Continue</button>
     </div>
 
+    <h3 class="push--bottom">Buttons with Icons</h3>
+
+    <div class="button-row--left push-double--bottom">
+      <button class="button"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use></svg> Add</button>
+      <button class="button button--highlight"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use></svg> Add</button>
+      <button class="button button--outline"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use></svg> Add</button>
+      <button class="button button--danger"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use></svg> Add</button>
+      <button class="button button--plain"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use></svg> Add</button>
+    </div>
+
     <div style="background:#222;padding:10px; display:inline-block;margin-bottom:40px">
       <button class="button button--outline-reverse">Continue</button>
     </div>
 
     <h3 class="push--bottom">Anchors as Button</h3>
     <div class="button-row--left push-double--bottom">
-      <a href="index.html" class="button">Continue</a>
-      <a href="index.html" class="button button--highlight">Continue</a>
-      <a href="index.html" class="button button--outline">Continue</a>
-      <a href="index.html" class="button button--danger">Continue</a>
-      <a href="index.html" class="button button--plain">Continue</a>
+      <a href="buttons.html" class="button">Continue</a>
+      <a href="buttons.html" class="button button--highlight">Continue</a>
+      <a href="buttons.html" class="button button--outline">Continue</a>
+      <a href="buttons.html" class="button button--danger">Continue</a>
+      <a href="buttons.html" class="button button--plain">Continue</a>
     </div>
 
     <div style="background:#222;padding:10px; display:inline-block;margin-bottom:40px">
       <a href="#" class="button button--outline-reverse">Continue</a>
     </div>
+
+
+    <h3 class="push--bottom">Button in Form</h3>
+
+    <ol class="lego-form-fields">
+      <li class="form-field__item">
+        <label class="label">Label</label>
+        <div class="grid">
+          <div class="grid__cell">
+            <input type="text" class="text-input" placeholder="This is placeholder">
+          </div>
+          <div class="push-double--left">
+            <button class="button button--brand">Do This</button>
+          </div>
+        </div>
+      </li>
+    </ol>
 
     <h3 class="push--bottom">Buttons Disabled</h3>
     <div class="button-row--left push-double--bottom">
@@ -237,15 +264,15 @@
 
     <h3 class="push--bottom">Anchors as Buttons Disabled</h3>
     <div class="button-row--left push-double--bottom">
-      <a href="index.html" class="button button--disabled">Continue</a>
-      <a href="index.html" class="button button--disabled button--highlight">Continue</a>
-      <a href="index.html" class="button button--disabled button--outline">Continue</a>
-      <a href="index.html" class="button button--disabled button--danger">Continue</a>
-      <a href="index.html" class="button button--disabled button--plain">Continue</a>
+      <a href="buttons.html" class="button button--disabled">Continue</a>
+      <a href="buttons.html" class="button button--disabled button--highlight">Continue</a>
+      <a href="buttons.html" class="button button--disabled button--outline">Continue</a>
+      <a href="buttons.html" class="button button--disabled button--danger">Continue</a>
+      <a href="buttons.html" class="button button--disabled button--plain">Continue</a>
     </div>
 
     <div style="background:#222;padding:10px; display:inline-block;margin-bottom:40px">
-      <a href="index.html" class="button button--outline-reverse button--disabled">Continue</a>
+      <a href="buttons.html" class="button button--outline-reverse button--disabled">Continue</a>
     </div>
 
 

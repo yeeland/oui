@@ -53,15 +53,20 @@ function increaseVersion(importance) {
     .pipe(tagVersion());
 }
 
-gulp.task('html-tests', function() {
+// Test changes with live html tests.
+gulp.task('html-tests', ['watch'], function() {
   browserSync({
     server: {
-      baseDir: '.'
+      baseDir: "./"
     },
-    port: 3030
+    port: 3019,
+    startPath: "/tests/",
+    files: [
+      "tests/**/*.html",
+      "dist/css/core.css"
+    ]
   });
 });
-
 
 // Creates SVG sprite and demo page.
 // gulp svg
@@ -79,7 +84,8 @@ gulp.task('sass', function() {
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.css))
+    .pipe(browserSync.stream());
 });
 
 // Watch tasks
