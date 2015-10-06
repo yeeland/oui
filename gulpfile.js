@@ -1,4 +1,5 @@
 var bump        = require('gulp-bump'),
+    browserSync = require('browser-sync'),
     filter      = require('gulp-filter'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
@@ -52,6 +53,21 @@ function increaseVersion(importance) {
     .pipe(tagVersion());
 }
 
+// Test changes with live html tests.
+gulp.task('html-tests', ['watch'], function() {
+  browserSync({
+    server: {
+      baseDir: "./"
+    },
+    port: 3019,
+    startPath: "/tests/",
+    files: [
+      "tests/**/*.html",
+      "dist/css/core.css"
+    ]
+  });
+});
+
 // Creates SVG sprite and demo page.
 // gulp svg
 gulp.task('svg', function () {
@@ -68,7 +84,8 @@ gulp.task('sass', function() {
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.css))
+    .pipe(browserSync.stream());
 });
 
 // Watch tasks

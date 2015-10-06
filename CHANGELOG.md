@@ -11,6 +11,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Added
 - [Patch] Adding `narrow` and `tight` button variations so left/right padding can be made smaller.
+- [Patch] Adding `gulp html-tests` task to test changes to core using live HTML examples.
+- [Patch] Adding explanation of `html-tests` into README.md.
+- [Patch] Adding fix for Firefox buttons in `_reset.scss`, removing inner padding and border.
 
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added

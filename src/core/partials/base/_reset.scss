@@ -214,6 +214,13 @@ textarea {
   margin: 0; // 3
 }
 
+// Removes extra padding/spacing inside buttons, fixing alignments.
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
 // Remove inner padding and search cancel button in Safari 5 and Chrome
 // on OS X.
 
