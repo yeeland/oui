@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [6.0.0][6.0.0] - 2015-10-07
 ### Changed
 - [Patch] Updating weight of poptips from not specified to `600`.
 - [Patch] Border-radius on buttons now all `2px`.
@@ -148,3 +150,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [4.0.0]: https://github.com/optimizely/oui/compare/v3.1.0...v4.0.0
 [4.0.1]: https://github.com/optimizely/oui/compare/v4.0.0...v4.0.1
 [5.0.0]: https://github.com/optimizely/oui/compare/v4.0.1...v5.0.0
+[5.0.0]: https://github.com/optimizely/oui/compare/v5.0.0...v6.0.0
