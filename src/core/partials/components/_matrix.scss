@@ -1,11 +1,38 @@
 // ---
 // title: Matrix
 // description: Creates rows of elements with one parent, extending `lego-grid`.
-// example: `@include matrix;` to include your own margin/padding/columns.
-//          `@include matrix(2, 300px);` to include default spacing with 2 columns and responsive at 300px
+// examples: `@include matrix;` to include your own margin/padding and list-item widths.
+//           `@include matrix(2, 4, 300px);` to include 2 columns, 4 spacing units, and responsive at 300px.
+// Usage:
+//
+// All arguments are optional but setting the number of columns value is recommened.
+//
+// .foo {
+//   @include matrix(2);
+// }
+//
+// <ul class="foo foo--1-2">
+//   <li><div>matrix 1</div></li>
+//   <li><div>matrix 2</div></li>
+//   <li><div>matrix 3</div></li>
+//   <li><div>matrix 4</div></li>
+// </ul>
+//
+// In this example the matrix will have 3 columns, 4 spacer units between columns, and will flatten at 300px.
+//
+// .foo {
+//   @include matrix(3, 4, 300px);
+// }
+//
+// <ul class="foo foo--1-3">
+//   <li><div>matrix 1</div></li>
+//   <li><div>matrix 2</div></li>
+//   <li><div>matrix 3</div></li>
+//   <li><div>matrix 4</div></li>
+// </ul>
 // ---
 
-@mixin matrix($number: null, $responsive: null, $spacing: 2) {
+@mixin matrix($columns: null, $spacing: 2, $responsive: null) {
   @extend %#{$namespace}grid;
   margin-left: -(spacer($spacing));
 
@@ -13,10 +40,10 @@
     padding-left: spacer($spacing);
   }
 
-  @if ($number) {
-    &--1-#{$number} {
+  @if ($columns) {
+    &--1-#{$columns} {
       > li {
-        width: percentage(1/$number);
+        width: percentage(1/$columns);
       }
     }
   }
@@ -36,6 +63,13 @@
 }
 
 // Some classes provided out of the box.
+
+// <ul class="matrix matrix--1-2">
+//   <li><div>matrix 1</div></li>
+//   <li><div>matrix 2</div></li>
+//   <li><div>matrix 3</div></li>
+//   <li><div>matrix 4</div></li>
+// </ul>
 
 %#{$namespace}matrix,
 .#{$namespace}matrix {

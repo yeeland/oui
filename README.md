@@ -148,6 +148,14 @@ The resulting sprite will be built to:
 
 This is the file that is included as the first child of the body on every page of Optimizely.
 
+## Testing New Code
+
+Use existing HTML or add new HTML to `/tests/` to confirm any OUI changes in Chrome, Firefox, Safari and IE 10+. Run:
+
+    gulp html-tests
+
+This will start browsersync and will watch and reload the browser after any Sass or HTML changes.
+
 ## Philosophy
 
 LEGO stands for Low-level Elements and Global Objects. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...

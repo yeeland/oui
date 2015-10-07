@@ -5,6 +5,7 @@
   "private": false,
   "main": "dist/js/lego.min.js",
   "dependencies": {
+    "browser-sync": "^2.9.8",
     "gulp-sass": "^2.0.2"
   },
   "devDependencies": {

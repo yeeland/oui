@@ -9,7 +9,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Updating weight of poptips from not specified to `600`.
 - [Patch] Border-radius on buttons now all `2px`.
 - [Patch] Adding `narrow` and `tight` button variations so left/right padding can be made smaller.
-- [Feature] `matrix` mixin now has optional value to specify number of columns and an optional pixel value for responsive, e.g. `matrix(3, 300px)`.
+- [Feature] `matrix` mixin now has 3 optional values to specify number of columns, spacing, and an optional pixel value for responsive, e.g. `matrix(3, 300px)`.
+- [Patch] Adding `gulp html-tests` task to test changes to core using live HTML examples.
+- [Patch] Adding explanation of `html-tests` into README.md.
+- [Patch] Adding fix for Firefox buttons in `_reset.scss`, removing inner padding and border.
 
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added
