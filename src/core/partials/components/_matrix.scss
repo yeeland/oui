@@ -5,12 +5,12 @@
 //          `@include matrix(2, 300px);` to include default spacing with 2 columns and responsive at 300px
 // ---
 
-@mixin matrix($number: null, $responsive: null) {
+@mixin matrix($number: null, $responsive: null, $spacing: 2) {
   @extend %#{$namespace}grid;
-  margin-left: -(spacer(2));
+  margin-left: -(spacer($spacing));
 
   > li {
-    padding-left: spacer(2);
+    padding-left: spacer($spacing);
   }
 
   @if ($number) {
@@ -28,7 +28,7 @@
 
       > li {
         padding-left: 0;
-        margin-bottom: spacer(2);
+        margin-bottom: spacer($spacing);
         width: auto;
       }
     }
