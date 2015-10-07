@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown</title>
+  <link rel="stylesheet" href="../dist/css/core.css">
+
+  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="../dist/js/core.min.js"></script>
+
+  <style>
+
+  button {
+    outline: none;
+  }
+
+
+    body {
+      margin: 100px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+<div style="text-align:right">
+
+  <div class="dropdown-group" data-dropdown>
+    <button class="button" data-dropdown-toggle>
+      Dropdown <span class="arrow-inline--down"></span>
+    </button>
+    <ul class="dropdown dropdown--right">
+      <li class="dropdown__item">
+        <a href="#" class="dropdown__block-link">Manage Collaborators</a>
+        <a href="#" class="dropdown__block-link">Manage This Thing</a>
+      </li>
+      <li class="dropdown__item">
+        <a href="#" class="dropdown__block-link">Experiment Change History</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div style="margin-bottom:50px">
+
+  <div class="dropdown-group" data-dropdown>
+    <button class="button" data-dropdown-toggle>
+      Dropdown <span class="arrow-inline--down"></span>
+    </button>
+    <ul class="dropdown" data-dropdown-list>
+      <li class="dropdown__item">
+        <a href="#" class="dropdown__block-link">Manage Collaborators</a>
+        <a href="#" class="dropdown__block-link">Manage This Thing</a>
+      </li>
+      <li class="dropdown__item">
+        <a href="#" class="dropdown__block-link">Experiment Change History</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+</body>
+</html>
