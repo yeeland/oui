@@ -5,7 +5,7 @@
   var ACTIVE_CLASS    = "is-active";
 
   // Close any open dropdowns.
-  function resetDropdowns() {
+  function closeAllDropdowns() {
     $(DROPDOWN).removeClass(ACTIVE_CLASS);
     $(DROPDOWN_TOGGLE).removeClass(ACTIVE_CLASS);
   }
@@ -15,20 +15,26 @@
     e.stopPropagation();
     var dropdown_parent = $(this).closest(DROPDOWN);
 
+    // If the clicked dropdown is NOT open.
     if ( !dropdown_parent.hasClass(ACTIVE_CLASS) ) {
-      // If click on dropdown toggle and it's active.
-      resetDropdowns();
+
+      // Close any other dropdowns.
+      closeAllDropdowns();
+
+      // Open the clicked dropdown.
       dropdown_parent.addClass(ACTIVE_CLASS);
       $(this).addClass(ACTIVE_CLASS);
     } else {
-      resetDropdowns();
+      // If dropdown is open.
+      closeAllDropdowns();
     }
   });
 
+  // Clicking anywhere outside of dropdown.
   $(document).on("click", function(e) {
     // If any dropdown is visible.
     if ( $(DROPDOWN).hasClass(ACTIVE_CLASS) ) {
-      resetDropdowns();
+      closeAllDropdowns();
     }
   });
 

@@ -2,12 +2,12 @@
 
 function getProps(el) {
   element = {
-    height          : el.height(),
-    width           : el.width(),
+    height          : el.outerHeight(),
+    width           : el.outerWidth(),
     top             : el.offset().top,
     left            : el.offset().left,
-    bottom          : el.offset().top  + el.height(),
-    right           : el.offset().left + el.width(),
+    bottom          : el.offset().top  + el.outerHeight(),
+    right           : el.offset().left + el.outerWidth(),
   }
   return element;
 }
