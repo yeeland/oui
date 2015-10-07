@@ -47,7 +47,7 @@ function increaseVersion(importance) {
     // Save it back to filesystem
     .pipe(gulp.dest('./'))
     // Commit the changed version number
-    .pipe(git.commit('New LEGO ' + importance + '.'))
+    .pipe(git.commit('New OUI ' + importance + '.'))
     // Read only one file to get the version number
     .pipe(filter('package.json'))
     // Tag it in the repository
@@ -125,19 +125,19 @@ gulp.task('hook', function () {
     }));
 });
 
-// Release LEGO patch
+// Release OUI patch
 // Bumps version from v0.1.0 to v0.1.1
 gulp.task('patch', function() {
   return increaseVersion('patch');
 });
 
-// Release LEGO feature
+// Release OUI feature
 // Bumps version from v0.1.1 to v0.2.0
 gulp.task('feature', function() {
   return increaseVersion('minor');
 });
 
-// Release breaking LEGO change
+// Release breaking OUI change
 // Bumps version from v0.2.1 to v1.0.0
 gulp.task('release', function() {
   return increaseVersion('major');

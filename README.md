@@ -1,16 +1,16 @@
-# LEGO Component Library
+# OUI Component Library
 
 This document contains two sets of instructions:
 
-1. Including LEGO in your project
-2. Contributing new CSS to LEGO
+1. Including OUI in your project
+2. Contributing new CSS to OUI
 
-## Including LEGO in your project
+## Including OUI in your project
 
-LEGO is published as an npm module called `optimizely-lego`. To install:
+OUI is published as an npm module called `optimizely-lego`. To install:
 
 ```
-npm install optimizely-lego --save-dev
+npm install optimizely-oui --save-dev
 ```
 
 which should add the dependency to your `package.json` file.
@@ -23,7 +23,7 @@ gulp.task('sass', function() {
     .pipe(sass({
       errLogToConsole: true,
       includePaths : [
-        require('optimizely-lego').includePath
+        require('optimizely-oui').includePath
       ]
     }))
     .pipe(gulp.dest('path/to/css'));
@@ -32,15 +32,15 @@ gulp.task('sass', function() {
 
 ### Example Starter Code
 
-Download [LEGO starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
+Download [OUI starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
 
-### Structure of LEGO
+### Structure of OUI
 
-LEGO consists of two parts:
+OUI consists of two parts:
 
 1. **Core**
     - Base styles used as the foundation for any site.
-    - This code lives in this LEGO repository and is a dependency for platform code.
+    - This code lives in this OUI repository and is a dependency for platform code.
 2. **Platform (.e.g, `mobile`)**
     - Platform or device specific built on top of Core.
     - This code lives in the platform repo, pulling Core as a dependency.
@@ -81,13 +81,13 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 @import 'core/partials/trumps/sizing';
 ```
 
-## Contributing to LEGO
+## Contributing to OUI
 
-The following is for users planning to make contributions to LEGO.
+The following is for users planning to make contributions to OUI.
 
 Important: see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
 
-After cloning the `lego` repo run:
+After cloning the `oui` repo run:
 
 ```bash
 npm start
@@ -108,15 +108,15 @@ This will run the npm `start` commands found in package.json that installs the d
 
 #### Pre-Commit Hook &amp; Linter
 
-As part of the installation process above you should have run `gulp hook`. This will run the task that creates a git pre-commit hook. This hook fires a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/lego/blob/master/.scss-lint.yml). These rules ensure the LEGO SCSS is consistent.
+As part of the installation process above you should have run `gulp hook`. This will run the task that creates a git pre-commit hook. This hook fires a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/oui/blob/master/.scss-lint.yml). These rules ensure the OUI SCSS is consistent.
 
 If the the linter finds issues you'll see messages in your terminal like this:
 
-    [13:56:12] Using gulpfile /Library/WebServer/Documents/lego/gulpfile.js
+    [13:56:12] Using gulpfile /Library/WebServer/Documents/oui/gulpfile.js
     [13:56:12] Starting 'lint'...
     [13:56:12] Finished 'lint' after 4.32 ms
-    [13:56:15] 1 issues found in /Library/WebServer/Documents/lego/src/scss/desktop/_desktop-partials.scss
-    [13:56:15] /Library/WebServer/Documents/lego/src/scss/desktop/_desktop-partials.scss:24 [W] Files should end with a trailing newline
+    [13:56:15] 1 issues found in /Library/WebServer/Documents/oui/src/scss/desktop/_desktop-partials.scss
+    [13:56:15] /Library/WebServer/Documents/oui/src/scss/desktop/_desktop-partials.scss:24 [W] Files should end with a trailing newline
 
 Here the 'lint' process ran and found 1 issue, providing the file, line number, and reason for the problem.
 
@@ -158,12 +158,12 @@ This will start browsersync and will watch and reload the browser after any Sass
 
 ## Philosophy
 
-LEGO stands for Low-level Elements and Global Objects. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...
+OUI stands for Optimizely User Interface. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...
 
 1. **Abstracted.** Component names shouldn't be derived from the content they contain. Class names should convey structural meaning.
 1. **Reusable.** Components should be generic enough to be reused throughout the site. They should make no assumptions what page/view they will be used on. Problems solved in one area should be easily applied elsewhere.
 1. **Mixable.** Components should be able to join together to create larger blocks.
-1. **Powered by variables.** Nearly all design elements — colors, fonts, spacings, shadows — should be defined using the pre-existing [variables](https://github.com/optimizely/lego/blob/master/core/_core-variables.scss).
+1. **Powered by variables.** Nearly all design elements — colors, fonts, spacings, shadows — should be defined using the pre-existing [variables](https://github.com/optimizely/oui/blob/master/core/_core-variables.scss).
 
 By achieving these goals our code becomes...
 

@@ -1,6 +1,6 @@
 {
-  "name": "optimizely-lego",
-  "version": "5.0.0",
+  "name": "optimizely-oui",
+  "version": "6.0.0",
   "description": "CSS component library for Optimizely",
   "private": false,
   "main": "dist/js/lego.min.js",
@@ -27,16 +27,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/optimizely/lego.git"
+    "url": "https://github.com/optimizely/oui.git"
   },
-  "author": "Tom Genoni, Cheston Lee, Daniel O'Connor",
+  "author": "Tom Genoni, Cheston Lee, Daniel O'Connor, Kelly Walker",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/optimizely/lego/issues"
+    "url": "https://github.com/optimizely/oui/issues"
   },
-  "homepage": "https://github.com/optimizely/lego",
+  "homepage": "https://github.com/optimizely/oui",
   "keywords": [
-    "lego",
+    "oui",
     "components"
   ]
 }

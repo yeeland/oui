@@ -4,16 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## Unreleased
+## [Unreleased][Unreleased]
+
+## [6.0.0][6.0.0] - 2015-10-07
 ### Changed
 - [Patch] Updating weight of poptips from not specified to `600`.
 - [Patch] Border-radius on buttons now all `2px`.
-
-### Added
 - [Patch] Adding `narrow` and `tight` button variations so left/right padding can be made smaller.
+- [Feature] `matrix` mixin now has 3 optional values to specify number of columns, spacing, and an optional pixel value for responsive, e.g. `matrix(3, 300px)`.
 - [Patch] Adding `gulp html-tests` task to test changes to core using live HTML examples.
 - [Patch] Adding explanation of `html-tests` into README.md.
 - [Patch] Adding fix for Firefox buttons in `_reset.scss`, removing inner padding and border.
+- [Release] Rename LEGO to OUI. This creates a new NPM registry and changes the GitHub repository URL. (#130)
 
 ## [5.0.0][5.0.0] - 2015-09-28
 ### Added
@@ -138,13 +140,14 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[unreleased]: https://github.com/optimizely/lego/compare/v5.0.0...HEAD
-[0.0.2]: https://github.com/optimizely/lego/compare/v0.0.1...v0.0.2
-[0.0.3]: https://github.com/optimizely/lego/compare/v0.0.2...v0.0.3
-[1.0.0]: https://github.com/optimizely/lego/compare/v0.0.3...v1.0.0
-[2.0.0]: https://github.com/optimizely/lego/compare/v1.0.0...v2.0.0
-[3.0.0]: https://github.com/optimizely/lego/compare/v2.0.0...v3.0.0
-[3.1.0]: https://github.com/optimizely/lego/compare/v3.0.0...v3.1.0
-[4.0.0]: https://github.com/optimizely/lego/compare/v3.1.0...v4.0.0
-[4.0.1]: https://github.com/optimizely/lego/compare/v4.0.0...v4.0.1
-[5.0.0]: https://github.com/optimizely/lego/compare/v4.0.1...v5.0.0
+[unreleased]: https://github.com/optimizely/oui/compare/v5.0.0...HEAD
+[0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
+[0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
+[1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
+[2.0.0]: https://github.com/optimizely/oui/compare/v1.0.0...v2.0.0
+[3.0.0]: https://github.com/optimizely/oui/compare/v2.0.0...v3.0.0
+[3.1.0]: https://github.com/optimizely/oui/compare/v3.0.0...v3.1.0
+[4.0.0]: https://github.com/optimizely/oui/compare/v3.1.0...v4.0.0
+[4.0.1]: https://github.com/optimizely/oui/compare/v4.0.0...v4.0.1
+[5.0.0]: https://github.com/optimizely/oui/compare/v4.0.1...v5.0.0
+[5.0.0]: https://github.com/optimizely/oui/compare/v5.0.0...v6.0.0
