@@ -22,8 +22,10 @@
       // Get the type. This is required.
       var popType = trigger.dataAttrs[0].popType;
 
-      // Insert the type of pop.
-      $("body").append("<div class='pop pop--" + popType + "'>");
+      if (popType === "tip") {
+        // Insert the type of pop.
+        $("body").append("<div class='pop pop--tip'>");
+      }
 
       // Location of pop. Unless specified Positon 2 (top/center) is the default.
       var location = 1; // Corresponds to Position 2.
@@ -112,7 +114,6 @@
 
     },
     mouseleave: function () {
-
       // After leaving trigger hover destroy the `pop` element.
       $(".pop").remove();
     }
