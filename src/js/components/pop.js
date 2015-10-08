@@ -56,27 +56,47 @@
           arrow: "bottom-right"
         },
         { // Position 4
-          top: trigger.top + trigger.height / 2 - pop.height / 2,
-          left: trigger.left + trigger.width + ARROW_SIZE,
+          top: trigger.top,
+          left: trigger.right + ARROW_SIZE,
           arrow: "left"
         },
         { // Position 5
+          top: trigger.top + trigger.height / 2 - pop.height / 2,
+          left: trigger.right + ARROW_SIZE,
+          arrow: "left"
+        },
+        { // Position 6
+          top: trigger.bottom - pop.height,
+          left: trigger.right + ARROW_SIZE,
+          arrow: "left"
+        },
+        { // Position 7
           top: trigger.top + trigger.height + ARROW_SIZE,
           left: trigger.left - pop.width + trigger.width,
           arrow: "top-right"
         },
-        { // Position 6
+        { // Position 8
           top: trigger.top + trigger.height + ARROW_SIZE,
           left: trigger.left + trigger.width / 2 - pop.width / 2,
           arrow: "top-center"
         },
-        { // Position 7
+        { // Position 9
           top: trigger.top + trigger.height + ARROW_SIZE,
           left: trigger.left,
           arrow: "top-left"
         },
-        { // Position 8
+        { // Position 10
+          top: trigger.bottom - pop.height,
+          left: trigger.left - pop.width - ARROW_SIZE,
+          arrow: "right"
+        },
+        { // Position 11
           top: trigger.top + trigger.height / 2 - pop.height / 2,
+          left: trigger.left - pop.width - ARROW_SIZE,
+          arrow: "right"
+        },
+        { // Position 12
+          top: trigger.top,
           left: trigger.left - pop.width - ARROW_SIZE,
           arrow: "right"
         }
