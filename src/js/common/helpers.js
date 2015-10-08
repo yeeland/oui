@@ -8,6 +8,17 @@ function getProps(el) {
     left            : el.offset().left,
     bottom          : el.offset().top  + el.outerHeight(),
     right           : el.offset().left + el.outerWidth(),
+    dataAttrs       : getDataAttrs(el) // array of data- attrs
   }
   return element;
+}
+
+// Get data attrs as array
+
+function getDataAttrs(el) {
+  var arr = [];
+  $(el).map(function(){
+    arr.push($(this).data());
+  });
+  return arr;
 }
