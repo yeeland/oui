@@ -87,24 +87,6 @@
     &:first-child .accordion__link {
       box-shadow: none;
     }
-
-    &--active {
-      @include flex(1);
-
-      .accordion__link {
-        color: map-fetch($color, text base);
-        cursor: default;
-
-        &:hover {
-          background: map-fetch($color, background faint);
-        }
-
-        &:before {
-          opacity: 0;
-        }
-      }
-    }
-
     &--empty {
       .accordion__content-wrap {
         display: flex;
@@ -114,6 +96,23 @@
 
       .accordion__content {
         flex: 1;
+      }
+    }
+  }
+
+  .is-active {
+    @include flex(1);
+
+    .accordion__link {
+      color: map-fetch($color, text base);
+      cursor: default;
+
+      &:hover {
+        background: map-fetch($color, background faint);
+      }
+
+      &:before {
+        opacity: 0;
       }
     }
   }
