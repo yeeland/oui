@@ -12,23 +12,6 @@
 
   $(document).ready(function(){
 
-    $(".edit").hover(function(){
-      $trigger = $(this);
-      var text = $trigger.text();
-      $(".edit-text__input").val(text)
-    });
-
-
-    $("[data-edit-text-save]").click(function(){
-      var text = $(".edit-text__input").val();
-      $(".edit").text(text);
-      $(".pop--over").animate({opacity: 0},"fast")
-    });
-
-    $("[data-edit-text-cancel]").click(function(){
-      $(".pop--over").animate({opacity: 0},"fast")
-    });
-
 
 
   });
@@ -67,7 +50,7 @@
 <body>
 
 
-<h2><span data-pop-type="over" data-location="1" class="edit">This title</span></h2>
+<h2><span data-pop-type="over" data-location="1" class="edit" data-edit-text>This title</span></h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
 
