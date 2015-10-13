@@ -3,128 +3,17 @@
 // description: Information bubbles on hover.
 // ---
 
-// Used when the text is too long or too complicated for a poptip. Can also be
-// used for navigation menus when dropdowns cannot be used, for exammple, when
-// the menu extends to the right or left of the trigger.
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-top-left">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-top-center">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-top-right">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-right-top">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-right-center">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-right-bottom">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-bottom-right">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-bottom-center">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-bottom-left">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-left-bottom">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-left-center">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-popover lego-popover--arrow-left-top">
-//     <div class="lego-popover__content">
-//       <div class="lego-popover__title">Title</div>
-//       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-//     </div>
-//   </div>
-// </div>
-
 // [---]
 
-%#{$namespace}popover,
-.#{$namespace}popover {
+%#{$namespace}pop--over,
+.#{$namespace}pop--over {
   border: 1px solid map-fetch($color, ui base);
   border-radius: map-fetch($border-radius, base);
   background: map-fetch($color, background white);
   max-width: map-fetch($popover, max-width);
-  display: inline-block;
   box-shadow: 0 2px map-fetch($shadow, light);
+  position: absolute;
+  opacity: 0;
 
   &__content {
     @extend %kill-last-child-margin;

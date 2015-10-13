@@ -12,6 +12,7 @@
   //    9    8    7
 
   var ARROW_SIZE = 7;
+  var ANIMATE_DISTANCE = 3;
 
   $(document).on({
     mouseenter: function () {
@@ -41,6 +42,8 @@
       // Now get properities (heigh/width/etc) of the `pop` element.
       var pop = getProps( $(".pop") );
 
+      console.log(pop);
+
       var locations = [
         { // Position 1
           top: trigger.top - pop.height - ARROW_SIZE,
@@ -60,17 +63,17 @@
         { // Position 4
           top: trigger.top,
           left: trigger.right + ARROW_SIZE,
-          arrow: "left"
+          arrow: "left-top"
         },
         { // Position 5
           top: trigger.top + trigger.height / 2 - pop.height / 2,
           left: trigger.right + ARROW_SIZE,
-          arrow: "left"
+          arrow: "left-center"
         },
         { // Position 6
           top: trigger.bottom - pop.height,
           left: trigger.right + ARROW_SIZE,
-          arrow: "left"
+          arrow: "left-bottom"
         },
         { // Position 7
           top: trigger.top + trigger.height + ARROW_SIZE,
@@ -90,32 +93,32 @@
         { // Position 10
           top: trigger.bottom - pop.height,
           left: trigger.left - pop.width - ARROW_SIZE,
-          arrow: "right"
+          arrow: "right-bottom"
         },
         { // Position 11
           top: trigger.top + trigger.height / 2 - pop.height / 2,
           left: trigger.left - pop.width - ARROW_SIZE,
-          arrow: "right"
+          arrow: "right-center"
         },
         { // Position 12
           top: trigger.top,
           left: trigger.left - pop.width - ARROW_SIZE,
-          arrow: "right"
+          arrow: "right-top"
         }
       ]
 
       // Position the `pop` element, add its arrow, and fade in.
       $(".pop").css({
-        top: locations[location].top,
+        top: locations[location].top + ANIMATE_DISTANCE,
         left: locations[location].left
       })
         .addClass("pop--" + popType + "--arrow-" + locations[location].arrow)
-        .fadeIn("fast");
+        .animate({ opacity: 1, top: locations[location].top }, 'fast');
 
     },
     mouseleave: function () {
       // After leaving trigger hover destroy the `pop` element.
-      $(".pop").remove();
+      $(".pop--tip").remove();
     }
   }, "[data-pop-type]");
 

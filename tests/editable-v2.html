@@ -12,41 +12,23 @@
 
   $(document).ready(function(){
 
-    $(".edit-text__target").click(function(e){
+    $(".edit").hover(function(){
+      $trigger = $(this);
+      var text = $trigger.text();
+      $(".edit-text__input").val(text)
+    });
 
-      var text = $(this).text();
-      $("[data-edit-el]").hide();
 
-      $(".edit-text__wrap").show();
-
-
-      $(".edit-text__input").val(text).css({
-        fontSize: "21px",
-        padding: "7px",
-        paddingRight: "90px",
-        marginLeft: "-8px",
-        marginTop: "-5px"
-      }, "fast");
-
-      $(".edit-text__wrap").val(text).css({
-        marginBottom: "-5px"
-      }, "fast");
-
-      $( ".edit-text__input" ).focus();
-
-    })
-
-    $("[data-edit-text-save]").click(function(e){
+    $("[data-edit-text-save]").click(function(){
       var text = $(".edit-text__input").val();
-      $(".edit-text__target").text(text);
-      $("[data-edit-el]").show();
-      $(".edit-text__wrap").hide()
-    })
+      $(".edit").text(text);
+      $(".pop--over").animate({opacity: 0},"fast")
+    });
 
-    $("[data-edit-text-cancel]").click(function(e){
-      $("[data-edit-el]").show();
-      $(".edit-text__wrap").hide()
-    })
+    $("[data-edit-text-cancel]").click(function(){
+      $(".pop--over").animate({opacity: 0},"fast")
+    });
+
 
 
   });
@@ -63,34 +45,21 @@
     margin: 200px;
   }
 
-  .edit-text__input {
-    padding: 0;
-    padding-right: 40px;
+  .edit {
+    border-bottom: 1px dotted #aaa;
+    cursor: pointer;
   }
 
   .edit-text__wrap {
-    display: none;
-    position: relative;
-  }
-
-  .edit-text__target {
-    position: relative;
-  }
-
-  .edit-text__target:hover:before {
-    content: "✓";
-    position: absolute;
-    left: -20px;
-  }
-
-  .edit-text__buttons {
     display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    margin-top: -2px;
+    margin-right: -5px;
+    margin-left: -5px;
   }
+
+  .edit-text__input {
+    margin-right: 5px;
+  }
+
 
   </style>
 
@@ -98,23 +67,9 @@
 <body>
 
 
+<h2><span data-pop-type="over" data-location="1" class="edit">This title</span></h2>
 
-  <div class="edit-text push--bottom">
-    <h2 data-edit-el><span class="edit-text__target">This title</span></h2>
-    <div class="edit-text__wrap">
-      <input class="text-input edit-text__input" type="text">
-      <div class="edit-text__buttons">
-        <button class="button button--tight button--plain" data-edit-text-save>
-          <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use></svg>
-        </button>
-        <button class="button button--tight button--plain"data-edit-text-cancel>
-          <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
 
 
 
@@ -253,6 +208,20 @@
     </symbol>
   </svg>
 
+
+<ul class="pop pop--over">
+  <li class="pop--over__content">
+    <div class="edit-text__wrap">
+      <input class="text-input edit-text__input" type="text">
+      <button class="button button--tight button--plain" data-edit-text-save>
+        <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use></svg>
+      </button>
+      <button class="button button--tight button--plain"data-edit-text-cancel>
+        <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+      </button>
+    </div>
+  </li>
+</ul>
 
 </body>
 </html>
