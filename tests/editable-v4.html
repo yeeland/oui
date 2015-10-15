@@ -12,9 +12,9 @@
 
   $(document).ready(function(){
 
-    $("[data-edit-el]").click(function(e){
+    $("[data-editable]").click(function(e){
 
-      $("[data-edit-el]").removeClass("is-editing").show();
+      $("[data-editable]").removeClass("is-editing").show();
       $(".edit-text__wrap").remove();
 
       $trigger = $(this);
@@ -57,7 +57,7 @@
       $(".edit-text__wrap").remove();
     })
 
-    $("[data-edit-text-cancel]").click(function(e){
+    $(document).on( "click", "[data-edit-text-cancel]", function(e) {
       $(".is-editing").show();
       $(".edit-text__wrap").remove()
     })
@@ -78,6 +78,10 @@
     margin-bottom: 20px;
   }
 
+  html {
+    background: #f9f9f9;
+  }
+
   body {
     margin: 40px;
   }
@@ -95,7 +99,7 @@
     bottom: 0;
     resize: none;
     border-style: dotted;
-    background: #f9f9f9;
+    background: #fff;
   }
 
   .edit-text__buttons {
@@ -118,11 +122,11 @@
 </head>
 <body>
 
-  <h1 data-edit-el>Lorem</h1>
+  <h1 data-editable>This is my title</h1>
 
-  <p data-edit-el>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
-  <p data-edit-el>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
-  <p data-edit-el>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
+  <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
+  <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
+  <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
 
 
 
