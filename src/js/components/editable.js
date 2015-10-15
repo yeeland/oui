@@ -14,7 +14,7 @@ function saveText() {
 
 (function($, window, document) {
 
-  $(document).bind("change keyup input", '.edit-text__input', function(e) {
+  $(document).bind("change keyup input", ".edit-text__input", function(e) {
 
       // Wait for keypress before removing disabled.
       if ( $(".edit.is-active").length ) {

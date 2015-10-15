@@ -8,6 +8,9 @@ function getProps(el) {
     left            : el.offset().left,
     bottom          : el.offset().top  + el.outerHeight(),
     right           : el.offset().left + el.outerWidth(),
+    paddingBottom   : el.css("padding-bottom"),
+    lineHeight      : el.css("line-height"),
+    fontSize        : el.css("font-size"),
     dataAttrs       : getDataAttrs(el) // array of data- attrs
   }
   return element;

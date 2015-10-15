@@ -11,6 +11,14 @@ function showPop(trigger, pop, ARROW_SIZE) {
     location = trigger.dataAttrs[0].location - 1; // Subtract 1 so the item in array is correct.
   }
 
+  // Amount scrolled.
+  var scrolled = $(document).scrollTop();
+
+  // Show at bottom if not enough room.
+  if ( trigger.top - pop.height < scrolled ) {
+    location = 8
+  }
+
   // This handles the positioning/showing of the different types of pops: tips, overs.
   // Locations correspond to position that the 'pop' element should show up relative to the trigger.
 
@@ -21,6 +29,7 @@ function showPop(trigger, pop, ARROW_SIZE) {
   // 10 |         | 6
   //    -----------
   //    9    8    7
+
 
   var locations = [
     { // Position 1

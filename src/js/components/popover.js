@@ -1,6 +1,10 @@
 (function($, window, document) {
 
-  $(document).on( "click", "[data-pop-type='over']", function() {
+  $(document).on( "click", "[data-pop-type='over']", function(e) {
+
+    var POPOVER_DEFAULT_WIDTH = 250;
+
+    e.preventDefault();
 
     // Get trigger element.
     var $trigger = $(this);
@@ -34,6 +38,11 @@
 
       // If this is an edit text field popover
       if ( popHTML == "edit--input" || popHTML == "edit--textarea" ) {
+
+        if ( trigger.width > POPOVER_DEFAULT_WIDTH ) {
+          $(".pop").css({ width: trigger.width, maxWidth: trigger.width });
+        }
+
         $trigger.addClass("is-active");
         populateInput(pop, $trigger);
       }
