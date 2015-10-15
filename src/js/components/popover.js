@@ -39,8 +39,8 @@
       // If this is an edit text field popover
       if ( popHTML == "edit--input" || popHTML == "edit--textarea" ) {
 
-        if ( trigger.width > POPOVER_DEFAULT_WIDTH ) {
-          $(".pop").css({ width: trigger.width, maxWidth: trigger.width });
+        if ( trigger.outerWidth > POPOVER_DEFAULT_WIDTH ) {
+          $(".pop").css({ width: trigger.outerWidth, maxWidth: trigger.outerWidth });
         }
 
         $trigger.addClass("is-active");

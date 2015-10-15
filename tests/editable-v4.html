@@ -12,20 +12,10 @@
 
   $(document).ready(function(){
 
-
-    function convertInt(i) {
-      if (i == undefined) {
-        var num = 0;
-      } else {
-        num = parseInt(i);
-      }
-      return num;
-    }
-
     $("[data-editable]").click(function(e){
 
       $("[data-editable]").removeClass("is-editing").show();
-      $(".edit-text__wrap").remove();
+      $(".edit-text").remove();
 
       $trigger = $(this);
 
@@ -33,26 +23,35 @@
 
       $.get( "../src/js/html/edit-test.html", function( data ) {
 
-        console.log(convertInt(trigger.paddingLeft));
-
         var text = $trigger.text();
 
         $trigger.addClass("is-editing").hide();
         $(data).insertAfter($trigger);
 
-        $(".edit-text__wrap").css({
-          height: trigger.height - convertInt(trigger.paddingBottom) + 16,
-          left: convertInt(trigger.marginLeft) + convertInt(trigger.paddingLeft) - 8,
-          top: convertInt(trigger.marginTop) + convertInt(trigger.paddingTop) - 8,
-          width: "calc(100% + 16px)",
-          marginBottom: convertInt(trigger.marginBottom) + convertInt(trigger.paddingBottom) - 16,
-          marginTop: convertInt(trigger.marginTop) + convertInt(trigger.paddingTop)
+        console.log(trigger.height);
+
+        $(".edit-text").css({
+          height: trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
+          marginBottom: convertInt(trigger.marginBottom),
+          marginTop: convertInt(trigger.marginTop),
+          marginLeft: convertInt(trigger.marginLeft),
+          marginRight: convertInt(trigger.marginRight),
+          paddingBottom: convertInt(trigger.paddingBottom),
+          paddingTop: convertInt(trigger.paddingTop),
+          paddingLeft: convertInt(trigger.paddingLeft),
+          paddingRight: convertInt(trigger.paddingRight),
         }).insertAfter($trigger)
           .show();
 
+        $(".edit-text__wrap").css({
+          height: trigger.height
+        })
 
         $(".edit-text__input").css({
+          height: trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom) + 16,
           lineHeight: trigger.lineHeight,
+          fontWeight: trigger.fontWeight,
+          fontStyle: trigger.fontStyle,
           fontSize: trigger.fontSize
         })
           .val(text)
@@ -65,12 +64,12 @@
     $(document).on( "click", "[data-edit-text-save]", function(e) {
       var text = $(".edit-text__input").val();
       $(".is-editing").text(text).show();
-      $(".edit-text__wrap").remove();
+      $(".edit-text").remove();
     })
 
     $(document).on( "click", "[data-edit-text-cancel]", function(e) {
       $(".is-editing").show();
-      $(".edit-text__wrap").remove()
+      $(".edit-text").remove()
     })
 
 
@@ -81,11 +80,14 @@
   <style>
 
   h1 {
-    margin-bottom: 100px;
+    margin: 100px;
+    font-weight: 600;
+    font-style: italic;
   }
 
   p {
-    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   html {
@@ -93,29 +95,33 @@
   }
 
   body {
-    margin: 40px;
+    padding: 40px;
+  }
+
+  .edit-text {
+    display: none;
   }
 
   .edit-text__wrap {
-    display: none;
     position: relative;
   }
 
   .edit-text__input {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
     resize: none;
     border-style: dotted;
-    background: #fff;
+    overflow: auto; /* Removes scrollbar in IE */
+    width: calc(100% + 16px);
   }
 
   .edit-text__buttons {
     display: flex;
     position: absolute;
-    bottom: -24px;
+    bottom: -34px;
     right: 0;
   }
 

@@ -15,7 +15,7 @@ function showPop(trigger, pop, ARROW_SIZE) {
   var scrolled = $(document).scrollTop();
 
   // Show at bottom if not enough room.
-  if ( trigger.top - pop.height < scrolled ) {
+  if ( trigger.top - pop.outerHeight < scrolled ) {
     location = 8
   }
 
@@ -33,18 +33,18 @@ function showPop(trigger, pop, ARROW_SIZE) {
 
   var locations = [
     { // Position 1
-      top: trigger.top - pop.height - ARROW_SIZE,
+      top: trigger.top - pop.outerHeight - ARROW_SIZE,
       left: trigger.left,
       arrow: "bottom-left"
     },
     { // Position 2
-      top: trigger.top - pop.height - ARROW_SIZE,
-      left: trigger.left + trigger.width / 2 - pop.width / 2,
+      top: trigger.top - pop.outerHeight - ARROW_SIZE,
+      left: trigger.left + trigger.outerWidth / 2 - pop.outerWidth / 2,
       arrow: "bottom-center"
     },
     { // Position 3
-      top: trigger.top - pop.height - ARROW_SIZE,
-      left: trigger.left - pop.width + trigger.width,
+      top: trigger.top - pop.outerHeight - ARROW_SIZE,
+      left: trigger.left - pop.outerWidth + trigger.outerWidth,
       arrow: "bottom-right"
     },
     { // Position 4
@@ -53,7 +53,7 @@ function showPop(trigger, pop, ARROW_SIZE) {
       arrow: "left-top"
     },
     { // Position 5
-      top: trigger.top + trigger.height / 2 - pop.height / 2,
+      top: trigger.top + trigger.outerHeight / 2 - pop.outerHeight / 2,
       left: trigger.right + ARROW_SIZE,
       arrow: "left-center"
     },
@@ -63,36 +63,36 @@ function showPop(trigger, pop, ARROW_SIZE) {
       arrow: "left-bottom"
     },
     { // Position 7
-      top: trigger.top + trigger.height + ARROW_SIZE,
-      left: trigger.left - pop.width + trigger.width,
+      top: trigger.top + trigger.outerHeight + ARROW_SIZE,
+      left: trigger.left - pop.outerWidth + trigger.outerWidth,
       arrow: "top-right"
     },
     { // Position 8
-      top: trigger.top + trigger.height + ARROW_SIZE,
-      left: trigger.left + trigger.width / 2 - pop.width / 2,
+      top: trigger.top + trigger.outerHeight + ARROW_SIZE,
+      left: trigger.left + trigger.outerWidth / 2 - pop.outerWidth / 2,
       arrow: "top-center"
     },
     { // Position 9
-      top: trigger.top + trigger.height + ARROW_SIZE,
+      top: trigger.top + trigger.outerHeight + ARROW_SIZE,
       left: trigger.left,
       arrow: "top-left"
     },
     { // Position 10
       top: trigger.bottom - pop.height,
-      left: trigger.left - pop.width - ARROW_SIZE,
+      left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-bottom"
     },
     { // Position 11
-      top: trigger.top + trigger.height / 2 - pop.height / 2,
-      left: trigger.left - pop.width - ARROW_SIZE,
+      top: trigger.top + trigger.outerHeight / 2 - pop.outerHeight / 2,
+      left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-center"
     },
     { // Position 12
       top: trigger.top,
-      left: trigger.left - pop.width - ARROW_SIZE,
+      left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-top"
     }
-    ]
+  ]
 
   // Position the `pop` element, add its arrow, and fade in.
   $(".pop").css({

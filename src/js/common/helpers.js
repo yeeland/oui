@@ -2,8 +2,10 @@
 
 function getProps(el) {
   element = {
-    height          : el.outerHeight(),
-    width           : el.outerWidth(),
+    height          : el.height(),
+    outerHeight     : el.outerHeight(),
+    width           : el.width(),
+    outerWidth      : el.outerWidth(),
     top             : el.offset().top,
     left            : el.offset().left,
     bottom          : el.offset().top  + el.outerHeight(),
@@ -18,6 +20,8 @@ function getProps(el) {
     paddingLeft     : el.css("padding-left"),
     paddingRight    : el.css("padding-right"),
     lineHeight      : el.css("line-height"),
+    fontWeight      : el.css("font-weight"),
+    fontStyle       : el.css("font-style"),
     fontSize        : el.css("font-size"),
     dataAttrs       : getDataAttrs(el) // array of data- attrs
   }
@@ -32,4 +36,16 @@ function getDataAttrs(el) {
     arr.push($(this).data());
   });
   return arr;
+}
+
+// Convert CSS values that may be undefined.
+// If not, convert to intiger by removing 'px'
+
+function convertInt(i) {
+  if (i == undefined) {
+    var num = 0;
+  } else {
+    num = parseInt(i);
+  }
+  return num;
 }
