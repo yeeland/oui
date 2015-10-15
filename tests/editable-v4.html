@@ -12,6 +12,16 @@
 
   $(document).ready(function(){
 
+
+    function convertInt(i) {
+      if (i == undefined) {
+        var num = 0;
+      } else {
+        num = parseInt(i);
+      }
+      return num;
+    }
+
     $("[data-editable]").click(function(e){
 
       $("[data-editable]").removeClass("is-editing").show();
@@ -23,17 +33,20 @@
 
       $.get( "../src/js/html/edit-test.html", function( data ) {
 
+        console.log(convertInt(trigger.paddingLeft));
+
         var text = $trigger.text();
 
         $trigger.addClass("is-editing").hide();
         $(data).insertAfter($trigger);
 
         $(".edit-text__wrap").css({
-          height: trigger.height + 16 - parseInt(trigger.paddingBottom),
-          left: -8,
-          top: -8,
+          height: trigger.height - convertInt(trigger.paddingBottom) + 16,
+          left: convertInt(trigger.marginLeft) + convertInt(trigger.paddingLeft) - 8,
+          top: convertInt(trigger.marginTop) + convertInt(trigger.paddingTop) - 8,
           width: "calc(100% + 16px)",
-          marginBottom: parseInt(trigger.marginBottom) - 16 + parseInt(trigger.paddingBottom)
+          marginBottom: convertInt(trigger.marginBottom) + convertInt(trigger.paddingBottom) - 16,
+          marginTop: convertInt(trigger.marginTop) + convertInt(trigger.paddingTop)
         }).insertAfter($trigger)
           .show();
 
@@ -44,8 +57,6 @@
         })
           .val(text)
           .focus();
-
-
       })
 
 
@@ -70,12 +81,11 @@
   <style>
 
   h1 {
-    padding-bottom: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
   }
 
   p {
-    margin-bottom: 20px;
+    padding-top: 20px;
   }
 
   html {
