@@ -48,7 +48,6 @@
         })
 
         $(".edit-text__input").css({
-          height: trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom) + 16,
           lineHeight: trigger.lineHeight,
           fontWeight: trigger.fontWeight,
           fontStyle: trigger.fontStyle,
@@ -86,7 +85,7 @@
   }
 
   p {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     margin-top: 20px;
   }
 
@@ -95,7 +94,7 @@
   }
 
   body {
-    padding: 40px;
+    margin: 40px;
   }
 
   .edit-text {
@@ -110,12 +109,11 @@
     position: absolute;
     top: -8px;
     left: -8px;
-    bottom: -8px;
-    right: -8px;
     resize: none;
     border-style: dotted;
     overflow: auto; /* Removes scrollbar in IE */
     width: calc(100% + 16px);
+    height: calc(100% + 16px);
   }
 
   .edit-text__buttons {
