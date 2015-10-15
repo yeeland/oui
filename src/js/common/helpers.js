@@ -8,6 +8,8 @@ function getProps(el) {
     left            : el.offset().left,
     bottom          : el.offset().top  + el.outerHeight(),
     right           : el.offset().left + el.outerWidth(),
+    position        : el.css("position"),
+    marginBottom    : el.css("margin-bottom"),
     paddingBottom   : el.css("padding-bottom"),
     lineHeight      : el.css("line-height"),
     fontSize        : el.css("font-size"),
