@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="../dist/css/core.css">
+
+  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="../dist/js/core.min.js"></script>
+
+  <style>
+
+  button {
+    outline: none;
+  }
+
+  body {
+    margin: 200px;
+  }
+
+  .tabs-nav__item.is-active {
+    background-color: #FFF;
+    cursor: default;
+  }
+
+  .tabs-nav__item.is-active::after {
+      content: '';
+      display: block;
+      height: 3px;
+      background: #FFF;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+  }
+
+  .tabs-pane__item {
+    display: none;
+  }
+
+  .tabs-pane__item.is-active {
+    display: block;
+  }
+
+  .tabs-pane {
+    display: block;
+  }
+
+  </style>
+
+
+  <script>
+
+$(document).ready(function(){
+
+  var TABS_NAV_ITEM = $(".tabs-nav__item");
+  var TABS_PANE_ITEM = $(".tabs-pane__item");
+  var ACTIVE_CLASS = "is-active";
+
+  $(TABS_NAV_ITEM).click(function(){
+    var $parent = $(this).closest(".tabs");
+    var index = $parent.find(TABS_NAV_ITEM).index(this);
+
+    // Hide/show clicked tab.
+    $(TABS_NAV_ITEM).removeClass(ACTIVE_CLASS)
+    $(this).addClass(ACTIVE_CLASS);
+
+    // Hide/show corresponding content pane.
+    var $panes =  $parent.find(".tabs-pane");
+    $panes.find(TABS_PANE_ITEM).removeClass(ACTIVE_CLASS);
+    $panes.find(TABS_PANE_ITEM).eq(index).addClass(ACTIVE_CLASS);
+  })
+
+
+});
+
+  </script>
+
+</head>
+<body>
+
+<div class="tabs">
+  <ul class="tabs-nav">
+    <li class="tabs-nav__item is-active">Tab One</li>
+    <li class="tabs-nav__item">Tab Two</li>
+    <li class="tabs-nav__item">Tab Three</li>
+  </ul>
+  <div class="tabs-pane">
+    <div class="tabs-pane__item is-active">Tab Content One</div>
+    <div class="tabs-pane__item">Tab Content Two</div>
+    <div class="tabs-pane__item">Tab Content Three</div>
+  </div>
+</div>
+
+
+</body>
+</html>

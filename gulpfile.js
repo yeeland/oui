@@ -93,7 +93,7 @@ gulp.task('sass', function() {
 // Concatenate and uglify js
 gulp.task('js', function() {
   gulp.src('src/js/**/*.js')
-    .pipe(uglify('core.min.js'))
+    .pipe(uglify('core.min.js').on('error', gutil.log))
     .pipe(gulp.dest('dist/js'))
 });
 
