@@ -23,12 +23,10 @@
 
       $.get( "../src/js/html/edit-test.html", function( data ) {
 
-        var text = $trigger.text();
-
-        $trigger.addClass("is-editing").hide();
         $(data).insertAfter($trigger);
+        $trigger.addClass("is-editing").hide();
 
-        console.log(trigger.height);
+        var text = $trigger.text();
 
         $(".edit-text").css({
           height: trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
@@ -57,7 +55,13 @@
           .focus();
       })
 
+    });
 
+    $(document).on( "keypress", "textarea", function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+        $("[data-edit-text-save]").click();
+      }
     });
 
     $(document).on( "click", "[data-edit-text-save]", function(e) {
@@ -71,6 +75,15 @@
       $(".edit-text").remove()
     })
 
+    // // Clicking anywhere outside of dropdown.
+    // $(document).on("click", function(e) {
+    //   // If any dropdown is visible.
+    //   if ( $(".edit-text").length ) {
+    //     $("[data-edit-text-cancel]").click();
+    //   }
+    // });
+
+
 
   });
 
@@ -78,15 +91,15 @@
 
   <style>
 
-  h1 {
-    margin: 100px;
-    font-weight: 600;
-    font-style: italic;
+  .project-title {
+    font-size: 20px;
+     white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   }
 
   p {
-    padding-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   html {
@@ -110,24 +123,44 @@
     top: -8px;
     left: -8px;
     resize: none;
-    border-style: dotted;
     overflow: auto; /* Removes scrollbar in IE */
     width: calc(100% + 16px);
     height: calc(100% + 16px);
+    border-radius: 2px 2px 0 2px;
   }
 
   .edit-text__buttons {
     display: flex;
     position: absolute;
-    bottom: -34px;
-    right: 0;
+    bottom: -30px;
+    right: -8px;
   }
 
-  .button {
+  .edit-text__buttons .button {
     outline: none;
     height: 22px;
     line-height: 22px;
+    border: 1px solid #9ACCE2;
+    border-top: none;
+    background: #fff;
+    border-radius: 0 0 2px 0;
   }
+
+  .edit-text__buttons .button:first-child {
+    border-right: none;
+    border-radius: 0 0 0 2px;
+  }
+
+  .edit-text__buttons .button:hover {
+    border: 1px solid #9ACCE2;
+    border-top: none;
+    background: #fff;
+  }
+
+  .edit-text__buttons .button:first-child:hover {
+    border-right: none;
+  }
+
 
 
 
@@ -136,11 +169,27 @@
 </head>
 <body>
 
-  <h1 data-editable>This is my title</h1>
+  <div class="flex flex-align--center push-triple--bottom">
+    <div class="flex-1">
+      <div class="project-title" data-editable>This is my title</div>
+    </div>
+    <button class="button push-double--left">
+      <svg class="icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+      </svg>
+    </button>
+    <button class="button push-double--left">
+      <svg class="icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
+      </svg>
+    </button>
+  </div>
+
 
   <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
   <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
   <p data-editable>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus quas, adipisci fuga voluptate. Illo, voluptatum amet quia mollitia, voluptatem maxime dolores reiciendis, voluptatibus doloremque qui animi tempore provident deleniti.</p>
+
 
 
 
