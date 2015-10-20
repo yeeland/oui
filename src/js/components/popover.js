@@ -1,10 +1,15 @@
-(function($, window, document) {
+jQuery.noConflict();
 
-  $(document).on( "click", "[data-pop-type='over']", function(e) {
+(function($) {
+
+  $(document).on( "click", "[data-oui-pop-type='over']", function(e) {
+
+    e.preventDefault();
 
     var POPOVER_DEFAULT_WIDTH = 250;
 
-    e.preventDefault();
+    // Remove any existing popovers.
+    $("body > .pop--over").remove();
 
     // Get trigger element.
     var $trigger = $(this);
@@ -16,14 +21,7 @@
     var ARROW_SIZE = 7;
 
     // Get html file name from data attr.
-    var popHTML = trigger.dataAttrs[0].popHtml;
-
-    // If this is editable text.
-    if ( $trigger.hasClass("edit") ) {
-      // Remove any existing text edit popover.
-      $("[data-text-edit]").remove();
-      $(".edit.is-active").removeClass("is-active");
-    }
+    var popHTML = trigger.dataAttrs[0].ouiPopHtml;
 
     $.get( "../src/js/html/" + popHTML + ".html", function(data) {
 
@@ -36,19 +34,8 @@
       // Show the poptip.
       showPop(trigger, pop, ARROW_SIZE);
 
-      // If this is an edit text field popover
-      if ( popHTML == "edit--input" || popHTML == "edit--textarea" ) {
-
-        if ( trigger.outerWidth > POPOVER_DEFAULT_WIDTH ) {
-          $(".pop").css({ width: trigger.outerWidth, maxWidth: trigger.outerWidth });
-        }
-
-        $trigger.addClass("is-active");
-        populateInput(pop, $trigger);
-      }
-
     });
 
   });
 
-}(window.jQuery, window, document));
+})( jQuery );

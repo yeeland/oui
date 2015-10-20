@@ -3,16 +3,16 @@ function showPop(trigger, pop, ARROW_SIZE) {
   var ANIMATE_DISTANCE = 3;
 
   // Get the type of popover.
-  var popType = trigger.dataAttrs[0].popType;
+  var popType = trigger.dataAttrs[0].ouiPopType;
 
   // Location of pop. Unless specified Positon 2 (top/center) is the default.
   var location = 1; // Corresponds to Position 2.
-  if (trigger.dataAttrs[0].location) {
-    location = trigger.dataAttrs[0].location - 1; // Subtract 1 so the item in array is correct.
+  if (trigger.dataAttrs[0].ouiPopLocation) {
+    location = trigger.dataAttrs[0].ouiPopLocation - 1; // Subtract 1 so the item in array is correct.
   }
 
   // Amount scrolled.
-  var scrolled = $(document).scrollTop();
+  var scrolled = jQuery(document).scrollTop();
 
   // Show at bottom if not enough room.
   if ( trigger.top - pop.outerHeight < scrolled ) {
@@ -95,7 +95,7 @@ function showPop(trigger, pop, ARROW_SIZE) {
   ]
 
   // Position the `pop` element, add its arrow, and fade in.
-  $(".pop").css({
+  jQuery(".pop").css({
     top: locations[location].top + ANIMATE_DISTANCE,
     left: locations[location].left
   })

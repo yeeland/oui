@@ -1,5 +1,6 @@
-(function($, window, document) {
+jQuery.noConflict();
 
+(function($) {
 
   $(document).on({
     mouseenter: function () {
@@ -13,7 +14,7 @@
       $("body").append("<div class='pop pop--tip'>");
 
       // Add the text in.
-      $(".pop--tip").text(trigger.dataAttrs[0].popText);
+      $(".pop--tip").text(trigger.dataAttrs[0].ouiPopText);
 
       // Now get properities (heigh/width/etc) of the `pop` element.
       var pop = getProps( $(".pop--tip") );
@@ -25,6 +26,6 @@
       // After leaving trigger hover destroy the `pop` element.
       $(".pop--tip").remove();
     }
-  }, "[data-pop-type='tip']");
+  }, "[data-oui-pop-type='tip']");
 
-}(window.jQuery, window, document));
+})( jQuery );

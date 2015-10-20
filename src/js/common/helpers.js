@@ -1,5 +1,3 @@
-// Get height/width/sizing of a given element.
-
 function getProps(el) {
   element = {
     height          : el.height(),
@@ -32,8 +30,8 @@ function getProps(el) {
 
 function getDataAttrs(el) {
   var arr = [];
-  $(el).map(function(){
-    arr.push($(this).data());
+  jQuery(el).map(function(){
+    arr.push(jQuery(this).data());
   });
   return arr;
 }

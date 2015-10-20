@@ -1,3 +1,6 @@
-$(document).ready(function(){
+jQuery.noConflict();
 
-});
+(function($) {
+
+
+})( jQuery );

@@ -1,30 +1,34 @@
-(function($, window, document) {
+jQuery.noConflict();
+
+(function($) {
 
   $(document).on("click", ".accordion__link", function(e) {
+
     e.stopPropagation();
+
+    var ACTIVE_CLASS = "is-active";
+    var DURATION = 100;
 
     var $target = $(this).closest(".accordion__item");
 
-    if ( !$target.hasClass("is-active") ) {
+    if ( !$target.hasClass(ACTIVE_CLASS) ) {
 
       var $accordion = $(this).closest(".accordion");
-      var $curActive = $accordion.find(".is-active");
+      var $curActive = $accordion.find("." + ACTIVE_CLASS);
       var paneHeight = $curActive.outerHeight();
 
       $target.animate({
         height: paneHeight
       }, {
-        duration: 200,
+        duration: DURATION,
         queue: false,
         complete: function() {
-          $accordion.find(".is-active").removeClass("is-active");
-          $target.addClass("is-active");
+          $accordion.find("." + ACTIVE_CLASS).removeClass(ACTIVE_CLASS);
+          $target.addClass(ACTIVE_CLASS);
           $target.removeAttr("style");
         }
       });
-
     }
   });
 
-
-}(window.jQuery, window, document));
+})( jQuery );

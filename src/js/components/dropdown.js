@@ -1,7 +1,9 @@
-(function($, window, document) {
+jQuery.noConflict();
 
-  var DROPDOWN        = "[data-dropdown]";
-  var DROPDOWN_TOGGLE = "[data-dropdown-toggle]";
+(function($) {
+
+  var DROPDOWN        = "[data-oui-dropdown]";
+  var DROPDOWN_TOGGLE = "[data-oui-dropdown-toggle]";
   var ACTIVE_CLASS    = "is-active";
 
   // Close any open dropdowns.
@@ -38,4 +40,4 @@
     }
   });
 
-}(window.jQuery, window, document));
+})( jQuery );
