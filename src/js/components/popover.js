@@ -7,9 +7,9 @@ jQuery.noConflict();
     e.preventDefault();
 
     var POPOVER_DEFAULT_WIDTH = 250;
+    var ARROW_SIZE = 7;
 
-    // Remove any existing popovers.
-    $("body > .pop--over").remove();
+    $("[data-oui-active-pop-id]").remove();
 
     // Get trigger element.
     var $trigger = $(this);
@@ -17,24 +17,23 @@ jQuery.noConflict();
     // Get the properties of the trigger.
     var trigger = getProps( $(this) );
 
-    // Set arrow size.
-    var ARROW_SIZE = 7;
+    // Get html from data attr.
+    var popID = trigger.dataAttrs[0].ouiPopId;
 
-    // Get html file name from data attr.
-    var popHTML = trigger.dataAttrs[0].ouiPopHtml;
+    // Reset the classes to remove any existing arrow classes.
+    $("#" + popID).attr("class", "pop pop--over");
 
-    $.get( "../src/js/html/" + popHTML + ".html", function(data) {
+    // Clone the target html.
+    var $popHTML = $("#" + popID).clone();
 
-      // Append popover to the body.
-      $("body").append(data);
+    // Strip the ID, add active class, and append.
+    $popHTML.removeAttr("id").attr("data-oui-active-pop-id", popID).appendTo("body")
 
-      // Now get properities (heigh/width/etc) of the `pop` element.
-      var pop = getProps( $(".pop--over") );
+    // Now get properities (heigh/width/etc) of the `pop` element.
+    var pop = getProps( $("[data-oui-active-pop-id]") );
 
-      // Show the poptip.
-      showPop(trigger, pop, ARROW_SIZE);
-
-    });
+    // Show the poptip.
+    showPop(trigger, pop, ARROW_SIZE);
 
   });
 

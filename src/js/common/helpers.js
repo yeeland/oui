@@ -1,5 +1,6 @@
 function getProps(el) {
   element = {
+    element         : el,
     height          : el.height(),
     outerHeight     : el.outerHeight(),
     width           : el.width(),

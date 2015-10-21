@@ -14,6 +14,7 @@
   box-shadow: 0 2px map-fetch($shadow, light);
   position: absolute;
   opacity: 0;
+  display: none;
 
   &__content {
     @extend %kill-last-child-margin;

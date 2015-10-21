@@ -95,7 +95,8 @@ function showPop(trigger, pop, ARROW_SIZE) {
   ]
 
   // Position the `pop` element, add its arrow, and fade in.
-  jQuery(".pop").css({
+  jQuery(pop.element).css({
+    display: "block",
     top: locations[location].top + ANIMATE_DISTANCE,
     left: locations[location].left
   })
