@@ -1,3 +1,5 @@
+// TODO: Add click outside of active area?
+
 jQuery.noConflict();
 
 (function($) {

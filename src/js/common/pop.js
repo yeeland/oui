@@ -16,7 +16,7 @@ function showPop(trigger, pop, ARROW_SIZE) {
 
   // Show at bottom if not enough room.
   if ( trigger.top - pop.outerHeight < scrolled ) {
-    location = 8
+    location = 7 // Position 8
   }
 
   // This handles the positioning/showing of the different types of pops: tips, overs.
