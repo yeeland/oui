@@ -2,10 +2,14 @@ jQuery.noConflict();
 
 (function($) {
 
-  $(document).on( "click", ".disclose__link", function(e) {
+  $(document).on( "click", "[data-oui-disclose-link]", function(e) {
+
     e.preventDefault();
-    $parent = $(this).closest(".disclose");
-    // By adding this class the CSS handles the show/hide of the content.
+
+    // Find parent disclose.
+    $parent = $(this).closest("[data-oui-disclose]");
+
+    // The CSS handles the show/hide of the content.
     $parent.toggleClass("is-active");
   });
 

@@ -18,6 +18,10 @@
     margin: 200px;
   }
 
+  h4 {
+    font-size: 18px;
+  }
+
   .disclose {
     margin-bottom: 10px;
   }
@@ -52,8 +56,8 @@
 <body>
 
 
-<div class="disclose">
-  <a href="#" class="disclose__link link--dark">
+<div class="disclose" data-oui-disclose>
+  <a href="#" class="disclose__link link--dark" data-oui-disclose-link>
     <div class="disclose__arrow"><span class="arrow-inline--right"></span></div>
     <div class="disclose__title">Title of Disclosure</div>
   </a>
@@ -63,11 +67,13 @@
   </div>
 </div>
 
-<div class="disclose">
-  <a href="#" class="disclose__link">
-    <div class="disclose__arrow"><span class="arrow-inline--right"></span></div>
-    <div class="disclose__title">Title of Disclosure</div>
-  </a>
+<div class="disclose" data-oui-disclose>
+  <h4>
+    <a href="#" class="disclose__link" data-oui-disclose-link>
+      <div class="disclose__arrow"><span class="arrow-inline--right"></span></div>
+      <div class="disclose__title">Title of Disclosure</div>
+    </a>
+  </h4>
   <div class="disclose__content">
     <h3>Some Title</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>

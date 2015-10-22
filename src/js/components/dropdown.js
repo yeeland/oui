@@ -2,35 +2,35 @@ jQuery.noConflict();
 
 (function($) {
 
-  function dropdownVars() {
+  // Close any open dropdowns.
+  function closeAllDropdowns() {
+
     var DROPDOWN        = "[data-oui-dropdown]";
     var DROPDOWN_TOGGLE = "[data-oui-dropdown-toggle]";
     var ACTIVE_CLASS    = "is-active";
-    return [DROPDOWN, DROPDOWN_TOGGLE, ACTIVE_CLASS]
-  }
 
-  // Close any open dropdowns.
-  function closeAllDropdowns() {
-    $(dropdownVars()[0]).removeClass(dropdownVars()[2]);
-    $(dropdownVars()[1]).removeClass(dropdownVars()[2]);
+    $(DROPDOWN).removeClass(ACTIVE_CLASS);
+    $(DROPDOWN_TOGGLE).removeClass(ACTIVE_CLASS);
   }
 
   // Trigger a dropdown.
   $(document).on("click", "[data-oui-dropdown-toggle]", function(e) {
 
     e.stopPropagation();
-    dropdownVars();
 
-    var dropdown_parent = $(this).closest(dropdownVars()[0]);
+    var DROPDOWN        = "[data-oui-dropdown]";
+    var ACTIVE_CLASS    = "is-active";
+
+    var dropdown_parent = $(this).closest(DROPDOWN);
 
     // Close any other dropdowns.
     closeAllDropdowns();
 
     // If the clicked dropdown is NOT open.
-    if ( !dropdown_parent.hasClass(dropdownVars()[2]) ) {
+    if ( !dropdown_parent.hasClass(ACTIVE_CLASS) ) {
       // Open the clicked dropdown.
-      dropdown_parent.addClass(dropdownVars()[2]);
-      $(this).addClass(dropdownVars()[2]);
+      dropdown_parent.addClass(ACTIVE_CLASS);
+      $(this).addClass(ACTIVE_CLASS);
     }
 
   });
@@ -38,10 +38,11 @@ jQuery.noConflict();
   // Clicking anywhere outside of dropdown.
   $(document).on("click", function(e) {
 
-    dropdownVars();
+    var DROPDOWN        = "[data-oui-dropdown]";
+    var ACTIVE_CLASS    = "is-active";
 
     // If any dropdown is visible.
-    if ( $(dropdownVars()[0]).hasClass(dropdownVars()[2]) ) {
+    if ( $(DROPDOWN).hasClass(ACTIVE_CLASS) ) {
       closeAllDropdowns();
     }
   });

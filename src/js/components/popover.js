@@ -29,21 +29,21 @@ jQuery.noConflict();
     // Clone the target html.
     var $popHTML = $("#" + popID).clone();
 
-    // Strip the ID, add active class, and append.
+    // Strip the ID, add active ID value to the attr, and append.
     $popHTML.removeAttr("id").attr(ACTIVE_POP_ID, popID).appendTo("body");
-
-    var popWidth = trigger.dataAttrs[0].ouiPopWidth;
 
     // If a width is specified via data attr set the width of the popover.
     // Otherwise it defaults to a max-width specificed in the CSS.
+    var popWidth = trigger.dataAttrs[0].ouiPopWidth;
+
     if ( popWidth !== undefined ) {
       $("["+ACTIVE_POP_ID+"]").css({
         width: popWidth,
-        maxWidth: popWidth
+        maxWidth: popWidth // Need to set to override default max-width.
       })
     }
 
-    // Now get properities (heigh/width/etc) of the `pop` element.
+    // Get properities (heigh/width/etc) of the `pop` element.
     var pop = getProps( $("["+ACTIVE_POP_ID+"]") );
 
     // Show the poptip.
@@ -51,16 +51,19 @@ jQuery.noConflict();
 
   });
 
-  $(document).on( "click", ".popover__close", function(e) {
+  $(document).on( "click", "[data-oui-popover-close]", function(e) {
     // Find active popover and remove it.
-    $pop = $(this).closest(".pop--over");
+    $pop = $(this).closest("[data-oui-popover]");
     $pop.remove();
   });
 
   $(document).on( "click", function(e) {
+
     // If clicking outside of active pop up hide it, otherwise do nothing.
-    if ( !$(e.target).closest(".pop--over").length ) {
-      $("[data-oui-active-pop-id]").remove()
+    var ACTIVE_POP_ID = "data-oui-active-pop-id";
+
+    if ( !$(e.target).closest("["+ACTIVE_POP_ID+"]").length ) {
+      $("["+ACTIVE_POP_ID+"]").remove()
     }
   });
 

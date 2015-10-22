@@ -2,19 +2,20 @@ jQuery.noConflict();
 
 (function($) {
 
-  $(document).on("click", ".accordion__link", function(e) {
+  $(document).on("click", "[data-oui-accordion-link]", function(e) {
 
     e.preventDefault();
 
     var ACTIVE_CLASS = "is-active";
     var DURATION = 100;
 
-    var $target = $(this).closest(".accordion__item");
+    var $target = $(this).closest("[data-oui-accordion-item]");
 
-    // If clicking the non-active accordion__item.
+    // If clicking the non-active [data-oui-accordion-item].
     if ( !$target.hasClass(ACTIVE_CLASS) ) {
 
-      var $accordion = $(this).closest(".accordion");
+      // Get parent accordion.
+      var $accordion = $(this).closest("[data-oui-accordion]");
       var $curActive = $accordion.find("." + ACTIVE_CLASS);
       var paneHeight = $curActive.outerHeight(); // Get height of opened pane.
 
@@ -26,7 +27,7 @@ jQuery.noConflict();
         complete: function() {
           $accordion.find("." + ACTIVE_CLASS).removeClass(ACTIVE_CLASS);
           $target.addClass(ACTIVE_CLASS);
-          $target.removeAttr("style");
+          $target.removeAttr("style"); // Removing animated inline value height.
         }
       });
     }

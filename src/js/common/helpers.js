@@ -20,6 +20,7 @@ function getProps(el) {
     paddingRight    : el.css("padding-right"),
     lineHeight      : el.css("line-height"),
     fontWeight      : el.css("font-weight"),
+    fontFamily      : el.css("font-family"),
     fontStyle       : el.css("font-style"),
     fontSize        : el.css("font-size"),
     dataAttrs       : getDataAttrs(el) // array of data- attrs

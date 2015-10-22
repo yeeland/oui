@@ -9,19 +9,23 @@ jQuery.noConflict();
     var ACTIVE_CLASS = "is-editing";
 
     $("[data-oui-editable]").removeClass(ACTIVE_CLASS).show();
+
+    // Remove any existing editing box.
     $(".edit-text").remove();
 
     $trigger = $(this);
 
     var trigger = getProps($trigger);
 
-    $.get( "../src/js/html/edit-test.html", function( data ) {
+    $.get( "../src/js/html/editable.html", function( data ) {
 
-      $(data).insertAfter($trigger);
-      $trigger.addClass(ACTIVE_CLASS);
+      $trigger.addClass(ACTIVE_CLASS); // Hides the text user wants to edit.
+      $(data).insertAfter($trigger); // Inserts editiable in same spot.
 
+      // Get the text of the element to be edited.
       var text = $trigger.text();
 
+      // Position the edit box using values from the trigger element.
       $(".edit-text").css({
         height        : trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
         marginBottom  : convertInt(trigger.marginBottom),
@@ -35,14 +39,17 @@ jQuery.noConflict();
       }).insertAfter($trigger)
         .show();
 
+      // Need to fix this height due to FF issue.
       $(".edit-text__wrap").css({
         height: trigger.height
       })
 
+      // Input text styling matches that of the trigger.
       $(".edit-text__input").css({
         lineHeight  : trigger.lineHeight,
         fontWeight  : trigger.fontWeight,
         fontStyle   : trigger.fontStyle,
+        fontFamily  : trigger.fontFamily,
         fontSize    : trigger.fontSize
       })
         .val(text)
@@ -52,6 +59,7 @@ jQuery.noConflict();
   });
 
   $(document).on( "keypress", "textarea", function(e) {
+    // If key is return/enter, perform a save.
     if (e.keyCode == 13) {
       e.preventDefault();
       $("[data-edit-text-save]").click();
@@ -59,6 +67,7 @@ jQuery.noConflict();
   });
 
   $(document).on( "click", "[data-edit-text-save]", function(e) {
+    // On save, move the edited text back into the original element.
     var text = $(".edit-text__input").val();
     $(".is-editing").text(text).removeClass("is-editing");
     $(".edit-text").remove();
