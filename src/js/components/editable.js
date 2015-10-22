@@ -18,20 +18,20 @@ jQuery.noConflict();
     $.get( "../src/js/html/edit-test.html", function( data ) {
 
       $(data).insertAfter($trigger);
-      $trigger.addClass(ACTIVE_CLASS).hide();
+      $trigger.addClass(ACTIVE_CLASS);
 
       var text = $trigger.text();
 
       $(".edit-text").css({
-        height: trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
-        marginBottom: convertInt(trigger.marginBottom),
-        marginTop: convertInt(trigger.marginTop),
-        marginLeft: convertInt(trigger.marginLeft),
-        marginRight: convertInt(trigger.marginRight),
-        paddingBottom: convertInt(trigger.paddingBottom),
-        paddingTop: convertInt(trigger.paddingTop),
-        paddingLeft: convertInt(trigger.paddingLeft),
-        paddingRight: convertInt(trigger.paddingRight),
+        height        : trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
+        marginBottom  : convertInt(trigger.marginBottom),
+        marginTop     : convertInt(trigger.marginTop),
+        marginLeft    : convertInt(trigger.marginLeft),
+        marginRight   : convertInt(trigger.marginRight),
+        paddingBottom : convertInt(trigger.paddingBottom),
+        paddingTop    : convertInt(trigger.paddingTop),
+        paddingLeft   : convertInt(trigger.paddingLeft),
+        paddingRight  : convertInt(trigger.paddingRight),
       }).insertAfter($trigger)
         .show();
 
@@ -40,10 +40,10 @@ jQuery.noConflict();
       })
 
       $(".edit-text__input").css({
-        lineHeight: trigger.lineHeight,
-        fontWeight: trigger.fontWeight,
-        fontStyle: trigger.fontStyle,
-        fontSize: trigger.fontSize
+        lineHeight  : trigger.lineHeight,
+        fontWeight  : trigger.fontWeight,
+        fontStyle   : trigger.fontStyle,
+        fontSize    : trigger.fontSize
       })
         .val(text)
         .focus();
@@ -60,12 +60,12 @@ jQuery.noConflict();
 
   $(document).on( "click", "[data-edit-text-save]", function(e) {
     var text = $(".edit-text__input").val();
-    $(".is-editing").text(text).show();
+    $(".is-editing").text(text).removeClass("is-editing");
     $(".edit-text").remove();
   })
 
   $(document).on( "click", "[data-edit-text-cancel]", function(e) {
-    $(".is-editing").show();
+    $(".is-editing").removeClass("is-editing");
     $(".edit-text").remove()
   })
 

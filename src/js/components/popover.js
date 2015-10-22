@@ -2,16 +2,16 @@ jQuery.noConflict();
 
 (function($) {
 
-
   $(document).on( "click", "[data-oui-pop-type='over']", function(e) {
 
     var ARROW_SIZE = 7;
     var ACTIVE_POP_ID = "data-oui-active-pop-id";
 
+    // Prevent clicks from going through so the popover can stay visible when clicked.
     e.stopPropagation();
     e.preventDefault();
 
-
+    // Remove any existing popovers.
     $("["+ACTIVE_POP_ID+"]").remove();
 
     // Get trigger element.
@@ -34,9 +34,13 @@ jQuery.noConflict();
 
     var popWidth = trigger.dataAttrs[0].ouiPopWidth;
 
-    // If a width is specified attach it to the popover.
+    // If a width is specified via data attr set the width of the popover.
+    // Otherwise it defaults to a max-width specificed in the CSS.
     if ( popWidth !== undefined ) {
-      $("["+ACTIVE_POP_ID+"]").css("width", popWidth )
+      $("["+ACTIVE_POP_ID+"]").css({
+        width: popWidth,
+        maxWidth: popWidth
+      })
     }
 
     // Now get properities (heigh/width/etc) of the `pop` element.

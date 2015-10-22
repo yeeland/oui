@@ -4,18 +4,19 @@ jQuery.noConflict();
 
   $(document).on("click", ".accordion__link", function(e) {
 
-    e.stopPropagation();
+    e.preventDefault();
 
     var ACTIVE_CLASS = "is-active";
     var DURATION = 100;
 
     var $target = $(this).closest(".accordion__item");
 
+    // If clicking the non-active accordion__item.
     if ( !$target.hasClass(ACTIVE_CLASS) ) {
 
       var $accordion = $(this).closest(".accordion");
       var $curActive = $accordion.find("." + ACTIVE_CLASS);
-      var paneHeight = $curActive.outerHeight();
+      var paneHeight = $curActive.outerHeight(); // Get height of opened pane.
 
       $target.animate({
         height: paneHeight
@@ -29,6 +30,7 @@ jQuery.noConflict();
         }
       });
     }
+
   });
 
 })( jQuery );

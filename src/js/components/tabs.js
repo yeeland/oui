@@ -2,13 +2,14 @@ jQuery.noConflict();
 
 (function($) {
 
-  var TABS_NAV_ITEM = ".tabs-nav__item";
-  var TABS_PANE_ITEM = ".tabs-pane__item";
-  var ACTIVE_CLASS = "is-active";
-
-  $(document).on( "click", TABS_NAV_ITEM, function(e) {
+  $(document).on( "click", ".tabs-nav__item", function(e) {
 
     e.preventDefault();
+
+    var TABS_NAV_ITEM = ".tabs-nav__item";
+    var TABS_PANE_ITEM = ".tabs-pane__item";
+    var ACTIVE_CLASS = "is-active";
+
     var $parent = $(this).closest(".tabs");
     var index = $parent.find(TABS_NAV_ITEM).index(this);
 
