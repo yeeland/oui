@@ -13,7 +13,7 @@
 
     var trigger = ouiGetProps($trigger);
 
-    $.get( "../src/js/html/editable.html", function( data ) {
+    $.get( "../dist/js/html/editable.html", function( data ) {
 
       $trigger.addClass(ACTIVE_CLASS); // Hides the text user wants to edit.
       $(data).insertAfter($trigger); // Inserts editiable in same spot.

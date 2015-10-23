@@ -30,7 +30,6 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
   //    -----------
   //    9    8    7
 
-
   var locations = [
     { // Position 1
       top: trigger.top - pop.outerHeight - ARROW_SIZE,

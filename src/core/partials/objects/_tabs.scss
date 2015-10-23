@@ -3,99 +3,6 @@
 // description: Creates a set of tabs.
 // ---
 
-// <div class="example html">
-//   <div class="lego-tabs" v-tabs="tabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="tabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-tabs lego-tabs--small" v-tabs="smallTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="smallTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="tabs-container" class="lego-tabs-container">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="centerTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
-// </div>
-
-// <div class="example html">
-//   <div class="lego-tabs lego-tabs--small lego-tabs--sub" v-tabs="subTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active">Tab One</li>
-//       <li class="lego-tabs-nav__item">Tab Two</li>
-//       <li class="lego-tabs-nav__item">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="subTabContainer">
-//     <div class="lego-tabs-pane tab-active">Tab Content One</div>
-//     <div class="lego-tabs-pane">Tab Content Two</div>
-//     <div class="lego-tabs-pane">Tab Content Three</div>
-//   </div>
-// </div>
-
-// ### Tabs with relationship defined by data attribute
-
-// <div class="example html">
-//   <div class="lego-tabs" v-tabs="dataTabContainer">
-//     <ul class="lego-tabs-nav">
-//       <li class="lego-tabs-nav__item tab-active" data-tab-related="one">Tab One</li>
-//       <li class="lego-tabs-nav__item" data-tab-related="two">Tab Two</li>
-//       <li class="lego-tabs-nav__item" data-tab-related="three">Tab Three</li>
-//     </ul>
-//   </div>
-//   <div id="dataTabContainer">
-//     <div class="lego-tabs-pane tab-active" data-tab-related="one">Tab Content One</div>
-//     <div class="lego-tabs-pane" data-tab-related="two">Tab Content Two</div>
-//     <div class="lego-tabs-pane" data-tab-related="three">Tab Content Three</div>
-//   </div>
-// </div>
-
-// [---]
 
 .#{$namespace}tabs-nav {
   @include display(flex);
@@ -123,11 +30,11 @@
     }
 
     &:hover,
-    &.tab-active {
+    &.is-active {
       color: map-fetch($color, text brand);
     }
 
-    &.tab-active {
+    &.is-active {
       background-color: map-fetch($color, background white);
       cursor: default;
 
@@ -172,7 +79,7 @@
   .#{$namespace}tabs-nav__item {
     border: 0;
 
-    &.tab-active::after {
+    &.is-active::after {
       height: 2px;
       background: map-fetch($color, background brand);
       bottom: -1px;
@@ -186,19 +93,12 @@
 }
 
 .#{$namespace}tabs-pane {
-  display: none;
 
-  &.tab-active {
-    display: block;
-  }
-}
+  &__item {
+    display: none;
 
-.#{$namespace}tabs-container {
-  margin-bottom: spacer(2);
-
-  .#{$namespace}tabs-pane {
-    padding: spacer(2);
-    border: 1px solid map-fetch($color, ui base);
-    border-top: 0;
+    &.is-active {
+      display: block;
+    }
   }
 }

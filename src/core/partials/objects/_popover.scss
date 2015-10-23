@@ -25,6 +25,14 @@
     font-weight: 500;
   }
 
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: spacer(0.5);
+    right: spacer(0.5);
+  }
+
+
   // Arrow options. 12 possible positions.
 
   &--arrow-top-left {

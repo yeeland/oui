@@ -55,11 +55,12 @@ function increaseVersion(importance) {
 }
 
 // Test changes with live html tests.
-gulp.task('html-tests', ['watch:sass', 'watch:js'], function() {
+gulp.task('html-tests', ['js', 'sass', 'watch:sass', 'watch:js'], function() {
   browserSync({
     server: {
       baseDir: "./"
     },
+    online: true,
     port: 3019,
     startPath: "/tests/",
     files: [
@@ -91,10 +92,16 @@ gulp.task('sass', function() {
 });
 
 // Concatenate and uglify js
-gulp.task('js', function() {
+gulp.task('js', ['js:dependencies'], function() {
   gulp.src('src/js/**/*.js')
     .pipe(uglify('core.min.js').on('error', gutil.log))
     .pipe(gulp.dest('dist/js'))
+});
+
+// Concatenate and uglify js
+gulp.task('js:dependencies', function() {
+  gulp.src('src/js/html/*.html')
+    .pipe(gulp.dest('dist/js/html'))
 });
 
 // Watch tasks
