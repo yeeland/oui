@@ -1,12 +1,8 @@
-// TODO: Add click outside of active area?
-
-jQuery.noConflict();
-
 (function($) {
 
   $(document).on( "click", "[data-oui-editable]", function(e) {
 
-    var ACTIVE_CLASS = "is-editing";
+    var ACTIVE_CLASS = "edit-text-trigger";
 
     $("[data-oui-editable]").removeClass(ACTIVE_CLASS).show();
 
@@ -15,7 +11,7 @@ jQuery.noConflict();
 
     $trigger = $(this);
 
-    var trigger = getProps($trigger);
+    var trigger = ouiGetProps($trigger);
 
     $.get( "../src/js/html/editable.html", function( data ) {
 
@@ -27,15 +23,15 @@ jQuery.noConflict();
 
       // Position the edit box using values from the trigger element.
       $(".edit-text").css({
-        height        : trigger.height + convertInt(trigger.paddingTop) + convertInt(trigger.paddingBottom),
-        marginBottom  : convertInt(trigger.marginBottom),
-        marginTop     : convertInt(trigger.marginTop),
-        marginLeft    : convertInt(trigger.marginLeft),
-        marginRight   : convertInt(trigger.marginRight),
-        paddingBottom : convertInt(trigger.paddingBottom),
-        paddingTop    : convertInt(trigger.paddingTop),
-        paddingLeft   : convertInt(trigger.paddingLeft),
-        paddingRight  : convertInt(trigger.paddingRight),
+        height        : trigger.height + ouiConvertInt(trigger.paddingTop) + ouiConvertInt(trigger.paddingBottom),
+        marginBottom  : ouiConvertInt(trigger.marginBottom),
+        marginTop     : ouiConvertInt(trigger.marginTop),
+        marginLeft    : ouiConvertInt(trigger.marginLeft),
+        marginRight   : ouiConvertInt(trigger.marginRight),
+        paddingBottom : ouiConvertInt(trigger.paddingBottom),
+        paddingTop    : ouiConvertInt(trigger.paddingTop),
+        paddingLeft   : ouiConvertInt(trigger.paddingLeft),
+        paddingRight  : ouiConvertInt(trigger.paddingRight),
       }).insertAfter($trigger)
         .show();
 
@@ -69,12 +65,12 @@ jQuery.noConflict();
   $(document).on( "click", "[data-edit-text-save]", function(e) {
     // On save, move the edited text back into the original element.
     var text = $(".edit-text__input").val();
-    $(".is-editing").text(text).removeClass("is-editing");
+    $(".edit-text-trigger").text(text).removeClass("edit-text-trigger");
     $(".edit-text").remove();
   })
 
   $(document).on( "click", "[data-edit-text-cancel]", function(e) {
-    $(".is-editing").removeClass("is-editing");
+    $(".edit-text-trigger").removeClass("edit-text-trigger");
     $(".edit-text").remove()
   })
 

@@ -1,0 +1,57 @@
+.edit-text {
+  display: none;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    top: -8px; // Moving border back for spacing around text.
+    left: -8px;
+    resize: none;
+    overflow: auto; // Removes scrollbar in IE
+    width: calc(100% + 16px); // Can't use right/bottom here on textarea so adding extra distance.
+    height: calc(100% + 16px);
+    border-radius: map-fetch($border-radius, base);
+    border-bottom-right-radius: 0;
+  }
+
+  &__buttons {
+    @include display(flex);
+    position: absolute;
+    bottom: -30px; // Magic number needed to move save/cancel buttons into position.
+    right: -8px;
+
+    .button {
+      height: 22px; // Making buttons smaller, this is custom.
+      line-height: 22px;
+      border-radius: 0 0 map-fetch($border-radius, base);
+      border: 1px solid map-fetch($color, ui brand-light);
+      border-top: 0;
+      background: map-fetch($color, ui white);
+    }
+
+    .button:first-child {
+      border-right: 0;
+      border-radius: 0 0 0 map-fetch($border-radius, base);
+    }
+
+    .button:hover {
+      background: map-fetch($color, ui white);
+      border: 1px solid map-fetch($color, ui brand-light);
+      border-top: 0;
+    }
+
+    .button:first-child:hover {
+      border-right: 0;
+    }
+  }
+}
+
+// This is the temporary class for the text that's being edited.
+// It's added when editing, removed when complete.
+
+.edit-text-trigger {
+  display: none;
+}

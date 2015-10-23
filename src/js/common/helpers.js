@@ -1,4 +1,6 @@
-function getProps(el) {
+jQuery.noConflict();
+
+function ouiGetProps(el) {
   element = {
     element         : el,
     height          : el.height(),
@@ -23,14 +25,14 @@ function getProps(el) {
     fontFamily      : el.css("font-family"),
     fontStyle       : el.css("font-style"),
     fontSize        : el.css("font-size"),
-    dataAttrs       : getDataAttrs(el) // array of data- attrs
+    dataAttrs       : ouiGetDataAttrs(el) // array of data- attrs
   }
   return element;
 }
 
 // Get data attrs as array
 
-function getDataAttrs(el) {
+function ouiGetDataAttrs(el) {
   var arr = [];
   jQuery(el).map(function(){
     arr.push(jQuery(this).data());
@@ -39,9 +41,9 @@ function getDataAttrs(el) {
 }
 
 // Convert CSS values that may be undefined.
-// If not, convert to intiger by removing 'px'
+// If there is a value, convert to integer by removing 'px'
 
-function convertInt(i) {
+function ouiConvertInt(i) {
   if (i == undefined) {
     var num = 0;
   } else {

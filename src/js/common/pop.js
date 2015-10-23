@@ -1,4 +1,4 @@
-function showPop(trigger, pop, ARROW_SIZE) {
+function ouiShowPop(trigger, pop, ARROW_SIZE) {
 
   var ANIMATE_DISTANCE = 3;
 

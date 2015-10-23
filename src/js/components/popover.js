@@ -18,7 +18,7 @@ jQuery.noConflict();
     var $trigger = $(this);
 
     // Get the properties of the trigger.
-    var trigger = getProps( $(this) );
+    var trigger = ouiGetProps( $(this) );
 
     // Get html from data attr.
     var popID = trigger.dataAttrs[0].ouiPopId;
@@ -44,10 +44,10 @@ jQuery.noConflict();
     }
 
     // Get properities (heigh/width/etc) of the `pop` element.
-    var pop = getProps( $("["+ACTIVE_POP_ID+"]") );
+    var pop = ouiGetProps( $("["+ACTIVE_POP_ID+"]") );
 
     // Show the poptip.
-    showPop(trigger, pop, ARROW_SIZE);
+    ouiShowPop(trigger, pop, ARROW_SIZE);
 
   });
 

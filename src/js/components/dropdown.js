@@ -1,5 +1,3 @@
-jQuery.noConflict();
-
 (function($) {
 
   // Close any open dropdowns.

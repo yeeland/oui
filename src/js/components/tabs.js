@@ -1,5 +1,3 @@
-jQuery.noConflict();
-
 (function($) {
 
   $(document).on( "click", "[data-oui-tabs-nav-item]", function(e) {

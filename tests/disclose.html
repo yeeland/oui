@@ -22,33 +22,6 @@
     font-size: 18px;
   }
 
-  .disclose {
-    margin-bottom: 10px;
-  }
-
-  .disclose__link {
-    display: block;
-    position: relative;
-    margin-bottom: 5px;
-  }
-
-  .disclose__arrow {
-    position: absolute;
-    left: -10px;
-  }
-
-  .disclose.is-active .disclose__content {
-    display: block;
-  }
-
-  .disclose .arrow-inline--right {
-    transition: all 300ms;
-    transform: rotate(0);
-  }
-
-  .disclose.is-active .arrow-inline--right {
-    transform: rotate(90deg);
-  }
 
   </style>
 
@@ -58,8 +31,10 @@
 
 <div class="disclose" data-oui-disclose>
   <a href="#" class="disclose__link link--dark" data-oui-disclose-link>
-    <div class="disclose__arrow"><span class="arrow-inline--right"></span></div>
-    <div class="disclose__title">Title of Disclosure</div>
+    <div class="disclose__arrow">
+      <span class="disclose__symbol"></span>
+      Title of Disclosure
+    </div>
   </a>
   <div class="disclose__content">
     <h3>Some Title</h3>
@@ -68,12 +43,12 @@
 </div>
 
 <div class="disclose" data-oui-disclose>
-  <h4>
-    <a href="#" class="disclose__link" data-oui-disclose-link>
-      <div class="disclose__arrow"><span class="arrow-inline--right"></span></div>
-      <div class="disclose__title">Title of Disclosure</div>
-    </a>
-  </h4>
+  <a href="#" class="disclose__link" data-oui-disclose-link>
+    <div class="disclose__arrow">
+      <span class="disclose__symbol"></span>
+      Title of Disclosure
+    </div>
+  </a>
   <div class="disclose__content">
     <h3>Some Title</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
