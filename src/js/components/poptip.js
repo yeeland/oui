@@ -9,7 +9,7 @@
       var trigger = ouiGetProps( $(this) );
 
       // Insert the poptip.
-      $("body").append("<div class='pop pop--tip'>");
+      $("body").append("<div class='pop pop--tip' />");
 
       // Add the text in.
       $(".pop--tip").text(trigger.dataAttrs[0].ouiPopText);
@@ -24,6 +24,6 @@
       // After leaving trigger hover destroy the `pop` element.
       $(".pop--tip").remove();
     }
-  }, "[data-oui-pop-type='tip']");
+  }, "[data-oui-pop-type='pop--tip']");
 
 })( jQuery );

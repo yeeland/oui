@@ -5,10 +5,11 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
   // Get the type of popover.
   var popType = trigger.dataAttrs[0].ouiPopType;
 
-  // Location of pop. Unless specified Positon 2 (top/center) is the default.
-  var location = 1; // Corresponds to Position 2.
-  if (trigger.dataAttrs[0].ouiPopLocation) {
-    location = trigger.dataAttrs[0].ouiPopLocation - 1; // Subtract 1 so the item in array is correct.
+  // Location of pop. Unless specified Positon 1 (top/center) is the default.
+  var location = 1; // Position 1.
+  if (trigger.dataAttrs[0].ouiPopLocation !== undefined) {
+    location = trigger.dataAttrs[0].ouiPopLocation;
+    console.log(location);
   }
 
   // Amount scrolled.
@@ -16,77 +17,77 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
 
   // Show at bottom if not enough room.
   if ( trigger.top - pop.outerHeight < scrolled ) {
-    location = 7 // Position 8
+    location = 7 // Position 7
   }
 
   // This handles the positioning/showing of the different types of pops: tips, overs.
   // Locations correspond to position that the 'pop' element should show up relative to the trigger.
 
-  //    1    2    3
+  //    0    1    2
   //    -----------
-  // 12 |         | 4
-  // 11 | trigger | 5
-  // 10 |         | 6
+  // 11 |         | 3
+  // 10 | trigger | 4
+  //  9 |         | 5
   //    -----------
-  //    9    8    7
+  //    8    7    6
 
   var locations = [
-    { // Position 1
+    { // Position 0
       top: trigger.top - pop.outerHeight - ARROW_SIZE,
       left: trigger.left,
       arrow: "bottom-left"
     },
-    { // Position 2
+    { // Position 1
       top: trigger.top - pop.outerHeight - ARROW_SIZE,
       left: trigger.left + trigger.outerWidth / 2 - pop.outerWidth / 2,
       arrow: "bottom-center"
     },
-    { // Position 3
+    { // Position 2
       top: trigger.top - pop.outerHeight - ARROW_SIZE,
       left: trigger.left - pop.outerWidth + trigger.outerWidth,
       arrow: "bottom-right"
     },
-    { // Position 4
+    { // Position 3
       top: trigger.top,
       left: trigger.right + ARROW_SIZE,
       arrow: "left-top"
     },
-    { // Position 5
+    { // Position 4
       top: trigger.top + trigger.outerHeight / 2 - pop.outerHeight / 2,
       left: trigger.right + ARROW_SIZE,
       arrow: "left-center"
     },
-    { // Position 6
-      top: trigger.bottom - pop.height,
+    { // Position 5
+      top: trigger.bottom - pop.outerHeight,
       left: trigger.right + ARROW_SIZE,
       arrow: "left-bottom"
     },
-    { // Position 7
+    { // Position 6
       top: trigger.top + trigger.outerHeight + ARROW_SIZE,
       left: trigger.left - pop.outerWidth + trigger.outerWidth,
       arrow: "top-right"
     },
-    { // Position 8
+    { // Position 7
       top: trigger.top + trigger.outerHeight + ARROW_SIZE,
       left: trigger.left + trigger.outerWidth / 2 - pop.outerWidth / 2,
       arrow: "top-center"
     },
-    { // Position 9
+    { // Position 8
       top: trigger.top + trigger.outerHeight + ARROW_SIZE,
       left: trigger.left,
       arrow: "top-left"
     },
-    { // Position 10
-      top: trigger.bottom - pop.height,
+    { // Position 9
+      top: trigger.bottom - pop.outerHeight,
       left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-bottom"
     },
-    { // Position 11
+    { // Position 10
       top: trigger.top + trigger.outerHeight / 2 - pop.outerHeight / 2,
       left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-center"
     },
-    { // Position 12
+    { // Position 11
       top: trigger.top,
       left: trigger.left - pop.outerWidth - ARROW_SIZE,
       arrow: "right-top"
@@ -99,7 +100,7 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
     top: locations[location].top + ANIMATE_DISTANCE,
     left: locations[location].left
   })
-  .addClass("pop--" + popType + "--arrow-" + locations[location].arrow)
+  .addClass(popType + "--arrow-" + locations[location].arrow)
   .animate({ opacity: 1, top: locations[location].top }, 'fast');
 
 }

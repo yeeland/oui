@@ -2,7 +2,7 @@ jQuery.noConflict();
 
 (function($) {
 
-  $(document).on( "click", "[data-oui-pop-type='over']", function(e) {
+  $(document).on( "click", "[data-oui-pop-type='pop--over']", function(e) {
 
     var ARROW_SIZE = 7;
     var ACTIVE_POP_ID = "data-oui-active-pop-id";

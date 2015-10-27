@@ -62,7 +62,7 @@ gulp.task('html-tests', ['js', 'sass', 'watch:sass', 'watch:js'], function() {
     },
     online: true,
     port: 3019,
-    startPath: "/tests/",
+    startPath: "/examples/",
     files: [
       "tests/**/*.html",
       "dist/css/core.css"
