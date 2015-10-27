@@ -5,6 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Release] Adding local JS to power components.
+- [Patch] Adding additional HTML examples to test component javascript.
+- [Patch] Adding `edit-text` Sass file.
+
+### Changed
+- [Release] Changing `accordion.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `disclose.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `dropdown.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `tabs.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `popover` to `pop--over` to more consistent with BEM conventions.
+- [Release] Changing `poptip` to `pop--tip` to more consistent with BEM conventions.
+- [Patch] Changing the default variable poptip width.
 
 ## [6.0.0][6.0.0] - 2015-10-07
 ### Changed
