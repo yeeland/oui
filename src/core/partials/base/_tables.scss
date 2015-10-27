@@ -282,3 +282,89 @@
 .#{$namespace}table-row--active {
   background-color: map-fetch($color, background faint);
 }
+
+// Scrolling Tables
+// Uses two tables, one for the header and one for the body.
+
+// - The parents of `table-scroll` MUST be `display:flex`.
+// - Both `<th>` and `<td>` elements must have matching widths.
+
+// <div class="table-scroll">
+//   <div class="table-scroll__head-wrap">
+//     <div class="table-scroll__head">
+//       <table class="table table--rule">
+//         <thead>
+//           <tr>
+//             <th class="width--1-4">one</th>
+//             <th class="width--2-4">two</th>
+//             <th class="width--2-4">three</th>
+//           </tr>
+//         </thead>
+//       </table>
+//     </div>
+//   </div>
+//   <div class="table-scroll__body">
+//     <table class="table table--rule">
+//       <tbody>
+//         <tr>
+//           <td class="width--1-4">one</td>
+//           <td class="width--2-4">two</td>
+//           <td class="width--2-4">three</td>
+//         </tr>
+//         <tr>
+//           <td>one</td>
+//           <td>two</td>
+//           <td>three</td>
+//         </tr>
+//         <tr>
+//           <td>one</td>
+//           <td>two</td>
+//           <td>three</td>
+//         </tr>
+//         <tr>
+//           <td>one</td>
+//           <td>two</td>
+//           <td>three</td>
+//         </tr>
+//         <tr>
+//           <td>one</td>
+//           <td>two</td>
+//           <td>three</td>
+//         </tr>
+//       </tbody>
+//     </table>
+//   </div>
+// </div>
+
+.#{$namespace}table--scroll {
+  @include display(flex);
+  @include flex-direction(column);
+  width: 100%;
+
+  thead {
+    @include display(flex);
+    @include flex(none);
+  }
+
+  tbody {
+    @include display(flex);
+    @include flex-direction(column);
+    @include flex(1);
+    width: 100%;
+    overflow-y: auto;
+    min-height: 0;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  tr {
+    @include display(flex);
+    @include flex(none);
+    width: 100%;
+  }
+
+  th,
+  td {
+    @include flex(1);
+    display: block;
+  }
+}
