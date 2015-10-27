@@ -289,52 +289,23 @@
 // - The parents of `table-scroll` MUST be `display:flex`.
 // - Both `<th>` and `<td>` elements must have matching widths.
 
-// <div class="table-scroll">
-//   <div class="table-scroll__head-wrap">
-//     <div class="table-scroll__head">
-//       <table class="table table--rule">
-//         <thead>
-//           <tr>
-//             <th class="width--1-4">one</th>
-//             <th class="width--2-4">two</th>
-//             <th class="width--2-4">three</th>
-//           </tr>
-//         </thead>
-//       </table>
-//     </div>
-//   </div>
-//   <div class="table-scroll__body">
-//     <table class="table table--rule">
-//       <tbody>
-//         <tr>
-//           <td class="width--1-4">one</td>
-//           <td class="width--2-4">two</td>
-//           <td class="width--2-4">three</td>
-//         </tr>
-//         <tr>
-//           <td>one</td>
-//           <td>two</td>
-//           <td>three</td>
-//         </tr>
-//         <tr>
-//           <td>one</td>
-//           <td>two</td>
-//           <td>three</td>
-//         </tr>
-//         <tr>
-//           <td>one</td>
-//           <td>two</td>
-//           <td>three</td>
-//         </tr>
-//         <tr>
-//           <td>one</td>
-//           <td>two</td>
-//           <td>three</td>
-//         </tr>
-//       </tbody>
-//     </table>
-//   </div>
-// </div>
+// <table class="table table--scroll table--rule">
+//   <thead>
+//     <tr>
+//       <th class="width--1-2">one</th>
+//       <th class="width--1-4">two</th>
+//       <th class="width--1-4">three</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td class="width--1-2">one</td>
+//       <td class="width--1-4">two</td>
+//       <td class="width--1-4">three</td>
+//     </tr>
+//   </tbody>
+// </table>
+
 
 .#{$namespace}table--scroll {
   @include display(flex);
@@ -353,18 +324,17 @@
     width: 100%;
     overflow-y: auto;
     min-height: 0;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: -ms-autohiding-scrollbar; // Shows/hides scroll bar on Windows.
   }
 
   tr {
-    @include display(flex);
+    @include display(flex); // All table rows changed to flexbox.
     @include flex(none);
     width: 100%;
   }
 
   th,
   td {
-    @include flex(1);
     display: block;
   }
 }

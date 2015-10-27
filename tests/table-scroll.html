@@ -15,115 +15,121 @@
       display: flex;
     }
 
-    .width--1-4 {
-      max-width: 25%;
-    }
-    .width--2-4 {
-      max-width: 50%;
-    }
-
-
   </style>
+
+  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+  <script>
+
+    $(document).ready(function(){
+
+
+      function setOverflowScroll() {
+
+        $(".table--scroll").each(function(){
+
+          var tableWidth =  $(this).width();
+          var rowWidth = $(this).find("tbody tr:first-child").width();
+          var diff = tableWidth - rowWidth;
+
+          console.log(diff);
+
+          if ( diff > 0 ) {
+            $(this).find("thead tr:last-child").css("padding-right", diff);
+          }
+        })
+      }
+
+      setOverflowScroll();
+
+    });
+
+
+  </script>
+
+
 </head>
 <body class="push-quad">
 
-  <div class="page-element">
 
+  <div class="page-element">
     <table class="table table--scroll table--rule">
       <thead>
         <tr>
-          <th class="width--1-4">one</th>
-          <th class="width--2-4">two</th>
+          <th class="width--1-2">one</th>
+          <th class="width--1-4">two</th>
           <th class="width--1-4">three</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="width--1-4">
-            Lorem ipsum dolor sit labore rerum. Perspiciatis voluptate cupiditate quia.
-            Lorem ipsum dolor sit labore rerum. Perspiciatis voluptate cupiditate quia.
-
-          </td>
-          <td class="width--2-4">
-            Lorem ipsum dolor sit labore rerum. Perspiciatis voluptate cupiditate quia.
-            Lorem ipsum dolor sit labore rerum. Perspiciatis voluptate cupiditate quia.
-          </td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
-          <td class="width--1-4">three</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
-
-  <div class="page-element">
-
-    <table class="table table--scroll table--rule">
-      <thead>
-        <tr>
-          <th class="width--1-4">one</th>
-          <th class="width--2-4">two</th>
-          <th class="width--1-4">three</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
         <tr>
-          <td class="width--1-4">one</td>
-          <td class="width--2-4">two</td>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
+          <td class="width--1-4">three</td>
+        </tr>
+        <tr>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
+          <td class="width--1-4">three</td>
+        </tr>
+        <tr>
+          <td class="width--1-2">one</td>
+          <td class="width--1-4">two</td>
           <td class="width--1-4">three</td>
         </tr>
       </tbody>
