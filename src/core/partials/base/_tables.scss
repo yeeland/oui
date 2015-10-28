@@ -287,7 +287,7 @@
 // Uses two tables, one for the header and one for the body.
 
 // - The parents of `table-scroll` MUST be `display:flex`.
-// - Both `<th>` and `<td>` elements must have matching widths.
+// - All `<th>` and `<td>` elements must have matching widths.
 
 // <table class="table table--scroll table--rule">
 //   <thead>
