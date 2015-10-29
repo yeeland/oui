@@ -32,8 +32,6 @@
           var rowWidth = $(this).find("tbody tr:first-child").width();
           var diff = tableWidth - rowWidth;
 
-          console.log(diff);
-
           if ( diff > 0 ) {
             $(this).find("thead tr:last-child").css("padding-right", diff);
           }
