@@ -284,7 +284,7 @@
 }
 
 // Scrolling Tables
-// Uses two tables, one for the header and one for the body.
+// Uses flexbox to change the default behavior of the table elements.
 
 // - The parents of `table-scroll` MUST be `display:flex`.
 // - All `<th>` and `<td>` elements must have matching widths.
@@ -292,14 +292,14 @@
 // <table class="table table--scroll table--rule">
 //   <thead>
 //     <tr>
-//       <th class="width--1-2">one</th>
+//       <th class="width--2-4">one</th>
 //       <th class="width--1-4">two</th>
 //       <th class="width--1-4">three</th>
 //     </tr>
 //   </thead>
 //   <tbody>
 //     <tr>
-//       <td class="width--1-2">one</td>
+//       <td class="width--2-4">one</td>
 //       <td class="width--1-4">two</td>
 //       <td class="width--1-4">three</td>
 //     </tr>
