@@ -55,7 +55,7 @@ function increaseVersion(importance) {
 }
 
 // Test changes with live html tests.
-gulp.task('html-tests', ['js', 'sass', 'watch:sass', 'watch:js'], function() {
+gulp.task('html-examples', ['js', 'sass', 'watch:sass', 'watch:js'], function() {
   browserSync({
     server: {
       baseDir: "./"

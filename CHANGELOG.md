@@ -7,7 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Release] Adding local JS to power components.
-- [Patch] Adding additional HTML examples to test component javascript.
+- [Release] Adding additional HTML examples to test component javascript.
 - [Patch] Adding `edit-text` Sass file.
 
 ### Changed
