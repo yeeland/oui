@@ -9,7 +9,6 @@ var bump        = require('gulp-bump'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
     sass        = require('gulp-sass'),
-    shrinkwrap  = require('gulp-shrinkwrap'),
     path        = require("path"),
     tagVersion  = require('gulp-tag-version');
 
@@ -24,13 +23,6 @@ var paths = {
   css: './dist/css/',
   core: './src/core/core.scss'
 };
-
-// Shrinkwrap locks down dependencies. See https://docs.npmjs.com/cli/shrinkwrap
-gulp.task('shrinkwrap', function () {
-  return gulp.src('package.json')
-    .pipe(shrinkwrap())      // just like running `npm shrinkwrap`
-    .pipe(gulp.dest('./'));  // writes newly created `npm-shrinkwrap.json` to the location of your choice
-});
 
 // Bumping version number and tagging the repository with it.
 // Please read http://semver.org/
