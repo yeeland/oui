@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Add a license to the repository. (#125)
+- [Feature] Adding scrolling variation for tables.
 
 ### Fixed
 - [Patch] Fix incorrect links in the changelog.
