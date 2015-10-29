@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add a license to the repository. (#125)
 - [Feature] Adding scrolling variation for tables.
+- [Feature] Adding `shrinkwrap` file to lock down `node-sass` version used by `gulp-sass`.
 
 ### Fixed
 - [Patch] Fix incorrect links in the changelog.
