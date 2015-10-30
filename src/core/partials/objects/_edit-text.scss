@@ -11,8 +11,8 @@
     left: -(map-fetch($edittext, spacer));
     resize: none;
     overflow: auto; // Removes scrollbar in IE
-    width: calc(100% + map-fetch($edittext, spacer) * 2); // Can't use right/bottom here on textarea so adding extra distance.
-    height: calc(100% + map-fetch($edittext, spacer) * 2);
+    width: calc(100% + #{map-fetch($edittext, spacer)} * 2); // Can't use right/bottom here on textarea so adding extra distance.
+    height: calc(100% + #{map-fetch($edittext, spacer)} * 2);
     border-radius: map-fetch($border-radius, base);
     border-bottom-right-radius: 0;
   }
