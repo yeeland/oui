@@ -110,7 +110,7 @@
   position: relative;
   vertical-align: top;
 
-  &.shown {
+  &.is-active {
     .#{$namespace}dropdown {
       visibility: visible;
     }

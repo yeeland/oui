@@ -301,13 +301,19 @@ $accordion-link-height       : 26px;
 // ## Popover
 
 $popover: (
+  max-width                  : 350px
+);
+
+// ## Poptip
+
+$poptip: (
   max-width                  : 250px
 );
 
 // ## Poptip
 
-$pop-tip: (
-  max-width                  : 250px
+$edittext: (
+  spacer                     : 8px
 );
 
 // ## Progress Bar

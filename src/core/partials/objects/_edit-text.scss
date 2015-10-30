@@ -1,0 +1,58 @@
+.edit-text {
+  display: none;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    top: -(map-fetch($edittext, spacer)); // Moving border back for spacing around text.
+    left: -(map-fetch($edittext, spacer));
+    resize: none;
+    overflow: auto; // Removes scrollbar in IE
+    -ms-overflow-style: -ms-autohiding-scrollbar; // Shows/hides scroll bar on Windows.
+    width: calc(100% + #{map-fetch($edittext, spacer)} * 2); // Can't use right/bottom here on textarea so adding extra distance.
+    height: calc(100% + #{map-fetch($edittext, spacer)} * 2);
+    border-radius: map-fetch($border-radius, base);
+    border-bottom-right-radius: 0;
+  }
+
+  &__buttons {
+    @include display(flex);
+    position: absolute;
+    bottom: -30px; // Magic number needed to move save/cancel buttons into position.
+    right: -(map-fetch($edittext, spacer));
+
+    .button {
+      height: 22px; // Making buttons smaller, this is custom.
+      line-height: 22px;
+      border-radius: 0 0 map-fetch($border-radius, base);
+      border: 1px solid map-fetch($color, ui brand-light);
+      border-top: 0;
+      background: map-fetch($color, ui white);
+    }
+
+    .button:first-child {
+      border-right: 0;
+      border-radius: 0 0 0 map-fetch($border-radius, base);
+    }
+
+    .button:hover {
+      background: map-fetch($color, ui white);
+      border: 1px solid map-fetch($color, ui brand-light);
+      border-top: 0;
+    }
+
+    .button:first-child:hover {
+      border-right: 0;
+    }
+  }
+}
+
+// This is the temporary class for the text that's being edited.
+// It's added when editing, removed when complete.
+
+.edit-text-trigger {
+  display: none;
+}

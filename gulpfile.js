@@ -10,6 +10,7 @@ var bump        = require('gulp-bump'),
     symlink     = require('gulp-symlink'),
     sass        = require('gulp-sass'),
     path        = require("path"),
+    uglify      = require('gulp-uglifyjs'),
     tagVersion  = require('gulp-tag-version');
 
 var paths = {
@@ -54,13 +55,14 @@ function increaseVersion(importance) {
 }
 
 // Test changes with live html tests.
-gulp.task('html-tests', ['watch'], function() {
+gulp.task('html-examples', ['js', 'sass', 'watch:sass', 'watch:js'], function() {
   browserSync({
     server: {
       baseDir: "./"
     },
+    online: true,
     port: 3019,
-    startPath: "/tests/",
+    startPath: "/examples/",
     files: [
       "tests/**/*.html",
       "dist/css/core.css"
@@ -79,6 +81,7 @@ gulp.task('svg', function () {
     .pipe(gulp.dest(paths.svgDest));
 });
 
+// Builds sass
 gulp.task('sass', function() {
   gulp.src(paths.core)
     .pipe(sass({
@@ -88,9 +91,26 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
+// Concatenate and uglify js
+gulp.task('js', ['js:dependencies'], function() {
+  gulp.src('src/js/**/*.js')
+    .pipe(uglify('core.min.js').on('error', gutil.log))
+    .pipe(gulp.dest('dist/js'))
+});
+
+// Concatenate and uglify js
+gulp.task('js:dependencies', function() {
+  gulp.src('src/js/html/*.html')
+    .pipe(gulp.dest('dist/js/html'))
+});
+
 // Watch tasks
-gulp.task('watch', function() {
+gulp.task('watch:sass', function() {
   gulp.watch('src/core/**/*.scss', ['sass']);
+});
+
+gulp.task('watch:js', function() {
+  gulp.watch('src/js/**/*.js', ['js']);
 });
 
 // Runs SCSS linter.

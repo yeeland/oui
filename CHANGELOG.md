@@ -6,6 +6,18 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Release] Adding local JS to power components.
+- [Release] Adding additional HTML examples to test component javascript.
+- [Patch] Adding `edit-text` Sass file.
+
+### Changed
+- [Release] Changing `accordion.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `disclose.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `dropdown.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `tabs.scss` css to be more consistent with javascript conventions.
+- [Release] Changing `popover` to `pop--over` to more consistent with BEM conventions.
+- [Release] Changing `poptip` to `pop--tip` to more consistent with BEM conventions.
+- [Patch] Changing the default variable poptip width.
 - [Feature] Add a license to the repository. (#125)
 - [Feature] Adding scrolling variation for tables.
 
