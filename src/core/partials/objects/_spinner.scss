@@ -43,12 +43,38 @@
   align-items: center;
 }
 
-@include keyframes(lego-spin) {
+@-webkit-keyframes lego-spin {
   100% {
-    @include transform(rotate(360deg));
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }
-
+@-moz-keyframes lego-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes lego-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+@keyframes lego-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 .lego-spinner {
   @include animation(lego-spin map-fetch($spinner, speed) infinite linear);
   width: map-fetch($spinner, size base);
