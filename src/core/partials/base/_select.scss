@@ -1,0 +1,60 @@
+// Custom select elements for Chrome/Safari/Firefox
+// Partially changes select elements in IE
+
+
+.#{$namespace}select {
+  @include appearance(none);
+  border: 1px solid map-fetch($color, ui base);
+  height: map-fetch($button, size base height);
+  border-radius: map-fetch($border-radius, base);
+  font-size: map-fetch($font, size base);
+  padding: 0 spacer(4) 0 spacer(1.5);
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSItMjk3IDM4OSAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjk3IDM4OSAxNiAxNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJYTUxJRF8zXyI+PGcgaWQ9IlhNTElEXzRfIj48cGF0aCBkPSJNLTI4My41LDM5NS41YzAsMC4xLDAsMC4zLTAuMSwwLjRsLTQuNCw0LjNjLTAuMiwwLjItMC41LDAuMi0wLjcsMGwtNC40LTQuM2MtMC4yLTAuMi0wLjItMC41LDAtMC43YzAuMi0wLjIsMC41LTAuMiwwLjcsMGw0LjEsNGw0LTRjMC4yLTAuMiwwLjUtMC4yLDAuNywwQy0yODMuNiwzOTUuMi0yODMuNSwzOTUuNC0yODMuNSwzOTUuNXoiLz48L2c+PC9nPjwvc3ZnPg==);
+  background-position: right spacer(1.5) center;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+  max-width: 100%;
+
+  &:hover {
+    box-shadow: map-fetch($button, type base hover box-shadow);
+  }
+
+  &--small {
+    font-size: map-fetch($button, size small font-size);
+    padding: 0 spacer(3.5) 0 spacer(1);
+    background-position: right spacer(1) center;
+    height: map-fetch($button, size small height);
+  }
+
+  &--large {
+    font-size: map-fetch($button, size large font-size);
+    padding: 0 spacer(4.5) 0 spacer(2);
+    background-position: right spacer(2) center;
+    height: map-fetch($button, size large height);
+  }
+}
+
+// We're hiding the dropdown arrow from IE.
+@include target-ie10-plus {
+
+  .#{$namespace}select {
+    padding-right: 0; // Remove the padding so the dropdown arrow is flush with right side of select.
+    background: none; // Remove the background image applied above.
+
+    // This is the dropdown arrow in IE. This moves it away from the text.
+    &::-ms-expand {
+      margin-left: 15px;
+    }
+
+    &--small::-ms-expand {
+      margin-left: 10px;
+    }
+
+    &--large::-ms-expand {
+      margin-left: 20px;
+    }
+  }
+}
