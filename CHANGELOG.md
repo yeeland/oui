@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding `edit-text` Sass file.
 
 ### Changed
+- [Patch] Removed `src/img` and `src/wireframe`. SVGs now in `oui-icons`. `wireframe` not being used or maintained.
 - [Release] Changing `accordion.scss` css to be more consistent with javascript conventions.
 - [Release] Changing `disclose.scss` css to be more consistent with javascript conventions.
 - [Release] Changing `dropdown.scss` css to be more consistent with javascript conventions.
