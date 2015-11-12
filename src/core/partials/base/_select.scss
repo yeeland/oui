@@ -4,6 +4,7 @@
 
 .#{$namespace}select {
   @include appearance(none);
+  @include transition(border-color map-fetch($transition-duration, base));
   border: 1px solid map-fetch($color, ui base);
   height: map-fetch($button, size base height);
   border-radius: map-fetch($border-radius, base);
@@ -20,6 +21,7 @@
 
   &:hover {
     box-shadow: map-fetch($button, type base hover box-shadow);
+    border-color: map-fetch($color, ui medium);
   }
 
   &--small {
