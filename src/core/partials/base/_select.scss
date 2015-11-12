@@ -46,15 +46,15 @@
 
     // This is the dropdown arrow in IE. This moves it away from the text.
     &::-ms-expand {
-      margin-left: 15px;
+      margin-left: spacer(1.5);
     }
 
     &--small::-ms-expand {
-      margin-left: 10px;
+      margin-left: spacer(1);
     }
 
     &--large::-ms-expand {
-      margin-left: 20px;
+      margin-left: spacer(2);
     }
   }
 }
