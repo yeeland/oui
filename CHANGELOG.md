@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Release] Adding local JS to power components.
 - [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
 - [Feature] Adding mixin to target IE10+.
 - [Feature] Adding mixin to disable `appearance` to remove default browser styling from some elements.
