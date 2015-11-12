@@ -14,6 +14,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding `edit-text` Sass file.
 
 ### Changed
+- [Patch] Removed `src/img` and `src/wireframe`. SVGs now in `oui-icons`. `wireframe` not being used or maintained.
 - [Patch] Removing `box-sizing: content-box` to restore inherited `border-box` value so that height/width sizing is consistent with inputs/selects. Buttons previously did not have a border so it was easier to calculate height based on `content-box`.
 - [Patch] Adding line-height variables for buttons to better center text vertically.
 - [Release] Changing `accordion.scss` css to be more consistent with javascript conventions.
