@@ -34,6 +34,7 @@
   @if ($num != '0') { // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
     min-height: 0;
     min-width: 0;
+    flex-basis: auto;
   }
 }
 
@@ -172,4 +173,3 @@
 .flex-self--end {
   @include align-self(flex-end);
 }
-
