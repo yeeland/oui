@@ -44,3 +44,7 @@
 .background--good-news {
   background-color: map-fetch($color, background good-news) !important;
 }
+
+.background--current-color {
+  background-color: currentColor !important;
+}
