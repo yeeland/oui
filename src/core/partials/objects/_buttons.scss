@@ -5,14 +5,13 @@
 
 %#{$namespace}button,
 .#{$namespace}button {
-  box-sizing: content-box;
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   font-family: inherit;
   cursor: pointer;
   margin: 0;
-  line-height: map-fetch($button, size base height);
+  line-height: map-fetch($button, size base line-height);
   border-width: 1px;
   border-style: solid;
   font-size: map-fetch($button, size base font-size);
@@ -190,7 +189,7 @@
     font-size: map-fetch($button, size small font-size);
     font-weight: map-fetch($button, size small font-weight);
     border-radius: map-fetch($button, size small border-radius);
-    line-height: map-fetch($button, size small height);
+    line-height: map-fetch($button, size small line-height);
     height: map-fetch($button, size small height);
     padding: map-fetch($button, size small padding);
   }
@@ -199,7 +198,7 @@
     font-size: map-fetch($button, size large font-size);
     font-weight: map-fetch($button, size large font-weight);
     border-radius: map-fetch($button, size large border-radius);
-    line-height: map-fetch($button, size large height);
+    line-height: map-fetch($button, size large line-height);
     height: map-fetch($button, size large height);
     padding: map-fetch($button, size large padding);
   }

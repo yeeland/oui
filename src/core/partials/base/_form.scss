@@ -340,31 +340,6 @@
   }
 }
 
-.#{$namespace}select {
-  @include transition(border-color map-fetch($transition-duration, base));
-  box-sizing: content-box;
-  display: inline-block;
-  height: map-fetch($button, size base height);
-  background: map-fetch($color, background white);
-  border: 1px solid map-fetch($color, ui base);
-  border-radius: map-fetch($border-radius, base);
-  padding: 0 spacer(0.5);
-  max-width: 100%;
-
-  &:hover {
-    border-color: map-fetch($color, ui medium);
-  }
-
-  &[disabled] {
-    background: map-fetch($color, background faint);
-    cursor: default;
-
-    &:hover {
-      border-color: map-fetch($color, ui base);
-    }
-  }
-}
-
 .#{$namespace}form__header {
   margin-bottom: spacer(2);
 }
