@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Adding local JS to power components.
 - [Release] Adding additional HTML examples to test component javascript.
 - [Patch] Adding `edit-text` Sass file.
+- [Patch] Adding `background--current-color` trump to make the background the current color.
 
 ### Changed
 - [Patch] Removed `src/img` and `src/wireframe`. SVGs now in `oui-icons`. `wireframe` not being used or maintained.
