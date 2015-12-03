@@ -12,6 +12,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding mixin to disable `appearance` to remove default browser styling from some elements.
 - [Release] Adding additional HTML examples to test component javascript.
 - [Patch] Adding `edit-text` Sass file.
+- [Patch] Adding `background--current-color` trump to make the background the current color.
 
 ### Changed
 - [Patch] Removed `src/img` and `src/wireframe`. SVGs now in `oui-icons`. `wireframe` not being used or maintained.
