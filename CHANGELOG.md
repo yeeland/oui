@@ -20,6 +20,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Changing `popover` to `pop--over` to more consistent with BEM conventions.
 - [Release] Changing `poptip` to `pop--tip` to more consistent with BEM conventions.
 - [Patch] Changing the default variable poptip width.
+- [Patch] Removing right padding from `input-search`. (#158)
 - [Feature] Add a license to the repository. (#125)
 - [Feature] Adding scrolling variation for tables.
 
