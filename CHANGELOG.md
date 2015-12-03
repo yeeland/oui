@@ -7,6 +7,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Release] Adding local JS to power components.
+- [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
+- [Feature] Adding mixin to target IE10+.
+- [Feature] Adding mixin to disable `appearance` to remove default browser styling from some elements.
 - [Release] Adding additional HTML examples to test component javascript.
 - [Feature] Adding datepick input `_input--datepick.scss` with multiple background icons.
 - [Patch] Adding `edit-text` Sass file.
@@ -14,6 +17,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Changed
 - [Patch] Removed `src/img` and `src/wireframe`. SVGs now in `oui-icons`. `wireframe` not being used or maintained.
+- [Patch] Removing `box-sizing: content-box` to restore inherited `border-box` value so that height/width sizing is consistent with inputs/selects. Buttons previously did not have a border so it was easier to calculate height based on `content-box`.
+- [Patch] Adding line-height variables for buttons to better center text vertically.
 - [Release] Changing `accordion.scss` css to be more consistent with javascript conventions.
 - [Release] Changing `disclose.scss` css to be more consistent with javascript conventions.
 - [Release] Changing `dropdown.scss` css to be more consistent with javascript conventions.
@@ -22,6 +27,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Changing `poptip` to `pop--tip` to more consistent with BEM conventions.
 - [Patch] Changing the default variable poptip width.
 - [Patch] Renaming `_search.scss` partial to `_input--search.scss` to be more specific and align with `_input--datepick.scss`.
+- [Patch] Removing right padding from `input-search`. (#158)
 - [Feature] Add a license to the repository. (#125)
 - [Feature] Adding scrolling variation for tables.
 
