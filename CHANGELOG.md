@@ -11,7 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding mixin to target IE10+.
 - [Feature] Adding mixin to disable `appearance` to remove default browser styling from some elements.
 - [Release] Adding additional HTML examples to test component javascript.
-- [Feature] Adding datepick input `_input--datepick.scss` with multiple background icons.
+- [Feature] Adding input variation `_input--icon.scss` so icons can be added to inputs, like a calendar icon for a date picker.
 - [Patch] Adding `edit-text` Sass file.
 - [Patch] Adding `background--current-color` trump to make the background the current color.
 
@@ -26,7 +26,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Changing `popover` to `pop--over` to more consistent with BEM conventions.
 - [Release] Changing `poptip` to `pop--tip` to more consistent with BEM conventions.
 - [Patch] Changing the default variable poptip width.
-- [Patch] Renaming `_search.scss` partial to `_input--search.scss` to be more specific and align with `_input--datepick.scss`.
 - [Patch] Removing right padding from `input-search`. (#158)
 - [Feature] Add a license to the repository. (#125)
 - [Feature] Adding scrolling variation for tables.
