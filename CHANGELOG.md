@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding mixin to target IE10+.
 - [Feature] Adding mixin to disable `appearance` to remove default browser styling from some elements.
 - [Release] Adding additional HTML examples to test component javascript.
+- [Feature] Adding input variation `_input-icon.scss` so icons can be added to inputs, like a calendar icon for a date picker.
 - [Patch] Adding `edit-text` Sass file.
 - [Patch] Adding `background--current-color` trump to make the background the current color.
 
