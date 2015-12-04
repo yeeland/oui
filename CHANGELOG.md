@@ -9,7 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 ### Fixed
 
-## [7.0.0][7.0.0] - 2015-10-07
+## [7.0.0][7.0.0] - 2015-12-4
 ### Added
 - [Release] Adding local JS to power components.
 - [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
