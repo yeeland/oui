@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "10.0.0",
+  "version": "10.0.1",
   "description": "CSS component library for Optimizely",
   "private": false,
   "main": "dist/js/lego.min.js",
@@ -26,7 +26,10 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/gulp lint && ./node_modules/.bin/gulp sass",
-    "start": "bundle install && bundle update && npm install && ./node_modules/.bin/gulp hook"
+    "start": "bundle install && bundle update && npm install && ./node_modules/.bin/gulp hook",
+    "deploy:patch": "./node_modules/.bin/gulp patch && ./node_modules/.bin/gulp deploy",
+    "deploy:feature": "./node_modules/.bin/gulp feature && ./node_modules/.bin/gulp deploy",
+    "deploy:release": "./node_modules/.bin/gulp release && ./node_modules/.bin/gulp deploy"
   },
   "repository": {
     "type": "git",
