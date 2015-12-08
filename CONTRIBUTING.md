@@ -54,7 +54,6 @@ This applies any time classes are being renamined and you want old and new code 
 
 1. Run `git checkout master && git pull`.
 2. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
-3. Run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue in the new changes.
-4. Push the changes to `master` with `git push` and `git push origin v1.2.3` where `v1.2.3` is the tag that gulp created.
-5. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
-6. Run `npm publish ./` to push the version to NPM. You must be a OUI contributor on NPM to do this.
+3. Run `npm run deploy:patch`, `npm run deploy:feature`, or `npm run deploy:release` depending on the highest importance issue in the new changes.
+4. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
+5. Run `npm publish ./` to push the version to NPM. You must be a OUI contributor on NPM to do this.

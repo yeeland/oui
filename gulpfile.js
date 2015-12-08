@@ -5,11 +5,14 @@ var bump        = require('gulp-bump'),
     gulp        = require('gulp'),
     gutil       = require('gulp-util'),
     notify      = require('gulp-notify'),
+    s3          = require('gulp-s3'),
+    shell       = require('gulp-shell'),
     svgSymbols  = require('gulp-svg-symbols'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
     sass        = require('gulp-sass'),
     path        = require("path"),
+    rename      = require('gulp-rename'),
     uglify      = require('gulp-uglifyjs'),
     tagVersion  = require('gulp-tag-version');
 
@@ -39,7 +42,7 @@ var paths = {
 //
 // To bump the version numbers accordingly after you did a patch,
 // introduced a feature or made a backwards-incompatible release.
-function increaseVersion(importance) {
+var increaseVersion = function(importance) {
   // Get all the files to bump version in
   return gulp.src(['./package.json'])
     // Bump the version number in those files
@@ -148,6 +151,29 @@ gulp.task('feature', function() {
 // Bumps version from v0.2.1 to v1.0.0
 gulp.task('release', function() {
   return increaseVersion('major');
+});
+
+// Deploy compiled file to S3 and push to GitHub.
+gulp.task('deploy', ['sass'], function() {
+  var p = require('./package.json')
+  var version = p.version;
+
+  if (!process.env.AWS_KEY || !process.env.AWS_SECRET) {
+    throw "You must have `AWS_KEY` and `AWS_SECRET` environment variables. Contact daniel@optimizely.com for help."
+  }
+
+  gulp.src('./dist/css/core.css')
+    .pipe(rename(version + '/oui.css'))
+    .pipe(s3({
+      'key': process.env.AWS_KEY,
+      'secret': process.env.AWS_SECRET,
+      'bucket': 'optimizely-oui',
+      'region': 'us-west-2'
+    }))
+    .pipe(shell([
+      'git push',
+      'git push origin v' + version
+    ]));
 });
 
 gulp.task('default');
