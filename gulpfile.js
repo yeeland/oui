@@ -88,7 +88,7 @@ gulp.task('svg', function () {
 
 // Builds sass
 gulp.task('sass', function() {
-  gulp.src(paths.core)
+  return gulp.src(paths.core)
     .pipe(sass({
       errLogToConsole: true
     }))
@@ -172,13 +172,13 @@ gulp.task('canvas:build', ['canvas:icons'], function () {
   return gulp.src('./dist/css/oui-canvas-' + pkg.version + '.css')
     .pipe(base64({
         extensions: ['svg'],
-        debug: true
+        debug: false
     }))
     .pipe(concat('./dist/css/oui-canvas-' + pkg.version + '.css'))
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('canvas:icons', function () {
+gulp.task('canvas:icons', ['sass'], function () {
   return gulp.src('./' + svgs + '*.svg')
     .pipe(tap(function(file, t) {
       var arr = (path.basename(file.path)).split(".");
