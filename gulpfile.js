@@ -9,9 +9,14 @@ var bump        = require('gulp-bump'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
     sass        = require('gulp-sass'),
-    path        = require("path"),
     uglify      = require('gulp-uglifyjs'),
-    tagVersion  = require('gulp-tag-version');
+    tagVersion  = require('gulp-tag-version'),
+    concat      = require('gulp-concat'),
+    base64      = require('gulp-base64'),
+    tap         = require('gulp-tap'),
+    path        = require('path'),
+    fs          = require('fs'),
+    pkg         = require('./package.json');
 
 var paths = {
   // Limiting linter to first-part directories.
@@ -148,6 +153,42 @@ gulp.task('feature', function() {
 // Bumps version from v0.2.1 to v1.0.0
 gulp.task('release', function() {
   return increaseVersion('major');
+});
+
+
+// Building flat CSS with base64 icons for use in Canvas apps
+// First we build the
+
+css = "";
+svgs = "node_modules/oui-icons/src/16/"
+
+gulp.task('canvas:css', ['canvas:build'], function () {
+  return gulp.src(['./dist/css/core.css', 'icons_temp.css'])
+    .pipe(concat('oui-canvas-' + pkg.version + '.css'))
+    .pipe(gulp.dest('./dist/css/'));
+});
+
+gulp.task('canvas:build', ['canvas:icons'], function () {
+  return gulp.src('icons_temp.css')
+    .pipe(base64({
+        extensions: ['svg'],
+        debug: true
+    }))
+    .pipe(concat('icons_temp.css'))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('canvas:icons', function () {
+  return gulp.src('./' + svgs + '*.svg')
+    .pipe(tap(function(file, t) {
+      var arr = (path.basename(file.path)).split(".");
+      var filename = arr[0];
+      var string = '.icon--' + filename + ' {\n\t background-image: url(' + svgs + filename + '.svg) }\n\n';
+      css = css + string
+    }))
+    .on('end', function(){
+      fs.writeFile('icons_temp.css', css);
+    })
 });
 
 gulp.task('default');
