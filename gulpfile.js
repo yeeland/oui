@@ -170,7 +170,7 @@ gulp.task('deploy', ['canvas:css'], function() {
   }
 
   gulp.src(paths.cssDest + paths.canvasDestName)
-    .pipe(rename(version + '/' + paths.canvasDestName))
+    .pipe(rename(pkg.version + '/' + paths.canvasDestName))
     .pipe(s3({
       'key': process.env.AWS_KEY,
       'secret': process.env.AWS_SECRET,
