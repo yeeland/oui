@@ -231,12 +231,3 @@
   -moz-appearance: $value;
   appearance: $value;
 }
-
-// IE 10+
-// Target CSS only at IE 10 and higher.
-
-@mixin target-ie10-plus {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    @content;
-  }
-}
