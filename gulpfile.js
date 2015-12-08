@@ -179,7 +179,8 @@ gulp.task('deploy', ['canvas:css'], function() {
     }))
     .pipe(shell([
       'git push',
-      'git push origin v' + pkg.version
+      'git push origin v' + pkg.version,
+      'npm publish ./'
     ]));
 });
 
