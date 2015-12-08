@@ -1,20 +1,25 @@
-var bump        = require('gulp-bump'),
+var base64      = require('gulp-base64'),
+    bump        = require('gulp-bump'),
     browserSync = require('browser-sync'),
+    concat      = require('gulp-concat'),
     filter      = require('gulp-filter'),
+    fs          = require('fs'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
     gutil       = require('gulp-util'),
     notify      = require('gulp-notify'),
+    path        = require('path'),
+    pkg         = require('./package.json'),
+    rename      = require('gulp-rename'),
     s3          = require('gulp-s3'),
     shell       = require('gulp-shell'),
     svgSymbols  = require('gulp-svg-symbols'),
     scsslint    = require('gulp-scss-lint'),
     symlink     = require('gulp-symlink'),
     sass        = require('gulp-sass'),
-    path        = require("path"),
-    rename      = require('gulp-rename'),
-    uglify      = require('gulp-uglifyjs'),
-    tagVersion  = require('gulp-tag-version');
+    tagVersion  = require('gulp-tag-version'),
+    tap         = require('gulp-tap'),
+    uglify      = require('gulp-uglifyjs');
 
 var paths = {
   // Limiting linter to first-part directories.
@@ -24,9 +29,14 @@ var paths = {
   ],
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
-  css: './dist/css/',
-  core: './src/core/core.scss'
+  cssDest: './dist/css/',
+  core: './src/core/core.scss',
+  canvasDestName: 'oui-canvas.css'
 };
+
+// Building flat CSS with base64 icons for use in Canvas apps
+var canvasCSS = '';
+var SVGS = 'node_modules/oui-icons/src/16/';
 
 
 // Bumping version number and tagging the repository with it.
@@ -68,7 +78,7 @@ gulp.task('html-examples', ['js', 'sass', 'watch:sass', 'watch:js'], function() 
     startPath: "/examples/",
     files: [
       "tests/**/*.html",
-      "dist/css/core.css"
+      paths.cssDest + "core.css"
     ]
   });
 });
@@ -86,11 +96,11 @@ gulp.task('svg', function () {
 
 // Builds sass
 gulp.task('sass', function() {
-  gulp.src(paths.core)
+  return gulp.src(paths.core)
     .pipe(sass({
       errLogToConsole: true
     }))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(paths.cssDest))
     .pipe(browserSync.stream());
 });
 
@@ -154,16 +164,13 @@ gulp.task('release', function() {
 });
 
 // Deploy compiled file to S3 and push to GitHub.
-gulp.task('deploy', ['sass'], function() {
-  var p = require('./package.json')
-  var version = p.version;
-
+gulp.task('deploy', ['canvas:css'], function() {
   if (!process.env.AWS_KEY || !process.env.AWS_SECRET) {
     throw "You must have `AWS_KEY` and `AWS_SECRET` environment variables. Contact daniel@optimizely.com for help."
   }
 
-  gulp.src('./dist/css/core.css')
-    .pipe(rename(version + '/oui.css'))
+  gulp.src(paths.cssDest + paths.canvasDestName)
+    .pipe(rename(version + '/' + paths.canvasDestName))
     .pipe(s3({
       'key': process.env.AWS_KEY,
       'secret': process.env.AWS_SECRET,
@@ -172,8 +179,37 @@ gulp.task('deploy', ['sass'], function() {
     }))
     .pipe(shell([
       'git push',
-      'git push origin v' + version
+      'git push origin v' + pkg.version
     ]));
+});
+
+gulp.task('canvas:css', ['canvas:build'], function () {
+  return gulp.src([paths.cssDest + 'core.css', paths.cssDest + paths.canvasDestName])
+    .pipe(concat(paths.cssDest + paths.canvasDestName))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('canvas:build', ['canvas:icons'], function () {
+  return gulp.src(paths.cssDest + paths.canvasDestName)
+    .pipe(base64({
+        extensions: ['svg'],
+        debug: false
+    }))
+    .pipe(concat(paths.cssDest + paths.canvasDestName))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('canvas:icons', ['sass'], function () {
+  return gulp.src('./' + SVGS + '*.svg')
+    .pipe(tap(function(file, t) {
+      var arr = (path.basename(file.path)).split(".");
+      var filename = arr[0];
+      var string = '.icon--' + filename + ' {\n\t background-image: url(../../' + SVGS + filename + '.svg) }\n\n';
+      canvasCSS = canvasCSS + string
+    }))
+    .on('end', function(){
+      fs.writeFile(paths.cssDest + paths.canvasDestName, canvasCSS);
+    })
 });
 
 gulp.task('default');
