@@ -7,6 +7,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 ### Changed
+- [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
+- [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
+
 ### Fixed
 
 ## [7.0.0][7.0.0] - 2015-12-4
