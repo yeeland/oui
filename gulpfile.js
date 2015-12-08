@@ -163,18 +163,18 @@ css = "";
 svgs = "node_modules/oui-icons/src/16/"
 
 gulp.task('canvas:css', ['canvas:build'], function () {
-  return gulp.src(['./dist/css/core.css', 'icons_temp.css'])
-    .pipe(concat('oui-canvas-' + pkg.version + '.css'))
-    .pipe(gulp.dest('./dist/css/'));
+  return gulp.src(['./dist/css/core.css', './dist/css/oui-canvas-' + pkg.version + '.css'])
+    .pipe(concat('./dist/css/oui-canvas-' + pkg.version + '.css'))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('canvas:build', ['canvas:icons'], function () {
-  return gulp.src('icons_temp.css')
+  return gulp.src('./dist/css/oui-canvas-' + pkg.version + '.css')
     .pipe(base64({
         extensions: ['svg'],
         debug: true
     }))
-    .pipe(concat('icons_temp.css'))
+    .pipe(concat('./dist/css/oui-canvas-' + pkg.version + '.css'))
     .pipe(gulp.dest('.'));
 });
 
@@ -183,11 +183,11 @@ gulp.task('canvas:icons', function () {
     .pipe(tap(function(file, t) {
       var arr = (path.basename(file.path)).split(".");
       var filename = arr[0];
-      var string = '.icon--' + filename + ' {\n\t background-image: url(' + svgs + filename + '.svg) }\n\n';
+      var string = '.icon--' + filename + ' {\n\t background-image: url(../../' + svgs + filename + '.svg) }\n\n';
       css = css + string
     }))
     .on('end', function(){
-      fs.writeFile('icons_temp.css', css);
+      fs.writeFile('./dist/css/oui-canvas-' + pkg.version + '.css', css);
     })
 });
 
