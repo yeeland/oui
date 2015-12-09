@@ -52,23 +52,14 @@ This applies any time classes are being renamed and you want old and new code to
 
 ## Releasing a new version of OUI
 
-Pull requests should be merged into `devel` unless they are hotfixes.
-
-### Normal releases
+Pull requests should always be merged into `devel`, not `master`.
 
 1. Run `git checkout devel && git pull && git checkout master && git pull`.
-2. Merge `devel` into `master` and fix potential merge conflicts: `git merge devel`.
+2. This step depends on the desired process.
+  - **Normal Releases:** Merge `devel` into `master` (`git merge devel`) and fix potential merge conflicts.
+  - **Hotfixes:** Cherry-pick hotfix commits from `devel` into `master` (`git cherry-pick`).
 3. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
 4. Run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue in the new changes.
 5. Push the changes to `master` with `git push` and `git push origin v1.2.3` where `v1.2.3` is the tag that gulp created.
 6. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
 7. Run `npm publish ./` to push the version to NPM. You must be a OUI contributor on NPM to do this.
-
-### Hotfixes
-
-1. Run `git checkout master && git pull`. Ensure that your hotfix commits are in `master`. If not, cherry-pick them with `git cherry-pick`.
-2. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
-3. Run `gulp patch`, `gulp feature`, or `gulp release` depending on the highest importance issue in the new changes.
-4. Push the changes to `master` with `git push` and `git push origin v1.2.3` where `v1.2.3` is the tag that gulp created.
-5. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
-6. Run `npm publish ./` to push the version to NPM. You must be a OUI contributor on NPM to do this.
