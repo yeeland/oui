@@ -1,7 +1,21 @@
-// ---
-// title: Buttons
-// description: These are the default button styles. `!important` is used on colors so override default colors.
-// ---
+////
+/// Buttons
+/// @description These are the default button styles. `!important` is used on
+/// colors to override default colors.
+/// @group Objects
+/// @example[html] Button colors
+///   <button class="#{$namespace}button">Button</button>
+///   <button class="#{$namespace}button #{$namespace}button--brand">Button</button>
+///   <button class="#{$namespace}button #{$namespace}button--highlight">Button</button>
+///   <button class="#{$namespace}button #{$namespace}button--danger">Button</button>
+/// @example[html] Tiny buttons
+///   <button class="#{$namespace}button #{$namespace}button--small">Button</button>
+/// @example[html] Full width buttons
+///   <button class="#{$namespace}button #{$namespace}button--full">Button</button>
+/// @example[html] Disabled buttons
+///   <button class="#{$namespace}button #{$namespace}button--disabled">Disabled with Class</button>
+///   <button class="#{$namespace}button" disabled>Disabled with Attribute</button>
+////
 
 %#{$namespace}button,
 .#{$namespace}button {

@@ -1,47 +1,25 @@
-// ---
-// title: Button Group
-// description: For buttons that are flush against each other. Also possible to include an text input.
-// ---
-
-// ### Button Group
-
-// <div class="example html">
-//   <div class="lego-button-group">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button">Button</button>
-//   </div>
-// </div>
-
-// ### Button Group with Active
-
-// <div class="example html">
-//   <div class="lego-button-group">
-//     <button class="lego-button">Button</button>
-//     <button class="lego-button lego-button--brand">Button</button>
-//     <button class="lego-button">Button</button>
-//   </div>
-// </div>
-
-// ### Button Group with Text Input
-
-// <div class="example html">
-//   <div class="lego-button-group">
-//     <button class="lego-button">Select <span class="lego-arrow-inline--down"></span></button>
-//     <input type="text" class="lego-text-input">
-//   </div>
-// </div>
-
-// ### Button Group with Text Input
-
-// <div class="example html">
-//   <div class="lego-button-group">
-//     <input type="text" class="lego-text-input">
-//     <button class="lego-button">Button</button>
-//   </div>
-// </div>
-
-// [---]
+////
+/// Button Group
+/// @description For buttons that are flush against each other. It is also
+/// possible to include an text input.
+/// @group Objects
+/// @example[html] Default button group
+///   <div class="#{$namespace}button-group">
+///     <button class="#{$namespace}button">Button</button>
+///     <button class="#{$namespace}button">Button</button>
+///     <button class="#{$namespace}button">Button</button>
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <button class="#{$namespace}button">Select <span class="#{$namespace}arrow-inline--down"></span></button>
+///     <input type="text" class="#{$namespace}text-input">
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <input type="text" class="#{$namespace}text-input">
+///     <button class="#{$namespace}button">Button</button>
+///   </div>
+////
 
 %#{$namespace}button-group,
 .#{$namespace}button-group {
@@ -78,7 +56,8 @@
     width: auto;
   }
 
-  // If inside a button group bring the colored buttons to the top so that the borders are intact.
+  // If inside a button group bring the colored buttons to the top so that
+  // the borders are intact.
 
   .#{$namespace}button--highlight,
   .#{$namespace}button--danger,
@@ -86,4 +65,3 @@
     z-index: 1;
   }
 }
-
