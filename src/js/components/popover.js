@@ -1,5 +1,3 @@
-jQuery.noConflict();
-
 (function($) {
 
   $(document).on( "click", "[data-oui-pop-type='pop--over']", function(e) {
