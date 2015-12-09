@@ -6,10 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
-### Changed
-### Fixed
+- [Feature] Add ability to generate CSS with icons for Canvas and simplify deployment steps.
 
-## [7.0.0][7.0.0] - 2015-12-4
+## [7.0.0][7.0.0] - 2015-12-04
 ### Added
 - [Release] Adding local JS to power components.
 - [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
@@ -172,7 +171,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v5.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v7.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -183,3 +182,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [4.0.1]: https://github.com/optimizely/oui/compare/v4.0.0...v4.0.1
 [5.0.0]: https://github.com/optimizely/oui/compare/v4.0.1...v5.0.0
 [6.0.0]: https://github.com/optimizely/oui/compare/v5.0.0...v6.0.0
+[6.0.0]: https://github.com/optimizely/oui/compare/v6.0.0...v7.0.0
