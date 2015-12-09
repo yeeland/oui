@@ -6,10 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
-### Changed
-### Fixed
+- [Feature] Add ability to generate CSS with icons for Canvas and simplify deployment steps.
 
-## [7.0.0][7.0.0] - 2015-12-4
+## [7.0.0][7.0.0] - 2015-12-04
 ### Added
 - [Release] Adding local JS to power components.
 - [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
