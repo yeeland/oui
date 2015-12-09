@@ -218,9 +218,9 @@
 //[/c]
 
 %kill-last-child-margin {
-  & > *:last-child,
-  & > *:last-child > *:last-child,
-  & > *:last-child > *:last-child > *:last-child {
+  & > *:last-child, // scss-lint:disable UnnecessaryParentReference
+  & > *:last-child > *:last-child, // scss-lint:disable UnnecessaryParentReference
+  & > *:last-child > *:last-child > *:last-child { // scss-lint:disable UnnecessaryParentReference
     margin-bottom: 0;
   }
 }

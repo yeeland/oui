@@ -191,7 +191,7 @@
       }
     }
 
-    & > tbody > tr {
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
       border-bottom: 1px solid map-fetch($color, ui light);
 
       // If no `thead` is present we'll have a border top.
@@ -205,8 +205,8 @@
 
   &--wall {
 
-    & > thead > tr > th,
-    & > tbody > tr > td {
+    & > thead > tr > th, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td { // scss-lint:disable UnnecessaryParentReference
       border-left: 1px solid map-fetch($color, ui light);
       padding-right: spacer(1);
 
@@ -218,7 +218,7 @@
 
   &--hover {
 
-    & > tbody > tr {
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
 
       &:hover {
         background-color: map-fetch($color, background brand-light);
@@ -226,13 +226,13 @@
       }
     }
 
-    & > thead > tr > th:first-child,
-    & > tbody > tr > td:first-child {
+    & > thead > tr > th:first-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:first-child { // scss-lint:disable UnnecessaryParentReference
       padding-left: spacer(1);
     }
 
-    & > thead > tr > th:last-child,
-    & > tbody > tr > td:last-child {
+    & > thead > tr > th:last-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:last-child { // scss-lint:disable UnnecessaryParentReference
       padding-right: spacer(1);
     }
   }
@@ -245,7 +245,7 @@
 
     // Removes top padding of first row so spacing is consistent with other
     // form elements.
-    tbody > tr:first-child > td {
+    tbody > tr:first-child > td { // scss-lint:disable UnnecessaryParentReference
       padding-top: 0;
     }
 
