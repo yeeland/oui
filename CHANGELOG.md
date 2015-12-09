@@ -5,9 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
-### Added
 ### Changed
-### Fixed
+- [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)
 
 ## [7.0.0][7.0.0] - 2015-12-4
 ### Added
