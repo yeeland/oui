@@ -1,20 +1,21 @@
-// ### Array
-// Row of any number of items at equal height and width.
-// Background classees here only to show the items are the same height and width.
-
-// [hc]
-//     <div class="lego-array">
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-//       </div>
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi eum suscipit necessitatibus iure nam architecto.
-//       </div>
-//       <div class="lego-array__item background--faint">
-//         Lorem ipsum dolor sit amet.
-//       </div>
-//     </div>
-// [/hc]
+////
+/// Array
+/// @description Create a row of any number of items at equal height and width.
+///
+/// @group Objects
+/// @example[html] Background classes are added to show the equal dimensions.
+///   <div class="$namespace-array">
+///     <div class="$namespace-array__item background--faint">
+///       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+///     </div>
+///     <div class="$namespace-array__item background--faint">
+///       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi eum suscipit necessitatibus iure nam architecto.
+///     </div>
+///     <div class="$namespace-array__item background--faint">
+///       Lorem ipsum dolor sit amet.
+///     </div>
+///   </div>
+////
 
 %#{$namespace}array,
 .#{$namespace}array {
