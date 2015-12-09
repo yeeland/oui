@@ -251,12 +251,12 @@
     text-shadow: none;
     box-shadow: none;
 
-    &.#{$namespace}button--plain, {
+    &.#{$namespace}button--plain {
       background-color: transparent;
       border-color: transparent;
     }
 
-    &.#{$namespace}button--outline-reverse, {
+    &.#{$namespace}button--outline-reverse {
       background-color: transparent;
     }
   }

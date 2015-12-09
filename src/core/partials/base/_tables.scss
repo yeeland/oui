@@ -209,7 +209,7 @@
       }
     }
 
-    > tbody > tr {
+    & > tbody > tr {
       border-bottom: 1px solid map-fetch($color, ui light);
 
       // If no `thead` is present we'll have a border top.
@@ -223,8 +223,8 @@
 
   &--wall {
 
-    > thead > tr > th,
-    > tbody > tr > td {
+    & > thead > tr > th,
+    & > tbody > tr > td {
       border-left: 1px solid map-fetch($color, ui light);
       padding-right: spacer(1);
 
@@ -236,7 +236,7 @@
 
   &--hover {
 
-    > tbody > tr {
+    & > tbody > tr {
 
       &:hover {
         background-color: map-fetch($color, background brand-light);
@@ -244,13 +244,13 @@
       }
     }
 
-    > thead > tr > th:first-child,
-    > tbody > tr > td:first-child {
+    & > thead > tr > th:first-child,
+    & > tbody > tr > td:first-child {
       padding-left: spacer(1);
     }
 
-    > thead > tr > th:last-child,
-    > tbody > tr > td:last-child {
+    & > thead > tr > th:last-child,
+    & > tbody > tr > td:last-child {
       padding-right: spacer(1);
     }
   }

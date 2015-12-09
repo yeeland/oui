@@ -218,9 +218,9 @@
 //[/c]
 
 %kill-last-child-margin {
-  > *:last-child,
-  > *:last-child > *:last-child,
-  > *:last-child > *:last-child > *:last-child {
+  & > *:last-child,
+  & > *:last-child > *:last-child,
+  & > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0;
   }
 }
