@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Remove executable bit from non-executable files. (#161)
 
 ## [7.1.0][7.1.0] - 2015-12-08
 ### Added
