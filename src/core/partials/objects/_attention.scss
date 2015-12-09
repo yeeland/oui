@@ -4,30 +4,30 @@
 ///
 /// @group Objects
 /// @example[html] Default colored attention bar
-///   <div class="$namespace-attention">
+///   <div class="#{$namespace}attention">
 ///      This is a note.
 ///   </div>
 /// @example[html] Default colored attention bar with close button
-///   <div class="$namespace-attention">
-///     <svg class="$namespace-icon $namespace-attention__close">
+///   <div class="#{$namespace}attention">
+///     <svg class="#{$namespace}icon #{$namespace}attention__close">
 ///       <use xlink:href="#close"></use>
 ///     </svg>
 ///     This is a note.
 ///   </div>
 /// @example[html] Brand colored attention bar
-///   <div class="$namespace-attention $namespace-attention--brand">
+///   <div class="#{$namespace}attention #{$namespace}attention--brand">
 ///     This is a note.
 ///   </div>
 /// @example[html] Warning colored attention bar
-///   <div class="$namespace-attention $namespace-attention--warning">
+///   <div class="#{$namespace}attention #{$namespace}attention--warning">
 ///     This is a note.
 ///   </div>
 /// @example[html] Success colored attention bar
-///   <div class="$namespace-attention $namespace-attention--good-news">
+///   <div class="#{$namespace}attention #{$namespace}attention--good-news">
 ///     This is a note.
 ///   </div>
 /// @example[html] Error colored attention bar
-///   <div class="$namespace-attention $namespace-attention--bad-news">
+///   <div class="#{$namespace}attention #{$namespace}attention--bad-news">
 ///     This is a note.
 ///   </div>
 ////
