@@ -1,13 +1,16 @@
-// # Search
-// A clear-able search box. Works with the clearable_search Vue directive.
-
-// <div class="example html">
-//     <div class="lego-search" v-clearable-search clearevent="clearSearch">
-//       <input type="text" class="lego-text-input lego-text-input--search width-200" placeholder="Filter by Name"
-//         v-on="keyup: setStringFilter($event)"
-//         v-model="filters.string">
-//     </div>
-// </div>
+////
+/// Search
+/// @description A clearable search box.
+/// @group Objects
+/// @example[html]
+///   <div class="#{$namespace}search" v-clearable-search clearevent="clearSearch">
+///     <input type="text"
+///            class="#{$namespace}text-input #{$namespace}text-input--search width-200"
+///            placeholder="Filter by Name"
+///            v-on="keyup: setStringFilter($event)"
+///            v-model="filters.string">
+///   </div>
+////
 
 .#{$namespace}search {
   position: relative;

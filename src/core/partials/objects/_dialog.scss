@@ -1,34 +1,48 @@
-// # Dialog
-// Dialog boxes and overlays with three width options:
-
-// - `.#{$namespace}dialog` is the default
-// - `.#{$namespace}dialog--wide`
-// - `.#{$namespace}dialog--narrow`
-
-// ## Example
-
-// For purposes of this documentation the following example has its width set to `auto`.
-// Real world usage will always have widths.
-
-// <div class="example html">
-//     <div class="lego-dialog">
-//       <div class="lego-dialog__header">
-//         <div class="lego-dialog__title">Dialog Title</div>
-//       </div>
-//       <div class="lego-dialog__body">
-//         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ab quaerat dolor autem pariatur iure nisi debitis, dolores possimus ut, optio magni ratione incidunt cumque, inventore alias? Fugit, iusto eum.</p>
-//       </div>
-//       <div class="lego-dialog__footer lego-button-row--right">
-//         <button class="lego-button">Cancel</button>
-//         <button class="lego-button lego-button--brand">Done</button>
-//       </div>
-//       <div class="lego-dialog__close">
-//         <svg class="lego-icon">
-//           <use xlink:href="#close"></use>
-//         </svg>
-//       </div>
-//     </div>
-// </div>
+////
+/// Dialog
+/// @description Dialog boxes and overlays with three width options:
+///
+/// - `.#{$namespace}dialog` is the default
+/// - `.#{$namespace}dialog--wide`
+/// - `.#{$namespace}dialog--narrow`
+/// @group Objects
+/// @example[html] Basic dialog
+///   <div class="#{$namespace}dialog">
+///     <div class="#{$namespace}dialog__header">
+///       <div class="#{$namespace}dialog__title">Dialog Title</div>
+///     </div>
+///     <div class="#{$namespace}dialog__body">
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ab quaerat dolor autem pariatur iure nisi debitis, dolores possimus ut, optio magni ratione incidunt cumque, inventore alias? Fugit, iusto eum.</p>
+///     </div>
+///     <div class="#{$namespace}dialog__footer #{$namespace}button-row--right">
+///       <button class="#{$namespace}button">Cancel</button>
+///       <button class="#{$namespace}button #{$namespace}button--highlight">Done</button>
+///     </div>
+///     <div class="#{$namespace}dialog__close">
+///       <svg class="#{$namespace}icon">
+///         <use xlink:href="#close-16"></use>
+///       </svg>
+///     </div>
+///   </div>
+/// @example[html] Narrow dialog
+///   <div class="#{$namespace}dialog #{$namespace}dialog--narrow">
+///     <div class="#{$namespace}dialog__header">
+///       <div class="#{$namespace}dialog__title">Dialog Title</div>
+///     </div>
+///     <div class="#{$namespace}dialog__body">
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ab quaerat dolor autem pariatur iure nisi debitis, dolores possimus ut, optio magni ratione incidunt cumque, inventore alias? Fugit, iusto eum.</p>
+///     </div>
+///     <div class="#{$namespace}dialog__footer #{$namespace}button-row--right">
+///       <button class="#{$namespace}button">Cancel</button>
+///       <button class="#{$namespace}button #{$namespace}button--highlight">Done</button>
+///     </div>
+///     <div class="#{$namespace}dialog__close">
+///       <svg class="#{$namespace}icon">
+///         <use xlink:href="#close-16"></use>
+///       </svg>
+///     </div>
+///   </div>
+////
 
 .#{$namespace}dialog {
   position: relative;

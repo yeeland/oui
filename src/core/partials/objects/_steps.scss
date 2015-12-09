@@ -1,31 +1,28 @@
-// ---
-// title: Steps
-// description: A type of progress bar showing steps through a flow. Use with a width helper class if needed so that it fits cleanly.
-// ---
-
-
-// <div class="example html">
-//   <ul class="lego-steps width-9-10">
-//     <li class="lego-steps__item lego-steps__item--complete">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step One Label</div>
-//     </li>
-//     <li class="lego-steps__item lego-steps__item--complete">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Two Label</div>
-//     </li>
-//     <li class="lego-steps__item lego-steps__item--active">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Three Label</div>
-//     </li>
-//     <li class="lego-steps__item">
-//       <div class="lego-steps__dot"></div>
-//       <div class="lego-steps__label">Step Four Label</div>
-//     </li>
-//   </ul>
-// </div>
-
-// [---]
+////
+/// Steps
+/// @description A type of progress bar showing steps through a flow. Use with
+/// a width helper class if needed so that it fits cleanly.
+/// @group Objects
+/// @example[html]
+///   <ul class="#{$namespace}steps width-9-10">
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--complete">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step One Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--complete">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Two Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--active">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Three Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Four Label</div>
+///     </li>
+///   </ul>
+////
 
 %#{$namespace}steps,
 .#{$namespace}steps {

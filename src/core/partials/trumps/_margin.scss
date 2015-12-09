@@ -1,11 +1,12 @@
-// # Margin Trumps
+////
+/// Margin
+/// @group Trumps
+////
 
-// ## Add Margins
-// Push elements in any direction.
-
-//[c]
-//     <div class="push--top">content</div>
-//[/c]
+/// Add Margins
+/// @description Push elements in any direction.
+/// @example[html]
+///   <div class="push--top">content</div>
 
 .push {
   margin: spacer(1) !important;
@@ -157,11 +158,9 @@
   margin-left: spacer(4) !important;
 }
 
-// ## Zero Margins
-
-//[c]
-//     <div class="flush--top">content</div>
-//[/c]
+/// Remove Margins
+/// @example[html]
+///   <div class="flush--top">content</div>
 
 .flush {
   margin: 0 !important;
@@ -194,33 +193,29 @@
 }
 
 
-// ## Last Item Margin
-
-// Per [http://css-tricks.com/spacing-the-bottom-of-modules/](http://css-tricks.com/spacing-the-bottom-of-modules/)
-// this removes the margin from the last child that would otherwise create too much space
-// inside a element with bottom padding.
-
-// Given the following HTML the second paragraph would ordinarily have a default bottom margin.
-
-//[c]
-//     <div class="foo">
-//       <p>This is a paragraph with default bottom margin.</p>
-//       <p>This is a paragraph with a killed bottom margin.</p>
-//     </div>
-//[/c]
-
-// But with the `%kill-last-child-margin` extended to it that margin will go away.
-
-//[c]
-//     .foo {
-//       @extend %kill-last-child-margin;
-//     }
-//[/c]
+/// Last Item Margin
+/// @description Per [http://css-tricks.com/spacing-the-bottom-of-modules/](http://css-tricks.com/spacing-the-bottom-of-modules/)
+/// this removes the margin from the last child that would otherwise create too
+/// much space inside a element with bottom padding.
+///
+/// @example[html] Given the following HTML the second paragraph would
+/// ordinarily have a default bottom margin.
+///
+///   <div class="foo">
+///     <p>This is a paragraph with default bottom margin.</p>
+///     <p>This is a paragraph with a killed bottom margin.</p>
+///   </div>
+///
+/// @example[html] Margin goes away with the `%kill-last-child-margin`
+/// extended to it.
+///   .foo {
+///     @extend %kill-last-child-margin;
+///   }
 
 %kill-last-child-margin {
-  > *:last-child,
-  > *:last-child > *:last-child,
-  > *:last-child > *:last-child > *:last-child {
+  & > *:last-child, // scss-lint:disable UnnecessaryParentReference
+  & > *:last-child > *:last-child, // scss-lint:disable UnnecessaryParentReference
+  & > *:last-child > *:last-child > *:last-child { // scss-lint:disable UnnecessaryParentReference
     margin-bottom: 0;
   }
 }

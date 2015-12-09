@@ -1,17 +1,17 @@
-// # Fonts
-// Pulls in fonts from self hosting.
-
-// Usage
-// In the theme's variables file:
-
-// $include-fonts:(
-//   weights: 300 400 500,
-//   italics: true
-// );
-
-// Font Support
-// - woff2: Chrome 26+, Opera 23+
-// - woff: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+////
+/// Fonts
+/// @description Pulls in fonts from self hosting.
+///
+/// Font Support:
+/// - woff2: Chrome 26+, Opera 23+
+/// - woff: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+
+/// @group Base
+/// @example[scss] Load fonts by including in theme's variable file.
+///   $include-fonts:(
+///     weights: 300 400 500,
+///     italics: true
+///   );
+////
 
 $hosted-fonts:(
   weights:(

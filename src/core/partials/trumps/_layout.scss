@@ -1,11 +1,12 @@
-// # Layout Trumps
+////
+/// Layout
+/// @group Trumps
+////
 
-// ## Floats
-// Add/remove floats.
-
-//[c]
-//     <div class="float--right">content</div>
-//[/c]
+/// Floats
+/// @description Classes to add/remove floats.
+/// @example[html]
+///   <div class="float--right">content</div>
 
 .float--right {
   float: right !important;
@@ -19,14 +20,13 @@
   float: none !important;
 }
 
-// ## Anchor
+/// Anchor
+/// @description Can be used to position elements on the page.
 
 .anchor--middle {
   margin-right: auto !important;
   margin-left: auto !important;
 }
-
-// ### Flexbox anchors, moves element to right or left.
 
 .anchor--right {
   margin-left: auto !important;
@@ -44,11 +44,9 @@
   margin-top: auto !important;
 }
 
-// ## Text Alignment
-
-// <div class="example html">
-//     <div class="text--right">content</div>
-// </div>
+/// Text Alignment
+/// @example[html] Right aligned text
+///   <div class="text--right">content</div>
 
 .text--left {
   text-align: left !important;
@@ -62,11 +60,9 @@
   text-align: right !important;
 }
 
-// ## Display
-
-//[c]
-//     <div class="display--inline-block">content</div>
-//[/c]
+/// Display
+/// @example[html] A `div` that has been set to `inline`.
+///   <div class="display--inline background--light">content</div>
 
 .display--block {
   display: block !important;
@@ -84,25 +80,23 @@
   display: none !important;
 }
 
-// ## Faded
-// Sets opacity to 0.5. Useful for a simulated disabled state.
-
-// <div class="example html">
-//     <div class="faded push--bottom">This text is faded. As is the icon below.</div>
-//     <svg class="lego-icon faded">
-//       <use xlink:href="#collaborators"></use>
-//     </svg>
-// </div>
+/// Faded
+/// @description Sets opacity to `0.5`. Useful for a simulated disabled state.
+/// @example[html]
+///   <div class="faded push--bottom">
+///     This text is faded. As is the icon below.
+///     <svg class="lego-icon faded">
+///       <use xlink:href="#collaborators-16"></use>
+///     </svg>
+///   </div>
 
 .faded {
   opacity: map-fetch($opacity, medium) !important;
 }
 
-// ## Vertical Alignment for table cells.
-
-//[c]
-//     <div class="vertical-align--bottom">content</div>
-//[/c]
+/// Vertical Alignment for table cells.
+/// @example[html]
+///   <div class="vertical-align--bottom">content</div>
 
 .vertical-align--top {
   vertical-align: top !important;
@@ -116,8 +110,8 @@
   vertical-align: bottom !important;
 }
 
-// ## Overflow
-// Force scroll bars when overflowed.
+/// Overflow
+/// @description Force scroll bars when overflowed.
 
 .overflow--hidden {
   overflow: hidden !important;
@@ -131,8 +125,8 @@
   overflow-y: auto !important;
 }
 
-// ## Remove Borders
-// Remove borders from all or just one side.
+/// Remove Borders
+/// @description Remove borders from all or just one side.
 
 .no-border {
   border: 0 !important;
@@ -154,8 +148,8 @@
   border-left: none !important;
 }
 
-// ## Max Scroll
-// Set a max-height to provide scrolling.
+/// Max Scroll
+/// @description Set a `max-height` to provide scrolling.
 
 .max-scroll--small {
   max-height: 100px !important;
@@ -172,15 +166,15 @@
   overflow-y: auto !important;
 }
 
-// ## Max Width
-// Set a max-width for content.
+/// Max Width
+/// @description Set a max-width for content.
 
 .max-width--large {
   max-width: 800px !important;
 }
 
-// ## Cursors
-// Helpers for cursors.
+/// Cursors
+/// @description Helpers for cursors.
 
 .cursor--default {
   cursor: default !important;
@@ -206,15 +200,16 @@
   pointer-events: none !important;
 }
 
-// ## Text Area No Resize
-// Prevent resizing of textarea. Use only if absolutely necessary.
+/// Text Area No Resize
+/// @description Prevent resizing of textarea. Use only if absolutely
+/// necessary.
 
 .no-resize {
   resize: none !important;
 }
 
-// ## Position
-// Change the positioning of element.
+/// Position
+/// @description Change the positioning of element.
 
 .position--relative {
   position: relative !important;
@@ -229,15 +224,15 @@
 }
 
 
-// ## Visibility
-// Change the positioning of element.
+/// Visibility
+/// @description Change the positioning of element.
 
 .visibility--hidden {
   visibility: hidden !important;
 }
 
-// ## Prevent User Selection
-// Text inside element will not be selectable by the user.
+/// Prevent User Selection
+/// @description Text inside element will not be selectable by the user.
 
 .unselectable {
   -moz-user-select: none;

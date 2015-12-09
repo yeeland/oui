@@ -1,6 +1,8 @@
-// Custom select elements for Chrome/Safari/Firefox
-// Partially changes select elements in IE
-
+////
+/// Select
+/// @description Custom `select` elements for Chrome/Safari/Firefox. It
+/// partially changes `select` elements in IE.
+////
 
 .#{$namespace}select {
   @include appearance(none);
