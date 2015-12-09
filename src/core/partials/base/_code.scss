@@ -1,9 +1,13 @@
-// # Code
-// For monospace code snippets, both inline and multiline.
-
-// <div class="example html">
-//     Text can have <code>code snippets</code> in a sentence.
-// </div>
+////
+/// Code
+/// @description Monospace code snippets, both inline and multiline.
+/// @group Base
+/// @example[html] Inline code
+///   Text can have <code class="code">code snippets</code> in a sentence.
+/// @example[html] Multiline code
+///   <pre class="pre"><code><p>A multiline example
+///     of code.</p></code></pre>
+////
 
 code {
   font-family: map-fetch($font, family monospace);

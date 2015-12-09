@@ -1,6 +1,8 @@
-// Custom select elements for Chrome/Safari/Firefox
-// Partially changes select elements in IE
-
+////
+/// Select
+/// @description Custom `select` elements for Chrome/Safari/Firefox. It
+/// partially changes `select` elements in IE.
+////
 
 .#{$namespace}select {
   @include appearance(none);
@@ -41,7 +43,6 @@
 
 // We're hiding the dropdown arrow from IE.
 @include target-ie10-plus {
-
   .#{$namespace}select {
     padding-right: 0; // Remove the padding so the dropdown arrow is flush with right side of select.
     background: none; // Remove the background image applied above.

@@ -1,293 +1,279 @@
-// ---
-// title: Forms
-// description: Form variations.
-// ---
-
-// <div class="example html">
-//   <form>
-//     <div class="lego-form__header">
-//       <div class="lego-form__title">Title</div>
-//       <p>Form information might go here if there was reason to do it.</p>
-//     </div>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">
-//             Single Input
-//             <span class="lego-label__optional">(Optional)</span>
-//           </label>
-//           <input type="text" class="lego-text-input">
-//           <div class="lego-form-note">This is a form note.</div>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Diabled Input</label>
-//           <input type="text" class="lego-text-input" disabled>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Add/Remove Row</label>
-//           <table class="lego-table lego-table--add-row width-1">
-//             <tr>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td class="lego-table--add-row__controls">
-//                 <div class="flex">
-//                   <button class="lego-button push--right">
-//                     <svg class="lego-icon">
-//                       <use xlink:href="#add"></use>
-//                     </svg>
-//                   </button>
-//                 </div>
-//               </td>
-//             </tr>
-//             <tr>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td class="lego-table--add-row__controls">
-//                 <div class="flex">
-//                   <button class="lego-button push--right">
-//                     <svg class="lego-icon">
-//                       <use xlink:href="#add"></use>
-//                     </svg>
-//                   </button>
-//                   <button class="lego-button">
-//                     <svg class="lego-icon">
-//                       <use xlink:href="#close"></use>
-//                     </svg>
-//                   </button>
-//                 </div>
-//               </td>
-//             </tr>
-//             <tr>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td><input type="text" class="lego-text-input"></td>
-//               <td class="lego-table--add-row__controls">
-//                 <div class="flex">
-//                   <button class="lego-button push--right">
-//                     <svg class="lego-icon">
-//                       <use xlink:href="#add"></use>
-//                     </svg>
-//                   </button>
-//                   <button class="lego-button">
-//                     <svg class="lego-icon">
-//                       <use xlink:href="#close"></use>
-//                     </svg>
-//                   </button>
-//                 </div>
-//               </td>
-//             </tr>
-//           </table>
-//         </li>
-//       </ol>
-//     </fieldset>
-//     <div class="lego-form__footer lego-button-row lego-button-row--right">
-//       <button class="lego-button">Cancel</button>
-//       <button class="lego-button lego-button--highlight">Submit</button>
-//     </div>
-//   </form>
-// </div>
-
-// <div class="example html">
-//   <form>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Textarea</label>
-//           <textarea class="lego-textarea"></textarea>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Fixed-width Input</label>
-//           <input type="text" class="lego-text-input width-150">
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Fixed-width Input</label>
-//           <input type="text" class="lego-text-input width-250">
-//         </li>
-//         <li class="lego-form-field__item">
-//           <div class="lego-grid">
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//           </div>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <div class="lego-grid">
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <select name="zoo" id="zoo" class="lego-select">
-//                 <option value="one">This is option one</option>
-//                 <option value="two">And this is option two</option>
-//               </select>
-//             </div>
-//           </div>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <div class="lego-grid">
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="lego-grid__cell">
-//               <label class="lego-label">Split Inputs</label>
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//           </div>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Fill Space</label>
-//           <div class="lego-grid">
-//             <div class="lego-grid__cell">
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="push-double--left">
-//               <button class="lego-button lego-button--brand">Do This</button>
-//             </div>
-//           </div>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Fill Space</label>
-//           <div class="lego-grid">
-//             <div class="lego-grid__cell">
-//               <input type="text" class="lego-text-input" placeholder="This is placeholder">
-//             </div>
-//             <div class="push-double--left">
-//               <select name="zoo" id="zoo" class="lego-select">
-//                 <option value="one">This is option one</option>
-//                 <option value="two">And this is option two</option>
-//               </select>
-//             </div>
-//           </div>
-//         </li>
-//       </ol>
-//     </fieldset>
-//     <div class="lego-or">or</div>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-label">Checklist</li>
-//         <li class="lego-form-field__item">
-//           <ul class="lego-input-list">
-//             <li>
-//               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="lego-label" for="foo-1">Send me email notifications when I am projected to or have exceeded my plan limits</label>
-//             </li>
-//             <li>
-//               <input name="foo-2" id="foo-2" type="checkbox"> <label class="lego-label" for="foo-2">Send me email summaries of my experiment results</label>
-//             </li>
-//           </ul>
-//         </li>
-//       </ol>
-//     </fieldset>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Select one thing or another</label>
-//           <select name="zoo" id="zoo" class="lego-select">
-//             <option value="one">This is option one</option>
-//             <option value="two">And this is option two</option>
-//           </select>
-//         </li>
-//         <li class="lego-form-field__item">
-//           <ul class="lego-input-list">
-//             <li>
-//               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="lego-label" for="bar-1">Radio 1</label>
-//             </li>
-//             <li>
-//               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="lego-label lego-label--disabled" for="bar-2">Radio 2 with disabled label</label>
-//             </li>
-//             <li>
-//               <input name="radio-1" id="bar-3" type="radio"> <label class="lego-label" for="bar-3">Radio 3</label>
-//             </li>
-//           </ul>
-//         </li>
-//       </ol>
-//     </fieldset>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-form-field__item">
-//           <label class="lego-label">Horizontal Inputs</label>
-//           <p>Use these only for short inputs where there's no chance they will wrap.</p>
-//           <ul class="lego-input-list lego-input-list--horizontal">
-//             <li>
-//               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="lego-label" for="bar-1">Radio 1</label>
-//             </li>
-//             <li>
-//               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="lego-label lego-label--disabled" for="bar-2">Radio 2 with disabled label</label>
-//             </li>
-//             <li>
-//               <input name="radio-1" id="bar-3" type="radio"> <label class="lego-label" for="bar-3">Radio 3</label>
-//             </li>
-//           </ul>
-//         </li>
-//         <li class="lego-label">Checklist</li>
-//         <li class="lego-form-field__item">
-//           <ul class="lego-input-list lego-input-list--horizontal">
-//             <li>
-//               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="lego-label" for="foo-1">Short option</label>
-//             </li>
-//             <li>
-//               <input name="foo-2" id="foo-2" type="checkbox"> <label class="lego-label" for="foo-2">Another short option</label>
-//             </li>
-//           </ul>
-//         </li>
-//       </ol>
-//     </fieldset>
-//     <div class="lego-form__footer lego-button-row lego-button-row--right">
-//       <button class="lego-button">Cancel</button>
-//       <button class="lego-button lego-button--highlight">Submit</button>
-//     </div>
-//   </form>
-// </div>
-// <div class="example html">
-//   <form>
-//     <div class="lego-form__header">
-//       <div class="lego-form__title">Error States</div>
-//     </div>
-//     <fieldset>
-//       <ol class="lego-form-fields">
-//         <li class="lego-form-field__item lego-form-bad-news">
-//           <label class="lego-label lego-label--required">Address</label>
-//           <input type="text" class="lego-text-input">
-//           <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
-//         </li>
-//         <li class="lego-form-field__item lego-form-bad-news">
-//           <label class="lego-label lego-label--required">Fill Space</label>
-//           <select name="zoo" id="zoo" class="lego-select">
-//             <option value="one">This is option one</option>
-//             <option value="two">And this is option two</option>
-//           </select>
-//           <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
-//         </li>
-//         <li class="lego-form-field__item lego-form-bad-news">
-//           <label class="lego-label lego-label--required">Textarea</label>
-//           <textarea class="lego-textarea"></textarea>
-//           <div class="lego-form-note lego-form-note--bad-news">This field is required.</div>
-//         </li>
-//       </ol>
-//     </fieldset>
-//   </form>
-// </div>
-
-// [---]
-
-// ## Text inputs
-//
-// Instead of a `[type]` selector for each kind of form input, we just use a
-// class to target any/every one, e.g.:
-
-//[c]
-//   <input type="text" class="lego-text-input">
-//[/c]
+////
+/// Forms
+/// @description Form variations.
+/// @group Base
+/// @example[html]
+///   <form>
+///     <div class="#{$namespace}form__header">
+///       <div class="#{$namespace}form__title">Title</div>
+///       <p>Form information might go here if there was reason to do it.</p>
+///     </div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">
+///             Single Input
+///             <span class="#{$namespace}label__optional">(Optional)</span>
+///           </label>
+///           <input type="text" class="#{$namespace}text-input">
+///           <div class="#{$namespace}form-note">This is a form note.</div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Diabled Input</label>
+///           <input type="text" class="#{$namespace}text-input" disabled>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Add/Remove Row</label>
+///           <table class="#{$namespace}table #{$namespace}table--add-row width-1">
+///             <tr>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td class="#{$namespace}table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="#{$namespace}button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///             <tr>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td class="#{$namespace}table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="#{$namespace}button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add"></use>
+///                     </svg>
+///                   </button>
+///                   <button class="#{$namespace}button">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#close"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///             <tr>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td class="#{$namespace}table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="#{$namespace}button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add"></use>
+///                     </svg>
+///                   </button>
+///                   <button class="#{$namespace}button">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#close"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///           </table>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}form__footer #{$namespace}button-row #{$namespace}button-row--right">
+///       <button class="#{$namespace}button">Cancel</button>
+///       <button class="#{$namespace}button #{$namespace}button--highlight">Submit</button>
+///     </div>
+///   </form>
+/// @example[html]
+///   <form>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Textarea</label>
+///           <textarea class="#{$namespace}textarea"></textarea>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Fixed-width Input</label>
+///           <input type="text" class="#{$namespace}text-input width-150">
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Fixed-width Input</label>
+///           <input type="text" class="#{$namespace}text-input width-250">
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <select name="zoo" id="zoo" class="#{$namespace}select">
+///                 <option value="one">This is option one</option>
+///                 <option value="two">And this is option two</option>
+///               </select>
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="#{$namespace}label">Split Inputs</label>
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Fill Space</label>
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="push-double--left">
+///               <button class="#{$namespace}button #{$namespace}button--brand">Do This</button>
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Fill Space</label>
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="push-double--left">
+///               <select name="zoo" id="zoo" class="#{$namespace}select">
+///                 <option value="one">This is option one</option>
+///                 <option value="two">And this is option two</option>
+///               </select>
+///             </div>
+///           </div>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}or">or</div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}label">Checklist</li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list">
+///             <li>
+///               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1">Send me email notifications when I am projected to or have exceeded my plan limits</label>
+///             </li>
+///             <li>
+///               <input name="foo-2" id="foo-2" type="checkbox"> <label class="#{$namespace}label" for="foo-2">Send me email summaries of my experiment results</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Select one thing or another</label>
+///           <select name="zoo" id="zoo" class="#{$namespace}select">
+///             <option value="one">This is option one</option>
+///             <option value="two">And this is option two</option>
+///           </select>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list">
+///             <li>
+///               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1">Radio 1</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2">Radio 2 with disabled label</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-3" type="radio"> <label class="#{$namespace}label" for="bar-3">Radio 3</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="#{$namespace}label">Horizontal Inputs</label>
+///           <p>Use these only for short inputs where there's no chance they will wrap.</p>
+///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
+///             <li>
+///               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1">Radio 1</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2">Radio 2 with disabled label</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-3" type="radio"> <label class="#{$namespace}label" for="bar-3">Radio 3</label>
+///             </li>
+///           </ul>
+///         </li>
+///         <li class="#{$namespace}label">Checklist</li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
+///             <li>
+///               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1">Short option</label>
+///             </li>
+///             <li>
+///               <input name="foo-2" id="foo-2" type="checkbox"> <label class="#{$namespace}label" for="foo-2">Another short option</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}form__footer #{$namespace}button-row #{$namespace}button-row--right">
+///       <button class="#{$namespace}button">Cancel</button>
+///       <button class="#{$namespace}button #{$namespace}button--highlight">Submit</button>
+///     </div>
+///   </form>
+/// @example[html] Form error states
+///   <form>
+///     <div class="#{$namespace}form__header">
+///       <div class="#{$namespace}form__title">Error States</div>
+///     </div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
+///           <label class="#{$namespace}label #{$namespace}label--required">Address</label>
+///           <input type="text" class="#{$namespace}text-input">
+///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///         </li>
+///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
+///           <label class="#{$namespace}label #{$namespace}label--required">Fill Space</label>
+///           <select name="zoo" id="zoo" class="#{$namespace}select">
+///             <option value="one">This is option one</option>
+///             <option value="two">And this is option two</option>
+///           </select>
+///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///         </li>
+///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
+///           <label class="#{$namespace}label #{$namespace}label--required">Textarea</label>
+///           <textarea class="#{$namespace}textarea"></textarea>
+///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///         </li>
+///       </ol>
+///     </fieldset>
+///   </form>
+/// </div>
+////
 
 .#{$namespace}form--small {
   font-size: map-fetch($font, size micro);
@@ -368,11 +354,10 @@ fieldset {
   margin-bottom: spacer(4);
 }
 
-//## Labels
-//
-// Define a `.label` class as well as a `<label>` element. This means we can apply
-// label-like styling to meta-labels for groups of options where a `<label>`
-// element is not suitable.
+// Labels
+// Define a `.label` class as well as a `<label>` element. This means we can
+// apply label-like styling to meta-labels for groups of options where a
+// `<label>` element is not suitable.
 
 .#{$namespace}label {
   display: block;
@@ -408,7 +393,7 @@ fieldset {
   }
 }
 
-// Labels in lego-input-lists
+// Labels in `.#{$namespace}input-lists`
 
 .#{$namespace}check-label,
 .#{$namespace}input-list .#{$namespace}label {
@@ -447,7 +432,7 @@ fieldset {
 
     .#{$namespace}label {
       display: inline;
-      padding-left: 6px; // Should be 10px but this compensates for white space.
+      padding-left: 6px; // Should be `10px` but this compensates for white space.
     }
   }
 }
@@ -475,7 +460,7 @@ fieldset {
   }
 }
 
-// ## Icons in inputs
+// Icons in inputs
 // This places an svg icon "inside" an input, to the right.
 
 .#{$namespace}icon-input {
@@ -493,7 +478,7 @@ fieldset {
   }
 }
 
-// ## Form Notes
+// Form Notes
 
 .#{$namespace}form-note {
   padding-top: spacer(0.5);
@@ -512,7 +497,7 @@ fieldset {
   color: map-fetch($color, text warning);
 }
 
-// ## Form Validations
+// Form Validations
 
 .#{$namespace}form-good-news {
   .#{$namespace}label {
@@ -550,8 +535,9 @@ fieldset {
   }
 }
 
-// ## Form Validation Browser Overrides
-// This prevents Firefox from adding an ugly red box shadow around required inputs.
+// Form Validation Browser Overrides
+// This prevents Firefox from adding an ugly red box shadow around required
+// inputs.
 
 [required] {
   box-shadow: none;
