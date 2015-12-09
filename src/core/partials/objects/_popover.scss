@@ -1,9 +1,92 @@
-// ---
-// title: Popover
-// description: Information bubbles on hover.
-// ---
-
-// [---]
+////
+/// Popover
+/// @description Information bubbles on hover.
+/// @group Objects
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-top-left">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-top-center">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-top-right">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-right-top">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-right-center">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-right-bottom">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-bottom-right">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-bottom-center">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-bottom-left">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-left-bottom">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-left-center">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+/// @example[html]
+///   <ul class="#{$namespace}popover #{$namespace}popover--arrow-left-top">
+///     <li class="#{$namespace}popover__content">
+///       <div class="#{$namespace}popover__title">Title</div>
+///       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+///     </li>
+///   </ul>
+////
 
 %#{$namespace}pop--over,
 .#{$namespace}pop--over {

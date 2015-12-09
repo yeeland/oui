@@ -1,31 +1,32 @@
-// ---
-// title: Spinner
-// description: Loading spinner. Target '.#{$namespace}overlay' to position as needed.
-// ---
-
-// <div class="example html">
-//   <div class="lego-overlay">
-//     <div class="spin-animatener"></div>
-//   </div>
-//   <div class="lego-overlay">
-//     <div class="spin-animatener spin-animatener--small"></div>
-//   </div>
-//   <div class="lego-overlay">
-//     <div class="spin-animatener spin-animatener--tiny"></div>
-//   </div>
-// </div>
-
-// ### With Overlay
-// This gets inserted into an element and blocks user interaction. Requires a parent div with positioning (absolute or relative).
-
-//     <div style="position:relative">
-//       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
-//       <div class="lego-overlay">
-//         <div class="spin-animatener spin-animatener--small"></div>
-//       </div>
-//     </div>
-
-// [---]
+////
+/// Spinner
+/// @description Loading spinner. Target '.#{$namespace}overlay' to position
+/// as needed.
+/// @group Objects
+///
+/// @example[html]
+///   <div class="#{$namespace}overlay">
+///     <div class="spin-animatener"></div>
+///   </div>
+///   <div class="#{$namespace}overlay">
+///     <div class="spin-animatener spin-animatener--small"></div>
+///   </div>
+///   <div class="#{$namespace}overlay">
+///     <div class="spin-animatener spin-animatener--tiny"></div>
+///   </div>
+///
+/// @example[html] Spinner with overlay
+///
+/// This gets inserted into an element and blocks user interaction. Requires a
+/// parent `div` with positioning (`absolute` or `relative`).
+///
+///   <div class="position--relative">
+///      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
+///      <div class="#{$namespace}overlay">
+///        <div class="spin-animatener spin-animatener--small"></div>
+///      </div>
+///   </div>
+////
 
 %#{$namespace}overlay,
 .#{$namespace}overlay {

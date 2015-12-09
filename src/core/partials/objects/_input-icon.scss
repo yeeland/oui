@@ -1,16 +1,22 @@
-// # Input Icons
-// Adding svg icons, like search or calendar, to the left and/or right of inputs.
-// Use padding classes on input as needed to provide space, e.g. `soft-triple--left`.
-
-// <div class="lego-input-icon">
-//   <input type="text" class="lego-text-input soft-triple--sides width--150">
-//   <svg class="lego-icon lego-input-icon__left lego-input-icon__muted">
-//     <use xlink:href="#calendar-16"></use>
-//   </svg>
-//   <svg class="lego-icon lego-input-icon__right">
-//     <use xlink:href="#arrow-down-16"></use>
-//   </svg>
-// </div>
+////
+/// Input Icons
+/// @description Add SVG icons, like search or calendar, to the left and/or
+/// right of inputs.
+///
+/// Use padding classes on input as needed to provide space, e.g.
+/// `soft-triple--left`.
+/// @example[html] Calendar and arrow icons surrounding text input
+///   <div class="#{$namespace}input-icon">
+///     <input type="text" class="#{$namespace}text-input soft-triple--sides width--150">
+///     <svg class="#{$namespace}icon #{$namespace}input-icon__left #{$namespace}input-icon__muted">
+///       <use xlink:href="#calendar-16"></use>
+///     </svg>
+///     <svg class="#{$namespace}icon #{$namespace}input-icon__right">
+///       <use xlink:href="#arrow-down-16"></use>
+///     </svg>
+///   </div>
+/// @group Objects
+////
 
 .#{$namespace}input-icon {
   position: relative;

@@ -1,8 +1,73 @@
-// ---
-// title: Tabs
-// description: Creates a set of tabs.
-// ---
-
+////
+/// Tabs
+/// @description Creates a set of tabs.
+/// @group Objects
+/// @example[html] Default sized tabs
+///   <div class="lego-tabs" v-tabs="tabContainer">
+///     <ul class="lego-tabs-nav">
+///       <li class="lego-tabs-nav__item tab-active">Tab One</li>
+///       <li class="lego-tabs-nav__item">Tab Two</li>
+///       <li class="lego-tabs-nav__item">Tab Three</li>
+///     </ul>
+///   </div>
+///   <div id="tabContainer">
+///     <div class="lego-tabs-pane tab-active">Tab Content One</div>
+///     <div class="lego-tabs-pane">Tab Content Two</div>
+///     <div class="lego-tabs-pane">Tab Content Three</div>
+///   </div>
+/// @example[html] Small tabs
+///   <div class="lego-tabs lego-tabs--small" v-tabs="smallTabContainer">
+///     <ul class="lego-tabs-nav">
+///       <li class="lego-tabs-nav__item tab-active">Tab One</li>
+///       <li class="lego-tabs-nav__item">Tab Two</li>
+///       <li class="lego-tabs-nav__item">Tab Three</li>
+///     </ul>
+///   </div>
+///   <div id="smallTabContainer">
+///     <div class="lego-tabs-pane tab-active">Tab Content One</div>
+///     <div class="lego-tabs-pane">Tab Content Two</div>
+///     <div class="lego-tabs-pane">Tab Content Three</div>
+///   </div>
+/// @example[html] Small tabs with container
+///   <div class="lego-tabs lego-tabs--small" v-tabs="tabs-container">
+///     <ul class="lego-tabs-nav">
+///       <li class="lego-tabs-nav__item tab-active">Tab One</li>
+///       <li class="lego-tabs-nav__item">Tab Two</li>
+///       <li class="lego-tabs-nav__item">Tab Three</li>
+///     </ul>
+///   </div>
+///   <div id="tabs-container" class="lego-tabs-container">
+///     <div class="lego-tabs-pane tab-active">Tab Content One</div>
+///     <div class="lego-tabs-pane">Tab Content Two</div>
+///     <div class="lego-tabs-pane">Tab Content Three</div>
+///   </div>
+/// @example[html] Center aligned small tabs
+///   <div class="lego-tabs lego-tabs--small lego-tabs--center" v-tabs="centerTabContainer">
+///     <ul class="lego-tabs-nav">
+///       <li class="lego-tabs-nav__item tab-active">Tab One</li>
+///       <li class="lego-tabs-nav__item">Tab Two</li>
+///       <li class="lego-tabs-nav__item">Tab Three</li>
+///     </ul>
+///   </div>
+///   <div id="centerTabContainer">
+///     <div class="lego-tabs-pane tab-active">Tab Content One</div>
+///     <div class="lego-tabs-pane">Tab Content Two</div>
+///     <div class="lego-tabs-pane">Tab Content Three</div>
+///   </div>
+/// @example[html] Alternate small tab style with bottom border
+///   <div class="lego-tabs lego-tabs--small lego-tabs--sub" v-tabs="subTabContainer">
+///     <ul class="lego-tabs-nav">
+///       <li class="lego-tabs-nav__item tab-active">Tab One</li>
+///       <li class="lego-tabs-nav__item">Tab Two</li>
+///       <li class="lego-tabs-nav__item">Tab Three</li>
+///     </ul>
+///   </div>
+///   <div id="subTabContainer">
+///     <div class="lego-tabs-pane tab-active">Tab Content One</div>
+///     <div class="lego-tabs-pane">Tab Content Two</div>
+///     <div class="lego-tabs-pane">Tab Content Three</div>
+///   </div>
+////
 
 .#{$namespace}tabs-nav {
   @include display(flex);
