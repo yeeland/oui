@@ -4,16 +4,24 @@
 /// as needed.
 /// @group Objects
 ///
-/// @example[html]
-///   <div class="#{$namespace}overlay">
-///     <div class="spin-animatener"></div>
-///   </div>
-///   <div class="#{$namespace}overlay">
-///     <div class="spin-animatener spin-animatener--small"></div>
-///   </div>
-///   <div class="#{$namespace}overlay">
-///     <div class="spin-animatener spin-animatener--tiny"></div>
-///   </div>
+/// @example[html] Default spinner
+///   <div class="position--relative">
+///     <div class="#{$namespace}overlay">
+///       <div class="spin-animatener"></div>
+///     </div>
+//    </div>
+/// @example[html] Small spinner
+///   <div class="position--relative">
+///     <div class="#{$namespace}overlay">
+///       <div class="spin-animatener spin-animatener--small"></div>
+///     </div>
+//    </div>
+/// @example[html] Tiny spinner
+///   <div class="position--relative">
+///     <div class="#{$namespace}overlay">
+///       <div class="spin-animatener spin-animatener--tiny"></div>
+///     </div>
+//    </div>
 ///
 /// @example[html] Spinner with overlay
 ///
