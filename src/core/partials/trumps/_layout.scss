@@ -83,7 +83,8 @@
 /// Faded
 /// @description Sets opacity to `0.5`. Useful for a simulated disabled state.
 /// @example[html]
-///   <div class="faded push--bottom">This text is faded. As is the icon below.</div>
+///   <div class="faded push--bottom">
+///     This text is faded. As is the icon below.
 ///     <svg class="lego-icon faded">
 ///       <use xlink:href="#collaborators"></use>
 ///     </svg>
