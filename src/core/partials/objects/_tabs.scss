@@ -5,65 +5,65 @@
 /// @example[html] Default sized tabs
 ///   <div class="#{$namespace}tabs" v-tabs="tabContainer">
 ///     <ul class="#{$namespace}tabs-nav">
-///       <li class="#{$namespace}tabs-nav__item tab-active">Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item is-active">Tab One</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Two</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Three</li>
 ///     </ul>
 ///   </div>
 ///   <div id="tabContainer">
-///     <div class="#{$namespace}tabs-pane tab-active">Tab Content One</div>
+///     <div class="#{$namespace}tabs-pane is-active">Tab Content One</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Two</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Three</div>
 ///   </div>
 /// @example[html] Small tabs
 ///   <div class="#{$namespace}tabs #{$namespace}tabs--small" v-tabs="smallTabContainer">
 ///     <ul class="#{$namespace}tabs-nav">
-///       <li class="#{$namespace}tabs-nav__item tab-active">Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item is-active">Tab One</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Two</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Three</li>
 ///     </ul>
 ///   </div>
 ///   <div id="smallTabContainer">
-///     <div class="#{$namespace}tabs-pane tab-active">Tab Content One</div>
+///     <div class="#{$namespace}tabs-pane is-active">Tab Content One</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Two</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Three</div>
 ///   </div>
 /// @example[html] Small tabs with container
 ///   <div class="#{$namespace}tabs #{$namespace}tabs--small" v-tabs="tabs-container">
 ///     <ul class="#{$namespace}tabs-nav">
-///       <li class="#{$namespace}tabs-nav__item tab-active">Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item is-active">Tab One</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Two</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Three</li>
 ///     </ul>
 ///   </div>
 ///   <div id="tabs-container" class="#{$namespace}tabs-container">
-///     <div class="#{$namespace}tabs-pane tab-active">Tab Content One</div>
+///     <div class="#{$namespace}tabs-pane is-active">Tab Content One</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Two</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Three</div>
 ///   </div>
 /// @example[html] Center aligned small tabs
 ///   <div class="#{$namespace}tabs #{$namespace}tabs--small #{$namespace}tabs--center" v-tabs="centerTabContainer">
 ///     <ul class="#{$namespace}tabs-nav">
-///       <li class="#{$namespace}tabs-nav__item tab-active">Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item is-active">Tab One</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Two</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Three</li>
 ///     </ul>
 ///   </div>
 ///   <div id="centerTabContainer">
-///     <div class="#{$namespace}tabs-pane tab-active">Tab Content One</div>
+///     <div class="#{$namespace}tabs-pane is-active">Tab Content One</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Two</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Three</div>
 ///   </div>
 /// @example[html] Alternate small tab style with bottom border
 ///   <div class="#{$namespace}tabs #{$namespace}tabs--small #{$namespace}tabs--sub" v-tabs="subTabContainer">
 ///     <ul class="#{$namespace}tabs-nav">
-///       <li class="#{$namespace}tabs-nav__item tab-active">Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item is-active">Tab One</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Two</li>
 ///       <li class="#{$namespace}tabs-nav__item">Tab Three</li>
 ///     </ul>
 ///   </div>
 ///   <div id="subTabContainer">
-///     <div class="#{$namespace}tabs-pane tab-active">Tab Content One</div>
+///     <div class="#{$namespace}tabs-pane is-active">Tab Content One</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Two</div>
 ///     <div class="#{$namespace}tabs-pane">Tab Content Three</div>
 ///   </div>
