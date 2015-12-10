@@ -47,23 +47,29 @@
     // Show the poptip.
     ouiShowPop(trigger, pop, ARROW_SIZE);
 
+    $("[data-oui-popover-close]").on('click', function(e) {
+      // Find active popover and remove it.
+      $pop = $(this).closest("[data-oui-popover]");
+      $pop.remove();
+    });
+
+    // click.ouiPopover provides a namespace handler that can be unbound
+    // without affecting other handlers attached to the document
+    // http://stackoverflow.com/questions/209029/best-way-to-remove-an-event-handler-in-jquery
+    $(document).bind('click.ouiPopover', function() {
+
+      // If clicking outside of active pop up hide it, otherwise do nothing.
+      var ACTIVE_POP_ID = "data-oui-active-pop-id";
+
+      if ( !$(e.target).closest("["+ACTIVE_POP_ID+"]").length ) {
+        $("["+ACTIVE_POP_ID+"]").remove()
+      }
+
+      $(document).unbind('click.ouiPopover');
+
+    });
+
+
   });
-
-  $(document).on( "click", "[data-oui-popover-close]", function(e) {
-    // Find active popover and remove it.
-    $pop = $(this).closest("[data-oui-popover]");
-    $pop.remove();
-  });
-
-  $(document).on( "click", function(e) {
-
-    // If clicking outside of active pop up hide it, otherwise do nothing.
-    var ACTIVE_POP_ID = "data-oui-active-pop-id";
-
-    if ( !$(e.target).closest("["+ACTIVE_POP_ID+"]").length ) {
-      $("["+ACTIVE_POP_ID+"]").remove()
-    }
-  });
-
 
 })( jQuery );
