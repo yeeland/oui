@@ -10,6 +10,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
 - [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
+- [Patch] Updating javascript to remove handlers when not needed in dropdown/popover.
+- [Patch] Updating javascript to remove `jQuery.noconflict` as it breaks other jQuery code.
 
 ### Fixed
 
