@@ -5,9 +5,10 @@
 /// @group Objects
 /// @example[html] Button colors
 ///   <button class="#{$namespace}button">Button</button>
-///   <button class="#{$namespace}button #{$namespace}button--brand">Button</button>
 ///   <button class="#{$namespace}button #{$namespace}button--highlight">Button</button>
 ///   <button class="#{$namespace}button #{$namespace}button--danger">Button</button>
+///   <button class="#{$namespace}button #{$namespace}button--outline">Button</button>
+///   <button class="#{$namespace}button #{$namespace}button--plain">Button</button>
 /// @example[html] Tiny buttons
 ///   <button class="#{$namespace}button #{$namespace}button--small">Button</button>
 /// @example[html] Full width buttons

@@ -47,7 +47,7 @@
     }
   }
 
-  > .#{$namespace}button--brand {
+  > .#{$namespace}button--highlight {
     position: relative;
   }
 
@@ -61,7 +61,7 @@
 
   .#{$namespace}button--highlight,
   .#{$namespace}button--danger,
-  .#{$namespace}button--brand {
+  .#{$namespace}button--highlight {
     z-index: 1;
   }
 }

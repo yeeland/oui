@@ -31,9 +31,9 @@
 }
 
 /// Pseudo Content
-/// Content that is applied as a pseudo-element and defined as an attribute on
-/// an empty element. This is useful for preventing an element's text from
-/// being copied to the clipboard.
+/// @description Content that is applied as a pseudo-element and defined as an
+/// attribute on an empty element. This is useful for preventing an element's
+/// text from being copied to the clipboard.
 /// @example[html] Try to highlight and copy the plus sign
 ///   <span data-lego-pseudo-content="+"></span> Some text
 
