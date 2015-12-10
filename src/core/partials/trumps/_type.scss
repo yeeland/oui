@@ -1,10 +1,11 @@
-// # Type Trumps
+////
+/// Type Trumps
+/// @group Trumps
+////
 
-// ## Font Weights
-
-// <div class="example html">
-//     <div class="weight--light">This is light text.</div>
-// </div>
+/// Font Weights
+/// @example[html]
+///   <div class="weight--light">This is light text.</div>
 
 .weight--light {
   font-weight: 300 !important;
@@ -19,11 +20,9 @@
 }
 
 
-// ## Font Style
-
-// <div class="example html">
-//     <div class="style--italic">This is italic text.</div>
-// </div>
+/// Font Style
+/// @example[html]
+///   <div class="style--italic">This is italic text.</div>
 
 .style--italic {
   font-style: italic !important;
@@ -34,33 +33,28 @@
 }
 
 
-// ## Underline
-// Adds text-decoration: underline to text.
-
-// <div class="example html">
-//     <div>You can <span class="underline">underline</span> words.</div>
-// </div>
+/// Underline
+/// @description Adds `text-decoration: underline` to text.
+/// @example[html]
+///   <div>You can <span class="underline">underline</span> words.</div>
 
 .underline {
   text-decoration: underline !important;
 }
 
-// Adds text-decoration: line-through;.
-
-// <div class="example html">
-//     <div>You can <span class="strike">strike</span> words.</div>
-// </div>
+/// Strike through
+/// @description Add a line through text.
+/// @example[html]
+///   <div>You can <span class="strike">strike</span> words.</div>
 
 .strike {
   text-decoration: line-through !important;
 }
 
-// ## Font Colors
-// Mute text or reverse for dark backgrounds.
-
-// <div class="example html">
-//     <div class="muted">This is a muted color. Can be applied to anything.</div>
-// </div>
+/// Font Colors
+/// @description Mute text or reverse for dark backgrounds.
+/// @example[html] Muted text.
+///   <div class="muted">This is a muted color. Can be applied to anything.</div>
 
 .reverse {
   color: map-fetch($color, text white) !important;
@@ -74,23 +68,20 @@
   color: map-fetch($color, text faint) !important;
 }
 
-// ## Proceed (Align Right)
-// Align items to the right where they imply progression/movement forward, e.g.:
-
-// <div class="example html">
-//     <div class="proceed"><a href="#">Read more...</a></div>
-// </div>
+/// Proceed (Align Right)
+/// @description Align items to the right where they imply progression/movement
+/// forward, e.g.:
+/// @example[html]
+///   <div class="proceed"><a href="#">Read more...</a></div>
 
 .proceed {
   text-align: right !important;
 }
 
-// ## Ellipsis
-// Truncates item to a single line, adding ellipsis at the end.
-
-// <div class="example html">
-//     <div class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam vero.</div>
-// </div>
+/// Ellipsis
+/// @description Truncates item to a single line, adding ellipsis at the end.
+/// @example[html]
+///   <div class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam vero.</div>
 
 %truncate,
 .truncate {
@@ -99,34 +90,28 @@
   text-overflow: ellipsis;
 }
 
-// ## Right-Angle Quote
-// Add a right-angled quote to links that imply movement, e.g.:
-
-// <div class="example html">
-//     <a href=# class="go">Read more</a>
-// </div>
+/// Right-Angle Quote
+/// @description Add a right-angled quote to links that imply movement, e.g.:
+/// @example[html]
+///   <a href=# class="go">Read more</a>
 
 .go::after {
   content: '\00A0' '\00BB' !important;
 }
 
-// ## Uppercase
-// Apply capital case to an element.
-
-// <div class="example html">
-//     <a href=# class="caps">Read more</a>
-// </div>
+/// Uppercase
+/// @description Apply capital case to an element.
+/// @example[html]
+///   <a href=# class="caps">Read more</a>
 
 .caps {
   text-transform: uppercase !important;
 }
 
-// ## Break Word & No Wrap
-// Break or don't break long strings.
-
-// <div class="example html">
-//     <a href=# class="force-break">alongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoeson</a>
-// </div>
+/// Break Word & No Wrap
+/// @description Break or don't break long strings.
+/// @example[html]
+///   <a href=# class="force-break">alongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoeson</a>
 
 .force-break {
   word-wrap: break-word !important;
@@ -136,12 +121,10 @@
   white-space: nowrap !important;
 }
 
-// ## Text
-// Adjust block and inline.
-
-// <div class="example html">
-//     <a href="#" class="text--block">block link</a>
-// </div>
+/// Text
+/// @description Adjust block and inline.
+/// @example[html]
+///   <a href="#" class="text--block">block link</a>
 
 .text--block {
   display: block !important;
@@ -151,8 +134,8 @@
   display: inline !important;
 }
 
-// ## Line Height
-// For adjusting line-heights.
+/// Line Height
+/// @description For adjusting line-heights.
 
 .line--tight {
   line-height: map-fetch($font, line-height tight) !important;
@@ -167,22 +150,20 @@
 }
 
 
-// ## Text wrapping &amp; breaking.
+/// Text wrapping &amp; breaking.
 
 .word-break {
   word-break: break-all !important;
 }
 
-// ## Text Color
-// Use for both text and on icons.
-
-// <div class="example html">
-//     <p href="#" class="color--base">This is base color text</p>
-//     <p href="#" class="color--brand">This is brand color text</p>
-//     <p href="#" class="color--good-news">This is good news text</p>
-//     <p href="#" class="color--warning">This is warning text</p>
-//     <p href="#" class="color--bad-news">This is bad news text</p>
-// </div>
+/// Text Color
+/// @description Use for both text and on icons.
+/// @example[html]
+///   <p href="#" class="color--base">This is base color text</p>
+///   <p href="#" class="color--brand">This is brand color text</p>
+///   <p href="#" class="color--good-news">This is good news text</p>
+///   <p href="#" class="color--warning">This is warning text</p>
+///   <p href="#" class="color--bad-news">This is bad news text</p>
 
 %color--base,
 .color--base {
