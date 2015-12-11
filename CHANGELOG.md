@@ -13,6 +13,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
 - [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)
 
+### Fixed
+- [Patch] Remove executable bit from non-executable files. (#161)
+
 ## [7.1.0][7.1.0] - 2015-12-08
 ### Changed
 - [Feature] Add ability to generate CSS with icons for Canvas and simplify deployment steps.
