@@ -76,10 +76,15 @@
     width: 32px;
     height: 32px;
   }
-  // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
 
+  // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
   + [class^="#{$namespace}-arrow-inline"] {
     vertical-align: super;
+  }
+
+  &--text-align {
+    position: relative;
+    top: 2px; // This moves the inline icon down so it is visually aligned with the text.
   }
 }
 
