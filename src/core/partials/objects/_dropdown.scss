@@ -2,34 +2,35 @@
 /// Dropdown
 /// @description A list of links that drops down from a trigger.
 /// @group Objects
+
 /// @example[html] Dropdown default
-///   <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///     <button class="#{$namespace}button" data-oui-dropdown-toggle>
-///       Dropdown <span class="#{$namespace}arrow-inline--down"></span>
+///   <div class="dropdown-group" data-oui-dropdown>
+///     <button class="button" data-oui-dropdown-toggle>
+///       Dropdown <span class="arrow-inline--down"></span>
 ///     </button>
-///     <ul class="#{$namespace}dropdown">
-///       <li class="#{$namespace}dropdown__item">
-///         <a href="#" class="#{$namespace}dropdown__block-link">Manage Collaborators</a>
-///         <a href="#" class="#{$namespace}dropdown__block-link">Manage This Thing</a>
+///     <ul class="dropdown">
+///       <li class="dropdown__item">
+///         <a href="#" class="dropdown__block-link">Manage Collaborators</a>
+///         <a href="#" class="dropdown__block-link">Manage This Thing</a>
 ///       </li>
-///       <li class="#{$namespace}dropdown__item">
-///         <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///       <li class="dropdown__item">
+///         <a href="#" class="dropdown__block-link">Experiment Change History</a>
 ///       </li>
 ///     </ul>
 ///   </div>
 /// @example[html] Dropdown right
 ///   <div class="text--right">
-///     <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///       <button class="#{$namespace}button" data-oui-dropdown-toggle>
-///         Dropdown <span class="#{$namespace}arrow-inline--down"></span>
+///     <div class="dropdown-group" data-oui-dropdown>
+///       <button class="button" data-oui-dropdown-toggle>
+///         Dropdown <span class="arrow-inline--down"></span>
 ///       </button>
-///       <ul class="#{$namespace}dropdown #{$namespace}dropdown--right">
-///         <li class="#{$namespace}dropdown__item">
-///           <a href="#" class="#{$namespace}dropdown__block-link">Manage Collaborators</a>
-///           <a href="#" class="#{$namespace}dropdown__block-link">Manage This Thing</a>
+///       <ul class="dropdown dropdown--right">
+///         <li class="dropdown__item">
+///           <a href="#" class="dropdown__block-link">Manage Collaborators</a>
+///           <a href="#" class="dropdown__block-link">Manage This Thing</a>
 ///         </li>
-///         <li class="#{$namespace}dropdown__item">
-///           <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///         <li class="dropdown__item">
+///           <a href="#" class="dropdown__block-link">Experiment Change History</a>
 ///         </li>
 ///       </ul>
 ///     </div>

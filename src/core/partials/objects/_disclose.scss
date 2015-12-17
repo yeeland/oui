@@ -4,22 +4,29 @@
 /// closed independently.
 /// @group Objects
 /// @example[html]
-///   <div class="#{$namespace}disclose__item" v-disclose>
-///     <a href="#" class="#{$namespace}disclose__link">
-///       <span class="#{$namespace}disclose__symbol"></span>
-///       Title of Disclosure
+///   <div class="disclose" data-oui-disclose>
+///     <a href="#" class="disclose__link link--dark" data-oui-disclose-link>
+///       <div class="disclose__arrow">
+///         <span class="disclose__symbol"></span>
+///         Title of Disclosure
+///       </div>
 ///     </a>
-///     <div class="#{$namespace}disclose__content">
-///       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt re     ndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.
+///     <div class="disclose__content">
+///       <h3>Some Title</h3>
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
 ///     </div>
 ///   </div>
-///   <div class="#{$namespace}disclose__item" v-disclose>
-///     <a href="#" class="#{$namespace}disclose__link link--dark">
-///       <span class="#{$namespace}disclose__symbol"></span>
-///       Title of Disclosure with Dark Link Text
+
+///   <div class="disclose" data-oui-disclose>
+///     <a href="#" class="disclose__link" data-oui-disclose-link>
+///       <div class="disclose__arrow">
+///         <span class="disclose__symbol"></span>
+///         Title of Disclosure
+///       </div>
 ///     </a>
-///     <div class="#{$namespace}disclose__content">
-///       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt re     ndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.
+///     <div class="disclose__content">
+///       <h3>Some Title</h3>
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
 ///     </div>
 ///   </div>
 ////
