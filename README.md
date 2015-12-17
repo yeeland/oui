@@ -1,5 +1,11 @@
 # OUI Component Library
 
+![Louis](http://url/to/img.png)
+
+Meet Louis, the official mascot of OUI.
+
+## Introduction
+
 This document contains two sets of instructions:
 
 1. Including OUI in your project
