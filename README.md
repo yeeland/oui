@@ -7,13 +7,23 @@ This document contains two sets of instructions:
 
 ## Including OUI in your project
 
-OUI is published as an npm module called `optimizely-lego`. To install:
+### Pre-compiled CSS file
+
+You can include this pre-compiled version of OUI in your application:
+
+```html
+http://d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui-canvas.css
+```
+
+Replace `7.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+
+### Using NPM
+
+OUI is published as an npm module called `optimizely-oui`. To install:
 
 ```
-npm install optimizely-oui --save-dev
+npm install optimizely-oui --save
 ```
-
-which should add the dependency to your `package.json` file.
 
 If using Gulp for your project:
 
@@ -85,46 +95,18 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 
 The following is for users planning to make contributions to OUI.
 
-Important: see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
+**Important:** see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
 
-After cloning the `oui` repo run:
-
-```bash
-npm start
-```
-
-This will run the npm `start` commands found in package.json that installs the dependencies.
+After cloning the `oui` repo, run `npm start` to install dependencies and a linter post-commit hook.
 
 ### Cheat Sheet
 
 - **`gulp`** : Runs the default compass watch process.
-- **`gulp hook`** : Installs the linter pre-commit hook (please do this!).
-- **`gulp lint`** : Runs the SCSS linter.
+- **`npm test`** : Attempts to compile SCSS and runs the linter.
 - **`gulp svg`** : Builds svg sprite and demo page into `dist`.
 - **`gulp sass`** : Builds Core-only css file for testing into `dist`.
-- **`gulp feature | patch | release`** : For tagging releases.
 
 ### Getting Started
-
-#### Pre-Commit Hook &amp; Linter
-
-As part of the installation process above you should have run `gulp hook`. This will run the task that creates a git pre-commit hook. This hook fires a SCSS linter that checks to see that any SCSS files included in the commit conform to our [standards](https://github.com/optimizely/oui/blob/master/.scss-lint.yml). These rules ensure the OUI SCSS is consistent.
-
-If the the linter finds issues you'll see messages in your terminal like this:
-
-    [13:56:12] Using gulpfile /Library/WebServer/Documents/oui/gulpfile.js
-    [13:56:12] Starting 'lint'...
-    [13:56:12] Finished 'lint' after 4.32 ms
-    [13:56:15] 1 issues found in /Library/WebServer/Documents/oui/src/scss/desktop/_desktop-partials.scss
-    [13:56:15] /Library/WebServer/Documents/oui/src/scss/desktop/_desktop-partials.scss:24 [W] Files should end with a trailing newline
-
-Here the 'lint' process ran and found 1 issue, providing the file, line number, and reason for the problem.
-
-You can also run:
-
-    gulp lint
-
-at any time to check your files before you commit.
 
 #### Run the Sass compile process
 
@@ -176,16 +158,17 @@ By achieving these goals our code becomes...
 In order to write HTML and CSS classes that provide meaning for developers we're using the BEM syntax. BEM stands for Block, Element, Modifier and is becoming a popular approach to building CSS and HTML that describes an object's internal relationships.
 
 ```html
-<div class="lego-grid lego-grid--gutter">
-    <div class="lego-grid__cell">
-        <div class="docs-dummy-content">grid cell</div>
-    </div>
-    <div class="lego-grid__cell">
-        <div class="docs-dummy-content">grid cell</div>
-    </div>
-    <div class="lego-grid__cell">
-        <div class="docs-dummy-content">grid cell</div>
-    </div>
+<div class="grid grid--gutter">
+  <div class="grid__cell">
+    grid cell
+  </div>
+  <div class="grid__cell">
+    grid cell
+  </div>
+  </div>
+  <div class="grid__cell">
+    grid cell
+  </div>
 </div>
 ```
 

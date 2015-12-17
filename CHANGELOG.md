@@ -15,6 +15,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Fixed
 - [Patch] Remove executable bit from non-executable files. (#161)
+- [Patch] Remove some outdated information from `README.md`. (#174)
 
 ## [7.1.0][7.1.0] - 2015-12-08
 ### Changed
