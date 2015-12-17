@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Patch] Adding `.icon--text-align` class to allow inline icons to visually align with the text. E.g., help icons.
+- [Patch] Adding an image of our mascot, Louis.
 
 ### Changed
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.

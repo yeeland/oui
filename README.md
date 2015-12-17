@@ -1,5 +1,11 @@
 # OUI Component Library
 
+![Louis](https://raw.githubusercontent.com/optimizely/oui/mascot/assets/louis.gif)
+
+Meet Louis, the official mascot of OUI.
+
+## Introduction
+
 This document contains two sets of instructions:
 
 1. Including OUI in your project
