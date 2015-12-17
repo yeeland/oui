@@ -1,6 +1,6 @@
 # OUI Component Library
 
-![Louis](https://raw.githubusercontent.com/optimizely/oui/mascot/assets/louis.gif)
+![Louis](https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif)
 
 Meet Louis, the official mascot of OUI.
 
