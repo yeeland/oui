@@ -176,10 +176,10 @@
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list">
 ///             <li>
-///               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1">Send me email notifications when I am projected to or have exceeded my plan limits</label>
+///               <input name="foo-1" id="foo-1a" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1a">Send me email notifications when I am projected to or have exceeded my plan limits</label>
 ///             </li>
 ///             <li>
-///               <input name="foo-2" id="foo-2" type="checkbox"> <label class="#{$namespace}label" for="foo-2">Send me email summaries of my experiment results</label>
+///               <input name="foo-2" id="foo-2a" type="checkbox"> <label class="#{$namespace}label" for="foo-2a">Send me email summaries of my experiment results</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -197,13 +197,13 @@
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list">
 ///             <li>
-///               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1">Radio 1</label>
+///               <input name="radio-1" id="bar-1a" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1a">Radio 1</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2">Radio 2 with disabled label</label>
+///               <input name="radio-1" id="bar-2a" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2a">Radio 2 with disabled label</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-3" type="radio"> <label class="#{$namespace}label" for="bar-3">Radio 3</label>
+///               <input name="radio-1" id="bar-3a" type="radio"> <label class="#{$namespace}label" for="bar-3a">Radio 3</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -216,13 +216,13 @@
 ///           <p>Use these only for short inputs where there's no chance they will wrap.</p>
 ///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
 ///             <li>
-///               <input name="radio-1" id="bar-1" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1">Radio 1</label>
+///               <input name="radio-1" id="bar-1b" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1b">Radio 1</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-2" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2">Radio 2 with disabled label</label>
+///               <input name="radio-1" id="bar-2b" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2b">Radio 2 with disabled label</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-3" type="radio"> <label class="#{$namespace}label" for="bar-3">Radio 3</label>
+///               <input name="radio-1" id="bar-3b" type="radio"> <label class="#{$namespace}label" for="bar-3b">Radio 3</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -230,10 +230,10 @@
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
 ///             <li>
-///               <input name="foo-1" id="foo-1" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1">Short option</label>
+///               <input name="foo-1" id="foo-1b" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1b">Short option</label>
 ///             </li>
 ///             <li>
-///               <input name="foo-2" id="foo-2" type="checkbox"> <label class="#{$namespace}label" for="foo-2">Another short option</label>
+///               <input name="foo-2" id="foo-2b" type="checkbox"> <label class="#{$namespace}label" for="foo-2b">Another short option</label>
 ///             </li>
 ///           </ul>
 ///         </li>
