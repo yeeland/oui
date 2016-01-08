@@ -1,25 +1,22 @@
-// # Flexbox
-// Flexbox support is full on Chrome, Firefox and Safari (with prefix) and nearly full for IE 10.
-//
-// - With IE10 at least one of the flex children needs to have a width or flex value otherwise the content in those children will not wrap. However, if none of children will collide, no width or flex value is needed.
-//
-// `flex-grow` is not supported by IE10, `justify-content` is the next best thing.
-//
-// Use in Sass with:
-//
-//[c]
-//     .foo {
-//          @include display(flex);
-//          @include flex(1);
-//     }
-//[/c]
-//
-// or the corresponding classes directly in the HTML.
-//
-//[c]
-//     <div class="flex flex--1">item</div>
-//[/c]
+////
+/// Flexbox
+/// @description Flexbox fully supported in Chrome, Firefox and Safari
+/// and mostly supported in IE 10.
+///
+/// In IE10 at least one of the flex children needs to have a width or flex
+/// value otherwise the content in those children will not wrap. However, if
+/// none of children will collide, no width or flex value is needed.
+///
+/// `flex-grow` is not supported by IE10, `justify-content` is the next best
+/// thing.
+////
 
+/// Flexbox mixins
+/// @example[sass] Mixins can be used in SCSS files.
+///   .foo {
+///     @include display(flex);
+///     @include flex(1);
+///   }
 
 @mixin display($value) {
   display: -webkit-#{$value};
@@ -93,7 +90,9 @@
   align-self: $value;
 }
 
-// ## Flex classes
+/// Flexbox classes
+/// @example[html] Classes can be used directly in HTML.
+///   <div class="flex flex--1">item</div>
 
 .flex {
   @include display(flex);
@@ -159,7 +158,7 @@
 }
 
 // Flex align-self
-// Note: applies to immediate children of `display:flex;` parent.
+// Note: applies to immediate children of `display: flex;` parent.
 
 .flex-self--start {
   @include align-self(flex-start);
@@ -172,4 +171,3 @@
 .flex-self--end {
   @include align-self(flex-end);
 }
-
