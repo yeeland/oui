@@ -24,8 +24,8 @@
     width: 32px;
     height: 32px;
   }
-  // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
 
+  // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
   + [class^="#{$namespace}-arrow-inline"] {
     vertical-align: super;
   }
@@ -79,7 +79,6 @@
 ///       </div>
 ///     </li>
 ///   </ul>
-////
 
 .icon-status {
 
