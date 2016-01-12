@@ -24,13 +24,13 @@ var base64      = require('gulp-base64'),
 var paths = {
   // Limiting linter to first-part directories.
   'styles' : [
-      'src/core/**/*.scss',
-      '!src/core/library/**/*.scss',
+      'src/oui/**/*.scss',
+      '!src/oui/library/**/*.scss',
   ],
   svgSource : 'src/img/svg-icons/*.svg',
   svgDest : 'dist/img/',
   cssDest: './dist/css/',
-  core: './src/core/core.scss',
+  oui: './src/oui/oui.scss',
   canvasDestName: 'oui-canvas.css'
 };
 
@@ -78,7 +78,7 @@ gulp.task('html-examples', ['js', 'sass', 'watch:sass', 'watch:js'], function() 
     startPath: "/examples/",
     files: [
       "tests/**/*.html",
-      paths.cssDest + "core.css"
+      paths.cssDest + "oui.css"
     ]
   });
 });
@@ -96,7 +96,7 @@ gulp.task('svg', function () {
 
 // Builds sass
 gulp.task('sass', function() {
-  return gulp.src(paths.core)
+  return gulp.src(paths.oui)
     .pipe(sass({
       errLogToConsole: true
     }))
@@ -107,7 +107,7 @@ gulp.task('sass', function() {
 // Concatenate and uglify js
 gulp.task('js', ['js:dependencies'], function() {
   gulp.src('src/js/**/*.js')
-    .pipe(uglify('core.min.js').on('error', gutil.log))
+    .pipe(uglify('oui.min.js').on('error', gutil.log))
     .pipe(gulp.dest('dist/js'))
 });
 
@@ -119,7 +119,7 @@ gulp.task('js:dependencies', function() {
 
 // Watch tasks
 gulp.task('watch:sass', function() {
-  gulp.watch('src/core/**/*.scss', ['sass']);
+  gulp.watch('src/oui/**/*.scss', ['sass']);
 });
 
 gulp.task('watch:js', function() {
@@ -185,7 +185,7 @@ gulp.task('deploy', ['canvas:css'], function() {
 });
 
 gulp.task('canvas:css', ['canvas:build'], function () {
-  return gulp.src([paths.cssDest + 'core.css', paths.cssDest + paths.canvasDestName])
+  return gulp.src([paths.cssDest + 'oui.css', paths.cssDest + paths.canvasDestName])
     .pipe(concat(paths.cssDest + paths.canvasDestName))
     .pipe(gulp.dest('.'));
 });

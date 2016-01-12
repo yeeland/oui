@@ -30,13 +30,13 @@
 
 This applies any time classes are being renamed and you want old and new code to be running simultaneously, for example, changing `width-100` to `width--1100`. In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
 
-1. Move the deprecated code into a new partial in Core, adding `--deprecated` to its filename:
+1. Move the deprecated code into a new partial in OUI, adding `--deprecated` to its filename:
 
   ```
   [_filename]--deprecated.scss
   ```
 
-  For example, if code in `_sizing.scss` contains a breaking change, Core would contain:
+  For example, if code in `_sizing.scss` contains a breaking change, OUI would contain:
 
   ```
   _sizing.scss

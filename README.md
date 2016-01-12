@@ -48,18 +48,18 @@ gulp.task('sass', function() {
 
 ### Example Starter Code
 
-Download [OUI starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `core/...` will only work if the above gulp task is in place.
+Download [OUI starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `oui/...` will only work if the above gulp task is in place.
 
 ### Structure of OUI
 
 OUI consists of two parts:
 
-1. **Core**
+1. **OUI**
     - Base styles used as the foundation for any site.
     - This code lives in this OUI repository and is a dependency for platform code.
 2. **Platform (.e.g, `mobile`)**
-    - Platform or device specific built on top of Core.
-    - This code lives in the platform repo, pulling Core as a dependency.
+    - Platform or device specific built on top of OUI.
+    - This code lives in the platform repo, pulling OUI as a dependency.
 
 For example, if you're building a mobile site, `mobile.scss` would contain:
 ```scss
@@ -67,34 +67,34 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 // Root file driving the Mobile CSS.
 
 // Compass polyfills
-@import 'core/core-polyfills';
+@import 'oui/oui-polyfills';
 
-// ## Core functions and mixins
-@import 'core/partials/elements/functions';
-@import 'core/partials/elements/mixins';
+// ## OUI functions and mixins
+@import 'oui/partials/elements/functions';
+@import 'oui/partials/elements/mixins';
 
-// ## Core and p13n variables
-// Import `core` and `mobile` variables
+// ## OUI and p13n variables
+// Import `oui` and `mobile` variables
 
-@import 'core/core-variables';
+@import 'oui/oui-variables';
 @import 'mobile/mobile-variables';
 
-// ## Core and mobile partials
-// Import `core` and `mobile` partials
+// ## OUI and mobile partials
+// Import `oui` and `mobile` partials
 
-@import 'core/core-partials';
+@import 'oui/oui-partials';
 @import 'mobile/mobile-partials';
 
 // ## Trumps
 // Trumps use `!important` classes for overrides and should always be loaded last.
 
-@import 'core/partials/trumps/background';
-@import 'core/partials/trumps/borders';
-@import 'core/partials/trumps/layout';
-@import 'core/partials/trumps/margin';
-@import 'core/partials/trumps/padding';
-@import 'core/partials/trumps/type';
-@import 'core/partials/trumps/sizing';
+@import 'oui/partials/trumps/background';
+@import 'oui/partials/trumps/borders';
+@import 'oui/partials/trumps/layout';
+@import 'oui/partials/trumps/margin';
+@import 'oui/partials/trumps/padding';
+@import 'oui/partials/trumps/type';
+@import 'oui/partials/trumps/sizing';
 ```
 
 ## Contributing to OUI
@@ -110,13 +110,13 @@ After cloning the `oui` repo, run `npm start` to install dependencies and a lint
 - **`gulp`** : Runs the default compass watch process.
 - **`npm test`** : Attempts to compile SCSS and runs the linter.
 - **`gulp svg`** : Builds svg sprite and demo page into `dist`.
-- **`gulp sass`** : Builds Core-only css file for testing into `dist`.
+- **`gulp sass`** : Builds OUI-only css file for testing into `dist`.
 
 ### Getting Started
 
 #### Run the Sass compile process
 
-To output Core CSS file to the `dist` directory run:
+To output OUI CSS file to the `dist` directory run:
 
     gulp sass
 
@@ -151,7 +151,7 @@ OUI stands for Optimizely User Interface. It's a collection of CSS/HTML/JS eleme
 1. **Abstracted.** Component names shouldn't be derived from the content they contain. Class names should convey structural meaning.
 1. **Reusable.** Components should be generic enough to be reused throughout the site. They should make no assumptions what page/view they will be used on. Problems solved in one area should be easily applied elsewhere.
 1. **Mixable.** Components should be able to join together to create larger blocks.
-1. **Powered by variables.** Nearly all design elements — colors, fonts, spacings, shadows — should be defined using the pre-existing [variables](https://github.com/optimizely/oui/blob/master/core/_core-variables.scss).
+1. **Powered by variables.** Nearly all design elements — colors, fonts, spacings, shadows — should be defined using the pre-existing [variables](https://github.com/optimizely/oui/blob/master/oui/_oui-variables.scss).
 
 By achieving these goals our code becomes...
 
@@ -181,7 +181,7 @@ In order to write HTML and CSS classes that provide meaning for developers we're
 In the example above...
 
 - **Block** is represented by <code>lego-grid</code> and is the parent class of the object.
-- **Elements** are children of the object. They are named by joining the parent class name and a child class with a double underscore. In this case <code>lego-grid__cell</code>.
+- **Elements** are children of the object. They are named by joining the parent class name and a child class with a double undersoui. In this case <code>lego-grid__cell</code>.
 - **Modifiers** are variations on the default. In this case we have a <code>lego-grid--gutter</code>. This provides spacing between the cells.
 
 Though somewhat verbose, this syntax makes it easy to determine the child/parent relationships between bits of code, especially when different objects are mixed together. It can be tricky naming elements so some judgment is required. This becomes easier over time.
