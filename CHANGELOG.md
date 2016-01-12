@@ -15,6 +15,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)
 
 ### Fixed
+- [Patch] Removing `config.rb`. (#163)
 - [Patch] Remove executable bit from non-executable files. (#161)
 - [Patch] Remove some outdated information from `README.md`. (#174)
 
