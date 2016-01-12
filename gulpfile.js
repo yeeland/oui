@@ -7,6 +7,7 @@ var base64      = require('gulp-base64'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
     gutil       = require('gulp-util'),
+    mkpath      = require('mkpath'),
     notify      = require('gulp-notify'),
     path        = require('path'),
     pkg         = require('./package.json'),
@@ -31,11 +32,11 @@ var paths = {
   svgDest : 'dist/img/',
   cssDest: './dist/css/',
   oui: './src/oui/oui.scss',
-  canvasDestName: 'oui-canvas.css'
+  extrasDestName: 'oui-extras.css'
 };
 
-// Building flat CSS with base64 icons for use in Canvas apps
-var canvasCSS = '';
+// Building flat CSS with base64 icons for use in extras apps
+var extrasCSS = '';
 var SVGS = 'node_modules/oui-icons/src/16/';
 
 
@@ -164,13 +165,13 @@ gulp.task('release', function() {
 });
 
 // Deploy compiled file to S3 and push to GitHub.
-gulp.task('deploy', ['canvas:css'], function() {
+gulp.task('deploy', ['sass', 'extras:build'], function() {
   if (!process.env.AWS_KEY || !process.env.AWS_SECRET) {
     throw "You must have `AWS_KEY` and `AWS_SECRET` environment variables. Contact daniel@optimizely.com for help."
   }
 
-  gulp.src(paths.cssDest + paths.canvasDestName)
-    .pipe(rename(pkg.version + '/' + paths.canvasDestName))
+  gulp.src(paths.cssDest)
+    .pipe(rename(pkg.version + '/'))
     .pipe(s3({
       'key': process.env.AWS_KEY,
       'secret': process.env.AWS_SECRET,
@@ -184,32 +185,27 @@ gulp.task('deploy', ['canvas:css'], function() {
     ]));
 });
 
-gulp.task('canvas:css', ['canvas:build'], function () {
-  return gulp.src([paths.cssDest + 'oui.css', paths.cssDest + paths.canvasDestName])
-    .pipe(concat(paths.cssDest + paths.canvasDestName))
-    .pipe(gulp.dest('.'));
-});
-
-gulp.task('canvas:build', ['canvas:icons'], function () {
-  return gulp.src(paths.cssDest + paths.canvasDestName)
+gulp.task('extras:build', ['extras:icons'], function () {
+  return gulp.src(paths.cssDest + paths.extrasDestName)
     .pipe(base64({
         extensions: ['svg'],
         debug: false
     }))
-    .pipe(concat(paths.cssDest + paths.canvasDestName))
+    .pipe(concat(paths.cssDest + paths.extrasDestName))
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('canvas:icons', ['sass'], function () {
+gulp.task('extras:icons', function () {
   return gulp.src('./' + SVGS + '*.svg')
     .pipe(tap(function(file, t) {
       var arr = (path.basename(file.path)).split(".");
       var filename = arr[0];
       var string = '.icon--' + filename + ' {\n\t background-image: url(../../' + SVGS + filename + '.svg) }\n\n';
-      canvasCSS = canvasCSS + string
+      extrasCSS = extrasCSS + string
     }))
     .on('end', function(){
-      fs.writeFile(paths.cssDest + paths.canvasDestName, canvasCSS);
+      mkpath.sync(paths.cssDest);
+      fs.writeFile(paths.cssDest + paths.extrasDestName, extrasCSS);
     })
 });
 
