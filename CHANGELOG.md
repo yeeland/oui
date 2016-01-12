@@ -10,8 +10,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding an image of our mascot, Louis.
 
 ### Changed
-- [Patch] Renaming `oui-canvas.css` to `oui-extras` as it now only contains icons. May contain additional "extras" in the future. (#186)
-- [Patch] `oui-extras.css` build script now outputs only the icons, no longer combined with full OUI CSS.
+- [Patch] Renamed `oui-canvas.css` to `oui.css` and added a `oui-extras.css` file that contains the only the icons that were previously concatenated into `oui-canvas.css`. May contain additional "extras" in the future. (#176, #186)
+- [Patch] Push both `oui.css` and `oui-extras.css` to AWS on releases.
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
 - [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
 - [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)

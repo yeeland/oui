@@ -7,6 +7,7 @@ var base64      = require('gulp-base64'),
     git         = require('gulp-git'),
     gulp        = require('gulp'),
     gutil       = require('gulp-util'),
+    mkpath      = require('mkpath'),
     notify      = require('gulp-notify'),
     path        = require('path'),
     pkg         = require('./package.json'),
@@ -164,13 +165,13 @@ gulp.task('release', function() {
 });
 
 // Deploy compiled file to S3 and push to GitHub.
-gulp.task('deploy', ['extras:build'], function() {
+gulp.task('deploy', ['sass', 'extras:build'], function() {
   if (!process.env.AWS_KEY || !process.env.AWS_SECRET) {
     throw "You must have `AWS_KEY` and `AWS_SECRET` environment variables. Contact daniel@optimizely.com for help."
   }
 
-  gulp.src(paths.cssDest + paths.extrasDestName)
-    .pipe(rename(pkg.version + '/' + paths.extrasDestName))
+  gulp.src(paths.cssDest)
+    .pipe(rename(pkg.version + '/'))
     .pipe(s3({
       'key': process.env.AWS_KEY,
       'secret': process.env.AWS_SECRET,
@@ -203,6 +204,7 @@ gulp.task('extras:icons', function () {
       extrasCSS = extrasCSS + string
     }))
     .on('end', function(){
+      mkpath.sync(paths.cssDest);
       fs.writeFile(paths.cssDest + paths.extrasDestName, extrasCSS);
     })
 });

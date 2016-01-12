@@ -24,6 +24,8 @@ http://d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui-extras.css
 
 Replace `7.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
+`oui.css` contains the main CSS and `oui-extras.css` currently provides icon classes.
+
 ### Using NPM
 
 OUI is published as an npm module called `optimizely-oui`. To install:
