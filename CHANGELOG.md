@@ -10,7 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding an image of our mascot, Louis.
 
 ### Changed
-- [Feature] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI.
+- [Feature] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
 - [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
 - [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)
