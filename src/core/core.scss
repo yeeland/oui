@@ -6,9 +6,6 @@ $include-fonts:(
   italics: true
 );
 
-// Compass polyfills
-@import 'core-polyfills';
-
 // ## Core functions and mixins
 @import 'partials/elements/functions';
 @import 'partials/elements/mixins';
