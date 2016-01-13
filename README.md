@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/optimizely/oui.svg?branch=devel)](https://travis-ci.org/optimizely/oui) [![Gitter](https://badges.gitter.im/optimizely/oui.svg)](https://gitter.im/optimizely/oui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 # OUI Component Library
 
 ![Louis](https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif)
