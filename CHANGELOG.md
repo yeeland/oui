@@ -10,6 +10,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Add `<link>` tags to the external OUI examples in the README.
 
+### Fixed
+- [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
+
 ## [8.0.0][8.0.0] - 2016-01-13
 ### Added
 - [Feature] Adding `.icon--text-align` class to allow inline icons to visually align with the text. E.g., help icons.
