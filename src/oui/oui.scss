@@ -1,20 +1,20 @@
-// # Core
-// Root file compiling only Core CSS.
+// # OUI
+// Root file compiling only OUI CSS.
 
 $include-fonts:(
-  weights: 300 400 500,
+  weights: 300 400 500 600 700,
   italics: true
 );
 
-// ## Core functions and mixins
+// ## OUI functions and mixins
 @import 'partials/elements/functions';
 @import 'partials/elements/mixins';
 
-// ## Core variables
-@import 'core-variables';
+// ## OUI variables
+@import 'oui-variables';
 
-// ## Core partials
-@import 'core-partials';
+// ## OUI partials
+@import 'oui-partials';
 
 // ## Trumps
 // Trumps use `!important` classes for overrides and should always be loaded last.
