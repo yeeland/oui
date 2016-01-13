@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Changed
 - [Release] Moved polyfills from separate folder/partials into the existing `elements/mixins` and `elements/functions` partials. This requires removing polyfill references from apps using OUI. (#185)
+- [Feature] Replace existing comments with ScribeSass annotations. (#194)
 
 ## [8.0.0][8.0.0] - 2016-01-13
 ### Added
