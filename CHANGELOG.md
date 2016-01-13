@@ -7,10 +7,15 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Add a link to the living OUI documentation in the README. (#177)
+- [Feature] Add Travis CI and Gitter badges to README. (#198)
 
 ### Changed
 - [Release] Moved polyfills from separate folder/partials into the existing `elements/mixins` and `elements/functions` partials. This requires removing polyfill references from apps using OUI. (#185)
 - [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
+- [Patch] Add `<link>` tags to the external OUI examples in the README.
+
+### Fixed
+- [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
 
 ## [8.0.0][8.0.0] - 2016-01-13
 ### Added

@@ -170,8 +170,10 @@ gulp.task('deploy', ['sass', 'extras:build'], function() {
     throw "You must have `AWS_KEY` and `AWS_SECRET` environment variables. Contact daniel@optimizely.com for help."
   }
 
-  gulp.src(paths.cssDest)
-    .pipe(rename(pkg.version + '/'))
+  gulp.src(paths.cssDest + '*.css')
+    .pipe(rename(function(path) {
+      path.dirname = pkg.version + '/';
+    }))
     .pipe(s3({
       'key': process.env.AWS_KEY,
       'secret': process.env.AWS_SECRET,
