@@ -1,23 +1,27 @@
-// # OUI
-// Root file compiling only OUI CSS.
+////
+/// OUI
+/// @description Root file compiling only OUI CSS.
+/// @group Imports
+////
 
 $include-fonts:(
   weights: 300 400 500 600 700,
   italics: true
 );
 
-// ## OUI functions and mixins
+/// OUI functions and mixins
 @import 'partials/elements/functions';
 @import 'partials/elements/mixins';
 
-// ## OUI variables
+/// OUI variables
 @import 'oui-variables';
 
-// ## OUI partials
+/// OUI partials
 @import 'oui-partials';
 
-// ## Trumps
-// Trumps use `!important` classes for overrides and should always be loaded last.
+/// Trumps
+/// @description Trumps use `!important` classes for overrides and should
+/// always be loaded last.
 @import 'partials/trumps/background';
 @import 'partials/trumps/borders';
 @import 'partials/trumps/layout';

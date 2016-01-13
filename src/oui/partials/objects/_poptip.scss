@@ -1,8 +1,24 @@
-// ---
-// title: Poptip
-// description: Information bubbles on hover.
-// ---
-
+////
+/// Poptip
+/// @description Information bubbles on hover.
+/// @group Objects
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="4" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="7" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="10" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+////
 
 .#{$namespace}pop--tip {
   background: map-fetch($color, ui dark);
