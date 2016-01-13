@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Changed
 - [Release] Moved polyfills from separate folder/partials into the existing `elements/mixins` and `elements/functions` partials. This requires removing polyfill references from apps using OUI. (#185)
+- [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 
 ## [8.0.0][8.0.0] - 2016-01-13
 ### Added
@@ -14,7 +15,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding an image of our mascot, Louis.
 
 ### Changed
-- [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Renamed `oui-canvas.css` to `oui.css` and added a `oui-extras.css` file that contains the only the icons that were previously concatenated into `oui-canvas.css`. May contain additional "extras" in the future. (#176, #186)
 - [Patch] Push both `oui.css` and `oui-extras.css` to AWS on releases.
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
