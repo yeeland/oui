@@ -1,21 +1,15 @@
-// ---
-// title: Rules
-// description: Adds styling to an 'hr'. Use this between blocks of text or other elements to provide separation.
-// ---
-
-// <div class="example html">
-//   <hr class="lego-rule">
-// </div>
-
-// <div class="example html">
-//   <hr class="lego-rule lego-rule--dotted">
-// </div>
-
-// <div class="example html">
-//   <hr class="lego-rule lego-rule--dashed">
-// </div>
-
-// [---]
+////
+/// Rules
+/// @description Adds styling to an `hr`. Use this between blocks of text or
+/// other elements to provide separation.
+/// @group Components
+/// @example[html] Horizontal rule
+///   <hr class="#{$namespace}rule">
+/// @example[html] Dotted horizontal rule
+///   <hr class="#{$namespace}rule #{$namespace}rule--dotted">
+/// @example[html] Dashed horizontal rule
+///   <hr class="#{$namespace}rule #{$namespace}rule--dashed">
+////
 
 %#{$namespace}rule,
 .#{$namespace}rule {

@@ -1,13 +1,14 @@
-// # Arrow Inline
-// Small arrows as needed next to navigational elements. The arrows
-// will inherit the color of the parent `color` value.
-
-// <div class="example html">
-//     <div><span class="lego-arrow-inline--up"></span> Up</div>
-//     <div><span class="lego-arrow-inline--down"></span> Down</div>
-//     <div><span class="lego-arrow-inline--right"></span> Right</div>
-//     <div><span class="lego-arrow-inline--left"></span> Left</div>
-// </div>
+////
+/// Arrow Inline
+/// @description Small arrows as needed next to navigational elements. The
+/// arrows will inherit the color of the parent `color` value.
+/// @group Components
+/// @example[html]
+///   <div><span class="lego-arrow-inline--up"></span> Up</div>
+///   <div><span class="lego-arrow-inline--down"></span> Down</div>
+///   <div><span class="lego-arrow-inline--right"></span> Right</div>
+///   <div><span class="lego-arrow-inline--left"></span> Left</div>
+////
 
 $border-colored: 4px solid currentColor;
 $border-transparent: 4px solid transparent;

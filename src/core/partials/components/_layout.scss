@@ -1,9 +1,11 @@
-// ---
-// title: Layout
-// description: Classes and mixins for different layout options.
-// ---
-
-// Used on the *parent* element this causes the immediate child to center vertically/horizontally.
+////
+/// Layout
+/// @description Classes and mixins for different layout options.
+///
+/// Used on the *parent* element this causes the immediate child to center
+/// vertically/horizontally.
+/// @group Components
+////
 
 @mixin center--child {
   @include display(flex);
@@ -16,7 +18,7 @@
 }
 
 // Used on any element to center it inside a parent that has a width/height.
-// Element should be display:block with a width.
+// Element should be `display: block` with a width.
 
 @mixin center--me($positioning: relative) {
   position: $positioning;

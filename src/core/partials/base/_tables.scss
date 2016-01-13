@@ -31,86 +31,86 @@
 ///     </tbody>
 ///   </table>
 /// @example[html] Walled table
-//    <table class="#{$namespace}table #{$namespace}table--wall">
-//      <thead>
-//        <tr>
-//          <th>Experiment</th>
-//          <th class="numerical">Numbers</th>
-//          <th class="cell-collapse">Status</th>
-//        </tr>
-//      </thead>
-//      <tbody>
-//        <tr>
-//          <td>Experiment name one</td>
-//          <td class="numerical">258</td>
-//          <td>Up</td>
-//        </tr>
-//        <tr>
-//          <td>Experiment name two that runs longer</td>
-//          <td class="numerical">19</td>
-//          <td>Down</td>
-//        </tr>
-//        <tr>
-//          <td>Experiment name three</td>
-//          <td class="numerical">400</td>
-//          <td>Up</td>
-//        </tr>
-//      </tbody>
-//    </table>
+///   <table class="#{$namespace}table #{$namespace}table--wall">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
 /// @example[html] Table rule
-//    <table class="#{$namespace}table #{$namespace}table--rule">
-//      <thead>
-//        <tr>
-//          <th>Experiment</th>
-//          <th class="numerical">Numbers</th>
-//          <th class="cell-collapse">Status</th>
-//        </tr>
-//      </thead>
-//      <tbody>
-//        <tr>
-//          <td>Experiment name one</td>
-//          <td class="numerical">258</td>
-//          <td>Up</td>
-//        </tr>
-//        <tr>
-//          <td>Experiment name two that runs longer</td>
-//          <td class="numerical">19</td>
-//          <td>Down</td>
-//        </tr>
-//        <tr>
-//          <td>Experiment name three</td>
-//          <td class="numerical">400</td>
-//          <td>Up</td>
-//        </tr>
-//      </tbody>
-//    </table>
+///   <table class="#{$namespace}table #{$namespace}table--rule">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
 /// @example[html] Table rule with active row and hover
-//    <table class="#{$namespace}table #{$namespace}table--rule #{$namespace}table--hover">
-//      <thead>
-//        <tr>
-//          <th>Experiment</th>
-//          <th class="numerical">Numbers</th>
-//          <th class="cell-collapse">Status</th>
-//        </tr>
-//      </thead>
-//      <tbody>
-//        <tr>
-//          <td>Experiment name one</td>
-//          <td class="numerical">258</td>
-//          <td>Up</td>
-//        </tr>
-//        <tr class="#{$namespace}table-row--active">
-//          <td>Experiment name two that runs longer</td>
-//          <td class="numerical">19</td>
-//          <td>Down</td>
-//        </tr>
-//        <tr>
-//          <td>Experiment name three</td>
-//          <td class="numerical">400</td>
-//          <td>Up</td>
-//        </tr>
-//      </tbody>
-//    </table>
+///   <table class="#{$namespace}table #{$namespace}table--rule #{$namespace}table--hover">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr class="#{$namespace}table-row--active">
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
 ////
 
 %#{$namespace}table,
