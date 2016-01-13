@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add a link to the living OUI documentation in the README. (#177)
 - [Feature] Add Travis CI and Gitter badges to README. (#198)
 
 ### Changed
