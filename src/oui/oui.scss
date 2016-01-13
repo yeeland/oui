@@ -6,9 +6,6 @@ $include-fonts:(
   italics: true
 );
 
-// Compass polyfills
-@import 'oui-polyfills';
-
 // ## OUI functions and mixins
 @import 'partials/elements/functions';
 @import 'partials/elements/mixins';

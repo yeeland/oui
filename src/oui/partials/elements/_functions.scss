@@ -61,3 +61,10 @@
   }
   @return $map;
 }
+
+
+// Tint
+
+@function tint($color, $percent) {
+  @return mix(#FFF, $color, $percent);
+}
