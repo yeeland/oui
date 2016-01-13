@@ -1,3 +1,5 @@
+[![Live Documentation](https://img.shields.io/badge/documentation-live-blue.svg)](http://link.optimizely.com/oui)
+
 # OUI Component Library
 
 ![Louis](https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif)
