@@ -5,16 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [8.0.0][8.0.0] - 2016-01-13
 ### Added
-- [Patch] Adding `.icon--text-align` class to allow inline icons to visually align with the text. E.g., help icons.
-- [Patch] Adding an image of our mascot, Louis.
+- [Feature] Adding `.icon--text-align` class to allow inline icons to visually align with the text. E.g., help icons.
+- [Feature] Adding an image of our mascot, Louis.
 
 ### Changed
 - [Feature] Moved polyfills from separate folder/partials into the existing `elements/mixins` and `elements/functions` partials. This requires removing polyfill references from apps using OUI. (#185)
 - [Patch] Renamed `oui-canvas.css` to `oui.css` and added a `oui-extras.css` file that contains the only the icons that were previously concatenated into `oui-canvas.css`. May contain additional "extras" in the future. (#176, #186)
 - [Patch] Push both `oui.css` and `oui-extras.css` to AWS on releases.
 - [Patch] Simplifying CSS in `_select.scss` to remove IE hacks.
-- [Patch] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used.
+- [Release] Removed IE10+ mixin in `partials/elements/_mixins.scss` to remove IE hacks. Not being used within OUI.
 - [Patch] Update `CONTRIBUTING.md` to include info on hotfixes. (#168)
 
 ### Fixed
@@ -189,7 +191,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v7.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v8.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -202,3 +204,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [6.0.0]: https://github.com/optimizely/oui/compare/v5.0.0...v6.0.0
 [7.0.0]: https://github.com/optimizely/oui/compare/v6.0.0...v7.0.0
 [7.1.0]: https://github.com/optimizely/oui/compare/v7.0.0...v7.1.0
+[8.0.0]: https://github.com/optimizely/oui/compare/v7.1.0...v8.0.0
