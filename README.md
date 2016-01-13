@@ -18,8 +18,8 @@ This document contains two sets of instructions:
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-http://d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui.css
-http://d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui-extras.css
+<link rel="stylesheet" href="//d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui.css">
+<link rel="stylesheet" href="//d2uaiq63sgqwfs.cloudfront.net/7.1.0/oui-extras.css">
 ```
 
 Replace `7.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
