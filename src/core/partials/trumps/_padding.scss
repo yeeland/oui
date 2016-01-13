@@ -1,11 +1,12 @@
-// # Padding Trumps
+////
+/// Padding
+/// @group Trumps
+////
 
-// ## Add Paddings
-// Pad elements in any direction.
-
-//[c]
-//     <div class="push--soft">content</div>
-//[/c]
+/// Add Paddings
+/// @description Pad elements in any direction.
+/// @example[html] Padding on all sides.
+///   <div class="push--soft background--light">content</div>
 
 .soft {
   padding: spacer(1) !important;
@@ -162,11 +163,9 @@
   padding-left: spacer(4) !important;
 }
 
-// ## Zero Paddings
-
-//[c]
-//     <div class="hard--top">content</div>
-//[/c]
+/// Zero Paddings
+/// @example[html] Top padding removed from element.
+///   <div class="hard--top">content</div>
 
 .hard {
   padding: 0 !important;

@@ -1,136 +1,117 @@
-// ---
-// title: Tables
-// description: Tables will often require heavier use of helper classes than normal.
-// ---
-
-// ### Basic Table
-
-// <div class="example html">
-//   <table class="lego-table">
-//     <thead>
-//       <tr>
-//         <th>Experiment</th>
-//         <th class="numerical">Numbers</th>
-//         <th class="cell-collapse">Status</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       <tr>
-//         <td>Experiment name one</td>
-//         <td class="numerical">258</td>
-//         <td>Up</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name two that runs longer</td>
-//         <td class="numerical">19</td>
-//         <td>Down</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name three</td>
-//         <td class="numerical">400</td>
-//         <td>Up</td>
-//       </tr>
-//     </tbody>
-//   </table>
-// </div>
-
-
-// ### Table Walled
-
-// <div class="example html">
-//   <table class="lego-table lego-table--wall">
-//     <thead>
-//       <tr>
-//         <th>Experiment</th>
-//         <th class="numerical">Numbers</th>
-//         <th class="cell-collapse">Status</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       <tr>
-//         <td>Experiment name one</td>
-//         <td class="numerical">258</td>
-//         <td>Up</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name two that runs longer</td>
-//         <td class="numerical">19</td>
-//         <td>Down</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name three</td>
-//         <td class="numerical">400</td>
-//         <td>Up</td>
-//       </tr>
-//     </tbody>
-//   </table>
-// </div>
-
-
-// ### Table Rule
-
-// <div class="example html">
-//   <table class="lego-table lego-table--rule">
-//     <thead>
-//       <tr>
-//         <th>Experiment</th>
-//         <th class="numerical">Numbers</th>
-//         <th class="cell-collapse">Status</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       <tr>
-//         <td>Experiment name one</td>
-//         <td class="numerical">258</td>
-//         <td>Up</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name two that runs longer</td>
-//         <td class="numerical">19</td>
-//         <td>Down</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name three</td>
-//         <td class="numerical">400</td>
-//         <td>Up</td>
-//       </tr>
-//     </tbody>
-//   </table>
-// </div>
-
-
-// ### Table Rule with Active Row and Hover
-
-// <div class="example html">
-//   <table class="lego-table lego-table--rule lego-table--hover">
-//     <thead>
-//       <tr>
-//         <th>Experiment</th>
-//         <th class="numerical">Numbers</th>
-//         <th class="cell-collapse">Status</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       <tr>
-//         <td>Experiment name one</td>
-//         <td class="numerical">258</td>
-//         <td>Up</td>
-//       </tr>
-//       <tr class="lego-table-row--active">
-//         <td>Experiment name two that runs longer</td>
-//         <td class="numerical">19</td>
-//         <td>Down</td>
-//       </tr>
-//       <tr>
-//         <td>Experiment name three</td>
-//         <td class="numerical">400</td>
-//         <td>Up</td>
-//       </tr>
-//     </tbody>
-//   </table>
-// </div>
-
-// [---]
+////
+/// Tables
+/// @description Tables will often require heavier use of helper classes than
+/// normal.
+/// @group Base
+/// @example[html] Basic table
+///   <table class="#{$namespace}table">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
+/// @example[html] Walled table
+///   <table class="#{$namespace}table #{$namespace}table--wall">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
+/// @example[html] Table rule
+///   <table class="#{$namespace}table #{$namespace}table--rule">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
+/// @example[html] Table rule with active row and hover
+///   <table class="#{$namespace}table #{$namespace}table--rule #{$namespace}table--hover">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="numerical">Numbers</th>
+///         <th class="cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr class="#{$namespace}table-row--active">
+///         <td>Experiment name two that runs longer</td>
+///         <td class="numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
+////
 
 %#{$namespace}table,
 .#{$namespace}table {
@@ -165,7 +146,7 @@
     vertical-align: top;
   }
 
-  // ## Cell Alignments
+  // Cell Alignments
   // Defaults for cell alignments with one helper class for numbers.
 
   [rowspan] {
@@ -193,8 +174,9 @@
   }
 
 
-  // ## Table Variations
-  // We're using direct decendent selectors so any child tables do not inherit styles.
+  // Table Variations
+  // We're using direct decendent selectors so any child tables do not
+  // inherit styles.
 
   &--rule {
 
@@ -209,7 +191,7 @@
       }
     }
 
-    > tbody > tr {
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
       border-bottom: 1px solid map-fetch($color, ui light);
 
       // If no `thead` is present we'll have a border top.
@@ -223,8 +205,8 @@
 
   &--wall {
 
-    > thead > tr > th,
-    > tbody > tr > td {
+    & > thead > tr > th, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td { // scss-lint:disable UnnecessaryParentReference
       border-left: 1px solid map-fetch($color, ui light);
       padding-right: spacer(1);
 
@@ -236,7 +218,7 @@
 
   &--hover {
 
-    > tbody > tr {
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
 
       &:hover {
         background-color: map-fetch($color, background brand-light);
@@ -244,24 +226,26 @@
       }
     }
 
-    > thead > tr > th:first-child,
-    > tbody > tr > td:first-child {
+    & > thead > tr > th:first-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:first-child { // scss-lint:disable UnnecessaryParentReference
       padding-left: spacer(1);
     }
 
-    > thead > tr > th:last-child,
-    > tbody > tr > td:last-child {
+    & > thead > tr > th:last-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:last-child { // scss-lint:disable UnnecessaryParentReference
       padding-right: spacer(1);
     }
   }
 
   // Add/Remove Rows
-  // In button rows use a placeholder button with `visibility--hidden` in the `--controls` cell to maintain spacing.
+  // In button rows use a placeholder button with `.visibility--hidden` in
+  // the `--controls` cell to maintain spacing.
 
   &--add-row {
 
-    // Removes top padding of first row so spacing is consistent with other form elements.
-    tbody > tr:first-child > td {
+    // Removes top padding of first row so spacing is consistent with other
+    // form elements.
+    tbody > tr:first-child > td { // scss-lint:disable UnnecessaryParentReference
       padding-top: 0;
     }
 
@@ -283,29 +267,30 @@
   background-color: map-fetch($color, background faint);
 }
 
-// Scrolling Tables
-// Uses flexbox to change the default behavior of the table elements.
-
-// - The parents of `table-scroll` MUST be `display:flex`.
-// - All `<th>` and `<td>` elements must have matching widths.
-
-// <table class="table table--scroll table--rule">
-//   <thead>
-//     <tr>
-//       <th class="width--2-4">one</th>
-//       <th class="width--1-4">two</th>
-//       <th class="width--1-4">three</th>
-//     </tr>
-//   </thead>
-//   <tbody>
-//     <tr>
-//       <td class="width--2-4">one</td>
-//       <td class="width--1-4">two</td>
-//       <td class="width--1-4">three</td>
-//     </tr>
-//   </tbody>
-// </table>
-
+/// Scrolling Tables
+/// @description Uses flexbox to change the default behavior of the table
+/// elements.
+///
+/// - The parents of `table-scroll` MUST be `display: flex`.
+/// - All `<th>` and `<td>` elements must have matching widths.
+///
+/// @example[html]
+///   <table class="table table--scroll table--rule">
+///     <thead>
+///       <tr>
+///         <th class="width--2-4">one</th>
+///         <th class="width--1-4">two</th>
+///         <th class="width--1-4">three</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td class="width--2-4">one</td>
+///         <td class="width--1-4">two</td>
+///         <td class="width--1-4">three</td>
+///       </tr>
+///     </tbody>
+///   </table>
 
 .#{$namespace}table--scroll {
   @include display(flex);

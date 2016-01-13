@@ -1,4 +1,7 @@
-// # Images
+////
+/// Images
+/// @group Base
+////
 
 img {
   display: block;
@@ -13,60 +16,51 @@ a img {
   border: 0;
 }
 
-// ## Non Fluid
-// Non-fluid images if you specify `width` and/or `height` attributes.
-
-//[c]
-//     <img src="image.png" width="20" height="20">
-//[/c]
+/// Non Fluid
+/// @description Non-fluid images if you specify `width` and/or `height`
+/// attributes.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" width="20" height="20">
 
 img[width],
 img[height] {
   max-width: none;
 }
 
-// ## Rounded images
-// Extend or add class to html.
-
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--round">
-// </div>
+/// Rounded images
+/// Extend or add class to html.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--round">
 
 %img--round,
 .img--round {
   border-radius: map-fetch($border-radius, base);
 }
 
-// ## Circle images
-// Extend or add class to html.
-
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--circle">
-// </div>
+/// Circle images
+/// @description Extend or add class to HTML.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--circle">
 
 %img--circle,
 .img--circle {
   border-radius: 100%;
 }
 
-// ## Border images
-// Extend or add class to html.
-
-// <div class="example html">
-//     <img src="http://fillmurray.com/100/100" class="img--border">
-// </div>
+/// Border images
+/// @description Extend or add class to html.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--border">
 
 %img--border,
 .img--border {
   border: 1px solid map-fetch($color, ui base);
 }
 
-// ## Image placement
-// Floats images, don't use on Flexbox children.
-
-//[c]
-//     <img src="image.png" class="img--right">
-//[/c]
+/// Image placement
+/// @description Align images with floats and margins.
+/// @example[html] Image floated right
+///   <img src="http://fillmurray.com/100/100" class="img--right">
 
 %img--right,
 .img--right {

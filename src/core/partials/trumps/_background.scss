@@ -1,5 +1,12 @@
-// # Background Trumps
-// Adding background colors via classes.
+////
+/// Background Colors
+/// @description Classes to add background colors.
+/// @group Trumps
+/// @example[html]
+///   <div class="background--faint">
+///     This text has a light gray background.
+///   </div>
+////
 
 .background--white {
   background-color: map-fetch($color, background white) !important;
