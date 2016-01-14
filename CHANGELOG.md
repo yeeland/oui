@@ -14,6 +14,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Replace existing comments with ScribeSass annotations. (#194)
 - [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Add `<link>` tags to the external OUI examples in the README.
+- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ### Fixed
 - [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
