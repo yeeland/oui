@@ -130,7 +130,6 @@
 }
 
 // Flex justified
-// Note: `justfied-around: space-around;` does not work in IE 10
 
 .flex-justified--start {
   @include justify-content(flex-start);
