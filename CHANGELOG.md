@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Moving gulp tasks into individual files. Adding documenation for each one. (#177)
 - [Feature] Add a link to the living OUI documentation in the README. (#177)
 - [Feature] Add Travis CI and Gitter badges to README. (#198)
 

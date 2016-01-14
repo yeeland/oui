@@ -1,10 +1,4 @@
-var gulp        = require('gulp'),
-    paths       = require('../config').paths,
-    bump        = require('gulp-bump'),
-    git         = require('gulp-git'),
-    filter      = require('gulp-filter'),
-    tagVersion  = require('gulp-tag-version');
-
+// Versioning
 // Bumping version number and tagging the repository with it.
 // Please read http://semver.org/
 //
@@ -18,6 +12,14 @@ var gulp        = require('gulp'),
 //
 // To bump the version numbers accordingly after you did a patch,
 // introduced a feature or made a backwards-incompatible release.
+
+var gulp        = require('gulp'),
+    paths       = require('../config').paths,
+    bump        = require('gulp-bump'),
+    git         = require('gulp-git'),
+    filter      = require('gulp-filter'),
+    tagVersion  = require('gulp-tag-version');
+
 var increaseVersion = function(importance) {
   // Get all the files to bump version in
   return gulp.src(['./package.json'])
@@ -50,4 +52,3 @@ gulp.task('feature', function() {
 gulp.task('release', function() {
   return increaseVersion('major');
 });
-

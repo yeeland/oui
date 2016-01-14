@@ -1,7 +1,9 @@
+// Watch
+// Watch tasks.
+
 var gulp        = require('gulp'),
     paths       = require('../config').paths;
 
-// Watch tasks
 gulp.task('watch:sass', function() {
   gulp.watch('src/oui/**/*.scss', ['sass']);
 });

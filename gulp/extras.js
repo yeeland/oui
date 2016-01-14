@@ -1,4 +1,6 @@
-// Note: this uses on the oui-icons package.
+// Extras
+// This generates a compiled CSS file containing only base64 icons for use with
+// projects that are including OUI via the CSS link.
 
 var gulp        = require('gulp'),
     paths       = require('../config').paths,
