@@ -1,4 +1,4 @@
----
+# SCSS Lint list
 linters:
   BangFormat: # Reports when you use improper spacing around ! (the "bang")
     enabled: true
