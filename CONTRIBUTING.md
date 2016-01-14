@@ -28,7 +28,7 @@
 
 ## Breaking changes & deprecating code
 
-This applies any time classes are being renamed and you want old and new code to be running simultaneously, for example, changing `width-100` to `width--1100`. In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
+This applies any time classes are being renamed and you want old and new code to be running simultaneously, for example, changing `width-100` to `width--100`. In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
 
 1. Move the deprecated code into a new partial in OUI, adding `--deprecated` to its filename:
 
@@ -44,11 +44,11 @@ This applies any time classes are being renamed and you want old and new code to
   ```
 
   Where `_sizing.scss` contains the new code and `_sizing--deprecated.scss` is deprecated code.
-
-2. Add a line into `## [Unreleased][unreleased]` section in the CHANGLOG.md explaining the change.
-2. Make the needed changes in the application HTML after the release.
-3. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
-4. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated.scss` partial.
+2. Add a line into `## [Unreleased][unreleased]` section in the `CHANGELOG.md` explaining the change. Use the `### Deprecated` heading.
+3. Make the needed changes in the application HTML after the release.
+4. Communicate the breaking change to ADEPT to prevent deprecated code from being introduced.
+5. Create an issue on GitHub to track the deprecated code.
+6. After 14 days the UI Engineer should search the codebase one last time for depreciated HTML and delete the `--depreciated.scss` partial.
 
 ## Releasing a new version of OUI
 
