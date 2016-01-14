@@ -1,5 +1,3 @@
-jQuery.noConflict();
-
 function ouiGetProps(el) {
   element = {
     element         : el,

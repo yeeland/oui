@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Moving gulp tasks into individual files. Adding documenation for each one. (#202)
 - [Feature] Add a link to the living OUI documentation in the README. (#177)
 - [Feature] Add Travis CI and Gitter badges to README. (#198)
 
@@ -16,6 +17,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add `<link>` tags to the external OUI examples in the README.
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Update `devel` with `master` after deploy using Gulp. (#193)
+- [Patch] Updating javascript to remove handlers when not needed in dropdown/popover.
+- [Patch] Updating javascript to remove `jQuery.noconflict` as it breaks other jQuery code.
 
 ### Fixed
 - [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
