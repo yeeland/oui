@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Changed
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
+- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
