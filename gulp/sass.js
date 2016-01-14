@@ -1,0 +1,14 @@
+var gulp         = require('gulp')
+    paths        = require('../config').paths,
+    sass         = require('gulp-sass'),
+    browserSync  = require('browser-sync');
+
+// Builds sass
+gulp.task('sass', function() {
+  return gulp.src(paths.oui)
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(gulp.dest(paths.cssDest))
+    .pipe(browserSync.stream());
+});
