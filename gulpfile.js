@@ -183,7 +183,11 @@ gulp.task('deploy', ['sass', 'extras:build'], function() {
     .pipe(shell([
       'git push',
       'git push origin v' + pkg.version,
-      'npm publish ./'
+      'npm publish ./',
+      'git checkout devel',
+      'git merge master',
+      'git push',
+      'git checkout master',
     ]));
 });
 
