@@ -187,6 +187,7 @@ gulp.task('deploy', ['sass', 'extras:build'], function() {
       'git checkout devel',
       'git merge master',
       'git push',
+      'git checkout master',
     ]));
 });
 
