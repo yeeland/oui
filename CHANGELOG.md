@@ -19,6 +19,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
 - [Patch] Removed outdated information from `CONTRIBUTING.md`. (#193)
+- [Patch] Remove comment about `space-around` that isn't needed. (#180)
 
 ## [8.0.0][8.0.0] - 2016-01-13
 ### Added
