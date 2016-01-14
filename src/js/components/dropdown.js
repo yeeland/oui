@@ -1,7 +1,7 @@
 (function($) {
 
   // Close any open dropdowns.
-  function closeAllDropdowns() {
+  function ouiCloseAllDropdowns() {
 
     var DROPDOWN        = "[data-oui-dropdown]";
     var DROPDOWN_TOGGLE = "[data-oui-dropdown-toggle]";
@@ -22,7 +22,7 @@
     var dropdown_parent = $(this).closest(DROPDOWN);
 
     // Close any other dropdowns.
-    closeAllDropdowns();
+    ouiCloseAllDropdowns();
 
     // If the clicked dropdown is NOT open.
     if ( !dropdown_parent.hasClass(ACTIVE_CLASS) ) {
@@ -31,18 +31,24 @@
       $(this).addClass(ACTIVE_CLASS);
     }
 
+    // Clicking anywhere outside of dropdown.
+    // Only attaches if a dropdown has been triggered.
+
+    $(document).bind('click.ouiDropdown', function() {
+
+      var DROPDOWN        = "[data-oui-dropdown]";
+      var ACTIVE_CLASS    = "is-active";
+
+      // If any dropdown is visible.
+      if ( $(DROPDOWN).hasClass(ACTIVE_CLASS) ) {
+        ouiCloseAllDropdowns();
+      }
+
+      $(document).unbind('click.ouiDropdown');
+
+    });
+
   });
 
-  // Clicking anywhere outside of dropdown.
-  $(document).on("click", function(e) {
-
-    var DROPDOWN        = "[data-oui-dropdown]";
-    var ACTIVE_CLASS    = "is-active";
-
-    // If any dropdown is visible.
-    if ( $(DROPDOWN).hasClass(ACTIVE_CLASS) ) {
-      closeAllDropdowns();
-    }
-  });
 
 })( jQuery );
