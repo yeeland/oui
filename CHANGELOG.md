@@ -15,6 +15,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Add `<link>` tags to the external OUI examples in the README.
 - [Patch] Update `devel` with `master` after deploy using Gulp. (#193)
+- [Patch] Updating javascript to remove handlers when not needed in dropdown/popover.
+- [Patch] Updating javascript to remove `jQuery.noconflict` as it breaks other jQuery code.
 
 ### Fixed
 - [Patch] Fix the gulp `.src()` for the AWS S3 deploy. (#192)
