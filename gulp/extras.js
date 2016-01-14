@@ -1,3 +1,5 @@
+// Note: this uses on the oui-icons package.
+
 var gulp        = require('gulp'),
     paths       = require('../config').paths,
     mkpath      = require('mkpath'),

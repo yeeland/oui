@@ -7,6 +7,7 @@ var paths = {
   cssDest: './dist/css/',
   oui: './src/oui/oui.scss',
   extrasDestName: 'oui-extras.css',
+  scssLint: '.scss-lint.yml',
   extrasCSS: '',
   svgs: 'node_modules/oui-icons/src/16/'
 };

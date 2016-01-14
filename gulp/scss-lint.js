@@ -8,7 +8,7 @@ gulp.task('lint', function() {
   gulp.src(paths.styles)
     .pipe(scsslint({
       'bundleExec': true,
-      'config': '.scss-lint.yml'
+      'config': paths.scssLint
     }))
     .pipe(scsslint.failReporter());
 });
