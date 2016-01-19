@@ -10,7 +10,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ### Fixed
-- [Patch] Re-add missing variable `pkg` in `deploy.js`.
+- [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
+- [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
