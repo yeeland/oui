@@ -9,6 +9,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
+### Fixed
+- [Patch] Re-add missing variable `pkg` in `deploy.js`.
+
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
 - [Feature] Moving gulp tasks into individual files. Adding documenation for each one. (#202)
