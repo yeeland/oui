@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
@@ -17,7 +19,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Replace existing comments with ScribeSass annotations. (#194)
 - [Release] Renaming all instances of `core` to `oui`. This requires changing `core` Sass references in the apps that use OUI. (#183, #184)
 - [Patch] Add `<link>` tags to the external OUI examples in the README.
-- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Update `devel` with `master` after deploy using Gulp. (#193)
 - [Patch] Updating javascript to remove handlers when not needed in dropdown/popover.
 - [Patch] Updating javascript to remove `jQuery.noconflict` as it breaks other jQuery code.
