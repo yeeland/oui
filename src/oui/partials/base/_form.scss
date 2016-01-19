@@ -274,10 +274,6 @@
 ///   </form>
 ////
 
-.#{$namespace}form--small {
-  font-size: map-fetch($font, size micro);
-}
-
 %#{$namespace}text-input,
 %#{$namespace}textarea,
 .#{$namespace}text-input,
