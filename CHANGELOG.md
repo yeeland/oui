@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
