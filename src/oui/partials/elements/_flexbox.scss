@@ -53,6 +53,7 @@
   flex-direction: $value;
 }
 
+//  Note: `justify-content: space-around;` does not work in IE 10
 @mixin justify-content($value) {
   -webkit-justify-content: $value;
   @if ($value == 'space-between') {
