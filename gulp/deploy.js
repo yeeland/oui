@@ -3,6 +3,7 @@
 
 var gulp        = require('gulp'),
     paths       = require('../config').paths,
+    pkg         = require('./../package.json'),
     rename      = require('gulp-rename'),
     s3          = require('gulp-s3'),
     shell       = require('gulp-shell');
