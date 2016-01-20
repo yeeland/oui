@@ -1,4 +1,4 @@
-1. *License.* Subject to the terms of this License Agreement, Optimizely, Inc. (“Optimiely”) grants you a limited, worldwide, royalty-free, non-assignable, and non-exclusive license to use the “OUI” solely in connection with creating, testing, and distributing plugins, extensions, add-ons or other software products or services that interoperate or are integrated with Optimizely’s products or services (“Additions”).
+1. *License.* Subject to the terms of this License Agreement, Optimizely, Inc. (“Optimizely”) grants you a limited, worldwide, royalty-free, non-assignable, and non-exclusive license to use the “OUI” solely in connection with creating, testing, and distributing plugins, extensions, add-ons or other software products or services that interoperate or are integrated with Optimizely’s products or services (“Additions”).
 
 2. *License Restrictions.* You may not use the OUI for any purpose not expressly permitted by this License Agreement. You may not modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the OUI or any part of the OUI.
 
