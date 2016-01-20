@@ -1,16 +1,22 @@
-// # OUI Partials
-// This represents the bulk of the paritals used by all sites: desktop, mobile, tablet.
-// They are the building blocks of all patterns and are width and layout independent.
+////
+/// OUI Partials
+/// @description This represents the bulk of the paritals used by all sites:
+/// desktop, mobile, tablet. They are the building blocks of all patterns and
+/// are width and layout independent.
+/// @group Core
+/// @advanced
+////
 
-// ## Elements
-// Abstractions that provide basic structure, generally extended into larger objects.
+/// Elements
+/// @description Abstractions that provide basic structure, generally extended
+/// into larger objects.
 
 @import 'partials/elements/clearfix';
 @import 'partials/elements/flexbox';
 @import 'partials/elements/flexbox--deprecated';
 
-// ## Base
-// Baseline rules.
+/// Base
+/// @description Baseline rules.
 
 @import 'partials/base/reset';
 @import 'partials/base/main';
@@ -26,8 +32,8 @@
 @import 'partials/base/tables';
 @import 'partials/base/text';
 
-// ## Elements
-// Simple, low level blocks.
+/// Elements
+/// @description Simple, low level blocks.
 
 @import 'partials/components/arrows';
 @import 'partials/components/arrows-inline';
@@ -40,8 +46,9 @@
 @import 'partials/components/rules';
 @import 'partials/components/stats';
 
-// ## Objects
-// Simple styled objects that can be extended or used directly in HTML.
+/// Objects
+/// @description Simple styled objects that can be extended or used directly in
+/// HTML.
 
 @import 'partials/objects/accordion';
 @import 'partials/objects/array';

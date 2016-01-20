@@ -1,15 +1,13 @@
-// # Clearfix
-
-// Used to clear floats with this [technique](http://tinyurl.com/la5h3sg).
-// To use, extend the clearfix class.
-
-// Note: If you're using Flexbox CSS for layout you will not need this.
-
-//[c]
-//     .foo {
-//          @extend %cf;
-//     }
-//[/c]
+////
+/// Clearfix
+/// @description Used to clear floats with this
+/// [technique](http://cssmojo.com/latest_new_clearfix_so_far/). To use, extend
+/// the clearfix class.
+/// @example[scss]
+///   .foo {
+///     @extend %cf;
+///  }
+////
 
 %cf,
 .cf {
