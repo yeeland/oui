@@ -5,11 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Add more ScribeSass comments.
+
 ### Changed
 - [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
-- [Patch] Add more ScribeSass comments.
 
 ### Fixed
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
