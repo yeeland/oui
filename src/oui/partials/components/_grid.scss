@@ -7,7 +7,7 @@
 ///   .mygrid {
 ///     @include grid($responsive: 500px);
 ///   }
-/// @example[scss] Basic grid with a gutter that is set to default.
+/// @example[html] Basic grid with a gutter that is set to default.
 ///   <div class="#{$namespace}grid">
 ///     <div class="#{$namespace}grid__cell">
 ///       <div class="background--faint">even width cells</div>
@@ -19,7 +19,7 @@
 ///       <div class="background--faint">even width cells</div>
 ///     </div>
 ///   </div>
-/// @example[scss] Basic grid with a narrow gutter.
+/// @example[html] Basic grid with a narrow gutter.
 ///   <div class="#{$namespace}grid #{$namespace}grid--guttter--narrow">
 ///     <div class="#{$namespace}grid__cell">
 ///       <div class="background--faint">even width cells</div>
@@ -31,7 +31,7 @@
 ///       <div class="background--faint">even width cells</div>
 ///     </div>
 ///   </div>
-/// @example[scss] Basic grid with a narrow gutter.
+/// @example[html] Basic grid with a narrow gutter.
 ///   <div class="#{$namespace}grid #{$namespace}grid--guttter--wide">
 ///     <div class="#{$namespace}grid__cell">
 ///       <div class="background--faint">even width cells</div>
@@ -43,7 +43,7 @@
 ///       <div class="background--faint">even width cells</div>
 ///     </div>
 ///   </div>
-/// @example[scss] Basic grid with no gutter.
+/// @example[html] Basic grid with no gutter.
 ///   <div class="#{$namespace}grid #{$namespace}grid--flush">
 ///     <div class="#{$namespace}grid__cell">
 ///       <div class="background--faint">even width cells</div>
@@ -55,7 +55,7 @@
 ///       <div class="background--faint">even width cells</div>
 ///     </div>
 ///   </div>
-/// @example[scss] Basic grid of different widths.
+/// @example[html] Basic grid of different widths.
 ///   <div class="#{$namespace}grid #{$namespace}grid--flush">
 ///     <div class="#{$namespace}grid__cell width-3-5">
 ///       <div class="background--faint">even width cells</div>
