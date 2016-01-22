@@ -6,16 +6,16 @@
 /// @advanced
 ////
 
-// ## Namespace
-// Provide a name space for most classes.
+/// Namespace
+/// @description Provide a name space for most classes.
 
 $namespace                   : '';
 
-// ## Colors
-// Default color for objects' borders etc.
+/// Colors
+/// @description Default color for objects' borders etc.
 
-// IMPORTANT Do not use these values directly in your Sass files.
-// Use the more specifically named variables below that use these root values.
+/// Do not use these values directly in your Sass files. Use the more
+/// specifically named variables below that use these root values.
 
 $base-black                  : #000;
 $base-white                  : #FFF;
@@ -38,8 +38,8 @@ $root-color: (
   good-news                  : #97C70A
 );
 
-// ### Base Colors
-// These are colors can be used on UI elements like borders.
+/// Base Colors
+/// @description These are colors can be used on UI elements like borders.
 
 $color: (
 
@@ -101,10 +101,8 @@ $color: (
 
 );
 
-// ## Fonts
-
-// ### Font Sizes
-// These defaults can be overriden by custom variables.
+/// Font Sizes
+/// @description These defaults can be overriden by custom variables.
 
 $font: (
 
@@ -142,7 +140,7 @@ $font: (
 
 );
 
-// ### Buttons
+/// Buttons
 
 $button: (
 
@@ -261,8 +259,7 @@ $button: (
   )
 );
 
-// ## UI Elements
-// ### Rounded corners.
+/// Rounded corners.
 
 $border-radius: (
   base                       : 2px,
@@ -270,7 +267,7 @@ $border-radius: (
   full                       : 50%
 );
 
-// ### Shadows
+/// Shadows
 
 $shadow: (
   base                       : 4px rgba(0, 0, 0, 0.2),
@@ -278,13 +275,13 @@ $shadow: (
   big                        : 8px rgba(0, 0, 0, 0.3)
 );
 
-// ### Opacity
+/// Opacity
 
 $opacity: (
   medium                     : 0.5
 );
 
-// ### Dialog Widths
+/// Dialog widths
 
 $dialog: (
   width:(
@@ -294,7 +291,7 @@ $dialog: (
   )
 );
 
-// ### Transitions
+/// Transitions
 
 $transition-duration: (
   fast                       : 0.1s,
@@ -302,29 +299,29 @@ $transition-duration: (
   slow                       : 0.5s
 );
 
-// ## Accordion
+/// Accordion
 
 $accordion-link-height       : 26px;
 
-// ## Popover
+/// Popover
 
 $popover: (
   max-width                  : 350px
 );
 
-// ## Poptip
+/// Poptip
 
 $poptip: (
   max-width                  : 250px
 );
 
-// ## Poptip
+/// Poptip
 
 $edittext: (
   spacer                     : 8px
 );
 
-// ## Progress Bar
+/// Progress Bar
 
 $progress-bar: (
   height: 20px,
@@ -333,7 +330,7 @@ $progress-bar: (
   )
 );
 
-// ### Spinner
+/// Spinner
 
 $spinner: (
   size:(
@@ -351,14 +348,14 @@ $spinner: (
   speed                      : 800ms
 );
 
-// ### Z-index Values
-// This can be overriden by the application.
+/// Z-index Values
 
 $z-index: (
   poptip                     : 100
 );
 
-// ## Spacing Unit
-// Defines spacing for paddings and margins using `spacer` function.
+/// Spacing Unit
+/// @description Defines spacing for paddings and margins using `spacer`
+/// function.
 
 $spacer-unit                 : 10px;
