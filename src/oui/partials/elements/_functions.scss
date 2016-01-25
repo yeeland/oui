@@ -1,14 +1,16 @@
-// ## Spacer
-// Using this function requires that the value passed be a multiple of .5
-// This encourages greater spacing consistentcy. The following example
-// will output 25px. It will test to see if value is multiple of .5. If not
-// it will provide a warning.
+////
+/// Functions
+/// @group Elements
+/// @advanced
+////
 
-// Usage:
-
-// [c]
-//     padding: spacer(2.5);
-// [/c]
+/// Spacer
+/// @description Using this function requires that the value passed be a
+/// multiple of `0.5` This encourages greater spacing consistentcy. The
+/// following example will output `25px`. It will test to see if value is
+/// multiple of `0.5`. If not it will provide a warning.
+/// @example[scss]
+///   padding: spacer(2.5);
 
 @function spacer($value) {
   @if ($value * 2) % 1 != 0 {
@@ -19,9 +21,10 @@
   }
 }
 
-// ## Map Fetch
-// Retrieves values from any map, nested or not.
-// Adapted from https://gist.github.com/jlong/8760275 - added errors.
+/// Map Fetch
+/// @description Retrieves values from any map, nested or not. It is adapted from
+/// [gist.github.com/jlong/8760275](https://gist.github.com/jlong/8760275) but
+/// with errors added.
 
 @function map-fetch($map, $keys) {
   $key: nth($keys, 1);
@@ -44,9 +47,9 @@
   }
 }
 
-// ## Map Extend
-// Extends Sass maps.
-// Adapted from http://www.sitepoint.com/extra-map-functions-sass/
+/// Map Extend
+/// @description Extends Sass maps. Adapted from
+/// [sitepoint.com/extra-map-functions-sass/](http://www.sitepoint.com/extra-map-functions-sass/).
 
 @function map-extend($map, $maps...) {
   $max: length($maps);
@@ -63,7 +66,7 @@
 }
 
 
-// Tint
+/// Tint
 
 @function tint($color, $percent) {
   @return mix(#FFF, $color, $percent);

@@ -2,6 +2,7 @@
 /// Reset
 /// @description Using inuit.css reset.
 /// @group Base
+/// @advanced
 ////
 
 // Box-sizing reset
@@ -135,7 +136,7 @@ a:hover {
   outline: 0;
 }
 
-// ## Typography
+/// Typography
 
 // Prevent `sub` and `sup` affecting `line-height` in all browsers.
 
@@ -164,7 +165,8 @@ strong {
   font-weight: 600;
 }
 
-// ## Forms
+/// Forms
+
 // Remove border from fieldset.
 
 fieldset {

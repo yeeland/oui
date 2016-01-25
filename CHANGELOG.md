@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Add more ScribeSass comments.
+
 ### Changed
 - [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)

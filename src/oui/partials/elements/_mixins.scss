@@ -1,7 +1,9 @@
-// # Mixins
+////
+/// Mixins
+////
 
-// ## Font Smoothing
-// Better rendering of fonts on OS X. Does not affect IE.
+/// Font Smoothing
+/// @description Better rendering of fonts on OS X. Does not affect IE.
 
 @mixin font-smoothing($value: antialiased) {
   @if $value == antialiased {
@@ -13,38 +15,29 @@
   }
 }
 
-// ## Media Query Breakpoints
-// Provides a simple way of adding custom breakpoints. Note that you cannot use `@extend` inside media queries.
-
-// ### Usage
-// Include the breakpoint mixin with a min and/or max value.
-
-//[c]
-//     @include breakpoint($min: 992px) {
-//       color: red;
-//     }
-//     @include breakpoint($max: 1000px) {
-//       color: red;
-//     }
-//     @include breakpoint($min: 992px, $max: 1000px) {
-//       color: red;
-//     }
-//[/c]
-
-// outputs:
-
-//[c]
-//     @media (min-width: 992px) {
-//       color: red;
-//     }
-//     @media (max-width: 1000px) {
-//       color: red;
-//     }
-//     @media (min-width: 992px) and (max-width: 1000px) {
-//       color: red;
-//     }
-//[/c]
-
+/// Media Query Breakpoints
+/// @description Provides a simple way of adding custom breakpoints. Note that
+/// you cannot use `@extend` inside media queries.
+/// @example[scss] Include the breakpoint mixin with a min and/or max value.
+///   @include breakpoint($min: 992px) {
+///     color: red;
+///   }
+///   @include breakpoint($max: 1000px) {
+///     color: red;
+///   }
+///   @include breakpoint($min: 992px, $max: 1000px) {
+///     color: red;
+///   }
+/// @example[css] Sample output
+///   @media (min-width: 992px) {
+///     color: red;
+///   }
+///   @media (max-width: 1000px) {
+///     color: red;
+///   }
+///   @media (min-width: 992px) and (max-width: 1000px) {
+///     color: red;
+///   }
 
 @mixin breakpoint($min: 0, $max: 0) {
   $query: '';
@@ -59,45 +52,26 @@
   }
 }
 
-// ## Dead Center
-// Centers an element using relative or absolute positioning.
-
-//[c]
-//      @include flex-center;
-//[/c]
-
+/// Dead Center
+/// @description Centers an element using flexbox.
+/// @example[scss]
+///   @include flex-center;
 @mixin flex-center {
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
 }
 
-// ## CSS Arrows
-
-// This mixin creates a CSS arrow on a given element. We can have the arrow
-// appear in one of 12 locations, 3 positions for each side.
-//
-// You pass this position in along with a desired arrow color and optional
-// border color, for example:
-//
-//[c]
-//      @include arrow(top, left, red)
-//[/c]
-//
-// for just a single, red arrow, or:
-//
-//[c]
-//      @include arrow(bottom, center, red, black)
-//[/c]
-//
-// which will create a red triangle with a black border which sits at the bottom
-// center of the element. Call the mixin this way:
-//
-//     .foo {
-//         @include arrow(top, left, #BADA55, #ACE);
-//         background-color: #BADA55;
-//         border: 1px solid #ACE;
-//     }
+/// CSS Arrows
+/// @description This mixin creates a CSS arrow on a given element. We can have
+/// the arrow appear in one of 12 locations, 3 positions for each side.
+///
+/// @example[scss] Pass this position in along with a desired arrow color and
+/// optional border color for just a single, red arrow.
+///   @include arrow(top, left, red)
+/// @example[scss] A red triangle with a black border which sits at the bottom
+/// center of the element.
+///   @include arrow(bottom, center, red, black)
 
 @mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
   @if $arrow-edge == top {
@@ -198,15 +172,14 @@
 }
 
 
-// ## Keyframes mixin
-// $name = Name of animation to be referenced later in "animation:" property.
-//
-//    [c]
-//     @include keyframes(fadeIn) {
-//         0% { opacity: 0; }
-//         100% { opacity: 1; }
-//     }
-//    [/c]
+/// Keyframes mixin
+/// @description Mixin to generate vendor prefixed mixins. `$name` is the name
+/// of the animation to be referenced later in `animation` property.
+/// @example[scss]
+///   @include keyframes(fadeIn) {
+///     0% { opacity: 0; }
+///     100% { opacity: 1; }
+///   }
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
@@ -223,8 +196,10 @@
   }
 }
 
-// Appearance
-// Used to turn off default styling of brower elements, like select.
+
+/// Appearance
+/// @description Used to turn off default styling of brower elements, like
+/// `select`.
 
 @mixin appearance($value) {
   -webkit-appearance: $value;
@@ -233,8 +208,11 @@
 }
 
 
-// http://www.w3.org/TR/css3-animations/#the-animation-name-property-
-// Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
+/// Animation mixins
+/// @description Each of these mixins support comma separated lists of values,
+/// which allows different transitions for individual properties to be
+/// described in a single style rule. Each value in the list corresponds to the
+/// value at that same position in the other properties.
 
 // Official animation shorthand property.
 @mixin animation ($animations...) {
@@ -253,25 +231,25 @@
 
 
 @mixin animation-timing-function ($motions...) {
-// ease | linear | ease-in | ease-out | ease-in-out
+  // ease | linear | ease-in | ease-out | ease-in-out
   @include prefixer(animation-timing-function, $motions, webkit moz spec);
 }
 
 
 @mixin animation-iteration-count ($values...) {
-// infinite | <number>
+  // infinite | <number>
   @include prefixer(animation-iteration-count, $values, webkit moz spec);
 }
 
 
 @mixin animation-direction ($directions...) {
-// normal | alternate
+  // normal | alternate
   @include prefixer(animation-direction, $directions, webkit moz spec);
 }
 
 
 @mixin animation-play-state ($states...) {
-// running | paused
+  // running | paused
   @include prefixer(animation-play-state, $states, webkit moz spec);
 }
 
@@ -282,18 +260,19 @@
 
 
 @mixin animation-fill-mode ($modes...) {
-// none | forwards | backwards | both
+  // none | forwards | backwards | both
   @include prefixer(animation-fill-mode, $modes, webkit moz spec);
 }
 
-// Box sizing
+
+/// Box sizing
 
 @mixin box-sizing($box) {
   @include prefixer(box-sizing, $box, webkit moz spec);
 }
 
 
-// Transform
+/// Transform
 
 @mixin transform($property: none) {
   // none | <transform-function>
@@ -311,11 +290,13 @@
   @include prefixer(transform-style, $style, webkit moz ms o spec);
 }
 
-// Transition
-// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
-// Example: @include transition (all 2s ease-in-out);
-//          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
-//          @include transition-property (transform, opacity);
+/// Transition
+/// @description Shorthand mixin for transitions. Supports multiple
+/// parentheses-deliminated values for each variable.
+/// @example[scss]
+///   @include transition (all 2s ease-in-out);
+///   @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+///   @include transition-property (transform, opacity);
 
 @mixin transition($properties...) {
   // Fix for vendor-prefix transform property
@@ -385,38 +366,23 @@
 }
 
 
-// // Prefixer
-// A mixin for generating vendor prefixes on non-standardized properties.
-//
-// @param {String} $property
-//   Property to prefix
-//
-// @param {*} $value
-//   Value to use
-//
-// @param {List} $prefixes
-//   Prefixes to define
-//
-// @example scss - Usage
-//   .element {
-//     @include prefixer(border-radius, 10px, webkit ms spec);
-//   }
-//
-// @example css - CSS Output
-//   .element {
-//     -webkit-border-radius: 10px;
-//     -moz-border-radius: 10px;
-//     border-radius: 10px;
-//   }
-//
-// @require {variable} $prefix-for-webkit
-// @require {variable} $prefix-for-mozilla
-// @require {variable} $prefix-for-microsoft
-// @require {variable} $prefix-for-opera
-// @require {variable} $prefix-for-spec
-
-// TODO: Break these default settings into appropriate separate file
-// Global variables to enable or disable vendor prefixes
+/// Prefixer
+/// A mixin for generating vendor prefixes on non-standardized properties.
+///
+/// * @param {String} $property - Property to prefix
+/// * @param {*} $value - Value to use
+/// * @param {List} $prefixes - Prefixes to define
+///
+/// @example[scss]
+///   .element {
+///     @include prefixer(border-radius, 10px, webkit ms spec);
+///   }
+/// @example[css] CSS output
+///   .element {
+///     -webkit-border-radius: 10px;
+///     -moz-border-radius: 10px;
+///     border-radius: 10px;
+///   }
 
 $prefix-for-webkit:    true !default;
 $prefix-for-mozilla:   true !default;
@@ -459,5 +425,3 @@ $prefix-for-spec:      true !default;
   $prefix-for-opera:     false !global;
   $prefix-for-spec:      false !global;
 }
-
-

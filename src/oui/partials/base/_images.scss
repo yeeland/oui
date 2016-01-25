@@ -28,7 +28,7 @@ img[height] {
 }
 
 /// Rounded images
-/// Extend or add class to html.
+/// @description Extend or add class to HTML.
 /// @example[html]
 ///   <img src="http://fillmurray.com/100/100" class="img--round">
 
@@ -59,8 +59,10 @@ img[height] {
 
 /// Image placement
 /// @description Align images with floats and margins.
-/// @example[html] Image floated right
-///   <img src="http://fillmurray.com/100/100" class="img--right">
+/// @example[html] Image floated right with a clearfix.
+///   <div class="cf">
+///     <img src="http://fillmurray.com/100/100" class="img--right">
+///   </div>
 
 %img--right,
 .img--right {

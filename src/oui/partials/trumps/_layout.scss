@@ -85,7 +85,7 @@
 /// @example[html]
 ///   <div class="faded push--bottom">
 ///     This text is faded. As is the icon below.
-///     <svg class="lego-icon faded">
+///     <svg class="#{$namespace}icon faded">
 ///       <use xlink:href="#collaborators-16"></use>
 ///     </svg>
 ///   </div>
@@ -94,7 +94,7 @@
   opacity: map-fetch($opacity, medium) !important;
 }
 
-/// Vertical Alignment for table cells.
+/// Vertical Alignment for table cells
 /// @example[html]
 ///   <div class="vertical-align--bottom">content</div>
 
