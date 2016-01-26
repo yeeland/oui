@@ -25,7 +25,8 @@
 .#{$namespace}button-group {
   @include display(flex);
 
-  > * {
+  > *,
+  > * > * {
     margin-left: 0;
     border-radius: 0;
 
