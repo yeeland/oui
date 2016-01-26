@@ -18,7 +18,7 @@
 
 $arrow-size: 6px !default;
 $arrow-border: 1 !default;
-$border: $arrow-size;
+$border-size: $arrow-size;
 $arrow: $arrow-size - $arrow-border;
 
 // Forms the basis for any/all CSS arrows.
@@ -35,7 +35,7 @@ $arrow: $arrow-size - $arrow-border;
   }
 
   &::before {
-    border: $border solid transparent;
+    border: $border-size solid transparent;
   }
 
   &::after {
@@ -62,7 +62,7 @@ $arrow: $arrow-size - $arrow-border;
   }
 
   &::after {
-    top: $border;
+    top: $border-size;
   }
 }
 
@@ -72,7 +72,7 @@ $arrow: $arrow-size - $arrow-border;
   &::before,
   &::after {
     top: 50%;
-    margin-top: -$border;
+    margin-top: -$border-size;
   }
 
   &::after {
@@ -88,7 +88,7 @@ $arrow: $arrow-size - $arrow-border;
   }
 
   &::after {
-    bottom: $border;
+    bottom: $border-size;
   }
 }
 
@@ -118,7 +118,7 @@ $arrow: $arrow-size - $arrow-border;
   }
 
   &::after {
-    left: $border;
+    left: $border-size;
   }
 }
 
@@ -128,7 +128,7 @@ $arrow: $arrow-size - $arrow-border;
   &::before,
   &::after {
     left: 50%;
-    margin-left: -$border;
+    margin-left: -$border-size;
   }
 
   &::after {
@@ -144,7 +144,7 @@ $arrow: $arrow-size - $arrow-border;
   }
 
   &::after {
-    right: $border;
+    right: $border-size;
   }
 }
 

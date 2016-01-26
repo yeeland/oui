@@ -40,8 +40,8 @@
 .#{$namespace}attention {
   @extend %kill-last-child-margin;
   padding: spacer(1);
-  border-radius: map-fetch($border-radius, base);
-  border: 1px solid map-fetch($color, ui base);
+  border-radius: map-fetch($border, radius base);
+  border: 1px solid map-fetch($border, color base);
   background: map-fetch($color, background faint);
 
   &--brand {

@@ -22,14 +22,14 @@ code {
     background: map-fetch($color, background faint);
     overflow-x: auto;
     display: block;
-    border-radius: map-fetch($border-radius, base);
-    border: 1px solid map-fetch($color, ui base);
+    border-radius: map-fetch($border, radius base);
+    border: 1px solid map-fetch($border, color base);
   }
 }
 
 .#{$namespace}code {
   background: map-fetch($color, background faint);
-  border-radius: map-fetch($border-radius, base);
-  border: 1px solid map-fetch($color, ui base);
+  border-radius: map-fetch($border, radius base);
+  border: 1px solid map-fetch($border, color base);
   padding: 1px 3px;
 }

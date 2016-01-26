@@ -12,7 +12,7 @@
 
 %border--all,
 .border--all {
-  border: 1px solid map-fetch($color, ui base) !important;
+  border: 1px solid map-fetch($border, color base) !important;
 }
 
 /// Border on ends
@@ -23,12 +23,12 @@
 
 %border--top,
 .border--top {
-  border-top: 1px solid map-fetch($color, ui base) !important;
+  border-top: 1px solid map-fetch($border, color base) !important;
 }
 
 %border--bottom,
 .border--bottom {
-  border-bottom: 1px solid map-fetch($color, ui base) !important;
+  border-bottom: 1px solid map-fetch($border, color base) !important;
 }
 
 %border--ends,
@@ -45,12 +45,12 @@
 
 %border--left,
 .border--left {
-  border-left: 1px solid map-fetch($color, ui base) !important;
+  border-left: 1px solid map-fetch($border, color base) !important;
 }
 
 %border--right,
 .border--right {
-  border-right: 1px solid map-fetch($color, ui base) !important;
+  border-right: 1px solid map-fetch($border, color base) !important;
 }
 
 %border--sides,

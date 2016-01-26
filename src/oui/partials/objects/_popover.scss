@@ -114,8 +114,8 @@
 
 %#{$namespace}pop--over,
 .#{$namespace}pop--over {
-  border: 1px solid map-fetch($color, ui base);
-  border-radius: map-fetch($border-radius, base);
+  border: 1px solid map-fetch($border, color base);
+  border-radius: map-fetch($border, radius base);
   background: map-fetch($color, background white);
   max-width: map-fetch($popover, max-width);
   box-shadow: 0 2px map-fetch($shadow, light);

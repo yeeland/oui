@@ -93,7 +93,7 @@
   &--empty {
     &::before {
       content: '';
-      border-radius: map-fetch($border-radius, full);
+      border-radius: map-fetch($border, radius full);
       display: inline-block;
       width: 10px;
       height: 10px;
