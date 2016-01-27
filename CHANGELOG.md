@@ -14,7 +14,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ### Fixed
-- [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously they inherited padding of buttons. (#220)
+- [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
+- [Patch] Adding variable for input padding. (#220).
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
