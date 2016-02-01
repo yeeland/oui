@@ -7,9 +7,9 @@
 .#{$namespace}select {
   @include appearance(none);
   @include transition(border-color map-fetch($transition-duration, base));
-  border: 1px solid map-fetch($color, ui base);
+  border: 1px solid map-fetch($border, color base);
   height: map-fetch($button, size base height);
-  border-radius: map-fetch($border-radius, base);
+  border-radius: map-fetch($border, radius base);
   font-size: map-fetch($font, size base);
   padding: 0 spacer(3) 0 map-fetch($form, input padding);
   outline: none;

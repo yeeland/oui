@@ -87,8 +87,8 @@
 %#{$namespace}block-list-group,
 .#{$namespace}block-list-group {
   @extend %#{$namespace}block-list;
-  border: 1px solid map-fetch($color, ui base);
-  border-radius: map-fetch($border-radius, base);
+  border: 1px solid map-fetch($border, color base);
+  border-radius: map-fetch($border, radius base);
 
   > li:first-child {
     border: 0;

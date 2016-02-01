@@ -64,7 +64,7 @@
     position: relative;
     text-align: center;
     padding: spacer(1) spacer(1.5);
-    border: 1px solid map-fetch($color, ui base);
+    border: 1px solid map-fetch($border, color base);
     border-right: 0;
     border-bottom: 0;
     color: map-fetch($color, text medium);
@@ -73,12 +73,12 @@
     cursor: pointer;
 
     &:first-child {
-      border-top-left-radius: map-fetch($border-radius, big);
+      border-top-left-radius: map-fetch($border, radius big);
     }
 
     &:last-child {
-      border-top-right-radius: map-fetch($border-radius, big);
-      border-right: 1px solid map-fetch($color, ui base);
+      border-top-right-radius: map-fetch($border, radius big);
+      border-right: 1px solid map-fetch($border, color base);
     }
 
     &:hover,

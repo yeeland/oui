@@ -40,11 +40,11 @@
     }
 
     &:first-child {
-      border-radius: map-get($border-radius, base) 0 0 map-get($border-radius, base);
+      border-radius: map-get($border, radius base) 0 0 map-get($border, radius base);
     }
 
     &:last-child {
-      border-radius: 0 map-get($border-radius, base) map-get($border-radius, base) 0;
+      border-radius: 0 map-get($border, radius base) map-get($border, radius base) 0;
     }
   }
 

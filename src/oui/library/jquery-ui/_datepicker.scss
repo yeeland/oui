@@ -4,7 +4,7 @@
 #ui-datepicker-div {
   display: none;
   background: map-fetch($color, background white);
-  border: 1px solid map-fetch($color, ui base);
+  border: 1px solid map-fetch($border, color base);
   padding: spacer(2);
   font-size: map-fetch($font, size epsilon);
   overflow: hidden;
@@ -37,7 +37,7 @@
 
   .ui-datepicker-group-first {
     padding-right: spacer(2);
-    border-right: 1px solid map-fetch($color, ui base);
+    border-right: 1px solid map-fetch($border, color base);
   }
 
   .ui-datepicker-group-last {
@@ -84,7 +84,7 @@
     .ui-state-hover {
       border: 1px solid map-fetch($color, ui brand);
       background: map-fetch($color, background brand-light);
-      border-radius: map-fetch($border-radius, base);
+      border-radius: map-fetch($border, radius base);
     }
   }
 
@@ -104,7 +104,7 @@
     &:hover {
       border: 1px solid map-fetch($color, ui brand);
       background: map-fetch($color, background brand-light);
-      border-radius: map-fetch($border-radius, base);
+      border-radius: map-fetch($border, radius base);
     }
 
     &::before {

@@ -267,13 +267,20 @@ $form: (
   )
 );
 
-/// Rounded corners.
 
-$border-radius: (
-  base                       : 2px,
-  big                        : 4px,
-  full                       : 50%
+/// Borders
+
+$border: (
+  color: (
+    base                     : map-fetch($color, ui base)
+  ),
+  radius: (
+    base                     : 2px,
+    big                      : 4px,
+    full                     : 50%
+  )
 );
+
 
 /// Shadows
 

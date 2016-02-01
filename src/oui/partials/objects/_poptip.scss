@@ -23,7 +23,7 @@
 .#{$namespace}pop--tip {
   background: map-fetch($color, ui dark);
   color: map-fetch($color, text white);
-  border-radius: map-fetch($border-radius, base);
+  border-radius: map-fetch($border, radius base);
   font-size: map-fetch($font, size micro);
   padding: spacer(0.5) spacer(1);
   max-width: map-fetch($poptip, max-width);

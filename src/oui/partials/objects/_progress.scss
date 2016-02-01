@@ -23,7 +23,7 @@
 .#{$namespace}progress {
   background: map-fetch($color, background faint);
   height: map-fetch($progress-bar, height);
-  border-radius: map-fetch($border-radius, base);
+  border-radius: map-fetch($border, radius base);
   box-shadow: inset 0 1px map-fetch($shadow, light);
   overflow: hidden;
 
