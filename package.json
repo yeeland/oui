@@ -29,7 +29,7 @@
     "gulp-symlink": "^2.1.0",
     "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.0",
-    "oui-icons": "optimizely/oui-icons.git#15cd9117ef9570f4828f4189654e367d9d51d668"
+    "oui-icons": "git://github.com/optimizely/oui-icons.git#15cd9117ef9570f4828f4189654e367d9d51d668"
   },
   "scripts": {
     "test": "./node_modules/.bin/gulp lint && ./node_modules/.bin/gulp sass",
