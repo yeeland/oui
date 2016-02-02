@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Adding new white-space trump. (#223)
 - [Patch] Add more ScribeSass comments.
 
 ### Changed
