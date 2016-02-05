@@ -16,6 +16,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 
 ### Fixed
+- [Patch] Adding max-height and overflow to dropdowns. (#235).
 - [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
 - [Patch] Adding variable for input padding. (#220).
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
