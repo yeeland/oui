@@ -74,7 +74,7 @@
 
   &.is-active {
     .#{$namespace}dropdown {
-      visibility: visible;
+      display: block;
     }
   }
 }
@@ -91,7 +91,9 @@
   z-index: 1;
   margin-top: 2px;
   text-align: left;
-  visibility: hidden;
+  max-height: map-fetch($dropdown, max-height);
+  overflow-y: auto;
+  display: none;
 
   &__item {
     white-space: nowrap;
