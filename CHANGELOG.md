@@ -24,6 +24,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Fix typo in license.
+- [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
