@@ -30,7 +30,7 @@ Replace `8.0.0` with the [latest release](https://github.com/optimizely/oui/rele
 
 #### OUI and OUI Extras
 
-`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render icons provide with OUI. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
+`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
 
 ### Using NPM
 
