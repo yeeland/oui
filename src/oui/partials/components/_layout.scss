@@ -8,9 +8,9 @@
 ////
 
 @mixin center--child {
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .center--child {

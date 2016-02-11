@@ -57,7 +57,7 @@
 ////
 
 .#{$namespace}tabs-nav {
-  @include display(flex);
+  display: flex;
   border-bottom: 3px solid map-fetch($color, ui, base);
 
   &__item {
@@ -119,7 +119,7 @@
 
 .#{$namespace}tabs--center {
   .#{$namespace}tabs-nav {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .#{$namespace}tabs-nav__item:first-child {

@@ -38,8 +38,8 @@
 ////
 
 @mixin media($responsive: null) {
-  @include display(flex);
-  @include align-items(flex-start);
+  display: flex;
+  align-items: flex-start;
 
   &__img {
     margin-right: spacer(1);
@@ -53,7 +53,7 @@
 
   &__body {
     @extend %kill-last-child-margin;
-    @include flex(1);
+    flex: 1;
   }
 
   @if ($responsive) {
@@ -67,7 +67,7 @@
       }
 
       &__body {
-        @include flex(none);
+        flex: none;
       }
     }
   }

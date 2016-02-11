@@ -40,15 +40,15 @@
 ////
 
 .accordion {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   width: 100%;
 
   &__link {
     @include transition-property(height);
     @include transition-duration(map-fetch($transition-duration, base));
-    @include display(flex);
-    @include align-items(center);
+    display: flex;
+    align-items: center;
     letter-spacing: map-fetch($font, letter-spacing, loose);
     font-size: map-fetch($font, size, milli);
     padding: 0 spacer(2);
@@ -77,8 +77,8 @@
   }
 
   &__item {
-    @include display(flex);
-    @include flex-direction(column);
+    display: flex;
+    flex-direction: column;
     height: $accordion-link-height;
     overflow: hidden;
 
@@ -100,7 +100,7 @@
   }
 
   .is-active {
-    @include flex(1);
+    flex: 1;
 
     .accordion__link {
       color: map-fetch($color, text, base);
@@ -117,7 +117,7 @@
   }
 
   &__content-wrap {
-    @include flex(1);
+    flex: 1;
     overflow-y: auto;
   }
 

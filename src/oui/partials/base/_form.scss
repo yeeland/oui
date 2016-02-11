@@ -459,8 +459,8 @@ fieldset {
 // This places an svg icon "inside" an input, to the right.
 
 .#{$namespace}icon-input {
-  @include display(flex);
-  @include align-items(center);
+  display: flex;
+  align-items: center;
 
   > input {
     z-index: 1;
