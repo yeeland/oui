@@ -8,12 +8,20 @@
 
 Meet Louis, the official mascot of OUI.
 
+
 ## Introduction
 
-This document contains two sets of instructions:
+This document contains three parts:
 
+1. Documentation
 1. Including OUI in your project
-2. Contributing new CSS to OUI
+1. Contributing new CSS to OUI
+
+## Documentation
+
+[http://design.optimizely.com/oui/core/api/](http://design.optimizely.com/oui/core/api/)
+
+This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial. 
 
 ## Including OUI in your project
 
