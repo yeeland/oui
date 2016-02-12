@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Add more ScribeSass comments.
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)
+- [Patch] Added reference and link to documenation. (#231)
 
 ### Changed
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
