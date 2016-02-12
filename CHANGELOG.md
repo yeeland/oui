@@ -14,6 +14,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
+- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
