@@ -197,9 +197,9 @@ In order to write HTML and CSS classes that provide meaning for developers we're
 
 In the example above...
 
-- **Block** is represented by <code>lego-grid</code> and is the parent class of the object.
-- **Elements** are children of the object. They are named by joining the parent class name and a child class with a double underscore. In this case <code>lego-grid__cell</code>.
-- **Modifiers** are variations on the default. In this case we have a <code>lego-grid--gutter</code>. This provides spacing between the cells.
+- **Block** is represented by <code>grid</code> and is the parent class of the object.
+- **Elements** are children of the object. They are named by joining the parent class name and a child class with a double underscore. In this case <code>grid__cell</code>.
+- **Modifiers** are variations on the default. In this case we have a <code>grid--gutter</code>. This provides spacing between the cells.
 
 Though somewhat verbose, this syntax makes it easy to determine the child/parent relationships between bits of code, especially when different objects are mixed together. It can be tricky naming elements so some judgment is required. This becomes easier over time.
 

@@ -6,7 +6,7 @@
 /// Add Paddings
 /// @description Pad elements in any direction.
 /// @example[html] Padding on all sides.
-///   <div class="push--soft background--light">content</div>
+///   <div class="soft background--light">content</div>
 
 .soft {
   padding: spacer(1) !important;
@@ -165,7 +165,8 @@
 
 /// Zero Paddings
 /// @example[html] Top padding removed from element.
-///   <div class="hard--top">content</div>
+///   <h1 class="hard--bottom">Heading</div>
+///   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
 .hard {
   padding: 0 !important;
