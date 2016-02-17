@@ -14,6 +14,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
+- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
@@ -25,8 +26,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Fix typo in license.
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
+- [Patch] Remove references to `lego-` in README. (#245)
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
+- [Patch] Tiny documentation fixes. (#234)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
