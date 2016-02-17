@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Add more ScribeSass comments.
+- [Patch] Added more clarity around `oui-extras.css` in README. (#232)
 - [Patch] Added reference and link to documenation. (#231)
 
 ### Changed
