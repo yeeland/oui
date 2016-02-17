@@ -15,7 +15,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
-- [Patch] Removed `--deprecated.scss` files and references to them. (#229)
+- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
