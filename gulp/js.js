@@ -11,15 +11,15 @@ var gulp        = require('gulp'),
 // If we need to add a namespace to classes injected by the JS.
 // gulp js --namespace=lego-
 
-var OUI_JS_NAMESPACE = '';
+var namespace = '';
 
 if (args.namespace) {
-  OUI_JS_NAMESPACE = args.namespace;
+  namespace = args.namespace;
 }
 
 gulp.task('js', function() {
   gulp.src('src/js/**/*.js')
-    .pipe(replace('OUI_JS_NAMESPACE', OUI_JS_NAMESPACE))
-    .pipe(uglify(OUI_JS_NAMESPACE + 'oui.min.js').on('error', gutil.log))
+    .pipe(replace('#{OUI_JS_NAMESPACE}', namespace))
+    .pipe(uglify(namespace + 'oui.min.js').on('error', gutil.log))
     .pipe(gulp.dest('dist/js'))
 });
