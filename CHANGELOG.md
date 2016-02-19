@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Add more ScribeSass comments.
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)

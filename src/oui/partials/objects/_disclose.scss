@@ -41,7 +41,7 @@
   }
 
   &__symbol {
-    @include transition(transform map-fetch($transition-duration, base));
+    transition: transform map-fetch($transition-duration, base);
     width: spacer(1);
     display: inline-block;
     // This makes clicking the arrow icon still open the disclose object.
@@ -71,7 +71,7 @@
     }
 
     .#{$namespace}disclose__symbol {
-      @include transform(rotate(90deg));
+      transform: rotate(90deg);
     }
   }
 }

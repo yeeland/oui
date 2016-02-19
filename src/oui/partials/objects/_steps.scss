@@ -32,8 +32,8 @@
   margin-right: auto;
 
   &__dot {
-    @include transform(translateX(-50%));
-    @include transition(all map-fetch($transition-duration, base));
+    transform: translateX(-50%);
+    transition: all map-fetch($transition-duration, base);
     position: absolute;
     width: 16px;
     height: 16px;

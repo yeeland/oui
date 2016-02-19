@@ -45,8 +45,8 @@
   width: 100%;
 
   &__link {
-    @include transition-property(height);
-    @include transition-duration(map-fetch($transition-duration, base));
+    transition-property: height;
+    transition-duration: map-fetch($transition-duration, base);
     display: flex;
     align-items: center;
     letter-spacing: map-fetch($font, letter-spacing, loose);

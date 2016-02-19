@@ -53,12 +53,12 @@
 
 @include keyframes(spin-animate) {
   100% {
-    @include transform(rotate(360deg));
+    transform: rotate(360deg);
   }
 }
 
 .#{$namespace}spinner {
-  @include animation(spin-animate map-fetch($spinner, speed) infinite linear);
+  animation: spin-animate map-fetch($spinner, speed) infinite linear;
   width: map-fetch($spinner, size, base);
   height: map-fetch($spinner, size, base);
   border: map-fetch($spinner, border, width, base) solid map-fetch($color, background, brand-light);

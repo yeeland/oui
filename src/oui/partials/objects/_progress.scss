@@ -34,7 +34,7 @@
   }
 
   &__bar {
-    @include transition(width map-fetch($transition-duration, base));
+    transition: width map-fetch($transition-duration, base);
     display: flex;
     align-items: center;
     justify-content: center;

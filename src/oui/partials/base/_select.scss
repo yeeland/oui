@@ -6,7 +6,7 @@
 
 .#{$namespace}select {
   @include appearance(none);
-  @include transition(border-color map-fetch($transition-duration, base));
+  transition: border-color map-fetch($transition-duration, base);
   border: 1px solid map-fetch($border, color, base);
   height: map-fetch($button, size, base, height);
   border-radius: map-fetch($border, radius, base);
