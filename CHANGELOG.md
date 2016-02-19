@@ -34,6 +34,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
 - [Patch] Tiny documentation fixes. (#234)
+- [Patch] Add other input types to input reset. (#261)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
