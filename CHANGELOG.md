@@ -35,6 +35,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
 - [Patch] Tiny documentation fixes. (#234)
+- [Patch] Rename an incorrect width class referenced within a comment. (#256)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
