@@ -13,12 +13,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Changed
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
-- [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#226)
-- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
-- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
@@ -34,6 +31,12 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
 - [Patch] Tiny documentation fixes. (#234)
+
+## Removed
+- [Release] Remove unused retina sprites file. (#264)
+- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
+- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
+- [Release] Remove `.#{$namespace}form--small` (#162)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
