@@ -12,6 +12,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Added reference and link to documenation. (#231)
 
 ### Changed
+- [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
 - [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)

@@ -24,6 +24,7 @@
 /// Map Fetch
 /// @description Retrieves values from any map, nested or not.
 /// https://github.com/optimizely/oui/issues/239
+/// Usage: map-fetch($color, ui, base);
 
 @function map-fetch($map, $keys...) {
   @each $key in $keys {
