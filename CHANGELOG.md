@@ -5,24 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
-### Added
-- [Patch] Add more ScribeSass comments.
 
-### Changed
-- [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
-- [Release] Remove `.#{$namespace}form--small` (#162)
-- [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
-- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
-
-### Fixed
-- [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
-- [Patch] Adding variable for input padding. (#220).
-- [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
-- [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
-- [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
-- [Patch] Fix typo in license.
-
-## [9.0.1][9.0.1] - 2015-02-19
+## [9.0.1][9.0.1] - 2016-02-19
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
 ## [9.0.0][9.0.0] - 2016-01-19
