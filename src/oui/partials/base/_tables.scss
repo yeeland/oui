@@ -131,8 +131,8 @@
 
   th {
     font-weight: 600;
-    font-size: map-fetch($font, size milli);
-    color: map-fetch($color, text muted);
+    font-size: map-fetch($font, size, milli);
+    color: map-fetch($color, text, muted);
     text-align: left;
 
     // For columns that are sortable.
@@ -187,17 +187,17 @@
       }
 
       > tr {
-        border-bottom: 1px solid map-fetch($border, color base);
+        border-bottom: 1px solid map-fetch($border, color, base);
       }
     }
 
     & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
-      border-bottom: 1px solid map-fetch($color, ui light);
+      border-bottom: 1px solid map-fetch($color, ui, light);
 
       // If no `thead` is present we'll have a border top.
 
       &:first-child {
-        border-bottom: 1px solid map-fetch($color, ui light);
+        border-bottom: 1px solid map-fetch($color, ui, light);
       }
     }
 
@@ -207,7 +207,7 @@
 
     & > thead > tr > th, // scss-lint:disable UnnecessaryParentReference
     & > tbody > tr > td { // scss-lint:disable UnnecessaryParentReference
-      border-left: 1px solid map-fetch($color, ui light);
+      border-left: 1px solid map-fetch($color, ui, light);
       padding-right: spacer(1);
 
       &:first-child {
@@ -221,7 +221,7 @@
     & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
 
       &:hover {
-        background-color: map-fetch($color, background brand-light);
+        background-color: map-fetch($color, background, brand-light);
         cursor: pointer;
       }
     }
@@ -264,7 +264,7 @@
 // Added to the table row.
 
 .#{$namespace}table-row--active {
-  background-color: map-fetch($color, background faint);
+  background-color: map-fetch($color, background, faint);
 }
 
 /// Scrolling Tables

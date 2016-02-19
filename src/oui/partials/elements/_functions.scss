@@ -22,29 +22,18 @@
 }
 
 /// Map Fetch
-/// @description Retrieves values from any map, nested or not. It is adapted from
-/// [gist.github.com/jlong/8760275](https://gist.github.com/jlong/8760275) but
-/// with errors added.
+/// @description Retrieves values from any map, nested or not.
+/// https://github.com/optimizely/oui/issues/239
 
-@function map-fetch($map, $keys) {
-  $key: nth($keys, 1);
-  $length: length($keys);
-  $value: map-get($map, $key);
-  @if ($length > 1) {
-    $rest: ();
-    @for $i from 2 through $length {
-      $rest: append($rest, nth($keys, $i));
+@function map-fetch($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+
+    @if not $map {
+      @error 'The value `#{$key}` doesn’t exist in the map.';
     }
-    @if ($value == null) {
-      @error "The value '#{$key}' doesn't exist in the map.";
-    }
-    @return map-fetch($value, $rest)
-  } @else {
-    @if ($value == null) {
-      @error "The value '#{$key}' doesn't exist in the map.";
-    }
-    @return $value;
   }
+  @return $map;
 }
 
 /// Map Extend
