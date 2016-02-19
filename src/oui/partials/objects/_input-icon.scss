@@ -38,6 +38,6 @@
   }
 
   &__muted {
-    fill: map-fetch($color, ui medium);
+    fill: map-fetch($color, ui, medium);
   }
 }

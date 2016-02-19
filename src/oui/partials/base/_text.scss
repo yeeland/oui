@@ -12,10 +12,10 @@
 
 .editable {
   &:hover {
-    color: map-fetch($color, text muted);
+    color: map-fetch($color, text, muted);
 
     &::after {
-      color: map-fetch($color, text muted);
+      color: map-fetch($color, text, muted);
       content: '\270E';
       font-size: 1em;
       padding-left: spacer(0.5);
@@ -27,7 +27,7 @@
 /// @description Useful for code examples.
 
 .monospace {
-  font-family: map-fetch($font, family monospace);
+  font-family: map-fetch($font, family, monospace);
 }
 
 /// Pseudo Content

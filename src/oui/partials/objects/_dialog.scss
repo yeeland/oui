@@ -47,14 +47,14 @@
 .#{$namespace}dialog {
   position: relative;
   box-shadow: 0 0 map-fetch($shadow, big);
-  width: map-fetch($dialog, width base);
+  width: map-fetch($dialog, width, base);
 
   &--narrow {
-    width: map-fetch($dialog, width narrow);
+    width: map-fetch($dialog, width, narrow);
   }
 
   &--wide {
-    width: map-fetch($dialog, width wide);
+    width: map-fetch($dialog, width, wide);
   }
 
   &__header,
@@ -65,26 +65,26 @@
 
   &__header,
   &__footer {
-    background-color: map-fetch($color, background faint);
+    background-color: map-fetch($color, background, faint);
   }
 
   &__header {
-    border-bottom: 1px solid map-fetch($color, ui light);
+    border-bottom: 1px solid map-fetch($color, ui, light);
   }
 
   &__footer {
-    border-top: 1px solid map-fetch($color, ui light);
+    border-top: 1px solid map-fetch($color, ui, light);
   }
 
   &__title {
-    font-size: map-fetch($font, size beta);
-    color: map-fetch($color, text brand-dark);
+    font-size: map-fetch($font, size, beta);
+    color: map-fetch($color, text, brand-dark);
     line-height: 1;
   }
 
   &__body {
     @extend %kill-last-child-margin;
-    background: map-fetch($color, background white);
+    background: map-fetch($color, background, white);
     padding-bottom: spacer(3);
   }
 
@@ -97,9 +97,9 @@
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
-    background: map-fetch($color, background black);
-    color: map-fetch($color, ui white);
-    border: 2px solid map-fetch($color, ui white);
+    background: map-fetch($color, background, black);
+    color: map-fetch($color, ui, white);
+    border: 2px solid map-fetch($color, ui, white);
     box-shadow: 0 0 map-fetch($shadow, big);
     z-index: 1; // This is needed to bring the close icon above the dialog background.
   }

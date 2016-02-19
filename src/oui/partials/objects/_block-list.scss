@@ -32,7 +32,7 @@
 
   > li {
     padding: spacer(0.5) spacer(1);
-    border-top: 1px solid map-fetch($color, ui light);
+    border-top: 1px solid map-fetch($color, ui, light);
   }
 
   // For links that will take up full space of list item.
@@ -44,11 +44,11 @@
     margin-right: -(spacer(1));
 
     &:hover {
-      background-color: map-fetch($color, background brand-light);
+      background-color: map-fetch($color, background, brand-light);
     }
 
     &--active {
-      background-color: map-fetch($color, background faint);
+      background-color: map-fetch($color, background, faint);
     }
 
     &:first-child {
@@ -72,7 +72,7 @@
 
   &--all {
     li:last-child {
-      border-bottom: 1px solid map-fetch($color, ui light);
+      border-bottom: 1px solid map-fetch($color, ui, light);
     }
   }
 
@@ -87,8 +87,8 @@
 %#{$namespace}block-list-group,
 .#{$namespace}block-list-group {
   @extend %#{$namespace}block-list;
-  border: 1px solid map-fetch($border, color base);
-  border-radius: map-fetch($border, radius base);
+  border: 1px solid map-fetch($border, color, base);
+  border-radius: map-fetch($border, radius, base);
 
   > li:first-child {
     border: 0;
