@@ -87,3 +87,12 @@
 .flex-self--end {
   align-self: flex-end;
 }
+
+// Flex Firefox layout fix
+// This is triggered when children of flex elements require overflow. Firefox requires a `min-height/width`.
+// http://stackoverflow.com/questions/28636832/firefox-overflow-y-not-working-with-nested-flexbox
+
+.flex-overflow-fix {
+  min-height: 0;
+  min-width: 0;
+}
