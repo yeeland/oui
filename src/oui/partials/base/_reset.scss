@@ -111,12 +111,18 @@ input[type="radio"] + label {
   cursor: pointer;
 }
 
-[type=text]:active,
-[type=text]:focus,
-[type=password]:active,
-[type=password]:focus,
-[type=email]:active,
-[type=email]:focus,
+[type="text"]:active,
+[type="text"]:focus,
+[type="password"]:active,
+[type="password"]:focus,
+[type="email"]:active,
+[type="email"]:focus,
+[type="number"]:active,
+[type="number"]:focus,
+[type="search"]:active,
+[type="search"]:focus,
+[type="url"]:active,
+[type="url"]:focus,
 textarea:active,
 textarea:focus {
   cursor: text;
