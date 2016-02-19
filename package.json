@@ -42,7 +42,7 @@
     "url": "https://github.com/optimizely/oui.git"
   },
   "engines" : {
-    "node" : ">=0.10.4"
+    "node" : ">=0.12.0"
   },
   "author": "Tom Genoni <tom@atomeye.com> (http://atomeye.com/)",
   "contributors": [
