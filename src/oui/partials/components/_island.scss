@@ -8,6 +8,8 @@
 ///   </div>
 ////
 
+@import '../sass/kill-last-child-margin';
+
 %#{$namespace}island,
 .#{$namespace}island {
   @extend %kill-last-child-margin;

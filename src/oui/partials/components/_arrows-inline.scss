@@ -10,6 +10,8 @@
 ///   <div><span class="#{$namespace}arrow-inline--left"></span> Left</div>
 ////
 
+@import '../sass/arrows';
+
 $border-colored: 4px solid currentColor;
 $border-transparent: 4px solid transparent;
 

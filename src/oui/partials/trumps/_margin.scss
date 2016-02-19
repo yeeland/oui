@@ -191,31 +191,3 @@
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
-
-
-/// Last Item Margin
-/// @description Per [http://css-tricks.com/spacing-the-bottom-of-modules/](http://css-tricks.com/spacing-the-bottom-of-modules/)
-/// this removes the margin from the last child that would otherwise create too
-/// much space inside a element with bottom padding.
-///
-/// @example[html] Given the following HTML the second paragraph would
-/// ordinarily have a default bottom margin.
-///
-///   <div class="foo">
-///     <p>This is a paragraph with default bottom margin.</p>
-///     <p>This is a paragraph with a killed bottom margin.</p>
-///   </div>
-///
-/// @example[html] Margin goes away with the `%kill-last-child-margin`
-/// extended to it.
-///   .foo {
-///     @extend %kill-last-child-margin;
-///   }
-
-%kill-last-child-margin {
-  & > *:last-child, // scss-lint:disable UnnecessaryParentReference
-  & > *:last-child > *:last-child, // scss-lint:disable UnnecessaryParentReference
-  & > *:last-child > *:last-child > *:last-child { // scss-lint:disable UnnecessaryParentReference
-    margin-bottom: 0;
-  }
-}

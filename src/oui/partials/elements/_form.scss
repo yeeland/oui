@@ -274,6 +274,8 @@
 ///   </form>
 ////
 
+@import '../sass/kill-last-child-margin';
+
 %#{$namespace}text-input,
 %#{$namespace}textarea,
 .#{$namespace}text-input,

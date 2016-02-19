@@ -20,6 +20,8 @@
 ///   </button>
 ////
 
+@import '../sass/arrows';
+
 .#{$namespace}pop--tip {
   background: map-fetch($color, ui, dark);
   color: map-fetch($color, text, white);

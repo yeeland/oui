@@ -9,92 +9,17 @@
 ///
 /// `flex-grow` is not supported by IE10, `justify-content` is the next best
 /// thing.
-/// @group Elements
-////
-
-/// Flexbox mixins
 /// @example[scss] Mixins can be used in SCSS files.
 ///   .foo {
 ///     @include display(flex);
 ///     @include flex(1);
 ///   }
-
-@mixin display($value) {
-  display: -webkit-#{$value};
-  display: -ms-#{$value}box;
-  display: $value;
-}
-
-@mixin flex($num) {
-  -webkit-flex: $num;
-  -ms-flex: $num;
-  flex: $num;
-  @if ($num != '0') { // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
-    min-height: 0;
-    min-width: 0;
-  }
-}
-
-@mixin flex-wrap($value) {
-  -webkit-flex-wrap: $value;
-  -ms-flex-wrap: $value;
-  flex-wrap: $value;
-}
-
-@mixin flex-grow($value) {
-  -webkit-flex-grow: $value;
-  -ms-flex-grow: $value; // Doesn't work in IE 10.
-  flex-grow: $value;
-}
-
-@mixin flex-direction($value) {
-  -webkit-flex-direction: $value;
-  -ms-flex-direction: $value;
-  flex-direction: $value;
-}
-
-//  Note: `justify-content: space-around;` does not work in IE 10
-@mixin justify-content($value) {
-  -webkit-justify-content: $value;
-  @if ($value == 'space-between') {
-    -ms-flex-pack: justify;
-  } @elseif ($value == 'flex-start') {
-    -ms-flex-pack: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-pack: end;
-  } @else {
-    -ms-flex-pack: $value;
-  }
-  justify-content: $value;
-}
-
-@mixin align-items($value) {
-  -webkit-align-items: $value;
-  @if ($value == 'flex-start') {
-    -ms-flex-align: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-align: end;
-  } @else {
-    -ms-flex-align: $value;
-  }
-  align-items: $value;
-}
-
-@mixin align-self($value) {
-  -webkit-align-self: $value;
-  @if ($value == 'flex-start') {
-    -ms-flex-item-align: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-item-align: end;
-  } @else {
-    -ms-flex-item-align: $value;
-  }
-  align-self: $value;
-}
-
-/// Flexbox classes
 /// @example[html] Classes can be used directly in HTML.
 ///   <div class="flex flex--1">item</div>
+/// @group Elements
+////
+
+@import '../sass/flexbox';
 
 .flex {
   @include display(flex);

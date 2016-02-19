@@ -44,6 +44,8 @@
 ///   </div>
 ////
 
+@import '../sass/kill-last-child-margin';
+
 .#{$namespace}dialog {
   position: relative;
   box-shadow: 0 0 map-fetch($shadow, big);

@@ -16,7 +16,7 @@
 ///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
 ///     </div>
 ///   </div>
-
+///
 ///   <div class="disclose" data-oui-disclose>
 ///     <a href="#" class="disclose__link" data-oui-disclose-link>
 ///       <div class="disclose__arrow">
@@ -30,6 +30,8 @@
 ///     </div>
 ///   </div>
 ////
+
+@import '../sass/kill-last-child-margin';
 
 .#{$namespace}disclose {
   @extend %kill-last-child-margin;

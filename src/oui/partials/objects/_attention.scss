@@ -36,6 +36,8 @@
 ///   </div>
 ////
 
+@import '../sass/kill-last-child-margin';
+
 %#{$namespace}attention,
 .#{$namespace}attention {
   @extend %kill-last-child-margin;

@@ -37,41 +37,7 @@
 ///   </div>
 ////
 
-@mixin media($responsive: null) {
-  @include display(flex);
-  @include align-items(flex-start);
-
-  &__img {
-    margin-right: spacer(1);
-    margin-top: 0.7%; // Aligns image better with text.
-  }
-
-  &__img--rev {
-    margin-left: spacer(1);
-    margin-top: 0.7%; // Aligns image better with text.
-  }
-
-  &__body {
-    @extend %kill-last-child-margin;
-    @include flex(1);
-  }
-
-  @if ($responsive) {
-    @include breakpoint($max: $responsive) {
-      display: block;
-
-      &__img,
-      &__img--rev {
-        margin-right: 0;
-        margin-top: 0;
-      }
-
-      &__body {
-        @include flex(none);
-      }
-    }
-  }
-}
+@import '../sass/media';
 
 %#{$namespace}media,
 .#{$namespace}media {

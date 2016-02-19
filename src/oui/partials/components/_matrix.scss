@@ -17,41 +17,6 @@
 ///   .foo {
 ///     @include matrix(3, 4, 300px);
 ///   }
-/// @group Components
-////
-
-@mixin matrix($columns: null, $spacing: 2, $responsive: null) {
-  @extend %#{$namespace}grid;
-  margin-left: -(spacer($spacing));
-
-  > li {
-    padding-left: spacer($spacing);
-  }
-
-  @if ($columns) {
-    &--1-#{$columns} {
-      > li {
-        width: percentage(1/$columns);
-      }
-    }
-  }
-
-  @if ($responsive) {
-    @include breakpoint($max: $responsive) {
-      display: block;
-      margin-left: 0;
-
-      > li {
-        padding-left: 0;
-        margin-bottom: spacer($spacing);
-        width: auto;
-      }
-    }
-  }
-}
-
-/// Matrix classes
-/// @description Some matrix classes are provided out of the box.
 /// @example[html]
 ///   <ul class="#{$namespace}matrix #{$namespace}matrix--1-2">
 ///     <li><div>matrix 1</div></li>
@@ -59,6 +24,10 @@
 ///     <li><div>matrix 3</div></li>
 ///     <li><div>matrix 4</div></li>
 ///   </ul>
+/// @group Components
+////
+
+@import '../sass/matrix';
 
 %#{$namespace}matrix,
 .#{$namespace}matrix {

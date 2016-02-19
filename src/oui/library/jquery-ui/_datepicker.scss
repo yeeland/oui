@@ -1,6 +1,8 @@
 // # Datepicker Skin
 // Overrides jQuery's default styling for the Datepicker.
 
+@import '../sass/arrows';
+
 #ui-datepicker-div {
   display: none;
   background: map-fetch($color, background, white);

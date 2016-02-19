@@ -112,6 +112,9 @@
 ///   </div>
 ////
 
+@import '../sass/arrows';
+@import '../sass/kill-last-child-margin';
+
 %#{$namespace}pop--over,
 .#{$namespace}pop--over {
   border: 1px solid map-fetch($border, color, base);

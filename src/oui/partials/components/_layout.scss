@@ -7,30 +7,26 @@
 /// @group Components
 ////
 
-@mixin center--child {
+.center--child {
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
 }
 
-.center--child {
-  @include center--child;
-}
-
 // Used on any element to center it inside a parent that has a width/height.
 // Element should be `display: block` with a width.
 
-@mixin center--me($positioning: relative) {
-  position: $positioning;
+.center--me--relative,
+.center--me--absolute {
   top: 50%;
   left: 50%;
   @include transform(translateY(-50%) translateX(-50%));
 }
 
 .center--me--relative {
-  @include center--me(relative);
+  position: relative;
 }
 
 .center--me--absolute {
-  @include center--me(absolute);
+  position: absolute;
 }
