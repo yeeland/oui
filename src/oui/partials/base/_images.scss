@@ -34,7 +34,7 @@ img[height] {
 
 %img--round,
 .img--round {
-  border-radius: map-fetch($border, radius base);
+  border-radius: map-fetch($border, radius, base);
 }
 
 /// Circle images
@@ -54,7 +54,7 @@ img[height] {
 
 %img--border,
 .img--border {
-  border: 1px solid map-fetch($border, color base);
+  border: 1px solid map-fetch($border, color, base);
 }
 
 /// Image placement

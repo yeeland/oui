@@ -67,7 +67,7 @@
 ////
 
 .#{$namespace}dropdown-group {
-  font-size: map-fetch($font, size base);
+  font-size: map-fetch($font, size, base);
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -82,7 +82,7 @@
 %#{$namespace}dropdown,
 .#{$namespace}dropdown {
   @extend %#{$namespace}block-list-group;
-  background: map-fetch($color, background white);
+  background: map-fetch($color, background, white);
   box-shadow: 0 2px map-fetch($shadow, light);
   min-width: 100%;
   position: absolute;
@@ -97,10 +97,10 @@
 
   &__item {
     white-space: nowrap;
-    color: map-fetch($color, text base);
+    color: map-fetch($color, text, base);
 
     &--active {
-      background: map-fetch($color, background faint);
+      background: map-fetch($color, background, faint);
     }
   }
 

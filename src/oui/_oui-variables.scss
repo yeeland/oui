@@ -175,7 +175,7 @@ $button: (
     base: (
       background             : #F6F6F7,
       border                 : #CDD0D8,
-      color                  : map-fetch($color, text base),
+      color                  : map-fetch($color, text, base),
       hover:(
         box-shadow           : 1px 1px 2px 0 rgba(0, 0, 0, 0.16),
       ),
@@ -254,7 +254,7 @@ $button: (
     disabled: (
       background             : #EFF0F2,
       border                 : #E5E5E9,
-      color                  : map-fetch($color, text muted)
+      color                  : map-fetch($color, text, muted)
     )
   )
 );
@@ -279,7 +279,7 @@ $dropdown: (
 
 $border: (
   color: (
-    base                     : map-fetch($color, ui base)
+    base                     : map-fetch($color, ui, base)
   ),
   radius: (
     base                     : 2px,

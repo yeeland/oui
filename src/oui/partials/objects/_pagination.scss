@@ -32,6 +32,6 @@
   }
 
   &__current > a {
-    color: map-fetch($color, text base);
+    color: map-fetch($color, text, base);
   }
 }

@@ -20,7 +20,7 @@
     -ms-overflow-style: -ms-autohiding-scrollbar; // Shows/hides scroll bar on Windows.
     width: calc(100% + #{map-fetch($edittext, spacer)} * 2); // Can't use right/bottom here on textarea so adding extra distance.
     height: calc(100% + #{map-fetch($edittext, spacer)} * 2);
-    border-radius: map-fetch($border, radius base);
+    border-radius: map-fetch($border, radius, base);
     border-bottom-right-radius: 0;
   }
 
@@ -33,20 +33,20 @@
     .button {
       height: 22px; // Making buttons smaller, this is custom.
       line-height: 22px;
-      border-radius: 0 0 map-fetch($border, radius base);
-      border: 1px solid map-fetch($color, ui brand-light);
+      border-radius: 0 0 map-fetch($border, radius, base);
+      border: 1px solid map-fetch($color, ui, brand-light);
       border-top: 0;
-      background: map-fetch($color, ui white);
+      background: map-fetch($color, ui, white);
     }
 
     .button:first-child {
       border-right: 0;
-      border-radius: 0 0 0 map-fetch($border, radius base);
+      border-radius: 0 0 0 map-fetch($border, radius, base);
     }
 
     .button:hover {
-      background: map-fetch($color, ui white);
-      border: 1px solid map-fetch($color, ui brand-light);
+      background: map-fetch($color, ui, white);
+      border: 1px solid map-fetch($color, ui, brand-light);
       border-top: 0;
     }
 
