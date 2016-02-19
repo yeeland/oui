@@ -21,6 +21,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Fix typo in license.
+
+## [9.0.1][9.0.1] - 2015-02-19
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
 ## [9.0.0][9.0.0] - 2016-01-19
@@ -226,7 +228,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -241,3 +243,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [7.1.0]: https://github.com/optimizely/oui/compare/v7.0.0...v7.1.0
 [8.0.0]: https://github.com/optimizely/oui/compare/v7.1.0...v8.0.0
 [9.0.0]: https://github.com/optimizely/oui/compare/v8.0.0...v9.0.0
+[9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1
