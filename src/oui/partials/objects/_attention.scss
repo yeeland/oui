@@ -40,28 +40,28 @@
 .#{$namespace}attention {
   @extend %kill-last-child-margin;
   padding: spacer(1);
-  border-radius: map-fetch($border, radius base);
-  border: 1px solid map-fetch($border, color base);
-  background: map-fetch($color, background faint);
+  border-radius: map-fetch($border, radius, base);
+  border: 1px solid map-fetch($border, color, base);
+  background: map-fetch($color, background, faint);
 
   &--brand {
-    border-color: map-fetch($color, ui brand-light);
-    background-color: map-fetch($color, background brand-light);
+    border-color: map-fetch($color, ui, brand-light);
+    background-color: map-fetch($color, background, brand-light);
   }
 
   &--warning {
-    border-color: map-fetch($color, ui warning);
-    background-color: map-fetch($color, background warning);
+    border-color: map-fetch($color, ui, warning);
+    background-color: map-fetch($color, background, warning);
   }
 
   &--good-news {
-    border-color: map-fetch($color, ui good-news);
-    background-color: map-fetch($color, background good-news);
+    border-color: map-fetch($color, ui, good-news);
+    background-color: map-fetch($color, background, good-news);
   }
 
   &--bad-news {
-    border-color: map-fetch($color, ui bad-news);
-    background-color: map-fetch($color, background bad-news);
+    border-color: map-fetch($color, ui, bad-news);
+    background-color: map-fetch($color, background, bad-news);
   }
 
   &__close {
