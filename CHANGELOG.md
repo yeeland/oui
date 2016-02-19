@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 
 ## [9.0.1][9.0.1] - 2016-02-19
+### Fixed
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
 ## [9.0.0][9.0.0] - 2016-01-19
