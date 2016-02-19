@@ -9,6 +9,6 @@
 ////
 
 blockquote {
-  border-left: 3px solid map-fetch($color, ui base);
+  border-left: 3px solid map-fetch($color, ui, base);
   padding-left: spacer(1.5);
 }

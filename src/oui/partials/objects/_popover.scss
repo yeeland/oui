@@ -114,9 +114,9 @@
 
 %#{$namespace}pop--over,
 .#{$namespace}pop--over {
-  border: 1px solid map-fetch($border, color base);
-  border-radius: map-fetch($border, radius base);
-  background: map-fetch($color, background white);
+  border: 1px solid map-fetch($border, color, base);
+  border-radius: map-fetch($border, radius, base);
+  background: map-fetch($color, background, white);
   max-width: map-fetch($popover, max-width);
   box-shadow: 0 2px map-fetch($shadow, light);
   position: absolute;
@@ -143,50 +143,50 @@
   // Arrow options. 12 possible positions.
 
   &--arrow-top-left {
-    @include arrow(top, left, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(top, left, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-top-center {
-    @include arrow(top, center, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(top, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-top-right {
-    @include arrow(top, right, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(top, right, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-right-top {
-    @include arrow(right, top, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(right, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-right-center {
-    @include arrow(right, center, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(right, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-right-bottom {
-    @include arrow(right, bottom, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(right, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-bottom-right {
-    @include arrow(bottom, right, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(bottom, right, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-bottom-center {
-    @include arrow(bottom, center, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(bottom, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-bottom-left {
-    @include arrow(bottom, left, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(bottom, left, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-left-bottom {
-    @include arrow(left, bottom, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(left, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-left-center {
-    @include arrow(left, center, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(left, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
   &--arrow-left-top {
-    @include arrow(left, top, map-fetch($color, ui white), map-fetch($color, ui base));
+    @include arrow(left, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 }
