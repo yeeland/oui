@@ -19,6 +19,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Removing old code from `reset.css`. (#226)
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
+- [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
+- [Patch] Clean up `package.json`.
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
