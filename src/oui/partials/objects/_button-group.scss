@@ -23,7 +23,7 @@
 
 %#{$namespace}button-group,
 .#{$namespace}button-group {
-  @include display(flex);
+  display: flex;
 
   > *,
   > * > * {
@@ -53,7 +53,7 @@
   }
 
   > .#{$namespace}text-input {
-    @include flex(1);
+    flex: 1;
     width: auto;
   }
 

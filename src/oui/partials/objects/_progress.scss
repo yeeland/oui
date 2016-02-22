@@ -34,10 +34,10 @@
   }
 
   &__bar {
-    @include transition(width map-fetch($transition-duration, base));
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
+    transition: width map-fetch($transition-duration, base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
     height: 100%;
     background: map-fetch($color, background, brand);

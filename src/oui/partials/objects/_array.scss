@@ -19,10 +19,10 @@
 
 %#{$namespace}array,
 .#{$namespace}array {
-  @include display(flex);
+  display: flex;
 
   &__item {
-    @include flex(1);
+    flex: 1;
     margin-left: spacer(1);
     margin-right: spacer(1);
 

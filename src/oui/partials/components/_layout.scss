@@ -8,9 +8,9 @@
 ////
 
 @mixin center--child {
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .center--child {
@@ -24,7 +24,7 @@
   position: $positioning;
   top: 50%;
   left: 50%;
-  @include transform(translateY(-50%) translateX(-50%));
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .center--me--relative {

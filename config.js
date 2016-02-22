@@ -5,6 +5,7 @@ var paths = {
       '!src/oui/library/**/*.scss',
   ],
   cssDest: './dist/css/',
+  cssDestName: './dist/css/oui.css',
   oui: './src/oui/oui.scss',
   extrasDestName: 'oui-extras.css',
   scssLint: '.scss-lint.yml',
