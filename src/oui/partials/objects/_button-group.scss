@@ -23,7 +23,7 @@
 
 %#{$namespace}button-group,
 .#{$namespace}button-group {
-  @include display(flex);
+  display: flex;
 
   > *,
   > * > * {
@@ -40,11 +40,11 @@
     }
 
     &:first-child {
-      border-radius: map-get($border, radius base) 0 0 map-get($border, radius base);
+      border-radius: map-fetch($border, radius, base) 0 0 map-fetch($border, radius, base);
     }
 
     &:last-child {
-      border-radius: 0 map-get($border, radius base) map-get($border, radius base) 0;
+      border-radius: 0 map-fetch($border, radius, base) map-fetch($border, radius, base) 0;
     }
   }
 
@@ -53,7 +53,7 @@
   }
 
   > .#{$namespace}text-input {
-    @include flex(1);
+    flex: 1;
     width: auto;
   }
 

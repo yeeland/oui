@@ -70,12 +70,12 @@
 ////
 
 @mixin grid($responsive: null) {
-  @include display(flex);
-  @include flex-wrap(wrap);
+  display: flex;
+  flex-wrap: wrap;
   margin-left: -(spacer(2));
 
   &__cell {
-    @include flex(1);
+    flex: 1;
     padding-left: spacer(2);
   }
 
@@ -106,7 +106,7 @@
   // Grid cells only grow as large as the content.
   &--natural {
     > .#{$namespace}grid__cell {
-      @include flex(none);
+      flex: none;
     }
   }
 
@@ -116,7 +116,7 @@
       margin-left: 0;
 
       &__cell {
-        @include flex(none);
+        flex: none;
         padding-left: 0 !important;
         margin-bottom: spacer(2);
       }
@@ -132,11 +132,11 @@
   // Moves grid cells to align center or anchored at the bottom of the grid.
 
   &--center {
-    @include align-items(center);
+    align-items: center;
   }
 
   &--bottom {
-    @include align-items(flex-end);
+    align-items: flex-end;
   }
 
   // Grid Widths

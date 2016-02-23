@@ -6,169 +6,93 @@
 /// In IE10 at least one of the flex children needs to have a width or flex
 /// value otherwise the content in those children will not wrap. However, if
 /// none of children will collide, no width or flex value is needed.
-///
-/// `flex-grow` is not supported by IE10, `justify-content` is the next best
-/// thing.
-/// @group Elements
-////
-
-/// Flexbox mixins
-/// @example[scss] Mixins can be used in SCSS files.
-///   .foo {
-///     @include display(flex);
-///     @include flex(1);
-///   }
-
-@mixin display($value) {
-  display: -webkit-#{$value};
-  display: -ms-#{$value}box;
-  display: $value;
-}
-
-@mixin flex($num) {
-  -webkit-flex: $num;
-  -ms-flex: $num;
-  flex: $num;
-  @if ($num != '0') { // http://stackoverflow.com/questions/29398259/css-flexbox-issue-in-firefox-v36-and-greater
-    min-height: 0;
-    min-width: 0;
-  }
-}
-
-@mixin flex-wrap($value) {
-  -webkit-flex-wrap: $value;
-  -ms-flex-wrap: $value;
-  flex-wrap: $value;
-}
-
-@mixin flex-grow($value) {
-  -webkit-flex-grow: $value;
-  -ms-flex-grow: $value; // Doesn't work in IE 10.
-  flex-grow: $value;
-}
-
-@mixin flex-direction($value) {
-  -webkit-flex-direction: $value;
-  -ms-flex-direction: $value;
-  flex-direction: $value;
-}
-
-//  Note: `justify-content: space-around;` does not work in IE 10
-@mixin justify-content($value) {
-  -webkit-justify-content: $value;
-  @if ($value == 'space-between') {
-    -ms-flex-pack: justify;
-  } @elseif ($value == 'flex-start') {
-    -ms-flex-pack: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-pack: end;
-  } @else {
-    -ms-flex-pack: $value;
-  }
-  justify-content: $value;
-}
-
-@mixin align-items($value) {
-  -webkit-align-items: $value;
-  @if ($value == 'flex-start') {
-    -ms-flex-align: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-align: end;
-  } @else {
-    -ms-flex-align: $value;
-  }
-  align-items: $value;
-}
-
-@mixin align-self($value) {
-  -webkit-align-self: $value;
-  @if ($value == 'flex-start') {
-    -ms-flex-item-align: start;
-  } @elseif ($value == 'flex-end') {
-    -ms-flex-item-align: end;
-  } @else {
-    -ms-flex-item-align: $value;
-  }
-  align-self: $value;
-}
 
 /// Flexbox classes
 /// @example[html] Classes can be used directly in HTML.
 ///   <div class="flex flex--1">item</div>
 
 .flex {
-  @include display(flex);
+  display: flex;
 }
 
 .flex--row {
-  @include flex-direction(row);
+  flex-direction: row;
 }
 
 .flex--column {
-  @include flex-direction(column);
+  flex-direction: column;
 }
 
 .flex--1 {
-  @include flex(1);
+  flex: 1;
 }
 
 .flex--none {
-  @include flex(none);
+  flex: none;
 }
 
 // Flex align
 
 .flex-align--start {
-  @include align-items(flex-start);
+  align-items: flex-start;
 }
 
 .flex-align--center {
-  @include align-items(center);
+  align-items: center;
 }
 
 .flex-align--end {
-  @include align-items(flex-end);
+  align-items: flex-end;
 }
 
 // Flex justified
 
 .flex-justified--start {
-  @include justify-content(flex-start);
+  justify-content: flex-start;
 }
 
 .flex-justified--center {
-  @include justify-content(center);
+  justify-content: center;
 }
 
 .flex-justified--end {
-  @include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 .flex-justified--between {
-  @include justify-content(space-between);
+  justify-content: space-between;
 }
 
 // Flex wrap
 
 .flex-wrap {
-  @include flex-wrap(wrap);
+  flex-wrap: wrap;
 }
 
 .flex-wrap--reverse {
-  @include flex-wrap(wrap-reverse);
+  flex-wrap: wrap-reverse;
 }
 
 // Flex align-self
 // Note: applies to immediate children of `display: flex;` parent.
 
 .flex-self--start {
-  @include align-self(flex-start);
+  align-self: flex-start;
 }
 
 .flex-self--center {
-  @include align-self(center);
+  align-self: center;
 }
 
 .flex-self--end {
-  @include align-self(flex-end);
+  align-self: flex-end;
+}
+
+// Flex Firefox layout fix
+// This is triggered when children of flex elements require overflow. Firefox requires a `min-height/width`.
+// http://stackoverflow.com/questions/28636832/firefox-overflow-y-not-working-with-nested-flexbox
+
+.flex-overflow-fix {
+  min-height: 0;
+  min-width: 0;
 }

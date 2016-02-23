@@ -23,7 +23,7 @@
 
   &__left,
   &__right {
-    @include transform(translateY(-50%));
+    transform: translateY(-50%);
     pointer-events: none;
     position: absolute;
     top: 50%;
@@ -38,6 +38,6 @@
   }
 
   &__muted {
-    fill: map-fetch($color, ui medium);
+    fill: map-fetch($color, ui, medium);
   }
 }

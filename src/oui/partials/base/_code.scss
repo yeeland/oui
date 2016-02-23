@@ -10,7 +10,7 @@
 ////
 
 code {
-  font-family: map-fetch($font, family monospace);
+  font-family: map-fetch($font, family, monospace);
 }
 
 .#{$namespace}pre {
@@ -19,17 +19,17 @@ code {
 
   code {
     padding: spacer(1);
-    background: map-fetch($color, background faint);
+    background: map-fetch($color, background, faint);
     overflow-x: auto;
     display: block;
-    border-radius: map-fetch($border, radius base);
-    border: 1px solid map-fetch($border, color base);
+    border-radius: map-fetch($border, radius, base);
+    border: 1px solid map-fetch($border, color, base);
   }
 }
 
 .#{$namespace}code {
-  background: map-fetch($color, background faint);
-  border-radius: map-fetch($border, radius base);
-  border: 1px solid map-fetch($border, color base);
+  background: map-fetch($color, background, faint);
+  border-radius: map-fetch($border, radius, base);
+  border: 1px solid map-fetch($border, color, base);
   padding: 1px 3px;
 }

@@ -6,34 +6,50 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Add more ScribeSass comments.
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)
 - [Patch] Added reference and link to documenation. (#231)
 
 ### Changed
+- [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
-- [Release] Remove `.#{$namespace}form--small` (#162)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#226)
-- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
-- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
+- [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
+- [Patch] Clean up `package.json`.
+- [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
 - [Patch] Using `display:none` on dropdowns so they don't take up any space when on page. (#236).
 - [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
 - [Patch] Adding variable for input padding. (#220).
+- [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
+- [Patch] Remove comment that didn't have any content. (#257)
 - [Patch] Fix typo in license.
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 - [Patch] Remove references to `lego-` in README. (#245)
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
 - [Patch] Tiny documentation fixes. (#234)
+- [Patch] Add other input types to input reset. (#261)
+- [Patch] Rename an incorrect width class referenced within a comment. (#256)
+
+## Removed
+- [Release] Remove unused retina sprites file. (#264)
+- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
+- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
+- [Release] Remove `.#{$namespace}form--small` (#162)
+
+## [9.0.1][9.0.1] - 2016-02-19
+### Fixed
+- [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
 ## [9.0.0][9.0.0] - 2016-01-19
 ### Added
@@ -239,7 +255,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -254,3 +270,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [7.1.0]: https://github.com/optimizely/oui/compare/v7.0.0...v7.1.0
 [8.0.0]: https://github.com/optimizely/oui/compare/v7.1.0...v8.0.0
 [9.0.0]: https://github.com/optimizely/oui/compare/v8.0.0...v9.0.0
+[9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1

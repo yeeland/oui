@@ -26,40 +26,40 @@
 
 %#{$namespace}steps,
 .#{$namespace}steps {
-  @include display(flex);
-  @include justify-content(center);
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 
   &__dot {
-    @include transform(translateX(-50%));
-    @include transition(all map-fetch($transition-duration, base));
+    transform: translateX(-50%);
+    transition: all map-fetch($transition-duration, base);
     position: absolute;
     width: 16px;
     height: 16px;
     top: -7px;
     left: 50%;
     border-radius: 50%;
-    border: 3px solid map-fetch($color, ui base);
-    background: map-fetch($color, ui white);
+    border: 3px solid map-fetch($color, ui, base);
+    background: map-fetch($color, ui, white);
     z-index: 1;
   }
 
   &__label {
     text-align: center;
     font-weight: 400;
-    color: map-fetch($color, text muted);
+    color: map-fetch($color, text, muted);
   }
 
   &__item {
-    @include flex(1);
+    flex: 1;
     padding-top: spacer(2);
     position: relative;
 
     &::before {
       content: '';
       height: 3px;
-      background: map-fetch($color, ui base);
+      background: map-fetch($color, ui, base);
       width: 100%;
       position: absolute;
       top: 0;
@@ -68,27 +68,27 @@
 
     &--active {
       &::before {
-        background: map-fetch($color, ui brand);
+        background: map-fetch($color, ui, brand);
       }
 
       .#{$namespace}steps__dot {
-        background: map-fetch($color, ui brand);
-        border-color: map-fetch($color, ui brand);
+        background: map-fetch($color, ui, brand);
+        border-color: map-fetch($color, ui, brand);
       }
 
       .#{$namespace}steps__label {
-        color: map-fetch($color, text brand);
+        color: map-fetch($color, text, brand);
       }
     }
 
     &--complete {
 
       &::before {
-        background: map-fetch($color, ui brand);
+        background: map-fetch($color, ui, brand);
       }
 
       .#{$namespace}steps__dot {
-        border-color: map-fetch($color, ui brand);
+        border-color: map-fetch($color, ui, brand);
       }
     }
 

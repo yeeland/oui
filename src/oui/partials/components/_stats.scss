@@ -22,7 +22,7 @@
 
 %#{$namespace}stat-group,
 .#{$namespace}stat-group {
-  @include display(flex);
+  display: flex;
 }
 
 %#{$namespace}stat,

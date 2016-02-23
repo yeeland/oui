@@ -17,7 +17,7 @@
 ////
 
 .#{$namespace}pagination {
-  @include justify-content(center);
+  justify-content: center;
 
   > li {
     padding: spacer(0.5);
@@ -32,6 +32,6 @@
   }
 
   &__current > a {
-    color: map-fetch($color, text base);
+    color: map-fetch($color, text, base);
   }
 }

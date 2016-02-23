@@ -57,44 +57,44 @@
 ////
 
 .#{$namespace}tabs-nav {
-  @include display(flex);
-  border-bottom: 3px solid map-fetch($color, ui base);
+  display: flex;
+  border-bottom: 3px solid map-fetch($color, ui, base);
 
   &__item {
     position: relative;
     text-align: center;
     padding: spacer(1) spacer(1.5);
-    border: 1px solid map-fetch($border, color base);
+    border: 1px solid map-fetch($border, color, base);
     border-right: 0;
     border-bottom: 0;
-    color: map-fetch($color, text medium);
+    color: map-fetch($color, text, medium);
     font-weight: 400;
-    background-color: map-fetch($color, background faint);
+    background-color: map-fetch($color, background, faint);
     cursor: pointer;
 
     &:first-child {
-      border-top-left-radius: map-fetch($border, radius big);
+      border-top-left-radius: map-fetch($border, radius, big);
     }
 
     &:last-child {
-      border-top-right-radius: map-fetch($border, radius big);
-      border-right: 1px solid map-fetch($border, color base);
+      border-top-right-radius: map-fetch($border, radius, big);
+      border-right: 1px solid map-fetch($border, color, base);
     }
 
     &:hover,
     &.is-active {
-      color: map-fetch($color, text brand);
+      color: map-fetch($color, text, brand);
     }
 
     &.is-active {
-      background-color: map-fetch($color, background white);
+      background-color: map-fetch($color, background, white);
       cursor: default;
 
       &::after { // Creates the white bar under the active tab.
         content: '';
         display: block;
         height: 3px;
-        background: map-fetch($color, background white);
+        background: map-fetch($color, background, white);
         position: absolute;
         left: 0;
         right: 0;
@@ -113,13 +113,13 @@
   .#{$namespace}tabs-nav__item {
     background-color: transparent;
     padding: spacer(0.5) spacer(1);
-    font-size: map-fetch($font, size milli);
+    font-size: map-fetch($font, size, milli);
   }
 }
 
 .#{$namespace}tabs--center {
   .#{$namespace}tabs-nav {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   .#{$namespace}tabs-nav__item:first-child {
@@ -133,7 +133,7 @@
 
     &.is-active::after {
       height: 2px;
-      background: map-fetch($color, background brand);
+      background: map-fetch($color, background, brand);
       bottom: -1px;
     }
 

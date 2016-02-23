@@ -14,32 +14,32 @@
 
 %color--base,
 .color--base {
-  color: map-fetch($color, text base) !important;
+  color: map-fetch($color, text, base) !important;
 }
 
 %color--brand,
 .color--brand {
-  color: map-fetch($color, text brand) !important;
+  color: map-fetch($color, text, brand) !important;
 }
 
 %color--good-news,
 .color--good-news {
-  color: map-fetch($color, text good-news) !important;
+  color: map-fetch($color, text, good-news) !important;
 }
 
 %color--warning,
 .color--warning {
-  color: map-fetch($color, text warning) !important;
+  color: map-fetch($color, text, warning) !important;
 }
 
 %color--bad-news,
 .color--bad-news {
-  color: map-fetch($color, text bad-news) !important;
+  color: map-fetch($color, text, bad-news) !important;
 }
 
 %color--charcoal,
 .color--charcoal {
-  color: map-fetch($color, text charcoal) !important;
+  color: map-fetch($color, text, charcoal) !important;
 }
 
 
@@ -97,15 +97,15 @@
 ///   <div class="muted">This is a muted color. Can be applied to anything.</div>
 
 .reverse {
-  color: map-fetch($color, text white) !important;
+  color: map-fetch($color, text, white) !important;
 }
 
 .muted {
-  color: map-fetch($color, text muted) !important;
+  color: map-fetch($color, text, muted) !important;
 }
 
 .faint {
-  color: map-fetch($color, text faint) !important;
+  color: map-fetch($color, text, faint) !important;
 }
 
 /// Proceed (Align Right)
@@ -182,11 +182,11 @@
 /// @description For adjusting line-heights.
 
 .line--tight {
-  line-height: map-fetch($font, line-height tight) !important;
+  line-height: map-fetch($font, line-height, tight) !important;
 }
 
 .line--loose {
-  line-height: map-fetch($font, line-height loose) !important;
+  line-height: map-fetch($font, line-height, loose) !important;
 }
 
 .line--1 {

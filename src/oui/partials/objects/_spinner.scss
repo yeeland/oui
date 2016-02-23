@@ -38,9 +38,9 @@
 
 %#{$namespace}overlay,
 .#{$namespace}overlay {
-  @include display(flex);
-  @include justify-content(center);
-  @include align-items(center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.6);
   position: absolute;
   top: 0;
@@ -53,51 +53,51 @@
 
 @include keyframes(spin-animate) {
   100% {
-    @include transform(rotate(360deg));
+    transform: rotate(360deg);
   }
 }
 
 .#{$namespace}spinner {
-  @include animation(spin-animate map-fetch($spinner, speed) infinite linear);
-  width: map-fetch($spinner, size base);
-  height: map-fetch($spinner, size base);
-  border: map-fetch($spinner, border width base) solid map-fetch($color, background brand-light);
+  animation: spin-animate map-fetch($spinner, speed) infinite linear;
+  width: map-fetch($spinner, size, base);
+  height: map-fetch($spinner, size, base);
+  border: map-fetch($spinner, border, width, base) solid map-fetch($color, background, brand-light);
   display: inline-block;
   border-radius: 50%;
   position: relative;
 
   &::before {
     content: '';
-    width: map-fetch($spinner, size base);
-    height: map-fetch($spinner, size base);
+    width: map-fetch($spinner, size, base);
+    height: map-fetch($spinner, size, base);
     border-radius: 50%;
     display: block;
     position: absolute;
-    left: -(map-fetch($spinner, border width base));
-    top: -(map-fetch($spinner, border width base));
-    border-width: map-fetch($spinner, border width base);
+    left: -(map-fetch($spinner, border, width, base));
+    top: -(map-fetch($spinner, border, width, base));
+    border-width: map-fetch($spinner, border, width, base);
     border-style: solid;
-    border-right-color: map-fetch($color, background brand-light);
-    border-top-color: map-fetch($color, background brand-light);
-    border-left-color: map-fetch($color, background brand);
-    border-bottom-color: map-fetch($color, background brand-light);
+    border-right-color: map-fetch($color, background, brand-light);
+    border-top-color: map-fetch($color, background, brand-light);
+    border-left-color: map-fetch($color, background, brand);
+    border-bottom-color: map-fetch($color, background, brand-light);
   }
 
   &--small,
   &--small::before {
-    width: map-fetch($spinner, size small);
-    height: map-fetch($spinner, size small);
-    border-width: map-fetch($spinner, border width small);
-    left: -(map-fetch($spinner, border width small));
-    top: -(map-fetch($spinner, border width small));
+    width: map-fetch($spinner, size, small);
+    height: map-fetch($spinner, size, small);
+    border-width: map-fetch($spinner, border, width, small);
+    left: -(map-fetch($spinner, border, width, small));
+    top: -(map-fetch($spinner, border, width, small));
   }
 
   &--tiny,
   &--tiny::before {
-    width: map-fetch($spinner, size tiny);
-    height: map-fetch($spinner, size tiny);
-    border-width: map-fetch($spinner, border width tiny);
-    left: -(map-fetch($spinner, border width tiny));
-    top: -(map-fetch($spinner, border width tiny));
+    width: map-fetch($spinner, size, tiny);
+    height: map-fetch($spinner, size, tiny);
+    border-width: map-fetch($spinner, border, width, tiny);
+    left: -(map-fetch($spinner, border, width, tiny));
+    top: -(map-fetch($spinner, border, width, tiny));
   }
 }
