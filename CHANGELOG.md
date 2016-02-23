@@ -5,10 +5,54 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+<<<<<<< HEAD
 
 ## [9.0.2][9.0.2] - 2016-03-14
 ### Added
 - [Patch] Add OUI icons preview URL to icons SCSS comments. (#287)
+=======
+### Added
+- [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
+- [Feature] Adding new white-space trump. (#223)
+- [Patch] Add more ScribeSass comments.
+- [Patch] Added more clarity around `oui-extras.css` in README. (#232)
+- [Patch] Added reference and link to documenation. (#231)
+
+### Changed
+- [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
+- [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
+- [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
+- [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
+- [Patch] Removing old code from `reset.css`. (#226)
+- [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
+- [Patch] Clean up `package.json`.
+- [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
+- [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
+
+### Fixed
+- [Patch] Adding max-height and overflow to dropdowns. (#235).
+- [Patch] Using `display:none` on dropdowns so they don't take up any space when on page. (#236).
+- [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
+- [Patch] Adding variable for input padding. (#220).
+- [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
+- [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
+- [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
+- [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
+- [Patch] Remove comment that didn't have any content. (#257)
+- [Patch] Fix typo in license.
+- [Patch] Remove references to `lego-` in README. (#245)
+- [Patch] Fix incorrect width in width--75 sizing class (#244)
+- [Patch] Removed extraneous comment (#234)
+- [Patch] Tiny documentation fixes. (#234)
+- [Patch] Add other input types to input reset. (#261)
+- [Patch] Rename an incorrect width class referenced within a comment. (#256)
+
+## Removed
+- [Release] Remove unused retina sprites file. (#264)
+- [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
+- [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
+- [Release] Remove `.#{$namespace}form--small` (#162)
+>>>>>>> c28e946... Use `oui-icons` NPM package instead of the GitHub URL.
 
 ## [9.0.1][9.0.1] - 2016-02-19
 ### Fixed
