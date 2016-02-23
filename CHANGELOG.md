@@ -27,6 +27,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
 - [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
+- [Release] Move functions, mixins, and Sass-y things to a `partials/sass/` directory. This change requires updating the main SCSS file that imports the OUI partials and variables. (#259)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).

@@ -90,6 +90,12 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 @import 'oui/partials/elements/functions';
 @import 'oui/partials/elements/mixins';
 
+@import 'oui/partials/sass/arrows';
+@import 'oui/partials/sass/fonts';
+@import 'oui/partials/sass/grid';
+@import 'oui/partials/sass/matrix';
+@import 'oui/partials/sass/media';
+
 // ## OUI and p13n variables
 // Import `oui` and `mobile` variables
 

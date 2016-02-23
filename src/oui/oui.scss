@@ -11,8 +11,15 @@ $include-fonts:(
 );
 
 /// OUI functions and mixins
-@import 'partials/elements/functions';
-@import 'partials/elements/mixins';
+@import 'partials/sass/functions';
+@import 'partials/sass/mixins';
+
+@import 'partials/sass/arrows';
+@import 'partials/sass/fonts';
+@import 'partials/sass/grid';
+@import 'partials/sass/matrix';
+@import 'partials/sass/media';
+
 
 /// OUI variables
 @import 'oui-variables';
