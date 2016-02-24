@@ -18,6 +18,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#226)
+- [Patch] Removing `_edit-text.scss`. Was not being used. (#275)
 - [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
