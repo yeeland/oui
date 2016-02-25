@@ -28,7 +28,7 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.0",
     "mkpath": "^1.0.0",
-    "oui-icons": "^0.1.1",
+    "oui-icons": "^0.1.2",
     "require-dir": "^0.3.0",
     "yargs": "^4.1.0"
   },
