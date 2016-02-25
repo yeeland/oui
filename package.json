@@ -17,6 +17,7 @@
     "gulp-git": "^1.2.4",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-s3": "^0.3.0",
     "gulp-sass": "^2.0.2",
     "gulp-scss-lint": "^0.1.6",
@@ -28,7 +29,8 @@
     "gulp-util": "^3.0.0",
     "mkpath": "^1.0.0",
     "oui-icons": "^0.1.1",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "yargs": "^4.1.0"
   },
   "scripts": {
     "test": "gulp lint && gulp sass",

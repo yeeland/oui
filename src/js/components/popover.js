@@ -22,7 +22,7 @@
     var popID = trigger.dataAttrs[0].ouiPopId;
 
     // Reset the classes to remove any existing arrow classes.
-    $("#" + popID).attr("class", "pop pop--over");
+    $("#" + popID).attr("class", "#{OUI_JS_NAMESPACE}pop #{OUI_JS_NAMESPACE}pop--over");
 
     // Clone the target html.
     var $popHTML = $("#" + popID).clone();

@@ -9,7 +9,6 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
   var location = 1; // Position 1.
   if (trigger.dataAttrs[0].ouiPopLocation !== undefined) {
     location = trigger.dataAttrs[0].ouiPopLocation;
-    console.log(location);
   }
 
   // Amount scrolled.
@@ -100,7 +99,6 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) {
     top: locations[location].top + ANIMATE_DISTANCE,
     left: locations[location].left
   })
-  .addClass(popType + "--arrow-" + locations[location].arrow)
+  .addClass('#{OUI_JS_NAMESPACE}' + popType + '--arrow-' + locations[location].arrow)
   .animate({ opacity: 1, top: locations[location].top }, 'fast');
-
 }
