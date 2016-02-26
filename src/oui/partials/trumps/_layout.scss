@@ -125,6 +125,10 @@
   overflow-y: auto !important;
 }
 
+.overflow-y--scroll {
+  overflow-y: scroll !important;
+}
+
 /// Max Scroll
 /// @description Set a `max-height` to provide scrolling.
 
