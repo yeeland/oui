@@ -12,6 +12,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add more ScribeSass comments.
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)
 - [Patch] Added reference and link to documenation. (#231)
+- [Patch] Added `.overflow-y--scroll` trump.
 
 ### Changed
 - [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
