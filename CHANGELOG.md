@@ -24,6 +24,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
+- [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
@@ -36,7 +37,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Remove comment that didn't have any content. (#257)
 - [Patch] Fix typo in license.
-- [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 - [Patch] Remove references to `lego-` in README. (#245)
 - [Patch] Fix incorrect width in width--75 sizing class (#244)
 - [Patch] Removed extraneous comment (#234)
