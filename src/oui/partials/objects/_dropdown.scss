@@ -92,6 +92,8 @@
   margin-top: 2px;
   text-align: left;
   max-height: map-fetch($dropdown, max-height);
+  line-height: map-fetch($font, line-height, base);
+  font-weight: 400;
   overflow-y: auto;
   display: none;
 
