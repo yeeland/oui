@@ -83,12 +83,8 @@ For example, if you're building a mobile site, `mobile.scss` would contain:
 // # Mobile
 // Root file driving the Mobile CSS.
 
-// Compass polyfills
-@import 'oui/oui-polyfills';
-
-// ## OUI functions and mixins
-@import 'oui/partials/elements/functions';
-@import 'oui/partials/elements/mixins';
+// ## OUI functions
+@import 'oui/partials/sass/functions';
 
 // ## OUI and p13n variables
 // Import `oui` and `mobile` variables
