@@ -34,6 +34,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
+- [Patch] Add prefix to code examples for `_code.scss`. (#286)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Remove comment that didn't have any content. (#257)
 - [Patch] Fix typo in license.
