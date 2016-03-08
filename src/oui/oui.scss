@@ -10,16 +10,10 @@ $include-fonts:(
   italics: true
 );
 
-/// OUI functions and mixins
+/// OUI placeholders, functions, and mixins
+@import 'partials/sass/placeholders';
 @import 'partials/sass/functions';
 @import 'partials/sass/mixins';
-
-@import 'partials/sass/arrows';
-@import 'partials/sass/fonts';
-@import 'partials/sass/grid';
-@import 'partials/sass/matrix';
-@import 'partials/sass/media';
-
 
 /// OUI variables
 @import 'oui-variables';

@@ -196,7 +196,6 @@
   }
 }
 
-
 /// Appearance
 /// @description Used to turn off default styling of brower elements, like
 /// `select`.
@@ -205,4 +204,154 @@
   -webkit-appearance: $value;
   -moz-appearance: $value;
   appearance: $value;
+}
+
+/// Grid
+@mixin grid($responsive: null) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -(spacer(2));
+
+  &__cell {
+    flex: 1;
+    padding-left: spacer(2);
+  }
+
+  &--gutter--narrow {
+    margin-left: -(spacer(1));
+
+    > .#{$namespace}grid__cell {
+      padding-left: spacer(1);
+    }
+  }
+
+  &--gutter--wide {
+    margin-left: -(spacer(4));
+
+    > .#{$namespace}grid__cell {
+      padding-left: spacer(4);
+    }
+  }
+
+  &--flush {
+    margin-left: 0;
+
+    > .#{$namespace}grid__cell {
+      padding-left: 0;
+    }
+  }
+
+  // Grid cells only grow as large as the content.
+  &--natural {
+    > .#{$namespace}grid__cell {
+      flex: none;
+    }
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+      margin-left: 0;
+
+      &__cell {
+        flex: none;
+        padding-left: 0 !important;
+        margin-bottom: spacer(2);
+      }
+
+      &--gutter--wide,
+      &--gutter--narrow {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // Grid Alignment
+  // Moves grid cells to align center or anchored at the bottom of the grid.
+
+  &--center {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  // Grid Widths
+  // If a width is specificed on a `cell__grid` then have to disable the
+  // default `flex` value otherwise it won't obey the width.
+
+  &__cell[class*="width-"] {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+
+/// Matrix
+@mixin matrix($columns: null, $spacing: 2, $responsive: null) {
+  @extend %#{$namespace}grid;
+  margin-left: -(spacer($spacing));
+
+  > li {
+    padding-left: spacer($spacing);
+  }
+
+  @if ($columns) {
+    &--1-#{$columns} {
+      > li {
+        width: percentage(1/$columns);
+      }
+    }
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+      margin-left: 0;
+
+      > li {
+        padding-left: 0;
+        margin-bottom: spacer($spacing);
+        width: auto;
+      }
+    }
+  }
+}
+
+/// Media
+@mixin media($responsive: null) {
+  display: flex;
+  align-items: flex-start;
+
+  &__img {
+    margin-right: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
+  }
+
+  &__img--rev {
+    margin-left: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
+  }
+
+  &__body {
+    @extend %kill-last-child-margin;
+    flex: 1;
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+
+      &__img,
+      &__img--rev {
+        margin-right: 0;
+        margin-top: 0;
+      }
+
+      &__body {
+        flex: none;
+      }
+    }
+  }
 }
