@@ -10,6 +10,9 @@ $include-fonts:(
   italics: true
 );
 
+/// OUI functions
+@import 'partials/sass/functions';
+
 /// OUI variables
 @import 'oui-variables';
 
