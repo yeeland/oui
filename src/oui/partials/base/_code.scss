@@ -3,9 +3,9 @@
 /// @description Monospace code snippets, both inline and multiline.
 /// @group Base
 /// @example[html] Inline code
-///   Text can have <code class="code">code snippets</code> in a sentence.
+///   Text can have <code class="#{$namespace}code">code snippets</code> in a sentence.
 /// @example[html] Multiline code
-///   <pre class="pre"><code><p>A multiline example
+///   <pre class="#{$namespace}pre"><code><p>A multiline example
 ///     of code.</p></code></pre>
 ////
 
