@@ -10,6 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Adding namespace option in oui javascript. (#255)
 - [Patch] Add more ScribeSass comments.
+- [Patch] Adding `vertical-align: text-top` to help with inline icon alignment. (#299)
 - [Patch] Adding `line-height` and `font-weight` to dropdowns so they retain styling when nested. (#292)
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)
 - [Patch] Added reference and link to documenation. (#231)
