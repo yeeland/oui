@@ -21,7 +21,7 @@ This document contains three parts:
 
 [http://design.optimizely.com/oui/core/api/](http://design.optimizely.com/oui/core/api/)
 
-This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial. 
+This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial.
 
 ## Including OUI in your project
 
@@ -30,8 +30,8 @@ This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scr
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="//d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui.css">
-<link rel="stylesheet" href="//d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui-extras.css">
+<link rel="stylesheet" href="https://d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui.css">
+<link rel="stylesheet" href="https://d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui-extras.css">
 ```
 
 Replace `8.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
