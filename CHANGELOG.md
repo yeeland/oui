@@ -32,6 +32,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Using `display:none` on dropdowns so they don't take up any space when on page. (#236).
 - [Patch] Decreasing left/right padding on `select` elements so they better align with other form elements. Previously the inherited padding of buttons. (#220).
 - [Patch] Adding variable for input padding. (#220).
+- [Patch] Add namespace to dropdown code samples that were missing them. (#295).
 - [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
