@@ -3,7 +3,7 @@
   $(document).on( "click", "[data-oui-pop-type='pop--over']", function(e) {
 
     var ARROW_SIZE = 7;
-    var ACTIVE_POP_ID = "data-oui-active-pop-id";
+    var ACTIVE_POP_ID_ATTR = "data-oui-active-pop-id";
     var TRIGGER_CLASS = "is-pop-trigger";
 
     // Prevent clicks from going through so the popover can stay visible when clicked.
@@ -30,7 +30,7 @@
       $trigger.addClass(TRIGGER_CLASS);
 
       // Remove any existing popovers.
-      $("["+ACTIVE_POP_ID+"]").remove();
+      $("["+ACTIVE_POP_ID_ATTR+"]").remove();
 
       // Reset the classes to remove any existing arrow classes.
       $("#" + popID).attr("class", "#{OUI_JS_NAMESPACE}pop #{OUI_JS_NAMESPACE}pop--over");
@@ -39,21 +39,21 @@
       var $popHTML = $("#" + popID).clone();
 
       // Strip the ID, add active ID value to the attr, and append.
-      $popHTML.removeAttr("id").attr(ACTIVE_POP_ID, popID).appendTo("body");
+      $popHTML.removeAttr("id").attr(ACTIVE_POP_ID_ATTR, popID).appendTo("body");
 
       // If a width is specified via data attr set the width of the popover.
       // Otherwise it defaults to a max-width specificed in the CSS.
       var popWidth = trigger.dataAttrs[0].ouiPopWidth;
 
       if ( popWidth !== undefined ) {
-        $("["+ACTIVE_POP_ID+"]").css({
+        $("["+ACTIVE_POP_ID_ATTR+"]").css({
           width: popWidth,
           maxWidth: popWidth // Need to set to override default max-width.
         })
       }
 
       // Get properities (heigh/width/etc) of the `pop` element.
-      var pop = ouiGetProps( $("["+ACTIVE_POP_ID+"]") );
+      var pop = ouiGetProps( $("["+ACTIVE_POP_ID_ATTR+"]") );
 
       // Show the poptip.
       ouiShowPop(trigger, pop, ARROW_SIZE);
@@ -75,15 +75,15 @@
       $(document).bind('click.ouiPopover', function(e) {
 
         // If clicking outside of active pop up hide it, otherwise do nothing.
-        var ACTIVE_POP_ID = "data-oui-active-pop-id";
+        var ACTIVE_POP_ID_ATTR = "data-oui-active-pop-id";
 
-        if ( !$(e.target).closest("["+ACTIVE_POP_ID+"]").length ) {
+        if ( !$(e.target).closest("["+ACTIVE_POP_ID_ATTR+"]").length ) {
 
           // Remove trigger class from open popovers.
           $("." + TRIGGER_CLASS).removeClass(TRIGGER_CLASS);
           
           // Remove active popover.
-          $("["+ACTIVE_POP_ID+"]").remove()
+          $("["+ACTIVE_POP_ID_ATTR+"]").remove()
           
           $(document).unbind('click.ouiPopover');
         }
