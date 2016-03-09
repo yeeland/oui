@@ -56,17 +56,16 @@
     // click.ouiPopover provides a namespace handler that can be unbound
     // without affecting other handlers attached to the document
     // http://stackoverflow.com/questions/209029/best-way-to-remove-an-event-handler-in-jquery
-    $(document).bind('click.ouiPopover', function() {
+    $(document).bind('click.ouiPopover', function(e) {
 
       // If clicking outside of active pop up hide it, otherwise do nothing.
       var ACTIVE_POP_ID = "data-oui-active-pop-id";
 
       if ( !$(e.target).closest("["+ACTIVE_POP_ID+"]").length ) {
         $("["+ACTIVE_POP_ID+"]").remove()
+        $(document).unbind('click.ouiPopover');
       }
-
-      $(document).unbind('click.ouiPopover');
-
+      
     });
 
   });
