@@ -62,16 +62,33 @@
           $("[data-oui-popover-close]").unbind('click.ouiPopoverClose');
         });
 
+        //
         // If it's an editable popover.
-        if ( $("[data-oui-editable]").length ) {
-          var currTxt = $trigger.text();
-          $(".text-input").val(currTxt);
+        //
 
+        if ( $("[data-oui-editable]").length ) {
+          // Get current text of the trigger element.
+          var currTxt = $trigger.text();
+          // Set the editable field to the trigger text.
+          $("[data-oui-editable-field]").val(currTxt);
+
+          // On accept...
           $("[data-oui-editable-accept]").bind('click.ouiPopoverAccept', function(e) {
-            var newText = $(".text-input").val();
+            // Get new text value.
+            var newText = $("[data-oui-editable-field]").val();
+            // Set the trigger text to the new text.
             $("." + TRIGGER_CLASS).text(newText);
+            // Close the popover.
             $("[data-oui-popover-close]").click();
+            // Unbind the handler.
             $("[data-oui-editable-accept]").unbind('click.ouiPopoverAccept');
+          });
+
+          $(document).bind('keypress.key13', function(e) {
+            if (e.which == 13) {
+              $("[data-oui-editable-accept]").click()
+            }
+            $(document).unbind('click.key13');
           });
 
         }
