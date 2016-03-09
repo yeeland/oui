@@ -13,6 +13,7 @@
     // Get trigger element.
     var $trigger = $(this);
 
+    // If trigger is clicked more than once leave the current popover showing.
     if ( !$trigger.hasClass(TRIGGER_CLASS) ) {
 
       // Remove trigger class from open popovers.
@@ -34,10 +35,11 @@
       // Remove any existing popovers.
       $("["+POPOVER+"]").remove();
 
-      $.get('popovers/oui-popover-2.html',function(data) {
+      $.get('popovers/'+popID+'.html',function(data) {
 
         $('body').append(data);
 
+        // If the width hasn't been set by the attribute.
         if ( popWidth !== undefined ) {
           $("["+POPOVER+"]").css({
             width: popWidth,
@@ -51,28 +53,43 @@
         // Show the poptip.
         ouiShowPop(trigger, pop, ARROW_SIZE);
 
-        $("[data-oui-popover-close]").on('click', function(e) {
+        $("[data-oui-popover-close]").bind('click.ouiPopoverClose', function(e) {
           // Remove trigger class from open popovers.
           $("." + TRIGGER_CLASS).removeClass(TRIGGER_CLASS);
           // Remove active popover.
           $("["+POPOVER+"]").remove();
+          // Unbind the close listener.
+          $("[data-oui-popover-close]").unbind('click.ouiPopoverClose');
         });
+
+        // If it's an editable popover.
+        if ( $("[data-oui-editable]").length ) {
+          var currTxt = $trigger.text();
+          $(".text-input").val(currTxt);
+
+          $("[data-oui-editable-accept]").bind('click.ouiPopoverAccept', function(e) {
+            var newText = $(".text-input").val();
+            $("." + TRIGGER_CLASS).text(newText);
+            $("[data-oui-popover-close]").click();
+            $("[data-oui-editable-accept]").unbind('click.ouiPopoverAccept');
+          });
+
+        }
 
         // click.ouiPopover provides a namespace handler that can be unbound
         // without affecting other handlers attached to the document
         // http://stackoverflow.com/questions/209029/best-way-to-remove-an-event-handler-in-jquery
         $(document).bind('click.ouiPopover', function(e) {
-
           if ( !$(e.target).closest("["+POPOVER+"]").length ) {
             // Remove trigger class from open popovers.
             $("." + TRIGGER_CLASS).removeClass(TRIGGER_CLASS);
             // Remove active popover.
             $("["+POPOVER+"]").remove();
-
+            // Remove handler.
             $(document).unbind('click.ouiPopover');
           }
-
         });
+
       });
     }
   });
