@@ -5,9 +5,10 @@
 
 /// SVG Icons
 /// @description The color of the SVG will inherit the parent's `color`.
-///
-/// **Need help?:** Ask an UI Engineer on [#oui](https://optimizely.slack.com/messages/oui)
-/// if you need access to the icons.
+/// @example[url] 16x16 Icons
+///   http://design.optimizely.com/docs/oui-icons/0.1.2/16/16.html
+/// @example[url] 24x24 Icons
+///   http://design.optimizely.com/docs/oui-icons/0.1.2/24/24.html
 
 .#{$namespace}icon {
   width: 16px;
