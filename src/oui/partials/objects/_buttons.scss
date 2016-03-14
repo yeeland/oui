@@ -19,7 +19,8 @@
 ////
 
 %#{$namespace}button,
-.#{$namespace}button {
+.#{$namespace}button,
+a.#{$namespace}button {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
