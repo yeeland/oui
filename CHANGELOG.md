@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Add OUI icons preview URL to icons SCSS comments. (#287)
 
 ## [9.0.1][9.0.1] - 2016-02-19
 ### Fixed
