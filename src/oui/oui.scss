@@ -10,9 +10,8 @@ $include-fonts:(
   italics: true
 );
 
-/// OUI functions and mixins
-@import 'partials/elements/functions';
-@import 'partials/elements/mixins';
+/// OUI functions
+@import 'partials/sass/functions';
 
 /// OUI variables
 @import 'oui-variables';

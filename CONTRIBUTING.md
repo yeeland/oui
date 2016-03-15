@@ -59,9 +59,10 @@ This applies any time classes are being renamed and you want old and new code to
   - **Normal Releases:** Merge `devel` into `master` (`git merge devel`) and fix potential merge conflicts.
   - **Hotfixes:** Cherry-pick hotfix commits from `devel` into `master` (`git cherry-pick`).
 3. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
-4. Run `npm run deploy:patch`, `npm run deploy:feature`, or `npm run deploy:release` depending on the highest importance issue in the new changes. This will update the version in `package.json`, create a GitHub tag, push to GitHub, and deploy a compiled version of the SCSS to AWS.
-5. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
-6. Merge `master` back into `devel` and push to GitHub:
+4. Update the URLs in `src/oui/partials/objects/_icons.scss` to reflect the version of `oui-icons` that `oui` uses. Run `npm install && npm list oui-icons` to get that version number. These get embedded in the OUI documentation.
+5. Run `npm run deploy:patch`, `npm run deploy:feature`, or `npm run deploy:release` depending on the highest importance issue in the new changes. This will update the version in `package.json`, create a GitHub tag, push to GitHub, and deploy a compiled version of the SCSS to AWS.
+6. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
+7. Merge `master` back into `devel` and push to GitHub:
 ````
 git checkout devel && git merge master
 git push origin devel

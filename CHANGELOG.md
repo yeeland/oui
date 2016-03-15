@@ -10,6 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Adding new white-space trump. (#223)
 - [Patch] Adding namespace option in oui javascript. (#255)
 - [Patch] Add more ScribeSass comments.
+- [Feature] Adding `vertical-align: text-top` to help with inline icon alignment. (#299)
 - [Patch] Adding `line-height` and `font-weight` to dropdowns so they retain styling when nested. (#292)
 - [Patch] Added more clarity around `oui-extras.css` in README. (#232)
 - [Patch] Added reference and link to documenation. (#231)
@@ -18,14 +19,20 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
+- [Patch] Change README remote CSS examples to use HTTPS. (#293)
+- [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
+- [Patch] Removing old code from `reset.css`. (#288)
 - [Patch] Removing old code from `reset.css`. (#226)
+- [Patch] Declaring `hover` state on default buttons so anchors styled as buttons would render identically to buttons. (#303)
 - [Release] Removing `_edit-text.scss`. Was not being used. (#275)
+- [Release] Removing `box-sizing` from input `type="search"`. Was not needed. (#275)
 - [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
+- [Release] Move functions, mixins, and Sass-y things to a `partials/sass/` directory. This change requires updating the main SCSS file that imports the OUI partials and variables. (#259)
+- [Patch] Move `_array.scss`, `_button-group.scss`, `_button-row.scss`, `_clearfix.scss`, `_flexbox.scss`, `_grid.scss`, `island.scss`, and `_matrix.scss` into a `layout/` directory. (#258)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
-- [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
 
 ### Fixed
 - [Patch] Adding max-height and overflow to dropdowns. (#235).
@@ -36,6 +43,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
+- [Patch] Add prefix to code examples for `_code.scss`. (#286)
 - [Patch] Fix deploy gulpfile to include merging `master` back into `devel`. (#209)
 - [Patch] Remove comment that didn't have any content. (#257)
 - [Patch] Fix typo in license.
@@ -52,6 +60,11 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 - [Release] Remove `.#{$namespace}form--small` (#162)
+
+## [9.0.2][9.0.2] - 2016-03-14
+### Added
+- [Patch] Add OUI icons preview URL to icons SCSS comments. (#287)
+- [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
 
 ## [9.0.1][9.0.1] - 2016-02-19
 ### Fixed
@@ -261,7 +274,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.1...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.2...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -277,3 +290,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [8.0.0]: https://github.com/optimizely/oui/compare/v7.1.0...v8.0.0
 [9.0.0]: https://github.com/optimizely/oui/compare/v8.0.0...v9.0.0
 [9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1
+[9.0.2]: https://github.com/optimizely/oui/compare/v9.0.1...v9.0.2

@@ -1,36 +1,32 @@
 ////
 /// Layout
-/// @description Classes and mixins for different layout options.
+/// @description Classes for different layout options.
 ///
 /// Used on the *parent* element this causes the immediate child to center
 /// vertically/horizontally.
 /// @group Components
 ////
 
-@mixin center--child {
+.center--child {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.center--child {
-  @include center--child;
-}
-
 // Used on any element to center it inside a parent that has a width/height.
 // Element should be `display: block` with a width.
 
-@mixin center--me($positioning: relative) {
-  position: $positioning;
+.center--me--absolute,
+.center--me--relative {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
 
 .center--me--relative {
-  @include center--me(relative);
+  position: relative;
 }
 
 .center--me--absolute {
-  @include center--me(absolute);
+  position: absolute;
 }
