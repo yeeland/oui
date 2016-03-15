@@ -23,6 +23,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#288)
+- [Patch] Removing old code from `reset.css`. (#226)
+- [Patch] Declaring `hover` state on default buttons so anchors styled as buttons would render identically to buttons. (#303)
 - [Release] Removing `_edit-text.scss`. Was not being used. (#275)
 - [Release] Removing `box-sizing` from input `type="search"`. Was not needed. (#275)
 - [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)

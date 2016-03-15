@@ -45,6 +45,7 @@
   }
 
   &:hover {
+    color: map-fetch($button, type, base, color);
     box-shadow: map-fetch($button, type, base, hover, box-shadow);
   }
 
