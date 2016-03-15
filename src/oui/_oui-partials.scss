@@ -11,13 +11,6 @@
 @import 'partials/sass/placeholders';
 @import 'partials/sass/mixins';
 
-/// Elements
-/// @description Abstractions that provide basic structure, generally extended
-/// into larger objects.
-
-@import 'partials/elements/clearfix';
-@import 'partials/elements/flexbox';
-
 /// Base
 /// @description Baseline rules.
 
@@ -35,13 +28,22 @@
 @import 'partials/base/tables';
 @import 'partials/base/text';
 
+/// Layout
+/// @description Files containing classes that help lay out elements
+/// on a page.
+@import 'partials/layout/array';
+@import 'partials/layout/button-group';
+@import 'partials/layout/button-row';
+@import 'partials/layout/clearfix';
+@import 'partials/layout/flexbox';
+@import 'partials/layout/grid';
+@import 'partials/layout/island';
+@import 'partials/layout/matrix';
+
 /// Elements
 /// @description Simple, low level blocks.
 
 @import 'partials/components/arrows-inline';
-@import 'partials/components/grid';
-@import 'partials/components/island';
-@import 'partials/components/matrix';
 @import 'partials/components/media';
 @import 'partials/components/nav';
 @import 'partials/components/rules';
@@ -52,12 +54,9 @@
 /// HTML.
 
 @import 'partials/objects/accordion';
-@import 'partials/objects/array';
 @import 'partials/objects/attention';
 @import 'partials/objects/block-list';
 @import 'partials/objects/buttons';
-@import 'partials/objects/button-group';
-@import 'partials/objects/button-row';
 @import 'partials/objects/dialog';
 @import 'partials/objects/disclose';
 @import 'partials/objects/dropdown';
