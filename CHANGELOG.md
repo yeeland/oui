@@ -30,6 +30,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Removing `box-sizing` from input `type="search"`. Was not needed. (#275)
 - [Patch] Move `dependencies` to `devDependencies` in the `package.json`. (#225)
 - [Release] Move functions, mixins, and Sass-y things to a `partials/sass/` directory. This change requires updating the main SCSS file that imports the OUI partials and variables. (#259)
+- [Patch] Move `_array.scss`, `_button-group.scss`, `_button-row.scss`, `_clearfix.scss`, `_flexbox.scss`, `_grid.scss`, `island.scss`, and `_matrix.scss` into a `layout/` directory. (#258)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
 
