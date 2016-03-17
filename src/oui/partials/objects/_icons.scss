@@ -21,6 +21,11 @@
     height: 12px;
   }
 
+  &--medium {
+    width: 24px;
+    height: 24px;
+  }
+
   &--large {
     width: 32px;
     height: 32px;
@@ -34,6 +39,17 @@
   &--text-align {
     position: relative;
     top: 2px; // This moves the inline icon down so it is visually aligned with the text.
+  }
+
+  &--hover {
+    padding: 6px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    cursor: pointer;
+
+    &:hover {
+      background: #e8f4f9;
+    }
   }
 }
 
