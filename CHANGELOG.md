@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
 - [Feature] Adding new white-space trump. (#223)
+- [Feature] Adding `icon-target` to provide a hover state for standalone, clickable icons.
 - [Patch] Adding namespace option in oui javascript. (#255)
 - [Patch] Add more ScribeSass comments.
 - [Feature] Adding `vertical-align: text-top` to help with inline icon alignment. (#299)
@@ -21,6 +22,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
 - [Patch] Change README remote CSS examples to use HTTPS. (#293)
 - [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
+- [Feature] Moving values for `_icons.scss` into the variables file.
+- [Feature] Added `icon--medium` class for 24x24 sized icons.
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#288)
