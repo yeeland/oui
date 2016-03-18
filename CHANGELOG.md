@@ -24,6 +24,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
 - [Feature] Moving values for `_icons.scss` into the variables file.
 - [Feature] Added `icon--medium` class for 24x24 sized icons.
+- [Patch] Removing `outline: none` from buttons. This is listed as fix in v4 but did not make it in.
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#288)
