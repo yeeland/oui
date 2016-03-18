@@ -22,8 +22,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
 - [Patch] Change README remote CSS examples to use HTTPS. (#293)
 - [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
-- [Release] Moving values for `_icons.scss` into the variables file.
-- [Release] Added `icon--medium` class for 24x24 sized icons.
+- [Feature] Moving values for `_icons.scss` into the variables file.
+- [Feature] Added `icon--medium` class for 24x24 sized icons.
 - [Patch] Move comment about `space-around` that is in the wrong needed. (#180)
 - [Patch] Change `CONTRIBUTING.md` to add information about creating GitHub issues to track deprecated code. (#149)
 - [Patch] Removing old code from `reset.css`. (#288)
