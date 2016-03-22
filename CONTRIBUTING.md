@@ -26,6 +26,8 @@
 
 4. Open a pull request against `devel`. Add at least one reviewer. Pull requests for backward compatible changes that need to go out instantly can be open against `master`.
 
+**Note**: Need to release a change immediately? Branch off of the latest `master` instead of `devel` and merge into `master`. Then read the "Releasing a new version of OUI" below.
+
 ## Breaking changes & deprecating code
 
 This applies any time classes are being renamed and you want old and new code to be running simultaneously, for example, changing `width-100` to `width--100`. In order to give engineers time to refactor deprecated classes, the UI Engineer introducing breaking changes should do the following:
@@ -57,7 +59,7 @@ This applies any time classes are being renamed and you want old and new code to
 1. Run `git checkout devel && git pull && git checkout master && git pull`.
 2. This step depends on the desired process.
   - **Normal Releases:** Merge `devel` into `master` (`git merge devel`) and fix potential merge conflicts.
-  - **Hotfixes:** Cherry-pick hotfix commits from `devel` into `master` (`git cherry-pick`).
+  - **Hotfixes:** Skip this step. We don't want to release all changes at once.
 3. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
 4. Update the URLs in `src/oui/partials/objects/_icons.scss` to reflect the version of `oui-icons` that `oui` uses. Run `npm install && npm list oui-icons` to get that version number. These get embedded in the OUI documentation.
 5. Run `npm run deploy:patch`, `npm run deploy:feature`, or `npm run deploy:release` depending on the highest importance issue in the new changes. This will update the version in `package.json`, create a GitHub tag, push to GitHub, and deploy a compiled version of the SCSS to AWS.

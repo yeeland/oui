@@ -20,6 +20,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
+- [Patch] Change recommended hotfix procedure to advise branching off of `master` and merging into `master` instead of branching off of `devel`, merging into `devel`, then cherry-picking commits.
 - [Patch] Change README remote CSS examples to use HTTPS. (#293)
 - [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
 - [Feature] Moving values for `_icons.scss` into the variables file.
