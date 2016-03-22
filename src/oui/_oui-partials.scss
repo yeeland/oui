@@ -14,19 +14,21 @@
 /// Base
 /// @description Baseline rules.
 
-@import 'partials/base/reset';
-@import 'partials/base/main';
+@import 'partials/elements/reset';
+@import 'partials/elements/main';
 
-@import 'partials/base/blockquote';
-@import 'partials/base/code';
-@import 'partials/base/fonts';
-@import 'partials/base/form';
-@import 'partials/base/images';
-@import 'partials/base/links';
-@import 'partials/base/lists';
-@import 'partials/base/select';
-@import 'partials/base/tables';
-@import 'partials/base/text';
+@import 'partials/elements/blockquote';
+@import 'partials/elements/buttons';
+@import 'partials/elements/code';
+@import 'partials/elements/fonts';
+@import 'partials/elements/form';
+@import 'partials/elements/horizontal-rules';
+@import 'partials/elements/images';
+@import 'partials/elements/links';
+@import 'partials/elements/lists';
+@import 'partials/elements/select';
+@import 'partials/elements/tables';
+@import 'partials/elements/text';
 
 /// Layout
 /// @description Files containing classes that help lay out elements
@@ -46,7 +48,6 @@
 @import 'partials/components/arrows-inline';
 @import 'partials/components/media';
 @import 'partials/components/nav';
-@import 'partials/components/horizontal-rules';
 @import 'partials/components/stats';
 
 /// Objects
@@ -56,7 +57,6 @@
 @import 'partials/objects/accordion';
 @import 'partials/objects/attention';
 @import 'partials/objects/block-list';
-@import 'partials/objects/buttons';
 @import 'partials/objects/dialog';
 @import 'partials/objects/disclose';
 @import 'partials/objects/dropdown';
