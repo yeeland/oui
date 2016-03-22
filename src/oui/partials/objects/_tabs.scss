@@ -3,55 +3,55 @@
 /// @description Creates a set of tabs.
 /// @group Objects
 /// @example[html] Default sized tabs
-///   <div class="tabs" data-oui-tabs>
-///     <ul class="tabs-nav">
-///       <li class="tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
+///   <div class="#{$namespace}tabs" data-oui-tabs>
+///     <ul class="#{$namespace}tabs-nav">
+///       <li class="#{$namespace}tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
 ///     </ul>
-///     <div class="tabs-pane" data-oui-tabs-pane>
-///       <div class="tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
+///     <div class="#{$namespace}tabs-pane" data-oui-tabs-pane>
+///       <div class="#{$namespace}tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
 ///     </div>
 ///   </div>
 /// @example[html] Small tabs
-///   <div class="tabs tabs--small" data-oui-tabs>
-///     <ul class="tabs-nav">
-///       <li class="tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
+///   <div class="#{$namespace}tabs #{$namespace}tabs--small" data-oui-tabs>
+///     <ul class="#{$namespace}tabs-nav">
+///       <li class="#{$namespace}tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
 ///     </ul>
-///     <div class="tabs-pane" data-oui-tabs-pane>
-///       <div class="tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
+///     <div class="#{$namespace}tabs-pane" data-oui-tabs-pane>
+///       <div class="#{$namespace}tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
 ///     </div>
 ///   </div>
 /// @example[html] Center aligned small tabs
-///   <div class="tabs tabs--small tabs--center" data-oui-tabs>
-///     <ul class="tabs-nav">
-///       <li class="tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
+///   <div class="#{$namespace}tabs #{$namespace}tabs--small #{$namespace}tabs--center" data-oui-tabs>
+///     <ul class="#{$namespace}tabs-nav">
+///       <li class="#{$namespace}tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
 ///     </ul>
-///     <div class="tabs-pane" data-oui-tabs-pane>
-///       <div class="tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
+///     <div class="#{$namespace}tabs-pane" data-oui-tabs-pane>
+///       <div class="#{$namespace}tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
 ///     </div>
 ///   </div>
 /// @example[html] Alternate small tab style with bottom border
-///   <div class="tabs tabs--small tabs--sub" data-oui-tabs>
-///     <ul class="tabs-nav">
-///       <li class="tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
-///       <li class="tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
+///   <div class="#{$namespace}tabs #{$namespace}tabs--small #{$namespace}tabs--sub" data-oui-tabs>
+///     <ul class="#{$namespace}tabs-nav">
+///       <li class="#{$namespace}tabs-nav__item is-active" data-oui-tabs-nav-item>Tab One</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Two</li>
+///       <li class="#{$namespace}tabs-nav__item" data-oui-tabs-nav-item>Tab Three</li>
 ///     </ul>
-///     <div class="tabs-pane" data-oui-tabs-pane>
-///       <div class="tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
-///       <div class="tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
+///     <div class="#{$namespace}tabs-pane" data-oui-tabs-pane>
+///       <div class="#{$namespace}tabs-pane__item is-active" data-oui-tabs-panes-item>Tab Content One</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Two</div>
+///       <div class="#{$namespace}tabs-pane__item" data-oui-tabs-panes-item>Tab Content Three</div>
 ///     </div>
 ///   </div>
 ////
