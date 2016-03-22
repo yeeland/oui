@@ -62,6 +62,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Remove unused retina sprites file. (#264)
 - [Patch] Removing `_search.scss`, not providing much value. HTML change removing extraneous HTML is not required but encouraged. (#290)
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
+- [Release] Removed `appearance` and `keyframes` mixins since we now use Autoprefixer. (#282)
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 - [Release] Remove `.#{$namespace}form--small` (#162)
 
