@@ -18,25 +18,19 @@
   },
   "devDependencies": {
     "gulp": "^3.8.8",
-    "gulp-bump": "^0.3.1",
-    "gulp-filter": "^2.0.2",
-    "gulp-git": "^1.2.4",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-s3": "^0.3.0",
     "gulp-scss-lint": "^0.1.6",
     "gulp-shell": "^0.5.1",
     "gulp-symlink": "^2.1.0",
-    "gulp-tag-version": "^1.2.1",
     "gulp-util": "^3.0.0",
     "oui-icons": "^0.1.2"
   },
   "scripts": {
     "test": "./node_modules/.bin/gulp lint && ./node_modules/.bin/gulp sass",
     "start": "bundle install && bundle update && npm install && ./node_modules/.bin/gulp hook",
-    "deploy:patch": "./node_modules/.bin/gulp patch && ./node_modules/.bin/gulp deploy",
-    "deploy:feature": "./node_modules/.bin/gulp feature && ./node_modules/.bin/gulp deploy",
-    "deploy:release": "./node_modules/.bin/gulp release && ./node_modules/.bin/gulp deploy"
+    "preversion": "git checkout master && git pull && npm install",
+    "postversion": "npm run postversion:publish && npm run postversion:update-devel",
+    "postversion:publish": "git push && git push --tags && npm publish",
+    "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master"
   },
   "repository": {
     "type": "git",
