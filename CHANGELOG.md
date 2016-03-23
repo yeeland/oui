@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [9.0.4][9.0.4] - 2016-03-23
 ### Changed
 - [Patch] Update pre-commit hook to run `npm test` instead of `gulp lint`. (#324)
 
@@ -224,7 +226,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.3...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.4...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -242,3 +244,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1
 [9.0.2]: https://github.com/optimizely/oui/compare/v9.0.1...v9.0.2
 [9.0.3]: https://github.com/optimizely/oui/compare/v9.0.2...v9.0.3
+[9.0.4]: https://github.com/optimizely/oui/compare/v9.0.3...v9.0.4
