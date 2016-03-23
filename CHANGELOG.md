@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Offload deployment tasks to Travis CI and change the commands used to deploy. (#319, #320)
 
 ## [9.0.2][9.0.2] - 2016-03-14
 ### Added
