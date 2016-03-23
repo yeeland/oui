@@ -36,6 +36,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Move functions, mixins, and Sass-y things to a `partials/sass/` directory. This change requires updating the main SCSS file that imports the OUI partials and variables. (#259)
 - [Release] Rename `_rules.scss` to `_horizontal-rules.scss`. (#271)
 - [Release] Move `_array.scss`, `_button-group.scss`, `_button-row.scss`, `_clearfix.scss`, `_flexbox.scss`, `_grid.scss`, `island.scss`, and `_matrix.scss` into a `layout/` directory. (#258)
+- [Release] Rename `base/` to `elements/` and move `_buttons.scss` and `_horizontal-rules.scss` into it. (#268)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
 
@@ -62,7 +63,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## Removed
 - [Release] Remove unused retina sprites file. (#264)
-- [Patch] Removing `_search.scss`, not providing much value. HTML change removing extraneous HTML is not required but encouraged. (#290)
+- [Release] Removing `_search.scss`, not providing much value. HTML change removing extraneous HTML is not required but encouraged. (#290)
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 - [Release] Remove `.#{$namespace}form--small` (#162)
