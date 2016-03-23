@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Update pre-commit hook to run `npm test` instead of `gulp lint`. (#324)
 
 ## [9.0.3][9.0.3] - 2016-03-23
 ### Changed
