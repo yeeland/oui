@@ -26,6 +26,8 @@ deploy:
     repo: optimizely/oui
     tags: true
 - provider: npm
+  email:
+    secure: Y+A/HOGTYtASn+cHBFxslq52Ij8sdS5I+uvKiZF6466fwJytlGzdyR9e+4NGkul0UgJl3CUY5xKZ7LhyNBPxQUaG9DmlX8pkDiuHlcFlMbCtw+aTLhRS+pfpGbOlKZUWZcM5jZF+TvPIEqN/q5/p5kZnIqp9dmVijOSu7/t0zxA=
   api_key:
     secure: bO19tV7KI0p1L+YoQsaKnfGqYOa+DkvUVq424j88ljYUE2FzH16vtRZgH1FZkWKJ5wZkd20WpPLDkrVe0jU4iQ0KhFGj0avO1iAvAsYPs61ZfZ7HM7pseR5seJ9AvXov7ojoFbUwuyVLDpMOp3QhOJStYoTomvfbkAWjWHiOliM=
   on:
