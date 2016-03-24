@@ -9,8 +9,8 @@ before_deploy:
 - rm -rfv dist
 - "./node_modules/.bin/gulp sass"
 - "./node_modules/.bin/gulp extras:build"
-- mkdir -v dist/$(npm view optimizely-oui version)
-- mv -v dist/css/* dist/$(npm view optimizely-oui version)
+- mkdir -v dist/$(node -e "console.log(require('./package.json').version);")
+- mv -v dist/css/* dist/$(node -e "console.log(require('./package.json').version);")
 - rm -rfv dist/css
 deploy:
 - provider: s3
