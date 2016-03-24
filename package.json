@@ -1,6 +1,7 @@
 {
   "name": "optimizely-oui",
-  "version": "9.0.5",
+  "version": "9.0.6",
+  "description": "Optimizely's Component Library.",
   "private": false,
   "dependencies": {},
   "devDependencies": {
@@ -29,7 +30,7 @@
     "start": "bundle install && bundle update && npm install && gulp hook",
     "preversion": "git checkout master && git pull && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
-    "postversion:publish": "git push && git push --tags && npm publish",
+    "postversion:publish": "git push && git push --tags",
     "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master"
   },
   "repository": {

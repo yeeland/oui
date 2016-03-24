@@ -54,8 +54,6 @@ This applies any time classes are being renamed and you want old and new code to
 
 ## Releasing a new version of OUI
 
-**Note:** You must be a contributor on the OUI NPM to release a new version.
-
 1. Run `git checkout devel && git pull && git checkout master && git pull`.
 2. This step depends on the desired process.
   - **Normal Releases:** Merge `devel` into `master` (`git merge devel`) and fix potential merge conflicts.
