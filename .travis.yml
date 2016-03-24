@@ -7,13 +7,13 @@ script:
 sudo: false
 before_deploy:
 - rm -rfv dist
-- ./node_modules/.bin/gulp sass
-- ./node_modules/.bin/gulp extras:build
+- "./node_modules/.bin/gulp sass"
+- "./node_modules/.bin/gulp extras:build"
 - mkdir -v dist/$(npm view optimizely-oui version)
 - mv -v dist/css/* dist/$(npm view optimizely-oui version)
 - rm -rfv dist/css
 deploy:
-  provider: s3
+- provider: s3
   access_key_id:
     secure: hUfpx4qlgXNxuq7fXCCI9BpbJ1aSQJFy58CtuDW077i3WULaoKJ5aTuVOPDQY3V+hgskj5ECWXG7i7o0ZiVAyBLR92IKJQiT5NvSWkEyw0WJ/L0b2QkVB9lx1sX2wzg6k03inJnPoUIYAkhAdtj1W6sMmLXbgOouhT7bsuYUi9M=
   secret_access_key:
@@ -24,4 +24,9 @@ deploy:
   acl: public-read
   on:
     repo: optimizely/oui
+    tags: true
+- provider: npm
+  api_key:
+    secure: bO19tV7KI0p1L+YoQsaKnfGqYOa+DkvUVq424j88ljYUE2FzH16vtRZgH1FZkWKJ5wZkd20WpPLDkrVe0jU4iQ0KhFGj0avO1iAvAsYPs61ZfZ7HM7pseR5seJ9AvXov7ojoFbUwuyVLDpMOp3QhOJStYoTomvfbkAWjWHiOliM=
+  on:
     tags: true

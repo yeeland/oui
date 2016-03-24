@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Use Travis CI to publish the NPM package. (#328)
 
 ## [9.0.5][9.0.5] - 2016-03-23
 ### Changed
