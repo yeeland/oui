@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "9.0.4",
+  "version": "9.0.5",
   "description": "CSS component library for Optimizely",
   "private": false,
   "main": "dist/js/lego.min.js",
