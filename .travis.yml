@@ -21,6 +21,7 @@ deploy:
   bucket: optimizely-oui
   local-dir: dist
   region: us-west-2
+  acl: public-read
   on:
     repo: optimizely/oui
     tags: true
