@@ -1,7 +1,7 @@
 {
   "name": "optimizely-oui",
-  "version": "9.0.2",
-  "description": "Optimizely's Component Library",
+  "version": "9.0.8",
+  "description": "Optimizely's Component Library.",
   "private": false,
   "dependencies": {},
   "devDependencies": {
@@ -11,19 +11,12 @@
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-base64": "^0.1.3",
-    "gulp-bump": "^0.3.1",
     "gulp-concat": "^2.6.0",
-    "gulp-filter": "^2.0.2",
-    "gulp-git": "^1.2.4",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-s3": "^0.3.0",
     "gulp-sass": "^2.0.2",
     "gulp-scss-lint": "^0.1.6",
     "gulp-shell": "^0.5.1",
     "gulp-symlink": "^2.1.0",
-    "gulp-tag-version": "^1.2.1",
     "gulp-tap": "^0.1.3",
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.0",
@@ -35,9 +28,10 @@
   "scripts": {
     "test": "gulp lint && gulp sass",
     "start": "bundle install && bundle update && npm install && gulp hook",
-    "deploy:patch": "gulp patch && gulp deploy",
-    "deploy:feature": "gulp feature && gulp deploy",
-    "deploy:release": "gulp release && gulp deploy"
+    "preversion": "git checkout master && git pull && npm install",
+    "postversion": "npm run postversion:publish && npm run postversion:update-devel",
+    "postversion:publish": "git push && git push --tags",
+    "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master"
   },
   "repository": {
     "type": "git",

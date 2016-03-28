@@ -1,7 +1,34 @@
 language: node_js
 install:
-  - bundle install
-  - npm install
+- bundle install
+- npm install
 script:
-  - npm test
+- npm test
 sudo: false
+before_deploy:
+- rm -rfv dist
+- "./node_modules/.bin/gulp sass"
+- "./node_modules/.bin/gulp extras:build"
+- mkdir -v dist/$(node -e "console.log(require('./package.json').version);")
+- mv -v dist/css/* dist/$(node -e "console.log(require('./package.json').version);")
+- rm -rfv dist/css
+deploy:
+- provider: s3
+  access_key_id:
+    secure: hUfpx4qlgXNxuq7fXCCI9BpbJ1aSQJFy58CtuDW077i3WULaoKJ5aTuVOPDQY3V+hgskj5ECWXG7i7o0ZiVAyBLR92IKJQiT5NvSWkEyw0WJ/L0b2QkVB9lx1sX2wzg6k03inJnPoUIYAkhAdtj1W6sMmLXbgOouhT7bsuYUi9M=
+  secret_access_key:
+    secure: sHcezDuWh9s341ruDx4pDMmjDWuoQ7cf5jhUQu3YyNQ8zaPRfVLztnYcJFZCUAznJi7Sswb3hIVvEQq+PXgd2YibdI6lXVrFff/cqbpRT9VBllIG9gRQbXcTJ22u+SzdB9ikE4wKqqZx2aUX1GpDIQc0TigsFmXhxNxKG8gkSik=
+  bucket: optimizely-oui
+  local-dir: dist
+  region: us-west-2
+  acl: public-read
+  on:
+    repo: optimizely/oui
+    tags: true
+- provider: npm
+  email:
+    secure: Y+A/HOGTYtASn+cHBFxslq52Ij8sdS5I+uvKiZF6466fwJytlGzdyR9e+4NGkul0UgJl3CUY5xKZ7LhyNBPxQUaG9DmlX8pkDiuHlcFlMbCtw+aTLhRS+pfpGbOlKZUWZcM5jZF+TvPIEqN/q5/p5kZnIqp9dmVijOSu7/t0zxA=
+  api_key:
+    secure: bO19tV7KI0p1L+YoQsaKnfGqYOa+DkvUVq424j88ljYUE2FzH16vtRZgH1FZkWKJ5wZkd20WpPLDkrVe0jU4iQ0KhFGj0avO1iAvAsYPs61ZfZ7HM7pseR5seJ9AvXov7ojoFbUwuyVLDpMOp3QhOJStYoTomvfbkAWjWHiOliM=
+  on:
+    tags: true

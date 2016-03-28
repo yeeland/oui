@@ -20,6 +20,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Release] Using simplified `map-fetch` function and now requires commas after each argument. (#239)
 - [Release] Combined different border variables (border color and border-radius) into one object, `$border`, so it can amended downstream. References to `$border-radius` will need to change in apps using OUI. (#156)
+- [Patch] Change recommended hotfix procedure to advise branching off of `master` and merging into `master` instead of branching off of `devel`, merging into `devel`, then cherry-picking commits. (#308)
 - [Patch] Change README remote CSS examples to use HTTPS. (#293)
 - [Release] Change `.wrap` to `.wrap-text` due to class name conflict. (#301)
 - [Feature] Moving values for `_icons.scss` into the variables file.
@@ -35,6 +36,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Move functions, mixins, and Sass-y things to a `partials/sass/` directory. This change requires updating the main SCSS file that imports the OUI partials and variables. (#259)
 - [Release] Rename `_rules.scss` to `_horizontal-rules.scss`. (#271)
 - [Release] Move `_array.scss`, `_button-group.scss`, `_button-row.scss`, `_clearfix.scss`, `_flexbox.scss`, `_grid.scss`, `island.scss`, and `_matrix.scss` into a `layout/` directory. (#258)
+- [Release] Rename `base/` to `elements/` and move `_buttons.scss` and `_horizontal-rules.scss` into it. (#268)
 - [Patch] Clean up `package.json`.
 - [Patch] Move the `.no-border` classes from layout trumps to border trumps. (#228)
 
@@ -61,11 +63,35 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## Removed
 - [Release] Remove unused retina sprites file. (#264)
-- [Patch] Removing `_search.scss`, not providing much value. HTML change removing extraneous HTML is not required but encouraged. (#290)
+- [Release] Removing `_search.scss`, not providing much value. HTML change removing extraneous HTML is not required but encouraged. (#290)
 - [Patch] Removed `editiable.js` files as they were conflicting with the Ace editor. (#252)
 - [Release] Removed `appearance` and `keyframes` mixins since we now use Autoprefixer. (#282)
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 - [Release] Remove `.#{$namespace}form--small` (#162)
+
+## [9.0.8][9.0.8] - 2016-03-23
+### Changed
+- [Patch] Add email address to NPM Travis CI config.
+
+## [9.0.7][9.0.7] - 2016-03-23
+### Changed
+- [Patch] Force a version of NPM and tweak version detection so that the Travis CI NPM publishing works. (#328)
+
+## [9.0.6][9.0.6] - 2016-03-23
+### Changed
+- [Patch] Use Travis CI to publish the NPM package. (#328)
+
+## [9.0.5][9.0.5] - 2016-03-23
+### Changed
+- [Patch] Set ACL on Travis CI uploads so that the files are publicly viewable. (#326)
+
+## [9.0.4][9.0.4] - 2016-03-23
+### Changed
+- [Patch] Update pre-commit hook to run `npm test` instead of `gulp lint`. (#324)
+
+## [9.0.3][9.0.3] - 2016-03-23
+### Changed
+- [Patch] Offload deployment tasks to Travis CI and change the commands used to deploy. (#319, #320)
 
 ## [9.0.2][9.0.2] - 2016-03-14
 ### Added
@@ -280,7 +306,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.2...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v9.0.8...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -297,3 +323,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [9.0.0]: https://github.com/optimizely/oui/compare/v8.0.0...v9.0.0
 [9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1
 [9.0.2]: https://github.com/optimizely/oui/compare/v9.0.1...v9.0.2
+[9.0.3]: https://github.com/optimizely/oui/compare/v9.0.2...v9.0.3
+[9.0.4]: https://github.com/optimizely/oui/compare/v9.0.3...v9.0.4
+[9.0.5]: https://github.com/optimizely/oui/compare/v9.0.4...v9.0.5
+[9.0.6]: https://github.com/optimizely/oui/compare/v9.0.5...v9.0.6
+[9.0.7]: https://github.com/optimizely/oui/compare/v9.0.6...v9.0.7
+[9.0.8]: https://github.com/optimizely/oui/compare/v9.0.7...v9.0.8
