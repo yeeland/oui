@@ -173,41 +173,6 @@
   }
 }
 
-
-/// Keyframes mixin
-/// @description Mixin to generate vendor prefixed mixins. `$name` is the name
-/// of the animation to be referenced later in `animation` property.
-/// @example[scss]
-///   @include keyframes(fadeIn) {
-///     0% { opacity: 0; }
-///     100% { opacity: 1; }
-///   }
-
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-ms-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-/// Appearance
-/// @description Used to turn off default styling of brower elements, like
-/// `select`.
-
-@mixin appearance($value) {
-  -webkit-appearance: $value;
-  -moz-appearance: $value;
-  appearance: $value;
-}
-
 /// Grid
 @mixin grid($responsive: null) {
   display: flex;
