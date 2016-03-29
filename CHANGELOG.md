@@ -48,6 +48,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Adding variable for input padding. (#220).
 - [Patch] Add namespace to comments in `_tabs.scss`. (#310)
 - [Patch] Add namespace to dropdown code samples that were missing them. (#295).
+- [Patch] Make small SCSS comment tweaks to make OUI work in ScribeSass. (#335)
 - [Patch] Add step at end of CONTRIBUTING to include merging `master` back into `devel`. (#273)
 - [Patch] Adding CSS for nested buttons (like in dropdows) in `button-group` so rounded corners work as expected (#137).
 - [Patch] Re-add missing variable `pkg` in `deploy.js`. (#210)
