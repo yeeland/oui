@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/optimizely/oui.svg?branch=devel)](https://travis-ci.org/optimizely/oui)
 [![Gitter](https://badges.gitter.im/optimizely/oui.svg)](https://gitter.im/optimizely/oui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Live Documentation](https://img.shields.io/badge/documentation-live-blue.svg)](http://link.optimizely.com/oui)
+[![Live Documentation](https://img.shields.io/badge/documentation-live-blue.svg)](http://design.optimizely.com/docs/oui/)
 
 # OUI Component Library
 
@@ -19,7 +19,7 @@ This document contains three parts:
 
 ## Documentation
 
-[http://design.optimizely.com/oui/core/api/](http://design.optimizely.com/oui/core/api/)
+[http://design.optimizely.com/docs/oui/](http://design.optimizely.com/docs/oui/)
 
 This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial.
 
@@ -30,11 +30,11 @@ This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scr
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui.css">
-<link rel="stylesheet" href="https://d2uaiq63sgqwfs.cloudfront.net/8.0.0/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/9.0.8/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/9.0.8/oui-extras.css">
 ```
 
-Replace `8.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `9.0.8` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
 #### OUI and OUI Extras
 
