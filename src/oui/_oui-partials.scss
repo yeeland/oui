@@ -45,11 +45,8 @@
 /// Components
 /// @description Simple, low level blocks.
 
-@import 'partials/components/arrows-inline';
-@import 'partials/components/media';
-@import 'partials/components/nav';
-@import 'partials/components/stats';
 @import 'partials/components/accordion';
+@import 'partials/components/arrows-inline';
 @import 'partials/components/attention';
 @import 'partials/components/block-list';
 @import 'partials/components/dialog';
@@ -58,10 +55,13 @@
 @import 'partials/components/help';
 @import 'partials/components/icons';
 @import 'partials/components/input-icon';
+@import 'partials/components/media';
+@import 'partials/components/nav';
 @import 'partials/components/pagination';
 @import 'partials/components/popover';
 @import 'partials/components/poptip';
 @import 'partials/components/progress';
 @import 'partials/components/spinner';
+@import 'partials/components/stats';
 @import 'partials/components/steps';
 @import 'partials/components/tabs';
