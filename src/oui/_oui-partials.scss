@@ -42,18 +42,13 @@
 @import 'partials/layout/island';
 @import 'partials/layout/matrix';
 
-/// Elements
+/// Components
 /// @description Simple, low level blocks.
 
 @import 'partials/components/arrows-inline';
 @import 'partials/components/media';
 @import 'partials/components/nav';
 @import 'partials/components/stats';
-
-/// Objects
-/// @description Simple styled objects that can be extended or used directly in
-/// HTML.
-
 @import 'partials/components/accordion';
 @import 'partials/components/attention';
 @import 'partials/components/block-list';
