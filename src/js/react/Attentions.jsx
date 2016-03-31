@@ -18,7 +18,7 @@ let validateChildrenProp = (props, propName, componentName) => {
   }
 };
 
- const Attention = ({ alignment, children, isDismissable, type }) => {
+const Attention = ({ alignment, children, isDismissable, type }) => {
   let colorClassName = type ? 'attention--' + type : '';
   let alignmentClassName = alignment === 'center' ? 'text--center' : '';
 
