@@ -379,6 +379,14 @@ $progress-bar: (
   )
 );
 
+/// Progress Dots
+
+$progress-dots: (
+  width: 7px,
+  height: 7px,
+  margin: 3px,
+);
+
 /// Spinner
 
 $spinner: (

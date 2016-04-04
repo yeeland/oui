@@ -5,7 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Adding new style of loader, called `progress-dots. (#347)
+
 ### Changed
+- [Release] Renamed `progress.scss` to `progress-bar.scss`
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)
 
 ## [10.0.0][10.0.0] - 2016-03-29
