@@ -12,6 +12,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Renamed `progress.scss` to `progress-bar.scss`
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)
 
+### Fixed
+- [Patch] Fix issue where tabs border was not appearing ebcause of CSS issues. (#343, #345)
+
 ## [10.0.0][10.0.0] - 2016-03-29
 ### Added
 - [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
