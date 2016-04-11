@@ -7,6 +7,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.8",
     "del": "^2.2.0",
+    "eslint": "^2.7.0",
     "fs": "0.0.2",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^3.1.0",
@@ -26,7 +27,7 @@
     "yargs": "^4.1.0"
   },
   "scripts": {
-    "test": "gulp lint && gulp sass",
+    "test": "gulp lint && gulp sass && eslint .  --ignore-path .gitignore",
     "start": "bundle install && bundle update && npm install && gulp hook",
     "preversion": "git checkout master && git pull --rebase=false && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",

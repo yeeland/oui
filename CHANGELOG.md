@@ -6,7 +6,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
-- [Feature] Adding new style of loader, called `progress-dots. (#347)
+- [Feature] Adding new style of loader, called `progress-dots`. (#347)
+- [Feature] Add ESLint to repository and updated JavaScript to follow the rules. (#357)
 
 ### Changed
 - [Release] Renamed `progress.scss` to `progress-bar.scss`
