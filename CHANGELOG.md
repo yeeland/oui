@@ -12,6 +12,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Release] Renamed `progress.scss` to `progress-bar.scss`
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)
+- [Patch] Replace `gulp lint` task with NPM scripts. (#321)
+- [Patch] Change default scss-lint severity so warnings are thrown as errors and break the build. (#351)
+- [Patch] Update to latest scss-lint.
+- [Patch] Add a `.ruby-version` file for rbenv to use.
 
 ### Fixed
 - [Patch] Fix issue where tabs border was not appearing ebcause of CSS issues. (#343, #345)

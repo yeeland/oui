@@ -49,7 +49,9 @@
     $query: '(min-width: #{$min})';
   } @else if $min == 0 and $max != 0 {
     $query: '(max-width: #{$max})';
-  } @media #{$query} {
+  }
+
+  @media #{$query} {
     @content;
   }
 }
@@ -267,7 +269,7 @@
   @if ($columns) {
     &--1-#{$columns} {
       > li {
-        width: percentage(1/$columns);
+        width: percentage(1 / $columns);
       }
     }
   }

@@ -110,7 +110,7 @@
         background: map-fetch($color, background, faint);
       }
 
-      &:before {
+      &::before {
         opacity: 0;
       }
     }
