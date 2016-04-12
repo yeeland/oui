@@ -96,3 +96,10 @@
   min-height: 0;
   min-width: 0;
 }
+
+// Flex dead center
+// Centers vertically and horizontally
+
+.flex--dead-center {
+  @include flex-center;
+}

@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Adding new style of loader, called `progress-dots`. (#347)
 - [Feature] Add ESLint to repository and updated JavaScript to follow the rules. (#357)
+- [Feature] Added `.flex--dead-center` to center an element vertically and horizontally. (#342)
 
 ### Changed
 - [Release] Renamed `progress.scss` to `progress-bar.scss`.
