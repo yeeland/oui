@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [11.1.0][11.1.0] - 2016-04-12
 ### Changed
 - [Patch] Restyle button focus to be more consistent with other inputs. (#355)
 - [Patch] Fix color of button focus to actually be consistent.
@@ -337,7 +339,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v11.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v11.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -362,3 +364,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [9.0.8]: https://github.com/optimizely/oui/compare/v9.0.7...v9.0.8
 [10.0.0]: https://github.com/optimizely/oui/compare/v9.0.8...v10.0.0
 [11.0.0]: https://github.com/optimizely/oui/compare/v10.0.0...v11.0.0
+[11.1.0]: https://github.com/optimizely/oui/compare/v11.0.0...v11.1.0
