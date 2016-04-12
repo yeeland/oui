@@ -53,7 +53,7 @@
     // Uses the same style as input hover and removes the outline while
     // remaining accessible.
     outline: none;
-    border: 1px solid map-fetch($color, ui, base);
+    border: 1px solid map-fetch($color, ui, medium);
   }
 
   &.is-active,
