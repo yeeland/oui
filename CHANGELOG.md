@@ -6,11 +6,13 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add `.dropdown--descriptive` class to support dropdown with sentences of text inside. (#352)
 - [Feature] Adding new style of loader, called `progress-dots`. (#347)
 - [Feature] Add ESLint to repository and updated JavaScript to follow the rules. (#357)
 - [Feature] Added `.flex--dead-center` to center an element vertically and horizontally. (#342)
 
 ### Changed
+- [Patch] Dropdown items no longer have `whitespace: nowrap` applied. Text will wrap freely and the width, unless defined elsewhere, will be the width of the element that opens the dropdown. (#352)
 - [Release] Renamed `progress.scss` to `progress-bar.scss`.
 - [Patch] Change "Progress" to "Progress Bar" in documentation.
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)

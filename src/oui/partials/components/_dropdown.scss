@@ -43,7 +43,7 @@
 ///     <ul class="#{$namespace}dropdown">
 ///       <li class="#{$namespace}dropdown__item">
 ///         <form class="soft-half--ends">
-///             <input type="text" class="#{$namespace}text-input #{$namespace}text-input--search">
+///           <input type="text" class="#{$namespace}text-input #{$namespace}text-input--search">
 ///         </form>
 ///       </li>
 ///       <li class="#{$namespace}dropdown__item">
@@ -61,6 +61,28 @@
 ///       </li>
 ///       <li class="#{$namespace}dropdown__item">
 ///         <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///       </li>
+///     </ul>
+///   </div>
+/// @example[html] Descriptive dropdown
+///   <div class="#{$namespace}dropdown-group" data-oui-dropdown>
+///     <button class="#{$namespace}button" data-oui-dropdown-toggle>
+///       Dropdown <span class="arrow-inline--down"></span>
+///     </button>
+///     <ul class="#{$namespace}dropdown dropdown--descriptive width--250">
+///       <li class="#{$namespace}dropdown__item">
+///         <div class="#{$namespace}dropdown__block-link"
+///              data-oui-hide-dropdown>
+///           <div class="#{$namespace}dropdown--descriptive__header">Improvement over time</div>
+///           <div class="#{$namespace}dropdown--descriptive__content">Cumulative improvement over time for the personalized audience compared to the holdback.</div>
+///         </div>
+///       </li>
+///       <li class="#{$namespace}dropdown__item">
+///         <div class="#{$namespace}dropdown__block-link"
+///              data-oui-hide-dropdown>
+///           <div class="#{$namespace}dropdown--descriptive__header">Conversions over time</div>
+///           <div class="#{$namespace}dropdown--descriptive__content">Daily conversions over time for both the personalized and holdback audiences.</div>
+///         </div>
 ///       </li>
 ///     </ul>
 ///   </div>
@@ -98,7 +120,6 @@
   display: none;
 
   &__item {
-    white-space: nowrap;
     color: map-fetch($color, text, base);
 
     &--active {
@@ -113,5 +134,16 @@
   &--right {
     right: 0;
     left: auto;
+  }
+
+  &--descriptive {
+    &__header {
+      color: map-fetch($color, text, brand);
+    }
+
+    &__content {
+      font-size: map-fetch($font, size, micro);
+      color: map-fetch($color, text, muted);
+    }
   }
 }
