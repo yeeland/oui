@@ -49,6 +49,13 @@
     box-shadow: map-fetch($button, type, base, hover, box-shadow);
   }
 
+  &:focus {
+    // Uses the same style as input hover and removes the outline while
+    // remaining accessible.
+    outline: none;
+    border: 1px solid map-fetch($color, ui, base);
+  }
+
   &.is-active,
   &:active {
     background: map-fetch($button, type, base, active, background);

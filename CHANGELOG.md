@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Changed
+- [Patch] Restyle button focus to be more consistent with other inputs. (#355)
 - [Feature] Updated popover content to have smaller body font size and specifications for a footer. Changed size of ($line-height, tight) variable.
 
 ## [11.0.0][11.0.0] - 2016-04-11
