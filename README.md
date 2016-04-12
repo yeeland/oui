@@ -30,11 +30,11 @@ This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scr
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/9.0.8/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/9.0.8/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui-extras.css">
 ```
 
-Replace `9.0.8` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `11.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
 #### OUI and OUI Extras
 
