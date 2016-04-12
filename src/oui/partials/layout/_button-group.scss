@@ -25,8 +25,7 @@
 .#{$namespace}button-group {
   display: flex;
 
-  & > *, // scss-lint:disable UnnecessaryParentReference
-  & > * > * {
+  & > * { // scss-lint:disable UnnecessaryParentReference
     margin-left: 0;
     border-radius: 0;
 

@@ -13,6 +13,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Release] Renamed `progress.scss` to `progress-bar.scss`.
 - [Patch] Change "Progress" to "Progress Bar" in documentation.
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)
+- [Patch] Revert part of a commit to `.button-group` that introduced a bug in v10.0.0. (#137)
 - [Patch] Replace `gulp lint` task with NPM scripts. (#321)
 - [Patch] Change default scss-lint severity so warnings are thrown as errors and break the build. (#351)
 - [Patch] Update to latest scss-lint.
