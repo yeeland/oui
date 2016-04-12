@@ -10,7 +10,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Add ESLint to repository and updated JavaScript to follow the rules. (#357)
 
 ### Changed
-- [Release] Renamed `progress.scss` to `progress-bar.scss`
+- [Release] Renamed `progress.scss` to `progress-bar.scss`.
+- [Patch] Change "Progress" to "Progress Bar" in documentation.
 - [Patch] Change hex value for variable `brand-dark` to match one of the Optimizely brand colors. (#349)
 - [Patch] Replace `gulp lint` task with NPM scripts. (#321)
 - [Patch] Change default scss-lint severity so warnings are thrown as errors and break the build. (#351)
