@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Feature] Updated popover content to have smaller body font size and specifications for a footer. Changed size of ($line-height, tight) variable.
 
 ## [11.0.0][11.0.0] - 2016-04-11
 ### Added

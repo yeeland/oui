@@ -132,6 +132,18 @@
     font-weight: 500;
   }
 
+  &__body {
+    margin-top: spacer(0.5);
+    margin-bottom: spacer(0.5);
+    font-size: map-fetch($font, size, milli);
+    line-height: map-fetch($font, line-height, tight);
+  }
+
+  &__footer {
+    margin-top: spacer(0.5);
+    font-size: map-fetch($font, size, micro);
+  }
+
   &__close {
     cursor: pointer;
     position: absolute;
