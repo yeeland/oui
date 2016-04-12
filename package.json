@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "Optimizely's Component Library.",
   "private": false,
   "dependencies": {},
@@ -28,10 +28,8 @@
   "scripts": {
     "test": "npm run scss-lint && npm run eslint && gulp sass",
     "start": "bundle install && bundle update && npm install && gulp hook",
-
     "eslint": "eslint .  --ignore-path .gitignore",
     "scss-lint": "bundle exec scss-lint src/ --exclude src/oui/library/**/*",
-
     "preversion": "git checkout master && git pull --rebase=false && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
     "postversion:publish": "git push && git push --tags",
