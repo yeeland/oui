@@ -116,7 +116,7 @@ The following is for users planning to make contributions to OUI.
 
 **Important:** see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
 
-After cloning the `oui` repo, run `npm start` to install dependencies and a linter post-commit hook.
+After cloning the `oui` repo, run `npm install` to install dependencies.
 
 ### Cheat Sheet
 

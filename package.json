@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "npm run scss-lint && npm run eslint && gulp sass",
-    "start": "bundle install && bundle update && npm install && gulp hook",
+    "start": "bundle install && bundle update && npm install",
     "eslint": "eslint .  --ignore-path .gitignore",
     "scss-lint": "bundle exec scss-lint src/ --exclude src/oui/library/**/*",
     "preversion": "git checkout master && git pull --rebase=false && npm install",

@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Removed
+- [Patch] Remove linter pre-commit hook to avoid annoying Ruby dependency. (#370)
 
 ## [11.1.0][11.1.0] - 2016-04-12
 ### Changed
