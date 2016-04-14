@@ -304,6 +304,7 @@
     background: map-fetch($color, background, faint);
     color: map-fetch($color, ui, medium);
     cursor: default;
+    pointer-events: none;
 
     &:hover,
     &:focus {
@@ -385,6 +386,7 @@ fieldset {
   &--disabled {
     color: map-fetch($color, text, muted);
     cursor: default !important;
+    pointer-events: none;
   }
 }
 

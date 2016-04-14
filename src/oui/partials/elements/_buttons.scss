@@ -264,6 +264,7 @@
   &--disabled:active,
   &--disabled:focus {
     cursor: default;
+    pointer-events: none;
     box-shadow: none;
     background-color: map-fetch($button, type, disabled, background);
     border-color: map-fetch($button, type, disabled, border);

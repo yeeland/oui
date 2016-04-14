@@ -6,7 +6,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
-- [Patch] Added draft and live background color helpers (#376)
+- [Patch] Add draft and live background color helpers (#376)
+- [Patch] Disable pointer events for disabled inputs and buttons (#365)
 
 ### Removed
 - [Patch] Remove linter pre-commit hook to avoid annoying Ruby dependency. (#370)
