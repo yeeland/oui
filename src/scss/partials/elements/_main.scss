@@ -1,0 +1,18 @@
+////
+/// Main
+/// @description High level defaults establishing `font` and `color`.
+/// @group Elements
+/// @advanced
+////
+
+html {
+  color: map-fetch($color, text, base);
+  background-color: map-fetch($color, background, base);
+  font-family: map-fetch($font, family, base);
+  font-size: map-fetch($font, size, base);
+  line-height: map-fetch($font, line-height, base);
+}
+
+p {
+  margin-bottom: spacer(1);
+}

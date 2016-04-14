@@ -1,0 +1,85 @@
+////
+/// Poptip
+/// @description Information bubbles on hover.
+/// @group Components
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="4" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="7" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+/// @example[html]
+///   <button data-oui-pop-type="pop--tip" data-oui-pop-location="10" data-oui-pop-text="This is a pop-tip. Use only limited text." class="#{$namespace}button">
+///     Hover Me
+///   </button>
+////
+
+.#{$namespace}pop--tip {
+  background: map-fetch($color, ui, dark);
+  color: map-fetch($color, text, white);
+  border-radius: map-fetch($border, radius, base);
+  font-size: map-fetch($font, size, micro);
+  padding: spacer(0.5) spacer(1);
+  max-width: map-fetch($poptip, max-width);
+  display: inline-block;
+  z-index: map-fetch($z-index, poptip);
+  font-weight: 500;
+  position: absolute;
+  opacity: 0;
+
+  // Arrow options.
+
+  &--arrow-top-left {
+    @include arrow(top, left, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-top-center {
+    @include arrow(top, center, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-top-right {
+    @include arrow(top, right, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-right-top {
+    @include arrow(right, top, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-right-center {
+    @include arrow(right, center, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-right-bottom {
+    @include arrow(right, bottom, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-bottom-right {
+    @include arrow(bottom, right, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-bottom-center {
+    @include arrow(bottom, center, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-bottom-left {
+    @include arrow(bottom, left, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-left-bottom {
+    @include arrow(left, bottom, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-left-center {
+    @include arrow(left, center, map-fetch($color, ui, dark));
+  }
+
+  &--arrow-left-top {
+    @include arrow(left, top, map-fetch($color, ui, dark));
+  }
+}

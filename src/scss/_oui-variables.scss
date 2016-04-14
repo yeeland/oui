@@ -1,0 +1,420 @@
+////
+/// OUI Variables
+/// @description Variables for all elements and objects in OUI should be listed
+/// here.
+/// @group Core
+/// @advanced
+////
+
+// scss-lint:disable SpaceAfterVariableName
+
+/// Namespace
+/// @description Provide a name space for most classes.
+
+$namespace                   : '';
+
+/// Colors
+/// @description Default color for objects' borders etc.
+
+/// Do not use these values directly in your Sass files. Use the more
+/// specifically named variables below that use these root values.
+
+$base-black                  : #000;
+$base-white                  : #FFF;
+
+$root-color: (
+  grey-85                    : tint($base-black, 15%),
+  grey-78                    : tint($base-black, 22%),
+  grey-50                    : tint($base-black, 50%),
+  grey-40                    : tint($base-black, 60%),
+  grey-35                    : tint($base-black, 65%),
+  grey-25                    : tint($base-black, 75%),
+  grey-12                    : tint($base-black, 88%),
+  grey-06                    : tint($base-black, 94%),
+  grey-03                    : tint($base-black, 97%),
+  brand                      : #0081BA,
+  brand-light                : #9ACCE2,
+  brand-dark                 : #004766,
+  warning                    : #FFD40C,
+  bad-news                   : #C60C0C,
+  good-news                  : #97C70A
+);
+
+/// Base Colors
+/// @description These are colors can be used on UI elements like borders.
+
+$color: (
+
+  ui: (
+    white                    : $base-white,
+    faint                    : map-fetch($root-color, grey-03),
+    light                    : map-fetch($root-color, grey-06),
+    base                     : map-fetch($root-color, grey-12),
+    medium                   : map-fetch($root-color, grey-40),
+    charcoal                 : map-fetch($root-color, grey-78),
+    dark                     : map-fetch($root-color, grey-85),
+    brand                    : map-fetch($root-color, brand),
+    brand-light              : map-fetch($root-color, brand-light),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    warning                  : map-fetch($root-color, warning),
+    bad-news                 : map-fetch($root-color, bad-news),
+    good-news                : map-fetch($root-color, good-news)
+  ),
+
+  link: (
+    base                     : map-fetch($root-color, brand),
+    brand-light              : map-fetch($root-color, brand-light),
+    bad-news                 : map-fetch($root-color, bad-news),
+    white                    : $base-white
+  ),
+
+  background: (
+    base                     : $base-white,
+    white                    : $base-white,
+    faint                    : map-fetch($root-color, grey-03),
+    light                    : map-fetch($root-color, grey-06),
+    muted                    : map-fetch($root-color, grey-35),
+    medium                   : map-fetch($root-color, grey-50),
+    charcoal                 : map-fetch($root-color, grey-78),
+    black                    : $base-black,
+    brand                    : map-fetch($root-color, brand),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    brand-light              : #F2F7FC,
+    warning                  : #FCF8E3,
+    bad-news                 : #F9E3E4,
+    good-news                : #E9F6C3
+  ),
+
+  text: (
+    base                     : map-fetch($root-color, grey-85),
+    white                    : $base-white,
+    faint                    : map-fetch($root-color, grey-12),
+    light                    : map-fetch($root-color, grey-25),
+    muted                    : map-fetch($root-color, grey-35),
+    medium                   : map-fetch($root-color, grey-50),
+    charcoal                 : map-fetch($root-color, grey-78),
+    dark                     : map-fetch($root-color, grey-85),
+    brand                    : map-fetch($root-color, brand),
+    brand-dark               : map-fetch($root-color, brand-dark),
+    warning                  : map-fetch($root-color, warning),
+    bad-news                 : map-fetch($root-color, bad-news),
+    good-news                : map-fetch($root-color, good-news)
+  )
+
+);
+
+/// Font Sizes
+/// @description These defaults can be overriden by custom variables.
+
+$font: (
+
+  size: (
+    base                     : 14px,
+    micro                    : 11px,
+    milli                    : 12px,
+    alpha                    : 28px, // h1
+    beta                     : 24px, // h2
+    gamma                    : 20px, // h3
+    delta                    : 16px, // h4
+    epsilon                  : 14px, // h5
+    zeta                     : 12px, // h6
+    kilo                     : 40px, // Extra large fonts.
+    mega                     : 50px,
+    giga                     : 65px
+  ),
+
+  line-height: (
+    base                     : 1.6,
+    tight                    : 1.4,
+    loose                    : 1.8
+  ),
+
+  family: (
+    base                     : unquote('Proxima, Helvetica, Verdana, sans-serif'),
+    monospace                : monospace
+  ),
+
+  letter-spacing: (
+    loose                    : 1px,
+    tight                    : -1px,
+    extra-tight              : -2px
+  )
+
+);
+
+/// Buttons
+
+$button: (
+
+  size: (
+    base: (
+      height                 : 34px,
+      line-height            : 32px,
+      font-size              : 13px,
+      padding                : 0 15px,
+      font-weight            : 400,
+      border-radius          : 2px
+    ),
+    large: (
+      height                 : 42px,
+      line-height            : 41px,
+      font-size              : 15px,
+      padding                : 0 20px,
+      font-weight            : 400,
+      border-radius          : 2px
+    ),
+    small: (
+      height                 : 27px,
+      line-height            : 26px,
+      font-size              : 11px,
+      padding                : 0 7px,
+      font-weight            : 400,
+      border-radius          : 2px
+    ),
+  ),
+
+  type: (
+    base: (
+      background             : #F6F6F7,
+      border                 : #CDD0D8,
+      color                  : map-fetch($color, text, base),
+      hover:(
+        box-shadow           : 1px 1px 2px 0 rgba(0, 0, 0, 0.16),
+      ),
+      active:(
+        background           : #64738A,
+        border               : #3B5871,
+        color                : #FFF,
+        box-shadow           : inset 1px 0 3px 0 rgba(0, 0, 0, 0.5),
+        text-shadow          : 0 1px 1px rgba(0, 0, 0, 0.5),
+      )
+    ),
+    highlight: (
+      background             : #0F75B2,
+      border                 : #0E699F,
+      text-shadow            : 1px 0 1px rgba(0, 0 , 0, 0.2),
+      hover:(
+        background           : #0081BA,
+        border               : #0176A9,
+      ),
+      active:(
+        background           : #0074B4,
+        border               : #005584,
+        box-shadow           : inset 0 1px 3px 0 rgba(0, 0, 0, 0.5),
+      )
+    ),
+    outline: (
+      background             : transparent,
+      border                 : #8D96A8,
+      color                  : #64738A,
+      hover:(
+        border               : #0074B4,
+        color                : #0074B4,
+      ),
+      active:(
+        border               : #00415D,
+        color                : #00415D,
+      )
+    ),
+    outline-reverse: (
+      background             : transparent,
+      border                 : #FFF,
+      color                  : #FFF,
+      hover:(
+        background           : transparent,
+        border               : #E0E1E5,
+        color                : #E5E5E9,
+      ),
+      active:(
+        background           : transparent,
+        border               : #FFF,
+        color                : #FFF,
+      )
+    ),
+    danger: (
+      background             : #E8464E,
+      border                 : #AA161E,
+      text-shadow            : 0 1px 1px rgba(0, 0 , 0, 0.3),
+      hover:(
+        background           : #F35E65,
+        border               : #AC192B,
+      ),
+      active:(
+        background           : #CB2D35,
+        border               : #8F192B,
+      )
+    ),
+    plain: (
+      color                  : #00415D,
+      hover:(
+        color                : #8D96A8,
+      ),
+      active:(
+        color                : #00415D,
+      )
+    ),
+    disabled: (
+      background             : #EFF0F2,
+      border                 : #E5E5E9,
+      color                  : map-fetch($color, text, muted)
+    )
+  )
+);
+
+/// Icons
+
+$icon: (
+  size: (
+    base: (
+      width                  : 16px,
+      height                 : 16px
+    ),
+    small: (
+      width                  : 12px,
+      height                 : 12px
+    ),
+    medium: (
+      width                  : 24px,
+      height                 : 24px
+    ),
+    large: (
+      width                  : 32px,
+      height                 : 32px
+    )
+  ),
+  type: (
+    target: (
+      padding                : 6px
+    )
+  )
+);
+
+/// Forms
+
+$form: (
+  input: (
+    padding                  : 7px
+  )
+);
+
+
+/// Dropdowns
+
+$dropdown: (
+  max-height                 : 320px
+);
+
+
+/// Borders
+
+$border: (
+  color: (
+    base                     : map-fetch($color, ui, base)
+  ),
+  radius: (
+    base                     : 2px,
+    big                      : 4px,
+    full                     : 50%
+  )
+);
+
+/// Shadows
+
+$shadow: (
+  base                       : 4px rgba(0, 0, 0, 0.2),
+  light                      : 3px rgba(0, 0, 0, 0.1),
+  big                        : 8px rgba(0, 0, 0, 0.3)
+);
+
+/// Opacity
+
+$opacity: (
+  medium                     : 0.5
+);
+
+/// Dialog widths
+
+$dialog: (
+  width:(
+    base                     : 700px,
+    narrow                   : 500px,
+    wide                     : 900px
+  )
+);
+
+/// Transitions
+
+$transition-duration: (
+  fast                       : 0.1s,
+  base                       : 0.3s,
+  slow                       : 0.5s
+);
+
+/// Accordion
+
+$accordion-link-height       : 26px;
+
+/// Popover
+
+$popover: (
+  max-width                  : 350px
+);
+
+/// Poptip
+
+$poptip: (
+  max-width                  : 250px
+);
+
+/// Poptip
+
+$edittext: (
+  spacer                     : 8px
+);
+
+/// Progress Bar
+
+$progress-bar: (
+  height: 20px,
+  bar: (
+    min-width: 20px
+  )
+);
+
+/// Progress Dots
+
+$progress-dots: (
+  width: 7px,
+  height: 7px,
+  margin: 3px,
+);
+
+/// Spinner
+
+$spinner: (
+  size:(
+    base                     : 40px,
+    small                    : 26px,
+    tiny                     : 16px
+  ),
+  border:(
+    width:(
+      base                   : 4px,
+      small                  : 3px,
+      tiny                   : 2px
+    ),
+  ),
+  speed                      : 800ms
+);
+
+/// Z-index Values
+
+$z-index: (
+  poptip                     : 100
+);
+
+/// Spacing Unit
+/// @description Defines spacing for paddings and margins using `spacer`
+/// function.
+
+$spacer-unit                 : 10px;

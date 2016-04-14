@@ -1,0 +1,68 @@
+////
+/// OUI Partials
+/// @description This represents the bulk of the paritals used by all sites:
+/// desktop, mobile, tablet. They are the building blocks of all patterns and
+/// are width and layout independent.
+/// @group Core
+/// @advanced
+////
+
+/// Placeholders and mixins
+@import 'partials/sass/placeholders';
+@import 'partials/sass/mixins';
+
+/// Base
+/// @description Baseline rules.
+
+@import 'partials/elements/reset';
+@import 'partials/elements/main';
+
+@import 'partials/elements/blockquote';
+@import 'partials/elements/buttons';
+@import 'partials/elements/code';
+@import 'partials/elements/fonts';
+@import 'partials/elements/form';
+@import 'partials/elements/horizontal-rules';
+@import 'partials/elements/images';
+@import 'partials/elements/links';
+@import 'partials/elements/lists';
+@import 'partials/elements/select';
+@import 'partials/elements/tables';
+@import 'partials/elements/text';
+
+/// Layout
+/// @description Files containing classes that help lay out elements
+/// on a page.
+@import 'partials/layout/array';
+@import 'partials/layout/button-group';
+@import 'partials/layout/button-row';
+@import 'partials/layout/clearfix';
+@import 'partials/layout/flexbox';
+@import 'partials/layout/grid';
+@import 'partials/layout/island';
+@import 'partials/layout/matrix';
+
+/// Components
+/// @description Simple, low level blocks.
+
+@import 'partials/components/accordion';
+@import 'partials/components/arrows-inline';
+@import 'partials/components/attention';
+@import 'partials/components/block-list';
+@import 'partials/components/dialog';
+@import 'partials/components/disclose';
+@import 'partials/components/dropdown';
+@import 'partials/components/help';
+@import 'partials/components/icons';
+@import 'partials/components/input-icon';
+@import 'partials/components/media';
+@import 'partials/components/nav';
+@import 'partials/components/pagination';
+@import 'partials/components/popover';
+@import 'partials/components/poptip';
+@import 'partials/components/progress-bar';
+@import 'partials/components/progress-dots';
+@import 'partials/components/spinner';
+@import 'partials/components/stats';
+@import 'partials/components/steps';
+@import 'partials/components/tabs';

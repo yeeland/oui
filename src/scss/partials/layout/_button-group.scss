@@ -1,0 +1,67 @@
+////
+/// Button Group
+/// @description For buttons that are flush against each other. It is also
+/// possible to include an text input.
+/// @group Layout
+/// @example[html] Default button group
+///   <div class="#{$namespace}button-group">
+///     <button class="#{$namespace}button">Button</button>
+///     <button class="#{$namespace}button">Button</button>
+///     <button class="#{$namespace}button">Button</button>
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <button class="#{$namespace}button">Select <span class="#{$namespace}arrow-inline--down"></span></button>
+///     <input type="text" class="#{$namespace}text-input">
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <input type="text" class="#{$namespace}text-input">
+///     <button class="#{$namespace}button">Button</button>
+///   </div>
+////
+
+%#{$namespace}button-group,
+.#{$namespace}button-group {
+  display: flex;
+
+  & > * { // scss-lint:disable UnnecessaryParentReference
+    margin-left: 0;
+    border-radius: 0;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &:hover,
+    &:focus {
+      position: relative;
+    }
+
+    &:first-child {
+      border-radius: map-fetch($border, radius, base) 0 0 map-fetch($border, radius, base);
+    }
+
+    &:last-child {
+      border-radius: 0 map-fetch($border, radius, base) map-fetch($border, radius, base) 0;
+    }
+  }
+
+  > .#{$namespace}button--highlight {
+    position: relative;
+  }
+
+  > .#{$namespace}text-input {
+    flex: 1;
+    width: auto;
+  }
+
+  // If inside a button group bring the colored buttons to the top so that
+  // the borders are intact.
+
+  .#{$namespace}button--highlight,
+  .#{$namespace}button--danger,
+  .#{$namespace}button--highlight {
+    z-index: 1;
+  }
+}

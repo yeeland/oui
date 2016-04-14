@@ -1,0 +1,83 @@
+////
+/// Borders
+/// @description This adds a border and additional spacing directly to an
+/// element.
+/// @group Trumps
+////
+
+
+/// Border on all sides
+/// @example[html]
+///   <div class="border--all">Border on all sides</div>
+
+%border--all,
+.border--all {
+  border: 1px solid map-fetch($border, color, base) !important;
+}
+
+/// Border on ends
+/// @example[html]
+///   <div class="border--top">Border on top</div>
+/// @example[html]
+///   <div class="border--ends">Border on ends</div>
+
+%border--top,
+.border--top {
+  border-top: 1px solid map-fetch($border, color, base) !important;
+}
+
+%border--bottom,
+.border--bottom {
+  border-bottom: 1px solid map-fetch($border, color, base) !important;
+}
+
+%border--ends,
+.border--ends {
+  @extend %border--top;
+  @extend %border--bottom;
+}
+
+/// Border on sides
+/// @example[html]
+///   <div class="border--left">Border on left</div>
+/// @example[html]
+///   <div class="border--sides">Border on sides</div>
+
+%border--left,
+.border--left {
+  border-left: 1px solid map-fetch($border, color, base) !important;
+}
+
+%border--right,
+.border--right {
+  border-right: 1px solid map-fetch($border, color, base) !important;
+}
+
+%border--sides,
+.border--sides {
+  @extend %border--left;
+  @extend %border--right;
+}
+
+/// Remove Borders
+/// @description Remove borders from all or just one side.
+
+.no-border {
+  border: 0 !important;
+}
+
+.no-border--top {
+  border-top: none !important;
+}
+
+.no-border--right {
+  border-right: none !important;
+}
+
+.no-border--bottom {
+  border-bottom: none !important;
+}
+
+.no-border--left {
+  border-left: none !important;
+}
