@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Added draft and live background color helpers (#376)
+
 ### Removed
 - [Patch] Remove linter pre-commit hook to avoid annoying Ruby dependency. (#370)
 

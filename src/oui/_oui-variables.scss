@@ -37,7 +37,9 @@ $root-color: (
   brand-dark                 : #004766,
   warning                    : #FFD40C,
   bad-news                   : #C60C0C,
-  good-news                  : #97C70A
+  good-news                  : #97C70A,
+  draft                      : #F4B852, // Brand Oakland
+  live                       : #77C96F // Brand Haight+1
 );
 
 /// Base Colors
@@ -58,7 +60,9 @@ $color: (
     brand-dark               : map-fetch($root-color, brand-dark),
     warning                  : map-fetch($root-color, warning),
     bad-news                 : map-fetch($root-color, bad-news),
-    good-news                : map-fetch($root-color, good-news)
+    good-news                : map-fetch($root-color, good-news),
+    draft                    : map-fetch($root-color, draft),
+    live                     : map-fetch($root-color, live)
   ),
 
   link: (

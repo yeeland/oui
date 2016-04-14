@@ -4,7 +4,40 @@
 /// @group Trumps
 /// @example[html]
 ///   <div class="background--faint">
-///     This text has a light gray background.
+///     faint
+///   </div>
+///   <div class="background--light">
+///     light
+///   </div>
+///   <div class="background--muted">
+///     muted
+///   </div>
+///   <div class="background--medium">
+///     medium
+///   </div>
+///   <div class="background--charcoal">
+///     charcoal
+///   </div>
+///   <div class="background--brand">
+///     brand
+///   </div>
+///   <div class="background--brand-dark">
+///     brand-dark
+///   </div>
+///   <div class="background--warning">
+///     warning
+///   </div>
+///   <div class="background--bad-news">
+///     bad-news
+///   </div>
+///   <div class="background--good-news">
+///     good-news
+///   </div>
+///   <div class="background--live">
+///     live
+///   </div>
+///   <div class="background--draft">
+///     draft
 ///   </div>
 ////
 
@@ -50,6 +83,14 @@
 
 .background--good-news {
   background-color: map-fetch($color, background, good-news) !important;
+}
+
+.background--live {
+  background-color: map-fetch($color, ui, live) !important;
+}
+
+.background--draft {
+  background-color: map-fetch($color, ui, draft) !important;
 }
 
 .background--current-color {
