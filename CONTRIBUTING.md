@@ -24,9 +24,11 @@
 
   GitHub issue number is the number of the GitHub issue, if applicable, preceded by a `#`. Ideally, each contribution should have a corresponding issue that provides more context.
 
-4. Open a pull request against `devel`. Add at least one reviewer. Pull requests for backward compatible changes that need to go out instantly can be open against `master`.
+4. `git push` your changes to GitHub.
 
-**Note**: Need to release a change immediately? Branch off of the latest `master` instead of `devel` and merge into `master`. Then read the "Releasing a new version of OUI" below.
+5. Open a pull request comparing your feature `branch-name` against `devel`. Add at least one reviewer.
+
+**Note**: Need to release a change immediately for backward compatiblity? 1) Branch off of the latest `master` (instead of `devel`) then open a pull request to merge into `master`. 2) Read "[Releasing a new version of OUI](#releasing-a-new-version-of-oui)" below.
 
 ## Breaking changes & deprecating code
 
@@ -61,9 +63,6 @@ This applies any time classes are being renamed and you want old and new code to
 3. Open the `CHANGELOG.md` and look at the "Unreleased" contributions. Update it to reflect the new release and commit the change on `master`.
 4. Update the URLs in `src/oui/partials/components/_icons.scss` to reflect the version of `oui-icons` that `oui` uses. Run `npm install && npm list oui-icons` to get that version number. These get embedded in the OUI documentation.
 5. Run `npm version patch`, `npm version minor`, or `npm version major` depending on the highest importance issue in the new changes. `minor` maps to "Feature" and `major` maps to "Release" in the `CHANGELOG.md`.
-6. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). Add the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. [It should look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png).
-7. Merge `master` back into `devel` and push to GitHub:
-````
-git checkout devel && git merge master
-git push origin devel
-```
+6. [Create a new release on GitHub](https://github.com/optimizely/oui/releases/new). It should [look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png). Select
+ the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes. 
+ 7. [Deploy new documentation](https://github.com/optimizely/scribesass/blob/master/README.md) using ScribeSass.
