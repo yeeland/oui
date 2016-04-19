@@ -25,7 +25,9 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.0",
     "mkpath": "^1.0.0",
+    "onchange": "^2.4.0",
     "oui-icons": "^0.1.2",
+    "parallelshell": "^2.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "require-dir": "^0.3.0",
@@ -41,9 +43,10 @@
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
     "postversion:publish": "git push && git push --tags",
     "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master",
-
-    "webpack": "gulp sass && cp ./src/js/react/index.html ./dist/index.html && webpack",
-    "webpack-watch": "npm run webpack && browser-sync start --server dist --files \"dist/**/*\""
+    "webpack": "gulp sass && cp ./src/js/react/index.html ./dist/index.html && webpack && browser-sync reload",
+    "webpack-watch": "parallelshell 'npm run webpack-watch:onchange' 'npm run webpack-watch:browser-sync'",
+    "webpack-watch:onchange": "onchange 'src/**/*.jsx' -- npm run webpack",
+    "webpack-watch:browser-sync": "browser-sync start --server dist"
   },
   "repository": {
     "type": "git",
