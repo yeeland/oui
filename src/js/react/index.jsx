@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 
 import Attention from './Attention.jsx'
 import ArrowsInline from './ArrowsInline.jsx'
+import Code from './Code.jsx'
 
 const Component = ({ children, title }) => {
   return (
     <div className="push-triple--ends">
-      <h2>{ title }</h2>
+      <h2 className="push--bottom">{ title }</h2>
       { children }
     </div>
   )
@@ -48,6 +49,13 @@ class App extends React.Component {
               <ArrowsInline direction="right" /> Right
             </li>
           </ul>
+        </Component>
+
+        <Component title="Code">
+          <Code type="inline">var foo;</Code>
+          <Code type="block">
+            Block of Code
+          </Code>
         </Component>
       </div>
     );
