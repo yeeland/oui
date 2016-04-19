@@ -9,11 +9,19 @@ module.exports = {
   },
   "parserOptions": {
     "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+    "sourceType": "module",
   },
   "globals": {
     "ouiGetProps": true,
     "ouiShowPop": true,
   },
+  "plugins": [
+    "react"
+  ],
+  "extends": ["plugin:react/recommended"],
   "rules": {
     "comma-dangle": ["warn", "always-multiline"],
     "no-cond-assign": "warn",
@@ -156,5 +164,6 @@ module.exports = {
     "max-statements": "off",
     "no-bitwise": "off",
     "no-plusplus": "off",
+    "jsx-quotes": ["warn", "prefer-double"],
   },
 };
