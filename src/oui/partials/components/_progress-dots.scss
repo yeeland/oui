@@ -35,6 +35,12 @@
   &--reverse li {
     background: map-fetch($color, ui, white);
   }
+
+  &--small li {
+    width: map-fetch($progress-dots, width-small);
+    height: map-fetch($progress-dots, height-small);
+    margin: 0 map-fetch($progress-dots, margin-small);
+  }
 }
 
 @keyframes progress-pulse {
