@@ -8,7 +8,9 @@ import Code from './Code.jsx'
 const Component = ({ children, title }) => {
   return (
     <div className="push-triple--ends">
-      <h2 className="push--bottom">{ title }</h2>
+      <h2 className="push-double--bottom soft--bottom border--bottom">
+        { title }
+      </h2>
       { children }
     </div>
   )
@@ -54,7 +56,8 @@ class App extends React.Component {
         <Component title="Code">
           <Code type="inline">var foo;</Code>
           <Code type="block">
-            Block of Code
+{`var foo = 'bar';
+var bat = 'baz';`}
           </Code>
         </Component>
       </div>
