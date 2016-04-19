@@ -55,6 +55,21 @@
       }
     }
   },
+  "checkbox":{
+    "name":"Checkboxes",
+    "group":"Elements",
+    "rules":{
+      "children":{
+        "rule":"isString",
+        "default":null,
+        "required":true
+      },
+      "checked":{
+        "rule":"isBoolean",
+        "default":false
+      }
+    }
+  },
   "code":{
     "name":"Code",
     "description":"Monospace code snippets, both inline and multiline.",
@@ -94,25 +109,25 @@
       }
     }
   },
-  "input":{
-    "name":"Inputs",
+  "horizontal-rule":{
+    "name":"Horizontal Rules",
     "group":"Elements",
     "rules":{
-      "label":{
-        "rule":"isComponent",
-        "value":"label",
-        "default":null,
-        "required":false
-      },
-      "disabled":{
-        "rule":"isBoolean",
-        "default":false
-      },
-      "placeholder":{
-        "rule":"isString",
+      "style":{
+        "rule":"inArray",
+        "value":[
+          "default",
+          "dotted",
+          "dashed"
+        ],
+        "default":"default",
         "required":false
       }
     }
+  },
+  "images":{
+    "name":"Images",
+    "group":"Elements",
   },
   "label":{
     "name":"Labels",
@@ -133,6 +148,10 @@
         "default":false
       }
     }
+  },
+  "list":{
+    "name":"Lists",
+    "group":"Elements",
   },
   "select":{
     "name":"Selects",
@@ -168,6 +187,10 @@
         "default":false
       }
     }
+  },
+  "table":{
+    "name":"Tables",
+    "group":"Elements",
   },
   "textarea":{
     "name":"Textareas",
