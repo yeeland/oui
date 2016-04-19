@@ -1,9 +1,9 @@
 module.exports = {
   entry: {
-    app: './src/js/react/index.jsx'
+    app: './src/js/react/index.jsx',
   },
   output: {
-    filename: './dist/js/[name].js'
+    filename: './dist/js/[name].js',
   },
   module: {
     loaders: [
