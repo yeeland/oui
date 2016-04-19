@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Attention from './Attention.jsx'
-import ArrowsInline from './ArrowsInline.jsx'
-import Code from './Code.jsx'
+import Attention from './Attention';
+import ArrowsInline from './ArrowsInline';
+import Code from './Code';
 
 const Component = ({ children, title }) => {
   return (
@@ -13,7 +13,12 @@ const Component = ({ children, title }) => {
       </h2>
       { children }
     </div>
-  )
+  );
+};
+
+Component.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  children: React.PropTypes.any.isRequired,
 };
 
 class App extends React.Component {

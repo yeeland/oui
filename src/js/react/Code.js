@@ -5,13 +5,13 @@ let inlineCode = (children) => {
     <code className="code">
       { children }
     </code>
-  )
+  );
 };
 
 let blockCode = (children) => {
   return (
     <pre className="pre"><code>{ children }</code></pre>
-  )
+  );
 };
 
 const Code = ({ children, type }) => {
@@ -25,6 +25,7 @@ const Code = ({ children, type }) => {
 
 Code.propTypes = {
   type: React.PropTypes.oneOf(['inline', 'block']).isRequired,
+  children: React.PropTypes.string.isRequired,
 };
 
 export default Code;

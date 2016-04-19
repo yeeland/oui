@@ -7,7 +7,7 @@ let renderDismissButton = () => {
     <span className="attention__close">
       &times;
     </span>
-  )
+  );
 };
 
 let validateChildrenProp = (props, propName, componentName) => {
@@ -24,7 +24,7 @@ const Attention = ({ alignment, children, isDismissable, type }) => {
 
   return (
     <div>
-      <div className={'attention ' +  colorClassName + ' ' + alignmentClassName }>
+      <div className={'attention ' + colorClassName + ' ' + alignmentClassName }>
         { isDismissable ? renderDismissButton() : null }
         { children }
       </div>
