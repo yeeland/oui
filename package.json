@@ -46,7 +46,7 @@
     "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master",
     "react": "gulp sass && cp ./src/js/react/index.html ./dist/index.html && webpack && browser-sync reload",
     "react:serve": "npm run react && parallelshell 'npm run react:onchange' 'npm run react:browser-sync'",
-    "react:onchange": "onchange 'src/**/*.jsx' -- npm run react",
+    "react:onchange": "onchange 'src/**/*.(jsx|js)' -- npm run react",
     "react:browser-sync": "browser-sync start --server dist"
   },
   "repository": {
