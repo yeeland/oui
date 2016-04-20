@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Button = ({ children, isDisabled, size, style }) => {
+const Button = ({ children, isDisabled, isSubmit, size, style }) => {
   let buttonStyleClass = style ? 'button--' + style : '';
   let buttonSizeClass = size ? 'button--' + size : '';
 
   return (
     <button className={'button ' + buttonStyleClass + ' ' + buttonSizeClass }
-            disabled={ isDisabled ? 'disabled' : false }>
+            disabled={ isDisabled ? 'disabled' : false }
+            type={ isSubmit ? 'submit' : 'button' }>
       { children }
     </button>
   );
@@ -15,6 +16,7 @@ const Button = ({ children, isDisabled, size, style }) => {
 Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   isDisabled: React.PropTypes.bool,
+  isSubmit: React.PropTypes.bool,
   size: React.PropTypes.oneOf([
     'small',
     'large',
