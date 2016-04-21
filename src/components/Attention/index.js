@@ -4,7 +4,7 @@ const maxCharacters = 1000;
 
 let renderDismissButton = () => {
   return (
-    <span className="attention__close">
+    <span className="attention__close" data-test-section="attention-dismiss">
       &times;
     </span>
   );
@@ -23,11 +23,9 @@ const Attention = ({ alignment, children, isDismissable, type }) => {
   let alignmentClassName = alignment === 'center' ? 'text--center' : '';
 
   return (
-    <div>
-      <div className={'attention ' + colorClassName + ' ' + alignmentClassName }>
-        { isDismissable ? renderDismissButton() : null }
-        { children }
-      </div>
+    <div className={'attention ' + colorClassName + ' ' + alignmentClassName }>
+      { isDismissable ? renderDismissButton() : null }
+      { children }
     </div>
   );
 };

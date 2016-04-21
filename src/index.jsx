@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Attention from './Attention';
-import ArrowsInline from './ArrowsInline';
-import Button from './Button';
-import Code from './Code';
+import Attention from './components/Attention';
+import ArrowsInline from './components/ArrowsInline';
+import Button from './components/Button';
+import Code from './components/Code';
 
 const Component = ({ children, title }) => {
   return (

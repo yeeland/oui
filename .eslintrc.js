@@ -15,8 +15,23 @@ module.exports = {
     "sourceType": "module",
   },
   "globals": {
+    // Legacy JavaScript
     "ouiGetProps": true,
     "ouiShowPop": true,
+    // Jest Globals
+    // https://facebook.github.io/jest/docs/api.html#globally-injected-variables
+    "afterEach": true,
+    "beforeEach": true,
+    "describe": true,
+    "expect": true,
+    "it": true,
+    "fit": true,
+    "jest": true,
+    "pit": true,
+    "require": true,
+    "require.requireActual": true,
+    "xdescribe": true,
+    "xit": true,
   },
   "plugins": [
     "react"
