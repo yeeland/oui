@@ -1,21 +1,11 @@
 import React from 'react';
 
-const maxCharacters = 1000;
-
 let renderDismissButton = () => {
   return (
     <span className="attention__close" data-test-section="attention-dismiss">
       &times;
     </span>
   );
-};
-
-let validateChildrenProp = (props, propName, componentName) => {
-  if (!props[propName]) {
-    return new Error('Attention text is required.');
-  } else if (props[propName].length > maxCharacters) {
-    return new Error('Attention text must be under ' + maxCharacters + ' characters.');
-  }
 };
 
 const Attention = ({ alignment, children, isDismissable, type }) => {
@@ -32,7 +22,7 @@ const Attention = ({ alignment, children, isDismissable, type }) => {
 
 Attention.propTypes = {
   alignment: React.PropTypes.oneOf(['left', 'center']),
-  children: validateChildrenProp,
+  children: React.PropTypes.string.isRequired,
   isDismissable: React.PropTypes.bool,
   type: React.PropTypes.oneOf(['bad-news', 'brand', 'good-news', 'warning']),
 };
