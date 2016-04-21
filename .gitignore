@@ -1,5 +1,6 @@
 node_modules
 dist
+coverage
 .bundle
 .sass-cache
 npm-debug.log
