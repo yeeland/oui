@@ -41,7 +41,7 @@
   "scripts": {
     "test": "npm run scss-lint && npm run eslint && gulp sass && npm run jest",
     "start": "bundle install && bundle update && npm install",
-    "jest": "jest --config .jest.config.json --testPathPattern \"tests.js\"",
+    "jest": "jest --config .jest.config.json",
     "eslint": "eslint --ext .jsx --ext .js . --ignore-path .gitignore --max-warnings 0",
     "scss-lint": "bundle exec scss-lint src/ --exclude src/oui/library/**/*",
     "preversion": "git checkout master && git pull --rebase=false && npm install",

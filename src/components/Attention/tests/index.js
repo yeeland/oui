@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import Attention from './index';
-
-jest.unmock('./index');
+import Attention from '../index';
 
 describe('Attention', () => {
 
