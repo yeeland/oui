@@ -22,7 +22,6 @@ describe('Attention', () => {
   });
 
   it('should render dismiss button when prop is provided', () => {
-
     const component = TestUtils.renderIntoDocument(
       <div>
         <Attention isDismissable>
@@ -38,7 +37,6 @@ describe('Attention', () => {
   });
 
   it('should not render dismiss button by default', () => {
-
     const component = TestUtils.renderIntoDocument(
       <div>
         <Attention>
