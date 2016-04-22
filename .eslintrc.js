@@ -38,6 +38,7 @@ module.exports = {
   ],
   "extends": ["plugin:react/recommended"],
   "rules": {
+    // Optimizely rules
     "comma-dangle": ["warn", "always-multiline"],
     "no-cond-assign": "warn",
     "no-console": "warn",
@@ -180,5 +181,8 @@ module.exports = {
     "no-bitwise": "off",
     "no-plusplus": "off",
     "jsx-quotes": ["warn", "prefer-double"],
+
+    // OUI rules
+    "valid-jsdoc": ["warn"],
   },
 };
