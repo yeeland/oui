@@ -25,9 +25,10 @@ Component.propTypes = {
 const ComponentRow = ({ backgroundColor, children, isPadded }) => {
   let backgroundColorClass = backgroundColor ? 'background--' + backgroundColor : '';
   let paddingClass = isPadded ? 'soft' : '';
+  let classes = ('push--bottom ' + backgroundColorClass + ' ' + paddingClass).trim();
 
   return (
-    <div className={ 'push--bottom ' + backgroundColorClass + ' ' + paddingClass }>
+    <div className={ classes }>
       { children }
     </div>
   );
@@ -78,6 +79,21 @@ class App extends React.Component {
           </ComponentRow>
           <ComponentRow>
             <Attention alignment="left" type="bad-news">
+              Hello! This is a short attention bar.
+            </Attention>
+          </ComponentRow>
+          <ComponentRow>
+            <Attention type="brand">
+              Hello! This is a short attention bar.
+            </Attention>
+          </ComponentRow>
+          <ComponentRow>
+            <Attention type="good-news">
+              Hello! This is a short attention bar.
+            </Attention>
+          </ComponentRow>
+          <ComponentRow>
+            <Attention type="warning">
               Hello! This is a short attention bar.
             </Attention>
           </ComponentRow>

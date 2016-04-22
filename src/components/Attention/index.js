@@ -1,19 +1,27 @@
 import React from 'react';
+import Button from '../Button';
+import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
 let renderDismissButton = () => {
   return (
-    <span className="attention__close" data-test-section="attention-dismiss">
-      &times;
-    </span>
+    <div className="attention__close" data-test-section="attention-dismiss-container">
+      <Button style="plain" size="small" ariaLabel="Close alert">
+        &times;
+      </Button>
+    </div>
   );
 };
 
 const Attention = ({ alignment, children, isDismissable, type }) => {
   let colorClassName = type ? 'attention--' + type : '';
-  let alignmentClassName = alignment === 'center' ? 'text--center' : '';
+  let alignmentClassName = (alignment === 'center') ? 'text--center' : '';
+  let attentionAriaLabel = type ? getAssistiveTextFromColorClass(type) : null;
+  let classes = ('attention ' + colorClassName + ' ' + alignmentClassName).trim();
 
   return (
-    <div className={'attention ' + colorClassName + ' ' + alignmentClassName }>
+    <div className={ classes }
+         aria-label={ attentionAriaLabel }
+         role="alert">
       { isDismissable ? renderDismissButton() : null }
       { children }
     </div>

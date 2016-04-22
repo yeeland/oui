@@ -5,4 +5,4 @@ import TestUtils from 'react-addons-test-utils';
 import Button from '../index';
 /* eslint-enable no-unused-vars */
 
-describe('Button', () => {});
+describe('components/Button', () => {});

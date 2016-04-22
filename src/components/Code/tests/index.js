@@ -5,4 +5,4 @@ import TestUtils from 'react-addons-test-utils';
 import Code from '../index';
 /* eslint-enable no-unused-vars */
 
-describe('Code', () => {});
+describe('components/Code', () => {});

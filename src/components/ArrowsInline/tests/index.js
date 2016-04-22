@@ -5,4 +5,4 @@ import TestUtils from 'react-addons-test-utils';
 import ArrowsInline from '../index';
 /* eslint-enable no-unused-vars */
 
-describe('ArrowsInline', () => {});
+describe('components/ArrowsInline', () => {});
