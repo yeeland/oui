@@ -24,7 +24,7 @@ describe('components/Code', () => {
   });
 
   it('should render code that is passed in', () => {
-    let code = `var foo;`;
+    let code = 'var foo;';
 
     const componentInline = testHelpers.renderIntoDocument(
       <Code type="inline">{ code }</Code>
