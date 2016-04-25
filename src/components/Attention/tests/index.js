@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import * as testHelpers from '../../../utils/test-helpers';
 import Attention from '../index';
 
 describe('components/Attention', () => {
@@ -8,72 +7,60 @@ describe('components/Attention', () => {
   it('should render text passed in as children', () => {
     const message = 'Hello! This is a short attention bar.';
 
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention>
-          { message }
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention>
+        { message }
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
+    const componentNode = testHelpers.getNodeFromComponent(component);
 
     expect(componentNode.textContent).toEqual(message);
   });
 
   it('should render dismiss button when prop is provided', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention isDismissable>
-          'Hello! This is a short attention bar.'
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention isDismissable>
+        'Hello! This is a short attention bar.'
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
-    const dismissButtonContainer = componentNode.querySelector('[data-test-section="attention-dismiss-container"]');
+    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'attention-dismiss-container');
 
     expect(dismissButtonContainer).toBeDefined();
   });
 
   it('should not render dismiss button by default', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention>
-          'Hello! This is a short attention bar.'
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention>
+        'Hello! This is a short attention bar.'
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
-    const dismissButtonContainer = componentNode.querySelector('[data-test-section="attention-dismiss-container"]');
+    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'attention-dismiss-container');
 
     expect(dismissButtonContainer).toBeNull();
   });
 
   it('should have a properly set role attribute', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention>
-          'Hello! This is a short attention bar.'
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention>
+        'Hello! This is a short attention bar.'
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
+    const componentNode = testHelpers.getNodeFromComponent(component);
     expect(componentNode.getAttribute('role')).toBe('alert');
   });
 
   it('should have aria-label if type is provided', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention type="brand">
-          'Hello! This is a short attention bar.'
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention type="brand">
+        'Hello! This is a short attention bar.'
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
+    const componentNode = testHelpers.getNodeFromComponent(component);
     expect(componentNode.getAttribute('aria-label')).toBeDefined();
   });
 
@@ -82,16 +69,14 @@ describe('components/Attention', () => {
    * triggers an action instead of navigating elsewhere.
    */
   it('should use an HTML button element for a close button', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <Attention isDismissable>
-          'Hello! This is a short attention bar.'
-        </Attention>
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <Attention isDismissable>
+        'Hello! This is a short attention bar.'
+      </Attention>
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
-    const dismissButton = componentNode.querySelector('[data-test-section="attention-dismiss-container"] > button');
+    const dismissButtonContainer = testHelpers.getNodeFromComponent(component, 'attention-dismiss-container');
+    const dismissButton = dismissButtonContainer.querySelector('button');
 
     expect(dismissButton).toBeDefined();
   });

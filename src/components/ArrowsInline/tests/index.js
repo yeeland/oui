@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import * as testHelpers from '../../../utils/test-helpers';
 import ArrowsInline from '../index';
 
 describe('components/ArrowsInline', () => {
@@ -10,13 +9,11 @@ describe('components/ArrowsInline', () => {
    * (a button, for example) that may use this component.
    */
   it('should have aria-hidden property set to true', () => {
-    const component = TestUtils.renderIntoDocument(
-      <div>
-        <ArrowsInline />
-      </div>
+    const component = testHelpers.renderIntoDocument(
+      <ArrowsInline />
     );
 
-    const componentNode = ReactDOM.findDOMNode(component).children[0];
+    const componentNode = testHelpers.getNodeFromComponent(component);
     expect(componentNode.getAttribute('aria-hidden')).toBe('true');
   });
 });
