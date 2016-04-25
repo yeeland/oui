@@ -15,12 +15,11 @@ let blockCode = (children) => {
 };
 
 const Code = ({ children, type }) => {
-  return (
-    <div>
-      { type === 'block' ? blockCode(children) : null }
-      { type === 'inline' ? inlineCode(children) : null }
-    </div>
-  );
+  if (type === 'inline') {
+    return inlineCode(children);
+  }
+
+  return blockCode(children);
 };
 
 Code.propTypes = {
