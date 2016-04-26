@@ -153,7 +153,7 @@ class App extends React.Component {
           <ComponentRow backgroundColor="faint" isPadded>
             <ComponentRow>
               <ComponentRowItem>
-                <Button size="small">Samll Button</Button>
+                <Button size="small">Small Button</Button>
               </ComponentRowItem>
               <ComponentRowItem>
                 <Button size="large">Large Button</Button>
@@ -179,8 +179,8 @@ class App extends React.Component {
           </ComponentRow>
           <ComponentRow>
             <Code type="block">
-  {`var foo = 'bar';
-  var bat = 'baz';`}
+{`var foo = 'bar';
+var bat = 'baz';`}
             </Code>
           </ComponentRow>
         </Component>
