@@ -19,9 +19,10 @@ const Attention = ({ alignment, children, isDismissable, type }) => {
   let classes = ('attention ' + colorClassName + ' ' + alignmentClassName).trim();
 
   return (
-    <div className={ classes }
-         aria-label={ attentionAriaLabel }
-         role="alert">
+    <div
+      className={ classes }
+      aria-label={ attentionAriaLabel }
+      role="alert">
       { isDismissable ? renderDismissButton() : null }
       { children }
     </div>

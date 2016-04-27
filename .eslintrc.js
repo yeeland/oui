@@ -30,6 +30,7 @@ module.exports = {
     "pit": true,
     "require": true,
     "require.requireActual": true,
+    "spyOn": true,
     "xdescribe": true,
     "xit": true,
   },
@@ -183,6 +184,15 @@ module.exports = {
     "jsx-quotes": ["warn", "prefer-double"],
 
     // OUI rules
-    "valid-jsdoc": ["warn"],
+    "react/jsx-indent-props": ["warn", 2],
+    "valid-jsdoc": ["warn", {
+      "preferType": {
+        "String": "String",
+        "Number": "Number",
+        "object": "Object",
+        "array": "Array",
+        "function": "Function",
+      }
+    }],
   },
 };

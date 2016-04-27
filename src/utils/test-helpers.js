@@ -35,7 +35,7 @@ export const getNodeFromComponent = (component) => {
  * Find an element that contains an attribute data-test-section equal to the
  * provided value.
  * @param {ReactElement} component - JSX returned in a function
- * @param {string} testSection - unique label identifying an element
+ * @param {String} testSection - unique label identifying an element
  * @returns {HTMLElement} Element that has the provided data test section.
  */
 export const getTestSectionFromComponent = (component, testSection) => {
@@ -44,3 +44,9 @@ export const getTestSectionFromComponent = (component, testSection) => {
 
   return element;
 };
+
+/**
+ * Simulate events on react components.
+ * @returns {Object} Object with methods to simulate events (eg. change, input, etc).
+ */
+export const simulate = ReactTestUtils.Simulate;
