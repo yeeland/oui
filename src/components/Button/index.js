@@ -5,10 +5,11 @@ const Button = ({ ariaLabel, children, isDisabled, isSubmit, size, style }) => {
   let buttonSizeClass = size ? 'button--' + size : '';
 
   return (
-    <button className={'button ' + buttonStyleClass + ' ' + buttonSizeClass }
-            disabled={ isDisabled ? 'disabled' : false }
-            type={ isSubmit ? 'submit' : 'button' }
-            aria-label={ ariaLabel }>
+    <button
+      className={'button ' + buttonStyleClass + ' ' + buttonSizeClass }
+      disabled={ isDisabled ? 'disabled' : false }
+      type={ isSubmit ? 'submit' : 'button' }
+      aria-label={ ariaLabel }>
       { children }
     </button>
   );

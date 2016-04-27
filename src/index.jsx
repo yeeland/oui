@@ -5,6 +5,7 @@ import Attention from './components/Attention';
 import ArrowsInline from './components/ArrowsInline';
 import Button from './components/Button';
 import Code from './components/Code';
+import Input from './components/Input';
 
 const Component = ({ children, title }) => {
   return (
@@ -182,6 +183,21 @@ class App extends React.Component {
 {`var foo = 'bar';
 var bat = 'baz';`}
             </Code>
+          </ComponentRow>
+        </Component>
+
+        <Component title="Input">
+          <ComponentRow>
+            <Input type="text" defaultValue="foo" />
+          </ComponentRow>
+          <ComponentRow>
+            <Input type="number" value="42" onChange={function() {}} />
+          </ComponentRow>
+          <ComponentRow>
+            <Input type="password" />
+          </ComponentRow>
+          <ComponentRow>
+            <Input type="date" />
           </ComponentRow>
         </Component>
       </div>
