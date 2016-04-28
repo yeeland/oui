@@ -1,6 +1,6 @@
 import React from 'react';
 
-let inlineCode = (children) => {
+const inlineCode = (children) => {
   return (
     <code className="code">
       { children }
@@ -8,18 +8,18 @@ let inlineCode = (children) => {
   );
 };
 
-let blockCode = (children) => {
+const blockCode = (children) => {
   return (
     <pre className="pre"><code>{ children }</code></pre>
   );
 };
 
-const Code = ({ children, type }) => {
-  if (type === 'inline') {
-    return inlineCode(children);
+const Code = (props) => {
+  if (props.type === 'inline') {
+    return inlineCode(props.children);
   }
 
-  return blockCode(children);
+  return blockCode(props.children);
 };
 
 Code.propTypes = {
