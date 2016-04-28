@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
-let renderDismissButton = () => {
+const renderDismissButton = () => {
   return (
     <div className="attention__close" data-test-section="attention-dismiss-container">
       <Button style="plain" size="small" ariaLabel="Close alert">
@@ -12,10 +12,10 @@ let renderDismissButton = () => {
   );
 };
 
-const Attention = ({ alignment, children, isDismissable, type }) => {
-  let colorClassName = type ? 'attention--' + type : '';
-  let alignmentClassName = (alignment === 'center') ? 'text--center' : '';
-  let attentionAriaLabel = type ? getAssistiveTextFromColorClass(type) : null;
+const Attention = (props) => {
+  let colorClassName = props.type ? 'attention--' + props.type : '';
+  let alignmentClassName = (props.alignment === 'center') ? 'text--center' : '';
+  let attentionAriaLabel = props.type ? getAssistiveTextFromColorClass(props.type) : null;
   let classes = ('attention ' + colorClassName + ' ' + alignmentClassName).trim();
 
   return (
@@ -23,8 +23,8 @@ const Attention = ({ alignment, children, isDismissable, type }) => {
       className={ classes }
       aria-label={ attentionAriaLabel }
       role="alert">
-      { isDismissable ? renderDismissButton() : null }
-      { children }
+      { props.isDismissable ? renderDismissButton() : null }
+      { props.children }
     </div>
   );
 };

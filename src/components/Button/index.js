@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Button = ({ ariaLabel, children, isDisabled, isSubmit, size, style }) => {
-  let buttonStyleClass = style ? 'button--' + style : '';
-  let buttonSizeClass = size ? 'button--' + size : '';
+const Button = (props) => {
+  let buttonStyleClass = props.style ? 'button--' + props.style : '';
+  let buttonSizeClass = props.size ? 'button--' + props.size : '';
 
   return (
     <button
       className={'button ' + buttonStyleClass + ' ' + buttonSizeClass }
-      disabled={ isDisabled ? 'disabled' : false }
-      type={ isSubmit ? 'submit' : 'button' }
-      aria-label={ ariaLabel }>
-      { children }
+      disabled={ props.isDisabled ? 'disabled' : false }
+      type={ props.isSubmit ? 'submit' : 'button' }
+      aria-label={ props.ariaLabel }>
+      { props.children }
     </button>
   );
 };
