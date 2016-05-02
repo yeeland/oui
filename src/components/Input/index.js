@@ -1,6 +1,7 @@
 import React from 'react';
+import Label from '../Label';
 
-const Input = (props) => {
+const renderInput = (props) => {
   return (
     <input
       className="text-input"
@@ -15,6 +16,21 @@ const Input = (props) => {
       onChange={props.onChange}
     />
   );
+};
+
+const Input = (props) => {
+  if (props.label) {
+    return (
+      <Label>
+        <div className="label">
+          { props.label }
+        </div>
+        { renderInput(props) }
+      </Label>
+    );
+  }
+
+  return renderInput(props);
 };
 
 Input.propTypes = {
@@ -36,6 +52,8 @@ Input.propTypes = {
   isDisabled: React.PropTypes.bool,
   onInput: React.PropTypes.func,
   onChange: React.PropTypes.func,
+  label: React.PropTypes.string,
 };
+renderInput.propTypes = Input.propTypes;
 
 export default Input;
