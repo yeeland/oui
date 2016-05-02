@@ -6,6 +6,7 @@ import ArrowsInline from './components/ArrowsInline';
 import Button from './components/Button';
 import Code from './components/Code';
 import Input from './components/Input';
+import Label from './components/Label';
 
 const Component = ({ children, title }) => {
   return (
@@ -194,10 +195,22 @@ var bat = 'baz';`}
             <Input type="number" value="42" onChange={function() {}} />
           </ComponentRow>
           <ComponentRow>
-            <Input type="password" />
+            <Input type="password" label="Password" />
           </ComponentRow>
           <ComponentRow>
             <Input type="date" />
+          </ComponentRow>
+        </Component>
+
+        <Component title="Label">
+          <ComponentRow>
+            <Label>I'm a Label</Label>
+          </ComponentRow>
+          <ComponentRow>
+            <Label>
+              <div>When I have nodes,</div>
+              <div>I'm unstyled</div>
+            </Label>
           </ComponentRow>
         </Component>
       </div>
