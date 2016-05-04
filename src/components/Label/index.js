@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Label = (props) => {
-  let classes = null;
+  let classes = props.className;
   if (typeof props.children === 'string') {
     classes = 'label';
   }

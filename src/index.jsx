@@ -7,6 +7,7 @@ import Button from './components/Button';
 import Code from './components/Code';
 import Input from './components/Input';
 import Label from './components/Label';
+import Checkbox from './components/Checkbox';
 
 const Component = ({ children, title }) => {
   return (
@@ -211,6 +212,18 @@ var bat = 'baz';`}
               <div>When I have nodes,</div>
               <div>I'm unstyled</div>
             </Label>
+          </ComponentRow>
+        </Component>
+
+        <Component title="Checkbox">
+          <ComponentRow>
+            <Checkbox isChecked={true} onChange={function() {}} />
+          </ComponentRow>
+          <ComponentRow>
+            <Checkbox isDefaultChecked={true} />
+          </ComponentRow>
+          <ComponentRow>
+            <Checkbox label="A label, click me" />
           </ComponentRow>
         </Component>
       </div>
