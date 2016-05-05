@@ -4,40 +4,41 @@
 ///
 /// @group Components
 /// @example[html] Default colored attention bar with little content
-///   <div class="#{$namespace}attention text--center">
+///   <div class="oui-attention oui-text--center">
 ///      This is a note.
 ///   </div>
 /// @example[html] Default colored attention bar with long content
-///   <div class="#{$namespace}attention">
+///   <div class="oui-attention">
 ///      This is a longer note adipisicing elit. Recusandae ipsum tenetur est quisquam beatae aliquam facere molestiae re endis aperiam molestias consequuntur voluptatum corporis voluptas laudantium dolor, nam quam laboriosam harum.
 ///   </div>
 /// @example[html] Default colored attention bar with close button
-///   <div class="#{$namespace}attention text--center">
-///     <svg class="#{$namespace}icon #{$namespace}attention__close">
+///   <div class="oui-attention oui-text--center">
+///     <svg class="oui-icon oui-attention__close">
 ///       <use xlink:href="#close-16"></use>
 ///     </svg>
 ///     This is a note.
 ///   </div>
 /// @example[html] Brand colored attention bar
-///   <div class="#{$namespace}attention #{$namespace}attention--brand text--center">
+///   <div class="oui-attention oui-attention--brand oui-text--center">
 ///     This is a note.
 ///   </div>
 /// @example[html] Warning colored attention bar
-///   <div class="#{$namespace}attention #{$namespace}attention--warning text--center">
+///   <div class="oui-attention oui-attention--warning oui-text--center">
 ///     This is a note.
 ///   </div>
 /// @example[html] Success colored attention bar
-///   <div class="#{$namespace}attention #{$namespace}attention--good-news text--center">
+///   <div class="oui-attention oui-attention--good-news oui-text--center">
 ///     This is a note.
 ///   </div>
 /// @example[html] Error colored attention bar
-///   <div class="#{$namespace}attention #{$namespace}attention--bad-news text--center">
+///   <div class="oui-attention oui-attention--bad-news oui-text--center">
 ///     This is a note.
 ///   </div>
 ////
 
 %#{$namespace}attention,
-.#{$namespace}attention {
+.#{$namespace}attention,
+.oui-attention {
   @extend %kill-last-child-margin;
   padding: spacer(1);
   border-radius: map-fetch($border, radius, base);

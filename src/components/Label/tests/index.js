@@ -11,7 +11,7 @@ describe('components/Label', () => {
     const componentNode = testHelpers.getNodeFromComponent(component);
 
     expect(componentNode.tagName).toBe('LABEL');
-    expect(componentNode.className).toBe('label');
+    expect(componentNode.className).toBe('oui-label');
     expect(componentNode.textContent).toBe('Foo');
   });
 

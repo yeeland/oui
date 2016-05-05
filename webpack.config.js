@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    app: './src/index.jsx',
+    demo: './src/index.jsx',
   },
   output: {
     filename: './dist/js/[name].js',

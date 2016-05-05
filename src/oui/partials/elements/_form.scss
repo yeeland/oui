@@ -11,23 +11,23 @@
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">
+///           <label class="oui-label">
 ///             Single Input
-///             <span class="#{$namespace}label__optional">(Optional)</span>
+///             <span class="oui-label__optional">(Optional)</span>
 ///           </label>
-///           <input type="text" class="#{$namespace}text-input">
+///           <input type="text" class="oui-text-input">
 ///           <div class="#{$namespace}form-note">This is a form note.</div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Diabled Input</label>
-///           <input type="text" class="#{$namespace}text-input" disabled>
+///           <label class="oui-label">Diabled Input</label>
+///           <input type="text" class="oui-text-input" disabled>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Add/Remove Row</label>
+///           <label class="oui-label">Add/Remove Row</label>
 ///           <table class="#{$namespace}table #{$namespace}table--add-row width--1-1">
 ///             <tr>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="#{$namespace}table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
@@ -39,8 +39,8 @@
 ///               </td>
 ///             </tr>
 ///             <tr>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="#{$namespace}table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
@@ -57,8 +57,8 @@
 ///               </td>
 ///             </tr>
 ///             <tr>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
-///               <td><input type="text" class="#{$namespace}text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="#{$namespace}table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
@@ -88,37 +88,37 @@
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Textarea</label>
+///           <label class="oui-label">Textarea</label>
 ///           <textarea class="#{$namespace}textarea"></textarea>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Fixed-width Input</label>
-///           <input type="text" class="#{$namespace}text-input width-150">
+///           <label class="oui-label">Fixed-width Input</label>
+///           <input type="text" class="oui-text-input width-150">
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Fixed-width Input</label>
-///           <input type="text" class="#{$namespace}text-input width-250">
+///           <label class="oui-label">Fixed-width Input</label>
+///           <input type="text" class="oui-text-input width-250">
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <div class="#{$namespace}grid">
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///           </div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <div class="#{$namespace}grid">
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
+///               <label class="oui-label">Split Inputs</label>
 ///               <select name="zoo" id="zoo" class="#{$namespace}select">
 ///                 <option value="one">This is option one</option>
 ///                 <option value="two">And this is option two</option>
@@ -129,24 +129,24 @@
 ///         <li class="#{$namespace}form-field__item">
 ///           <div class="#{$namespace}grid">
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="#{$namespace}grid__cell">
-///               <label class="#{$namespace}label">Split Inputs</label>
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///           </div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Fill Space</label>
+///           <label class="oui-label">Fill Space</label>
 ///           <div class="#{$namespace}grid">
 ///             <div class="#{$namespace}grid__cell">
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="push-double--left">
 ///               <button class="#{$namespace}button #{$namespace}button--highlight">Do This</button>
@@ -154,10 +154,10 @@
 ///           </div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Fill Space</label>
+///           <label class="oui-label">Fill Space</label>
 ///           <div class="#{$namespace}grid">
 ///             <div class="#{$namespace}grid__cell">
-///               <input type="text" class="#{$namespace}text-input" placeholder="This is placeholder">
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="push-double--left">
 ///               <select name="zoo" id="zoo" class="#{$namespace}select">
@@ -172,14 +172,14 @@
 ///     <div class="#{$namespace}or">or</div>
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
-///         <li class="#{$namespace}label">Checklist</li>
+///         <li class="oui-label">Checklist</li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list">
 ///             <li>
-///               <input name="foo-1" id="foo-1a" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1a">Send me email notifications when I am projected to or have exceeded my plan limits</label>
+///               <input name="foo-1" id="foo-1a" type="checkbox" checked=""> <label class="oui-label" for="foo-1a">Send me email notifications when I am projected to or have exceeded my plan limits</label>
 ///             </li>
 ///             <li>
-///               <input name="foo-2" id="foo-2a" type="checkbox"> <label class="#{$namespace}label" for="foo-2a">Send me email summaries of my experiment results</label>
+///               <input name="foo-2" id="foo-2a" type="checkbox"> <label class="oui-label" for="foo-2a">Send me email summaries of my experiment results</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -188,7 +188,7 @@
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Select one thing or another</label>
+///           <label class="oui-label">Select one thing or another</label>
 ///           <select name="zoo" id="zoo" class="#{$namespace}select">
 ///             <option value="one">This is option one</option>
 ///             <option value="two">And this is option two</option>
@@ -197,13 +197,13 @@
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list">
 ///             <li>
-///               <input name="radio-1" id="bar-1a" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1a">Radio 1</label>
+///               <input name="radio-1" id="bar-1a" type="radio" checked=""> <label class="oui-label" for="bar-1a">Radio 1</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-2a" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2a">Radio 2 with disabled label</label>
+///               <input name="radio-1" id="bar-2a" type="radio" disabled> <label class="oui-label oui-label--disabled" for="bar-2a">Radio 2 with disabled label</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-3a" type="radio"> <label class="#{$namespace}label" for="bar-3a">Radio 3</label>
+///               <input name="radio-1" id="bar-3a" type="radio"> <label class="oui-label" for="bar-3a">Radio 3</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -212,28 +212,28 @@
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item">
-///           <label class="#{$namespace}label">Horizontal Inputs</label>
+///           <label class="oui-label">Horizontal Inputs</label>
 ///           <p>Use these only for short inputs where there's no chance they will wrap.</p>
 ///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
 ///             <li>
-///               <input name="radio-1" id="bar-1b" type="radio" checked=""> <label class="#{$namespace}label" for="bar-1b">Radio 1</label>
+///               <input name="radio-1" id="bar-1b" type="radio" checked=""> <label class="oui-label" for="bar-1b">Radio 1</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-2b" type="radio" disabled> <label class="#{$namespace}label #{$namespace}label--disabled" for="bar-2b">Radio 2 with disabled label</label>
+///               <input name="radio-1" id="bar-2b" type="radio" disabled> <label class="oui-label oui-label--disabled" for="bar-2b">Radio 2 with disabled label</label>
 ///             </li>
 ///             <li>
-///               <input name="radio-1" id="bar-3b" type="radio"> <label class="#{$namespace}label" for="bar-3b">Radio 3</label>
+///               <input name="radio-1" id="bar-3b" type="radio"> <label class="oui-label" for="bar-3b">Radio 3</label>
 ///             </li>
 ///           </ul>
 ///         </li>
-///         <li class="#{$namespace}label">Checklist</li>
+///         <li class="oui-label">Checklist</li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
 ///             <li>
-///               <input name="foo-1" id="foo-1b" type="checkbox" checked=""> <label class="#{$namespace}label" for="foo-1b">Short option</label>
+///               <input name="foo-1" id="foo-1b" type="checkbox" checked=""> <label class="oui-label" for="foo-1b">Short option</label>
 ///             </li>
 ///             <li>
-///               <input name="foo-2" id="foo-2b" type="checkbox"> <label class="#{$namespace}label" for="foo-2b">Another short option</label>
+///               <input name="foo-2" id="foo-2b" type="checkbox"> <label class="oui-label" for="foo-2b">Another short option</label>
 ///             </li>
 ///           </ul>
 ///         </li>
@@ -252,12 +252,12 @@
 ///     <fieldset>
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
-///           <label class="#{$namespace}label #{$namespace}label--required">Address</label>
-///           <input type="text" class="#{$namespace}text-input">
+///           <label class="oui-label oui-label--required">Address</label>
+///           <input type="text" class="oui-text-input">
 ///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
-///           <label class="#{$namespace}label #{$namespace}label--required">Fill Space</label>
+///           <label class="oui-label oui-label--required">Fill Space</label>
 ///           <select name="zoo" id="zoo" class="#{$namespace}select">
 ///             <option value="one">This is option one</option>
 ///             <option value="two">And this is option two</option>
@@ -265,7 +265,7 @@
 ///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
-///           <label class="#{$namespace}label #{$namespace}label--required">Textarea</label>
+///           <label class="oui-label oui-label--required">Textarea</label>
 ///           <textarea class="#{$namespace}textarea"></textarea>
 ///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
 ///         </li>
@@ -276,8 +276,10 @@
 
 %#{$namespace}text-input,
 %#{$namespace}textarea,
+%oui-text-input,
 .#{$namespace}text-input,
-.#{$namespace}textarea {
+.#{$namespace}textarea,
+.oui-text-input {
   transition: border-color map-fetch($transition-duration, base);
   width: 100%;
   border: 1px solid map-fetch($border, color, base);
@@ -354,7 +356,8 @@ fieldset {
 // apply label-like styling to meta-labels for groups of options where a
 // `<label>` element is not suitable.
 
-.#{$namespace}label {
+.#{$namespace}label,
+.oui-label {
   display: block;
   margin-bottom: spacer(0.5);
   font-weight: 500;
@@ -500,6 +503,7 @@ fieldset {
   }
 
   .#{$namespace}text-input,
+  .oui-text-input,
   .#{$namespace}select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, good-news);
@@ -512,6 +516,7 @@ fieldset {
   }
 
   .#{$namespace}text-input,
+  .oui-text-input,
   .#{$namespace}select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, bad-news);
@@ -524,6 +529,7 @@ fieldset {
   }
 
   .#{$namespace}text-input,
+  .oui-text-input,
   .#{$namespace}select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, warning);

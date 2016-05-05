@@ -11,12 +11,12 @@
 ///   </div>
 /// @example[html] Button group with text input
 ///   <div class="#{$namespace}button-group">
-///     <button class="#{$namespace}button">Select <span class="#{$namespace}arrow-inline--down"></span></button>
-///     <input type="text" class="#{$namespace}text-input">
+///     <button class="#{$namespace}button">Select <span class="oui-arrow-inline--down"></span></button>
+///     <input type="text" class="oui-text-input">
 ///   </div>
 /// @example[html] Button group with text input
 ///   <div class="#{$namespace}button-group">
-///     <input type="text" class="#{$namespace}text-input">
+///     <input type="text" class="oui-text-input">
 ///     <button class="#{$namespace}button">Button</button>
 ///   </div>
 ////
@@ -51,7 +51,8 @@
     position: relative;
   }
 
-  > .#{$namespace}text-input {
+  > .#{$namespace}text-input,
+  > .oui-text-input {
     flex: 1;
     width: auto;
   }
