@@ -20,7 +20,7 @@ describe('components/Attention', () => {
 
   it('should render dismiss button when prop is provided', () => {
     const component = testHelpers.renderIntoDocument(
-      <Attention isDismissable>
+      <Attention isDismissible>
         'Hello! This is a short attention bar.'
       </Attention>
     );
@@ -70,7 +70,7 @@ describe('components/Attention', () => {
    */
   it('should use an HTML button element for a close button', () => {
     const component = testHelpers.renderIntoDocument(
-      <Attention isDismissable>
+      <Attention isDismissible>
         'Hello! This is a short attention bar.'
       </Attention>
     );

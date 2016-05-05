@@ -75,7 +75,7 @@ class App extends React.Component {
 
         <Component title="Attention">
           <ComponentRow>
-            <Attention isDismissable alignment="center" type="warning">
+            <Attention isDismissible alignment="center" type="warning">
               Hello! This is a short attention bar.
             </Attention>
           </ComponentRow>
