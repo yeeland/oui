@@ -3,7 +3,7 @@ import React from 'react';
 const Label = (props) => {
   let classes = null;
   if (typeof props.children === 'string') {
-    classes = 'label';
+    classes = 'oui-label';
   }
 
   return (

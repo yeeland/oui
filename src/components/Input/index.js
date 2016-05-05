@@ -4,7 +4,7 @@ import Label from '../Label';
 const renderInput = (props) => {
   return (
     <input
-      className="text-input"
+      className="oui-text-input"
       type={props.type}
       value={props.value}
       defaultValue={props.defaultValue}

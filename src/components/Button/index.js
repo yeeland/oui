@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Button = (props) => {
-  let buttonStyleClass = props.style ? 'button--' + props.style : '';
-  let buttonSizeClass = props.size ? 'button--' + props.size : '';
+  let buttonStyleClass = props.style ? 'oui-button--' + props.style : '';
+  let buttonSizeClass = props.size ? 'oui-button--' + props.size : '';
 
   return (
     <button
-      className={'button ' + buttonStyleClass + ' ' + buttonSizeClass }
+      className={'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       aria-label={ props.ariaLabel }>

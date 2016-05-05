@@ -2,7 +2,7 @@ import React from 'react';
 
 const ArrowsInline = (props) => {
   return (
-    <span className={ 'arrow-inline--' + props.direction } aria-hidden="true"></span>
+    <span className={ 'oui-arrow-inline--' + props.direction } aria-hidden="true"></span>
   );
 };
 

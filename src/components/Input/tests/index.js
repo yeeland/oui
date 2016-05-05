@@ -11,7 +11,7 @@ describe('components/Input', () => {
     const componentNode = testHelpers.getNodeFromComponent(component);
 
     expect(componentNode.tagName).toBe('INPUT');
-    expect(componentNode.className).toBe('text-input');
+    expect(componentNode.className).toBe('oui-text-input');
     expect(componentNode.type).toBe('text');
   });
 

@@ -4,7 +4,7 @@ import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
 const renderDismissButton = () => {
   return (
-    <div className="attention__close" data-test-section="attention-dismiss-container">
+    <div className="oui-attention__close" data-test-section="attention-dismiss-container">
       <Button style="plain" size="small" ariaLabel="Close alert">
         &times;
       </Button>
@@ -13,10 +13,10 @@ const renderDismissButton = () => {
 };
 
 const Attention = (props) => {
-  let colorClassName = props.type ? 'attention--' + props.type : '';
-  let alignmentClassName = (props.alignment === 'center') ? 'text--center' : '';
+  let colorClassName = props.type ? 'oui-attention--' + props.type : '';
+  let alignmentClassName = (props.alignment === 'center') ? 'oui-text--center' : '';
   let attentionAriaLabel = props.type ? getAssistiveTextFromColorClass(props.type) : null;
-  let classes = ('attention ' + colorClassName + ' ' + alignmentClassName).trim();
+  let classes = ('oui-attention ' + colorClassName + ' ' + alignmentClassName).trim();
 
   return (
     <div

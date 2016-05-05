@@ -2,7 +2,7 @@ import React from 'react';
 
 const inlineCode = (children) => {
   return (
-    <code className="code">
+    <code className="oui-code">
       { children }
     </code>
   );
@@ -10,7 +10,7 @@ const inlineCode = (children) => {
 
 const blockCode = (children) => {
   return (
-    <pre className="pre"><code>{ children }</code></pre>
+    <pre className="oui-pre"><code>{ children }</code></pre>
   );
 };
 

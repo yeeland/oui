@@ -4,22 +4,23 @@
 /// colors to override default colors.
 /// @group Elements
 /// @example[html] Button colors
-///   <button class="#{$namespace}button">Button</button>
-///   <button class="#{$namespace}button #{$namespace}button--highlight">Button</button>
-///   <button class="#{$namespace}button #{$namespace}button--danger">Button</button>
-///   <button class="#{$namespace}button #{$namespace}button--outline">Button</button>
-///   <button class="#{$namespace}button #{$namespace}button--plain">Button</button>
+///   <button class="oui-button">Button</button>
+///   <button class="oui-button oui-button--highlight">Button</button>
+///   <button class="oui-button oui-button--danger">Button</button>
+///   <button class="oui-button oui-button--outline">Button</button>
+///   <button class="oui-button oui-button--plain">Button</button>
 /// @example[html] Tiny buttons
-///   <button class="#{$namespace}button #{$namespace}button--small">Button</button>
+///   <button class="oui-button oui-button--small">Button</button>
 /// @example[html] Full width buttons
-///   <button class="#{$namespace}button #{$namespace}button--full">Button</button>
+///   <button class="oui-button oui-button--full">Button</button>
 /// @example[html] Disabled buttons
-///   <button class="#{$namespace}button #{$namespace}button--disabled">Disabled with Class</button>
-///   <button class="#{$namespace}button" disabled>Disabled with Attribute</button>
+///   <button class="oui-button oui-button--disabled">Disabled with Class</button>
+///   <button class="oui-button" disabled>Disabled with Attribute</button>
 ////
 
 %#{$namespace}button,
-.#{$namespace}button {
+.#{$namespace}button,
+.oui-button {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
