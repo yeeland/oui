@@ -23,7 +23,7 @@ const Attention = (props) => {
       className={ classes }
       aria-label={ attentionAriaLabel }
       role="alert">
-      { props.isDismissable ? renderDismissButton() : null }
+      { props.isDismissible ? renderDismissButton() : null }
       { props.children }
     </div>
   );
@@ -32,7 +32,7 @@ const Attention = (props) => {
 Attention.propTypes = {
   alignment: React.PropTypes.oneOf(['left', 'center']),
   children: React.PropTypes.string.isRequired,
-  isDismissable: React.PropTypes.bool,
+  isDismissible: React.PropTypes.bool,
   type: React.PropTypes.oneOf(['bad-news', 'brand', 'good-news', 'warning']),
 };
 
