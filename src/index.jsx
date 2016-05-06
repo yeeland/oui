@@ -173,6 +173,15 @@ class App extends React.Component {
               </ComponentRowItem>
             </ComponentRow>
           </ComponentRow>
+          <ComponentRow isPadded>
+            <ComponentRowItem>
+              <Button onClick={ () => {
+                  alert('Hello!'); //eslint-disable-line
+              }}>
+                Button with Function
+              </Button>
+            </ComponentRowItem>
+          </ComponentRow>
         </Component>
 
         <Component title="Code">
