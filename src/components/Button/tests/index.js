@@ -1,8 +1,22 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-addons-test-utils';
+import * as testHelpers from '../../../utils/test-helpers';
 import Button from '../index';
-/* eslint-enable no-unused-vars */
 
-describe('components/Button', () => {});
+describe('components/Button', () => {
+  it('should call function that is passed in as `onClick` after click', () => {
+    const obj = {
+      func: () => {},
+    };
+    spyOn(obj, 'func').and.stub();
+
+    const component = testHelpers.renderIntoDocument(
+      <Button onClick={ obj.func }>Hello!</Button>
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.simulate.click(componentNode);
+
+    expect(obj.func).toHaveBeenCalled();
+  });
+
+});

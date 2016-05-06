@@ -9,6 +9,7 @@ const Button = (props) => {
       className={'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
+      onClick={ props.onClick }
       aria-label={ props.ariaLabel }>
       { props.children }
     </button>
@@ -20,6 +21,7 @@ Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   isDisabled: React.PropTypes.bool,
   isSubmit: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
   size: React.PropTypes.oneOf([
     'small',
     'large',
