@@ -56,4 +56,44 @@ describe('utils/test-helpers', () => {
       expect(componentNode).toBeNull();
     });
   });
+
+  describe('#expectTestSectionToExist', () => {
+    it('should throw exception if test section does not exist', () => {
+      let component = testHelpers.renderIntoDocument(
+        <ExampleComponent></ExampleComponent>
+      );
+
+      let componentNode = testHelpers.getNodeFromComponent(component);
+      expect(() => { testHelpers.expectTestSectionToExist(componentNode.children[0], 'asdfjkl;'); }).toThrow();
+    });
+
+    it('should not throw exception if test section exists', () => {
+      let component = testHelpers.renderIntoDocument(
+        <ExampleComponent></ExampleComponent>
+      );
+
+      let componentNode = testHelpers.getNodeFromComponent(component);
+      expect(() => { testHelpers.expectTestSectionToExist(componentNode.children[0], 'example-section'); }).not.toThrow();
+    });
+  });
+
+  describe('#expectTestSectionToNotExist', () => {
+    it('should throw exception if test section does exist', () => {
+      let component = testHelpers.renderIntoDocument(
+        <ExampleComponent></ExampleComponent>
+      );
+
+      let componentNode = testHelpers.getNodeFromComponent(component);
+      expect(() => { testHelpers.expectTestSectionToNotExist(componentNode.children[0], 'example-section'); }).toThrow();
+    });
+
+    it('should not throw exception if test section does not exist', () => {
+      let component = testHelpers.renderIntoDocument(
+        <ExampleComponent></ExampleComponent>
+      );
+
+      let componentNode = testHelpers.getNodeFromComponent(component);
+      expect(() => { testHelpers.expectTestSectionToNotExist(componentNode.children[0], 'asdfjkl;'); }).not.toThrow();
+    });
+  });
 });

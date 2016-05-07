@@ -16,4 +16,13 @@ describe('components/ArrowsInline', () => {
     const componentNode = testHelpers.getNodeFromComponent(component);
     expect(componentNode.getAttribute('aria-hidden')).toBe('true');
   });
+
+  it('should have a properly set test section', () => {
+    const component = testHelpers.renderIntoDocument(
+      <ArrowsInline testSection="foo" />
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+  });
 });

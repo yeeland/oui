@@ -19,4 +19,12 @@ describe('components/Button', () => {
     expect(obj.func).toHaveBeenCalled();
   });
 
+  it('should have a properly set test section', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Button testSection="foo">Hello!</Button>
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+  });
 });

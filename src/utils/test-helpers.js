@@ -32,7 +32,7 @@ export const getNodeFromComponent = (component) => {
 };
 
 /**
- * Find an element that contains an attribute data-test-section equal to the
+ * Find an element that contains an attribute `data-test-section equal` to the
  * provided value.
  * @param {ReactElement} component - JSX returned in a function
  * @param {String} testSection - unique label identifying an element
@@ -43,6 +43,37 @@ export const getTestSectionFromComponent = (component, testSection) => {
   let element = componentNode.querySelector('[data-test-section="' + testSection + '"]');
 
   return element;
+};
+
+/**
+ * Assert that an HTMLElement has an attribute `data-test-section` of value
+ * `testSection`.
+ * @param {HTMLElement} componentNode - Element that should contain test section
+ * @param {String} testSection - value of the `data-test-section`
+ * @returns {undefined}
+ */
+export const expectTestSectionToExist = (componentNode, testSection) => {
+  let val = componentNode.getAttribute('data-test-section');
+
+  if (val !== testSection) {
+    throw new Error(val + ' does not equal ' + testSection);
+  }
+};
+
+/**
+ * Assert that an HTMLElement does not have an attribute `data-test-section`
+ * of value `testSection`.
+ * @param {HTMLElement} componentNode - Element that should not contain test
+ * section
+ * @param {String} testSection - value of the `data-test-section`
+ * @returns {undefined}
+ */
+export const expectTestSectionToNotExist = (componentNode, testSection) => {
+  let val = componentNode.getAttribute('data-test-section');
+
+  if (val === testSection) {
+    throw new Error(val + ' should not equal ' + testSection);
+  }
 };
 
 /**

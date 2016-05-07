@@ -20,14 +20,16 @@ describe('components/Attention', () => {
 
   it('should render dismiss button when prop is provided', () => {
     const component = testHelpers.renderIntoDocument(
-      <Attention isDismissible>
+      <Attention
+        isDismissible
+        testSection="foo">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'attention-dismiss-container');
+    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'foo-dismiss');
 
-    expect(dismissButtonContainer).toBeDefined();
+    expect(dismissButtonContainer).not.toBeNull();
   });
 
   it('should not render dismiss button by default', () => {
@@ -79,5 +81,16 @@ describe('components/Attention', () => {
     const dismissButton = dismissButtonContainer.querySelector('button');
 
     expect(dismissButton).toBeDefined();
+  });
+
+  it('should have a properly set test section', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Attention testSection="foo">
+        'Hello! This is a short attention bar.'
+      </Attention>
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo');
   });
 });

@@ -87,4 +87,31 @@ describe('components/Input', () => {
 
     expect(handler.onInput).toHaveBeenCalled();
   });
+
+  it('should have a properly set test section', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Input type="text" testSection="foo" />
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+  });
+
+  it('should render a label if label is passed', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Input type="text" testSection="foo" label="Input Label" />
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo-label');
+  });
+
+  it('should not render a label by default', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Input type="text" testSection="foo" />
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToNotExist(componentNode, 'foo-label');
+  });
 });

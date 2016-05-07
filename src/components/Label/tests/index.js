@@ -28,4 +28,13 @@ describe('components/Label', () => {
     expect(componentNode.getAttribute('class')).toBe(null);
     expect(componentNode.innerHTML).toBe('<div>Foo</div><div>Bar</div>');
   });
+
+  it('should have a properly set test section', () => {
+    const component = testHelpers.renderIntoDocument(
+      <Label testSection="foo">Foo</Label>
+    );
+
+    const componentNode = testHelpers.getNodeFromComponent(component);
+    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+  });
 });

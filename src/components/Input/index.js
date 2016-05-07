@@ -14,6 +14,7 @@ const renderInput = (props) => {
       disabled={props.isDisabled}
       onInput={props.onInput}
       onChange={props.onChange}
+      data-test-section={props.testSection}
     />
   );
 };
@@ -21,7 +22,7 @@ const renderInput = (props) => {
 const Input = (props) => {
   if (props.label) {
     return (
-      <Label>
+      <Label testSection={props.testSection + '-label'}>
         <div className="label">
           { props.label }
         </div>
@@ -53,6 +54,7 @@ Input.propTypes = {
   onInput: React.PropTypes.func,
   onChange: React.PropTypes.func,
   label: React.PropTypes.string,
+  testSection: React.PropTypes.string,
 };
 renderInput.propTypes = Input.propTypes;
 

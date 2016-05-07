@@ -7,7 +7,11 @@ const Label = (props) => {
   }
 
   return (
-    <label className={classes}>{ props.children }</label>
+    <label
+      className={classes}
+      data-test-section={props.testSection}>
+      { props.children }
+    </label>
   );
 };
 
@@ -16,6 +20,7 @@ Label.propTypes = {
     React.PropTypes.string.isRequired,
     React.PropTypes.array.isRequired,
   ]),
+  testSection: React.PropTypes.string,
 };
 
 export default Label;
