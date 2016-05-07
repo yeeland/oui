@@ -40,4 +40,20 @@ describe('components/Code', () => {
     expect(componentInlineNode.textContent).toBe(code);
     expect(componentBlockNode.textContent).toBe(code);
   });
+
+  it('should have a properly set test section', () => {
+    const componentInline = testHelpers.renderIntoDocument(
+      <Code testSection="foo-inline" type="inline">Hello!</Code>
+    );
+
+    const componentBlock = testHelpers.renderIntoDocument(
+      <Code testSection="foo-block" type="block">Hello!</Code>
+    );
+
+    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
+    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
+
+    testHelpers.expectTestSectionToExist(componentInlineNode, 'foo-inline');
+    testHelpers.expectTestSectionToExist(componentBlockNode, 'foo-block');
+  });
 });

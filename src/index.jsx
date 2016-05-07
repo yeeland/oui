@@ -75,7 +75,7 @@ class App extends React.Component {
 
         <Component title="Attention">
           <ComponentRow>
-            <Attention isDismissible alignment="center" type="warning">
+            <Attention isDismissible alignment="center" type="warning" testSection="attention-foo">
               Hello! This is a short attention bar.
             </Attention>
           </ComponentRow>
@@ -108,7 +108,7 @@ class App extends React.Component {
 
         <Component title="Arrows Inline">
           <ComponentRow>
-            <ArrowsInline direction="up" /> Up
+            <ArrowsInline direction="up" testSection="arrow-test" /> Up
           </ComponentRow>
           <ComponentRow>
             <ArrowsInline direction="down" /> Down
@@ -204,7 +204,7 @@ var bat = 'baz';`}
             <Input type="number" value="42" onChange={function() {}} />
           </ComponentRow>
           <ComponentRow>
-            <Input type="password" label="Password" />
+            <Input type="password" label="Password" testSection="input" />
           </ComponentRow>
           <ComponentRow>
             <Input type="date" />

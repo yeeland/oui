@@ -6,10 +6,11 @@ const Button = (props) => {
 
   return (
     <button
-      className={'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
+      className={ 'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
+      data-test-section={ props.testSection }
       aria-label={ props.ariaLabel }>
       { props.children }
     </button>
@@ -37,6 +38,7 @@ Button.propTypes = {
     'plain',
     'toggle',
   ]),
+  testSection: React.PropTypes.string,
 };
 
 export default Button;

@@ -2,7 +2,11 @@ import React from 'react';
 
 const ArrowsInline = (props) => {
   return (
-    <span className={ 'oui-arrow-inline--' + props.direction } aria-hidden="true"></span>
+    <span
+      className={'oui-arrow-inline--' + props.direction}
+      aria-hidden="true"
+      data-test-section={props.testSection}>
+    </span>
   );
 };
 
@@ -13,6 +17,7 @@ ArrowsInline.propTypes = {
       return new Error('ArrowsInline does not accept children.');
     }
   },
+  testSection: React.PropTypes.string,
 };
 
 export default ArrowsInline;
