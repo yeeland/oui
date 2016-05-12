@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+- [Patch] Change text-shadow offset of highlight buttons to match danger button. (#398)
 
 ## [11.3.0][11.3.0] - 2016-04-19
 ### Added
