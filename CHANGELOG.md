@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [11.3.1][11.3.1] - 2016-05-12
+### Fixed
 - [Patch] Change text-shadow offset of highlight buttons to match danger button. (#398)
 
 ## [11.3.0][11.3.0] - 2016-04-19
@@ -351,7 +354,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v11.3.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v11.3.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -379,3 +382,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [11.1.0]: https://github.com/optimizely/oui/compare/v11.0.0...v11.1.0
 [11.2.0]: https://github.com/optimizely/oui/compare/v11.1.0...v11.2.0
 [11.3.0]: https://github.com/optimizely/oui/compare/v11.2.0...v11.3.0
+[11.3.1]: https://github.com/optimizely/oui/compare/v11.3.0...v11.3.1
