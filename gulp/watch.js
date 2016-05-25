@@ -10,3 +10,5 @@ gulp.task('watch:sass', function() {
 gulp.task('watch:js', function() {
   gulp.watch('src/js/**/*.js', ['js']);
 });
+
+gulp.task('watch', ['watch:sass', 'watch:js']);
