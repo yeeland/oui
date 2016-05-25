@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
 
 ## [11.3.1][11.3.1] - 2016-05-12
 ### Fixed
