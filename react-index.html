@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+<script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+$.getJSON('react-components.json', function (result) {
+  console.log(result);
+  nunjucks.render('react-components.html', { components : result }, function (err, res) {
+    console.log(res);
+    $('#container').append(res);
+  });
+});
+</script>
+
+</body>
+</html>
