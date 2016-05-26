@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Fixed
 - [Patch] Update styling of jQuery datepicker in `_datepicker.scss`
+- [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
 
 ## [11.3.1][11.3.1] - 2016-05-12
 ### Fixed
