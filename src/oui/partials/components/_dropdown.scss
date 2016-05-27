@@ -145,7 +145,7 @@
       font-size: map-fetch($font, size, micro);
       line-height: map-fetch($font, line-height, tight);
       color: map-fetch($color, text, muted);
-      margin-bottom: spacer(.5);
+      margin-bottom: spacer(0.5);
     }
   }
 }
