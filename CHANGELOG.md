@@ -8,6 +8,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
 
+### Fixed
+- [Patch] Update styling of jQuery datepicker in `_datepicker.scss`
+- [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
+
 ## [11.3.1][11.3.1] - 2016-05-12
 ### Fixed
 - [Patch] Change text-shadow offset of highlight buttons to match danger button. (#398)
