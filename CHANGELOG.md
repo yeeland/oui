@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Update styling of jQuery datepicker in `_datepicker.scss`
 
 ## [11.3.1][11.3.1] - 2016-05-12
 ### Fixed
