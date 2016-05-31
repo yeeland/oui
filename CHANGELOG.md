@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
+
 ### Fixed
 - [Patch] Update styling of jQuery datepicker in `_datepicker.scss`
 - [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
