@@ -241,3 +241,22 @@ input[type="submit"] {
   -webkit-appearance: button; // 2
   cursor: pointer; // 3
 }
+
+// Explicitly define input placeholder colors.
+::-webkit-input-placeholder {
+  color: map-fetch($color, text, muted);
+}
+
+:-moz-placeholder { // scss-lint:disable PseudoElement
+  // Firefox 18-
+  color: map-fetch($color, text, muted);
+}
+
+::-moz-placeholder {
+  // Firefox 19+
+  color: map-fetch($color, text, muted);
+}
+
+:-ms-input-placeholder {
+  color: map-fetch($color, text, muted);
+}

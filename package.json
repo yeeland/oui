@@ -29,7 +29,7 @@
     "test": "npm run scss-lint && npm run eslint && gulp sass",
     "start": "bundle install && bundle update && npm install",
     "eslint": "eslint .  --ignore-path .gitignore",
-    "scss-lint": "bundle exec scss-lint src/ --exclude src/oui/library/**/*",
+    "scss-lint": "bundle exec scss-lint src/",
     "preversion": "git checkout master && git pull --rebase=false && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
     "postversion:publish": "git push && git push --tags",

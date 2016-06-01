@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
 
+### Changed
+- [Patch] Explicitly define the placeholder colors and add support to style CodeMirror's fake placeholders. (#405)
+
 ### Fixed
 - [Patch] Update styling of jQuery datepicker in `_datepicker.scss`
 - [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
