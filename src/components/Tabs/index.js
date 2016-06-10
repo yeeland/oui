@@ -33,7 +33,7 @@ const Tabs = React.createClass({
 
   _getMenuItems() {
     let menuItems = this.props.children.map((panel, index) => {
-      let dataTestSection = `{this.props.testSection}-{index}`;
+      let dataTestSection = this.props.testSection ? this.props.testSection + '-' + index : null;
       let title = panel.props.title;
       let classes = classNames('tabs-nav__item', this.state.tabActive === index && 'is-active');
       return (

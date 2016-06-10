@@ -278,7 +278,7 @@ var bat = 'baz';`}
             </Tabs>
           </ComponentRow>
           <ComponentRow isPadded>
-            <Tabs style={["small", "sub"]}>
+            <Tabs style={["small", "sub"]} testSection="test">
               <Tabs.Panel title="Tab #1">
                 <div>Content #1</div>
               </Tabs.Panel>
