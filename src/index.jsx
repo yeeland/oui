@@ -7,6 +7,7 @@ import Button from './components/Button';
 import Code from './components/Code';
 import Input from './components/Input';
 import Label from './components/Label';
+import Tabs from './components/Tabs';
 
 const Component = ({ children, title }) => {
   return (
@@ -220,6 +221,74 @@ var bat = 'baz';`}
               <div>When I have nodes,</div>
               <div>I'm unstyled</div>
             </Label>
+          </ComponentRow>
+        </Component>
+
+        <Component title="Tabs">
+          <ComponentRow isPadded>
+            <Tabs>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3">
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
+          </ComponentRow>
+          <ComponentRow isPadded>
+            <Tabs tabActive={2}>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3">
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
+          </ComponentRow>
+          <ComponentRow isPadded>
+            <Tabs style={["small"]}>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3">
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
+          </ComponentRow>
+          <ComponentRow isPadded>
+            <Tabs style={["small", "center"]}>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3">
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
+          </ComponentRow>
+          <ComponentRow isPadded>
+            <Tabs style={["small", "sub"]}>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3">
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
           </ComponentRow>
         </Component>
       </div>
