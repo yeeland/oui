@@ -290,6 +290,19 @@ var bat = 'baz';`}
               </Tabs.Panel>
             </Tabs>
           </ComponentRow>
+          <ComponentRow isPadded>
+            <Tabs style={["small", "sub"]}>
+              <Tabs.Panel title="Tab #1">
+                <div>Content #1</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #2">
+                <div>Content #2</div>
+              </Tabs.Panel>
+              <Tabs.Panel title="Tab #3" isDisabled>
+                <div>Content #3</div>
+              </Tabs.Panel>
+            </Tabs>
+          </ComponentRow>
         </Component>
       </div>
     );

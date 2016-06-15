@@ -26,6 +26,12 @@ const Tabs = React.createClass({
 
   setTabActive(index, e) {
     e.preventDefault();
+
+    let clickedTab = this.props.children[index];
+    if (clickedTab.props.isDisabled) {
+      return;
+    }
+
     this.setState({
       tabActive: index
     });
@@ -35,9 +41,9 @@ const Tabs = React.createClass({
     let menuItems = this.props.children.map((panel, index) => {
       let dataTestSection = this.props.testSection ? this.props.testSection + '-' + index : null;
       let title = panel.props.title;
-      let classes = classNames('tabs-nav__item', this.state.tabActive === index && 'is-active');
+      let classes = classNames('tabs-nav__item', panel.props.isDisabled && 'tab-disabled', this.state.tabActive === index && 'is-active');
       return (
-        <li data-test-section={dataTestSection} key={index} className={classes} onClick={this.setTabActive.bind(this, index)}>
+        <li data-test-section={dataTestSection} key={index} className={classes} onClick={this.setTabActive.bind(this, index)} disabled={ panel.props.isDisabled ? 'disabled' : false }>
           {title}
         </li>
       );
