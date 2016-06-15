@@ -40,7 +40,7 @@ const Tabs = React.createClass({
 
   _getMenuItems() {
     let menuItems = this.props.children.map((panel, index) => {
-      let dataTestSection = this.props.testSection ? this.props.testSection + '-' + index : null;
+      let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
       let title = panel.props.title;
       let classes = classNames('tabs-nav__item', panel.props.isDisabled && 'tab-disabled', this.state.tabActive === index && 'is-active');
       return (
@@ -51,29 +51,31 @@ const Tabs = React.createClass({
     });
 
     return (
-      <ul className="tabs-nav">{menuItems}</ul>
+      <ul className="tabs-nav" data-test-section="tabs-menu" ref="menu">{menuItems}</ul>
     );
   },
 
   _getPanels() {
     let panels = this.props.children.map((panel, index) => {
+      let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
       let classes = classNames('tabs-pane__item', this.state.tabActive === index && 'is-active');
       return (
-        <div className={classes} key={index}>{panel}</div>
+        <div data-test-section={dataTestSection} className={classes} key={index}>{panel}</div>
       );
     });
     return (
-      <div className="tabs-pane">{panels}</div>
+      <div className="tabs-pane" data-test-section="tabs-panels" ref="panels">{panels}</div>
     );
   },
 
   render() {
+    let dataTestSection = this.props.testSection ? this.props.testSection : null;
     let tabStyleClasses = this.props.style ? this.props.style.map((style) => {
       return 'tabs--' + style;
     }) : '';
     let classes = classNames(tabStyleClasses, 'tabs');
     return (
-      <div className={classes}>
+      <div data-test-section={dataTestSection} className={classes}>
         {this._getMenuItems()}
         {this._getPanels()}
       </div>
@@ -84,9 +86,10 @@ const Tabs = React.createClass({
 Tabs.Panel = React.createClass({
   propTypes: {
     title: React.PropTypes.string.isRequired,
+    testSection: React.PropTypes.string,
     children: React.PropTypes.oneOfType([
       React.PropTypes.array,
-      React.PropTypes.element
+      React.PropTypes.element,
     ]).isRequired,
     isDisabled: React.PropTypes.bool,
   },

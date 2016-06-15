@@ -77,6 +77,26 @@ export const expectTestSectionToNotExist = (componentNode, testSection) => {
 };
 
 /**
+ * Assert that an HTMLElement has a child with an attribute `data-test-section` of value
+ * `childTestSection`.
+ * @param {ReactElement} component - Element that should contain child(ren) with childTestSection
+ * @param {String} childTestSection - value of the `data-test-section`
+ * @param {Number} numberOfTestSections - expected amount of children with childTestSection, default is 1
+ * @returns {undefined}
+ */
+export const expectChildTestSectionsExist = (component, childTestSection, numberOfTestSections) => {
+  numberOfTestSections = numberOfTestSections || 1;
+
+  let childWithTestSectionExists = ReactTestUtils.findAllInRenderedTree(component, (elem) => {
+    return elem.getAttribute('data-test-section') === childTestSection;
+  });
+
+  if (childWithTestSectionExists.length !== numberOfTestSections) {
+    throw new Error(childTestSection + 'occurs only ' + numberOfTestSections + ' times within parent node');
+  }
+};
+
+/**
  * Simulate events on react components.
  * @returns {Object} Object with methods to simulate events (eg. change, input, etc).
  */

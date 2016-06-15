@@ -252,7 +252,7 @@ var bat = 'baz';`}
             </Tabs>
           </ComponentRow>
           <ComponentRow isPadded>
-            <Tabs style={["small"]}>
+            <Tabs style={['small']}>
               <Tabs.Panel title="Tab #1">
                 <div>Content #1</div>
               </Tabs.Panel>
@@ -265,7 +265,7 @@ var bat = 'baz';`}
             </Tabs>
           </ComponentRow>
           <ComponentRow isPadded>
-            <Tabs style={["small", "center"]}>
+            <Tabs style={['small', 'center']}>
               <Tabs.Panel title="Tab #1">
                 <div>Content #1</div>
               </Tabs.Panel>
@@ -278,20 +278,7 @@ var bat = 'baz';`}
             </Tabs>
           </ComponentRow>
           <ComponentRow isPadded>
-            <Tabs style={["small", "sub"]} testSection="test">
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3">
-                <div>Content #3</div>
-              </Tabs.Panel>
-            </Tabs>
-          </ComponentRow>
-          <ComponentRow isPadded>
-            <Tabs style={["small", "sub"]}>
+            <Tabs style={['small', 'sub']}>
               <Tabs.Panel title="Tab #1">
                 <div>Content #1</div>
               </Tabs.Panel>
