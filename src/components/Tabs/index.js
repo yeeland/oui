@@ -1,29 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const Tabs = React.createClass({
-  propTypes: {
-    children: React.PropTypes.array.isRequired,
-    testSection: React.PropTypes.string,
-    style: React.PropTypes.arrayOf(React.PropTypes.oneOf([
-      'small',
-      'center',
-      'sub',
-    ])),
-    tabActive: React.PropTypes.number,
-  },
+class Tabs extends React.Component {
+  constructor(props) {
+    super(props);
 
-  getDefaultProps() {
-    return {
-      tabActive: 0,
+    this.state = {
+      tabActive: this.props.tabActive || 0,
     };
-  },
-
-  getInitialState() {
-    return {
-      tabActive: this.props.tabActive,
-    };
-  },
+  }
 
   setTabActive(index, e) {
     e.preventDefault();
@@ -36,7 +21,7 @@ const Tabs = React.createClass({
     this.setState({
       tabActive: index,
     });
-  },
+  }
 
   _getMenuItems() {
     let menuItems = this.props.children.map((panel, index) => {
@@ -51,9 +36,9 @@ const Tabs = React.createClass({
     });
 
     return (
-      <ul className="tabs-nav" data-test-section="tabs-menu" ref="menu">{menuItems}</ul>
+      <ul className="tabs-nav" data-test-section="tabs-menu">{menuItems}</ul>
     );
-  },
+  }
 
   _getPanels() {
     let panels = this.props.children.map((panel, index) => {
@@ -64,9 +49,9 @@ const Tabs = React.createClass({
       );
     });
     return (
-      <div className="tabs-pane" data-test-section="tabs-panels" ref="panels">{panels}</div>
+      <div className="tabs-pane" data-test-section="tabs-panels">{panels}</div>
     );
-  },
+  }
 
   render() {
     let dataTestSection = this.props.testSection ? this.props.testSection : null;
@@ -80,25 +65,34 @@ const Tabs = React.createClass({
         {this._getPanels()}
       </div>
     );
-  },
-});
+  }
+}
 
-Tabs.Panel = React.createClass({
-  propTypes: {
-    title: React.PropTypes.string.isRequired,
-    testSection: React.PropTypes.string,
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.array,
-      React.PropTypes.element,
-    ]).isRequired,
-    isDisabled: React.PropTypes.bool,
-  },
+Tabs.propTypes = {
+  children: React.PropTypes.array.isRequired,
+  testSection: React.PropTypes.string,
+  style: React.PropTypes.arrayOf(React.PropTypes.oneOf([
+    'small',
+    'center',
+    'sub',
+  ])),
+  tabActive: React.PropTypes.number,
+};
 
-  render() {
-    return (
-      <div>{this.props.children}</div>
-    );
-  },
-});
+Tabs.Panel = (props) => {
+  return (
+    <div>{props.children}</div>
+  );
+};
+
+Tabs.Panel.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  testSection: React.PropTypes.string,
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.array,
+    React.PropTypes.element,
+  ]).isRequired,
+  isDisabled: React.PropTypes.bool,
+};
 
 export default Tabs;

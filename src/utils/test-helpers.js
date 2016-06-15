@@ -79,21 +79,27 @@ export const expectTestSectionToNotExist = (componentNode, testSection) => {
 /**
  * Assert that an HTMLElement has a child with an attribute `data-test-section` of value
  * `childTestSection`.
- * @param {ReactElement} component - Element that should contain child(ren) with childTestSection
+ * @param {HTMLElement} component - Element that should contain child with childTestSection
  * @param {String} childTestSection - value of the `data-test-section`
- * @param {Number} numberOfTestSections - expected amount of children with childTestSection, default is 1
  * @returns {undefined}
  */
-export const expectChildTestSectionsExist = (component, childTestSection, numberOfTestSections) => {
-  numberOfTestSections = numberOfTestSections || 1;
+export const expectChildTestSectionsExist = (componentNode, childTestSection) => {
+  var childElementsWithTestSection = componentNode.querySelectorAll('[data-test-section="' + childTestSection + '"]')
 
-  let childWithTestSectionExists = ReactTestUtils.findAllInRenderedTree(component, (elem) => {
-    return elem.getAttribute('data-test-section') === childTestSection;
-  });
-
-  if (childWithTestSectionExists.length !== numberOfTestSections) {
-    throw new Error(childTestSection + 'occurs only ' + numberOfTestSections + ' times within parent node');
+  if (!childElementsWithTestSection.length) {
+    throw new Error(childTestSection + ' not found in parent node');
   }
+};
+
+/**
+ * Find all children elements that have the class 'className'
+ * @param {HTMLElement} componentNode - Parent element
+ * @param {String} className - value of the class
+ * @returns {undefined}
+ */
+export const findElementsWithClass = (componentNode, className) => {
+  let childElementsWithClass = componentNode.querySelectorAll('.' + className);
+  return childElementsWithClass;
 };
 
 /**
