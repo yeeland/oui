@@ -10,6 +10,7 @@ const Tabs = React.createClass({
       'center',
       'sub',
     ])),
+    tabActive: React.PropTypes.number,
   },
 
   getDefaultProps() {
@@ -33,7 +34,7 @@ const Tabs = React.createClass({
     }
 
     this.setState({
-      tabActive: index
+      tabActive: index,
     });
   },
 
@@ -51,7 +52,7 @@ const Tabs = React.createClass({
 
     return (
       <ul className="tabs-nav">{menuItems}</ul>
-    )
+    );
   },
 
   _getPanels() {
@@ -59,11 +60,11 @@ const Tabs = React.createClass({
       let classes = classNames('tabs-pane__item', this.state.tabActive === index && 'is-active');
       return (
         <div className={classes} key={index}>{panel}</div>
-      )
-    })
+      );
+    });
     return (
       <div className="tabs-pane">{panels}</div>
-    )
+    );
   },
 
   render() {
@@ -78,17 +79,23 @@ const Tabs = React.createClass({
       </div>
     );
   },
-
 });
 
 Tabs.Panel = React.createClass({
   propTypes: {
+    title: React.PropTypes.string.isRequired,
+    children: React.PropTypes.oneOfType([
+      React.PropTypes.array,
+      React.PropTypes.element
+    ]).isRequired,
     isDisabled: React.PropTypes.bool,
   },
 
   render() {
-    return <div>{this.props.children}</div>
+    return (
+      <div>{this.props.children}</div>
+    );
   },
-})
+});
 
 export default Tabs;
