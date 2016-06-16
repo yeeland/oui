@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [11.5.0][11.5.0] - 2016-06-16
 ### Added
 - [Feature] Add admin color from v1 and admin helper classes (#414)
 
