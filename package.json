@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "11.4.0",
+  "version": "11.5.0",
   "description": "Optimizely's Component Library.",
   "private": false,
   "dependencies": {},
