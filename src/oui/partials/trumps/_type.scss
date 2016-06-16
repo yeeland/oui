@@ -199,3 +199,24 @@
 .word-break {
   word-break: break-all !important;
 }
+
+
+/// Admin helpers
+/// @description Color helpers for admin-gated features.
+/// @example[html]
+///   <p href="#" class="color-admin">Some Gated Feature Title</p>
+///   <p href="#" class="color-admin--border">Some Gated Feature Box</p>
+///   <span class="badge color-admin--background">Some Gated Feature Label</span>
+/// @advanced
+
+.color-admin {
+  color: map-fetch($color, ui, admin) !important;
+}
+
+.color-admin--border {
+  border-color: map-fetch($color, ui, admin) !important;
+}
+
+.color-admin--background {
+  background-color: map-fetch($color, ui, admin) !important;
+}
