@@ -6,6 +6,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 - [Feature] Admin color helpers as separate partial, also added better HTML examples.
+- [Feature] Add token styles from V2.
+- [Feature] Add badge styles from V2.
 
 ## [11.5.0][11.5.0] - 2016-06-16
 ### Added
