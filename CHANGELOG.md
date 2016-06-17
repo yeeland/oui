@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+- [Feature] Admin color helpers as separate partial, also added better HTML examples.
 
 ## [11.5.0][11.5.0] - 2016-06-16
 ### Added
