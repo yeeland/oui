@@ -6,7 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
-## [11.6.0][11.6.0] - 2016-06-17
+## [12.0.0][12.0.0] - 2016-06-17
 ### Added
 - [Feature] Admin color helpers as separate partial, also added better HTML examples. Renamed class, so it's a breaking change.
 - [Feature] Add token styles from V2.
