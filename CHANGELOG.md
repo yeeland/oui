@@ -5,7 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
-- [Feature] Admin color helpers as separate partial, also added better HTML examples.
+
+## [11.6.0][11.6.0] - 2016-06-17
+### Added
+- [Feature] Admin color helpers as separate partial, also added better HTML examples. Renamed class, so it's a breaking change.
 - [Feature] Add token styles from V2.
 - [Feature] Add badge styles from V2.
 
