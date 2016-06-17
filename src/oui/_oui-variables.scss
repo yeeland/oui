@@ -267,6 +267,39 @@ $button: (
   )
 );
 
+
+/// Tokens
+
+$token: (
+  background-color: (
+    primary                  : #009DE0,
+    secondary                : #869FAB
+  ),
+  token__number: (
+    min-width                : 10px
+  ),
+  token__close: (
+    width                    : 12px,
+    height                   : 12px
+  ),
+  border-radius              : 2px,
+  text-shadow                : 0 0 1px rgba(0, 0, 0, 0.2),
+  padding                    : 4px
+);
+
+
+/// Badge
+
+$badge: (
+  background-color           : #B4B7B9,
+  size                       : 14px,
+  min-width                  : 16px,
+  font-size                  : 10px,
+  font-weight                : 700,
+  letter-spacing             : 0.5px
+);
+
+
 /// Icons
 
 $icon: (

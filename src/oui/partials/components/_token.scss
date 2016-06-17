@@ -1,0 +1,89 @@
+////
+/// Token
+/// @group Components
+/// @description Tokens are used to denote which items you’ve selected from a multi-select list.
+/// @example[html] secondary
+///   <div class="#{$namespace}token-wrap">
+///     <div class="#{$namespace}token #{$namespace}token--secondary">Experiment Page Title</div>
+///   </div>
+/// @example[html] primary
+///   <div class="#{$namespace}token-wrap">
+///     <div class="#{$namespace}token #{$namespace}token--primary">
+///       <span class="push--right">Experiment Page Title</span>
+///       <a class="flex">
+///         <svg class="#{$namespace}icon #{$namespace}token__close">
+///           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close-16"></use>
+///         </svg>
+///       </a>
+///     </div>
+///   </div>
+/// @example[html] primary
+///   <div class="#{$namespace}token-wrap">
+///     <div class="#{$namespace}token #{$namespace}token--primary">
+///       <span class="push--right">Experiment Page Title</span>
+///       <a class="flex">
+///         <svg class="#{$namespace}icon #{$namespace}token__close">
+///           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close-16"></use>
+///         </svg>
+///       </a>
+///     </div>
+///   </div>
+////
+
+.#{$namespace}token-wrap {
+  display: inline-flex;
+  border: 1px solid map-fetch($color, ui, base);
+  background: map-fetch($color, background, light);
+  padding: map-fetch($token, padding);
+  border-radius: map-fetch($token, border-radius);
+}
+
+.#{$namespace}token {
+  display: inline-flex;
+  align-items: center;
+  color: map-fetch($color, text, white);
+  line-height: 1;
+  padding: spacer(0.5) spacer(1);
+  border-radius: map-fetch($token, border-radius);
+  text-shadow: map-fetch($token, text-shadow);
+}
+
+.#{$namespace}token--primary {
+  background: map-fetch($token, background-color, primary);
+}
+
+.#{$namespace}token--secondary {
+  background: map-fetch($token, background-color, secondary);
+}
+
+.#{$namespace}token-tool {
+  display: flex;
+  align-items: center;
+  cursor: move;
+  flex: none;
+  min-width: 0;
+  min-height: 0;
+  padding-left: map-fetch($token, padding) * 2;
+}
+
+.#{$namespace}token__number {
+  color: map-fetch($color, text, light);
+  font-size: map-fetch($font, size, milli);
+  min-width: map-fetch($token, token__number, min-width);
+}
+
+.#{$namespace}token__move {
+  transform: rotate(90deg);
+  color: darken(map-fetch($color, ui, base), 10);
+}
+
+.#{$namespace}token__description {
+  font-size: map-fetch($font, size, micro);
+  margin-top: spacer(0.5);
+}
+
+.#{$namespace}token__close {
+  color: map-fetch($color, ui, white);
+  height: map-fetch($token, token__close, height);
+  width: map-fetch($token, token__close, width);
+}
