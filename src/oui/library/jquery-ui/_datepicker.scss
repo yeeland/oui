@@ -45,9 +45,11 @@
   }
 
   .ui-datepicker-title {
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0;
     text-align: center;
+    font-size: map-fetch($font, size, base);
+    padding-bottom: spacer(1);
   }
 
   .ui-datepicker-calendar {
@@ -70,21 +72,18 @@
         display: block;
         padding: 4px;
         border: 1px solid transparent;
-        background: #fff !important;
-        color: map-fetch($color, link, base);
+        background: map-fetch($color, background, white);
+        color: map-fetch($color, text, base);
       }
 
       &.ui-state-disabled span {
         color: map-fetch($color, text, light);
-        background: #fff !important;
       }
     }
 
-    .ui-state-active,
-    .ui-state-hover {
-      border: 1px solid map-fetch($color, ui, brand);
-      background: map-fetch($color, background, brand-light);
-      border-radius: map-fetch($border, radius, base);
+    .ui-state-hover,
+    .ui-state-active  {
+      background: map-fetch($color, ui, brand-light);
     }
   }
 
@@ -100,12 +99,6 @@
     width: 16px;
     height: 16px;
     border: 1px solid transparent;
-
-    &:hover {
-      border: 1px solid map-fetch($color, ui, brand);
-      background: map-fetch($color, background, brand-light);
-      border-radius: map-fetch($border, radius, base);
-    }
 
     &::before {
       @extend %#{$namespace}arrow-inline;
