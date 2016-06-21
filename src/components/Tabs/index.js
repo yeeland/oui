@@ -1,72 +1,19 @@
 import React from 'react';
 import classNames from 'classnames';
 
-class Tabs extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tabActive: this.props.tabActive || 0,
-    };
-  }
-
-  setTabActive(index, e) {
-    e.preventDefault();
-
-    let clickedTab = this.props.children[index];
-    if (clickedTab.props.isDisabled) {
-      return;
-    }
-
-    this.setState({
-      tabActive: index,
-    });
-  }
-
-  _getMenuItems() {
-    let menuItems = this.props.children.map((panel, index) => {
-      let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
-      let title = panel.props.title;
-      let classes = classNames('tabs-nav__item', panel.props.isDisabled && 'tab-disabled', this.state.tabActive === index && 'is-active');
-      return (
-        <li data-test-section={dataTestSection} key={index} className={classes} onClick={this.setTabActive.bind(this, index)} disabled={ panel.props.isDisabled ? 'disabled' : false }>
-          {title}
-        </li>
-      );
-    });
-
-    return (
-      <ul className="tabs-nav" data-test-section="tabs-menu">{menuItems}</ul>
-    );
-  }
-
-  _getPanels() {
-    let panels = this.props.children.map((panel, index) => {
-      let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
-      let classes = classNames('tabs-pane__item', this.state.tabActive === index && 'is-active');
-      return (
-        <div data-test-section={dataTestSection} className={classes} key={index}>{panel}</div>
-      );
-    });
-    return (
-      <div className="tabs-pane" data-test-section="tabs-panels">{panels}</div>
-    );
-  }
-
-  render() {
-    let dataTestSection = this.props.testSection ? this.props.testSection : null;
-    let tabStyleClasses = this.props.style ? this.props.style.map((style) => {
-      return 'tabs--' + style;
-    }) : '';
-    let classes = classNames(tabStyleClasses, 'tabs');
-    return (
-      <div data-test-section={dataTestSection} className={classes}>
-        {this._getMenuItems()}
-        {this._getPanels()}
-      </div>
-    );
-  }
-}
+const Tabs = (props) => {
+  let dataTestSection = props.testSection ? props.testSection : null;
+  let tabStyleClasses = props.style ? props.style.map((style) => {
+    return 'tabs--' + style;
+  }) : '';
+  let classes = classNames(tabStyleClasses, 'tabs');
+  return (
+    <div data-test-section={dataTestSection} className={classes}>
+      {_getMenuItems(props)}
+      {_getPanels(props)}
+    </div>
+  );
+};
 
 Tabs.propTypes = {
   children: React.PropTypes.array.isRequired,
@@ -77,6 +24,54 @@ Tabs.propTypes = {
     'sub',
   ])),
   tabActive: React.PropTypes.number,
+};
+
+Tabs.defaultProps = {
+  onClick: setTabActive,
+};
+
+const setTabActive = (index, e) => {
+  // e.preventDefault();
+
+  // let clickedTab = this.props.children[index];
+  // if (clickedTab.props.isDisabled) {
+  //   return;
+  // }
+
+  // Tabs.render({
+
+  // });
+  console.log('click')
+}
+
+const _getMenuItems = (props) => {
+  let menuItems =  props.children.map((panel, index) => {
+    let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
+    let title = panel.props.title;
+    let classes = classNames('tabs-nav__item', panel.props.isDisabled && 'tab-disabled', props.activeTab === index && 'is-active');
+    return (
+      <li data-test-section={dataTestSection} key={index} className={classes} onClick={props.onClick} disabled={ panel.props.isDisabled ? 'disabled' : false }>
+        {title}
+      </li>
+    );
+  });
+
+  return (
+    <ul className="tabs-nav" data-test-section="tabs-menu">{menuItems}</ul>
+  );
+}
+
+const _getPanels = (props) => {
+  let panels = props.children.map((panel, index) => {
+    let dataTestSection = panel.props.testSection ? panel.props.testSection : null;
+    let classes = classNames('tabs-pane__item', props.activeTab === index && 'is-active');
+    return (
+      <div data-test-section={dataTestSection} className={classes} key={index}>{panel}</div>
+    );
+  });
+  return (
+    <div className="tabs-pane" data-test-section="tabs-panels">{panels}</div>
+  );
 };
 
 Tabs.Panel = (props) => {
