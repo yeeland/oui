@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+- [Feature] Add OUI overrides for Select2 plugin to library directory. (#421)
 
 ## [12.0.0][12.0.0] - 2016-06-17
 ### Added
