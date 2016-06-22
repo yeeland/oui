@@ -34,7 +34,7 @@ You can include this pre-compiled version of OUI in your application:
 <link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui-extras.css">
 ```
 
-Replace `11.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `12.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
 #### OUI and OUI Extras
 

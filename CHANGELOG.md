@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [12.1.0][12.1.0] - 2016-06-22
+### Added
 - [Feature] Add OUI overrides for Select2 plugin to library directory. (#421)
 
 ## [12.0.0][12.0.0] - 2016-06-17
@@ -376,7 +379,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v12.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v12.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -408,3 +411,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [11.4.0]: https://github.com/optimizely/oui/compare/v11.3.1...v11.4.0
 [11.5.0]: https://github.com/optimizely/oui/compare/v11.4.0...v11.5.0
 [12.0.0]: https://github.com/optimizely/oui/compare/v11.5.0...v12.0.0
+[12.1.0]: https://github.com/optimizely/oui/compare/v12.0.0...v12.1.0
