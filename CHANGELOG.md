@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [12.2.0][12.2.0] - 2016-06-24
 ### Added
 - [Feature] Add dropup option for dropdowns. (#425)
 
@@ -381,7 +383,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v12.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v12.2.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -414,3 +416,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [11.5.0]: https://github.com/optimizely/oui/compare/v11.4.0...v11.5.0
 [12.0.0]: https://github.com/optimizely/oui/compare/v11.5.0...v12.0.0
 [12.1.0]: https://github.com/optimizely/oui/compare/v12.0.0...v12.1.0
+[12.2.0]: https://github.com/optimizely/oui/compare/v12.1.0...v12.2.0
