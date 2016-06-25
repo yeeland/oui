@@ -7,11 +7,10 @@ script:
 sudo: false
 before_deploy:
 - rm -rfv dist
-- "./node_modules/.bin/gulp sass"
-- "./node_modules/.bin/gulp extras:build"
-- mkdir -v dist/$(node -e "console.log(require('./package.json').version);")
-- mv -v dist/css/* dist/$(node -e "console.log(require('./package.json').version);")
-- rm -rfv dist/css
+- npm start
+- sed -i '' -e '/dist/g' .gitignore
+- mkdir -vp s3/$(node -e "console.log(require('./package.json').version);")
+- cp -v dist/css/* s3/$(node -e "console.log(require('./package.json').version);")
 deploy:
 - provider: s3
   access_key_id:
