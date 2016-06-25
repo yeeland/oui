@@ -181,7 +181,6 @@ module.exports = {
     "max-statements": "off",
     "no-bitwise": "off",
     "no-plusplus": "off",
-    "jsx-quotes": ["warn", "prefer-double"],
 
     // OUI rules
     "react/jsx-indent-props": ["warn", 2],
