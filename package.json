@@ -40,11 +40,11 @@
   },
   "scripts": {
     "test": "npm run scss-lint && npm run eslint && gulp sass && npm run jest",
-    "start": "bundle install && bundle update && npm install && npm run node-sass && npm run babel",
+    "start": "bundle install && bundle update && npm install && npm run sass && npm run babel",
     "jest": "jest --config .jest.config.json",
     "eslint": "eslint --ext .jsx --ext .js . --ignore-path .gitignore --max-warnings 0",
     "scss-lint": "bundle exec scss-lint src/",
-    "node-sass": "gulp sass",
+    "sass": "gulp sass && gulp extras:build",
     "babel": "babel src/ --out-dir dist/js --ignore \"tests/*.js, src/js, src/index.jsx\"",
     "preversion": "git checkout master && git pull --rebase=false && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
