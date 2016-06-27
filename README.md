@@ -15,53 +15,48 @@ Meet Louis, the official mascot of OUI.
 This document contains three parts:
 
 1. Documentation
-1. Including OUI in your project
-1. Contributing new CSS to OUI
+2. Including OUI in your project
+3. Contributing to OUI
+
 
 ## Documentation
 
 [http://design.optimizely.com/docs/oui/](http://design.optimizely.com/docs/oui/)
 
-This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial.
+This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) (currently internal to Optimizely) to construct single-page documentation from comments inside each Sass partial.
+
 
 ## Including OUI in your project
 
-### Pre-compiled CSS file
+There are two ways to include OUI in your project.
+
+### Option A: Pre-compiled CSS file
+
+**Difficulty:** Easy; **Flexibility:** Low; **Dependencies:** None
+
+**Great for:** Quick projects, prototypes
 
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui-extras.css">
 ```
 
-Replace `12.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `13.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
-#### OUI and OUI Extras
+**What are those files?** `oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
 
-`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
+### Option B: Grab OUI Sass and React components from npm
 
-### Using NPM
+**Difficulty:** High; **Flexibility:** High; **Dependencies:** Sass, npm, React (optional)
+
+**Great for:** Medium-sized or large projects looking to minimize tech-debt or [refactor old Sass](https://css-tricks.com/optimizelys-ui-library-oui-1-of-2/).
 
 OUI is published as an npm module called `optimizely-oui`. To install:
 
-```
+```bash
 npm install optimizely-oui --save
-```
-
-If using Gulp for your project:
-
-```javascript
-gulp.task('sass', function() {
-  gulp.src('scss/**/*.scss')
-    .pipe(sass({
-      errLogToConsole: true,
-      includePaths : [
-        require('optimizely-oui').includePath
-      ]
-    }))
-    .pipe(gulp.dest('path/to/css'));
-});
 ```
 
 ### Example Starter Code
