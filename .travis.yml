@@ -23,7 +23,7 @@ deploy:
   secret_access_key:
     secure: sHcezDuWh9s341ruDx4pDMmjDWuoQ7cf5jhUQu3YyNQ8zaPRfVLztnYcJFZCUAznJi7Sswb3hIVvEQq+PXgd2YibdI6lXVrFff/cqbpRT9VBllIG9gRQbXcTJ22u+SzdB9ikE4wKqqZx2aUX1GpDIQc0TigsFmXhxNxKG8gkSik=
   bucket: optimizely-oui
-  local-dir: dist
+  local-dir: s3
   region: us-west-2
   acl: public-read
   on:
