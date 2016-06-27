@@ -3,9 +3,9 @@ import React from 'react';
 const ArrowsInline = (props) => {
   return (
     <span
-      className={'oui-arrow-inline--' + props.direction}
+      className={ 'oui-arrow-inline--' + props.direction }
       aria-hidden="true"
-      data-test-section={props.testSection}>
+      data-test-section={ props.testSection }>
     </span>
   );
 };

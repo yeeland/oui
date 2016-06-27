@@ -63,7 +63,7 @@ describe('components/Input', () => {
     spyOn(handler, 'onChange');
 
     const component = testHelpers.renderIntoDocument(
-      <Input type="text" value="foo" onChange={handler.onChange} />
+      <Input type="text" value="foo" onChange={ handler.onChange } />
     );
 
     const componentNode = testHelpers.getNodeFromComponent(component);
@@ -79,7 +79,7 @@ describe('components/Input', () => {
     spyOn(handler, 'onInput');
 
     const component = testHelpers.renderIntoDocument(
-      <Input type="text" value="foo" onInput={handler.onInput} />
+      <Input type="text" value="foo" onInput={ handler.onInput } />
     );
 
     const componentNode = testHelpers.getNodeFromComponent(component);

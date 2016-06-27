@@ -8,8 +8,8 @@ const Label = (props) => {
 
   return (
     <label
-      className={classes}
-      data-test-section={props.testSection}>
+      className={ classes }
+      data-test-section={ props.testSection }>
       { props.children }
     </label>
   );

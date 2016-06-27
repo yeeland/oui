@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension, react/prefer-stateless-function */
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -20,8 +21,8 @@ const Component = ({ children, title }) => {
 };
 
 Component.propTypes = {
-  title: React.PropTypes.string.isRequired,
   children: React.PropTypes.any.isRequired,
+  title: React.PropTypes.string.isRequired,
 };
 
 const ComponentRow = ({ backgroundColor, children, isPadded }) => {
@@ -37,7 +38,6 @@ const ComponentRow = ({ backgroundColor, children, isPadded }) => {
 };
 
 ComponentRow.propTypes = {
-  children: React.PropTypes.any.isRequired,
   backgroundColor: React.PropTypes.oneOf([
     'faint',
     'light',
@@ -52,6 +52,7 @@ ComponentRow.propTypes = {
     'live',
     'draft',
   ]),
+  children: React.PropTypes.any.isRequired,
   isPadded: React.PropTypes.bool,
 };
 
@@ -70,12 +71,12 @@ ComponentRowItem.propTypes = {
 class App extends React.Component {
   render() {
     return (
-      <div style={{ margin: '50px auto', width: '800px' }}>
+      <div style={ { margin: '50px auto', width: '800px' } }>
         <h1>OUI React Components</h1>
 
         <Component title="Attention">
           <ComponentRow>
-            <Attention isDismissible alignment="center" type="warning" testSection="attention-foo">
+            <Attention isDismissible={ true } alignment="center" type="warning" testSection="attention-foo">
               Hello! This is a short attention bar.
             </Attention>
           </ComponentRow>
@@ -122,7 +123,7 @@ class App extends React.Component {
         </Component>
 
         <Component title="Button">
-          <ComponentRow isPadded>
+          <ComponentRow isPadded={ true }>
             <ComponentRowItem>
               <Button>Button</Button>
             </ComponentRowItem>
@@ -142,17 +143,17 @@ class App extends React.Component {
               <Button style="toggle">Toggle Button</Button>
             </ComponentRowItem>
           </ComponentRow>
-          <ComponentRow backgroundColor="brand-dark" isPadded>
+          <ComponentRow backgroundColor="brand-dark" isPadded={ true }>
             <ComponentRowItem>
               <Button style="outline-reverse">Outline Reverse Button</Button>
             </ComponentRowItem>
           </ComponentRow>
-          <ComponentRow isPadded>
+          <ComponentRow isPadded={ true }>
             <ComponentRowItem>
-              <Button isDisabled>Disabled Button</Button>
+              <Button isDisabled={ true }>Disabled Button</Button>
             </ComponentRowItem>
           </ComponentRow>
-          <ComponentRow backgroundColor="faint" isPadded>
+          <ComponentRow backgroundColor="faint" isPadded={ true }>
             <ComponentRow>
               <ComponentRowItem>
                 <Button size="small">Small Button</Button>
@@ -173,11 +174,12 @@ class App extends React.Component {
               </ComponentRowItem>
             </ComponentRow>
           </ComponentRow>
-          <ComponentRow isPadded>
+          <ComponentRow isPadded={ true }>
             <ComponentRowItem>
-              <Button onClick={ () => {
+              <Button
+                onClick={ function() {
                   alert('Hello!'); //eslint-disable-line
-              }}>
+                } }>
                 Button with Function
               </Button>
             </ComponentRowItem>
@@ -190,8 +192,8 @@ class App extends React.Component {
           </ComponentRow>
           <ComponentRow>
             <Code type="block">
-{`var foo = 'bar';
-var bat = 'baz';`}
+{ `var foo = 'bar';
+var bat = 'baz';` }
             </Code>
           </ComponentRow>
         </Component>
@@ -201,7 +203,7 @@ var bat = 'baz';`}
             <Input type="text" defaultValue="foo" />
           </ComponentRow>
           <ComponentRow>
-            <Input type="number" value="42" onChange={function() {}} />
+            <Input type="number" value="42" onChange={ function() {} } />
           </ComponentRow>
           <ComponentRow>
             <Input type="password" label="Password" testSection="input" />

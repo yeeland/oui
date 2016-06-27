@@ -4,7 +4,7 @@ const inlineCode = (children, testSection) => {
   return (
     <code
       className="oui-code"
-      data-test-section={testSection}>
+      data-test-section={ testSection }>
       { children }
     </code>
   );
@@ -14,7 +14,7 @@ const blockCode = (children, testSection) => {
   return (
     <pre
       className="oui-pre"
-      data-test-section={testSection}>
+      data-test-section={ testSection }>
       <code>{ children }</code>
     </pre>
   );
@@ -29,9 +29,9 @@ const Code = (props) => {
 };
 
 Code.propTypes = {
-  type: React.PropTypes.oneOf(['inline', 'block']).isRequired,
   children: React.PropTypes.string.isRequired,
   testSection: React.PropTypes.string,
+  type: React.PropTypes.oneOf(['inline', 'block']).isRequired,
 };
 
 export default Code;
