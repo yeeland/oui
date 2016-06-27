@@ -18,19 +18,21 @@ This document contains three parts:
 2. Including OUI in your project
 3. Contributing to OUI
 
+***
 
 ## Documentation
 
 [http://design.optimizely.com/docs/oui/](http://design.optimizely.com/docs/oui/)
 
-This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) (currently internal to Optimizely) to construct single-page documentation from comments inside each Sass partial.
+This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) (currently internal to Optimizely) to construct single-page documentation from comments within each Sass file.
 
+***
 
 ## Including OUI in your project
 
 There are two ways to include OUI in your project.
 
-### Option A: Pre-compiled CSS file
+### A: Pre-compiled CSS file
 
 **Difficulty:** Easy; **Flexibility:** Low; **Dependencies:** None
 
@@ -47,64 +49,69 @@ Replace `13.0.0` with the [latest release](https://github.com/optimizely/oui/rel
 
 **What are those files?** `oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
 
-### Option B: Grab OUI Sass and React components from npm
+### B: Grab OUI Sass and React components from npm
 
 **Difficulty:** High; **Flexibility:** High; **Dependencies:** Sass, npm, React (optional)
 
 **Great for:** Medium-sized or large projects looking to minimize tech-debt or [refactor old Sass](https://css-tricks.com/optimizelys-ui-library-oui-1-of-2/).
 
-OUI is published as an npm module called `optimizely-oui`. To install:
+OUI is published as an npm module called `optimizely-oui` that contains Sass files and React components. 
+
+To install:
 
 ```bash
 npm install optimizely-oui --save
 ```
 
-### Example Starter Code
-
-Download [OUI starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `oui/...` will only work if the above gulp task is in place.
-
-### Structure of OUI
+#### Using OUI Sass files
 
 OUI consists of two parts:
 
-1. **OUI**
+1. **Core OUI Sass**
     - Base styles used as the foundation for any site.
-    - This code lives in this OUI repository and is a dependency for platform code.
-2. **Platform (.e.g, `mobile`)**
-    - Platform or device specific built on top of OUI.
-    - This code lives in the platform repo, pulling OUI as a dependency.
+    - This code lives in this OUI repository and is loaded before application specific Sass.
+2. **Project specific Sass (mobile website, developer site, etc…)**
+    - Project specific Sass built with OUI code such as variables or mixins.
+    - This code lives in the project repo, pulling OUI as a dependency.
 
-For example, if you're building a mobile site, `mobile.scss` would contain:
+For example, if you're building a mobile site, your main SCSS file `mobile.scss` would contain:
+
 ```scss
-// # Mobile
-// Root file driving the Mobile CSS.
+// # Mobile Website
+// Root file driving the Mobile Website CSS.
 
-// ## OUI functions
-@import 'oui/partials/sass/functions';
+// ## OUI and custom functions
+@import '../node_modules/optimizely-oui/src/oui/partials/sass/functions';
+@import 'mobile-website/functions';
 
-// ## OUI and p13n variables
-// Import `oui` and `mobile` variables
+// ## OUI and custom variables
+// The mobile website variables file can contain new variables or overwrite existing variables.
+@import '../node_modules/optimizely-oui/src/oui/oui-variables';
+@import 'mobile-website/mobile-variables';
 
-@import 'oui/oui-variables';
-@import 'mobile/mobile-variables';
+// ## OUI and custom partials
+// Partials are files that import other components
+@import '../node_modules/optimizely-oui/src/oui/oui-partials';
+@import 'mobile-website/mobile-partials';
 
-// ## OUI and mobile partials
-// Import `oui` and `mobile` partials
-
-@import 'oui/oui-partials';
-@import 'mobile/mobile-partials';
-
-// ## Trumps
+// ## Trumps (helper/utility classes)
 // Trumps use `!important` classes for overrides and should always be loaded last.
 
-@import 'oui/partials/trumps/background';
-@import 'oui/partials/trumps/borders';
-@import 'oui/partials/trumps/layout';
-@import 'oui/partials/trumps/margin';
-@import 'oui/partials/trumps/padding';
-@import 'oui/partials/trumps/type';
-@import 'oui/partials/trumps/sizing';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/admin';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/background';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/borders';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/layout';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/margin';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/padding';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/type';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/sizing';
 ```
+
+#### Using OUI React components
+
+_Coming soon!_
+
+***
 
 ## Contributing to OUI
 
