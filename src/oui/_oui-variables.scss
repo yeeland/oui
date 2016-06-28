@@ -39,7 +39,8 @@ $root-color: (
   bad-news                   : #C60C0C,
   good-news                  : #97C70A,
   draft                      : #F4B852, // Brand Oakland
-  live                       : #77C96F // Brand Haight+1
+  live                       : #77C96F, // Brand Haight+1
+  admin                      : #FCB423 // Admin from v1
 );
 
 /// Base Colors
@@ -62,7 +63,8 @@ $color: (
     bad-news                 : map-fetch($root-color, bad-news),
     good-news                : map-fetch($root-color, good-news),
     draft                    : map-fetch($root-color, draft),
-    live                     : map-fetch($root-color, live)
+    live                     : map-fetch($root-color, live),
+    admin                    : map-fetch($root-color, admin)
   ),
 
   link: (
@@ -196,7 +198,7 @@ $button: (
     highlight: (
       background             : #0F75B2,
       border                 : #0E699F,
-      text-shadow            : 1px 0 1px rgba(0, 0 , 0, 0.2),
+      text-shadow            : 0 0 1px rgba(0, 0 , 0, 0.2),
       hover:(
         background           : #0081BA,
         border               : #0176A9,
@@ -264,6 +266,39 @@ $button: (
     )
   )
 );
+
+
+/// Tokens
+
+$token: (
+  background-color: (
+    primary                  : #009DE0,
+    secondary                : #869FAB
+  ),
+  token__number: (
+    min-width                : 10px
+  ),
+  token__close: (
+    width                    : 12px,
+    height                   : 12px
+  ),
+  border-radius              : 2px,
+  text-shadow                : 0 0 1px rgba(0, 0, 0, 0.2),
+  padding                    : 4px
+);
+
+
+/// Badge
+
+$badge: (
+  background-color           : #B4B7B9,
+  size                       : 14px,
+  min-width                  : 16px,
+  font-size                  : 10px,
+  font-weight                : 700,
+  letter-spacing             : 0.5px
+);
+
 
 /// Icons
 
