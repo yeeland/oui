@@ -1,21 +1,40 @@
 <html>
 <head>
+<link href='https://app.optimizely.com/master-2443.393742752154841442/dist/css/v2.css' rel='stylesheet' />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
 <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
 </head>
 <body>
 
-<div id="container"></div>
+<div class="oui__wrapper">
+  <header>
+    <h1>OUI</h1>
+    <p><img src="https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif"></p>
+  </header>
+
+  <div id="components"></div>
+</div>
 
 <script>
 $.getJSON('react-components.json', function (result) {
-  console.log(result);
   nunjucks.render('react-components.html', { components : result }, function (err, res) {
-    console.log(res);
-    $('#container').append(res);
+    $('#components').append(res);
   });
 });
 </script>
+
+<style>
+body {
+  overflow: auto;
+}
+.oui__wrapper {
+  max-width: 1100px;
+  margin: 1em auto;
+}
+.oui__component {
+
+}
+</style>
 
 </body>
 </html>
