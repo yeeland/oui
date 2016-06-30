@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/optimizely/oui.svg?branch=devel)](https://travis-ci.org/optimizely/oui)
+[![Coverage Status](https://coveralls.io/repos/github/optimizely/oui/badge.svg?branch=devel)](https://coveralls.io/github/optimizely/oui?branch=devel)
 [![Gitter](https://badges.gitter.im/optimizely/oui.svg)](https://gitter.im/optimizely/oui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Live Documentation](https://img.shields.io/badge/documentation-live-blue.svg)](http://design.optimizely.com/docs/oui/)
 
@@ -13,157 +14,126 @@ Meet Louis, the official mascot of OUI.
 
 This document contains three parts:
 
-1. Documentation
-1. Including OUI in your project
-1. Contributing new CSS to OUI
+1. [Documentation](#documentation)
+2. [Including OUI in your project](#including-oui-in-your-project)
+3. [Contributing to OUI](#contributing-to-oui)
+4. [Philosophy](#philosophy)
+
+***
 
 ## Documentation
 
 [http://design.optimizely.com/docs/oui/](http://design.optimizely.com/docs/oui/)
 
-This is "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) to construct single-page documentation from comments inside each Sass partial.
+This "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) (currently internal to Optimizely) to construct single-page documentation from comments within each Sass file.
+
+***
 
 ## Including OUI in your project
 
+There are two ways to include OUI in your project.
+
 ### Pre-compiled CSS file
+
+This is a quick and easy way to add OUI to a project. It is the least flexible option but works well for small projects and and prototypes.
 
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/11.0.0/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui-extras.css">
 ```
 
-Replace `12.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `13.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
-#### OUI and OUI Extras
+`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use [OUI icons](https://github.com/optimizely/oui-icons) you'll need to include both `oui.css` and `oui-extras.css` in your project.
 
-`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use OUI icons you'll need to include both `oui.css` and `oui-extras.css` in your project.
+The icons can be used like this:
 
-### Using NPM
-
-OUI is published as an npm module called `optimizely-oui`. To install:
-
-```
-npm install optimizely-oui --save
-```
-
-If using Gulp for your project:
-
-```javascript
-gulp.task('sass', function() {
-  gulp.src('scss/**/*.scss')
-    .pipe(sass({
-      errLogToConsole: true,
-      includePaths : [
-        require('optimizely-oui').includePath
-      ]
-    }))
-    .pipe(gulp.dest('path/to/css'));
-});
-```
-
-### Example Starter Code
-
-Download [OUI starter code](assets/oui-starter-code.zip) that includes the required file structure for new projects. Note that the paths to `oui/...` will only work if the above gulp task is in place.
-
-### Structure of OUI
-
-OUI consists of two parts:
-
-1. **OUI**
-    - Base styles used as the foundation for any site.
-    - This code lives in this OUI repository and is a dependency for platform code.
-2. **Platform (.e.g, `mobile`)**
-    - Platform or device specific built on top of OUI.
-    - This code lives in the platform repo, pulling OUI as a dependency.
-
-For example, if you're building a mobile site, `mobile.scss` would contain:
-```scss
-// # Mobile
-// Root file driving the Mobile CSS.
-
-// ## OUI functions
-@import 'oui/partials/sass/functions';
-
-// ## OUI and p13n variables
-// Import `oui` and `mobile` variables
-
-@import 'oui/oui-variables';
-@import 'mobile/mobile-variables';
-
-// ## OUI and mobile partials
-// Import `oui` and `mobile` partials
-
-@import 'oui/oui-partials';
-@import 'mobile/mobile-partials';
-
-// ## Trumps
-// Trumps use `!important` classes for overrides and should always be loaded last.
-
-@import 'oui/partials/trumps/background';
-@import 'oui/partials/trumps/borders';
-@import 'oui/partials/trumps/layout';
-@import 'oui/partials/trumps/margin';
-@import 'oui/partials/trumps/padding';
-@import 'oui/partials/trumps/type';
-@import 'oui/partials/trumps/sizing';
-```
-
-## Contributing to OUI
-
-The following is for users planning to make contributions to OUI.
-
-**Important:** see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our versioning system.
-
-After cloning the `oui` repo, run `npm install` to install dependencies.
-
-### Cheat Sheet
-
-- **`gulp`** : Runs the default compass watch process.
-- **`npm test`** : Attempts to compile SCSS and runs the linter.
-- **`gulp svg`** : Builds svg sprite and demo page into `dist`.
-- **`gulp sass`** : Builds OUI-only css file for testing into `dist`.
-
-### Getting Started
-
-#### Run the Sass compile process
-
-To output OUI CSS file to the `dist` directory run:
-
-    gulp sass
-
-#### SVG Icons
-
-SVGs are maintained by the [https://github.com/optimizely/oui-icons](https://github.com/optimizely/oui-icons) repository. The sprite file that is generated by the repo, `svg-symbols.svg`, needs to be included as the first child of the `<body>` on any page that needs svg icons.
-
-Icons are in three sizes but the most common is 16x16.
-
-```
-<svg class="icon">
-  <use xlink:href="#add-16"></use>
-</svg>
-```
-
-By using this method including the icon color can be changed by using the `fill` CSS property.
-
-##### Using Icons
-
-If you're including OUI by including the stylesheet link to the rendered CSS (that is, you're not including it with Sass) you can still use the method described above or reference the icons by using CSS classes.
-
-```
+```html
 <div class="icon icon--add-16"></div>
 ```
 
-This is an easier implementation as it does not required an svg sprite but you cannot change the color of the icons.
+This quick and easy implementation does not let you change the color of the icons. Look at the [OUI icons](https://github.com/optimizely/oui-icons) repository for a more advanced and flexible implementation.
 
-## Testing New Code
+### Grab OUI Sass and React components from npm
 
-Use existing HTML or add new HTML to `/tests/` to confirm any OUI changes in Chrome, Firefox, Safari and IE 10+. Run:
+This option is great for developers that want to tightly integrate OUI into their existing Sass or use our React components.
 
-    gulp html-tests
+OUI is published as an npm module called `optimizely-oui` that contains Sass files and React components.
 
-This will start browsersync and will watch and reload the browser after any Sass or HTML changes.
+To install:
+
+```bash
+npm install optimizely-oui --save
+```
+
+This will save it within your project's `node_modules/` folder.
+
+#### Using OUI Sass files
+
+OUI consists of two parts:
+
+1. **Core OUI Sass**
+    - Base styles used as the foundation for any site.
+    - This code lives in this OUI repository and is loaded before application specific Sass.
+2. **Project specific Sass (mobile website, developer site, etc…)**
+    - Project specific Sass built with OUI code such as variables or mixins.
+    - This code lives in the project repo, pulling OUI as a dependency.
+
+For example, if you're building a mobile site, your main SCSS file `mobile.scss` would contain:
+
+```scss
+// # Mobile Website
+// Root file driving the Mobile Website CSS.
+
+// ## OUI and custom functions
+@import '../node_modules/optimizely-oui/src/oui/partials/sass/functions';
+@import 'mobile-website/functions';
+
+// ## OUI and custom variables
+// The mobile website variables file can contain new variables or overwrite existing variables.
+@import '../node_modules/optimizely-oui/src/oui/oui-variables';
+@import 'mobile-website/mobile-variables';
+
+// ## OUI and custom partials
+// Partials are files that import other components
+@import '../node_modules/optimizely-oui/src/oui/oui-partials';
+@import 'mobile-website/mobile-partials';
+
+// ## Trumps (helper/utility classes)
+// Trumps use `!important` classes for overrides and should always be loaded last.
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/admin';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/background';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/borders';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/layout';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/margin';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/padding';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/type';
+@import '../node_modules/optimizely-oui/src/oui/partials/trumps/sizing';
+```
+
+#### Using OUI React components
+
+OUI comes with React components that can be used instead of copying and pasting HTML from the documentation. You can view these components locally by running `npm run react:serve` after cloning the repository and installing dependencies with `npm install`.
+
+These components can be used in a React codebase by requiring OUI:
+
+```js
+import Button from 'optimizely-oui';
+```
+
+[We provide React documentation](http://design.optimizely.com/docs/oui/) that includes information on our component props and default values.
+
+***
+
+## Contributing to OUI
+
+Want to run OUI locally? Clone this repository and run `npm install`. The `npm run` command will list all the available commands.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+
+***
 
 ## Philosophy
 
@@ -180,7 +150,7 @@ By achieving these goals our code becomes...
 1. **Consistent.** Not only will developers be able to read each other's code more easily we'll have a better end-user experience across the product.
 1. **Smaller and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)er.** Since we're constantly reusing low-level objects to build larger ones, often with Sass' <code>@extend</code> functionality, we cut down on CSS bloat. Less code means fewer bugs.
 
-#### Writing Good Classes
+### Writing Good Classes
 
 In order to write HTML and CSS classes that provide meaning for developers we're using the BEM syntax. BEM stands for Block, Element, Modifier and is becoming a popular approach to building CSS and HTML that describes an object's internal relationships.
 
@@ -209,7 +179,7 @@ Though somewhat verbose, this syntax makes it easy to determine the child/parent
 
 For a longer discussion Harry Roberts provides a <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">good introduction</a> to the syntax.
 
-#### Futher Reading
+### Futher Reading
 
 - [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). Introduction to BEM.
 - [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/). What is a meaningful class name?

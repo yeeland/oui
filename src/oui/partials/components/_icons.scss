@@ -32,7 +32,8 @@
   }
 
   // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
-  + [class^="#{$namespace}-arrow-inline"] {
+  + [class^="#{$namespace}-arrow-inline"],
+  + [class^="oui-arrow-inline"] {
     vertical-align: super;
   }
 

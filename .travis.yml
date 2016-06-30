@@ -5,13 +5,24 @@ install:
 script:
 - npm test
 sudo: false
+addons:
+  ssh_known_hosts: design.optimizely.com
 before_deploy:
+# Start from scratch
 - rm -rfv dist
-- "./node_modules/.bin/gulp sass"
-- "./node_modules/.bin/gulp extras:build"
-- mkdir -v dist/$(node -e "console.log(require('./package.json').version);")
-- mv -v dist/css/* dist/$(node -e "console.log(require('./package.json').version);")
-- rm -rfv dist/css
+- npm start
+# Remove `dist/` from `.gitignore` so it is included in the npm release.
+- sed -i '' -e '/dist/g' .gitignore
+# Remove `devDependencies` from `package.json` before it goes to npm.
+- ./node_modules/.bin/json -I -f package.json -e 'this.devDependencies={}'
+# Copy `dist/` CSS files into a folder for S3 upload.
+- mkdir -vp s3/$(node -e "console.log(require('./package.json').version);")
+- cp -v dist/css/* s3/$(node -e "console.log(require('./package.json').version);")
+# Prepare for deploying React documentation with SSH
+# https://oncletom.io/2016/travis-ssh-deploy/
+- eval "$(ssh-agent -s)"
+- chmod 600 $TRAVIS_BUILD_DIR/deploy_rsa
+- ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 deploy:
 - provider: s3
   access_key_id:
@@ -19,7 +30,7 @@ deploy:
   secret_access_key:
     secure: sHcezDuWh9s341ruDx4pDMmjDWuoQ7cf5jhUQu3YyNQ8zaPRfVLztnYcJFZCUAznJi7Sswb3hIVvEQq+PXgd2YibdI6lXVrFff/cqbpRT9VBllIG9gRQbXcTJ22u+SzdB9ikE4wKqqZx2aUX1GpDIQc0TigsFmXhxNxKG8gkSik=
   bucket: optimizely-oui
-  local-dir: dist
+  local-dir: s3
   region: us-west-2
   acl: public-read
   on:
@@ -32,3 +43,9 @@ deploy:
     secure: bO19tV7KI0p1L+YoQsaKnfGqYOa+DkvUVq424j88ljYUE2FzH16vtRZgH1FZkWKJ5wZkd20WpPLDkrVe0jU4iQ0KhFGj0avO1iAvAsYPs61ZfZ7HM7pseR5seJ9AvXov7ojoFbUwuyVLDpMOp3QhOJStYoTomvfbkAWjWHiOliM=
   on:
     tags: true
+- provider: script
+  script: rsync -rv --rsync-path="mkdir -p /var/www/oui/$(node -e "console.log(require('./package.json').version);") && rsync" --delete ./dist/docs/ ubuntu@design.optimizely.com:/var/www/oui/$(node -e "console.log(require('./package.json').version);")/react
+  on:
+    tags: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_310f735a6883_key -iv $encrypted_310f735a6883_iv -in deploy_rsa.enc -out deploy_rsa -d

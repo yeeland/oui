@@ -5,7 +5,8 @@
     var ARROW_SIZE = 7;
     var ACTIVE_POP_ID = 'data-oui-active-pop-id';
 
-    // Prevent clicks from going through so the popover can stay visible when clicked.
+    // Prevent clicks from going through so the popover can stay visible when
+    // clicked.
     e.stopPropagation();
     e.preventDefault();
 

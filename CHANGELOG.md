@@ -5,6 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Release] Add React to the OUI codebase. (#378)
+- [Release] Add Jest and the ESLint React plugin. (#378)
+- [Release] Add automatically generated React component documentation that gets deployed when new versions are released.
+- [Release] Create six React components: ArrowsInline, Attention, Button, Code, Input, and Label. (#378)
+- [Feature] Begin prefixing classes that React uses with the `oui-` prefix. (#361)
+
+### Changed
+- [Patch] Update `CONTRIBUTING.md` to include information about updating Optimizely's `package.json` after a release. (#408)
+- [Patch] Remove `devDependencies` before publishing OUI to NPM to increase speed of `npm install` for applications using OUI. (#356)
+- [Patch] Change release process guidelines to make upgrades less painful. (#360)
+
+### Fixed
+- [Patch] Add note to `README.md` saying that ScribeSass is internal only. (#359)
+- [Patch] Take a pass through our markdown files and update outdated information.
 
 ## [12.2.0][12.2.0] - 2016-06-24
 ### Added
