@@ -83,3 +83,9 @@ This applies any time classes are being renamed and you want old and new code to
 You will also want to [deploy new documentation](https://github.com/optimizely/scribesass/blob/master/README.md) using ScribeSass.
 
 **Note for Optimizely developers:** The Optimizely frontend only reinstalls packages when its `package.json` changes. You'll have to update the version number for backward compatible changes if you want to ensure that it gets deployed quickly.
+
+### Releasing a beta version?
+
+Instead of merging into `master`, work on `devel` and update the `CHANGELOG.md` with your version number (example: `13.0.0-beta.1`). Commit the changes on `devel` and run `git tag -a v13.0.0-beta.1 -m "13.0.0-beta.1"` replacing the version string with your version. Release it with `git push && git push --tags`.
+
+Travis CI will publish the React documentation online and upload the compiled CSS files to OUI's CDN. It _will not_ publish beta releases to NPM automatically. That can be done with this command: `npm publish --tag oui-react`. Replace `oui-react` with a tag name for your release. It can't be a valid SemVer version.
