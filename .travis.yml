@@ -11,8 +11,6 @@ before_deploy:
 # Start from scratch
 - rm -rfv dist
 - npm start
-# Remove `dist/` from `.gitignore` so it is included in the npm release.
-- sed -i '' -e '/dist/g' .gitignore
 # Remove `devDependencies` from `package.json` before it goes to npm.
 - ./node_modules/.bin/json -I -f package.json -e 'this.devDependencies={}'
 # Copy `dist/` CSS files into a folder for S3 upload.

@@ -1,6 +1,4 @@
-# Updating this? Consider updating `.npmignore` as well.
-
-dist
+# Updating this? Consider updating `.gitignore` as well.
 
 node_modules
 s3
