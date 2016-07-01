@@ -41,8 +41,9 @@ deploy:
     secure: bO19tV7KI0p1L+YoQsaKnfGqYOa+DkvUVq424j88ljYUE2FzH16vtRZgH1FZkWKJ5wZkd20WpPLDkrVe0jU4iQ0KhFGj0avO1iAvAsYPs61ZfZ7HM7pseR5seJ9AvXov7ojoFbUwuyVLDpMOp3QhOJStYoTomvfbkAWjWHiOliM=
   on:
     tags: true
+    condition: "$(git describe --tags $(git rev-list --tags --max-count=1)) != *-*"
 - provider: script
-  script: rsync -rv --rsync-path="mkdir -p /var/www/oui/$(node -e "console.log(require('./package.json').version);") && rsync" --delete ./dist/docs/ ubuntu@design.optimizely.com:/var/www/oui/$(node -e "console.log(require('./package.json').version);")/react
+  script: scripts/docs-deploy.sh
   on:
     tags: true
 before_install:
