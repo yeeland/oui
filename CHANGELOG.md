@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add syntax highlighting option to React `Code` component.
 
 ## [13.0.0-rc.2][13.0.0-rc.2] - 2016-07-01
 ### Added

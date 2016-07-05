@@ -191,7 +191,16 @@ class App extends React.Component {
             <Code type="inline">var foo;</Code>
           </ComponentRow>
           <ComponentRow>
-            <Code type="block">
+            <Code type="inline" isHighlighted={ true }>var highlightedFoo;</Code>
+          </ComponentRow>
+          <ComponentRow>
+            <Code type="block" isHighlighted={ true }>
+{ `var foo = 'bar';
+var bat = 'baz';` }
+            </Code>
+          </ComponentRow>
+          <ComponentRow>
+            <Code type="block" isHighlighted={ true }>
 { `var foo = 'bar';
 var bat = 'baz';` }
             </Code>

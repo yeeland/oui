@@ -6,6 +6,9 @@
     "<rootDir>/node_modules/react-dom",
     "<rootDir>/node_modules/react-addons-test-utils"
   ],
+  "moduleNameMapper": {
+    "^.+\\.(css)$": "<rootDir>/src/utils/empty-mock.js"
+  },
   "testDirectoryName": "tests",
   "automock": false
 }
