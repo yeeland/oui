@@ -439,4 +439,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [12.1.0]: https://github.com/optimizely/oui/compare/v12.0.0...v12.1.0
 [12.2.0]: https://github.com/optimizely/oui/compare/v12.1.0...v12.2.0
 [13.0.0-rc.1]: https://github.com/optimizely/oui/compare/v12.2.0...v13.0.0-rc.1
-[13.0.0-rc.1]: https://github.com/optimizely/oui/compare/v13.0.0-rc.1...v13.0.0-rc.2
+[13.0.0-rc.2]: https://github.com/optimizely/oui/compare/v13.0.0-rc.1...v13.0.0-rc.2
