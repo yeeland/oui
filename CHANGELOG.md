@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add syntax highlighting option to React `Code` component.
 
+### Fixed
+- [Patch] Update instructions for deploying beta versions of OUI.
+
 ## [13.0.0-rc.2][13.0.0-rc.2] - 2016-07-01
 ### Added
 - [Patch] Add documentation about releasing beta versions of OUI.
