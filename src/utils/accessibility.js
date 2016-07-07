@@ -1,8 +1,8 @@
 /**
  * Map a color class to a human readable word that explains the context of when
  * the class is used. This is helpful for screen readers.
- * @param {string} className - an OUI class
- * @returns {string} English word describing the class provided
+ * @param {String} className - an OUI class
+ * @returns {String} English word describing the class provided
  */
 export const getAssistiveTextFromColorClass = (className) => {
   const classMapping = {

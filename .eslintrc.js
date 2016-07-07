@@ -181,18 +181,55 @@ module.exports = {
     "max-statements": "off",
     "no-bitwise": "off",
     "no-plusplus": "off",
-    "jsx-quotes": ["warn", "prefer-double"],
 
     // OUI rules
     "react/jsx-indent-props": ["warn", 2],
+    "react/no-comment-textnodes": ["warn"],
+    "react/no-direct-mutation-state": ["warn"],
+    "react/no-unknown-property": ["warn"],
+    "react/prefer-stateless-function": ["warn"],
+    "react/prop-types": ["warn"],
+    "react/react-in-jsx-scope": ["warn"],
+    "react/require-extension": ["warn"],
+    "react/sort-prop-types": ["warn"],
+    "react/wrap-multilines": ["warn"],
+    "react/jsx-boolean-value": ["warn", "always"],
+    "react/jsx-closing-bracket-location": ["warn", {
+      "selfClosing": "tag-aligned",
+      "nonEmpty": "after-props",
+    }],
+    "react/jsx-curly-spacing": ["warn", "always"],
+    "react/jsx-equals-spacing": ["warn", "never"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }],
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/jsx-indent": ["warn", 2],
+    "react/jsx-indent-props": ["warn", 2],
+    "react/jsx-key": ["warn"],
+    "react/jsx-no-bind": ["warn"],
+    "react/jsx-no-duplicate-props": ["warn"],
+    "react/jsx-no-target-blank": ["warn"],
+    "react/jsx-no-undef": ["warn"],
+    "react/jsx-pascal-case": ["warn"],
+    "react/jsx-space-before-closing": ["warn", "always"],
     "valid-jsdoc": ["warn", {
+      "prefer": {
+        "return": "returns",
+      },
       "preferType": {
         "String": "String",
         "Number": "Number",
         "object": "Object",
         "array": "Array",
         "function": "Function",
-      }
+      },
+      "requireReturnDescription": false,
+      "requireReturn": false,
     }],
+    "max-len": ["warn", {
+      "code": 130,
+      "comments": 80,
+      "ignorePattern": "eslint-disable",
+      "ignoreUrls": true,
+    }]
   },
 };

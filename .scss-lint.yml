@@ -1,4 +1,6 @@
 # SCSS Lint list
+exclude: 'src/oui/library/**'
+
 severity: error
 linters:
   BangFormat: # Reports when you use improper spacing around ! (the "bang")

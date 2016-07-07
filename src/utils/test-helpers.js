@@ -77,33 +77,8 @@ export const expectTestSectionToNotExist = (componentNode, testSection) => {
 };
 
 /**
- * Assert that an HTMLElement has a child with an attribute `data-test-section` of value
- * `childTestSection`.
- * @param {HTMLElement} component - Element that should contain child with childTestSection
- * @param {String} childTestSection - value of the `data-test-section`
- * @returns {undefined}
- */
-export const expectChildTestSectionsExist = (componentNode, childTestSection) => {
-  var childElementsWithTestSection = componentNode.querySelectorAll('[data-test-section="' + childTestSection + '"]')
-
-  if (!childElementsWithTestSection.length) {
-    throw new Error(childTestSection + ' not found in parent node');
-  }
-};
-
-/**
- * Find all children elements that have the class 'className'
- * @param {HTMLElement} componentNode - Parent element
- * @param {String} className - value of the class
- * @returns {undefined}
- */
-export const findElementsWithClass = (componentNode, className) => {
-  let childElementsWithClass = componentNode.querySelectorAll('.' + className);
-  return childElementsWithClass;
-};
-
-/**
  * Simulate events on react components.
- * @returns {Object} Object with methods to simulate events (eg. change, input, etc).
+ * @returns {Object} Object with methods to simulate events (eg. change, input,
+ * etc).
  */
 export const simulate = ReactTestUtils.Simulate;

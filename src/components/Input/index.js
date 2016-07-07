@@ -1,28 +1,34 @@
 import React from 'react';
 import Label from '../Label';
 
-const renderInput = (props) => {
-  return (
-    <input
-      className="oui-text-input"
-      type={props.type}
-      value={props.value}
-      defaultValue={props.defaultValue}
-      placeholder={props.placeholder}
-      required={props.isRequired}
-      readOnly={props.isReadOnly}
-      disabled={props.isDisabled}
-      onInput={props.onInput}
-      onChange={props.onChange}
-      data-test-section={props.testSection}
-    />
-  );
-};
-
+/**
+ * Generates an `input` element (optionally wrapped in a label) and accepts
+ * most of the common input types.
+ * @param {Object} props - Properties passed to component
+ * @returns {ReactElement}
+ */
 const Input = (props) => {
+  let renderInput = (opts) => {
+    return (
+      <input
+        className="oui-text-input"
+        type={ opts.type }
+        value={ opts.value }
+        defaultValue={ opts.defaultValue }
+        placeholder={ opts.placeholder }
+        required={ opts.isRequired }
+        readOnly={ opts.isReadOnly }
+        disabled={ opts.isDisabled }
+        onInput={ opts.onInput }
+        onChange={ opts.onChange }
+        data-test-section={ opts.testSection }
+      />
+    );
+  };
+
   if (props.label) {
     return (
-      <Label testSection={props.testSection + '-label'}>
+      <Label testSection={ props.testSection + '-label' }>
         <div className="label">
           { props.label }
         </div>
@@ -35,6 +41,25 @@ const Input = (props) => {
 };
 
 Input.propTypes = {
+  /** The default value of the input used on initial render */
+  defaultValue: React.PropTypes.string,
+  /** Prevents input from being modified and appears disabled */
+  isDisabled: React.PropTypes.bool,
+  /** Prevents input from being modified but doesn't appear disabled */
+  isReadOnly: React.PropTypes.bool,
+  /** Prevents input from being submitted without value */
+  isRequired: React.PropTypes.bool,
+  /** Text that describes the input */
+  label: React.PropTypes.string,
+  /** Function that fires when the loses focus after the value changes */
+  onChange: React.PropTypes.func,
+  /** Function that fires when the value of the input changes */
+  onInput: React.PropTypes.func,
+  /** Input placeholder text */
+  placeholder: React.PropTypes.string,
+  /** Hook for automated JavaScript tests */
+  testSection: React.PropTypes.string,
+  /** Supported input types */
   type: React.PropTypes.oneOf([
     'text',
     'password',
@@ -45,17 +70,8 @@ Input.propTypes = {
     'search',
     'tel',
   ]).isRequired,
+  /** Text within the input */
   value: React.PropTypes.string,
-  defaultValue: React.PropTypes.string,
-  placeholder: React.PropTypes.string,
-  isRequired: React.PropTypes.bool,
-  isReadOnly: React.PropTypes.bool,
-  isDisabled: React.PropTypes.bool,
-  onInput: React.PropTypes.func,
-  onChange: React.PropTypes.func,
-  label: React.PropTypes.string,
-  testSection: React.PropTypes.string,
 };
-renderInput.propTypes = Input.propTypes;
 
 export default Input;

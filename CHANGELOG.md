@@ -6,6 +6,67 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
+## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
+### Added
+- [Feature] Add syntax highlighting option to React `Code` component.
+
+### Fixed
+- [Patch] Update instructions for deploying beta versions of OUI.
+
+## [13.0.0-rc.2][13.0.0-rc.2] - 2016-07-01
+### Added
+- [Patch] Add documentation about releasing beta versions of OUI.
+
+## [13.0.0-rc.1][13.0.0-rc.1] - 2016-07-01
+### Added
+- [Release] Add React to the OUI codebase. (#378)
+- [Release] Add Jest and the ESLint React plugin. (#378)
+- [Release] Add automatically generated React component documentation that gets deployed when new versions are released.
+- [Release] Create six React components: ArrowsInline, Attention, Button, Code, Input, and Label. (#378)
+- [Feature] Begin prefixing classes that React uses with the `oui-` prefix. (#361)
+
+### Changed
+- [Patch] Update `CONTRIBUTING.md` to include information about updating Optimizely's `package.json` after a release. (#408)
+- [Patch] Remove `devDependencies` before publishing OUI to NPM to increase speed of `npm install` for applications using OUI. (#356)
+- [Patch] Change release process guidelines to make upgrades less painful. (#360)
+
+### Fixed
+- [Patch] Add note to `README.md` saying that ScribeSass is internal only. (#359)
+- [Patch] Take a pass through our markdown files and update outdated information.
+
+## [12.2.0][12.2.0] - 2016-06-24
+### Added
+- [Feature] Add dropup option for dropdowns. (#425)
+
+## [12.1.0][12.1.0] - 2016-06-22
+### Added
+- [Feature] Add OUI overrides for Select2 plugin to library directory. (#421)
+
+## [12.0.0][12.0.0] - 2016-06-17
+### Added
+- [Release] Admin color helpers as separate partial, also added better HTML examples. Renamed class, so it's a breaking change.
+- [Feature] Add token styles from V2.
+- [Feature] Add badge styles from V2.
+
+## [11.5.0][11.5.0] - 2016-06-16
+### Added
+- [Feature] Add admin color from v1 and admin helper classes (#414)
+
+## [11.4.0][11.4.0] - 2016-06-01
+### Added
+- [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
+
+### Changed
+- [Patch] Explicitly define the placeholder colors and add support to style CodeMirror's fake placeholders. (#405)
+
+### Fixed
+- [Patch] Update styling of jQuery datepicker in `_datepicker.scss`.
+- [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
+
+## [11.3.1][11.3.1] - 2016-05-12
+### Fixed
+- [Patch] Change text-shadow offset of highlight buttons to match danger button. (#398)
+
 ## [11.3.0][11.3.0] - 2016-04-19
 ### Added
 - [Feature] Added `--small` variation of `progress-dots`
@@ -350,7 +411,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v11.3.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v13.0.0-rc.3...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -378,3 +439,12 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [11.1.0]: https://github.com/optimizely/oui/compare/v11.0.0...v11.1.0
 [11.2.0]: https://github.com/optimizely/oui/compare/v11.1.0...v11.2.0
 [11.3.0]: https://github.com/optimizely/oui/compare/v11.2.0...v11.3.0
+[11.3.1]: https://github.com/optimizely/oui/compare/v11.3.0...v11.3.1
+[11.4.0]: https://github.com/optimizely/oui/compare/v11.3.1...v11.4.0
+[11.5.0]: https://github.com/optimizely/oui/compare/v11.4.0...v11.5.0
+[12.0.0]: https://github.com/optimizely/oui/compare/v11.5.0...v12.0.0
+[12.1.0]: https://github.com/optimizely/oui/compare/v12.0.0...v12.1.0
+[12.2.0]: https://github.com/optimizely/oui/compare/v12.1.0...v12.2.0
+[13.0.0-rc.1]: https://github.com/optimizely/oui/compare/v12.2.0...v13.0.0-rc.1
+[13.0.0-rc.2]: https://github.com/optimizely/oui/compare/v13.0.0-rc.1...v13.0.0-rc.2
+[13.0.0-rc.3]: https://github.com/optimizely/oui/compare/v13.0.0-rc.2...v13.0.0-rc.3

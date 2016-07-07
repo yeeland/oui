@@ -19,8 +19,9 @@ function ouiShowPop(trigger, pop, ARROW_SIZE) { // eslint-disable-line no-unused
     location = 7; // Position 7
   }
 
-  // This handles the positioning/showing of the different types of pops: tips, overs.
-  // Locations correspond to position that the 'pop' element should show up relative to the trigger.
+  // This handles the positioning/showing of the different types of pops: tips,
+  // overs. Locations correspond to position that the 'pop' element should show
+  // up relative to the trigger.
 
   //    0    1    2
   //    -----------

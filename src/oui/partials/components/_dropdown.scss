@@ -103,9 +103,10 @@
 
 %#{$namespace}dropdown,
 .#{$namespace}dropdown {
+  $box-shadow-offset: 2px;
   @extend %#{$namespace}block-list-group;
   background: map-fetch($color, background, white);
-  box-shadow: 0 2px map-fetch($shadow, light);
+  box-shadow: 0 $box-shadow-offset map-fetch($shadow, light);
   min-width: 100%;
   position: absolute;
   top: 100%;
@@ -143,7 +144,15 @@
 
     &__content {
       font-size: map-fetch($font, size, micro);
+      line-height: map-fetch($font, line-height, tight);
       color: map-fetch($color, text, muted);
+      margin-bottom: spacer(0.5);
     }
+  }
+
+  &--up {
+    bottom: 100%;
+    box-shadow: 0 (-$box-shadow-offset) map-fetch($shadow, light);
+    top: initial;
   }
 }
