@@ -77,6 +77,25 @@ describe('components/Code', () => {
     expect(componentBlockNode.innerHTML).not.toContain('class="hljs-');
   });
 
+  it(`should not add syntax highlighting if language is provided but
+    highlighting is not requested`, () => {
+    let code = 'var foo;';
+
+    const componentInline = testHelpers.renderIntoDocument(
+      <Code type="inline" language="js">{ code }</Code>
+    );
+
+    const componentBlock = testHelpers.renderIntoDocument(
+      <Code type="block" language="js">{ code }</Code>
+    );
+
+    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
+    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
+
+    expect(componentInlineNode.innerHTML).not.toContain('class="hljs-');
+    expect(componentBlockNode.innerHTML).not.toContain('class="hljs-');
+  });
+
   it('should have a properly set test section', () => {
     const componentInline = testHelpers.renderIntoDocument(
       <Code testSection="foo-inline" type="inline">Hello!</Code>

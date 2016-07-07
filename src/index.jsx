@@ -200,8 +200,14 @@ var bat = 'baz';` }
             </Code>
           </ComponentRow>
           <ComponentRow>
-            <Code type="block" isHighlighted={ true }>
-{ `var foo = 'bar';
+            <Code type="block" isHighlighted={ false }>
+{ `var notHighlighted = 'bar';
+var bat = 'baz';` }
+            </Code>
+          </ComponentRow>
+          <ComponentRow>
+            <Code type="block" isHighlighted={ true } language="js">
+{ `var highlightedJS = 'bar';
 var bat = 'baz';` }
             </Code>
           </ComponentRow>

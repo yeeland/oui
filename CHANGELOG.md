@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Extend `Code` React component to accept a language. (#433)
 
 ## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
 ### Added
