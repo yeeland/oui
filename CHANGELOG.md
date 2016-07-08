@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
 ### Added
 - [Feature] Add syntax highlighting option to React `Code` component.
+- [Feature] Add a new `Table` React component.
 
 ### Fixed
 - [Patch] Update instructions for deploying beta versions of OUI.
