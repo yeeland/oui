@@ -8,6 +8,7 @@ import Button from './components/Button';
 import Code from './components/Code';
 import Input from './components/Input';
 import Label from './components/Label';
+import Table from './components/Table';
 import Tabs from './components/Tabs';
 
 const Component = ({ children, title }) => {
@@ -201,8 +202,14 @@ var bat = 'baz';` }
             </Code>
           </ComponentRow>
           <ComponentRow>
-            <Code type="block" isHighlighted={ true }>
-{ `var foo = 'bar';
+            <Code type="block" isHighlighted={ false }>
+{ `var notHighlighted = 'bar';
+var bat = 'baz';` }
+            </Code>
+          </ComponentRow>
+          <ComponentRow>
+            <Code type="block" isHighlighted={ true } language="js">
+{ `var highlightedJS = 'bar';
 var bat = 'baz';` }
             </Code>
           </ComponentRow>
@@ -232,6 +239,84 @@ var bat = 'baz';` }
               <div>When I have nodes,</div>
               <div>I'm unstyled</div>
             </Label>
+          </ComponentRow>
+        </Component>
+
+        <Component title="Table">
+          <ComponentRow>
+            <Table
+              data={
+                [
+                  ['Header CTA', '12%', 'Running'],
+                  ['Shorter Contact Form', '4%', 'Draft'],
+                  ['Larger search bar', '6.7%', 'Paused'],
+                  ['Center aligned headline', '9.3%', 'Running'],
+                ]
+              }
+              headings={
+                [
+                  'Experiment',
+                  'Conversion Rate',
+                  'Status',
+                ]
+              }>
+            </Table>
+          </ComponentRow>
+          <ComponentRow>
+            <Table
+              data={
+                [
+                  ['Header CTA', '12%', 'Running'],
+                  ['Shorter Contact Form', '4%', 'Draft'],
+                  ['Larger search bar', '6.7%', 'Paused'],
+                  ['Center aligned headline', '9.3%', 'Running'],
+                ]
+              }
+              headings={
+                [
+                  'Experiment',
+                  'Conversion Rate',
+                  'Status',
+                ]
+              }
+              numberedColumns={ [1] }
+              style="rule">
+            </Table>
+          </ComponentRow>
+          <ComponentRow>
+            <Table
+              data={
+                [
+                  ['Header CTA', '12%', 'Running'],
+                  ['Shorter Contact Form', '4%', 'Draft'],
+                  ['Larger search bar', '6.7%', 'Paused'],
+                  ['Center aligned headline', '9.3%', 'Running'],
+                ]
+              }
+              headings={
+                [
+                  'Experiment',
+                  'Conversion Rate',
+                  'Status',
+                ]
+              }
+              numberedColumns={ [1] }
+              collapsedColumns={ [2] }
+              style="wall">
+            </Table>
+          </ComponentRow>
+          <ComponentRow>
+            <Table
+              data={
+                [
+                  ['Header CTA', '12%', 'Running'],
+                  ['Shorter Contact Form', '4%', 'Draft'],
+                  ['Larger search bar', '6.7%', 'Paused'],
+                  ['Center aligned headline', '9.3%', 'Running'],
+                ]
+              }
+              style="wall">
+            </Table>
           </ComponentRow>
         </Component>
 

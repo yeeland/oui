@@ -24,11 +24,11 @@
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <label class="oui-label">Add/Remove Row</label>
-///           <table class="#{$namespace}table #{$namespace}table--add-row width--1-1">
+///           <table class="oui-table oui-table--add-row width--1-1">
 ///             <tr>
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td><input type="text" class="oui-text-input"></td>
-///               <td class="#{$namespace}table--add-row__controls">
+///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
 ///                     <svg class="#{$namespace}icon">
@@ -41,7 +41,7 @@
 ///             <tr>
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td><input type="text" class="oui-text-input"></td>
-///               <td class="#{$namespace}table--add-row__controls">
+///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
 ///                     <svg class="#{$namespace}icon">
@@ -59,7 +59,7 @@
 ///             <tr>
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td><input type="text" class="oui-text-input"></td>
-///               <td class="#{$namespace}table--add-row__controls">
+///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
 ///                   <button class="#{$namespace}button push--right">
 ///                     <svg class="#{$namespace}icon">
