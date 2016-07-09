@@ -322,68 +322,19 @@ var bat = 'baz';` }
 
         <Component title="Tabs">
           <ComponentRow isPadded>
-            <Tabs>
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3">
-                <div>Content #3</div>
-              </Tabs.Panel>
-            </Tabs>
-          </ComponentRow>
-          <ComponentRow isPadded>
-            <Tabs tabActive={2}>
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3">
-                <div>Content #3</div>
-              </Tabs.Panel>
-            </Tabs>
-          </ComponentRow>
-          <ComponentRow isPadded>
-            <Tabs style={['small']}>
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3">
-                <div>Content #3</div>
-              </Tabs.Panel>
-            </Tabs>
-          </ComponentRow>
-          <ComponentRow isPadded>
-            <Tabs style={['small', 'center']}>
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3">
-                <div>Content #3</div>
-              </Tabs.Panel>
-            </Tabs>
-          </ComponentRow>
-          <ComponentRow isPadded>
-            <Tabs style={['small', 'sub']}>
-              <Tabs.Panel title="Tab #1">
-                <div>Content #1</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #2">
-                <div>Content #2</div>
-              </Tabs.Panel>
-              <Tabs.Panel title="Tab #3" isDisabled>
-                <div>Content #3</div>
-              </Tabs.Panel>
+            <Tabs activeTab={0}>
+              <Tabs.Tab isActive={this.props.activeTab === 0}
+                        onClick={ function() {
+                          alert("clicked")
+                        } }>Tab #1</Tabs.Tab>
+              <Tabs.Tab isActive={this.props.activeTab === 1}
+                        onClick={ function() {
+                          alert("clicked")
+                        } }>Tab #2</Tabs.Tab>
+              <Tabs.Tab isActive={this.props.activeTab === 2}
+                        onClick={ function() {
+                          alert("clicked")
+                        } }>Tab #3</Tabs.Tab>
             </Tabs>
           </ComponentRow>
         </Component>
