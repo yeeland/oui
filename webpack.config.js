@@ -1,12 +1,16 @@
 module.exports = {
   entry: {
-    demo: './src/index.jsx',
+    docs: './docs/index.jsx',
   },
   output: {
-    filename: './dist/js/[name].js',
+    filename: './dist/docs/js/docs.js',
   },
   module: {
     loaders: [
+      {
+        test: /\.json$/,
+        loader: 'json',
+      },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,

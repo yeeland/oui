@@ -1,45 +1,13 @@
+<!DOCTYPE html>
 <html>
-<head>
-<link href='https://app.optimizely.com/master-2443.393742752154841442/dist/css/v2.css' rel='stylesheet' />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
-<script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>OUI React</title>
 
-<div class="oui__wrapper">
-  <header class="push-quad--ends">
-    <p><img src="https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif"></p>
-    <h1>OUI: The Optimizely User Interface Library</h1>
-  </header>
-
-  <div id="components"></div>
-
-  <footer class="push-quad--ends">
-    <p><img class="" src="https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif" width="50"></p>
-    <p class="muted">Our React component documentation is a work in progress. Ask a UI Engineer for <a href="https://optimizely.slack.com/messages/oui">help</a>!</p>
-  </footer>
-</div>
-
-<script>
-$.getJSON('data.json', function (result) {
-  nunjucks.render('template.html', { components : result }, function (err, res) {
-    $('#components').append(res);
-  });
-});
-</script>
-
-<style>
-body {
-  overflow: auto;
-}
-.oui__wrapper {
-  max-width: 1100px;
-  margin: 1em auto;
-}
-.oui__component {
-
-}
-</style>
-
-</body>
+    <link rel="stylesheet" href="/css/oui.css">
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="/js/docs.js"></script>
+  </body>
 </html>
