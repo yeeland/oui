@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Extend `Code` React component to accept a language. (#433)
 
+### Changed
+- [Patch] Create automatically generated React documentation that uses React components. (#431)
+
 ## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
 ### Added
 - [Feature] Add syntax highlighting option to React `Code` component.
