@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Add `highlight.js` to dependencies, not devDependencies. (#446)
 
 ## [13.0.0][13.0.0] - 2016-07-13
 ### Added
