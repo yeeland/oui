@@ -44,7 +44,7 @@ You can include this pre-compiled version of OUI in your application:
 <link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui-extras.css">
 ```
 
-Replace `13.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `13.0.1` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
 `oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use [OUI icons](https://github.com/optimizely/oui-icons) you'll need to include both `oui.css` and `oui-extras.css` in your project.
 
