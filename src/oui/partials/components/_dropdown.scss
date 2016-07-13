@@ -5,7 +5,7 @@
 
 /// @example[html] Dropdown default
 ///   <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///     <button class="#{$namespace}button" data-oui-dropdown-toggle>
+///     <button class="oui-button" data-oui-dropdown-toggle>
 ///       Dropdown <span class="oui-arrow-inline--down"></span>
 ///     </button>
 ///     <ul class="#{$namespace}dropdown">
@@ -21,7 +21,7 @@
 /// @example[html] Dropdown right
 ///   <div class="text--right">
 ///     <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///       <button class="#{$namespace}button" data-oui-dropdown-toggle>
+///       <button class="oui-button" data-oui-dropdown-toggle>
 ///         Dropdown <span class="oui-arrow-inline--down"></span>
 ///       </button>
 ///       <ul class="#{$namespace}dropdown #{$namespace}dropdown--right">
@@ -37,7 +37,7 @@
 ///   </div>
 /// @example[html] Dropdown with filter
 ///   <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///     <button class="#{$namespace}button" data-oui-dropdown-toggle>
+///     <button class="oui-button" data-oui-dropdown-toggle>
 ///       Dropdown <span class="oui-arrow-inline--down"></span>
 ///     </button>
 ///     <ul class="#{$namespace}dropdown">
@@ -66,7 +66,7 @@
 ///   </div>
 /// @example[html] Descriptive dropdown
 ///   <div class="#{$namespace}dropdown-group" data-oui-dropdown>
-///     <button class="#{$namespace}button" data-oui-dropdown-toggle>
+///     <button class="oui-button" data-oui-dropdown-toggle>
 ///       Dropdown <span class="arrow-inline--down"></span>
 ///     </button>
 ///     <ul class="#{$namespace}dropdown dropdown--descriptive width--250">

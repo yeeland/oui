@@ -30,7 +30,7 @@
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
-///                   <button class="#{$namespace}button push--right">
+///                   <button class="oui-button push--right">
 ///                     <svg class="#{$namespace}icon">
 ///                       <use xlink:href="#add-16"></use>
 ///                     </svg>
@@ -43,12 +43,12 @@
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
-///                   <button class="#{$namespace}button push--right">
+///                   <button class="oui-button push--right">
 ///                     <svg class="#{$namespace}icon">
 ///                       <use xlink:href="#add-16"></use>
 ///                     </svg>
 ///                   </button>
-///                   <button class="#{$namespace}button">
+///                   <button class="oui-button">
 ///                     <svg class="#{$namespace}icon">
 ///                       <use xlink:href="#close-16"></use>
 ///                     </svg>
@@ -61,12 +61,12 @@
 ///               <td><input type="text" class="oui-text-input"></td>
 ///               <td class="oui-table--add-row__controls">
 ///                 <div class="flex">
-///                   <button class="#{$namespace}button push--right">
+///                   <button class="oui-button push--right">
 ///                     <svg class="#{$namespace}icon">
 ///                       <use xlink:href="#add-16"></use>
 ///                     </svg>
 ///                   </button>
-///                   <button class="#{$namespace}button">
+///                   <button class="oui-button">
 ///                     <svg class="#{$namespace}icon">
 ///                       <use xlink:href="#close-16"></use>
 ///                     </svg>
@@ -79,8 +79,8 @@
 ///       </ol>
 ///     </fieldset>
 ///     <div class="#{$namespace}form__footer #{$namespace}button-row #{$namespace}button-row--right">
-///       <button class="#{$namespace}button">Cancel</button>
-///       <button class="#{$namespace}button #{$namespace}button--highlight">Submit</button>
+///       <button class="oui-button">Cancel</button>
+///       <button class="oui-button oui-button--highlight">Submit</button>
 ///     </div>
 ///   </form>
 /// @example[html]
@@ -149,7 +149,7 @@
 ///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
 ///             </div>
 ///             <div class="push-double--left">
-///               <button class="#{$namespace}button #{$namespace}button--highlight">Do This</button>
+///               <button class="oui-button oui-button--highlight">Do This</button>
 ///             </div>
 ///           </div>
 ///         </li>
@@ -240,8 +240,8 @@
 ///       </ol>
 ///     </fieldset>
 ///     <div class="#{$namespace}form__footer #{$namespace}button-row #{$namespace}button-row--right">
-///       <button class="#{$namespace}button">Cancel</button>
-///       <button class="#{$namespace}button #{$namespace}button--highlight">Submit</button>
+///       <button class="oui-button">Cancel</button>
+///       <button class="oui-button oui-button--highlight">Submit</button>
 ///     </div>
 ///   </form>
 /// @example[html] Form error states

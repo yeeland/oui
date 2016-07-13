@@ -5,19 +5,19 @@
 /// @group Layout
 /// @example[html] Default button group
 ///   <div class="#{$namespace}button-group">
-///     <button class="#{$namespace}button">Button</button>
-///     <button class="#{$namespace}button">Button</button>
-///     <button class="#{$namespace}button">Button</button>
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
 ///   </div>
 /// @example[html] Button group with text input
 ///   <div class="#{$namespace}button-group">
-///     <button class="#{$namespace}button">Select <span class="oui-arrow-inline--down"></span></button>
+///     <button class="oui-button">Select <span class="oui-arrow-inline--down"></span></button>
 ///     <input type="text" class="oui-text-input">
 ///   </div>
 /// @example[html] Button group with text input
 ///   <div class="#{$namespace}button-group">
 ///     <input type="text" class="oui-text-input">
-///     <button class="#{$namespace}button">Button</button>
+///     <button class="oui-button">Button</button>
 ///   </div>
 ////
 
@@ -47,7 +47,8 @@
     }
   }
 
-  > .#{$namespace}button--highlight {
+  > .#{$namespace}button--highlight,
+  > .oui-button--highlight {
     position: relative;
   }
 
@@ -61,8 +62,9 @@
   // the borders are intact.
 
   .#{$namespace}button--highlight,
+  .oui-button--highlight,
   .#{$namespace}button--danger,
-  .#{$namespace}button--highlight {
+  .oui-button--danger {
     z-index: 1;
   }
 }
