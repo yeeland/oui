@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Add Google Analytics to React documentation. (#448)
+
 ### Fixed
 - [Patch] Add `highlight.js` to dependencies, not devDependencies. (#446)
 
