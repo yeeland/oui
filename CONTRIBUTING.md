@@ -9,7 +9,6 @@ Here are a few commonly used commands:
 * `npm start` - compiles Sass, transpiles JavaScript, and builds our React documentation
 * `npm test` - lints and tests the codebase
 * `npm run html-examples` - displays HTML examples locally
-* `npm run react:serve` - displays the React components locally and watches relevant files for changes
 * `npm run react-docs:serve` - displays the React documentation locally and watches relevant files for changes
 
 Run `npm run` for an entire list.

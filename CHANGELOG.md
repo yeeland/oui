@@ -11,6 +11,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Create automatically generated React documentation that uses React components. (#431)
 
+### Fixed
+- [Patch] Update outdated references to `npm run react:serve`. (#440)
+
 ## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
 ### Added
 - [Feature] Add syntax highlighting option to React `Code` component.
