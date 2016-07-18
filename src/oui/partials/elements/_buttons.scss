@@ -10,6 +10,7 @@
 ///   <button class="oui-button oui-button--outline">Button</button>
 ///   <button class="oui-button oui-button--plain">Button</button>
 /// @example[html] Tiny buttons
+///   <button class="oui-button oui-button--tiny">Button</button>
 ///   <button class="oui-button oui-button--small">Button</button>
 /// @example[html] Full width buttons
 ///   <button class="oui-button oui-button--full">Button</button>
@@ -208,6 +209,15 @@
 
   // Button Sizes
   // Button size, variations.
+
+  &--tiny {
+    font-size: map-fetch($button, size, tiny, font-size);
+    font-weight: map-fetch($button, size, tiny, font-weight);
+    border-radius: map-fetch($button, size, tiny, border-radius);
+    line-height: map-fetch($button, size, tiny, line-height);
+    height: map-fetch($button, size, tiny, height);
+    padding: map-fetch($button, size, tiny, padding);
+  }
 
   &--small {
     font-size: map-fetch($button, size, small, font-size);

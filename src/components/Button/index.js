@@ -36,6 +36,7 @@ Button.propTypes = {
   onClick: React.PropTypes.func,
   /** Various height and width options */
   size: React.PropTypes.oneOf([
+    'tiny',
     'small',
     'large',
     'narrow',
