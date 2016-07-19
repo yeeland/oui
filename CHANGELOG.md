@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add a `tiny` sized button. (#454)
 
+### Fixed
+- [Patch] Fix tiny README mistakes. (#451)
+
 ## [13.0.1][13.0.1] - 2016-07-13
 ### Added
 - [Patch] Add Google Analytics to React documentation. (#448)

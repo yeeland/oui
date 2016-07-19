@@ -12,7 +12,7 @@ Meet Louis, the official mascot of OUI.
 
 ## Introduction
 
-This document contains three parts:
+This document contains four parts:
 
 1. [Documentation](#documentation)
 2. [Including OUI in your project](#including-oui-in-your-project)
@@ -40,8 +40,8 @@ This is a quick and easy way to add OUI to a project. It is the least flexible o
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.0/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.1/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.0.1/oui-extras.css">
 ```
 
 Replace `13.0.1` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
