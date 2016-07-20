@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Add a `tiny` sized button. (#454)
+- [Patch] Add more examples to the React documentation. (#460)
 
 ### Fixed
 - [Patch] Fix tiny README mistakes. (#451)

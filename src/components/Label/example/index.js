@@ -5,7 +5,15 @@ import Label from '../index';
 export default [
   {
     examples: [
-      <Label>Text</Label>,
+      <Label>I'm a Label</Label>,
+    ],
+  },
+  {
+    examples: [
+      <Label>
+        <div>When I have nodes,</div>
+        <div>I'm unstyled</div>
+      </Label>,
     ],
   },
 ];

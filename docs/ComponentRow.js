@@ -18,7 +18,9 @@ const ComponentRow = (props) => {
       <div className={ classes.join(' ') }>
         {
           props.components.map((exampleComponent, i) => {
-            codeHTML += reactElementToJSXString(exampleComponent) + '\n';
+            codeHTML += reactElementToJSXString(exampleComponent, {
+              showFunctions: true,
+            }) + '\n';
 
             return (
               <ComponentRowItem
