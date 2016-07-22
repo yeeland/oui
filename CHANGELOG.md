@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [13.1.1][13.1.1] - 2016-07-22
 ### Fixed
 - [Patch] Export the `ButtonRow` and `Table` components.
 
@@ -444,7 +446,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v13.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v13.1.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -484,3 +486,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.0.0]: https://github.com/optimizely/oui/compare/v13.0.0-rc.3...v13.0.0
 [13.0.1]: https://github.com/optimizely/oui/compare/v13.0.0...v13.0.1
 [13.1.0]: https://github.com/optimizely/oui/compare/v13.0.1...v13.1.0
+[13.1.1]: https://github.com/optimizely/oui/compare/v13.1.0...v13.1.1
