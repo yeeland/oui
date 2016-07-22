@@ -4,7 +4,7 @@ import * as testHelpers from '../test-helpers';
 
 const ExampleComponent = () => {
   return (
-    <foobar>
+    <foobar data-test-section="example-section-parent">
       <test data-test-section="example-section"></test>
     </foobar>
   );
@@ -42,8 +42,10 @@ describe('utils/test-helpers', () => {
       );
 
       let componentNode = testHelpers.getTestSectionFromComponent(component, 'example-section');
+      let componentNodeParent = testHelpers.getTestSectionFromComponent(component, 'example-section-parent');
 
       expect(componentNode.tagName).toBe('TEST');
+      expect(componentNodeParent.tagName).toBe('FOOBAR');
     });
 
     it('should return null if the test section does not exist', () => {

@@ -42,6 +42,11 @@ export const getTestSectionFromComponent = (component, testSection) => {
   let componentNode = getNodeFromComponent(component);
   let element = componentNode.querySelector('[data-test-section="' + testSection + '"]');
 
+  // Check test-section on parent if missing from children
+  if (!element && componentNode.getAttribute('data-test-section') === testSection) {
+    element = componentNode;
+  }
+
   return element;
 };
 

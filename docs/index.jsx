@@ -13,6 +13,8 @@ import ArrowsInline from '../src/components/ArrowsInline';
 import ArrowsInlineExample from '../src/components/ArrowsInline/example';
 import Button from '../src/components/Button';
 import ButtonExample from '../src/components/Button/example';
+import ButtonRow from '../src/components/ButtonRow';
+import ButtonRowExample from '../src/components/ButtonRow/example';
 import Code from '../src/components/Code';
 import CodeExample from '../src/components/Code/example';
 import Input from '../src/components/Input';
@@ -35,6 +37,10 @@ const componentsArray = [
   {
     index: Button,
     example: ButtonExample,
+  },
+  {
+    index: ButtonRow,
+    example: ButtonRowExample,
   },
   {
     index: Code,

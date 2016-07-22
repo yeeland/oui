@@ -3,24 +3,25 @@
 /// @description For buttons that align left or right with space between them.
 /// @group Layout
 /// @example[html] Left aligned button row.
-///   <div class="#{$namespace}button-row--left">
+///   <div class="oui-button-row--left">
 ///     <button class="oui-button">Button</button>
 ///     <button class="oui-button">Button</button>
 ///   </div>
 /// @example[html] Center aligned button row.
-///   <div class="#{$namespace}button-row--center">
+///   <div class="oui-button-row--center">
 ///     <button class="oui-button">Button</button>
 ///     <button class="oui-button">Button</button>
 ///   </div>
 /// @example[html] Right aligned button row.
-///   <div class="#{$namespace}button-row--right">
+///   <div class="oui-button-row--right">
 ///     <button class="oui-button">Button</button>
 ///     <button class="oui-button">Button</button>
 ///   </div>
 ////
 
 %#{$namespace}button-row,
-.#{$namespace}button-row {
+.#{$namespace}button-row,
+.oui-button-row {
 
   &--left {
 

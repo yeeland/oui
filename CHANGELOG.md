@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Add a `tiny` sized button. (#454)
 - [Patch] Add more examples to the React documentation. (#460)
 - [Feature] Add optional "Copy" button to Code component. (#453)
+- [Feature] Add ButtonRow React component, example and test. (#463)
 
 ### Fixed
 - [Patch] Fix tiny README mistakes. (#451)
