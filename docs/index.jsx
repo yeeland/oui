@@ -23,6 +23,8 @@ import Label from '../src/components/Label';
 import LabelExample from '../src/components/Label/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
+import Token from '../src/components/Token';
+import TokenExample from '../src/components/Token/example';
 
 // Component array to loop over
 const componentsArray = [
@@ -57,6 +59,10 @@ const componentsArray = [
   {
     index: Table,
     example: TableExample,
+  },
+  {
+    index: Token,
+    example: TokenExample,
   },
 ];
 

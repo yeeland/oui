@@ -1,7 +1,6 @@
 # Updating this? Consider updating `.npmignore` as well.
 
 dist
-
 node_modules
 s3
 coverage
@@ -10,3 +9,4 @@ coverage
 npm-debug.log
 .DS_Store
 docs/data.json
+.idea

@@ -14,7 +14,6 @@ describe('components/Attention', () => {
     );
 
     const componentNode = testHelpers.getNodeFromComponent(component);
-
     expect(componentNode.textContent).toEqual(message);
   });
 
@@ -28,19 +27,18 @@ describe('components/Attention', () => {
     );
 
     const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'foo-dismiss');
-
     expect(dismissButtonContainer).not.toBeNull();
   });
 
   it('should not render dismiss button by default', () => {
     const component = testHelpers.renderIntoDocument(
-      <Attention>
+      <Attention
+        testSection="attention">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
     const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'attention-dismiss-container');
-
     expect(dismissButtonContainer).toBeNull();
   });
 
