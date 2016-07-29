@@ -201,7 +201,7 @@
       color: map-fetch($button, type, base, active, color);
     }
 
-    &:not(:hover):not(.is-active) {
+    &:not(:hover):not(:active):not(.is-active) {
       border-color: transparent;
       background-color: transparent;
     }

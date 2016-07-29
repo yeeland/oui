@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Created Token react component.
 
+### Fixed
+- [Patch] Fix jarring active state for toggle buttons. (#470)
+
 ## [13.1.1][13.1.1] - 2016-07-22
 ### Fixed
 - [Patch] Export the `ButtonRow` and `Table` components.
