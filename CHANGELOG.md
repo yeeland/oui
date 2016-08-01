@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Created Token react component.
+- [Patch] Include an example of a Table React component with a Button within it.
 
 ### Fixed
 - [Patch] Add expected spacing between the buttons in the React ButtonRow component. (#473)

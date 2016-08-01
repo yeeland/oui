@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
 import Table from '../index';
+import Button from '../../Button';
 
 export default [
   {
@@ -9,7 +10,7 @@ export default [
       <Table
         data={
           [
-            ['Header CTA', '12%', 'Running'],
+            ['Header CTA', '12%', 'Paused'],
             ['Shorter Contact Form', '4%', 'Draft'],
             ['Larger search bar', '6.7%', 'Paused'],
             ['Center aligned headline', '9.3%', 'Running'],
@@ -55,10 +56,10 @@ export default [
       <Table
         data={
           [
-            ['Header CTA', '12%', 'Running'],
-            ['Shorter Contact Form', '4%', 'Draft'],
-            ['Larger search bar', '6.7%', 'Paused'],
-            ['Center aligned headline', '9.3%', 'Running'],
+            ['Header CTA', '12%', <Button size="small">Start</Button>],
+            ['Shorter Contact Form', '4%', <Button size="small">Start</Button>],
+            ['Larger search bar', '6.7%', <Button size="small">Start</Button>],
+            ['Center aligned headline', '9.3%', <Button size="small">Start</Button>],
           ]
         }
         headings={
