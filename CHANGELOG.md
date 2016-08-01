@@ -26,6 +26,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fix tiny README mistakes. (#451)
 - [Patch] Add selector for `oui-button` in `_button-row.scss`. (#455)
 
+### Removed
+- [Patch] Remove unused root `index.js` file. (#466)
+
 ## [13.0.1][13.0.1] - 2016-07-13
 ### Added
 - [Patch] Add Google Analytics to React documentation. (#448)
