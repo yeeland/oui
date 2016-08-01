@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Created Token react component.
 
 ### Fixed
+- [Patch] Add expected spacing between the buttons in the React ButtonRow component. (#473)
 - [Patch] Fix jarring active state for toggle buttons. (#470)
 
 ## [13.1.1][13.1.1] - 2016-07-22

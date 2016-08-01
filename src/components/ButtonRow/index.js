@@ -3,7 +3,7 @@ import React from 'react';
 const ButtonRowSide = (side, buttons, testSection) => {
   return (
     <div
-      className={ 'flex--1 text--' + side }
+      className={ 'flex--1 oui-button-row--' + side }
       data-test-section={ testSection ? testSection + '-' + side : null }>
       { buttons }
     </div>
