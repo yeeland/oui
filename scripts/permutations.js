@@ -1,42 +1,28 @@
 const fs = require('fs');
-const async = require('async');
 const getPermutations = require('react-component-permutations').default;
+const glob = require('glob');
+var json = {};
 
-const src = fs.readFileSync('./src/components/Button/index.js', 'utf8');
-const options = {};
-// console.log(getPermutations);
-const permutations = getPermutations(src, options);
-// console.log(permutations);
-
-function generatePermutations() {
-  let output = '';
-  async.eachSeries(
-    ['Button', 'css/bootstrap-responsive.css'],
-    function(filename, cb) {
-      fs.readFile(filename, function(err, content) {
-        if (!err) {
-          output += content;
-        }
-
-        // Calling cb makes it go to the next item.
-        cb(err);
-      });
-    },
-    // Final callback after each item has been iterated over.
-    function(err) {
-      console.log('error!');
-    }
-  );
-  console.log(output);
-}
-
-generatePermutations();
+// the slow way...
+var components = glob.sync('./src/components/**(!)/index.js');
+components.forEach(function(file) {
+  var contents = fs.readFileSync(file);
+  var perms = getPermutations(contents);
+  json[file] = perms;
+});
+fs.writeFile('./docs/permutations.json', JSON.stringify(json));
 
 /*
-Button.propTypes = {
-  big: React.PropTypes.bool,
-  color: React.PropTypes.oneOf(colorKeys),
-  pill: React.PropTypes.bool,
-  outline: React.PropTypes.bool
-}
+// the fast way
+var options = {};
+glob('./src/components/**(!tests)/index.js', options, function(er, files) {
+  files.forEach(function(filename) {
+    fs.readFile(filename, function(err, content) {
+      if (err) { throw err; }
+      var perm = getPermutations(content, options);
+      json[filename] = perm;
+    });
+  });
+});
+console.log(json); // is empty
 */
