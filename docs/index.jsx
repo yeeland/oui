@@ -6,6 +6,7 @@ import * as doctrine from 'doctrine';
 import ComponentWrapper from './ComponentWrapper';
 import Nav from './Nav';
 import componentsJSON from './data.json';
+import permsJSON from './permutations.json';
 
 import Attention from '../src/components/Attention';
 import AttentionExample from '../src/components/Attention/example';
@@ -93,7 +94,11 @@ class App extends React.Component {
 
     let componentNodes = componentsArray.map(function(component) {
       let json = componentsJSON['src/components/' + component.index.name + '/index.js'];
+      let perms = permsJSON['./src/components/' + component.index.name + '/index.js'] || [];
       let desc = doctrine.parse(json.description);
+      // console.log('--component--');
+      // console.log(component.index.name);
+      // console.log(perms);
 
       return (
         <ComponentWrapper
@@ -101,7 +106,9 @@ class App extends React.Component {
           description={ desc.description }
           examples={ component.example }
           title={ component.index.name }
-          props={ json.props }>
+          component={ component.index }
+          props={ json.props }
+          perms={ perms }>
         </ComponentWrapper>
       );
     });

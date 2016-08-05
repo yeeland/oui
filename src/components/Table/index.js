@@ -39,6 +39,10 @@ const TableHead = (headings, collapsedColumns, numberedColumns) => {
 };
 
 const TableBody = (rows, collapsedColumns, numberedColumns) => {
+  if (!rows) {
+    return;
+  }
+
   return (
     <tbody>
       { rows.map((row, i) => {

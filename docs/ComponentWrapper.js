@@ -17,6 +17,18 @@ const ComponentWrapper = (props) => {
       </header>
 
       <div className="example">
+        { props.perms.map((perm, i) => {
+          let Component = props.component;
+
+          return (
+            <Component key={ i } { ...perm }>
+              Hello World
+            </Component>
+          );
+        }) }
+      </div>
+
+      <div className="example">
         { props.examples.map((exampleObject, i) => {
 
           return (
@@ -36,8 +48,10 @@ const ComponentWrapper = (props) => {
 };
 
 ComponentWrapper.propTypes = {
+  component: React.PropTypes.element,
   description: React.PropTypes.string,
   examples: React.PropTypes.array,
+  perms: React.PropTypes.array,
   props: React.PropTypes.object,
   title: React.PropTypes.string.isRequired,
 };
