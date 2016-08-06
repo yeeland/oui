@@ -6,4 +6,5 @@ export { default as Code } from './components/Code';
 export { default as Input } from './components/Input';
 export { default as Label } from './components/Label';
 export { default as Table } from './components/Table';
+export { default as Popover } from './components/Popover';
 export { default as Token } from './components/Token';

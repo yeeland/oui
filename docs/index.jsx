@@ -21,6 +21,8 @@ import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
 import LabelExample from '../src/components/Label/example';
+import Popover from '../src/components/Popover';
+import PopoverExample from '../src/components/Popover/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
 import Token from '../src/components/Token';
@@ -57,6 +59,10 @@ const componentsArray = [
     example: LabelExample,
   },
   {
+    index: Popover,
+    example: PopoverExample,
+  },
+  {
     index: Table,
     example: TableExample,
   },
@@ -80,27 +86,31 @@ ComponentRow.propTypes = {
 
 class App extends React.Component {
   render() {
-
     let componentItems = [];
+
     componentsArray.map(function(component) {
+      let componentName = component.index.displayName || component.index.name;
+
       componentItems.push(
         {
-          label: component.index.name,
-          href: '#' + component.index.name,
+          label: componentName,
+          href: '#' + componentName,
         }
       );
     });
 
     let componentNodes = componentsArray.map(function(component) {
-      let json = componentsJSON['src/components/' + component.index.name + '/index.js'];
+      let componentName = component.index.displayName || component.index.name;
+
+      let json = componentsJSON['src/components/' + componentName + '/index.js'];
       let desc = doctrine.parse(json.description);
 
       return (
         <ComponentWrapper
-          key={ component.index.name }
+          key={ componentName }
           description={ desc.description }
           examples={ component.example }
-          title={ component.index.name }
+          title={ componentName }
           props={ json.props }>
         </ComponentWrapper>
       );

@@ -16,6 +16,7 @@ const Button = (props) => {
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
+      data-js-selector={ props.jsSelector }
       data-test-section={ props.testSection }
       aria-label={ props.ariaLabel }>
       { props.children }
@@ -32,6 +33,8 @@ Button.propTypes = {
   isDisabled: React.PropTypes.bool,
   /** Make the button act as a submit button */
   isSubmit: React.PropTypes.bool,
+  /** Selector that can be used for JavaScript hooks */
+  jsSelector: React.PropTypes.string,
   /** Function that fires when the button is clicked on */
   onClick: React.PropTypes.func,
   /** Various height and width options */

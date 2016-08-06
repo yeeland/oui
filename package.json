@@ -5,8 +5,10 @@
   "private": false,
   "main": "dist/js/main.js",
   "dependencies": {
+    "classnames": "^2.2.5",
     "clipboard": "^1.5.12",
-    "highlight.js": "^9.5.0"
+    "highlight.js": "^9.5.0",
+    "tether": "^1.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
