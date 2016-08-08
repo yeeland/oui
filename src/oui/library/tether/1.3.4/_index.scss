@@ -1,0 +1,37 @@
+.tether-element {
+  &.tether-element-attached-right {
+    margin-left: -10px;
+  }
+
+  &.tether-element-attached-left {
+    margin-left: 10px;
+  }
+
+  // &.tether-element-attached-top {
+  //   margin-top: -15px;
+  // }
+
+  &.tether-element-attached-middle.tether-element-attached-right {
+    @include arrow(right, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+
+  &.tether-element-attached-top.tether-element-attached-right {
+    @include arrow(right, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+
+  &.tether-element-attached-bottom.tether-element-attached-right {
+    @include arrow(right, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+
+  &.tether-element-attached-middle.tether-element-attached-left {
+    @include arrow(left, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+
+  &.tether-element-attached-top.tether-element-attached-left {
+    @include arrow(left, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+
+  &.tether-element-attached-bottom.tether-element-attached-left {
+    @include arrow(left, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  }
+}
