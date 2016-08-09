@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
+
 
 ## [13.2.0][13.2.0] - 2016-08-03
 ### Added

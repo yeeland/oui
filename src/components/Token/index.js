@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Button';
+import { CloseIcon } from '../Icon';
 
 const DismissButton = (onDismiss, testSection) => {
   return (
@@ -9,7 +10,7 @@ const DismissButton = (onDismiss, testSection) => {
       size="tiny"
       ariaLabel="Close alert"
       testSection={ testSection ? testSection + '-dismiss' : null }>
-      &times;
+      <CloseIcon size={ 16 } />
     </Button>
   );
 };
@@ -24,8 +25,10 @@ const Token = (props) => {
     <div
       className="oui-token-wrap"
       data-test-section={ props.testSection }>
-      <div className={ 'oui-token oui-token--' + props.style }>{ props.name }</div>
-      { props.isDismissible ? DismissButton(props.onDismiss, props.testSection) : null }
+      <div className={ 'oui-token oui-token--' + props.style }>
+        { props.name }
+        { props.isDismissible ? DismissButton(props.onDismiss, props.testSection) : null }
+      </div>
     </div>
   );
 };

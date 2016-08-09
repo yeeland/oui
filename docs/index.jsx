@@ -116,7 +116,7 @@ class App extends React.Component {
               src="https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif"
               width="130"
             />
-                 OUI React Components
+            OUI React Components
           </h1>
         </header>
 

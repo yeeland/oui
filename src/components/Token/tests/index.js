@@ -5,7 +5,7 @@ import Token from '../index';
 describe('components/Token', () => {
   it('should have default values for propTypes "isDismissible" and "style" set correctly', () => {
     const component = testHelpers.renderIntoDocument(
-      <Token testSection="goose" />
+      <Token name="duck" testSection="goose" />
     );
 
     const componentNode = testHelpers.getNodeFromComponent(component);
@@ -26,6 +26,7 @@ describe('components/Token', () => {
   it('should render dismiss button when prop is provided', () => {
     const component = testHelpers.renderIntoDocument(
       <Token
+        name="duck"
         isDismissible={ true }
         onDismiss={
           function() {
@@ -41,7 +42,10 @@ describe('components/Token', () => {
 
   it('should have a properly set test section', () => {
     const component = testHelpers.renderIntoDocument(
-      <Token testSection="goose" />
+      <Token
+        name="duck"
+        testSection="goose"
+      />
     );
 
     const componentNode = testHelpers.getNodeFromComponent(component);

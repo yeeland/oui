@@ -6,7 +6,8 @@
   "main": "dist/js/main.js",
   "dependencies": {
     "clipboard": "^1.5.12",
-    "highlight.js": "^9.5.0"
+    "highlight.js": "^9.5.0",
+    "oui-icons": "3.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
@@ -38,7 +39,6 @@
     "json-loader": "^0.5.4",
     "mkpath": "^1.0.0",
     "onchange": "^2.4.0",
-    "oui-icons": "^0.1.2",
     "parallelshell": "^2.0.0",
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
@@ -47,23 +47,26 @@
     "react-element-to-jsx-string": "^3.2.0",
     "require-dir": "^0.3.0",
     "style-loader": "^0.13.1",
+    "svg-jsx-loader": "0.0.16",
+    "svgo-loader": "^1.1.0",
     "webpack": "^1.12.14",
     "yargs": "^4.1.0"
   },
   "scripts": {
-    "test": "npm run scss-lint && npm run eslint && gulp sass && npm run react-docs && npm run jest",
-    "start": "bundle install && bundle update && npm install && npm run sass && npm run babel && npm run react-docs",
+    "test": "npm run scss-lint && npm run icons:update && npm run eslint && gulp sass && npm run react-docs && npm run jest",
+    "start": "bundle install && bundle update && npm install && npm run sass && npm run icons:update && npm run babel && npm run react-docs",
     "jest": "jest --config .jest.config.json",
     "eslint": "eslint --ext .jsx --ext .js . --ignore-path .gitignore --max-warnings 0",
     "scss-lint": "bundle exec scss-lint src/",
     "sass": "gulp sass && gulp extras:build",
     "babel": "babel src/ --out-dir dist/js --ignore \"tests/*.js, src/js, src/index.jsx\"",
+    "icons:update": "npm update oui-icons && ./scripts/sync-oui-icons.sh",
     "html-examples": "gulp html-examples",
     "preversion": "git checkout master && git pull --rebase=false && npm install",
     "postversion": "npm run postversion:publish && npm run postversion:update-devel",
     "postversion:publish": "git push && git push --tags",
     "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master",
-    "react-docs": "gulp sass && react-docgen src/components/ -i tests -i example > docs/data.json && mkdir -p ./dist/docs/css && cp -Rv ./dist/css ./dist/docs && cp ./docs/index.html ./dist/docs/index.html && webpack && browser-sync reload",
+    "react-docs": "gulp sass && react-docgen src/components/ -i tests -i example -i Icon > docs/data.json && mkdir -p ./dist/docs/css && cp -Rv ./dist/css ./dist/docs && cp ./docs/index.html ./dist/docs/index.html && webpack && browser-sync reload",
     "react-docs:serve": "npm run react-docs && parallelshell 'npm run react-docs:onchange' 'npm run react-docs:browser-sync'",
     "react-docs:onchange": "onchange '(docs|src)/**/*.(jsx|js)' -- npm run react-docs",
     "react-docs:browser-sync": "browser-sync start --server dist/docs/"
