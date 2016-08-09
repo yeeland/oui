@@ -1,7 +1,8 @@
-import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
-import Popover from '../index';
-
+/* eslint-disable max-len */
+// import React from 'react';
+// import * as testHelpers from '../../../utils/test-helpers';
+// import Popover from '../index';
+//
 // describe('components/Attention', () => {
 //
 //   it('should render text passed in as children', () => {

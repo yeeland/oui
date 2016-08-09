@@ -32,19 +32,20 @@ class Popover extends React.Component {
     }
 
     this._tether = new Tether(options);
-  };
+  }
 
   componentWillUnmount() {
     this._tether.destroy();
-  };
+  }
 
   render() {
     return (
+      /* eslint-disable react/jsx-no-bind */
       <div>
         { this.props.targetElement }
         <div
           className={ 'oui-pop--over' }
-          ref={ (el) => this._el = el }
+          ref={ (el) => { this._el = el; } }
           style={ this.props.isVisible ? { display: 'block', opacity: 1 } : null }
           data-test-section={ this.props.testSection }>
           <div className="oui-pop--over__content">
@@ -53,9 +54,10 @@ class Popover extends React.Component {
           </div>
         </div>
       </div>
+      /* eslint-enable react/jsx-no-bind */
     );
-  };
-};
+  }
+}
 
 Popover.propTypes = {
   /** Content that appears within the popover body */

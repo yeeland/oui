@@ -17,7 +17,7 @@ export default [
             nihil libero et, hic!
           </p>
         </Popover>
-      </div>
+      </div>,
     ],
   },
 ];
