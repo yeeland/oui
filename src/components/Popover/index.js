@@ -82,9 +82,7 @@ Popover.propTypes = {
 
 Popover.defaultProps = {
   horizontalAttachment: 'center',
-  horizontalTargetAttachment: 'center',
   verticalAttachment: 'top',
-  verticalTargetAttachment: 'bottom',
 };
 
 export default Popover;
