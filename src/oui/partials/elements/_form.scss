@@ -323,27 +323,32 @@
   }
 }
 
-.#{$namespace}form__header {
+.#{$namespace}form__header,
+.oui-form__header {
   margin-bottom: spacer(2);
 }
 
-.#{$namespace}form__footer {
+.#{$namespace}form__footer,
+.oui-form__footer {
   margin-top: spacer(3);
 }
 
-.#{$namespace}form__title {
+.#{$namespace}form__title,
+.oui-form__title {
   font-size: map-fetch($font, size, gamma);
   margin-bottom: spacer(1);
   line-height: 1;
 }
 
-.#{$namespace}form-fields {
+.#{$namespace}form-fields,
+.oui-form-fields {
   @extend %kill-last-child-margin;
   list-style: none;
   margin: 0;
 }
 
-.#{$namespace}form-field__item {
+.#{$namespace}form-field__item,
+.oui-form-field__item {
   margin-bottom: spacer(1.5);
 }
 
@@ -361,6 +366,7 @@ fieldset {
   display: block;
   margin-bottom: spacer(0.5);
   font-weight: 500;
+  color: map-fetch($color, text, medium);
 
   &__optional {
     margin-left: spacer(0.5);
@@ -394,7 +400,9 @@ fieldset {
 // Labels in `.#{$namespace}input-lists`
 
 .#{$namespace}check-label,
-.#{$namespace}input-list .#{$namespace}label {
+.oui-check-label,
+.#{$namespace}input-list .#{$namespace}label,
+.oui-input-list .oui-label {
   display: table-cell;
   padding-left: spacer(1);
   font-weight: 400;
@@ -505,6 +513,7 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
+  .oui-select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, good-news);
   }
@@ -518,6 +527,7 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
+  .oui-select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, bad-news);
   }
@@ -531,6 +541,7 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
+  .oui-select,
   .#{$namespace}textarea {
     border-color: map-fetch($color, ui, warning);
   }

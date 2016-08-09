@@ -17,6 +17,8 @@ import ButtonRow from '../src/components/ButtonRow';
 import ButtonRowExample from '../src/components/ButtonRow/example';
 import Code from '../src/components/Code';
 import CodeExample from '../src/components/Code/example';
+import FormsTest from '../src/components/FormsTest';
+import FormsTestExample from '../src/components/FormsTest/example';
 import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
@@ -47,6 +49,10 @@ const componentsArray = [
   {
     index: Code,
     example: CodeExample,
+  },
+  {
+    index: FormsTest,
+    example: FormsTestExample,
   },
   {
     index: Input,

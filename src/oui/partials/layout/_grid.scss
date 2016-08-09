@@ -70,6 +70,8 @@
 ////
 
 %#{$namespace}grid,
-.#{$namespace}grid {
+%oui-grid,
+.#{$namespace}grid,
+.oui-grid {
   @include grid;
 }
