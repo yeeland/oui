@@ -11,27 +11,33 @@
   //   margin-top: -15px;
   // }
 
-  &.tether-element-attached-middle.tether-element-attached-right {
+  &.tether-element-attached-middle.tether-element-attached-right.tether-target-attached-middle.tether-target-attached-left {
     @include arrow(right, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
-  &.tether-element-attached-top.tether-element-attached-right {
+  &.tether-element-attached-top.tether-element-attached-right.tether-target-attached-top.tether-target-attached-left {
     @include arrow(right, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
-  &.tether-element-attached-bottom.tether-element-attached-right {
+  &.tether-element-attached-bottom.tether-element-attached-right.tether-target-attached-bottom.tether-target-attached-left {
     @include arrow(right, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
-  &.tether-element-attached-middle.tether-element-attached-left {
+  &.tether-element-attached-middle.tether-element-attached-left.tether-target-attached-middle.tether-target-attached-right {
     @include arrow(left, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
-  &.tether-element-attached-top.tether-element-attached-left {
+  &.tether-element-attached-top.tether-element-attached-left.tether-target-attached-top.tether-target-attached-right {
     @include arrow(left, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
 
-  &.tether-element-attached-bottom.tether-element-attached-left {
+  &.tether-element-attached-bottom.tether-element-attached-left.tether-target-attached-bottom.tether-target-attached-right {
     @include arrow(left, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
   }
+
+
+
+  // &.tether-element-attached-bottom.tether-element-attached-left {
+  //   @include arrow(left, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
+  // }
 }

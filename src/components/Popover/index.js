@@ -7,16 +7,6 @@ const PopoverTitle = (title) => {
   );
 };
 
-const oppositeAttachment = (attachment) => {
-  if (attachment === 'left') {
-    return 'right';
-  } else if (attachment === 'right') {
-    return 'left';
-  }
-
-  return 'center';
-};
-
 /**
  * Display information attached to a target element.
  * @param {Object} props - Properties passed to component
@@ -28,7 +18,6 @@ class Popover extends React.Component {
       element: this._el,
       target: this._el.previousSibling,
       attachment: `${this.props.verticalAttachment} ${this.props.horizontalAttachment}`,
-      targetAttachment: `${this.props.verticalAttachment} ${oppositeAttachment(this.props.horizontalAttachment)}`,
     };
 
     if (this.props.isContstrainedToViewport) {
@@ -36,6 +25,10 @@ class Popover extends React.Component {
         to: 'window',
         attachment: 'together',
       }];
+    }
+
+    if (this.props.verticalTargetAttachment && this.props.horizontalTargetAttachment) {
+      options.targetAttachment = `${this.props.verticalTargetAttachment} ${this.props.horizontalTargetAttachment}`;
     }
 
     this._tether = new Tether(options);
@@ -69,6 +62,8 @@ Popover.propTypes = {
   children: React.PropTypes.node.isRequired,
   /** Side of the popover that should attach to the `targetElement` */
   horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  /** Side of `targetElement` that should attach to the popover */
+  horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Should the popover reposition itself when cut off the page */
   isContstrainedToViewport: React.PropTypes.bool,
   /** Should the popover be visible on the page */
@@ -81,12 +76,15 @@ Popover.propTypes = {
   title: React.PropTypes.string,
   /** Popover's vertical position relative to the `targetElement` */
   verticalAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
+  /** `targetElement`'s vertical position relative to the popover */
+  verticalTargetAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
 };
 
 Popover.defaultProps = {
-  // TODO: Make center alignments work.
   horizontalAttachment: 'center',
-  verticalAttachment: 'middle',
+  horizontalTargetAttachment: 'center',
+  verticalAttachment: 'top',
+  verticalTargetAttachment: 'bottom',
 };
 
 export default Popover;

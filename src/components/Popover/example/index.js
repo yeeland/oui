@@ -11,7 +11,6 @@ export default [
           title="Lorem ipsum dolor sit amet"
           isVisible={ true }
           targetElement={ <Button>Popover Target</Button> }
-          horizontalAttachment="right"
           isContstrainedToViewport={ true }>
           <p>
             Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
