@@ -5,7 +5,7 @@ import FormsTest from '../index';
 export default [
   {
     examples: [
-      <FormsTest></FormsTest>,
+      <FormsTest>Test</FormsTest>,
     ],
   },
 ];

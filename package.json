@@ -5,6 +5,7 @@
   "private": false,
   "main": "dist/js/main.js",
   "dependencies": {
+    "classnames": "^2.2.5",
     "clipboard": "^1.5.12",
     "highlight.js": "^9.5.0",
     "oui-icons": "3.0.1"

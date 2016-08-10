@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '../Button';
+import { CloseIcon } from '../Icon';
 
 /**
  * Form fields where each row is a set of fields, buttons and text.
@@ -7,17 +9,13 @@ import React from 'react';
  */
 const FormsTest = (props) => {
   return (
-    // <span
-    //   className={ 'oui-arrow-inline--' + props.direction }
-    //   aria-hidden="true"
-    //   data-test-section={ props.testSection }>
-    // </span>
     <div className="border--all">
-      { /* <!-- [?] v2 styles remove header bg --> */ }
-      <div className="oui-formtest__header soft soft-double--left background--faint border--bottom flex">
-        <div className="weight--bold">variation_1</div>
-        { /* <!-- replace with <icon> and proper <button> --> */ }
-        <button className="oui-button oui-button--plain anchor--right push--right hard">x</button>
+
+      <div className="oui-formtest__header soft soft-double--sides background--faint border--bottom flex">
+        <div className="weight--bold flex--1">variation_1</div>
+        <Button style="link">
+          <CloseIcon size={ 24 } testSection="attention-close-icon" />
+        </Button>
       </div>
 
       <div className="oui-formtest__body soft-double">
@@ -53,7 +51,6 @@ const FormsTest = (props) => {
 
       <div className="oui-formtest__footer background--faint border--top soft-double">
         <form>
-          { /* <!-- [?] fieldset margin-bottom: 60px default --> */ }
           <fieldset className="flush--bottom">
             <ol className="oui-form-fields">
 
@@ -83,8 +80,11 @@ const FormsTest = (props) => {
               </li>
 
               <li className="oui-form-field__item">
-                { /* <!-- [?] a vs button --> */ }
-                <button className="oui-button oui-button--plain hard--left">Add Live Variable...</button>
+                <Button
+                  style="link"
+                  hasLinkColor>
+                  Add Live Variable...
+                </Button>
               </li>
 
             </ol>
