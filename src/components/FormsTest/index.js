@@ -2,6 +2,30 @@ import React from 'react';
 import Button from '../Button';
 import { CloseIcon } from '../Icon';
 
+const FormRow = (rows) => {
+  return (
+    <ol className="oui-form-fields">
+      { rows.map((row, i) => {
+        return (
+          <li
+            key={ i }
+            className="oui-form-field__item flex">
+            { row.map((item, j) => {
+              return (
+                <div
+                  className="flex--1 soft-double--left"
+                  key={ j }>
+                  { item }
+                </div>
+              );
+            }) }
+          </li>
+        );
+      }) }
+    </ol>
+  );
+};
+
 /**
  * Form fields where each row is a set of fields, buttons and text.
  * @param {Object} props - Properties passed to component
@@ -18,11 +42,13 @@ const FormsTest = (props) => {
         </Button>
       </div>
 
-      <div className="oui-formtest__body soft-double">
+      <div className="oui-formtest__body soft-double hard--left">
         <form>
           <fieldset className="push--bottom">
+            { FormRow(props.rows) }
+          </fieldset>
+          <fieldset className="push-quad--top push--bottom soft-double--left">
             <ol className="oui-form-fields">
-
               <li className="oui-form-field__item">
                 <div className="oui-grid">
                   <div className="soft-double--left flex--1">
@@ -53,7 +79,6 @@ const FormsTest = (props) => {
         <form>
           <fieldset className="flush--bottom">
             <ol className="oui-form-fields">
-
               <li className="oui-form-field__item">
                 <div className="oui-grid">
                   <div className="soft-double--left flex--1">
@@ -82,7 +107,7 @@ const FormsTest = (props) => {
               <li className="oui-form-field__item">
                 <Button
                   style="link"
-                  hasLinkColor>
+                  hasLinkColor={ true }>
                   Add Live Variable...
                 </Button>
               </li>
