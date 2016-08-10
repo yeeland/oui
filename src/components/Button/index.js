@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 /**
  * Buttons come in a wide array of styles and allow the user to perform an
@@ -9,13 +10,22 @@ import React from 'react';
 const Button = (props) => {
   let buttonStyleClass = props.style ? 'oui-button--' + props.style : '';
   let buttonSizeClass = props.size ? 'oui-button--' + props.size : '';
+  let hasLinkColor = props.size ? 'oui-button--' + props.size : '';
+
+  const btnClass = classNames({
+    'oui-button': true,
+    [`oui-button--${props.style}`]: props.style,
+    [`oui-button--${props.size}`]: props.size,
+    'link': props.hasLinkColor,
+  });
 
   return (
     <button
-      className={ 'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
+      className={btnClass}
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
+      hasLinkColor={ props.hasLinkColor }
       data-test-section={ props.testSection }
       aria-label={ props.ariaLabel }>
       { props.children }
@@ -37,6 +47,8 @@ Button.propTypes = {
   isSubmit: React.PropTypes.bool,
   /** Function that fires when the button is clicked on */
   onClick: React.PropTypes.func,
+  /** Make text color blue if true */
+  hasLinkColor: React.PropTypes.bool,
   /** Various height and width options */
   size: React.PropTypes.oneOf([
     'tiny',
@@ -50,6 +62,7 @@ Button.propTypes = {
   style: React.PropTypes.oneOf([
     'highlight',
     'danger',
+    'link',
     'outline',
     'outline-reverse',
     'plain',

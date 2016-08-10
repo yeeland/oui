@@ -14,6 +14,15 @@ export default [
       <Button style="toggle">Toggle Button</Button>,
     ],
   },
+
+  {
+    isPadded: true,
+    examples: [
+      <Button style="link">Link Button</Button>,
+      <Button style="link" hasLinkColor={ true }>Link Button</Button>,
+    ],
+  },
+
   {
     backgroundColor: 'brand-dark',
     isPadded: true,
@@ -21,6 +30,7 @@ export default [
       <Button style="outline-reverse">Outline Reverse Button</Button>,
     ],
   },
+
   {
     isPadded: true,
     examples: [
