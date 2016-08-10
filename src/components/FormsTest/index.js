@@ -23,11 +23,6 @@ const renderDismissButton = (testSection) => {
  */
 const FormsTest = (props) => {
 
-  const UpdateTitle = ({variation}) => {
-    console.log(this);
-    console.log(variation);
-  };
-
   return (
     <div className="border--all">
       <div className="oui-formtest__header soft soft-double--sides background--faint border--bottom flex">
@@ -48,7 +43,11 @@ const FormsTest = (props) => {
                       type="text"
                       placeholder="Enter a key"
                       value={ props.variation }
-                      onChange={ UpdateTitle }
+                      onChange={
+                        function(event) {
+                          console.log(event.target.value); // eslint-disable-line no-console
+                        }
+                      }
                     />
                   </div>
 
