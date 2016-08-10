@@ -8,10 +8,6 @@ import classNames from 'classnames';
  * @returns {ReactElement}
  */
 const Button = (props) => {
-  let buttonStyleClass = props.style ? 'oui-button--' + props.style : '';
-  let buttonSizeClass = props.size ? 'oui-button--' + props.size : '';
-  let hasLinkColor = props.size ? 'oui-button--' + props.size : '';
-
   const btnClass = classNames({
     'oui-button': true,
     [`oui-button--${props.style}`]: props.style,
@@ -21,7 +17,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={btnClass}
+      className={ btnClass }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
@@ -41,14 +37,14 @@ Button.propTypes = {
     React.PropTypes.string,
     React.PropTypes.element,
   ]).isRequired,
+  /** Make text color blue if true */
+  hasLinkColor: React.PropTypes.bool,
   /** Prevent users from interacting with the button */
   isDisabled: React.PropTypes.bool,
   /** Make the button act as a submit button */
   isSubmit: React.PropTypes.bool,
   /** Function that fires when the button is clicked on */
   onClick: React.PropTypes.func,
-  /** Make text color blue if true */
-  hasLinkColor: React.PropTypes.bool,
   /** Various height and width options */
   size: React.PropTypes.oneOf([
     'tiny',
