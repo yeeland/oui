@@ -8,6 +8,10 @@ export default [
   {
     examples: [
       <FormsTest
+        variation='variation_1'
+        trafficDistribution={ 50 }
+        description='Homepage headline test'
+        isDismissible={ true }
         rows={
           [
             [
@@ -17,12 +21,14 @@ export default [
                 label="Variation Key"
                 placeholder="This is a placeholder"
               />,
-              <Input
-                type="text"
-                value="50.0"
-                label="Traffic Distribution"
-                placeholder="50.0"
-              />,
+              <div>
+                <Input
+                  type="text"
+                  value="50.0"
+                  label="Traffic Distribution"
+                  placeholder="50.0"
+                /> <span>%</span>
+              </div>,
             ],
             [
               <Input

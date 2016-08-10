@@ -1,28 +1,18 @@
 import React from 'react';
 import Button from '../Button';
+import Input from '../Input';
 import { CloseIcon } from '../Icon';
 
-const FormRow = (rows) => {
+const renderDismissButton = (testSection) => {
   return (
-    <ol className="oui-form-fields">
-      { rows.map((row, i) => {
-        return (
-          <li
-            key={ i }
-            className="oui-form-field__item flex">
-            { row.map((item, j) => {
-              return (
-                <div
-                  className="flex--1 soft-double--left"
-                  key={ j }>
-                  { item }
-                </div>
-              );
-            }) }
-          </li>
-        );
-      }) }
-    </ol>
+    <div className="oui-attention__close">
+      <Button
+        style="link"
+        ariaLabel="Close alert"
+        testSection={ testSection + '-dismiss' }>
+        <CloseIcon size={ 24 } />
+      </Button>
+    </div>
   );
 };
 
@@ -32,86 +22,56 @@ const FormRow = (rows) => {
  * @returns {ReactElement}
  */
 const FormsTest = (props) => {
+
+  const UpdateTitle = ({variation}) => {
+    console.log(this);
+    console.log(variation);
+  };
+
   return (
     <div className="border--all">
-
       <div className="oui-formtest__header soft soft-double--sides background--faint border--bottom flex">
-        <div className="weight--bold flex--1">variation_1</div>
-        <Button style="link">
-          <CloseIcon size={ 24 } testSection="attention-close-icon" />
-        </Button>
+        <div className="weight--bold flex--1">{ props.variation }</div>
+        { props.isDismissible ? renderDismissButton(props.testSection) : null }
       </div>
 
       <div className="oui-formtest__body soft-double hard--left">
         <form>
-          <fieldset className="push--bottom">
-            { FormRow(props.rows) }
-          </fieldset>
-          <fieldset className="push-quad--top push--bottom soft-double--left">
+          <fieldset className="push--bottom soft-double--left">
             <ol className="oui-form-fields">
               <li className="oui-form-field__item">
                 <div className="oui-grid">
+
                   <div className="soft-double--left flex--1">
-                    <label className="oui-label">Variation Key</label>
-                    <input type="text" className="oui-text-input" value="variation_1" />
+                    <Input
+                      label="Variation Key"
+                      type="text"
+                      placeholder="Enter a key"
+                      value={ props.variation }
+                      onChange={ UpdateTitle }
+                    />
                   </div>
+
                   <div className="soft-double--left flex--none ">
-                    <label className="oui-label">Traffic Distribution</label>
-                    <span className="flex flex-align--center">
-                      <input type="text" className="oui-text-input  text--right push-half--right" placeholder="50" />
-                      <span className="">%</span>
+                    <span className="flex flex-align--end">
+                      <Input
+                        type="number"
+                        label="Traffic Distribution"
+                        defaultValue={ props.trafficDistribution }
+                      />
+                      <span className="push-half--left push-half--bottom">%</span>
                     </span>
                   </div>
                 </div>
               </li>
 
               <li className="oui-form-field__item">
-                <label className="oui-label">Description <span className="oui-label__optional">(Optional)</span></label>
-                <input className="oui-text-input" value="" />
+                <Input
+                  label="Description"
+                  type="text"
+                  value={ props.description }
+                />
               </li>
-
-            </ol>
-          </fieldset>
-        </form>
-      </div>
-
-      <div className="oui-formtest__footer background--faint border--top soft-double">
-        <form>
-          <fieldset className="flush--bottom">
-            <ol className="oui-form-fields">
-              <li className="oui-form-field__item">
-                <div className="oui-grid">
-                  <div className="soft-double--left flex--1">
-                    <label className="oui-label">Live Variable Key</label>
-                    <input type="text" className="oui-text-input" value="variable_1" />
-                  </div>
-                  <div className="soft-double--left flex--1">
-                    <label className="oui-label">Value
-                      <span className="oui-label--required oui-label__optional">(Required)</span>
-                    </label>
-                    <input type="text" className="oui-text-input" placeholder="variable_1" />
-                  </div>
-                  <div className="soft-double--left flex--1">
-                    <label className="oui-label">Type</label>
-                    <select name="zoo" id="zoo" className="oui-select background--white width--1-1">
-                      <option value="one">String</option>
-                      <option value="two">Boolean</option>
-                    </select>
-                  </div>
-                  <div className="soft-double--left flex--none flex flex-justified--center flex-align--end">
-                    <button className="oui-button oui-button--plain hard--sides">Delete</button>
-                  </div>
-                </div>
-              </li>
-
-              <li className="oui-form-field__item">
-                <Button
-                  style="link"
-                  hasLinkColor={ true }>
-                  Add Live Variable...
-                </Button>
-              </li>
-
             </ol>
           </fieldset>
         </form>
@@ -121,10 +81,16 @@ const FormsTest = (props) => {
 };
 
 FormsTest.propTypes = {
-  /** Form rows for each fieldset */
-  rows: React.PropTypes.array,
+  /** Description */
+  description: React.PropTypes.string,
+  /** Button allowing users to dismiss the component */
+  isDismissible: React.PropTypes.bool,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
+  /** Traffic allocation for this variation */
+  trafficDistribution: React.PropTypes.number,
+  /** Variation name */
+  variation: React.PropTypes.string,
 };
 
 export default FormsTest;
