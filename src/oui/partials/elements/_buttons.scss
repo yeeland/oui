@@ -282,7 +282,8 @@
     text-shadow: none;
     box-shadow: none;
 
-    &.#{$namespace}button--plain {
+    &.#{$namespace}button--plain,
+    &.#{$namespace}button--toggle {
       background-color: transparent;
       border-color: transparent;
     }

@@ -7,7 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
-
+- [Patch] Fix disabled state for toggle buttons (#480)
 
 ## [13.2.0][13.2.0] - 2016-08-03
 ### Added
