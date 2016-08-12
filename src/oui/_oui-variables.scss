@@ -258,6 +258,18 @@ $button: (
         border               : #8F192B,
       )
     ),
+    danger-outline: (
+      color                  : #AA161E,
+      border                 : #AA161E,
+      hover:(
+        color                : #F35E65,
+        border               : #F35E65,
+      ),
+      active:(
+        border               : #8F192B,
+        color                : #8F192B,
+      )
+    ),
     plain: (
       color                  : #00415D,
       hover:(

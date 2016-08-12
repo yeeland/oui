@@ -50,6 +50,7 @@ Button.propTypes = {
   style: React.PropTypes.oneOf([
     'highlight',
     'danger',
+    'danger-outline',
     'outline',
     'outline-reverse',
     'plain',

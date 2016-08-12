@@ -7,11 +7,12 @@ export default [
     isPadded: true,
     examples: [
       <Button>Button</Button>,
-      <Button style="highlight">Highlight Button</Button>,
-      <Button style="danger">Danger Button</Button>,
-      <Button style="outline">Outline Button</Button>,
-      <Button style="plain">Plain Button</Button>,
-      <Button style="toggle">Toggle Button</Button>,
+      <Button style="highlight">Highlight</Button>,
+      <Button style="danger">Danger</Button>,
+      <Button style="danger-outline">Danger Outline</Button>,
+      <Button style="outline">Outline</Button>,
+      <Button style="plain">Plain</Button>,
+      <Button style="toggle">Toggle</Button>,
     ],
   },
   {
