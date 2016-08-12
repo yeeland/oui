@@ -46,8 +46,7 @@ class Popover extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <div>
-        // TRYING TO ADD A ONCLICK PROP HERE TO MAKE IT SO THAT THE ORIGINAL ONCLICK EXECUTES AND THE POPOVER OPENS
-        <this.props.targetElement />
+        { this.props.targetElement }
         <div
           className={ 'oui-pop--over' }
           ref={ (el) => { this._el = el; } }

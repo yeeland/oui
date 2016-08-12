@@ -26,8 +26,10 @@ export default [
         <Popover
           title="Lorem ipsum dolor sit amet"
           isVisible={ true }
-          targetElement={ <Button onClick={ (event) => { debugger } }>Popover Target</Button> }
-          isContstrainedToViewport={ true }>
+          targetElement={ <Button>Popover Target</Button> }
+          isContstrainedToViewport={ true }
+          verticalAttachment="middle"
+          horizontalAttachment="left">
           <p>
             Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
             nihil libero et, hic!
