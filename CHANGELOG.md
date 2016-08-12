@@ -7,6 +7,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
+
+### Fixed
+- [Patch] Add namespace to spinner Sass documentation. (#489)
 - [Patch] Fix disabled state for toggle buttons (#480)
 - [Patch] Update search icon (#483)
 - [Patch] Add `merge=union` for `CHANGELOG.md` to reduce merge conflicts. (#493)
