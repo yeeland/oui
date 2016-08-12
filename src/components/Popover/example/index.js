@@ -20,4 +20,20 @@ export default [
       </div>,
     ],
   },
+  {
+    examples: [
+      <div className="position--relative">
+        <Popover
+          title="Lorem ipsum dolor sit amet"
+          isVisible={ true }
+          targetElement={ <Button onClick={ (event) => { debugger } }>Popover Target</Button> }
+          isContstrainedToViewport={ true }>
+          <p>
+            Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
+            nihil libero et, hic!
+          </p>
+        </Popover>
+      </div>,
+    ],
+  },
 ];

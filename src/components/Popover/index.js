@@ -2,6 +2,10 @@ import React from 'react';
 import Tether from 'tether';
 
 const PopoverTitle = (title) => {
+  if (!title) {
+    return null;
+  }
+
   return (
     <div className="oui-pop--over__title">{ title }</div>
   );
@@ -42,14 +46,15 @@ class Popover extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <div>
-        { this.props.targetElement }
+        // TRYING TO ADD A ONCLICK PROP HERE TO MAKE IT SO THAT THE ORIGINAL ONCLICK EXECUTES AND THE POPOVER OPENS
+        <this.props.targetElement />
         <div
           className={ 'oui-pop--over' }
           ref={ (el) => { this._el = el; } }
           style={ this.props.isVisible ? { display: 'block', opacity: 1 } : null }
           data-test-section={ this.props.testSection }>
           <div className="oui-pop--over__content">
-            { this.props.title ? PopoverTitle(this.props.title) : null }
+            { PopoverTitle(this.props.title) }
             { this.props.children }
           </div>
         </div>
