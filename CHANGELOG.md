@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
 - [Patch] Fix disabled state for toggle buttons (#480)
 - [Patch] Update search icon (#483)
+- [Patch] Add `merge=union` for `CHANGELOG.md` to reduce merge conflicts. (#493)
 - [Feature] Add danger-outline button style (#491)
 
 ## [13.2.0][13.2.0] - 2016-08-03
