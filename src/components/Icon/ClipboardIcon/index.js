@@ -38,4 +38,3 @@ ClipboardIcon.propTypes = {
 };
 
 export default ClipboardIcon;
-

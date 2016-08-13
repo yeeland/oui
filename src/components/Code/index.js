@@ -1,51 +1,9 @@
 import React from 'react';
 
-import Button from '../Button';
-
 import * as Highlight from 'highlight.js';
 import { default as Clipboard } from 'clipboard';
 
-/**
- * Copies the provided code when clicking on a copy button. It uses
- * clipboard.js to copy the text and hackily adds a temporary DOM node to
- * add a listener and simulate a click in order to get around weird
- * clipboard.js restrictions.
- * @param {Object} event - Click event
- * @param {String} code - Code to be copied
- */
-const onCopyClick = (event, code) => {
-  // Create a temporary element to serve as a click handler for clipboard.js.
-  let button = event.target;
-  let temporaryListenerNode = button.parentNode.insertBefore(document.createElement('button'), button);
-
-  let clipboardListener = new Clipboard(temporaryListenerNode, {
-    text: function() {
-      return code;
-    },
-  });
-
-  // Simulate a click on the temporary listener.
-  temporaryListenerNode.click();
-
-  // Clean up all the mess.
-  clipboardListener.destroy();
-  temporaryListenerNode.remove();
-};
-
-const CopyButton = (code, testSection) => {
-  let buttonTestSection = testSection ? testSection + '-copy-button' : null;
-
-  return (
-    <div style={ { position: 'absolute', right: 0 } }>
-      <Button
-        style="plain"
-        onClick={ function(event) { onCopyClick(event, code); } }
-        testSection={ buttonTestSection }>
-        Copy
-      </Button>
-    </div>
-  );
-};
+import CopyButton from './CopyButton';
 
 const HighlightedCode = (code, isHighlighted, language, className, testSection) => {
   let dangerouslySetInnerHTML = null;
@@ -79,23 +37,25 @@ const HighlightedCode = (code, isHighlighted, language, className, testSection) 
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Code = (props) => {
-  if (props.type === 'inline') {
-    return HighlightedCode(props.children, props.isHighlighted, props.language, 'oui-code', props.testSection);
+class Code extends React.Component {
+  render() {
+    return (
+      /* eslint-disable react/jsx-no-bind */
+      <div className="position--relative">
+        <CopyButton testSection={ this.props.testSection }>
+          { this.props.children }
+        </CopyButton>
+
+        <pre
+          className="oui-pre"
+          data-test-section={ this.props.testSection }>
+          { HighlightedCode(this.props.children, this.props.isHighlighted, this.props.language) }
+        </pre>
+      </div>
+      /* eslint-enable react/jsx-no-bind */
+    );
   }
-
-  return (
-    <div className="position--relative">
-      { props.hasCopyButton ? CopyButton(props.children, props.testSection) : null }
-
-      <pre
-        className="oui-pre"
-        data-test-section={ props.testSection }>
-        { HighlightedCode(props.children, props.isHighlighted, props.language) }
-      </pre>
-    </div>
-  );
-};
+}
 
 Code.propTypes = {
   /** The code within the component */

@@ -38,4 +38,3 @@ CodeIcon.propTypes = {
 };
 
 export default CodeIcon;
-
