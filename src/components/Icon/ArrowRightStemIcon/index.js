@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ArrowRightStemIcon16 from 'oui-icons/src/16/arrow-right-stem-16.svg';
-import ArrowRightStemIcon24 from 'oui-icons/src/24/arrow-right-stem-24.svg';
+/* eslint-disable max-len */
+const ArrowRightStemIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/arrow-right-stem-16.svg');
+const ArrowRightStemIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/arrow-right-stem-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import InconclusiveIcon16 from 'oui-icons/src/16/inconclusive-16.svg';
-import InconclusiveIcon24 from 'oui-icons/src/24/inconclusive-24.svg';
+/* eslint-disable max-len */
+const InconclusiveIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/inconclusive-16.svg');
+const InconclusiveIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/inconclusive-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

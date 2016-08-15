@@ -1,7 +1,10 @@
 import React from 'react';
 
-import AbIcon16 from 'oui-icons/src/16/ab-16.svg';
-import AbIcon24 from 'oui-icons/src/24/ab-24.svg';
+/* eslint-disable max-len */
+const AbIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/ab-16.svg');
+const AbIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/ab-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

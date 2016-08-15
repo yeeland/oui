@@ -1,7 +1,10 @@
 import React from 'react';
 
-import CalendarIcon16 from 'oui-icons/src/16/calendar-16.svg';
-import CalendarIcon24 from 'oui-icons/src/24/calendar-24.svg';
+/* eslint-disable max-len */
+const CalendarIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/calendar-16.svg');
+const CalendarIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/calendar-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

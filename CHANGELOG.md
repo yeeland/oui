@@ -15,6 +15,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Add `merge=union` for `CHANGELOG.md` to reduce merge conflicts. (#493)
 - [Feature] Add danger-outline button style (#491)
 
+### Changed
+- [Release] Add webpack loaders into `require(...)` (opposed to `webpack.config.js`) and as `dependencies` so that icon SVGs and `highlight.js` CSS can be loaded without requiring applications that use OUI's React components to configure the loaders in their `package.json`. (#485)
+
 ## [13.2.0][13.2.0] - 2016-08-03
 ### Added
 - [Feature] Created `Token` React component.

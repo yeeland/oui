@@ -53,7 +53,7 @@ const HighlightedCode = (code, isHighlighted, language, className, testSection) 
   if (isHighlighted) {
     // Code that uses syntax highlighting needs to have
     // `dangerouslySetInnerHTML` set so that the HTML returned is displayed.
-    require('highlight.js/styles/docco.css');
+    require('style-loader!css-loader!highlight.js/styles/docco.css');
 
     dangerouslySetInnerHTML = {
       __html: language ? Highlight.highlight(language, code).value :

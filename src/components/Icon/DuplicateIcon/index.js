@@ -1,7 +1,10 @@
 import React from 'react';
 
-import DuplicateIcon16 from 'oui-icons/src/16/duplicate-16.svg';
-import DuplicateIcon24 from 'oui-icons/src/24/duplicate-24.svg';
+/* eslint-disable max-len */
+const DuplicateIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/duplicate-16.svg');
+const DuplicateIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/duplicate-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

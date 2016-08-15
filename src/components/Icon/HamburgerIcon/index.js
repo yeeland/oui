@@ -1,7 +1,10 @@
 import React from 'react';
 
-import HamburgerIcon16 from 'oui-icons/src/16/hamburger-16.svg';
-import HamburgerIcon24 from 'oui-icons/src/24/hamburger-24.svg';
+/* eslint-disable max-len */
+const HamburgerIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/hamburger-16.svg');
+const HamburgerIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/hamburger-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

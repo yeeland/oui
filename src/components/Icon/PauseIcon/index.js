@@ -1,7 +1,10 @@
 import React from 'react';
 
-import PauseIcon16 from 'oui-icons/src/16/pause-16.svg';
-import PauseIcon24 from 'oui-icons/src/24/pause-24.svg';
+/* eslint-disable max-len */
+const PauseIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/pause-16.svg');
+const PauseIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/pause-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

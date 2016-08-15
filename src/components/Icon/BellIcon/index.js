@@ -1,7 +1,10 @@
 import React from 'react';
 
-import BellIcon16 from 'oui-icons/src/16/bell-16.svg';
-import BellIcon24 from 'oui-icons/src/24/bell-24.svg';
+/* eslint-disable max-len */
+const BellIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/bell-16.svg');
+const BellIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/bell-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import CloseIcon16 from 'oui-icons/src/16/close-16.svg';
-import CloseIcon24 from 'oui-icons/src/24/close-24.svg';
+/* eslint-disable max-len */
+const CloseIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/close-16.svg');
+const CloseIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/close-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

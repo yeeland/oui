@@ -1,7 +1,10 @@
 import React from 'react';
 
-import DimensionsIcon16 from 'oui-icons/src/16/dimensions-16.svg';
-import DimensionsIcon24 from 'oui-icons/src/24/dimensions-24.svg';
+/* eslint-disable max-len */
+const DimensionsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/dimensions-16.svg');
+const DimensionsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/dimensions-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

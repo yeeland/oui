@@ -1,7 +1,10 @@
 import React from 'react';
 
-import EventsIcon16 from 'oui-icons/src/16/events-16.svg';
-import EventsIcon24 from 'oui-icons/src/24/events-24.svg';
+/* eslint-disable max-len */
+const EventsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/events-16.svg');
+const EventsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/events-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

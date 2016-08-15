@@ -1,7 +1,10 @@
 import React from 'react';
 
-import AlignJustifyIcon16 from 'oui-icons/src/16/align-justify-16.svg';
-import AlignJustifyIcon24 from 'oui-icons/src/24/align-justify-24.svg';
+/* eslint-disable max-len */
+const AlignJustifyIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/align-justify-16.svg');
+const AlignJustifyIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-justify-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

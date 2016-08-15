@@ -4,7 +4,7 @@
 //
 // More information:
 // https://facebook.github.io/jest/docs/tutorial-webpack.html
-import React from 'react';
+const React = require('react');
 
 const MockIcon = (props) => {
   return (
@@ -12,4 +12,4 @@ const MockIcon = (props) => {
   );
 };
 
-export default MockIcon;
+module.exports = MockIcon;

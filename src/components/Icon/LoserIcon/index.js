@@ -1,7 +1,10 @@
 import React from 'react';
 
-import LoserIcon16 from 'oui-icons/src/16/loser-16.svg';
-import LoserIcon24 from 'oui-icons/src/24/loser-24.svg';
+/* eslint-disable max-len */
+const LoserIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/loser-16.svg');
+const LoserIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/loser-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

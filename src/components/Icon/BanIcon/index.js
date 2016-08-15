@@ -1,7 +1,10 @@
 import React from 'react';
 
-import BanIcon16 from 'oui-icons/src/16/ban-16.svg';
-import BanIcon24 from 'oui-icons/src/24/ban-24.svg';
+/* eslint-disable max-len */
+const BanIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/ban-16.svg');
+const BanIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/ban-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import VariationSettingsIcon16 from 'oui-icons/src/16/variation-settings-16.svg';
-import VariationSettingsIcon24 from 'oui-icons/src/24/variation-settings-24.svg';
+/* eslint-disable max-len */
+const VariationSettingsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/variation-settings-16.svg');
+const VariationSettingsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/variation-settings-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

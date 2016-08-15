@@ -1,7 +1,10 @@
 import React from 'react';
 
-import TabletIcon16 from 'oui-icons/src/16/tablet-16.svg';
-import TabletIcon24 from 'oui-icons/src/24/tablet-24.svg';
+/* eslint-disable max-len */
+const TabletIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/tablet-16.svg');
+const TabletIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/tablet-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

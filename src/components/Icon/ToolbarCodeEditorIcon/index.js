@@ -1,6 +1,9 @@
 import React from 'react';
 
-import ToolbarCodeEditorIcon24 from 'oui-icons/src/24/toolbar-code-editor-24.svg';
+/* eslint-disable max-len */
+const ToolbarCodeEditorIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-code-editor-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

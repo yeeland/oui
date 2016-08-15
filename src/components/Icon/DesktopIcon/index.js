@@ -1,7 +1,10 @@
 import React from 'react';
 
-import DesktopIcon16 from 'oui-icons/src/16/desktop-16.svg';
-import DesktopIcon24 from 'oui-icons/src/24/desktop-24.svg';
+/* eslint-disable max-len */
+const DesktopIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/desktop-16.svg');
+const DesktopIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/desktop-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

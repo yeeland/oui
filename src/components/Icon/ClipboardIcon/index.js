@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ClipboardIcon16 from 'oui-icons/src/16/clipboard-16.svg';
-import ClipboardIcon24 from 'oui-icons/src/24/clipboard-24.svg';
+/* eslint-disable max-len */
+const ClipboardIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/clipboard-16.svg');
+const ClipboardIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/clipboard-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

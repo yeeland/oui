@@ -19,18 +19,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
       },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
-      {
-        test: /\.svg$/,
-        loaders: [
-          'babel',
-          'svg-jsx-loader',
-          'svgo-loader',
-        ],
-      },
     ],
   },
 };

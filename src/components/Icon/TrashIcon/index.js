@@ -1,7 +1,10 @@
 import React from 'react';
 
-import TrashIcon16 from 'oui-icons/src/16/trash-16.svg';
-import TrashIcon24 from 'oui-icons/src/24/trash-24.svg';
+/* eslint-disable max-len */
+const TrashIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/trash-16.svg');
+const TrashIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/trash-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

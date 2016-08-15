@@ -1,7 +1,10 @@
 import React from 'react';
 
-import EditorSwitchIcon16 from 'oui-icons/src/16/editor-switch-16.svg';
-import EditorSwitchIcon24 from 'oui-icons/src/24/editor-switch-24.svg';
+/* eslint-disable max-len */
+const EditorSwitchIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/editor-switch-16.svg');
+const EditorSwitchIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/editor-switch-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

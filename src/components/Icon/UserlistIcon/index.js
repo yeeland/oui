@@ -1,7 +1,10 @@
 import React from 'react';
 
-import UserlistIcon16 from 'oui-icons/src/16/userlist-16.svg';
-import UserlistIcon24 from 'oui-icons/src/24/userlist-24.svg';
+/* eslint-disable max-len */
+const UserlistIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/userlist-16.svg');
+const UserlistIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/userlist-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

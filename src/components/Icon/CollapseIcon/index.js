@@ -1,7 +1,10 @@
 import React from 'react';
 
-import CollapseIcon16 from 'oui-icons/src/16/collapse-16.svg';
-import CollapseIcon24 from 'oui-icons/src/24/collapse-24.svg';
+/* eslint-disable max-len */
+const CollapseIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/collapse-16.svg');
+const CollapseIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/collapse-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import PaperclipIcon16 from 'oui-icons/src/16/paperclip-16.svg';
-import PaperclipIcon24 from 'oui-icons/src/24/paperclip-24.svg';
+/* eslint-disable max-len */
+const PaperclipIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/paperclip-16.svg');
+const PaperclipIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/paperclip-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

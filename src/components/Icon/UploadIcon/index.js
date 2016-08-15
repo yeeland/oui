@@ -1,7 +1,10 @@
 import React from 'react';
 
-import UploadIcon16 from 'oui-icons/src/16/upload-16.svg';
-import UploadIcon24 from 'oui-icons/src/24/upload-24.svg';
+/* eslint-disable max-len */
+const UploadIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/upload-16.svg');
+const UploadIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/upload-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

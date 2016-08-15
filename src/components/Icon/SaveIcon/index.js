@@ -1,7 +1,10 @@
 import React from 'react';
 
-import SaveIcon16 from 'oui-icons/src/16/save-16.svg';
-import SaveIcon24 from 'oui-icons/src/24/save-24.svg';
+/* eslint-disable max-len */
+const SaveIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/save-16.svg');
+const SaveIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/save-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,6 +1,9 @@
 import React from 'react';
 
-import ArrowNsIcon16 from 'oui-icons/src/16/arrow-ns-16.svg';
+/* eslint-disable max-len */
+const ArrowNsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/arrow-ns-16.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

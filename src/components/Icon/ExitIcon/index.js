@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ExitIcon16 from 'oui-icons/src/16/exit-16.svg';
-import ExitIcon24 from 'oui-icons/src/24/exit-24.svg';
+/* eslint-disable max-len */
+const ExitIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/exit-16.svg');
+const ExitIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/exit-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

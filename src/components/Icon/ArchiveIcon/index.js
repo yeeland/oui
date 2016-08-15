@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ArchiveIcon16 from 'oui-icons/src/16/archive-16.svg';
-import ArchiveIcon24 from 'oui-icons/src/24/archive-24.svg';
+/* eslint-disable max-len */
+const ArchiveIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/archive-16.svg');
+const ArchiveIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/archive-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

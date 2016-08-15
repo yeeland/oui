@@ -1,7 +1,10 @@
 import React from 'react';
 
-import CampaignsIcon16 from 'oui-icons/src/16/campaigns-16.svg';
-import CampaignsIcon24 from 'oui-icons/src/24/campaigns-24.svg';
+/* eslint-disable max-len */
+const CampaignsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/campaigns-16.svg');
+const CampaignsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/campaigns-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

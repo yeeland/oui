@@ -1,6 +1,9 @@
 import React from 'react';
 
-import ToolbarReloadIcon24 from 'oui-icons/src/24/toolbar-reload-24.svg';
+/* eslint-disable max-len */
+const ToolbarReloadIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-reload-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

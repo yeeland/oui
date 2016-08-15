@@ -1,7 +1,10 @@
 import React from 'react';
 
-import MinusIcon16 from 'oui-icons/src/16/minus-16.svg';
-import MinusIcon24 from 'oui-icons/src/24/minus-24.svg';
+/* eslint-disable max-len */
+const MinusIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/minus-16.svg');
+const MinusIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/minus-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

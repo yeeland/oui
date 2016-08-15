@@ -1,7 +1,10 @@
 import React from 'react';
 
-import SyncIcon16 from 'oui-icons/src/16/sync-16.svg';
-import SyncIcon24 from 'oui-icons/src/24/sync-24.svg';
+/* eslint-disable max-len */
+const SyncIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/sync-16.svg');
+const SyncIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/sync-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

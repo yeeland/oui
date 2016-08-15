@@ -1,6 +1,9 @@
 import React from 'react';
 
-import AlignRightIcon24 from 'oui-icons/src/24/align-right-24.svg';
+/* eslint-disable max-len */
+const AlignRightIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-right-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

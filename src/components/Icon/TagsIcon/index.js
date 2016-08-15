@@ -1,7 +1,10 @@
 import React from 'react';
 
-import TagsIcon16 from 'oui-icons/src/16/tags-16.svg';
-import TagsIcon24 from 'oui-icons/src/24/tags-24.svg';
+/* eslint-disable max-len */
+const TagsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/tags-16.svg');
+const TagsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/tags-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import MobileIcon16 from 'oui-icons/src/16/mobile-16.svg';
-import MobileIcon24 from 'oui-icons/src/24/mobile-24.svg';
+/* eslint-disable max-len */
+const MobileIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/mobile-16.svg');
+const MobileIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/mobile-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

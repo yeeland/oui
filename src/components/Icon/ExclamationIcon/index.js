@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ExclamationIcon16 from 'oui-icons/src/16/exclamation-16.svg';
-import ExclamationIcon24 from 'oui-icons/src/24/exclamation-24.svg';
+/* eslint-disable max-len */
+const ExclamationIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/exclamation-16.svg');
+const ExclamationIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/exclamation-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

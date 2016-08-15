@@ -1,6 +1,9 @@
 import React from 'react';
 
-import ToolbarSizeMobileIcon24 from 'oui-icons/src/24/toolbar-size-mobile-24.svg';
+/* eslint-disable max-len */
+const ToolbarSizeMobileIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-size-mobile-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-import RedirectIcon16 from 'oui-icons/src/16/redirect-16.svg';
-import RedirectIcon24 from 'oui-icons/src/24/redirect-24.svg';
+/* eslint-disable max-len */
+const RedirectIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/redirect-16.svg');
+const RedirectIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/redirect-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}

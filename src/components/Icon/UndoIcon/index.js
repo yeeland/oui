@@ -1,7 +1,10 @@
 import React from 'react';
 
-import UndoIcon16 from 'oui-icons/src/16/undo-16.svg';
-import UndoIcon24 from 'oui-icons/src/24/undo-24.svg';
+/* eslint-disable max-len */
+const UndoIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/undo-16.svg');
+const UndoIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/undo-24.svg');
+/* eslint-enable max-len */
+
 /**
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
