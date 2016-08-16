@@ -11,20 +11,23 @@ const ClipboardIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loade
  */
 const ClipboardIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 16:
       Svg = ClipboardIcon16;
+      SizeClass = 'oui-icon--16';
       break;
     case 24:
       Svg = ClipboardIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

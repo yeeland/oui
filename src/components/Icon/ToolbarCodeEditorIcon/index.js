@@ -10,17 +10,19 @@ const ToolbarCodeEditorIcon24 = require('babel?presets[]=react!svg-jsx-loader!sv
  */
 const ToolbarCodeEditorIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 24:
       Svg = ToolbarCodeEditorIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

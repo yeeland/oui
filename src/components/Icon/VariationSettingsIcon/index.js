@@ -11,20 +11,23 @@ const VariationSettingsIcon24 = require('babel?presets[]=react!svg-jsx-loader!sv
  */
 const VariationSettingsIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 16:
       Svg = VariationSettingsIcon16;
+      SizeClass = 'oui-icon--16';
       break;
     case 24:
       Svg = VariationSettingsIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

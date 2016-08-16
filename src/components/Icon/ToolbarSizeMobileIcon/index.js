@@ -10,17 +10,19 @@ const ToolbarSizeMobileIcon24 = require('babel?presets[]=react!svg-jsx-loader!sv
  */
 const ToolbarSizeMobileIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 24:
       Svg = ToolbarSizeMobileIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

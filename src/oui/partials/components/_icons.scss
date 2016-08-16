@@ -17,12 +17,14 @@
   display: inline-block;
   fill: currentColor;
 
-  &--small {
+  &--small,
+  &--12 {
     width: map-fetch($icon, size, small, width);
     height: map-fetch($icon, size, small, height);
   }
 
-  &--medium {
+  &--medium,
+  &--24 {
     width: map-fetch($icon, size, medium, width);
     height: map-fetch($icon, size, medium, height);
   }

@@ -10,17 +10,19 @@ const ToolbarNewWindowCloseIcon24 = require('babel?presets[]=react!svg-jsx-loade
  */
 const ToolbarNewWindowCloseIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 24:
       Svg = ToolbarNewWindowCloseIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

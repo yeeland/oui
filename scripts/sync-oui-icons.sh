@@ -63,6 +63,7 @@ for f in $OUI_ICONS_SRC_DIRECTORY/**/*.svg; do
  */
 const $component_name = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {"
 
@@ -71,6 +72,7 @@ const $component_name = (props) => {
       xargs -n1 -I '%' echo -n "
     case %:
       Svg = $component_name%;
+      SizeClass = 'oui-icon--%';
       break;")
 
     file_contents="$file_contents
@@ -79,7 +81,7 @@ const $component_name = (props) => {
 
   return (
     <Svg
-      className=\"oui-icon display--inline\"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

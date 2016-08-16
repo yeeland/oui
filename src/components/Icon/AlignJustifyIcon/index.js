@@ -11,20 +11,23 @@ const AlignJustifyIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-lo
  */
 const AlignJustifyIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 16:
       Svg = AlignJustifyIcon16;
+      SizeClass = 'oui-icon--16';
       break;
     case 24:
       Svg = AlignJustifyIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );

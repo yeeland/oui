@@ -1,39 +1,37 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const SearchIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/search-16.svg');
-const SearchIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/search-24.svg');
+const IconSample16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/history-16.svg');
+const IconSample24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/history-24.svg');
 /* eslint-enable max-len */
 
 /**
+ * Icon example for any of our OUI icons in the library.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const SearchIcon = (props) => {
+const IconSample = (props) => {
   let Svg;
-  let SizeClass;
 
   switch (props.size) {
     case 16:
-      Svg = SearchIcon16;
-      SizeClass = 'oui-icon--16';
+      Svg = IconSample16;
       break;
     case 24:
-      Svg = SearchIcon24;
-      SizeClass = 'oui-icon--24';
+      Svg = IconSample24;
       break;
     default:
   }
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + SizeClass }
+      className="oui-icon display--inline"
       data-test-section={ props.testSection }
     />
   );
 };
 
-SearchIcon.propTypes = {
+IconSample.propTypes = {
   /** Size of the icon */
   size: React.PropTypes.oneOf([
     16,
@@ -43,5 +41,4 @@ SearchIcon.propTypes = {
   testSection: React.PropTypes.string,
 };
 
-export default SearchIcon;
-
+export default IconSample;

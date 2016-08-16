@@ -11,20 +11,23 @@ const AlignCenterIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loa
  */
 const AlignCenterIcon = (props) => {
   let Svg;
+  let SizeClass;
 
   switch (props.size) {
     case 16:
       Svg = AlignCenterIcon16;
+      SizeClass = 'oui-icon--16';
       break;
     case 24:
       Svg = AlignCenterIcon24;
+      SizeClass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + SizeClass }
       data-test-section={ props.testSection }
     />
   );
