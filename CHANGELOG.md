@@ -6,9 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
-## [14.0.1][14.0.1] - 2016-08-17
+## [14.0.3][14.0.3] - 2016-08-17
 ### Fixed
-- [Patch] Update require.css statement to ignore local webpack config transforms. (#498)
+- [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
 
 ## [14.0.0][14.0.0] - 2016-08-15
 ### Added
@@ -519,4 +519,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.1.1]: https://github.com/optimizely/oui/compare/v13.1.0...v13.1.1
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
 [14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
-[14.0.1]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.1
+[14.0.3]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.3
