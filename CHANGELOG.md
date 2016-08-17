@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+- [Patch] Update require.css statement to ignore local webpack config transforms. (#498)
 
 ## [14.0.0][14.0.0] - 2016-08-15
 ### Added
