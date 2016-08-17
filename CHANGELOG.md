@@ -519,3 +519,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.1.1]: https://github.com/optimizely/oui/compare/v13.1.0...v13.1.1
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
+[14.0.1]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.1
