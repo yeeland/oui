@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const CampaignsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/campaigns-16.svg');
-const CampaignsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/campaigns-24.svg');
+const CampaignsIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/campaigns-16.svg');
+const CampaignsIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/campaigns-24.svg');
 /* eslint-enable max-len */
 
 /**

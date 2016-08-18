@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ToolbarDevToolsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-dev-tools-24.svg');
+const ToolbarDevToolsIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-dev-tools-24.svg');
 /* eslint-enable max-len */
 
 /**

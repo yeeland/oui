@@ -52,7 +52,7 @@ for f in $OUI_ICONS_SRC_DIRECTORY/**/*.svg; do
     # prints them in the `echo` as the `%` symbol.
     file_contents=$file_contents$(find node_modules/oui-icons/src -regex "node_modules/oui-icons/src/[0-9][0-9]/${file_name}-[0-9][0-9].*\.svg" |
       cut -c28-29 |
-      xargs -n1 -I '%' echo "const $component_name% = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/%/$file_name-%.svg');")
+      xargs -n1 -I '%' echo "const $component_name% = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/%/$file_name-%.svg');")
 
     file_contents="$file_contents
 /* eslint-enable max-len */

@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const CreateCampaignIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/create-campaign-24.svg');
+const CreateCampaignIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/create-campaign-24.svg');
 /* eslint-enable max-len */
 
 /**

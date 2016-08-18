@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const BanIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/ban-16.svg');
-const BanIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/ban-24.svg');
+const BanIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/ban-16.svg');
+const BanIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/ban-24.svg');
 /* eslint-enable max-len */
 
 /**

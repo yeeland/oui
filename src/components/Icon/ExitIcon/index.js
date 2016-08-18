@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ExitIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/exit-16.svg');
-const ExitIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/exit-24.svg');
+const ExitIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/exit-16.svg');
+const ExitIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/exit-24.svg');
 /* eslint-enable max-len */
 
 /**

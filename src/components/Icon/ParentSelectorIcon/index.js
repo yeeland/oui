@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ParentSelectorIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/parent-selector-16.svg');
-const ParentSelectorIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/parent-selector-24.svg');
+const ParentSelectorIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/parent-selector-16.svg');
+const ParentSelectorIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/parent-selector-24.svg');
 /* eslint-enable max-len */
 
 /**

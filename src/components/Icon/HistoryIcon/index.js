@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const HistoryIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/history-16.svg');
-const HistoryIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/history-24.svg');
+const HistoryIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/history-16.svg');
+const HistoryIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/history-24.svg');
 /* eslint-enable max-len */
 
 /**

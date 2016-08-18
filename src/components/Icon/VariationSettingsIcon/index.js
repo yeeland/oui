@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const VariationSettingsIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/variation-settings-16.svg');
-const VariationSettingsIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/variation-settings-24.svg');
+const VariationSettingsIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/variation-settings-16.svg');
+const VariationSettingsIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/variation-settings-24.svg');
 /* eslint-enable max-len */
 
 /**

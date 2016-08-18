@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const AlignRightIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-right-24.svg');
+const AlignRightIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-right-24.svg');
 /* eslint-enable max-len */
 
 /**
