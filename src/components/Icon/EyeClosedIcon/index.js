@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const EyeClosedIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/eye-closed-16.svg');
-const EyeClosedIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/eye-closed-24.svg');
+const EyeClosedIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/eye-closed-16.svg');
+const EyeClosedIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/eye-closed-24.svg');
 /* eslint-enable max-len */
 
 /**

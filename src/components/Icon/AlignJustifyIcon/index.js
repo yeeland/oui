@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const AlignJustifyIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/align-justify-16.svg');
-const AlignJustifyIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-justify-24.svg');
+const AlignJustifyIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/align-justify-16.svg');
+const AlignJustifyIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-justify-24.svg');
 /* eslint-enable max-len */
 
 /**

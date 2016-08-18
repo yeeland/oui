@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const RedoIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/redo-16.svg');
-const RedoIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/redo-24.svg');
+const RedoIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/redo-16.svg');
+const RedoIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/redo-24.svg');
 /* eslint-enable max-len */
 
 /**

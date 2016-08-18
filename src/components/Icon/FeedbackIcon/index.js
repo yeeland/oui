@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const FeedbackIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/feedback-16.svg');
-const FeedbackIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/feedback-24.svg');
+const FeedbackIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/feedback-16.svg');
+const FeedbackIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/feedback-24.svg');
 /* eslint-enable max-len */
 
 /**
