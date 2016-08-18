@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ToolbarCodeEditorIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-code-editor-24.svg');
+const ToolbarCodeEditorIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/toolbar-code-editor-24.svg');
 /* eslint-enable max-len */
 
 /**

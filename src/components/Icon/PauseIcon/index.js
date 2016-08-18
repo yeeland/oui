@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const PauseIcon16 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/pause-16.svg');
-const PauseIcon24 = require('babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/pause-24.svg');
+const PauseIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/pause-16.svg');
+const PauseIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/pause-24.svg');
 /* eslint-enable max-len */
 
 /**
