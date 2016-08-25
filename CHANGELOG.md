@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add isFilter prop to <Input> for search icon (#488)
+### Changed
+- [Patch] Update disclose arrow to narrow style per Silvia. (#504)
 
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
