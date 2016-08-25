@@ -9,9 +9,12 @@ import Label from '../Label';
  */
 const Input = (props) => {
   let renderInput = (opts) => {
+    let hasSearchIcon = opts.isFilter ? ' oui-text-input--search' : '';
+    let classes = 'oui-text-input' + hasSearchIcon;
+
     return (
       <input
-        className="oui-text-input"
+        className={ classes }
         type={ opts.type }
         value={ opts.value }
         defaultValue={ opts.defaultValue }
@@ -45,6 +48,8 @@ Input.propTypes = {
   defaultValue: React.PropTypes.string,
   /** Prevents input from being modified and appears disabled */
   isDisabled: React.PropTypes.bool,
+  /** Includes search icon if true */
+  isFilter: React.PropTypes.bool,
   /** Prevents input from being modified but doesn't appear disabled */
   isReadOnly: React.PropTypes.bool,
   /** Prevents input from being submitted without value */
