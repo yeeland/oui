@@ -209,7 +209,9 @@ module.exports = {
     "react/jsx-no-duplicate-props": ["warn"],
     "react/jsx-no-target-blank": ["warn"],
     "react/jsx-no-undef": ["warn"],
-    "react/jsx-pascal-case": ["warn"],
+    "react/jsx-pascal-case": ["warn", {
+      "ignore": ["TD", "TR", "TH"],
+    }],
     "react/jsx-space-before-closing": ["warn", "always"],
     "valid-jsdoc": ["warn", {
       "prefer": {
