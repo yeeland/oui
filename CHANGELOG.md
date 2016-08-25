@@ -7,8 +7,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
+
 ### Changed
 - [Patch] Update disclose arrow to narrow style per Silvia. (#504)
+- [Patch] Fix typo in React prop description to say onChange fires every keypress. (#492)
 - [Patch] Fix disabled button namespace with OUI. Add all disabled examples to React docs for easy testing for now. (#511)
 - [Patch] Typo for <Input> React prop where onChange triggers on every keypress. (#510)
 
