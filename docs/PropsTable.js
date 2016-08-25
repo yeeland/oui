@@ -17,7 +17,21 @@ const PropsTable = (props) => {
       // handle enum types
       let propDisplayType = componentProps[prop].type.name;
       if (propDisplayType === 'enum') {
-        propDisplayType = <Table data={ componentProps[prop].type.value.map(v => [v.value]) } />;
+        propDisplayType = (
+          <Table>
+            <Table.TBody>
+              {
+                componentProps[prop].type.value.map(v => {
+                  return (
+                    <Table.TR key={ v.value }>
+                      <Table.TD>{ v.value }</Table.TD>
+                    </Table.TR>
+                  );
+                })
+              }
+            </Table.TBody>
+          </Table>
+        );
       }
 
       data.push(
@@ -32,11 +46,30 @@ const PropsTable = (props) => {
 
   return (
     <Table
-      className="table"
       headings={ ['Prop', 'Type', 'Description'] }
       data={ data }
-      style="rule"
-    />
+      style="rule">
+      <Table.THead>
+        <Table.TR>
+          <Table.TH>Prop</Table.TH>
+          <Table.TH>Type</Table.TH>
+          <Table.TH>Description</Table.TH>
+        </Table.TR>
+      </Table.THead>
+      <Table.TBody>
+        {
+          data.map((prop) => {
+            return (
+              <Table.TR key={ prop[0] }>
+                <Table.TD>{ prop[0] }</Table.TD>
+                <Table.TD>{ prop[1] }</Table.TD>
+                <Table.TD>{ prop[2] }</Table.TD>
+              </Table.TR>
+            );
+          })
+        }
+      </Table.TBody>
+    </Table>
   );
 };
 

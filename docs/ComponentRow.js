@@ -20,6 +20,9 @@ const ComponentRow = (props) => {
           props.components.map((exampleComponent, i) => {
             codeHTML += reactElementToJSXString(exampleComponent, {
               showFunctions: true,
+              displayName: (ReactElement) => {
+                return ReactElement.type.displayName || ReactElement.type.name;
+              },
             }) + '\n';
 
             return (

@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Release] Change the `Table` React component API to be more declarative. (#513) 
 
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
