@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
+- [Feature] Add isFilter prop to <Input> for search icon (#488)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
 
 ## [14.0.0][14.0.0] - 2016-08-15
