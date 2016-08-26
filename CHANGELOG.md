@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Changed
+- [Release] Change the `Table` React component API to be more declarative. (#513) 
 - [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
 
 ## [14.1.0][14.1.0] - 2016-08-25
