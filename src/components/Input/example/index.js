@@ -14,6 +14,15 @@ export default [
   {
     examples: [
       <Input
+        type="text"
+        placeholder="Browse by Name"
+        isFilter={ true }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
         type="number"
         defaultValue="42"
         onChange={
