@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const AlignLeftIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/align-left-16.svg');
-const AlignLeftIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-left-24.svg');
+const AlignLeftIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/align-left-16.svg');
+const AlignLeftIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/align-left-24.svg');
 /* eslint-enable max-len */
 
 /**

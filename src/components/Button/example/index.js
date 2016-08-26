@@ -16,16 +16,23 @@ export default [
     ],
   },
   {
+    isPadded: true,
+    examples: [
+      <Button isDisabled={ true }>Button</Button>,
+      <Button isDisabled={ true } style="highlight">Highlight</Button>,
+      <Button isDisabled={ true } style="danger">Danger</Button>,
+      <Button isDisabled={ true } style="danger-outline">Danger Outline</Button>,
+      <Button isDisabled={ true } style="outline">Outline</Button>,
+      <Button isDisabled={ true } style="plain">Plain</Button>,
+      <Button isDisabled={ true } style="toggle">Toggle</Button>,
+    ],
+  },
+
+  {
     backgroundColor: 'brand-dark',
     isPadded: true,
     examples: [
       <Button style="outline-reverse">Outline Reverse Button</Button>,
-    ],
-  },
-  {
-    isPadded: true,
-    examples: [
-      <Button isDisabled={ true }>Disabled Button</Button>,
     ],
   },
 

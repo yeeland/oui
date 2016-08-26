@@ -7,4 +7,5 @@ export { default as Icon } from './components/Icon';
 export { default as Input } from './components/Input';
 export { default as Label } from './components/Label';
 export { default as Table } from './components/Table';
+export { default as TabNav } from './components/TabNav';
 export { default as Token } from './components/Token';

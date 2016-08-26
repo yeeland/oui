@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const LinkIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/link-16.svg');
-const LinkIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/link-24.svg');
+const LinkIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/link-16.svg');
+const LinkIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/link-24.svg');
 /* eslint-enable max-len */
 
 /**
