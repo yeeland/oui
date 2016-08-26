@@ -313,12 +313,15 @@
     box-shadow: none;
 
     &.#{$namespace}button--plain,
-    &.#{$namespace}button--toggle {
+    &.#{$namespace}button--toggle,
+    &.oui-button--plain,
+    &.oui-button--toggle {
       background-color: transparent;
       border-color: transparent;
     }
 
-    &.#{$namespace}button--outline-reverse {
+    &.#{$namespace}button--outline-reverse,
+    &.oui-button--outline-reverse {
       background-color: transparent;
     }
   }

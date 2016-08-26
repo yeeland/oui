@@ -58,7 +58,7 @@ Input.propTypes = {
   label: React.PropTypes.string,
   /** Function that fires when the loses focus after the value changes */
   onChange: React.PropTypes.func,
-  /** Function that fires when the value of the input changes */
+  /** Function that fires on keypress */
   onInput: React.PropTypes.func,
   /** Input placeholder text */
   placeholder: React.PropTypes.string,
