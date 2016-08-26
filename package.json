@@ -13,8 +13,7 @@
     "highlight.js": "^9.5.0",
     "oui-icons": "3.0.1",
     "style-loader": "^0.13.1",
-    "svg-jsx-loader": "0.0.16",
-    "svgo-loader": "^1.1.0"
+    "svg-jsx-loader": "0.0.16"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
