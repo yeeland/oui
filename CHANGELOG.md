@@ -15,6 +15,10 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Typo for <Input> React prop where onChange triggers on every keypress. (#510)
 
 ## [14.0.5][14.0.5] - 2016-08-17
+## [14.0.3][14.0.3] - 2016-08-17
+### Fixed
+- [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
+## [14.0.4][14.0.4] - 2016-08-17
 ### Added
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
@@ -485,6 +489,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
+[Unreleased]: https://github.com/optimizely/oui/compare/v14.0.1...HEAD
 [Unreleased]: https://github.com/optimizely/oui/compare/v14.0.4...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
@@ -529,3 +534,5 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
 [14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
 [14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
+[14.0.3]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.3
+[14.0.4]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.4
