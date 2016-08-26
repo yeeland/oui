@@ -45,10 +45,7 @@ const PropsTable = (props) => {
   }
 
   return (
-    <Table
-      headings={ ['Prop', 'Type', 'Description'] }
-      data={ data }
-      style="rule">
+    <Table style="rule">
       <Table.THead>
         <Table.TR>
           <Table.TH>Prop</Table.TH>
