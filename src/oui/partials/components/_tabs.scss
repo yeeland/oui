@@ -56,7 +56,8 @@
 ///   </div>
 ////
 
-.#{$namespace}tabs-nav {
+.#{$namespace}tabs-nav,
+.oui-tabs-nav {
   display: flex;
   border-bottom: 3px solid map-fetch($color, ui, base);
 
@@ -104,31 +105,39 @@
   }
 }
 
-.#{$namespace}tabs--small {
+.#{$namespace}tabs--small,
+.oui-tabs--small {
 
-  .#{$namespace}tabs-nav {
+  .#{$namespace}tabs-nav,
+  .oui-tabs-nav {
     border-width: 1px;
   }
 
-  .#{$namespace}tabs-nav__item {
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
     background-color: transparent;
     padding: spacer(0.5) spacer(1);
     font-size: map-fetch($font, size, milli);
   }
 }
 
-.#{$namespace}tabs--center {
-  .#{$namespace}tabs-nav {
+.#{$namespace}tabs--center,
+.oui-tabs--center {
+  .#{$namespace}tabs-nav,
+  .oui-tabs-nav {
     justify-content: center;
   }
 
-  .#{$namespace}tabs-nav__item:first-child {
+  .#{$namespace}tabs-nav__item:first-child,
+  .oui-tabs-nav__item:first-child {
     margin-left: spacer(0.5);
   }
 }
 
-.#{$namespace}tabs--sub {
-  .#{$namespace}tabs-nav__item {
+.#{$namespace}tabs--sub,
+.oui-tabs--sub {
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
     border: 0;
 
     &.is-active::after {
@@ -144,7 +153,8 @@
   }
 }
 
-.#{$namespace}tabs-pane {
+.#{$namespace}tabs-pane,
+.oui-tabs-pane {
 
   &__item {
     display: none;
