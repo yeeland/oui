@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ExclamationIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/exclamation-16.svg');
-const ExclamationIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/exclamation-24.svg');
+const ExclamationIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/exclamation-16.svg');
+const ExclamationIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/exclamation-24.svg');
 /* eslint-enable max-len */
 
 /**

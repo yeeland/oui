@@ -50,6 +50,7 @@
     "react-dom": "^15.1.0",
     "react-element-to-jsx-string": "^3.2.0",
     "require-dir": "^0.3.0",
+    "svgo": "^0.7.0",
     "webpack": "^1.12.14",
     "yargs": "^4.1.0"
   },

@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ArrowRightStemIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/arrow-right-stem-16.svg');
-const ArrowRightStemIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/arrow-right-stem-24.svg');
+const ArrowRightStemIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/arrow-right-stem-16.svg');
+const ArrowRightStemIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/arrow-right-stem-24.svg');
 /* eslint-enable max-len */
 
 /**
