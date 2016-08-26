@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const SearchIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/search-16.svg');
-const SearchIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/search-24.svg');
+const SearchIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/search-16.svg');
+const SearchIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/search-24.svg');
 /* eslint-enable max-len */
 
 /**

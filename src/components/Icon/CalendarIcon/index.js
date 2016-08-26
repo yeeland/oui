@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const CalendarIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/calendar-16.svg');
-const CalendarIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/calendar-24.svg');
+const CalendarIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/calendar-16.svg');
+const CalendarIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/calendar-24.svg');
 /* eslint-enable max-len */
 
 /**

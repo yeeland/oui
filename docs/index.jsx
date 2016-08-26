@@ -25,6 +25,8 @@ import Label from '../src/components/Label';
 import LabelExample from '../src/components/Label/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
+import TabNav from '../src/components/TabNav';
+import TabNavExample from '../src/components/TabNav/example';
 import Token from '../src/components/Token';
 import TokenExample from '../src/components/Token/example';
 
@@ -65,6 +67,10 @@ const componentsArray = [
   {
     index: Table,
     example: TableExample,
+  },
+  {
+    index: TabNav,
+    example: TabNavExample,
   },
   {
     index: Token,

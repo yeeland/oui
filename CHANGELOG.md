@@ -5,11 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
+
+## [14.1.0][14.1.0] - 2016-08-25
 ### Added
 - [Feature] Add size class based on icon size prop. (#517)
 
 ## [14.1.0][14.1.0] - 2016-08-25
 ### Added
+- [Feature] Add TabNav react component
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 
 ### Changed
@@ -20,6 +25,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
+- [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
 
 ## [14.0.0][14.0.0] - 2016-08-15
 ### Added

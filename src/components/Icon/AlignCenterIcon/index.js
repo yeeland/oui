@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const AlignCenterIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/align-center-16.svg');
-const AlignCenterIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/align-center-24.svg');
+const AlignCenterIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/align-center-16.svg');
+const AlignCenterIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/align-center-24.svg');
 /* eslint-enable max-len */
 
 /**
