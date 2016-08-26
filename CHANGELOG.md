@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [14.1.0][14.1.0] - 2016-08-25
 ### Added
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 
@@ -12,11 +14,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Update disclose arrow to narrow style per Silvia. (#504)
 - [Patch] Fix typo in React prop description to say onChange fires every keypress. (#492)
 - [Patch] Fix disabled button namespace with OUI. Add all disabled examples to React docs for easy testing for now. (#511)
-- [Patch] Typo for <Input> React prop where onChange triggers on every keypress. (#510)
 
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
-- [Feature] Add isFilter prop to <Input> for search icon (#488)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
 
 ## [14.0.0][14.0.0] - 2016-08-15
@@ -485,7 +485,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v14.0.4...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v14.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -529,3 +529,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
 [14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
 [14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
+[14.1.0]: https://github.com/optimizely/oui/compare/v14.0.5...v14.1.0
