@@ -5,8 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [15.0.0][15.0.0] - 2016-08-26
 ### Changed
-- [Release] Change the `Table` React component API to be more declarative. (#513) 
+- [Release] Change the `Table` React component API to be more declarative. (#513)
 - [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
 
 ## [14.1.0][14.1.0] - 2016-08-25
@@ -491,7 +493,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v14.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v15.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -536,3 +538,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
 [14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
 [14.1.0]: https://github.com/optimizely/oui/compare/v14.0.5...v14.1.0
+[15.0.0]: https://github.com/optimizely/oui/compare/v14.1.0...v15.0.0
