@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const LiveVariablesIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/live-variables-16.svg');
-const LiveVariablesIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/live-variables-24.svg');
+const LiveVariablesIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/live-variables-16.svg');
+const LiveVariablesIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/live-variables-24.svg');
 /* eslint-enable max-len */
 
 /**

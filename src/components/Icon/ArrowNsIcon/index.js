@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ArrowNsIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/arrow-ns-16.svg');
+const ArrowNsIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/arrow-ns-16.svg');
 /* eslint-enable max-len */
 
 /**

@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const ClipboardIcon16 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/16/clipboard-16.svg');
-const ClipboardIcon24 = require('!babel?presets[]=react!svg-jsx-loader!svgo-loader!oui-icons/src/24/clipboard-24.svg');
+const ClipboardIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/clipboard-16.svg');
+const ClipboardIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/clipboard-24.svg');
 /* eslint-enable max-len */
 
 /**
