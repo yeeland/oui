@@ -37,7 +37,7 @@ const CopyButton = (code, testSection) => {
   let buttonTestSection = testSection ? testSection + '-copy-button' : null;
 
   return (
-    <div style={ { position: 'absolute', right: 0 } }>
+    <div style={ { position: 'absolute', right: 0, top: '5px' } }>
       <Button
         style="plain"
         onClick={ function(event) { onCopyClick(event, code); } }
