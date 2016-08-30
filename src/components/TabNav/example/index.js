@@ -34,7 +34,7 @@ export default [
   {
     isPadded: true,
     examples: [
-      <TabNav activeTab={ 'first' } style={ ['small'] }>
+      <TabNav activeTab={ 'second' } style={ ['small'] }>
         <TabNav.Tab
           tabId='first'
           onClick={ function() {

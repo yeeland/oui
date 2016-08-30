@@ -11,11 +11,13 @@ const TabNav = (props) => {
     return 'oui-tabs--' + style;
   }) : '';
   const classes = classNames(tabStyleClasses, 'oui-tabs');
-  // This passes the parent prop of active tab to the children elements
+  // Determine if the child is an active tab.
   // From http://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
-  const childrenWithProps = React.Children.map(props.children, (child) => React.cloneElement(child, {
-    activeTab: props.activeTab,
-  }));
+  const childrenWithProps = React.Children.map(props.children, (child) => {
+    return React.cloneElement(child, {
+      isActive: props.activeTab === child.props.tabId,
+    });
+  });
 
   return (
     <div data-test-section={ props.testSection } className={ classes }>
@@ -50,11 +52,10 @@ TabNav.propTypes = {
  * @returns {ReactElement}
  */
 const Tab = (props) => {
-  const isActive = props.activeTab === props.tabId;
   const classes = classNames({
     'oui-tabs-nav__item': true,
     'oui-tab-disabled': props.isDisabled,
-    'is-active': isActive,
+    'is-active': props.isActive,
   });
   return (
     <li
@@ -68,10 +69,10 @@ const Tab = (props) => {
 };
 
 Tab.propTypes = {
-  /** Id corresponding to which tab should be given the active class */
-  activeTab: React.PropTypes.string.isRequired,
   /** Text or element that appears within the component */
   children: React.PropTypes.node,
+  /** Should the `TabNav.Tab` visually appear to be active */
+  isActive: React.PropTypes.bool,
   /** Boolean for whether the tab should be given the disabled class */
   isDisabled: React.PropTypes.bool,
   /** Function to perform when tab is clicked */
