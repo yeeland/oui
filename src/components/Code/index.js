@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '../Button';
+import CopyIcon from '../Icon/ClipboardIcon';
 
 import * as Highlight from 'highlight.js';
 import { default as Clipboard } from 'clipboard';
@@ -41,7 +42,9 @@ const CopyButton = (code, testSection) => {
         style="plain"
         onClick={ function(event) { onCopyClick(event, code); } }
         testSection={ buttonTestSection }>
-        Copy
+        <CopyIcon
+          size={ 16 }>
+        </CopyIcon>
       </Button>
     </div>
   );
