@@ -18,7 +18,7 @@ export default [
         <Table.TBody>
           <Table.TR>
             <Table.TD>Header CTA</Table.TD>
-            <Table.TD>12%</Table.TD>
+            <Table.TD width="20%">12%</Table.TD>
             <Table.TD>Paused</Table.TD>
           </Table.TR>
           <Table.TR>
@@ -119,7 +119,7 @@ export default [
         <Table.THead>
           <Table.TR>
             <Table.TH>Experiment</Table.TH>
-            <Table.TH isNumerical={ true }>Conversion Rate</Table.TH>
+            <Table.TH isNumerical={ true } width="20%">Conversion Rate</Table.TH>
             <Table.TH isCollapsed={ true }>Status</Table.TH>
           </Table.TR>
         </Table.THead>

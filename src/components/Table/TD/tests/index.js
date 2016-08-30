@@ -25,6 +25,17 @@ describe('components/Table/TD', () => {
     </table>
   );
 
+  const TestTableDataWithWidth = (
+    <table>
+      <tbody>
+        <tr>
+          <TD width="50%"></TD>
+          <TD></TD>
+        </tr>
+      </tbody>
+    </table>
+  );
+
   it('should render as a `td`', () => {
     const component = testHelpers.renderIntoDocument(TestTableData);
     const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
@@ -69,5 +80,23 @@ describe('components/Table/TD', () => {
     const tableDataNode = tableRowNode.children[0];
 
     expect(tableDataNode.className).not.toContain('oui-numerical');
+  });
+
+  it('should add width inline style to table cells when provided', () => {
+    const component = testHelpers.renderIntoDocument(TestTableDataWithWidth);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[0];
+
+    expect(tableDataNode.style.width).toBe('50%');
+  });
+
+  it('should not add width inline style to table cells by default', () => {
+    const component = testHelpers.renderIntoDocument(TestTableDataWithWidth);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[1];
+
+    expect(tableDataNode.style.width).toBeFalsy();
   });
 });

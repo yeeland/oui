@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add the ability to pass a `width` to `Table.TD` and `Table.TH` components.
 - [Feature] Add a `Table` style called `rule-no-bottom-border` that has borders but no bottom border on the last child.
 
 ### Changed

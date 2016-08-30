@@ -35,6 +35,17 @@ describe('components/Table/TH', () => {
     </table>
   );
 
+  const TestTableHeadDataWithWidth = (
+    <table>
+      <thead>
+        <tr>
+          <TH width="50%"></TH>
+          <TH></TH>
+        </tr>
+      </thead>
+    </table>
+  );
+
   it('should render as a `th`', () => {
     const component = testHelpers.renderIntoDocument(TestTableHeadData);
     const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
@@ -97,5 +108,23 @@ describe('components/Table/TH', () => {
     const tableHeadNode = tableRowNode.children[0];
 
     expect(tableHeadNode.className).not.toContain('oui-cell-collapse');
+  });
+
+  it('should add width inline style to table cells when provided', () => {
+    const component = testHelpers.renderIntoDocument(TestTableHeadDataWithWidth);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[0];
+
+    expect(tableDataNode.style.width).toBe('50%');
+  });
+
+  it('should not add width inline style to table cells by default', () => {
+    const component = testHelpers.renderIntoDocument(TestTableHeadDataWithWidth);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[1];
+
+    expect(tableDataNode.style.width).toBeFalsy();
   });
 });
