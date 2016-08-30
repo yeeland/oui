@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Fix warnings for keys in ButtonRow example.
 - [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
+- [Patch] Fix warnings for keys in ButtonRow example.
 
 ## [15.1.0][15.1.0] - 2016-08-30
 ### Added
