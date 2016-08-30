@@ -25,6 +25,16 @@ describe('components/Table/TD', () => {
     </table>
   );
 
+  const TestTableDataVerticalAlign = (
+    <table>
+      <tbody>
+        <tr>
+          <TD verticalAlign="middle"></TD>
+        </tr>
+      </tbody>
+    </table>
+  );
+
   const TestTableDataWithWidth = (
     <table>
       <tbody>
@@ -80,6 +90,24 @@ describe('components/Table/TD', () => {
     const tableDataNode = tableRowNode.children[0];
 
     expect(tableDataNode.className).not.toContain('oui-numerical');
+  });
+
+  it('should add vertical align class to table cells when provided', () => {
+    const component = testHelpers.renderIntoDocument(TestTableDataVerticalAlign);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[0];
+
+    expect(tableDataNode.className).toContain('vertical-align--middle');
+  });
+
+  it('should not add vertical align class to table cells when not provided', () => {
+    const component = testHelpers.renderIntoDocument(TestTableData);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[0];
+
+    expect(tableDataNode.className).not.toContain('vertical-align--middle');
   });
 
   it('should add width inline style to table cells when provided', () => {

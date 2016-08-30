@@ -125,24 +125,24 @@ export default [
         </Table.THead>
         <Table.TBody>
           <Table.TR>
-            <Table.TD>Header CTA</Table.TD>
-            <Table.TD isNumerical={ true }>12%</Table.TD>
-            <Table.TD><Button size="small">Start</Button></Table.TD>
+            <Table.TD verticalAlign="middle">Header CTA</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">12%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
           <Table.TR>
-            <Table.TD>Shorter Contact Form</Table.TD>
-            <Table.TD isNumerical={ true }>4%</Table.TD>
-            <Table.TD><Button size="small">Start</Button></Table.TD>
+            <Table.TD verticalAlign="middle">Shorter Contact Form</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">4%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
           <Table.TR>
-            <Table.TD>Larger search bar</Table.TD>
-            <Table.TD isNumerical={ true }>6.7%</Table.TD>
-            <Table.TD><Button size="small">Start</Button></Table.TD>
+            <Table.TD verticalAlign="middle">Larger search bar</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">6.7%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
           <Table.TR>
-            <Table.TD>Center aligned headline</Table.TD>
-            <Table.TD isNumerical={ true }>9.3%</Table.TD>
-            <Table.TD><Button size="small">Start</Button></Table.TD>
+            <Table.TD verticalAlign="middle">Center aligned headline</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">9.3%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
         </Table.TBody>
       </Table>,

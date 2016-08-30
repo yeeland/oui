@@ -4,6 +4,7 @@ import classNames from 'classnames';
 const TD = (props) => {
   let classes = classNames({
     'oui-numerical': props.isNumerical,
+    [`vertical-align--${ props.verticalAlign }`]: props.verticalAlign,
   });
 
   const styles = {
@@ -27,6 +28,8 @@ TD.propTypes = {
   isNumerical: React.PropTypes.bool,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
+  /** Apply a class that vertically aligns the cells within the children */
+  verticalAlign: React.PropTypes.oneOf(['middle']),
   /** A number with a unit that becomes the width of the `Table` cell */
   width: React.PropTypes.string,
 };

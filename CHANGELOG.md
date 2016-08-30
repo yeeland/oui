@@ -6,12 +6,13 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add a `verticalAlign` prop to `Table.TD` component.
 - [Feature] Add the ability to pass a `width` to `Table.TD` and `Table.TH` components.
 - [Feature] Add a `Table` style called `rule-no-bottom-border` that has borders but no bottom border on the last child.
 
 ### Changed
 - [Patch] Pass `isActive` prop on `TabNav.Tab` instead of doing the logic on the child. (#522)
-- [Patch] Add `user-select: none` rule to `oui-button`
+- [Patch] Add `user-select: none` rule to `oui-button`.
 
 ## [15.0.0][15.0.0] - 2016-08-26
 ### Changed
