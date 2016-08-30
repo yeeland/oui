@@ -13,6 +13,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Pass `isActive` prop on `TabNav.Tab` instead of doing the logic on the child. (#522)
 - [Patch] Add `user-select: none` rule to `oui-button`.
+- [Patch] Make `Button` `children` prop more generic. (#507)
 
 ## [15.0.0][15.0.0] - 2016-08-26
 ### Changed
