@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
 
 ## [15.1.0][15.1.0] - 2016-08-30
 ### Added
