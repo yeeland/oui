@@ -31,7 +31,7 @@ Table.propTypes = {
   /** Should be a `Table.THead` or `Table.TBody` */
   children: React.PropTypes.node,
   /** Available border and hover options */
-  style: React.PropTypes.oneOf(['wall', 'rule']),
+  style: React.PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };

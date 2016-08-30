@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add a `Table` style called `rule-no-bottom-border` that has borders but no bottom border on the last child.
+
 ### Changed
 - [Patch] Pass `isActive` prop on `TabNav.Tab` instead of doing the logic on the child. (#522)
 
