@@ -6,6 +6,25 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Changed
+- [Patch] Fix warnings for keys in ButtonRow example.
+- [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
+- [Patch] Fix warnings for keys in ButtonRow example.
+- [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
+
+## [15.1.0][15.1.0] - 2016-08-30
+### Added
+- [Feature] Add a `verticalAlign` prop to `Table.TD` component.
+- [Feature] Add the ability to pass a `width` to `Table.TD` and `Table.TH` components.
+- [Feature] Add a `Table` style called `rule-no-bottom-border` that has borders but no bottom border on the last child.
+
+### Changed
+- [Patch] Pass `isActive` prop on `TabNav.Tab` instead of doing the logic on the child. (#522)
+- [Patch] Add `user-select: none` rule to `oui-button`.
+- [Patch] Make `Button` `children` prop more generic. (#507)
+
+## [15.0.0][15.0.0] - 2016-08-26
+### Changed
+- [Release] Change the `Table` React component API to be more declarative. (#513)
 - [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
 
 ## [14.1.0][14.1.0] - 2016-08-25
@@ -493,7 +512,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v14.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v15.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -538,3 +557,5 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
 [14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
 [14.1.0]: https://github.com/optimizely/oui/compare/v14.0.5...v14.1.0
+[15.0.0]: https://github.com/optimizely/oui/compare/v14.1.0...v15.0.0
+[15.1.0]: https://github.com/optimizely/oui/compare/v15.0.0...v15.1.0

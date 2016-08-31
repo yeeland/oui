@@ -27,10 +27,7 @@ Button.propTypes = {
   /** Describes buttons that have an icon but no text */
   ariaLabel: React.PropTypes.string,
   /** Text within the button */
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element,
-  ]).isRequired,
+  children: React.PropTypes.node.isRequired,
   /** Prevent users from interacting with the button */
   isDisabled: React.PropTypes.bool,
   /** Make the button act as a submit button */

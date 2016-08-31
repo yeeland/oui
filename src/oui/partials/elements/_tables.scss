@@ -84,6 +84,33 @@
 ///       </tr>
 ///     </tbody>
 ///   </table>
+/// @example[html] Table rule with no bottom border
+///   <table class="oui-table oui-table--rule-no-bottom-border">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="oui-numerical">Numbers</th>
+///         <th class="oui-cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="oui-numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="oui-numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="oui-numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
 /// @example[html] Table rule with active row and hover
 ///   <table class="oui-table oui-table--rule oui-table--hover">
 ///     <thead>
@@ -176,12 +203,12 @@
     width: 1%;
   }
 
-
   // Table Variations
   // We're using direct decendent selectors so any child tables do not
   // inherit styles.
 
-  &--rule {
+  &--rule,
+  &--rule-no-bottom-border {
 
     > thead {
 
@@ -204,6 +231,10 @@
       }
     }
 
+  }
+
+  &--rule--no-bottom-border > tbody > tr:last-child { // scss-lint:disable UnnecessaryParentReference
+    border-bottom: 0;
   }
 
   &--wall {

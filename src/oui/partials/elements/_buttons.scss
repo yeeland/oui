@@ -34,6 +34,7 @@
   border-style: solid;
   font-size: map-fetch($button, size, base, font-size);
   font-weight: map-fetch($button, size, base, font-weight);
+  user-select: none;
   border-radius: map-fetch($button, size, base, border-radius);
   height: map-fetch($button, size, base, height);
   padding: map-fetch($button, size, base, padding);
