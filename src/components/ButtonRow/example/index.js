@@ -8,11 +8,11 @@ export default [
     examples: [
       <ButtonRow
         leftGroup={ [
-          <Button style="plain">Skip this step</Button>,
+          <Button key="1" style="plain">Skip this step</Button>,
         ] }
         rightGroup={ [
-          <Button style="plain">Plain Button</Button>,
-          <Button style="highlight">Highlight Button</Button>,
+          <Button key="1" style="plain">Plain Button</Button>,
+          <Button key="2" style="highlight">Highlight Button</Button>,
         ] }
       />,
     ],
