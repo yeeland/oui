@@ -46,6 +46,16 @@ describe('components/Table/TD', () => {
     </table>
   );
 
+  const TestTableDataWithColspan = (
+    <table>
+      <tbody>
+        <tr>
+          <TD colSpan={ 3 }></TD>
+        </tr>
+      </tbody>
+    </table>
+  );
+
   it('should render as a `td`', () => {
     const component = testHelpers.renderIntoDocument(TestTableData);
     const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
@@ -126,5 +136,14 @@ describe('components/Table/TD', () => {
     const tableDataNode = tableRowNode.children[1];
 
     expect(tableDataNode.style.width).toBeFalsy();
+  });
+
+  it('should add colspan to table cells when provided', () => {
+    const component = testHelpers.renderIntoDocument(TestTableDataWithColspan);
+    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
+    const tableRowNode = tableBodyNode.children[0];
+    const tableDataNode = tableRowNode.children[0];
+
+    expect(tableDataNode.colSpan).toBe('3');
   });
 });

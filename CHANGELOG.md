@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add `colSpan` prop to `Table.TD` component. (#533)
 - [Feature] Add size class based on icon size prop. (#517)
 
 ### Changed

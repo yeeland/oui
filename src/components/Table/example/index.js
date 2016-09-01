@@ -148,4 +148,38 @@ export default [
       </Table>,
     ],
   },
+  {
+    isPadded: true,
+    examples: [
+      <Table>
+        <Table.THead>
+          <Table.TR>
+            <Table.TH>Experiment</Table.TH>
+            <Table.TH isNumerical={ true } width="20%">Conversion Rate</Table.TH>
+            <Table.TH isCollapsed={ true }>Status</Table.TH>
+          </Table.TR>
+        </Table.THead>
+        <Table.TBody>
+          <Table.TR>
+            <Table.TD verticalAlign="middle">Header CTA</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">12%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
+          </Table.TR>
+          <Table.TR>
+            <Table.TD verticalAlign="middle">Shorter Contact Form</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">4%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
+          </Table.TR>
+          <Table.TR>
+            <Table.TD verticalAlign="middle">Larger search bar</Table.TD>
+            <Table.TD isNumerical={ true } verticalAlign="middle">6.7%</Table.TD>
+            <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
+          </Table.TR>
+          <Table.TR>
+            <Table.TD colSpan="3">Cell Spanning Three Columns</Table.TD>
+          </Table.TR>
+        </Table.TBody>
+      </Table>,
+    ],
+  },
 ];

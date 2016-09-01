@@ -15,7 +15,8 @@ const TD = (props) => {
     <td
       className={ classes }
       data-test-section={ props.testSection }
-      style={ styles }>
+      style={ styles }
+      colSpan={ props.colSpan }>
       { props.children }
     </td>
   );
@@ -24,6 +25,8 @@ const TD = (props) => {
 TD.propTypes = {
   /** Content within the `Table.TD` component */
   children: React.PropTypes.node,
+  /** Number of columns that the cell should span */
+  colSpan: React.PropTypes.number,
   /** Right-align the cell if the contents are numerical */
   isNumerical: React.PropTypes.bool,
   /** Hook for automated JavaScript tests */
