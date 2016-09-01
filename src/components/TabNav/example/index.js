@@ -34,14 +34,14 @@ export default [
   {
     isPadded: true,
     examples: [
-      <TabNav activeTab={ 'second' } style={ ['small'] }>
-        <TabNav.Tab>
+      <TabNav activeTab={ '2' } style={ ['small'] }>
+        <TabNav.Tab tabId="1" onClick={ function() {} }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="2" onClick={ function() {} }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="3" onClick={ function() {} }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
@@ -50,14 +50,14 @@ export default [
   {
     isPadded: true,
     examples: [
-      <TabNav activeTab={ 'first' } style={ ['small', 'center'] }>
-        <TabNav.Tab>
+      <TabNav activeTab={ '1' } style={ ['small', 'center'] }>
+        <TabNav.Tab tabId="1" onClick={ function() {} }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="2" onClick={ function() {} }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="3" onClick={ function() {} }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
@@ -66,14 +66,14 @@ export default [
   {
     isPadded: true,
     examples: [
-      <TabNav activeTab={ 'first' } style={ ['small', 'sub'] }>
-        <TabNav.Tab>
+      <TabNav activeTab={ '1' } style={ ['small', 'sub'] }>
+        <TabNav.Tab tabId="1" onClick={ function() {} }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="2" onClick={ function() {} }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab tabId="3" onClick={ function() {} }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
