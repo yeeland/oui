@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Add size class based on icon size prop. (#517)
 
 ### Changed
+- [Patch] Revert TabNav examples, the minimal examples throw errors because those props are required.
 - [Patch] Updated icon default export syntax in bash script, new import syntax as well. (#506)
 - [Patch] Fix warnings for keys in ButtonRow example.
 
