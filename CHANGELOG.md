@@ -28,9 +28,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [14.1.0][14.1.0] - 2016-08-25
 ### Added
 - [Feature] Add size class based on icon size prop. (#517)
-
-## [14.1.0][14.1.0] - 2016-08-25
-### Added
 - [Feature] Add TabNav react component
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 
