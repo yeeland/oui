@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button';
-import { CloseIcon } from '../Icon';
+import CloseIcon from '../Icon/CloseIcon';
 
 const DismissButton = (onDismiss, testSection) => {
   return (
