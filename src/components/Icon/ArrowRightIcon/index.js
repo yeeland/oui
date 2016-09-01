@@ -11,20 +11,23 @@ const ArrowRightIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icon
  */
 const ArrowRightIcon = (props) => {
   let Svg;
+  let sizeclass;
 
   switch (props.size) {
     case 16:
       Svg = ArrowRightIcon16;
+      sizeclass = 'oui-icon--16';
       break;
     case 24:
       Svg = ArrowRightIcon24;
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

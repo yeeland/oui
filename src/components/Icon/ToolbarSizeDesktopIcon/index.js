@@ -10,17 +10,19 @@ const ToolbarSizeDesktopIcon24 = require('!babel?presets[]=react!svg-jsx-loader!
  */
 const ToolbarSizeDesktopIcon = (props) => {
   let Svg;
+  let sizeclass;
 
   switch (props.size) {
     case 24:
       Svg = ToolbarSizeDesktopIcon24;
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

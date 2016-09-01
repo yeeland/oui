@@ -6,10 +6,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Changed
+- [Patch] Updated icon default export syntax in bash script, new import syntax as well. (#506)
 - [Patch] Fix warnings for keys in ButtonRow example.
-- [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
-- [Patch] Fix warnings for keys in ButtonRow example.
-- [Patch] Remove redundant code in TabNav examples to be more minimal. The first example serves as the best, the others are just showing style updates.
 
 ## [15.1.0][15.1.0] - 2016-08-30
 ### Added
@@ -29,6 +27,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [14.1.0][14.1.0] - 2016-08-25
 ### Added
+- [Feature] Add size class based on icon size prop. (#517)
 - [Feature] Add TabNav react component
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 
@@ -39,7 +38,6 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [14.0.5][14.0.5] - 2016-08-17
 ### Added
-- [Feature] Add isFilter prop to <Input> for search icon (#488)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
 

@@ -11,20 +11,23 @@ const EditorSwitchIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-ic
  */
 const EditorSwitchIcon = (props) => {
   let Svg;
+  let sizeclass;
 
   switch (props.size) {
     case 16:
       Svg = EditorSwitchIcon16;
+      sizeclass = 'oui-icon--16';
       break;
     case 24:
       Svg = EditorSwitchIcon24;
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

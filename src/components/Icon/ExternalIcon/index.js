@@ -11,20 +11,23 @@ const ExternalIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/
  */
 const ExternalIcon = (props) => {
   let Svg;
+  let sizeclass;
 
   switch (props.size) {
     case 16:
       Svg = ExternalIcon16;
+      sizeclass = 'oui-icon--16';
       break;
     case 24:
       Svg = ExternalIcon24;
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className="oui-icon display--inline"
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

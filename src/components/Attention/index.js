@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button';
-import { CloseIcon } from '../Icon';
+import CloseIcon from '../Icon/CloseIcon';
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
 const renderDismissButton = (testSection) => {

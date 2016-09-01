@@ -1,39 +1,37 @@
 import React from 'react';
 
 /* eslint-disable max-len */
-const AlignLeftIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/align-left-16.svg');
-const AlignLeftIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/align-left-24.svg');
+const IconSample16 = require('babel?presets[]=react!svg-jsx-loader!oui-icons/src/16/history-16.svg');
+const IconSample24 = require('babel?presets[]=react!svg-jsx-loader!oui-icons/src/24/history-24.svg');
 /* eslint-enable max-len */
 
 /**
+ * Icon example for any of our OUI icons in the library.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const AlignLeftIcon = (props) => {
+const IconSample = (props) => {
   let Svg;
-  let sizeclass;
 
   switch (props.size) {
     case 16:
-      Svg = AlignLeftIcon16;
-      sizeclass = 'oui-icon--16';
+      Svg = IconSample16;
       break;
     case 24:
-      Svg = AlignLeftIcon24;
-      sizeclass = 'oui-icon--24';
+      Svg = IconSample24;
       break;
     default:
   }
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + sizeclass }
+      className="oui-icon display--inline"
       data-test-section={ props.testSection }
     />
   );
 };
 
-AlignLeftIcon.propTypes = {
+IconSample.propTypes = {
   /** Size of the icon */
   size: React.PropTypes.oneOf([
     16,
@@ -43,5 +41,4 @@ AlignLeftIcon.propTypes = {
   testSection: React.PropTypes.string,
 };
 
-export default AlignLeftIcon;
-
+export default IconSample;

@@ -17,6 +17,8 @@ import ButtonRow from '../src/components/ButtonRow';
 import ButtonRowExample from '../src/components/ButtonRow/example';
 import Code from '../src/components/Code';
 import CodeExample from '../src/components/Code/example';
+import IconSample from '../src/components/IconSample';
+import IconExample from '../src/components/IconSample/example';
 import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
@@ -53,6 +55,10 @@ const componentsArray = [
   {
     index: Input,
     example: InputExample,
+  },
+  {
+    index: IconSample,
+    example: IconExample,
   },
   {
     index: Label,
