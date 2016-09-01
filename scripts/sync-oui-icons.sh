@@ -3,6 +3,8 @@
 ICON_DIRECTORY="src/components/Icon"
 ICON_MAIN_FILE="$ICON_DIRECTORY/index.js"
 OUI_ICONS_SRC_DIRECTORY="node_modules/oui-icons/src"
+JS_OUTPUT_HEAD=""
+JS_OUTPUT_FOOT=""
 
 # Remove `Icon` subdirectories and the index file since they'll be generated.
 rm -r $(echo "$ICON_DIRECTORY/*/")
@@ -116,8 +118,17 @@ export default $component_name;
     echo "Creating file: $component_file"
     echo "$file_contents" > $component_file;
 
-    echo "import $component_name from './$component_name';
-export { $component_name };
-" >> $ICON_MAIN_FILE
+JS_OUTPUT_HEAD+="import $component_name from './$component_name';
+"
+JS_OUTPUT_FOOT+="
+  $component_name,"
   fi
 done;
+
+# Final output for main entry point
+echo "$JS_OUTPUT_HEAD
+export default {$JS_OUTPUT_FOOT
+};
+" >> $ICON_MAIN_FILE
+
+echo "Updated Icon index file."
