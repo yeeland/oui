@@ -10,19 +10,19 @@ const AlignRightLeftIcon16 = require('!babel?presets[]=react!svg-jsx-loader!oui-
  */
 const AlignRightLeftIcon = (props) => {
   let Svg;
-  let SizeClass;
+  let sizeclass;
 
   switch (props.size) {
     case 16:
       Svg = AlignRightLeftIcon16;
-      SizeClass = 'oui-icon--16';
+      sizeclass = 'oui-icon--16';
       break;
     default:
   }
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + SizeClass }
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

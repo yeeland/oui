@@ -10,19 +10,19 @@ const ToolbarSizeFullWidthIcon24 = require('!babel?presets[]=react!svg-jsx-loade
  */
 const ToolbarSizeFullWidthIcon = (props) => {
   let Svg;
-  let SizeClass;
+  let sizeclass;
 
   switch (props.size) {
     case 24:
       Svg = ToolbarSizeFullWidthIcon24;
-      SizeClass = 'oui-icon--24';
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + SizeClass }
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

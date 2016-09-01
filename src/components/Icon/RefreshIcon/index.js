@@ -11,23 +11,23 @@ const RefreshIcon24 = require('!babel?presets[]=react!svg-jsx-loader!oui-icons/s
  */
 const RefreshIcon = (props) => {
   let Svg;
-  let SizeClass;
+  let sizeclass;
 
   switch (props.size) {
     case 16:
       Svg = RefreshIcon16;
-      SizeClass = 'oui-icon--16';
+      sizeclass = 'oui-icon--16';
       break;
     case 24:
       Svg = RefreshIcon24;
-      SizeClass = 'oui-icon--24';
+      sizeclass = 'oui-icon--24';
       break;
     default:
   }
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + SizeClass }
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );
