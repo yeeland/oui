@@ -35,13 +35,25 @@ export default [
     isPadded: true,
     examples: [
       <TabNav activeTab={ 'second' } style={ ['small'] }>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='first'
+          onClick={ function() {
+            alert('clicked first');  //eslint-disable-line
+          } }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='second'
+          onClick={ function() {
+            alert('clicked second');  //eslint-disable-line
+          } }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='third'
+          onClick={ function() {
+            alert('clicked third');  //eslint-disable-line
+          } }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
@@ -51,13 +63,25 @@ export default [
     isPadded: true,
     examples: [
       <TabNav activeTab={ 'first' } style={ ['small', 'center'] }>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='first'
+          onClick={ function() {
+            alert('clicked first');  //eslint-disable-line
+          } }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='second'
+          onClick={ function() {
+            alert('clicked second');  //eslint-disable-line
+          } }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='third'
+          onClick={ function() {
+            alert('clicked third');  //eslint-disable-line
+          } }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
@@ -67,13 +91,25 @@ export default [
     isPadded: true,
     examples: [
       <TabNav activeTab={ 'first' } style={ ['small', 'sub'] }>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='first'
+          onClick={ function() {
+            alert('clicked first');  //eslint-disable-line
+          } }>
           Tab #1
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='second'
+          onClick={ function() {
+            alert('clicked second');  //eslint-disable-line
+          } }>
           Tab #2
         </TabNav.Tab>
-        <TabNav.Tab>
+        <TabNav.Tab
+          tabId='third'
+          onClick={ function() {
+            alert('clicked third');  //eslint-disable-line
+          } }>
           Tab #3
         </TabNav.Tab>
       </TabNav>,
