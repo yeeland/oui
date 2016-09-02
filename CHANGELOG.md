@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [15.2.1][15.2.1] - 2016-09-02
 ### Changed
 - [Patch] Remove `padding-left: 0;` and `padding-right: 0;` from `oui-button--full` because it is never a desired style.
 
@@ -519,7 +521,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v15.2.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v15.2.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -567,3 +569,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [15.0.0]: https://github.com/optimizely/oui/compare/v14.1.0...v15.0.0
 [15.1.0]: https://github.com/optimizely/oui/compare/v15.0.0...v15.1.0
 [15.2.0]: https://github.com/optimizely/oui/compare/v15.1.0...v15.2.0
+[15.2.1]: https://github.com/optimizely/oui/compare/v15.2.0...v15.2.1
