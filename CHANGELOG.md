@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add `colSpan` prop to `Table.TD` component. (#533)
 - [Feature] Add size class based on icon size prop. (#517)
+- [Feature] Add a `density` prop to `Table` with a `loose` option. (#536) 
 
 ### Changed
 - [Patch] Revert TabNav examples, the minimal examples throw errors because those props are required.

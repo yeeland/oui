@@ -84,6 +84,33 @@
 ///       </tr>
 ///     </tbody>
 ///   </table>
+/// @example[html] Table rule with loose spacing
+///   <table class="oui-table oui-table--rule oui-table--loose">
+///     <thead>
+///       <tr>
+///         <th>Experiment</th>
+///         <th class="oui-numerical">Numbers</th>
+///         <th class="oui-cell-collapse">Status</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>Experiment name one</td>
+///         <td class="oui-numerical">258</td>
+///         <td>Up</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name two that runs longer</td>
+///         <td class="oui-numerical">19</td>
+///         <td>Down</td>
+///       </tr>
+///       <tr>
+///         <td>Experiment name three</td>
+///         <td class="oui-numerical">400</td>
+///         <td>Up</td>
+///       </tr>
+///     </tbody>
+///   </table>
 /// @example[html] Table rule with no bottom border
 ///   <table class="oui-table oui-table--rule-no-bottom-border">
 ///     <thead>
@@ -146,8 +173,8 @@
   width: 100%;
   font-size: inherit;
 
-  th,
-  td {
+  &:not(.oui-table--loose) th,
+  &:not(.oui-table--loose) td {
     padding-left: spacer(2);
     padding-top: spacer(0.5);
     padding-bottom: spacer(0.5);
@@ -268,6 +295,32 @@
     & > thead > tr > th:last-child, // scss-lint:disable UnnecessaryParentReference
     & > tbody > tr > td:last-child { // scss-lint:disable UnnecessaryParentReference
       padding-right: spacer(1);
+    }
+  }
+
+  &--loose {
+    th,
+    td {
+      padding-left: spacer(1);
+      padding-right: spacer(1);
+
+      &:first-child {
+        padding-left: spacer(2);
+      }
+
+      &:last-child {
+        padding-right: spacer(2);
+      }
+    }
+
+    th {
+      padding-top: spacer(0.5);
+      padding-bottom: spacer(0.5);
+    }
+
+    td {
+      padding-top: spacer(1);
+      padding-bottom: spacer(1);
     }
   }
 

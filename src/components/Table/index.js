@@ -16,6 +16,7 @@ let Table = (props) => {
   let classes = classNames({
     'oui-table': true,
     [`oui-table--${props.style}`]: props.style,
+    [`oui-table--${props.density}`]: props.density,
   });
 
   return (
@@ -30,10 +31,16 @@ let Table = (props) => {
 Table.propTypes = {
   /** Should be a `Table.THead` or `Table.TBody` */
   children: React.PropTypes.node,
+  /** Sets the padding within cells */
+  density: React.PropTypes.oneOf(['tight', 'loose']),
   /** Available border and hover options */
   style: React.PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
+};
+
+Table.defaultProps = {
+  density: 'tight',
 };
 
 Table.THead = THead;

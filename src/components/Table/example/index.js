@@ -7,7 +7,7 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Table>
+      <Table density="loose">
         <Table.THead>
           <Table.TR>
             <Table.TH>Experiment</Table.TH>
@@ -43,7 +43,7 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Table style="rule">
+      <Table style="rule" density="loose">
         <Table.THead>
           <Table.TR>
             <Table.TH>Experiment</Table.TH>

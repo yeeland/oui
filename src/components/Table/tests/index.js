@@ -17,6 +17,10 @@ describe('components/Table', () => {
     <Table style="rule"></Table>
   );
 
+  const TableWithDensity = (
+    <Table density="loose"></Table>
+  );
+
   it('should render as a table', () => {
     const component = testHelpers.renderIntoDocument(TestTable);
     const componentNode = testHelpers.getNodeFromComponent(component);
@@ -29,6 +33,24 @@ describe('components/Table', () => {
     const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
 
     expect(tableBodyNode.tagName).toBe('TBODY');
+  });
+
+  describe('with `density` prop supplied', () => {
+    it('should render with prop value as OUI table class modifier', () => {
+      const component = testHelpers.renderIntoDocument(TableWithDensity);
+      const componentNode = testHelpers.getNodeFromComponent(component);
+
+      expect(componentNode.className).toContain('oui-table--loose');
+    });
+  });
+
+  describe('with no `density` prop supplied', () => {
+    it('should render with default `density` prop value as OUI table class modifier', () => {
+      const component = testHelpers.renderIntoDocument(TableWithStyle);
+      const componentNode = testHelpers.getNodeFromComponent(component);
+
+      expect(componentNode.className).toContain('oui-table--tight');
+    });
   });
 
   describe('with `style` prop supplied', () => {
@@ -45,7 +67,9 @@ describe('components/Table', () => {
       const component = testHelpers.renderIntoDocument(TestTable);
       const componentNode = testHelpers.getNodeFromComponent(component);
 
-      expect(componentNode.className).not.toContain('oui-table--');
+      expect(componentNode.className).not.toContain('oui-table--wall');
+      expect(componentNode.className).not.toContain('oui-table--rule');
+      expect(componentNode.className).not.toContain('oui-table--rule-no-bottom-border');
     });
   });
 
