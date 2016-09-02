@@ -10,10 +10,11 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Add size class based on icon size prop. (#517)
 - [Feature] Add a `density` prop to `Table` with a `loose` option. (#536) 
 
-### Changed
+### Fixed
 - [Patch] Revert TabNav examples, the minimal examples throw errors because those props are required.
 - [Patch] Updated icon default export syntax in bash script, new import syntax as well. (#506)
 - [Patch] Fix warnings for keys in ButtonRow example.
+- [Patch] Fix typo in `rule-no-bottom-border` SCSS for `Table`.
 
 ## [15.1.0][15.1.0] - 2016-08-30
 ### Added

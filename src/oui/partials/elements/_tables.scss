@@ -260,7 +260,7 @@
 
   }
 
-  &--rule--no-bottom-border > tbody > tr:last-child { // scss-lint:disable UnnecessaryParentReference
+  &--rule-no-bottom-border > tbody > tr:last-child { // scss-lint:disable UnnecessaryParentReference
     border-bottom: 0;
   }
 
