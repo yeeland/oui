@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Removed
+- [Patch] Revert `merge=union` in `.gitattributes` because it was causing more harm than good. (#540)
 
 ## [15.2.1][15.2.1] - 2016-09-02
 ### Changed
