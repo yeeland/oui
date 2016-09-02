@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Remove `padding-left: 0;` and `padding-right: 0;` from `oui-button--full` because it is never a desired style.
 
 ## [15.2.0][15.2.0] - 2016-09-02
 ### Added
