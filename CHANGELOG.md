@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Release] Remove `text-align: center` from `[colspan]`. (#544)
+
 ### Removed
 - [Patch] Revert `merge=union` in `.gitattributes` because it was causing more harm than good. (#540)
 
