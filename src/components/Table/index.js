@@ -19,9 +19,14 @@ let Table = (props) => {
     [`oui-table--${props.density}`]: props.density,
   });
 
+  const style = {
+    tableLayout: props.tableLayoutAlgorithm,
+  };
+
   return (
     <table
       className={ classes }
+      style={ style }
       data-test-section={ props.testSection }>
       { props.children }
     </table>
@@ -35,12 +40,18 @@ Table.propTypes = {
   density: React.PropTypes.oneOf(['tight', 'loose']),
   /** Available border and hover options */
   style: React.PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
+  /**
+    Adjust the [CSS `table-layout` property](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
+    that is used to calculate the with of inner table cells.
+  */
+  tableLayoutAlgorithm: React.PropTypes.oneOf(['auto', 'fixed']),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };
 
 Table.defaultProps = {
   density: 'tight',
+  tableLayoutAlgorithm: 'fixed',
 };
 
 Table.THead = THead;

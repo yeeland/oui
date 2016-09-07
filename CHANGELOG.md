@@ -6,7 +6,14 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Changed
+<<<<<<< HEAD
+- [Release] Add a `tableLayoutAlgorithm` prop to the `Table` component and set
+it to `fixed` by default. Existing uses of the component should be updated to
+either ensure they look correct with the new default or add
+`tableLayoutAlgorithm={ 'auto' }` to the instance of `Table`. (#546)
+=======
 - [Patch] Replace in-house test helpers with Airbnb's Enzyme.
+>>>>>>> devel
 
 ## [16.0.0][16.0.0] - 2016-09-06
 ### Changed

@@ -24,7 +24,10 @@ const TH = (props) => {
 TH.propTypes = {
   /** Content within the `Table.TH` component */
   children: React.PropTypes.node,
-  /** Take up the least amount of width possible */
+  /**
+    Tell the cell to take up the least amount of width possible. This only
+    works well if the table layout is `auto`, not `fixed`.
+  */
   isCollapsed: React.PropTypes.bool,
   /** Right-align the cell if the contents are numerical */
   isNumerical: React.PropTypes.bool,

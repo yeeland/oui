@@ -48,8 +48,8 @@ const PropsTable = (props) => {
     <Table style="rule">
       <Table.THead>
         <Table.TR>
-          <Table.TH>Prop</Table.TH>
-          <Table.TH>Type</Table.TH>
+          <Table.TH width="22%">Prop</Table.TH>
+          <Table.TH width="22%">Type</Table.TH>
           <Table.TH>Description</Table.TH>
         </Table.TR>
       </Table.THead>

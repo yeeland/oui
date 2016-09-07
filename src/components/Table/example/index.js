@@ -115,7 +115,9 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Table style="wall">
+      <Table
+        style="wall"
+        tableLayoutAlgorithm="auto">
         <Table.THead>
           <Table.TR>
             <Table.TH>Experiment</Table.TH>
@@ -151,7 +153,7 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Table>
+      <Table tableLayoutAlgorithm="auto">
         <Table.THead>
           <Table.TR>
             <Table.TH>Experiment</Table.TH>
