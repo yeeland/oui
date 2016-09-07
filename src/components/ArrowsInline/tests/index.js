@@ -1,6 +1,6 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import ArrowsInline from '../index';
+import { shallow } from 'enzyme';
 
 describe('components/ArrowsInline', () => {
   /**
@@ -9,20 +9,12 @@ describe('components/ArrowsInline', () => {
    * (a button, for example) that may use this component.
    */
   it('should have aria-hidden property set to true', () => {
-    const component = testHelpers.renderIntoDocument(
-      <ArrowsInline />
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    expect(componentNode.getAttribute('aria-hidden')).toBe('true');
+    const component = shallow(<ArrowsInline />);
+    expect(component.is('[aria-hidden="true"]')).toBe(true);
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
-      <ArrowsInline testSection="foo" />
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+    const component = shallow(<ArrowsInline testSection="foo" />);
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 });

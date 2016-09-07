@@ -1,130 +1,50 @@
 import React from 'react';
-import * as testHelpers from '../../../../utils/test-helpers';
 import TH from '../index';
+import { shallow, render } from 'enzyme';
 
 describe('components/Table/TH', () => {
-  const TestTableHeadData = (
-    <table>
-      <thead>
-        <tr>
-          <TH testSection="example-test-section">
-            <button>Goose</button>
-          </TH>
-        </tr>
-      </thead>
-    </table>
-  );
-
-  const TestTableHeadDataNumerical = (
-    <table>
-      <thead>
-        <tr>
-          <TH isNumerical={ true }></TH>
-        </tr>
-      </thead>
-    </table>
-  );
-
-  const TestTableHeadDataCollapsed = (
-    <table>
-      <thead>
-        <tr>
-          <TH isCollapsed={ true }></TH>
-        </tr>
-      </thead>
-    </table>
-  );
-
-  const TestTableHeadDataWithWidth = (
-    <table>
-      <thead>
-        <tr>
-          <TH width="50%"></TH>
-          <TH></TH>
-        </tr>
-      </thead>
-    </table>
-  );
-
   it('should render as a `th`', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    expect(tableHeadNode.tagName).toBe('TH');
+    const component = shallow(<TH></TH>);
+    expect(component.type()).toBe('th');
   });
 
   it('should render children', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-    const buttonNode = tableHeadNode.children[0];
-
-    expect(buttonNode.tagName).toBe('BUTTON');
+    const component = shallow(<TH>foo</TH>);
+    expect(component.text()).toBe('foo');
   });
 
   it('should render with test section', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    testHelpers.expectTestSectionToExist(tableHeadNode, 'example-test-section');
+    const component = shallow(<TH testSection="goose"></TH>);
+    expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
 
   it('should add numerical class to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadDataNumerical);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    expect(tableHeadNode.className).toContain('oui-numerical');
+    const component = shallow(<TH isNumerical={ true }></TH>);
+    expect(component.hasClass('oui-numerical')).toBe(true);
   });
 
   it('should not add numerical class to table cells by default', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    expect(tableHeadNode.className).not.toContain('oui-numerical');
+    const component = shallow(<TH></TH>);
+    expect(component.hasClass('oui-numerical')).toBe(false);
   });
 
   it('should add collapsed class to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadDataCollapsed);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    expect(tableHeadNode.className).toContain('oui-cell-collapse');
+    const component = shallow(<TH isCollapsed={ true }></TH>);
+    expect(component.hasClass('oui-cell-collapse')).toBe(true);
   });
 
   it('should not add collapsed class to table cells by default', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableHeadNode = tableRowNode.children[0];
-
-    expect(tableHeadNode.className).not.toContain('oui-cell-collapse');
+    const component = shallow(<TH></TH>);
+    expect(component.hasClass('oui-cell-collapse')).toBe(false);
   });
 
   it('should add width inline style to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadDataWithWidth);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.style.width).toBe('50%');
+    const component = render(<TH width="50%"></TH>);
+    expect(component.children().attr('style')).toContain('width:50%;');
   });
 
   it('should not add width inline style to table cells by default', () => {
-    const component = testHelpers.renderIntoDocument(TestTableHeadDataWithWidth);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[1];
-
-    expect(tableDataNode.style.width).toBeFalsy();
+    const component = render(<TH></TH>);
+    expect(component.children().attr('style')).not.toContain('width');
   });
 });

@@ -1,40 +1,20 @@
 import React from 'react';
-import * as testHelpers from '../../../../utils/test-helpers';
 import TR from '../index';
+import { shallow } from 'enzyme';
 
 describe('components/Table/TR', () => {
-  const TestTableRow = (
-    <table>
-      <tbody>
-        <TR testSection="example-test-section">
-          <td></td>
-        </TR>
-      </tbody>
-    </table>
-  );
-
   it('should render as a `tr`', () => {
-    const component = testHelpers.renderIntoDocument(TestTableRow);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-
-    expect(tableRowNode.tagName).toBe('TR');
+    const component = shallow(<TR></TR>);
+    expect(component.type()).toBe('tr');
   });
 
   it('should render children', () => {
-    const component = testHelpers.renderIntoDocument(TestTableRow);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.tagName).toBe('TD');
+    const component = shallow(<TR><td></td></TR>);
+    expect(component.containsMatchingElement(<td></td>)).toBe(true);
   });
 
   it('should render with test section', () => {
-    const component = testHelpers.renderIntoDocument(TestTableRow);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-
-    testHelpers.expectTestSectionToExist(tableRowNode, 'example-test-section');
+    const component = shallow(<TR testSection="goose"></TR>);
+    expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
 });

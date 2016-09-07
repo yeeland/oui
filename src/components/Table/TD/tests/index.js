@@ -1,149 +1,55 @@
 import React from 'react';
-import * as testHelpers from '../../../../utils/test-helpers';
 import TD from '../index';
+import { shallow, render } from 'enzyme';
 
 describe('components/Table/TD', () => {
-  const TestTableData = (
-    <table>
-      <tbody>
-        <tr>
-          <TD testSection="example-test-section">
-            <button>Goose</button>
-          </TD>
-        </tr>
-      </tbody>
-    </table>
-  );
-
-  const TestTableDataNumerical = (
-    <table>
-      <tbody>
-        <tr>
-          <TD isNumerical={ true }></TD>
-        </tr>
-      </tbody>
-    </table>
-  );
-
-  const TestTableDataVerticalAlign = (
-    <table>
-      <tbody>
-        <tr>
-          <TD verticalAlign="middle"></TD>
-        </tr>
-      </tbody>
-    </table>
-  );
-
-  const TestTableDataWithWidth = (
-    <table>
-      <tbody>
-        <tr>
-          <TD width="50%"></TD>
-          <TD></TD>
-        </tr>
-      </tbody>
-    </table>
-  );
-
-  const TestTableDataWithColspan = (
-    <table>
-      <tbody>
-        <tr>
-          <TD colSpan={ 3 }></TD>
-        </tr>
-      </tbody>
-    </table>
-  );
-
   it('should render as a `td`', () => {
-    const component = testHelpers.renderIntoDocument(TestTableData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.tagName).toBe('TD');
+    const component = shallow(<TD></TD>);
+    expect(component.type()).toBe('td');
   });
 
   it('should render children', () => {
-    const component = testHelpers.renderIntoDocument(TestTableData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-    const buttonNode = tableDataNode.children[0];
-
-    expect(buttonNode.tagName).toBe('BUTTON');
+    const component = shallow(<TD>foo</TD>);
+    expect(component.text()).toBe('foo');
   });
 
   it('should render with test section', () => {
-    const component = testHelpers.renderIntoDocument(TestTableData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    testHelpers.expectTestSectionToExist(tableDataNode, 'example-test-section');
+    const component = shallow(<TD testSection="goose"></TD>);
+    expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
 
   it('should add numerical class to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableDataNumerical);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.className).toContain('oui-numerical');
+    const component = shallow(<TD isNumerical={ true }></TD>);
+    expect(component.hasClass('oui-numerical')).toBe(true);
   });
 
   it('should not add numerical class to table cells by default', () => {
-    const component = testHelpers.renderIntoDocument(TestTableData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.className).not.toContain('oui-numerical');
+    const component = shallow(<TD></TD>);
+    expect(component.hasClass('oui-numerical')).toBe(false);
   });
 
   it('should add vertical align class to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableDataVerticalAlign);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.className).toContain('vertical-align--middle');
+    const component = shallow(<TD verticalAlign="middle"></TD>);
+    expect(component.hasClass('vertical-align--middle')).toBe(true);
   });
 
   it('should not add vertical align class to table cells when not provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableData);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.className).not.toContain('vertical-align--middle');
+    const component = shallow(<TD></TD>);
+    expect(component.hasClass('vertical-align--middle')).toBe(false);
   });
 
   it('should add width inline style to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableDataWithWidth);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.style.width).toBe('50%');
+    const component = render(<TD width="50%"></TD>);
+    expect(component.children().attr('style')).toContain('width:50%;');
   });
 
   it('should not add width inline style to table cells by default', () => {
-    const component = testHelpers.renderIntoDocument(TestTableDataWithWidth);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[1];
-
-    expect(tableDataNode.style.width).toBeFalsy();
+    const component = render(<TD></TD>);
+    expect(component.children().attr('style')).not.toContain('width');
   });
 
   it('should add colspan to table cells when provided', () => {
-    const component = testHelpers.renderIntoDocument(TestTableDataWithColspan);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-    const tableDataNode = tableRowNode.children[0];
-
-    expect(tableDataNode.colSpan).toBe('3');
+    const component = render(<TD colSpan={ 3 }></TD>);
+    expect(component.children().attr('colspan')).toBe('3');
   });
 });

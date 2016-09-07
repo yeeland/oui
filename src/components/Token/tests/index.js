@@ -1,54 +1,37 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Token from '../index';
+import { shallow, mount } from 'enzyme';
 
 describe('components/Token', () => {
-  it('should have default values for propTypes "isDismissible" and "style" set correctly', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Token name="duck" testSection="goose" />
-    );
+  it('should render button when `isDismissible` is true', () => {
+    const component = mount(<Token isDismissible={ true } name="Goose" testSection="goose" />);
+    expect(component.find('[data-test-section="goose-dismiss"]').length).toBe(1);
+  });
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'goose-dismiss');
-    expect(componentNode.innerHTML).toContain('oui-token--secondary');
-    expect(dismissButtonContainer).toBeNull();
+  it('should not render button when `isDismissible` is not provided', () => {
+    const component = mount(<Token testSection="goose" name="Goose" />);
+    expect(component.find('[data-test-section="goose-dismiss"]').length).toBe(0);
+  });
+
+  it('should render correct prop for `style` when not specified', () => {
+    const component = shallow(<Token name="Goose" />);
+    expect(component.find('.oui-token--secondary').length).toBe(1);
+    expect(component.find('.oui-token--primary').length).toBe(0);
+  });
+
+  it('should render correct prop for `style` when specified', () => {
+    const component = shallow(<Token style="primary" name="Goose" />);
+    expect(component.find('.oui-token--primary').length).toBe(1);
+    expect(component.find('.oui-token--secondary').length).toBe(0);
   });
 
   it('should properly display name on token passed down by props', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Token name="goose" />
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    expect(componentNode.innerHTML).toContain('goose');
-  });
-
-  it('should render dismiss button when prop is provided', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Token
-        name="duck"
-        isDismissible={ true }
-        onDismiss={
-          function() {
-          }
-        }
-        testSection="goose">
-      </Token>
-    );
-
-    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'goose-dismiss');
-    expect(dismissButtonContainer).not.toBeNull();
+    const component = shallow(<Token name="goose" />);
+    expect(component.text()).toBe('goose');
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Token
-        name="duck"
-        testSection="goose"
-      />
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'goose');
+    const component = shallow(<Token testSection="goose" name="Goose" />);
+    expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
 });

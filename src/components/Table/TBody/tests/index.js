@@ -1,35 +1,20 @@
 import React from 'react';
-import * as testHelpers from '../../../../utils/test-helpers';
 import TBody from '../index';
+import { shallow } from 'enzyme';
 
 describe('components/Table/TBody', () => {
-  const TestTableBody = (
-    <table>
-      <TBody testSection="example-test-section">
-        <tr></tr>
-      </TBody>
-    </table>
-  );
-
   it('should render as a `tbody`', () => {
-    const component = testHelpers.renderIntoDocument(TestTableBody);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-
-    expect(tableBodyNode.tagName).toBe('TBODY');
+    const component = shallow(<TBody></TBody>);
+    expect(component.type()).toBe('tbody');
   });
 
   it('should render children', () => {
-    const component = testHelpers.renderIntoDocument(TestTableBody);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-    const tableRowNode = tableBodyNode.children[0];
-
-    expect(tableRowNode.tagName).toBe('TR');
+    const component = shallow(<TBody><td></td></TBody>);
+    expect(component.containsMatchingElement(<td></td>)).toBe(true);
   });
 
   it('should render with test section', () => {
-    const component = testHelpers.renderIntoDocument(TestTableBody);
-    const tableBodyNode = testHelpers.getNodeFromComponent(component).children[0];
-
-    testHelpers.expectTestSectionToExist(tableBodyNode, 'example-test-section');
+    const component = shallow(<TBody testSection="goose"></TBody>);
+    expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
 });
