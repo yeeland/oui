@@ -18,6 +18,8 @@ const AlignRightLeftIcon = (props) => {
       sizeclass = 'oui-icon--16';
       break;
     default:
+      Svg = AlignRightLeftIcon16;
+      sizeclass = `oui-icon--${ props.size }`;
   }
 
   return (
@@ -30,12 +32,9 @@ const AlignRightLeftIcon = (props) => {
 
 AlignRightLeftIcon.propTypes = {
   /** Size of the icon */
-  size: React.PropTypes.oneOf([
-    16,
-  ]).isRequired,
+  size: React.PropTypes.oneOf(12, 16, 24).isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };
 
 export default AlignRightLeftIcon;
-

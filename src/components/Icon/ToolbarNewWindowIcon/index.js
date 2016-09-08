@@ -18,6 +18,8 @@ const ToolbarNewWindowIcon = (props) => {
       sizeclass = 'oui-icon--24';
       break;
     default:
+      Svg = ToolbarNewWindowIcon24;
+      sizeclass = `oui-icon--${ props.size }`;
   }
 
   return (
@@ -30,12 +32,9 @@ const ToolbarNewWindowIcon = (props) => {
 
 ToolbarNewWindowIcon.propTypes = {
   /** Size of the icon */
-  size: React.PropTypes.oneOf([
-    24,
-  ]).isRequired,
+  size: React.PropTypes.oneOf(12, 16, 24).isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };
 
 export default ToolbarNewWindowIcon;
-

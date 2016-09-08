@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
+- [Patch] Add a default case to each icon component so that a non-standard size can be passed.
+- [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
 
 ## [17.0.0][17.0.0] - 2016-09-07
 ### Changed

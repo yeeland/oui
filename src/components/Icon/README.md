@@ -2,7 +2,7 @@
 
 The components in this directory are automatically generated. The icons come
 from our [oui-icons](https://github.com/optimizely/oui-icons) npm package. A
-shell script (`scripts/sync-oui-icons.sh`) loops through the icons within the
+Node.js script (`scripts/sync-oui-icons.js`) loops through the icons within the
 `node_modules/` directory and creates a basic React component for each icon.
 
 You can run the script with `npm run icons:update`. It must be run each time

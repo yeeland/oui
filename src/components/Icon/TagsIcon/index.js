@@ -23,6 +23,8 @@ const TagsIcon = (props) => {
       sizeclass = 'oui-icon--24';
       break;
     default:
+      Svg = TagsIcon16;
+      sizeclass = `oui-icon--${ props.size }`;
   }
 
   return (
@@ -35,13 +37,9 @@ const TagsIcon = (props) => {
 
 TagsIcon.propTypes = {
   /** Size of the icon */
-  size: React.PropTypes.oneOf([
-    16,
-    24,
-  ]).isRequired,
+  size: React.PropTypes.oneOf(12, 16, 24).isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };
 
 export default TagsIcon;
-
