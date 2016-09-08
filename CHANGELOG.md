@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
+
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
 - [Patch] Add a default case to each icon component so that a non-standard size can be passed.
