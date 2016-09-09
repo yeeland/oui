@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
+
 ### Added
 - [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
 
