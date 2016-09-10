@@ -35,6 +35,14 @@ describe('components/Code', () => {
     expect(componentBlock.text()).toBe(code);
   });
 
+  it('should not render if children are null', () => {
+    const component = shallow(
+      <Code type="block"></Code>
+    );
+
+    expect(component.html()).toBeFalsy();
+  });
+
   it('should add syntax highlighting to code when specified', () => {
     let code = 'var foo;';
 

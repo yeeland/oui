@@ -81,6 +81,10 @@ const HighlightedCode = (code, isHighlighted, language, className, testSection) 
  * @returns {ReactElement}
  */
 const Code = (props) => {
+  if (!props.children) {
+    return null;
+  }
+
   if (props.type === 'inline') {
     return HighlightedCode(props.children, props.isHighlighted, props.language, 'oui-code', props.testSection);
   }
@@ -100,7 +104,7 @@ const Code = (props) => {
 
 Code.propTypes = {
   /** The code within the component */
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string,
   /** Adds a copy button to code examples */
   hasCopyButton: React.PropTypes.bool,
   /** Apply syntax highlighting to the code */
