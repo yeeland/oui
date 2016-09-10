@@ -107,7 +107,7 @@ Code.propTypes = {
   isHighlighted: React.PropTypes.bool,
   /** Specify a language for the syntax highlighter */
   language: React.PropTypes.oneOf(['css', 'diff', 'html', 'java', 'javascript',
-    'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'ruby', 'scss',
+    'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',
     'swift']),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,

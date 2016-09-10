@@ -9,6 +9,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
 
 ### Added
+- [Feature] Add Python to code language prop for syntax highlighting. (#558)
 - [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
 
 ### Changed
