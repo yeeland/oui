@@ -294,6 +294,22 @@
     }
   }
 
+  &--unstyled {
+    // scss-lint:disable ImportantRule
+    background: inherit !important;
+    border: inherit !important;
+    border-radius: inherit !important;
+    box-shadow: inherit !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    height: inherit !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-shadow: inherit !important;
+  }
+
   // Disabled State
   // Used either an attribute or a class, depending on the use case.
 

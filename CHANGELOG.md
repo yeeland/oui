@@ -6,16 +6,23 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add `unstyled` option for `Button`.
+- [Feature] Add Python to code language prop for syntax highlighting. (#558)
 - [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
+- [Feature] Add `onBlur` prop to `Input`. (#559)
 
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
 - [Patch] Use clipboard icon for copy copying in `Code` component. (#468)
 - [Patch] Add a default case to each icon component so that a non-standard size can be passed.
 - [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
+- [Patch] Loosen Code component children props and render nothing when children are empty. (#557)
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
 
 ### Fixed
+- [Patch] Improve the design of the `Token` close button.
 - [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
+- [Patch] Update icon classes so the numerical sizes match the written sizes. (#549)
 
 ## [17.0.0][17.0.0] - 2016-09-07
 ### Changed

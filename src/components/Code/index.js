@@ -37,6 +37,10 @@ const HighlightedCode = (code, isHighlighted, language, className, testSection) 
  * @returns {ReactElement}
  */
 const Code = (props) => {
+  if (!props.children) {
+    return null;
+  }
+
   let copy = null;
 
   if (props.type === 'inline') {
@@ -65,14 +69,14 @@ const Code = (props) => {
 
 Code.propTypes = {
   /** The code within the component */
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string,
   /** Adds a copy button to code examples */
   hasCopyButton: React.PropTypes.bool,
   /** Apply syntax highlighting to the code */
   isHighlighted: React.PropTypes.bool,
   /** Specify a language for the syntax highlighter */
   language: React.PropTypes.oneOf(['css', 'diff', 'html', 'java', 'javascript',
-    'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'ruby', 'scss',
+    'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',
     'swift']),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,

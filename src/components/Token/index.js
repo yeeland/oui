@@ -4,14 +4,16 @@ import CloseIcon from '../Icon/CloseIcon';
 
 const DismissButton = (onDismiss, testSection) => {
   return (
-    <Button
-      onClick={ onDismiss }
-      style="plain"
-      size="tiny"
-      ariaLabel="Close alert"
-      testSection={ testSection ? testSection + '-dismiss' : null }>
-      <CloseIcon size={ 16 } />
-    </Button>
+    <div
+      className="push-half--left flex"
+      style={ { height: '12px', width: '12px' } }>
+      <Button
+        onClick={ onDismiss }
+        style="unstyled"
+        testSection={ testSection ? testSection + '-dismiss' : null }>
+        <CloseIcon size={ 12 } />
+      </Button>
+    </div>
   );
 };
 

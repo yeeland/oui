@@ -52,6 +52,7 @@ Button.propTypes = {
     'outline-reverse',
     'plain',
     'toggle',
+    'unstyled',
   ]),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
