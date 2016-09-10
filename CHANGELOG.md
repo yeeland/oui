@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add Python to code language prop for syntax highlighting. (#558)
 - [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
+- [Feature] Add `onBlur` prop to `Input`. (#559)
 
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
