@@ -1,5 +1,4 @@
 import React from 'react';
-import { default as Clipboard } from 'clipboard';
 import Code from '../index';
 import { shallow, mount, render } from 'enzyme';
 
@@ -108,48 +107,6 @@ describe('components/Code', () => {
       );
 
       expect(component.find('[data-test-section="code-copy-button"]').length).toBe(1);
-    });
-
-    it('should call clipboard function when button is clicked on', () => {
-      let code = 'var foo;';
-
-      const component = mount(
-        <Code
-          type="block"
-          hasCopyButton={ true }
-          testSection="code">
-          { code }
-        </Code>
-      );
-
-      spyOn(Clipboard.prototype, 'onClick').and.stub();
-      spyOn(Clipboard.prototype, 'resolveOptions').and.stub();
-
-      const copyButton = component.find('[data-test-section="code-copy-button"]');
-      copyButton.simulate('click');
-
-      expect(Clipboard.prototype.resolveOptions.calls.argsFor(0)[0].text()).toEqual(code);
-      expect(Clipboard.prototype.onClick.calls.count()).toEqual(1);
-    });
-
-    it('should destroy clipboard after button is clicked on', () => {
-      let code = 'var foo;';
-
-      const component = mount(
-        <Code
-          type="block"
-          hasCopyButton={ true }
-          testSection="code">
-          { code }
-        </Code>
-      );
-
-      spyOn(Clipboard.prototype, 'destroy').and.stub();
-
-      const copyButton = component.find('[data-test-section="code-copy-button"]');
-      copyButton.simulate('click');
-
-      expect(Clipboard.prototype.destroy.calls.count()).toEqual(1);
     });
 
     it('should not add a copy button to inline code', () => {

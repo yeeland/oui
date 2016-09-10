@@ -5,16 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
-### Changed
-- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
-
 ### Added
 - [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
 
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
+- [Patch] Use clipboard icon for copy copying in `Code` component. (#468)
 - [Patch] Add a default case to each icon component so that a non-standard size can be passed.
 - [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
+
+### Fixed
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
 
 ## [17.0.0][17.0.0] - 2016-09-07
 ### Changed
