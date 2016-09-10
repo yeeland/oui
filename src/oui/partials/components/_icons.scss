@@ -24,12 +24,13 @@
   }
 
   &--medium,
-  &--24 {
+  &--16 {
     width: map-fetch($icon, size, medium, width);
     height: map-fetch($icon, size, medium, height);
   }
 
-  &--large {
+  &--large,
+  &--24 {
     width: map-fetch($icon, size, large, width);
     height: map-fetch($icon, size, large, height);
   }
@@ -50,7 +51,7 @@
 /// @description Fix for icons inside buttons with text and icons inside tabs.
 
 .#{$namespace}button .#{$namespace}icon,
-.oui-button .oui-icon {
+.oui-button:not(.oui-button--unstyled) .oui-icon {
   vertical-align: sub;
 }
 

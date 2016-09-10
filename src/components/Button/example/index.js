@@ -39,6 +39,13 @@ export default [
   {
     isPadded: true,
     examples: [
+      <Button style="unstyled">Unstyled Button</Button>,
+    ],
+  },
+
+  {
+    isPadded: true,
+    examples: [
       <Button size="tiny">Tiny Button</Button>,
       <Button size="small">Small Button</Button>,
       <Button size="large">Large Button</Button>,
