@@ -31,10 +31,13 @@ const Input = (props) => {
   };
 
   if (props.label) {
+    let fieldLabel = props.isOptional ? <span className="label__optional">(Optional)</span> : '';
+
     return (
       <Label testSection={ props.testSection + '-label' }>
-        <div className="label">
+        <div className="oui-label">
           { props.label }
+          { fieldLabel }
         </div>
         { renderInput(props) }
       </Label>
@@ -51,6 +54,8 @@ Input.propTypes = {
   isDisabled: React.PropTypes.bool,
   /** Includes search icon if true */
   isFilter: React.PropTypes.bool,
+  /** Includes optional label if true */
+  isOptional: React.PropTypes.bool,
   /** Prevents input from being modified but doesn't appear disabled */
   isReadOnly: React.PropTypes.bool,
   /** Prevents input from being submitted without value */

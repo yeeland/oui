@@ -50,12 +50,13 @@ export default [
         type="password"
         label="Password"
         testSection="input"
+        isOptional={ true }
       />,
     ],
   },
   {
     examples: [
-      <Input type="date" />,
+      <Input type="date" isOptional={ true } />,
     ],
   },
 ];
