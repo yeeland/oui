@@ -21,13 +21,13 @@ class CopyButton extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <div
-        style={ { position: 'absolute', right: 0 } }
+        style={ { position: 'absolute', right: 0, top: '5px' } }
         ref={ (c) => { this._buttonContainer = c; } }>
         <Button
           style="plain"
           ariaLabel="Copy code snippet"
           testSection={ buttonTestSection }>
-          <ClipboardIcon size={ 16 } />
+          <ClipboardIcon />
         </Button>
       </div>
       /* eslint-enable */
