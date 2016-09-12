@@ -14,6 +14,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
 - [Patch] Add a default case to each icon component so that a non-standard size can be passed.
+- [Patch] Use `git push --follow-tags` when releasing a new version instead of `git push && git push --tags`. This does a push and only pushes the relevant annotated tags. (#515)
 - [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
 - [Patch] Loosen Code component children props and render nothing when children are empty. (#557)
 - [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
