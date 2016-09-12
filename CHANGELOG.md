@@ -13,6 +13,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Changed
 - [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
+- [Patch] Use clipboard icon for copy copying in `Code` component. (#468)
 - [Patch] Add a default case to each icon component so that a non-standard size can be passed.
 - [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
 - [Patch] Loosen Code component children props and render nothing when children are empty. (#557)
@@ -20,6 +21,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Fixed
 - [Patch] Improve the design of the `Token` close button.
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
 - [Patch] Update icon classes so the numerical sizes match the written sizes. (#549)
 
 ## [17.0.0][17.0.0] - 2016-09-07
