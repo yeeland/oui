@@ -102,14 +102,6 @@ describe('components/Input', () => {
     expect(component.find('[data-test-section="foo-label"]').length).toBe(1);
   });
 
-  it('should render an optional label if isOptional is set', () => {
-    const component = mount(
-      <Input type="text" testSection="foo" label="Input Label" isOptional={ true } />
-    );
-
-    expect(component.find('[data-test-section="foo-label"] span.label__optional').length).toBe(1);
-  });
-
   it('should not render a label by default', () => {
     const component = mount(
       <Input type="text" testSection="foo" />
