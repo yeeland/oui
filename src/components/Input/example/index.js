@@ -14,11 +14,31 @@ export default [
   {
     examples: [
       <Input
-        type="number"
-        defaultValue="42"
+        type="text"
+        placeholder="Browse by Name"
+        isFilter={ true }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
+        defaultValue="onChange Example"
         onChange={
           function(event) {
-            console.log(event.target.value); // eslint-disable-line no-console
+            console.log('onChange', event.target.value); // eslint-disable-line no-console
+          }
+        }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
+        defaultValue="onBlur Example"
+        onBlur={
+          function(event) {
+            console.log('onBlur', event.target.value); // eslint-disable-line no-console
           }
         }
       />,

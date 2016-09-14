@@ -17,11 +17,11 @@
 ///     </div>
 ///   </div>
 
-///   <div class="disclose" data-oui-disclose>
+///   <div class="disclose disclose--right" data-oui-disclose>
 ///     <a href="#" class="disclose__link" data-oui-disclose-link>
 ///       <div class="disclose__arrow">
 ///         <span class="disclose__symbol"></span>
-///         Title of Disclosure
+///         Right-Aligned Arrow
 ///       </div>
 ///     </a>
 ///     <div class="disclose__content">
@@ -49,8 +49,15 @@
 
     &::before {
       line-height: 1;
-      font-size: map-fetch($font, size, micro);
-      content: '\25B6';
+      font-size: map-fetch($font, size, base);
+      content: '\25B8';
+    }
+  }
+
+  &--right {
+    .#{$namespace}disclose__symbol {
+      float: right;
+      transform: rotate(180deg);
     }
   }
 
@@ -73,5 +80,6 @@
     .#{$namespace}disclose__symbol {
       transform: rotate(90deg);
     }
+
   }
 }

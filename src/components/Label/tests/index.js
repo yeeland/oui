@@ -1,40 +1,47 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Label from '../index';
+import { shallow, render } from 'enzyme';
 
 describe('components/Label', () => {
-  it('should render label with text content and the proper class', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Label>Foo</Label>
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-
-    expect(componentNode.tagName).toBe('LABEL');
-    expect(componentNode.className).toBe('oui-label');
-    expect(componentNode.textContent).toBe('Foo');
+  it('should render label with text content', () => {
+    const component = shallow(<Label>Foo</Label>);
+    expect(component.text()).toBe('Foo');
   });
 
-  it('should render label with DOM nodes and no extra class', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Label>
-        <div>Foo</div>
-        <div>Bar</div>
-      </Label>
-    );
+  it('should render label with correct classes content', () => {
+    const component = shallow(<Label>Foo</Label>);
+    expect(component.hasClass('oui-label')).toBe(true);
+  });
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
+  it('should render label as a `label` element', () => {
+    const component = shallow(<Label>Foo</Label>);
+    expect(component.type()).toBe('label');
+  });
 
-    expect(componentNode.getAttribute('class')).toBe(null);
-    expect(componentNode.innerHTML).toBe('<div>Foo</div><div>Bar</div>');
+  describe('with DOM nodes as children', () => {
+    it('should render label with DOM nodes', () => {
+      const component = shallow(
+        <Label>
+          <div>Foo</div>
+        </Label>
+      );
+
+      expect(component.containsMatchingElement(<div>Foo</div>)).toBe(true);
+    });
+
+    it('should render label without extra classes', () => {
+      const component = render(
+        <Label>
+          <div>Foo</div>
+        </Label>
+      );
+
+      expect(component.children().attr('class')).toBeFalsy();
+    });
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Label testSection="foo">Foo</Label>
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+    const component = shallow(<Label testSection="foo">Foo</Label>);
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 });

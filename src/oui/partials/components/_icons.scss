@@ -6,27 +6,31 @@
 /// SVG Icons
 /// @description The color of the SVG will inherit the parent's `color`.
 /// @example[url] 16x16 Icons
-///   http://design.optimizely.com/docs/oui-icons/0.1.2/16/16.html
+///   http://design.optimizely.com/docs/oui-icons/3.0.1/16/16.html
 /// @example[url] 24x24 Icons
-///   http://design.optimizely.com/docs/oui-icons/0.1.2/24/24.html
+///   http://design.optimizely.com/docs/oui-icons/3.0.1/24/24.html
 
-.#{$namespace}icon {
+.#{$namespace}icon,
+.oui-icon {
   width: map-fetch($icon, size, base, width);
   height: map-fetch($icon, size, base, height);
   display: inline-block;
   fill: currentColor;
 
-  &--small {
+  &--small,
+  &--12 {
     width: map-fetch($icon, size, small, width);
     height: map-fetch($icon, size, small, height);
   }
 
-  &--medium {
+  &--medium,
+  &--16 {
     width: map-fetch($icon, size, medium, width);
     height: map-fetch($icon, size, medium, height);
   }
 
-  &--large {
+  &--large,
+  &--24 {
     width: map-fetch($icon, size, large, width);
     height: map-fetch($icon, size, large, height);
   }
@@ -47,11 +51,12 @@
 /// @description Fix for icons inside buttons with text and icons inside tabs.
 
 .#{$namespace}button .#{$namespace}icon,
-.oui-button .#{$namespace}icon {
+.oui-button:not(.oui-button--unstyled) .oui-icon {
   vertical-align: sub;
 }
 
-.#{$namespace}tabs-nav__item .#{$namespace}icon {
+.#{$namespace}tabs-nav__item .#{$namespace}icon,
+.#{$namespace}tabs-nav__item .oui-icon {
   vertical-align: sub;
 }
 

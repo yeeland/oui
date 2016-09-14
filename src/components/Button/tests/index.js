@@ -1,6 +1,6 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Button from '../index';
+import { shallow } from 'enzyme';
 
 describe('components/Button', () => {
   it('should call function that is passed in as `onClick` after click', () => {
@@ -9,22 +9,20 @@ describe('components/Button', () => {
     };
     spyOn(obj, 'func').and.stub();
 
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Button onClick={ obj.func }>Hello!</Button>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.simulate.click(componentNode);
+    component.simulate('click');
 
     expect(obj.func).toHaveBeenCalled();
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Button testSection="foo">Hello!</Button>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 });

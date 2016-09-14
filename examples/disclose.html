@@ -16,14 +16,24 @@
 
   body {
     margin: 200px;
+    width: 300px;
   }
 
   h4 {
     font-size: 18px;
   }
 
-
   </style>
+
+  <script>
+  // throwaway js for disclose
+  $('.disclose .disclose__link').on( "click", function(e) {
+    console.log('click');
+    e.preventDefault();
+    $(this).next('.disclose__content').toggleClass('display--block');
+    $(this).parent('.disclose').toggleClass('is-active');
+  });
+  </script>
 
 </head>
 <body>
@@ -47,6 +57,19 @@
     <div class="disclose__arrow">
       <span class="disclose__symbol"></span>
       Title of Disclosure
+    </div>
+  </a>
+  <div class="disclose__content">
+    <h3>Some Title</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
+  </div>
+</div>
+
+<div class="disclose disclose--right" data-oui-disclose>
+  <a href="#" class="disclose__link" data-oui-disclose-link>
+    <div class="disclose__arrow">
+      <span class="disclose__symbol"></span>
+      Disclose Right Aligned Arrow
     </div>
   </a>
   <div class="disclose__content">

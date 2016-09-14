@@ -3,7 +3,10 @@ module.exports = {
     docs: './docs/index.jsx',
   },
   output: {
-    filename: './dist/docs/js/docs.js',
+    filename: '[name].js',
+    chunkFilename: '[name]-[hash].js',
+    path: __dirname + '/dist/docs/js/',
+    publicPath: 'js/',
   },
   module: {
     loaders: [
@@ -15,10 +18,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
       },
     ],
   },

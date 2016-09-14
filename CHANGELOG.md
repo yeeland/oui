@@ -6,6 +6,102 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
+## [17.1.0][17.1.0] - 2016-09-12
+### Added
+- [Feature] Add `unstyled` option for `Button`.
+- [Feature] Add Python to code language prop for syntax highlighting. (#558)
+- [Feature] Add disclose--right modifier option for right-aligned arrow. (#553)
+- [Feature] Add `onBlur` prop to `Input`. (#559)
+
+### Changed
+- [Patch] Convert `sync-oui-icons` bash script to Node.js. (#550)
+- [Patch] Use clipboard icon for copy copying in `Code` component. (#468)
+- [Patch] Add a default case to each icon component so that a non-standard size can be passed.
+- [Patch] Use `git push --follow-tags` when releasing a new version instead of `git push && git push --tags`. This does a push and only pushes the relevant annotated tags. (#515)
+- [Patch] Remove `svgo` since it was only minifying the SVGs locally and not in the published version of OUI.
+- [Patch] Loosen Code component children props and render nothing when children are empty. (#557)
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
+
+### Fixed
+- [Patch] Improve the design of the `Token` close button.
+- [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
+- [Patch] Update icon classes so the numerical sizes match the written sizes. (#549)
+
+## [17.0.0][17.0.0] - 2016-09-07
+### Changed
+- [Release] Add a `tableLayoutAlgorithm` prop to the `Table` component and set it to `fixed` by default. Existing uses of the component should be updated to either ensure they look correct with the new default or add `tableLayoutAlgorithm={ 'auto' }` to the instance of `Table`. (#546)
+- [Patch] Replace in-house test helpers with Airbnb's Enzyme.
+
+## [16.0.0][16.0.0] - 2016-09-06
+### Changed
+- [Release] Remove `text-align: center` from `[colspan]`. (#544)
+
+### Removed
+- [Patch] Revert `merge=union` in `.gitattributes` because it was causing more harm than good. (#540)
+
+## [15.2.1][15.2.1] - 2016-09-02
+### Changed
+- [Patch] Remove `padding-left: 0;` and `padding-right: 0;` from `oui-button--full` because it is never a desired style.
+
+## [15.2.0][15.2.0] - 2016-09-02
+### Added
+- [Feature] Add `colSpan` prop to `Table.TD` component. (#533)
+- [Feature] Add size class based on icon size prop. (#517)
+- [Feature] Add a `density` prop to `Table` with a `loose` option. (#536)
+
+### Fixed
+- [Patch] Revert TabNav examples, the minimal examples throw errors because those props are required.
+- [Patch] Updated icon default export syntax in bash script, new import syntax as well. (#506)
+- [Patch] Fix warnings for keys in ButtonRow example.
+- [Patch] Fix typo in `rule-no-bottom-border` SCSS for `Table`.
+
+## [15.1.0][15.1.0] - 2016-08-30
+### Added
+- [Feature] Add a `verticalAlign` prop to `Table.TD` component.
+- [Feature] Add the ability to pass a `width` to `Table.TD` and `Table.TH` components.
+- [Feature] Add a `Table` style called `rule-no-bottom-border` that has borders but no bottom border on the last child.
+
+### Changed
+- [Patch] Pass `isActive` prop on `TabNav.Tab` instead of doing the logic on the child. (#522)
+- [Patch] Add `user-select: none` rule to `oui-button`.
+- [Patch] Make `Button` `children` prop more generic. (#507)
+
+## [15.0.0][15.0.0] - 2016-08-26
+### Changed
+- [Release] Change the `Table` React component API to be more declarative. (#513)
+- [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
+
+## [14.1.0][14.1.0] - 2016-08-25
+### Added
+- [Feature] Add size class based on icon size prop. (#517)
+- [Feature] Add TabNav react component
+- [Feature] Add isFilter prop to <Input> for search icon (#488)
+
+### Changed
+- [Patch] Update disclose arrow to narrow style per Silvia. (#504)
+- [Patch] Fix typo in React prop description to say onChange fires every keypress. (#492)
+- [Patch] Fix disabled button namespace with OUI. Add all disabled examples to React docs for easy testing for now. (#511)
+
+## [14.0.5][14.0.5] - 2016-08-17
+### Added
+- [Feature] Add isFilter prop to <Input> for search icon (#488)
+- [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
+- [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
+
+## [14.0.0][14.0.0] - 2016-08-15
+### Added
+- [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
+
+### Fixed
+- [Patch] Add namespace to spinner Sass documentation. (#489)
+- [Patch] Fix disabled state for toggle buttons (#480)
+- [Patch] Update search icon (#483)
+- [Patch] Add `merge=union` for `CHANGELOG.md` to reduce merge conflicts. (#493)
+- [Feature] Add danger-outline button style (#491)
+
+### Changed
+- [Release] Add webpack loaders into `require(...)` (opposed to `webpack.config.js`) and as `dependencies` so that icon SVGs and `highlight.js` CSS can be loaded without requiring applications that use OUI's React components to configure the loaders in their `package.json`. (#485)
+
 ## [13.2.0][13.2.0] - 2016-08-03
 ### Added
 - [Feature] Created `Token` React component.
@@ -458,7 +554,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v13.2.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v17.1.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -500,3 +596,13 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [13.1.0]: https://github.com/optimizely/oui/compare/v13.0.1...v13.1.0
 [13.1.1]: https://github.com/optimizely/oui/compare/v13.1.0...v13.1.1
 [13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
+[14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
+[14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
+[14.1.0]: https://github.com/optimizely/oui/compare/v14.0.5...v14.1.0
+[15.0.0]: https://github.com/optimizely/oui/compare/v14.1.0...v15.0.0
+[15.1.0]: https://github.com/optimizely/oui/compare/v15.0.0...v15.1.0
+[15.2.0]: https://github.com/optimizely/oui/compare/v15.1.0...v15.2.0
+[15.2.1]: https://github.com/optimizely/oui/compare/v15.2.0...v15.2.1
+[16.0.0]: https://github.com/optimizely/oui/compare/v15.2.1...v16.0.0
+[17.0.0]: https://github.com/optimizely/oui/compare/v16.0.0...v17.0.0
+[17.1.0]: https://github.com/optimizely/oui/compare/v17.0.0...v17.1.0

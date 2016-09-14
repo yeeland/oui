@@ -1,33 +1,30 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Input from '../index';
+import { shallow, mount, render } from 'enzyme';
 
 describe('components/Input', () => {
   it('should render a "text" input when type="text" is passed', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Input type="text" />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-
-    expect(componentNode.tagName).toBe('INPUT');
-    expect(componentNode.className).toBe('oui-text-input');
-    expect(componentNode.type).toBe('text');
+    expect(component.type()).toBe('input');
+    expect(component.hasClass('oui-text-input')).toBe(true);
+    expect(component.is('[type="text"]')).toBe(true);
   });
 
   it('should render a "number" input when type="number" is passed', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Input type="number" />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-
-    expect(componentNode.type).toBe('number');
+    expect(component.is('[type="number"]')).toBe(true);
   });
 
   it('should output an error if an invalid "type" is passed', () => {
     spyOn(console, 'error').and.stub();
-    testHelpers.renderIntoDocument(
+
+    render(
       <Input type="foo" />
     );
 
@@ -36,40 +33,42 @@ describe('components/Input', () => {
 
   it('should output an error if a "value" prop is passed without an "onChange" handler', () => {
     spyOn(console, 'error').and.stub();
-    testHelpers.renderIntoDocument(
+
+    render(
       <Input type="text" value="foo" />
     );
 
     expect(console.error).toHaveBeenCalled(); // eslint-disable-line
   });
 
-  it('should not allow value to be changed if no "onChange" handler is passed', () => {
-    spyOn(console, 'error').and.stub();
-    const component = testHelpers.renderIntoDocument(
-      <Input type="text" value="foo" />
-    );
-
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    componentNode.value = 'bar';
-    testHelpers.simulate.change(componentNode);
-
-    expect(componentNode.value).toBe('foo');
-  });
-
   it('should call the onChange event handler when the input is changed', () => {
     const handler = {
-      onChange: (event) => { },
+      onChange: (event) => {},
     };
     spyOn(handler, 'onChange');
 
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Input type="text" value="foo" onChange={ handler.onChange } />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.simulate.change(componentNode);
+    component.simulate('change');
 
     expect(handler.onChange).toHaveBeenCalled();
+  });
+
+  it('should call the onBlur event handler when the input loses focus', () => {
+    const handler = {
+      onBlur: (event) => {},
+    };
+    spyOn(handler, 'onBlur');
+
+    const component = mount(
+      <Input type="text" value="foo" onBlur={ handler.onBlur } />
+    );
+
+    component.simulate('blur');
+
+    expect(handler.onBlur).toHaveBeenCalled();
   });
 
   it('should call the onInput event handler when the input receives user input', () => {
@@ -78,40 +77,36 @@ describe('components/Input', () => {
     };
     spyOn(handler, 'onInput');
 
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Input type="text" value="foo" onInput={ handler.onInput } />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.simulate.input(componentNode);
+    component.simulate('input');
 
     expect(handler.onInput).toHaveBeenCalled();
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Input type="text" testSection="foo" />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 
   it('should render a label if label is passed', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Input type="text" testSection="foo" label="Input Label" />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo-label');
+    expect(component.find('[data-test-section="foo-label"]').length).toBe(1);
   });
 
   it('should not render a label by default', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Input type="text" testSection="foo" />
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToNotExist(componentNode, 'foo-label');
+    expect(component.find('[data-test-section="foo-label"]').length).toBe(0);
   });
 });

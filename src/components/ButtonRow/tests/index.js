@@ -1,26 +1,25 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Button from '../../Button';
 import ButtonRow from '../';
+import { mount } from 'enzyme';
 
 describe('components/ButtonRow', () => {
   describe('with no buttons supplied', () => {
     it('should not render buttons', () => {
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <ButtonRow
           testSection="buttonRowTest"
         />
       );
-      const leftButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-left');
-      const rightButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-right');
-      expect(leftButtons).toBeNull();
-      expect(rightButtons).toBeNull();
+
+      expect(component.find('[data-test-section="buttonRowTest-left"]').length).toBe(0);
+      expect(component.find('[data-test-section="buttonRowTest-right"]').length).toBe(0);
     });
   });
 
   describe('with only left buttons supplied', () => {
     it('should render correct number of buttons if buttons are supplied', () => {
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <ButtonRow
           testSection="buttonRowTest"
           leftGroup={ [
@@ -32,15 +31,14 @@ describe('components/ButtonRow', () => {
           ] }
         />
       );
-      const leftButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-left');
-      expect(leftButtons.childNodes[0].type).toEqual('button');
-      expect(leftButtons.childNodes.length).toEqual(5);
+
+      expect(component.find('[data-test-section="buttonRowTest-left"] button').length).toBe(5);
     });
   });
 
   describe('with only right buttons supplied', () => {
     it('should render correct number of buttons if buttons are supplied', () => {
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <ButtonRow
           testSection="buttonRowTest"
           rightGroup={ [
@@ -52,15 +50,13 @@ describe('components/ButtonRow', () => {
           ] }
         />
       );
-      const rightButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-right');
-      expect(rightButtons.childNodes[0].type).toEqual('button');
-      expect(rightButtons.childNodes.length).toEqual(5);
+      expect(component.find('[data-test-section="buttonRowTest-right"] button').length).toBe(5);
     });
   });
 
   describe('with both left and right buttons supplied', () => {
     it('should render correct number of buttons if buttons are supplied', () => {
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <ButtonRow
           testSection="buttonRowTest"
           leftGroup={ [
@@ -71,17 +67,14 @@ describe('components/ButtonRow', () => {
           ] }
         />
       );
-      const leftButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-left');
-      const rightButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-right');
-      expect(leftButtons.childNodes[0].type).toEqual('button');
-      expect(leftButtons.childNodes.length).toEqual(1);
-      expect(rightButtons.childNodes[0].type).toEqual('button');
-      expect(rightButtons.childNodes.length).toEqual(1);
+
+      expect(component.find('[data-test-section="buttonRowTest-left"] button').length).toBe(1);
+      expect(component.find('[data-test-section="buttonRowTest-right"] button').length).toBe(1);
     });
 
     describe('with a test section', () => {
       it('should render with a test section', () => {
-        const component = testHelpers.renderIntoDocument(
+        const component = mount(
           <ButtonRow
             testSection="buttonRowTest"
             leftGroup={ [
@@ -92,15 +85,11 @@ describe('components/ButtonRow', () => {
             ] }
           />
         );
-        const buttons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest');
-        const leftButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-left');
-        const rightButtons = testHelpers.getTestSectionFromComponent(component, 'buttonRowTest-right');
-        expect(buttons).not.toBeNull();
-        expect(leftButtons).not.toBeNull();
-        expect(rightButtons).not.toBeNull();
+
+        expect(component.find('[data-test-section="buttonRowTest"]').length).toBe(1);
+        expect(component.find('[data-test-section="buttonRowTest-left"]').length).toBe(1);
+        expect(component.find('[data-test-section="buttonRowTest-right"]').length).toBe(1);
       });
     });
-
   });
-
 });

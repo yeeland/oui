@@ -24,7 +24,7 @@ Label.propTypes = {
   /** What the label describes */
   children: React.PropTypes.oneOfType([
     React.PropTypes.string.isRequired,
-    React.PropTypes.array.isRequired,
+    React.PropTypes.node.isRequired,
   ]),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,

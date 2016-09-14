@@ -7,6 +7,7 @@
 ///   <button class="oui-button">Button</button>
 ///   <button class="oui-button oui-button--highlight">Button</button>
 ///   <button class="oui-button oui-button--danger">Button</button>
+///   <button class="oui-button oui-button--danger-outline">Button</button>
 ///   <button class="oui-button oui-button--outline">Button</button>
 ///   <button class="oui-button oui-button--plain">Button</button>
 /// @example[html] Tiny buttons
@@ -33,6 +34,7 @@
   border-style: solid;
   font-size: map-fetch($button, size, base, font-size);
   font-weight: map-fetch($button, size, base, font-weight);
+  user-select: none;
   border-radius: map-fetch($button, size, base, border-radius);
   height: map-fetch($button, size, base, height);
   padding: map-fetch($button, size, base, padding);
@@ -164,6 +166,35 @@
     }
   }
 
+  &--danger-outline {
+    color: map-fetch($button, type, danger-outline, color);
+    border-color: map-fetch($button, type, danger-outline, border);
+    background-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+
+    &:focus {
+      border-color: map-fetch($button, type, danger-outline, border);
+    }
+
+    &:hover {
+      color: map-fetch($button, type, danger-outline, hover, color);
+      border-color: map-fetch($button, type, danger-outline, hover, border);
+      background-color: transparent;
+      text-shadow: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      border-color: map-fetch($button, type, danger-outline, active, border);
+      background-color: transparent;
+      color: map-fetch($button, type, danger-outline, active, color);
+      text-shadow: none;
+      box-shadow: none;
+    }
+
+  }
+
   &--plain {
     color: map-fetch($button, type, plain, color);
     border-color: transparent;
@@ -249,8 +280,6 @@
 
   &--full {
     width: 100%;
-    padding-right: 0;
-    padding-left: 0;
     text-align: center;
   }
 
@@ -263,6 +292,22 @@
     .#{$namespace}icon {
       vertical-align: sub;
     }
+  }
+
+  &--unstyled {
+    // scss-lint:disable ImportantRule
+    background: inherit !important;
+    border: inherit !important;
+    border-radius: inherit !important;
+    box-shadow: inherit !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    height: inherit !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-shadow: inherit !important;
   }
 
   // Disabled State
@@ -282,12 +327,16 @@
     text-shadow: none;
     box-shadow: none;
 
-    &.#{$namespace}button--plain {
+    &.#{$namespace}button--plain,
+    &.#{$namespace}button--toggle,
+    &.oui-button--plain,
+    &.oui-button--toggle {
       background-color: transparent;
       border-color: transparent;
     }
 
-    &.#{$namespace}button--outline-reverse {
+    &.#{$namespace}button--outline-reverse,
+    &.oui-button--outline-reverse {
       background-color: transparent;
     }
   }

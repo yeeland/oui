@@ -7,19 +7,19 @@
 /// @example[html] Default spinner
 ///   <div class="position--relative height--100">
 ///     <div class="#{$namespace}overlay">
-///       <div class="spinner"></div>
+///       <div class="#{$namespace}spinner"></div>
 ///     </div>
 //    </div>
 /// @example[html] Small spinner
 ///   <div class="position--relative height--100">
 ///     <div class="#{$namespace}overlay">
-///       <div class="spinner spinner--small"></div>
+///       <div class="#{$namespace}spinner #{$namespace}spinner--small"></div>
 ///     </div>
 //    </div>
 /// @example[html] Tiny spinner
 ///   <div class="position--relative height--100">
 ///     <div class="#{$namespace}overlay">
-///       <div class="spinner spinner--tiny"></div>
+///       <div class="#{$namespace}spinner #{$namespace}spinner--tiny"></div>
 ///     </div>
 //    </div>
 ///
@@ -31,7 +31,7 @@
 ///   <div class="position--relative">
 ///      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
 ///      <div class="#{$namespace}overlay">
-///        <div class="spinner spinner--small"></div>
+///        <div class="#{$namespace}spinner #{$namespace}spinner--small"></div>
 ///      </div>
 ///   </div>
 ////

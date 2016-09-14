@@ -28,7 +28,7 @@ Button.propTypes = {
   /** Describes buttons that have an icon but no text */
   ariaLabel: React.PropTypes.string,
   /** Text within the button */
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired,
   /** Prevent users from interacting with the button */
   isDisabled: React.PropTypes.bool,
   /** Make the button act as a submit button */
@@ -50,10 +50,12 @@ Button.propTypes = {
   style: React.PropTypes.oneOf([
     'highlight',
     'danger',
+    'danger-outline',
     'outline',
     'outline-reverse',
     'plain',
     'toggle',
+    'unstyled',
   ]),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,

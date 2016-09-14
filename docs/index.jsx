@@ -17,6 +17,8 @@ import ButtonRow from '../src/components/ButtonRow';
 import ButtonRowExample from '../src/components/ButtonRow/example';
 import Code from '../src/components/Code';
 import CodeExample from '../src/components/Code/example';
+import IconSample from '../src/components/IconSample';
+import IconExample from '../src/components/IconSample/example';
 import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
@@ -25,6 +27,8 @@ import Popover from '../src/components/Popover';
 import PopoverExample from '../src/components/Popover/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
+import TabNav from '../src/components/TabNav';
+import TabNavExample from '../src/components/TabNav/example';
 import Token from '../src/components/Token';
 import TokenExample from '../src/components/Token/example';
 
@@ -55,6 +59,10 @@ const componentsArray = [
     example: InputExample,
   },
   {
+    index: IconSample,
+    example: IconExample,
+  },
+  {
     index: Label,
     example: LabelExample,
   },
@@ -65,6 +73,10 @@ const componentsArray = [
   {
     index: Table,
     example: TableExample,
+  },
+  {
+    index: TabNav,
+    example: TabNavExample,
   },
   {
     index: Token,
@@ -126,7 +138,7 @@ class App extends React.Component {
               src="https://raw.githubusercontent.com/optimizely/oui/devel/assets/louis.gif"
               width="130"
             />
-                 OUI React Components
+            OUI React Components
           </h1>
         </header>
 

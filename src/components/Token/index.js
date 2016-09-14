@@ -1,16 +1,19 @@
 import React from 'react';
 import Button from '../Button';
+import CloseIcon from '../Icon/CloseIcon';
 
 const DismissButton = (onDismiss, testSection) => {
   return (
-    <Button
-      onClick={ onDismiss }
-      style="plain"
-      size="tiny"
-      ariaLabel="Close alert"
-      testSection={ testSection ? testSection + '-dismiss' : null }>
-      &times;
-    </Button>
+    <div
+      className="push-half--left flex"
+      style={ { height: '12px', width: '12px' } }>
+      <Button
+        onClick={ onDismiss }
+        style="unstyled"
+        testSection={ testSection ? testSection + '-dismiss' : null }>
+        <CloseIcon size={ 12 } />
+      </Button>
+    </div>
   );
 };
 
@@ -24,8 +27,10 @@ const Token = (props) => {
     <div
       className="oui-token-wrap"
       data-test-section={ props.testSection }>
-      <div className={ 'oui-token oui-token--' + props.style }>{ props.name }</div>
-      { props.isDismissible ? DismissButton(props.onDismiss, props.testSection) : null }
+      <div className={ 'oui-token oui-token--' + props.style }>
+        { props.name }
+        { props.isDismissible ? DismissButton(props.onDismiss, props.testSection) : null }
+      </div>
     </div>
   );
 };

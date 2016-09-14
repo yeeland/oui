@@ -1,24 +1,23 @@
 import React from 'react';
-import * as testHelpers from '../../../utils/test-helpers';
 import Attention from '../index';
+import { shallow, mount } from 'enzyme';
 
 describe('components/Attention', () => {
 
   it('should render text passed in as children', () => {
     const message = 'Hello! This is a short attention bar.';
 
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Attention>
         { message }
       </Attention>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    expect(componentNode.textContent).toEqual(message);
+    expect(component.text()).toBe(message);
   });
 
   it('should render dismiss button when prop is provided', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Attention
         isDismissible={ true }
         testSection="foo">
@@ -26,42 +25,38 @@ describe('components/Attention', () => {
       </Attention>
     );
 
-    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'foo-dismiss');
-    expect(dismissButtonContainer).not.toBeNull();
+    expect(component.find('[data-test-section="foo-dismiss"]').length).toBe(1);
   });
 
   it('should not render dismiss button by default', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Attention
         testSection="attention">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const dismissButtonContainer = testHelpers.getTestSectionFromComponent(component, 'attention-dismiss-container');
-    expect(dismissButtonContainer).toBeNull();
+    expect(component.find('[data-test-section="foo-dismiss"]').length).toBe(0);
   });
 
   it('should have a properly set role attribute', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Attention>
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    expect(componentNode.getAttribute('role')).toBe('alert');
+    expect(component.is('[role="alert"]')).toBe(true);
   });
 
   it('should have aria-label if type is provided', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Attention type="brand">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    expect(componentNode.getAttribute('aria-label')).toBeDefined();
+    expect(component.is('[aria-label]')).toBe(true);
   });
 
   /**
@@ -69,26 +64,24 @@ describe('components/Attention', () => {
    * triggers an action instead of navigating elsewhere.
    */
   it('should use an HTML button element for a close button', () => {
-    const component = testHelpers.renderIntoDocument(
-      <Attention isDismissible={ true }>
+    const component = mount(
+      <Attention
+        isDismissible={ true }
+        testSection="foo">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const dismissButtonContainer = testHelpers.getNodeFromComponent(component, 'attention-dismiss-container');
-    const dismissButton = dismissButtonContainer.querySelector('button');
-
-    expect(dismissButton).toBeDefined();
+    expect(component.find('button[data-test-section="foo-dismiss"]').length).toBe(1);
   });
 
   it('should have a properly set test section', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Attention testSection="foo">
         'Hello! This is a short attention bar.'
       </Attention>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-    testHelpers.expectTestSectionToExist(componentNode, 'foo');
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 });

@@ -1,105 +1,96 @@
 import React from 'react';
-import { default as Clipboard } from 'clipboard';
-import * as testHelpers from '../../../utils/test-helpers';
 import Code from '../index';
+import { shallow, mount, render } from 'enzyme';
 
 describe('components/Code', () => {
   it('should render inline code in code tag', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Code type="inline">{ 'var foo;' }</Code>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-
-    expect(componentNode.tagName).toBe('CODE');
+    expect(component.type()).toBe('code');
   });
 
   it('should render block code as preformatted text', () => {
-    const component = testHelpers.renderIntoDocument(
+    const component = shallow(
       <Code type="block">{ 'var foo;' }</Code>
     );
 
-    const componentNode = testHelpers.getNodeFromComponent(component);
-
-    expect(componentNode.children[0].tagName).toBe('PRE');
+    expect(component.children().type()).toBe('pre');
   });
 
   it('should render code that is passed in', () => {
     let code = 'var foo;';
 
-    const componentInline = testHelpers.renderIntoDocument(
+    const componentInline = shallow(
       <Code type="inline">{ code }</Code>
     );
 
-    const componentBlock = testHelpers.renderIntoDocument(
+    const componentBlock = shallow(
       <Code type="block">{ code }</Code>
     );
 
-    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
-    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
+    expect(componentInline.text()).toBe(code);
+    expect(componentBlock.text()).toBe(code);
+  });
 
-    expect(componentInlineNode.textContent).toBe(code);
-    expect(componentBlockNode.textContent).toBe(code);
+  it('should not render if children are null', () => {
+    const component = shallow(
+      <Code type="block"></Code>
+    );
+
+    expect(component.html()).toBeFalsy();
   });
 
   it('should add syntax highlighting to code when specified', () => {
     let code = 'var foo;';
 
-    const componentInline = testHelpers.renderIntoDocument(
+    const componentInline = render(
       <Code type="inline" isHighlighted={ true }>{ code }</Code>
     );
 
-    const componentBlock = testHelpers.renderIntoDocument(
+    const componentBlock = render(
       <Code type="block" isHighlighted={ true }>{ code }</Code>
     );
 
-    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
-    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
-
-    expect(componentInlineNode.innerHTML).toContain('class="hljs-');
-    expect(componentBlockNode.innerHTML).toContain('class="hljs-');
+    expect(componentInline.find('[class^="hljs-"]').length).toBe(1);
+    expect(componentBlock.find('[class^="hljs-"]').length).toBe(1);
   });
 
   it('should not add syntax highlighting by default', () => {
     let code = 'var foo;';
 
-    const componentInline = testHelpers.renderIntoDocument(
+    const componentInline = render(
       <Code type="inline">{ code }</Code>
     );
 
-    const componentBlock = testHelpers.renderIntoDocument(
+    const componentBlock = render(
       <Code type="block">{ code }</Code>
     );
 
-    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
-    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
-
-    expect(componentInlineNode.innerHTML).not.toContain('class="hljs-');
-    expect(componentBlockNode.innerHTML).not.toContain('class="hljs-');
+    expect(componentInline.find('[class^="hljs-"]').length).toBe(0);
+    expect(componentBlock.find('[class^="hljs-"]').length).toBe(0);
   });
 
   it('should not add syntax highlighting if language is provided but highlighting is not requested', () => {
     let code = 'var foo;';
 
-    const componentInline = testHelpers.renderIntoDocument(
+    const componentInline = render(
       <Code type="inline" language="js">{ code }</Code>
     );
 
-    const componentBlock = testHelpers.renderIntoDocument(
+    const componentBlock = render(
       <Code type="block" language="js">{ code }</Code>
     );
 
-    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
-    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
-
-    expect(componentInlineNode.innerHTML).not.toContain('class="hljs-');
-    expect(componentBlockNode.innerHTML).not.toContain('class="hljs-');
+    expect(componentInline.find('[class^="hljs-"]').length).toBe(0);
+    expect(componentBlock.find('[class^="hljs-"]').length).toBe(0);
   });
 
   it('should not add a copy button by default', () => {
     let code = 'var foo;';
 
-    const component = testHelpers.renderIntoDocument(
+    const component = mount(
       <Code
         type="block"
         testSection="code">
@@ -107,16 +98,14 @@ describe('components/Code', () => {
       </Code>
     );
 
-    const copyButton = testHelpers.getTestSectionFromComponent(component, 'code-copy-button');
-
-    expect(copyButton).toBeNull();
+    expect(component.find('[data-test-section="code-copy-button"]').length).toBe(0);
   });
 
   describe('with copy functionality', () => {
     it('should add a copy button to block code', () => {
       let code = 'var foo;';
 
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <Code
           type="block"
           hasCopyButton={ true }
@@ -125,58 +114,13 @@ describe('components/Code', () => {
         </Code>
       );
 
-      const copyButton = testHelpers.getTestSectionFromComponent(component, 'code-copy-button');
-
-      expect(copyButton).not.toBeNull();
-      expect(copyButton.type).toBe('button');
-    });
-
-    it('should call clipboard function when button is clicked on', () => {
-      let code = 'var foo;';
-
-      const component = testHelpers.renderIntoDocument(
-        <Code
-          type="block"
-          hasCopyButton={ true }
-          testSection="code">
-          { code }
-        </Code>
-      );
-
-      spyOn(Clipboard.prototype, 'onClick').and.stub();
-      spyOn(Clipboard.prototype, 'resolveOptions').and.stub();
-
-      const copyButton = testHelpers.getTestSectionFromComponent(component, 'code-copy-button');
-      testHelpers.simulate.click(copyButton);
-
-      expect(Clipboard.prototype.resolveOptions.calls.argsFor(0)[0].text()).toEqual(code);
-      expect(Clipboard.prototype.onClick.calls.count()).toEqual(1);
-    });
-
-    it('should destroy clipboard after button is clicked on', () => {
-      let code = 'var foo;';
-
-      const component = testHelpers.renderIntoDocument(
-        <Code
-          type="block"
-          hasCopyButton={ true }
-          testSection="code">
-          { code }
-        </Code>
-      );
-
-      spyOn(Clipboard.prototype, 'destroy').and.stub();
-
-      const copyButton = testHelpers.getTestSectionFromComponent(component, 'code-copy-button');
-      testHelpers.simulate.click(copyButton);
-
-      expect(Clipboard.prototype.destroy.calls.count()).toEqual(1);
+      expect(component.find('[data-test-section="code-copy-button"]').length).toBe(1);
     });
 
     it('should not add a copy button to inline code', () => {
       let code = 'var foo;';
 
-      const component = testHelpers.renderIntoDocument(
+      const component = mount(
         <Code
           type="inline"
           hasCopyButton={ true }
@@ -185,26 +129,21 @@ describe('components/Code', () => {
         </Code>
       );
 
-      const copyButton = testHelpers.getTestSectionFromComponent(component, 'code-copy-button');
-
-      expect(copyButton).toBeNull();
+      expect(component.find('[data-test-section="code-copy-button"]').length).toBe(0);
     });
   });
 
 
   it('should have a properly set test section', () => {
-    const componentInline = testHelpers.renderIntoDocument(
+    const componentInline = shallow(
       <Code testSection="foo-inline" type="inline">Hello!</Code>
     );
 
-    const componentBlock = testHelpers.renderIntoDocument(
+    const componentBlock = shallow(
       <Code testSection="foo-block" type="block">Hello!</Code>
     );
 
-    const componentInlineNode = testHelpers.getNodeFromComponent(componentInline);
-    const componentBlockNode = testHelpers.getNodeFromComponent(componentBlock);
-
-    testHelpers.expectTestSectionToExist(componentInlineNode, 'foo-inline');
-    testHelpers.expectTestSectionToExist(componentBlockNode.children[0], 'foo-block');
+    expect(componentInline.is('[data-test-section="foo-inline"]')).toBe(true);
+    expect(componentBlock.find('[data-test-section="foo-block"]').length).toBe(1);
   });
 });
