@@ -12,7 +12,7 @@ const Label = (props) => {
   if (props.isOptional) {
     fieldLabel = <span className="label__optional">(Optional)</span>;
   } else if (props.isRequired) {
-    fieldLabel = <span className="label__required"></span>;
+    fieldLabel = <span className="label--required"></span>;
   }
 
   if (typeof props.children === 'string') {
