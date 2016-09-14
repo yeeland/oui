@@ -9,10 +9,10 @@ const Label = (props) => {
   let classes = null;
   let fieldLabel = null;
 
-  if (props.isOptional) {
-    fieldLabel = <span className="label__optional">(Optional)</span>;
-  } else if (props.isRequired) {
+  if (props.isRequired) {
     fieldLabel = <span className="label--required"></span>;
+  } else if (props.isOptional) {
+    fieldLabel = <span className="label__optional">(Optional)</span>;
   }
 
   if (typeof props.children === 'string') {

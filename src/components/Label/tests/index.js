@@ -41,21 +41,25 @@ describe('components/Label', () => {
   });
 
   it('should render an optional label if isOptional is set', () => {
-    const component = render(
-      <Label
-        testSection="foo"
-        isOptional={ true }></Label>
+    const component = shallow(
+      <Label isOptional={ true }></Label>
     );
-    expect(component.find('[data-test-section="foo"] span.label__optional').length).toBe(1);
+    expect(component.find('.label__optional').length).toBe(1);
   });
 
   it('should render an asterisk label if isRequired is set', () => {
-    const component = render(
-      <Label
-        testSection="foo"
-        isRequired={ true }></Label>
+    const component = shallow(
+      <Label isRequired={ true }></Label>
     );
-    expect(component.find('[data-test-section="foo"] span.label--required').length).toBe(1);
+    expect(component.find('.label--required').length).toBe(1);
+  });
+
+  it('should render only isRequired if both isOptional and isRequired are set', () => {
+    const component = shallow(
+      <Label isRequired={ true } isOptional={ true }></Label>
+    );
+    expect(component.find('.label--required').length).toBe(1);
+    expect(component.find('.label__optional').length).toBe(0);
   });
 
   it('should have a properly set test section', () => {
