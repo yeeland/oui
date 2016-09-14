@@ -53,4 +53,9 @@ export default [
       />,
     ],
   },
+  {
+    examples: [
+      <Input type="date" />,
+    ],
+  },
 ];
