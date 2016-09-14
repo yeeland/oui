@@ -7,6 +7,14 @@ import React from 'react';
  */
 const Label = (props) => {
   let classes = null;
+  let fieldLabel = null;
+
+  if (props.isOptional) {
+    fieldLabel = <span className="label__optional">(Optional)</span>;
+  } else if (props.isRequired) {
+    fieldLabel = <span className="label__required"></span>;
+  }
+
   if (typeof props.children === 'string') {
     classes = 'oui-label';
   }
@@ -16,6 +24,7 @@ const Label = (props) => {
       className={ classes }
       data-test-section={ props.testSection }>
       { props.children }
+      { fieldLabel }
     </label>
   );
 };
@@ -26,6 +35,10 @@ Label.propTypes = {
     React.PropTypes.string.isRequired,
     React.PropTypes.node.isRequired,
   ]),
+  /** Includes optional label if true */
+  isOptional: React.PropTypes.bool,
+  /** Includes required asterisk label if true */
+  isRequired: React.PropTypes.bool,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };
