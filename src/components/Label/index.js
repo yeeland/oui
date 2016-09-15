@@ -7,20 +7,12 @@ import React from 'react';
  */
 const Label = (props) => {
   let classes = null;
-  let labelEl = null;
+  let fieldLabel = null;
 
-  // Optional/Required additional span label
-  if (props.isRequired || props.isOptional) {
-    let labelClass = null;
-    let labelText = null;
-
-    if (props.isRequired) {
-      labelClass = 'label--required';
-    } else if (props.isOptional) {
-      labelClass = 'label__optional';
-      labelText = '(Optional)';
-    }
-    labelEl = <span className={ labelClass }>{ labelText }</span>;
+  if (props.isRequired) {
+    fieldLabel = <span className="oui-label--required"></span>;
+  } else if (props.isOptional) {
+    fieldLabel = <span className="oui-label__optional">(Optional)</span>;
   }
 
   if (typeof props.children === 'string') {
@@ -32,7 +24,7 @@ const Label = (props) => {
       className={ classes }
       data-test-section={ props.testSection }>
       { props.children }
-      { labelEl }
+      { fieldLabel }
     </label>
   );
 };
