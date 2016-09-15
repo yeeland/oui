@@ -5,8 +5,30 @@ import { mount } from 'enzyme';
 import CopyButton from '../index';
 
 describe('components/Code/CopyButton', () => {
+
+  // @TODO (dave.rau) Fix this stupid mess for document stubbing
+  // which is currently not working
+
+  // @QUESTION: Do we need beforeEach, or just drop this block in
+  beforeEach(function() {
+
+    // @QUESTION: How to declaring document object and the function
+    // to avoid error: queryCommandSupported method doesn't exist
+    spyOn(document, 'queryCommandSupported').and.callFake(function(args) {
+
+      // @QUESTION: Do we need to target args[0] or just args?
+      return args[0] === 'copy';
+    });
+  });
+
+  // @QUESTION: Should we be checking if the spy method was called?
+  it('should call document.queryCommandSupported() spy', function() {
+    expect(document.queryCommandSupported).toHaveBeenCalled();
+  });
+
   it('should render a button', () => {
     const component = mount(<CopyButton code="foo" />);
+
     expect(component.find('button').length).toEqual(1);
   });
 
