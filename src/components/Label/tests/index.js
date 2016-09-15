@@ -44,22 +44,22 @@ describe('components/Label', () => {
     const component = shallow(
       <Label isOptional={ true }></Label>
     );
-    expect(component.find('.label__optional').length).toBe(1);
+    expect(component.find('.oui-label__optional').length).toBe(1);
   });
 
   it('should render an asterisk label if isRequired is set', () => {
     const component = shallow(
       <Label isRequired={ true }></Label>
     );
-    expect(component.find('.label--required').length).toBe(1);
+    expect(component.find('.oui-label--required').length).toBe(1);
   });
 
   it('should render only isRequired if both isOptional and isRequired are set', () => {
     const component = shallow(
       <Label isRequired={ true } isOptional={ true }></Label>
     );
-    expect(component.find('.label--required').length).toBe(1);
-    expect(component.find('.label__optional').length).toBe(0);
+    expect(component.find('.oui-label--required').length).toBe(1);
+    expect(component.find('.oui-label__optional').length).toBe(0);
   });
 
   it('should have a properly set test section', () => {
