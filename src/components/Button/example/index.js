@@ -29,6 +29,13 @@ export default [
   },
 
   {
+    isPadded: true,
+    examples: [
+      <Button isActive={ true }>Button</Button>,
+    ],
+  },
+
+  {
     backgroundColor: 'brand-dark',
     isPadded: true,
     examples: [
