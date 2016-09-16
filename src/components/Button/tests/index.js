@@ -31,6 +31,6 @@ describe('components/Button', () => {
       <Button isActive={ true }>Hello!</Button>
     );
 
-    expect(component.find('.is-active').length).toBe(1);
+    expect(component.hasClass('is-active')).toBe(true);
   });
 });
