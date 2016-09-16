@@ -6,6 +6,15 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
+## [17.2.0][17.2.0] - 2016-09-16
+### Added
+- [Feature] Add `onFocus` event to Input React Component
+- [Feature] Add `isOptional` and `isRequired` prop to Label React component to get properly colored optional/required labels. (#556)
+
+### Changed
+- [Patch] Use correct oui- prefix with label. (#555)
+- [Patch] Hide the `CopyButton` component in browsers that do not support it. (#467)
+
 ## [17.1.0][17.1.0] - 2016-09-12
 ### Added
 - [Feature] Add `unstyled` option for `Button`.
@@ -554,7 +563,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v17.1.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v17.2.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -606,3 +615,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [16.0.0]: https://github.com/optimizely/oui/compare/v15.2.1...v16.0.0
 [17.0.0]: https://github.com/optimizely/oui/compare/v16.0.0...v17.0.0
 [17.1.0]: https://github.com/optimizely/oui/compare/v17.0.0...v17.1.0
+[17.2.0]: https://github.com/optimizely/oui/compare/v17.1.0...v17.2.0
