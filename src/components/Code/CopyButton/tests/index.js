@@ -5,9 +5,15 @@ import { mount } from 'enzyme';
 import CopyButton from '../index';
 
 describe('components/Code/CopyButton', () => {
+  const initialQueryCommandSupported = global.document.queryCommandSupported;
+
   describe('when clipboard API (`execCommand`) is supported', () => {
     beforeEach(() => {
       global.document.queryCommandSupported = () => true;
+    });
+
+    afterEach(() => {
+      global.document.queryCommandSupported = () => initialQueryCommandSupported;
     });
 
     it('should render a button', () => {
@@ -46,6 +52,10 @@ describe('components/Code/CopyButton', () => {
   describe('when clipboard API (`execCommand`) is not supported', () => {
     beforeEach(() => {
       global.document.queryCommandSupported = () => false;
+    });
+
+    afterEach(() => {
+      global.document.queryCommandSupported = () => initialQueryCommandSupported;
     });
 
     it('should return null', () => {

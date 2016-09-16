@@ -102,8 +102,14 @@ describe('components/Code', () => {
   });
 
   describe('with copy functionality', () => {
+    const initialQueryCommandSupported = global.document.queryCommandSupported;
+
     beforeEach(() => {
       global.document.queryCommandSupported = () => true;
+    });
+
+    afterEach(() => {
+      global.document.queryCommandSupported = () => initialQueryCommandSupported;
     });
 
     it('should add a copy button to block code', () => {
