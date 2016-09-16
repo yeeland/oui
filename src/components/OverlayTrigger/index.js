@@ -38,11 +38,14 @@ class OverlayTrigger extends React.Component {
   }
 
   render() {
+    // TODO(@danoc): Allow user to provide name of prop that is passed to the
+    // overlay.
     const Overlay = React.cloneElement(this.props.overlay, {
       isVisible: this.state.isOverlayOpen,
     });
 
     const Children = React.Children.map(this.props.children, (child) => {
+      // TODO(@danoc): Call the original `onClick` if it exists.
       return React.cloneElement(child, {
         onClick: () => {
           this.setState({
@@ -75,7 +78,7 @@ class OverlayTrigger extends React.Component {
 
 OverlayTrigger.propTypes = {
   /** Element that the `overlay` should attach to */
-  children: React.PropTypes.node,
+  children: React.PropTypes.node.isRequired,
   /** Side of the `overlay` that should attach to the `children` */
   horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Side of `children` that should attach to the `overlay` */
@@ -83,7 +86,7 @@ OverlayTrigger.propTypes = {
   /** Should the popover reposition itself when cut off the page */
   isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
-  overlay: React.PropTypes.node,
+  overlay: React.PropTypes.node.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
   /** `overlay`'s vertical position relative to the `children` */
