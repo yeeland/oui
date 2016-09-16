@@ -40,6 +40,28 @@ describe('components/Label', () => {
     });
   });
 
+  it('should render an optional label if isOptional is set', () => {
+    const component = shallow(
+      <Label isOptional={ true }></Label>
+    );
+    expect(component.find('.oui-label__optional').length).toBe(1);
+  });
+
+  it('should render an asterisk label if isRequired is set', () => {
+    const component = shallow(
+      <Label isRequired={ true }></Label>
+    );
+    expect(component.find('.oui-label--required').length).toBe(1);
+  });
+
+  it('should render only isRequired if both isOptional and isRequired are set', () => {
+    const component = shallow(
+      <Label isRequired={ true } isOptional={ true }></Label>
+    );
+    expect(component.find('.oui-label--required').length).toBe(1);
+    expect(component.find('.oui-label__optional').length).toBe(0);
+  });
+
   it('should have a properly set test section', () => {
     const component = shallow(<Label testSection="foo">Foo</Label>);
     expect(component.is('[data-test-section="foo"]')).toBe(true);

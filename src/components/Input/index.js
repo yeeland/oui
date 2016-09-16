@@ -33,7 +33,7 @@ const Input = (props) => {
   if (props.label) {
     return (
       <Label testSection={ props.testSection + '-label' }>
-        <div className="label">
+        <div className="oui-label">
           { props.label }
         </div>
         { renderInput(props) }

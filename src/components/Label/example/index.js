@@ -10,6 +10,16 @@ export default [
   },
   {
     examples: [
+      <Label isRequired={ true }>I'm a Required Label</Label>,
+    ],
+  },
+  {
+    examples: [
+      <Label isOptional={ true }>I'm an Optional Label</Label>,
+    ],
+  },
+  {
+    examples: [
       <Label>
         <div>When I have nodes,</div>
         <div>I'm unstyled</div>

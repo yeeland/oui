@@ -39,7 +39,7 @@ class CopyButton extends React.Component {
           style="plain"
           ariaLabel="Copy code snippet"
           testSection={ buttonTestSection }>
-          <ClipboardIcon />
+          <ClipboardIcon size={ 16 } />
         </Button>
       </div>
       /* eslint-enable */
