@@ -6,7 +6,7 @@ import ClipboardIcon from '../../Icon/ClipboardIcon';
 
 class CopyButton extends React.Component {
   componentDidMount() {
-    if (this._buttonContainer) {
+    if (this.supportsCopyAPI() && this._buttonContainer) {
       this._clipboardListener = new Clipboard(this._buttonContainer, {
         text: () => this.props.code,
       });
@@ -14,27 +14,21 @@ class CopyButton extends React.Component {
   }
 
   componentWillUnmount() {
-    this._clipboardListener.destroy();
+    if (this._clipboardListener) {
+      this._clipboardListener.destroy();
+    }
   }
 
-  // @QUESTION: Should this include all 3 checks or just the final one?
-  // Work in Safari/Chrome as is...
   supportsCopyAPI() {
-    return (
-        // document
-        // && typeof document.queryCommandSupported === 'function'
-        // &&
-        document.queryCommandSupported('copy')
-      );
+    return document && typeof document.queryCommandSupported === 'function' && document.queryCommandSupported('copy');
   }
 
   render() {
-    let buttonTestSection = this.props.testSection ? this.props.testSection + '-copy-button' : null;
-
-    // @QUESTION: Different way to handle this so tests always return true?
     if (!this.supportsCopyAPI()) {
       return null;
     }
+
+    let buttonTestSection = this.props.testSection ? this.props.testSection + '-copy-button' : null;
 
     return (
       /* eslint-disable react/jsx-no-bind */

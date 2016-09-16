@@ -5,57 +5,54 @@ import { mount } from 'enzyme';
 import CopyButton from '../index';
 
 describe('components/Code/CopyButton', () => {
+  describe('when clipboard API (`execCommand`) is supported', () => {
+    beforeEach(() => {
+      global.document.queryCommandSupported = () => true;
+    });
 
-  // @TODO (dave.rau) Fix this stupid mess for document stubbing
-  // which is currently not working
+    it('should render a button', () => {
+      const component = mount(<CopyButton code="foo" />);
+      expect(component.find('button').length).toEqual(1);
+    });
 
-  // @QUESTION: Do we need beforeEach, or just drop this block in
-  beforeEach(function() {
+    it('should call clipboard function when button is clicked on', () => {
+      let code = 'var foo;';
 
-    // @QUESTION: How to declaring document object and the function
-    // to avoid error: queryCommandSupported method doesn't exist
-    spyOn(document, 'queryCommandSupported').and.callFake(function(args) {
+      spyOn(Clipboard.prototype, 'resolveOptions').and.stub();
 
-      // @QUESTION: Do we need to target args[0] or just args?
-      return args[0] === 'copy';
+      mount(<CopyButton code={ code } />);
+
+      expect(Clipboard.prototype.resolveOptions.calls.argsFor(0)[0].text()).toEqual(code);
+    });
+
+    it('should destroy clipboard after button is clicked on', () => {
+      spyOn(Clipboard.prototype, 'destroy').and.stub();
+
+      const component = mount(<CopyButton code="goose" />);
+
+      component.unmount();
+
+      expect(Clipboard.prototype.destroy.calls.count()).toEqual(1);
+    });
+
+    it('should have a properly set test section', () => {
+      const component = mount(
+        <CopyButton code="goose" testSection="goose" />
+      );
+      expect(component.find('[data-test-section="goose-copy-button"]').length).toBe(1);
     });
   });
 
-  // @QUESTION: Should we be checking if the spy method was called?
-  it('should call document.queryCommandSupported() spy', function() {
-    expect(document.queryCommandSupported).toHaveBeenCalled();
-  });
+  describe('when clipboard API (`execCommand`) is not supported', () => {
+    beforeEach(() => {
+      global.document.queryCommandSupported = () => false;
+    });
 
-  it('should render a button', () => {
-    const component = mount(<CopyButton code="foo" />);
-
-    expect(component.find('button').length).toEqual(1);
-  });
-
-  it('should call clipboard function when button is clicked on', () => {
-    let code = 'var foo;';
-
-    spyOn(Clipboard.prototype, 'resolveOptions').and.stub();
-
-    mount(<CopyButton code={ code } />);
-
-    expect(Clipboard.prototype.resolveOptions.calls.argsFor(0)[0].text()).toEqual(code);
-  });
-
-  it('should destroy clipboard after button is clicked on', () => {
-    spyOn(Clipboard.prototype, 'destroy').and.stub();
-
-    const component = mount(<CopyButton code="goose" />);
-
-    component.unmount();
-
-    expect(Clipboard.prototype.destroy.calls.count()).toEqual(1);
-  });
-
-  it('should have a properly set test section', () => {
-    const component = mount(
-      <CopyButton code="goose" testSection="goose" />
-    );
-    expect(component.find('[data-test-section="goose-copy-button"]').length).toBe(1);
+    it('should return null', () => {
+      const component = mount(
+        <CopyButton code="goose" testSection="goose" />
+      );
+      expect(component.html()).toBe(null);
+    });
   });
 });

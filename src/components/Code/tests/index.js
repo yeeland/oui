@@ -102,12 +102,12 @@ describe('components/Code', () => {
   });
 
   describe('with copy functionality', () => {
+    beforeEach(() => {
+      global.document.queryCommandSupported = () => true;
+    });
+
     it('should add a copy button to block code', () => {
       let code = 'var foo;';
-
-      spyOn(document, 'queryCommandSupported').and.callFake(function(args) {
-        return args[0] === 'copy';
-      });
 
       const component = mount(
         <Code
