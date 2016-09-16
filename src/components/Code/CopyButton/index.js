@@ -6,16 +6,28 @@ import ClipboardIcon from '../../Icon/ClipboardIcon';
 
 class CopyButton extends React.Component {
   componentDidMount() {
-    this._clipboardListener = new Clipboard(this._buttonContainer, {
-      text: () => this.props.code,
-    });
+    if (this.supportsCopyAPI() && this._buttonContainer) {
+      this._clipboardListener = new Clipboard(this._buttonContainer, {
+        text: () => this.props.code,
+      });
+    }
   }
 
   componentWillUnmount() {
-    this._clipboardListener.destroy();
+    if (this._clipboardListener) {
+      this._clipboardListener.destroy();
+    }
+  }
+
+  supportsCopyAPI() {
+    return document && typeof document.queryCommandSupported === 'function' && document.queryCommandSupported('copy');
   }
 
   render() {
+    if (!this.supportsCopyAPI()) {
+      return null;
+    }
+
     let buttonTestSection = this.props.testSection ? this.props.testSection + '-copy-button' : null;
 
     return (

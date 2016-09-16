@@ -10,6 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Changed
 - [Patch] Use correct oui- prefix with label. (#555)
+- [Patch] Hide the `CopyButton` component in browsers that do not support it. (#467)
 
 ## [17.1.0][17.1.0] - 2016-09-12
 ### Added
