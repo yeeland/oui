@@ -25,6 +25,7 @@ const Input = (props) => {
         onInput={ opts.onInput }
         onChange={ opts.onChange }
         onBlur={ opts.onBlur }
+        onFocus={ opts.onFocus }
         data-test-section={ opts.testSection }
       />
     );
@@ -64,6 +65,8 @@ Input.propTypes = {
   onBlur: React.PropTypes.func,
   /** Function that fires when the input loses focus after the value changes */
   onChange: React.PropTypes.func,
+  /** Function that fires when the input gains focus */
+  onFocus: React.PropTypes.func,
   /** Function that fires on keypress */
   onInput: React.PropTypes.func,
   /** Input placeholder text */

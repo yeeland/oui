@@ -56,6 +56,21 @@ describe('components/Input', () => {
     expect(handler.onChange).toHaveBeenCalled();
   });
 
+  it('should call the onFocus event handler when the input gains focus', () => {
+    const handler = {
+      onFocus: (event) => {},
+    };
+    spyOn(handler, 'onFocus');
+
+    const component = mount(
+      <Input type="text" value="foo" onFocus={ handler.onFocus } />
+    );
+
+    component.simulate('focus');
+
+    expect(handler.onFocus).toHaveBeenCalled();
+  });
+
   it('should call the onBlur event handler when the input loses focus', () => {
     const handler = {
       onBlur: (event) => {},

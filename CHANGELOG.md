@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add `onFocus` event to Input React Component
 - [Feature] Add `isOptional` and `isRequired` prop to Label React component to get properly colored optional/required labels. (#556)
 
 ### Changed
