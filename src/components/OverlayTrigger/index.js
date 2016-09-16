@@ -2,7 +2,7 @@ import React from 'react';
 import Tether from 'tether';
 
 /**
- * Intelligently position elements.
+ * Intelligently position elements on a page.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
@@ -58,7 +58,7 @@ class OverlayTrigger extends React.Component {
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div>
+      <div data-test-section={ this.props.testSection }>
         <div
           style={ { display: 'inline-block' } }
           ref={ (ref) => { this._activatorEl = ref; } }>
@@ -84,6 +84,8 @@ OverlayTrigger.propTypes = {
   isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node,
+  /** Hook for automated JavaScript tests */
+  testSection: React.PropTypes.string,
   /** `overlay`'s vertical position relative to the `children` */
   verticalAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
   /** `children`'s vertical position relative to the `overlay` */

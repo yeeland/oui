@@ -2,6 +2,8 @@ import React from 'react';
 
 /**
  * Display information attached to a target element.
+ *
+ * See `OverlayTrigger` component to position a popover on a page.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
