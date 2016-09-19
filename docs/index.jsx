@@ -104,31 +104,27 @@ ComponentRow.propTypes = {
 
 class App extends React.Component {
   render() {
+
     let componentItems = [];
-
     componentsArray.map(function(component) {
-      let componentName = component.index.displayName || component.index.name;
-
       componentItems.push(
         {
-          label: componentName,
-          href: '#' + componentName,
+          label: component.index.name,
+          href: '#' + component.index.name,
         }
       );
     });
 
     let componentNodes = componentsArray.map(function(component) {
-      let componentName = component.index.displayName || component.index.name;
-
-      let json = componentsJSON['src/components/' + componentName + '/index.js'];
+      let json = componentsJSON['src/components/' + component.index.name + '/index.js'];
       let desc = doctrine.parse(json.description);
 
       return (
         <ComponentWrapper
-          key={ componentName }
+          key={ component.index.name }
           description={ desc.description }
           examples={ component.example }
-          title={ componentName }
+          title={ component.index.name }
           props={ json.props }>
         </ComponentWrapper>
       );
