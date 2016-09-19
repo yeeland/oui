@@ -6,7 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
-- [Feature] Create generic `OverlayTrigger` component that intelligently positions an overlay on a page relative to it's children. (#572)
+- [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
 
 ## [17.3.1][17.3.1] - 2016-09-19

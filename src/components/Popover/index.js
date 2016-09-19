@@ -4,7 +4,7 @@ import React from 'react';
  * Simple component often used to display supplemental information to contents
  * on a page.
  *
- * See `OverlayTrigger` component to position a popover on a page.
+ * See `OverlayWrapper` component to position a popover on a page.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */

@@ -10,7 +10,7 @@ const FakeOverlay = (props) => {
   return <div data-test-section="fake-overlay"></div>;
 };
 
-describe('components/OverlayTrigger', () => {
+describe('components/', () => {
   it('should render contents passed in as children', () => {
     const component = mount(
       <OverylayTrigger
@@ -54,7 +54,7 @@ describe('components/OverlayTrigger', () => {
     expect(component.find(FakeOverlay).prop('isVisibleTest')).toBe(true);
   });
 
-  it('should pass `onClick` function to `children` that changes state of `OverlayTrigger`', () => {
+  it('should pass `onClick` function to `children` that changes state of ``', () => {
     spyOn(React, 'cloneElement');
 
     const component = shallow(

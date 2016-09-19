@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import OverlayTrigger from '../index';
+import OverlayWrapper from '../index';
 
 import Button from '../../Button/';
 import Popover from '../../Popover/';
@@ -9,7 +9,7 @@ export default [
   {
     examples: [
       <div className="position--relative height--100">
-        <OverlayTrigger
+        <OverlayWrapper
           overlay={
             <Popover title="Lorem ipsum dolor sit amet">
               <p>
@@ -21,14 +21,14 @@ export default [
           overylayIsVisibleProp='isVisible'
           isContstrainedToViewport={ true }>
           <Button>Open Popover</Button>
-        </OverlayTrigger>
+        </OverlayWrapper>
       </div>,
     ],
   },
   {
     examples: [
       <div className="position--relative height--100">
-        <OverlayTrigger
+        <OverlayWrapper
           overlay={
             <Popover title="Lorem ipsum dolor sit amet">
               <p>
@@ -44,14 +44,14 @@ export default [
           verticalAttachment="middle"
           verticalTargetAttachment="middle">
           <Button>Open Popover</Button>
-        </OverlayTrigger>
+        </OverlayWrapper>
       </div>,
     ],
   },
   {
     examples: [
       <div className="position--relative height--100">
-        <OverlayTrigger
+        <OverlayWrapper
           overlay={
             <Popover title="Lorem ipsum dolor sit amet">
               <p>
@@ -67,7 +67,7 @@ export default [
           verticalAttachment="top"
           verticalTargetAttachment="bottom">
           <Button>Open Popover</Button>
-        </OverlayTrigger>
+        </OverlayWrapper>
       </div>,
     ],
   },

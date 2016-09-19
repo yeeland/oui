@@ -6,7 +6,7 @@ import Tether from 'tether';
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-class OverlayTrigger extends React.Component {
+class OverlayWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOverlayOpen: false };
@@ -73,7 +73,7 @@ class OverlayTrigger extends React.Component {
   }
 }
 
-OverlayTrigger.propTypes = {
+OverlayWrapper.propTypes = {
   /** Element that the `overlay` should attach to */
   children: React.PropTypes.node.isRequired,
   /** Side of the `overlay` that should attach to the `children` */
@@ -97,9 +97,9 @@ OverlayTrigger.propTypes = {
   verticalTargetAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
 };
 
-OverlayTrigger.defaultProps = {
+OverlayWrapper.defaultProps = {
   horizontalAttachment: 'center',
   verticalAttachment: 'top',
 };
 
-export default OverlayTrigger;
+export default OverlayWrapper;
