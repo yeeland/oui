@@ -84,7 +84,10 @@ OverlayTrigger.propTypes = {
   isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
-  /** Name of the prop in the overlay that determines if it is visible */
+  /**
+    Name of the prop in the `overlay` that determines if the `overlay` is
+    visible
+  */
   overylayIsVisibleProp: React.PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
