@@ -24,13 +24,13 @@
   }
 
   &--medium,
-  &--16 {
+  &--24 {
     width: map-fetch($icon, size, medium, width);
     height: map-fetch($icon, size, medium, height);
   }
 
   &--large,
-  &--24 {
+  &--32 {
     width: map-fetch($icon, size, large, width);
     height: map-fetch($icon, size, large, height);
   }
