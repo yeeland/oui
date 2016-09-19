@@ -9,10 +9,11 @@ import React from 'react';
 const Button = (props) => {
   let buttonStyleClass = props.style ? 'oui-button--' + props.style : '';
   let buttonSizeClass = props.size ? 'oui-button--' + props.size : '';
+  let isActiveClass = props.isActive ? 'is-active' : '';
 
   return (
     <button
-      className={ 'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass }
+      className={ 'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass + ' ' + isActiveClass }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
@@ -28,6 +29,8 @@ Button.propTypes = {
   ariaLabel: React.PropTypes.string,
   /** Text within the button */
   children: React.PropTypes.node.isRequired,
+  /** Render button with active state */
+  isActive: React.PropTypes.bool,
   /** Prevent users from interacting with the button */
   isDisabled: React.PropTypes.bool,
   /** Make the button act as a submit button */

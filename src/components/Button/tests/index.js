@@ -25,4 +25,12 @@ describe('components/Button', () => {
 
     expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
+
+  it('should add the active class if isActive is true', () => {
+    const component = shallow(
+      <Button isActive={ true }>Hello!</Button>
+    );
+
+    expect(component.hasClass('is-active')).toBe(true);
+  });
 });
