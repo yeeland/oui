@@ -10,12 +10,12 @@ import ClipboardIcon from '../../Icon/ClipboardIcon';
 export default [
   {
     examples: [
-      <HelpIcon size={ 24 } />,
-      <UploadIcon size={ 24 } />,
-      <DuplicateIcon size={ 24 } />,
-      <SearchIcon size={ 24 } />,
-      <RefreshIcon size={ 24 } />,
-      <ClipboardIcon size={ 24 } />,
+      <HelpIcon size={ 12 } />,
+      <UploadIcon size={ 12 } />,
+      <DuplicateIcon size={ 12 } />,
+      <SearchIcon size={ 12 } />,
+      <RefreshIcon size={ 12 } />,
+      <ClipboardIcon size={ 12 } />,
     ],
   },
   {
@@ -26,6 +26,16 @@ export default [
       <SearchIcon size={ 16 } />,
       <RefreshIcon size={ 16 } />,
       <ClipboardIcon size={ 16 } />,
+    ],
+  },
+  {
+    examples: [
+      <HelpIcon size={ 24 } />,
+      <UploadIcon size={ 24 } />,
+      <DuplicateIcon size={ 24 } />,
+      <SearchIcon size={ 24 } />,
+      <RefreshIcon size={ 24 } />,
+      <ClipboardIcon size={ 24 } />,
     ],
   },
 ];

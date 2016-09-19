@@ -34,6 +34,7 @@ const IconSample = (props) => {
 IconSample.propTypes = {
   /** Size of the icon */
   size: React.PropTypes.oneOf([
+    12,
     16,
     24,
   ]).isRequired,

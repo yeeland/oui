@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Correct regression and mistaken size classes for icons in SCSS.
 
 ## [17.3.0][17.3.0] - 2016-09-16
 ### Added
