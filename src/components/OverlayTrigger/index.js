@@ -38,25 +38,22 @@ class OverlayTrigger extends React.Component {
   }
 
   render() {
-    // TODO(@danoc): Allow user to provide name of prop that is passed to the
-    // overlay.
     const Overlay = React.cloneElement(this.props.overlay, {
-      isVisible: this.state.isOverlayOpen,
+      [this.props.overylayIsVisibleProp]: this.state.isOverlayOpen,
     });
 
     const Children = React.Children.map(this.props.children, (child) => {
-      // TODO(@danoc): Call the original `onClick` if it exists.
       return React.cloneElement(child, {
-        onClick: () => {
+        onClick: (event) => {
           this.setState({
             'isOverlayOpen': !this.state.isOverlayOpen,
           });
+
+          if (child.props.onClick) {
+            child.props.onClick(event);
+          }
         },
       });
-    });
-
-    React.cloneElement(this.props.overlay, {
-      isVisible: this.state.isOverlayOpen,
     });
 
     return (
@@ -87,6 +84,8 @@ OverlayTrigger.propTypes = {
   isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
+  /** Name of the prop in the overlay that determines if it is visible */
+  overylayIsVisibleProp: React.PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
   /** `overlay`'s vertical position relative to the `children` */

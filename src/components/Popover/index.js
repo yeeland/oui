@@ -1,7 +1,8 @@
 import React from 'react';
 
 /**
- * Display information attached to a target element.
+ * Simple component often used to display supplemental information to contents
+ * on a page.
  *
  * See `OverlayTrigger` component to position a popover on a page.
  * @param {Object} props - Properties passed to component

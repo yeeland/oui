@@ -18,6 +18,7 @@ export default [
               </p>
             </Popover>
           }
+          overylayIsVisibleProp='isVisible'
           isContstrainedToViewport={ true }
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
