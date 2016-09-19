@@ -91,9 +91,9 @@ OverlayTrigger.propTypes = {
   overylayIsVisibleProp: React.PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
-  /** `overlay`'s vertical position relative to the `children` */
+  /** Vertical edge of the `overlay` that should touch the `children` */
   verticalAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
-  /** `children`'s vertical position relative to the `overlay` */
+  /** Vertical edge of the `children` that should touch the `overlay` */
   verticalTargetAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
 };
 
