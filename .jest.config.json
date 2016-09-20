@@ -1,15 +1,9 @@
 {
   "verbose": true,
   "collectCoverage": false,
-  "unmockedModulePathPatterns": [
-    "<rootDir>/node_modules/react",
-    "<rootDir>/node_modules/react-dom",
-    "<rootDir>/node_modules/react-addons-test-utils"
-  ],
   "moduleNameMapper": {
     "^.+\\.(css)$": "<rootDir>/src/utils/empty-mock.js",
     "^.+\\.(svg)$": "<rootDir>/src/utils/svg-mock.js"
   },
-  "testDirectoryName": "tests",
-  "automock": false
+  "testRegex": "(/tests/.*|\\.(test|spec))\\.(js|json|node)$"
 }

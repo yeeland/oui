@@ -45,6 +45,10 @@ describe('components/Table/TH', () => {
 
   it('should not add width inline style to table cells by default', () => {
     const component = render(<TH></TH>);
-    expect(component.children().attr('style')).not.toContain('width');
+    const componentStyle = component.children().attr('style');
+
+    if (componentStyle) {
+      expect(componentStyle).not.toContain('width');
+    }
   });
 });
