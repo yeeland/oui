@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Remove `css-loader` dependency that was used by highlight.js and implement it the old-fashioned way. (#579)
 
 ## [17.3.1][17.3.1] - 2016-09-19
 ### Changed
