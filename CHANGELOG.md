@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Always load external fonts through HTTPS, not a protocol relative URL. (#581)
 
 ## [17.3.2][17.3.2] - 2016-09-19
 ### Changed
