@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Changed
 - [Patch] Upgrade to the latest version of Jest, our test runner. (#585)
+- [Patch] Convert relative paths to absolute paths in component imports. (#568)
 
 ## [17.3.2][17.3.2] - 2016-09-19
 ### Changed

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Token from '../index';
+import Token from 'components/Token';
 
 export default [
   {

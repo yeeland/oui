@@ -1,5 +1,5 @@
 import React from 'react';
-import TD from '../index';
+import TD from 'components/Table/TD';
 import { shallow, render } from 'enzyme';
 
 describe('components/Table/TD', () => {

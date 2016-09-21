@@ -2,7 +2,7 @@ import React from 'react';
 import { default as Clipboard } from 'clipboard';
 import { mount } from 'enzyme';
 
-import CopyButton from '../index';
+import CopyButton from 'components/Code/CopyButton';
 
 describe('components/Code/CopyButton', () => {
   const initialQueryCommandSupported = global.document.queryCommandSupported;

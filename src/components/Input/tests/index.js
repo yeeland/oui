@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../index';
+import Input from 'components/Input';
 import { shallow, mount, render } from 'enzyme';
 
 describe('components/Input', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TH from '../index';
+import TH from 'components/Table/TH';
 import { shallow, render } from 'enzyme';
 
 describe('components/Table/TH', () => {
