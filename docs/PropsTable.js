@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../src/components/Table';
+import Table from 'components/Table';
 
 const PropsTable = (props) => {
   let componentProps = props.componentProps;
