@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add `onKeyDown` event to Input React Component
+
 ### Changed
 - [Patch] Always load external fonts through HTTPS, not a protocol relative URL. (#581)
 

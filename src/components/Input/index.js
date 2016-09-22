@@ -25,6 +25,7 @@ const Input = (props) => {
         onInput={ opts.onInput }
         onChange={ opts.onChange }
         onBlur={ opts.onBlur }
+        onKeyDown={ opts.onKeyDown }
         onFocus={ opts.onFocus }
         data-test-section={ opts.testSection }
       />
@@ -69,6 +70,8 @@ Input.propTypes = {
   onFocus: React.PropTypes.func,
   /** Function that fires on keypress */
   onInput: React.PropTypes.func,
+  /** Function that fires when a key is pressed down */
+  onKeyDown: React.PropTypes.func,
   /** Input placeholder text */
   placeholder: React.PropTypes.string,
   /** Hook for automated JavaScript tests */

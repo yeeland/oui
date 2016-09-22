@@ -47,6 +47,18 @@ export default [
   {
     examples: [
       <Input
+        defaultValue="onKeyDown Example"
+        onKeyDown={
+          function(event) {
+            console.log('onKeyDown', event.target.value); // eslint-disable-line no-console
+          }
+        }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
         type="password"
         label="Password"
         testSection="input"

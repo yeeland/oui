@@ -86,6 +86,21 @@ describe('components/Input', () => {
     expect(handler.onBlur).toHaveBeenCalled();
   });
 
+  it('should call the onKeyDown event handler when a key is pressed down', () => {
+    const handler = {
+      onKeyDown: (event) => {},
+    };
+    spyOn(handler, 'onKeyDown');
+
+    const component = mount(
+      <Input type="text" value="foo" onKeyDown={ handler.onKeyDown } />
+    );
+
+    component.simulate('keydown');
+
+    expect(handler.onKeyDown).toHaveBeenCalled();
+  });
+
   it('should call the onInput event handler when the input receives user input', () => {
     const handler = {
       onInput: (event) => { },
