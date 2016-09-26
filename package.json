@@ -54,7 +54,7 @@
     "yargs": "^4.1.0"
   },
   "scripts": {
-    "test": "npm run scss-lint && npm run icons:update && npm run eslint && gulp sass && npm run react-docs && npm run jest",
+    "test": "npm run eslint && npm run jest && npm run scss-lint && npm run icons:update && gulp sass && npm run react-docs",
     "start": "bundle install && bundle update && npm install && npm run sass && npm run icons:update && npm run babel && npm run react-docs",
     "jest": "jest --config .jest.config.json",
     "eslint": "eslint --ext .jsx --ext .js . --ignore-path .gitignore --max-warnings 0",
