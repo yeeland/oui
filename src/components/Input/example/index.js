@@ -23,6 +23,7 @@ export default [
   {
     examples: [
       <Input
+        type="text"
         defaultValue="onChange Example"
         onChange={
           function(event) {
@@ -35,6 +36,7 @@ export default [
   {
     examples: [
       <Input
+        type="text"
         defaultValue="onBlur Example"
         onBlur={
           function(event) {

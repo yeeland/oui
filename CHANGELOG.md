@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Fix two small React component console errors. (#583)
+
 ### Changed
 - [Patch] Upgrade to the latest version of Jest, our test runner. (#585)
 - [Patch] Convert relative paths to absolute paths in component imports. (#568)

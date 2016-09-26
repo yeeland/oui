@@ -178,7 +178,7 @@ export default [
             <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
           <Table.TR>
-            <Table.TD colSpan="3">Cell Spanning Three Columns</Table.TD>
+            <Table.TD colSpan={ 3 }>Cell Spanning Three Columns</Table.TD>
           </Table.TR>
         </Table.TBody>
       </Table>,
