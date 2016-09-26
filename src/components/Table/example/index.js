@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Table from '../index';
-import Button from '../../Button';
+import Table from 'components/Table';
+import Button from 'components/Button';
 
 export default [
   {

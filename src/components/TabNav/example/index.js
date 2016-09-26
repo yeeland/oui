@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import TabNav from '../index';
+import TabNav from 'components/TabNav';
 
 export default [
   {

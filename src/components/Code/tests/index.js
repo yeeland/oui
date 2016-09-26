@@ -1,5 +1,5 @@
 import React from 'react';
-import Code from '../index';
+import Code from 'components/Code';
 import { shallow, mount, render } from 'enzyme';
 
 describe('components/Code', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowsInline from '../index';
+import ArrowsInline from 'components/ArrowsInline';
 import { shallow } from 'enzyme';
 
 describe('components/ArrowsInline', () => {

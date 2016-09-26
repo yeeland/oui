@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Input from '../index';
+import Input from 'components/Input';
 
 export default [
   {
