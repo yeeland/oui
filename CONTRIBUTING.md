@@ -73,16 +73,16 @@ This applies any time classes are being renamed and you want old and new code to
 
 1. Run `git checkout devel && git pull && git checkout master && git pull`.
 2. `git merge devel` to merge `devel` into `master` and fix potential merge conflicts.
-3. Open `CHANGELOG.md` and determine your new version number `xx.x.x` based on what's being released in this version
+3. Open `CHANGELOG.md` and determine your new version number `xx.x.x` based on what's being released in this version. ([Learn more about semantic versioning](http://semver.org/).)
 4. Add a section heading under the "Unreleased" contributions section that includes your `xx.x.x` version number and the release date: `## [17.3.1][17.3.1] - 2016-09-19`
 5. Update the version number in the unreleased link near the bottom of the file: `[Unreleased]: https://github.com/optimizely/oui/compare/v17.3.1...HEAD`
 6. Add a new link for your new version at the bottom of the file: `[17.3.1]: https://github.com/optimizely/oui/compare/v17.3.0...v17.3.1`. (Duplicate the previous line, update the first number to the last version released `v17.3.0`, and the last number to this new version being released `v17.3.1`.)
 7. Commit the change on `master`: `git add . && git commit -a -m 'Prep for new release version xx.x.x'`
 8. (Optional) Update the URLs in `src/oui/partials/components/_icons.scss` to reflect the version of `oui-icons` that `oui` uses. Run `npm install && npm list oui-icons` to get that version number. These get embedded in the OUI documentation.
 9. Run one of these depending on the highest importance issue this release:
-  [Patch] changes: `npm version patch`
-  [Feature] changes: `npm version minor`
-  [Release] changes: `npm version major`
+  * `[Patch]` changes: `npm version patch`
+  * `[Feature]` changes: `npm version minor`
+  * `[Release]` changes: `npm version major`
 10. Now [create a new release on GitHub](https://github.com/optimizely/oui/releases/new). It should [look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png). Select
  the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes.
 11. Switch to the ScribeSass repo and [deploy new documentation](https://github.com/optimizely/scribesass/blob/master/README.md) for our CSS documentation.
