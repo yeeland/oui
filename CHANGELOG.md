@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add `Checkbox` React component.
+- [Feature] Add script to run tests and watch file, `npm run jest:watch`.
+
 ### Changed
 - [Patch] Update order of `npm test` tasks so that tests most likely to fail are run earlier. (#588)
 - [Patch] Upgrade to the latest version of Jest, our test runner. (#585)

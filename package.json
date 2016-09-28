@@ -57,6 +57,7 @@
     "test": "npm run eslint && npm run jest && npm run scss-lint && npm run icons:update && gulp sass && npm run react-docs",
     "start": "bundle install && bundle update && npm install && npm run sass && npm run icons:update && npm run babel && npm run react-docs",
     "jest": "jest --config .jest.config.json",
+    "jest:watch": "jest --config .jest.config.json --watch",
     "eslint": "eslint --ext .jsx --ext .js . --ignore-path .gitignore --max-warnings 0",
     "scss-lint": "bundle exec scss-lint src/",
     "sass": "gulp sass && gulp extras:build",
