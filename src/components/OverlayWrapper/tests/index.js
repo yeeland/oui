@@ -112,7 +112,11 @@ describe('components/', () => {
       const tetherOptions = component.instance()._tether.options;
 
       expect(tetherOptions.attachment).toBe('top center');
-      expect(tetherOptions.constraints).toBe(undefined);
+      expect(tetherOptions.constraints.length).toBe(1);
+      expect(tetherOptions.constraints[0]).toEqual({
+        attachment: 'together',
+        to: 'window',
+      });
       expect(tetherOptions.offset).toBe('0 0');
       expect(tetherOptions.targetAttachment).toBe('auto auto');
       expect(tetherOptions.targetOffset).toBe('0 0');
@@ -124,10 +128,8 @@ describe('components/', () => {
       const component = mount(
         <OverylayTrigger
           overlay={ <FakeOverlay /> }
-
           horizontalAttachment="center"
           verticalAttachment="top"
-          isContstrainedToViewport={ true }
           verticalTargetAttachment="top"
           horizontalTargetAttachment="center">
           <FakeButton />

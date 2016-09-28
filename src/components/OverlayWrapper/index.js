@@ -14,17 +14,14 @@ class OverlayWrapper extends React.Component {
 
   componentDidMount() {
     let options = {
-      element: this._overlayEl.firstChild,
+      element: this._overlayEl,
       target: this._activatorEl.firstChild,
       attachment: `${this.props.verticalAttachment} ${this.props.horizontalAttachment}`,
-    };
-
-    if (this.props.isContstrainedToViewport) {
-      options.constraints = [{
+      constraints: [{
         to: 'window',
         attachment: 'together',
-      }];
-    }
+      }],
+    };
 
     if (this.props.verticalTargetAttachment && this.props.horizontalTargetAttachment) {
       options.targetAttachment = `${this.props.verticalTargetAttachment} ${this.props.horizontalTargetAttachment}`;
@@ -60,10 +57,10 @@ class OverlayWrapper extends React.Component {
           ref={ (ref) => { this._activatorEl = ref; } }>
           { Children }
         </div>
-        <div ref={ (ref) => { this._overlayEl = ref; } }>
-          <div style={ this.state.isOverlayOpen ? { display: 'block' } : { display: 'none' } }>
-            { this.props.overlay }
-          </div>
+        <div
+          ref={ (ref) => { this._overlayEl = ref; } }
+          style={ this.state.isOverlayOpen ? { display: 'block' } : { display: 'none' } }>
+          { this.props.overlay }
         </div>
       </div>
       /* eslint-enable */
@@ -78,8 +75,6 @@ OverlayWrapper.propTypes = {
   horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Side of `children` that should attach to the `overlay` */
   horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
-  /** Should the popover reposition itself when cut off the page */
-  isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
   /** Hook for automated JavaScript tests */

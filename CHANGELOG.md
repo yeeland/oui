@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
+- [Release] Import a new SCSS file for Tether, a third party library used to position popovers.
 
 ## [17.5.0][17.5.0] - 2016-09-28
 ### Added

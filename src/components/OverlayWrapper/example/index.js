@@ -17,8 +17,7 @@ export default [
                 nihil libero et, hic!
               </p>
             </Popover>
-          }
-          isContstrainedToViewport={ true }>
+          }>
           <Button>Open Popover</Button>
         </OverlayWrapper>
       </div>,
@@ -36,7 +35,6 @@ export default [
               </p>
             </Popover>
           }
-          isContstrainedToViewport={ true }
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
           verticalAttachment="middle"
@@ -58,7 +56,6 @@ export default [
               </p>
             </Popover>
           }
-          isContstrainedToViewport={ true }
           horizontalAttachment="left"
           horizontalTargetAttachment="left"
           verticalAttachment="top"
