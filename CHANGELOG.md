@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Convert `Input` to an ES2015 class to add `blur` method and allow it to be referenced with `ref`. (#591)
 - [Feature] Add `Checkbox` React component.
 - [Feature] Add script to run tests and watch file, `npm run jest:watch`.
 

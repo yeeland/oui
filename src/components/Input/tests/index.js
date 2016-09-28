@@ -116,6 +116,19 @@ describe('components/Input', () => {
     expect(handler.onInput).toHaveBeenCalled();
   });
 
+  it('should blur the input when blur function is called', () => {
+    const component = mount(
+      <Input type="text" value="foo" />
+    );
+
+    const instance = component.instance();
+    spyOn(instance._input, 'blur');
+
+    instance.blur();
+
+    expect(instance._input.blur).toHaveBeenCalled();
+  });
+
   it('should have a properly set test section', () => {
     const component = shallow(
       <Input type="text" testSection="foo" />
