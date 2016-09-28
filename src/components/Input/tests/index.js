@@ -145,6 +145,25 @@ describe('components/Input', () => {
     expect(component.find('[data-test-section="foo-label"]').length).toBe(1);
   });
 
+  it('should render a label with optional text if label and isOptional is passed', () => {
+    const component = mount(
+      <Input type="text" testSection="foo" label="Input Label" isOptional={ true } />
+    );
+
+    expect(component.text()).toBe('Input Label(Optional)');
+  });
+
+  it('should throw an error if isOptional is passed without a label', () => {
+    spyOn(console, 'error').and.stub();
+
+    shallow(
+      <Input type="text" testSection="foo" isOptional={ true } />
+    );
+
+    expect(console.error.calls.all()[0].args[0]).toContain('Must include a value for the label prop to use the isOptional prop'); // eslint-disable-line
+  });
+
+
   it('should not render a label by default', () => {
     const component = mount(
       <Input type="text" testSection="foo" />

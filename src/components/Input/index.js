@@ -44,9 +44,10 @@ class Input extends React.Component {
   render() {
     if (this.props.label) {
       return (
-        <Label testSection={ this.props.testSection + '-label' }>
+        <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
           <div className="oui-label">
             { this.props.label }
+            { this.props.isOptional && <span className="oui-label__optional">(Optional)</span> }
           </div>
           { this.renderInput(this.props) }
         </Label>
@@ -64,6 +65,16 @@ Input.propTypes = {
   isDisabled: React.PropTypes.bool,
   /** Includes search icon if true */
   isFilter: React.PropTypes.bool,
+  /** Adds an optional label if there is a label provided
+   *  @param {Object} props Object of props
+   *  @returns {Error} Error or null
+   */
+  isOptional: function verifyIsOptionalProp(props) {
+    if (props.isOptional && !props.label) {
+      return new Error('Must include a value for the label prop to use the isOptional prop');
+    }
+    return null;
+  },
   /** Prevents input from being modified but doesn't appear disabled */
   isReadOnly: React.PropTypes.bool,
   /** Prevents input from being submitted without value */
