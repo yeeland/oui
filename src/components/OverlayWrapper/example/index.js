@@ -2,8 +2,9 @@
 import React from 'react';
 import OverlayWrapper from '../index';
 
-import Button from '../../Button/';
-import Popover from '../../Popover/';
+import Button from 'components/Button/';
+import Popover from 'components/Popover/';
+import Poptip from 'components/Poptip/';
 
 export default [
   {
@@ -19,6 +20,20 @@ export default [
             </Popover>
           }>
           <Button>Open Popover</Button>
+        </OverlayWrapper>
+      </div>,
+    ],
+  },
+  {
+    examples: [
+      <div className="position--relative height--100">
+        <OverlayWrapper
+          overlay={
+            <Poptip>
+              Ipsa officiis bad-news minus earum a aperiam!
+            </Poptip>
+          }>
+          <Button>Open Poptip</Button>
         </OverlayWrapper>
       </div>,
     ],

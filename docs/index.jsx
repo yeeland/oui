@@ -27,6 +27,8 @@ import Label from 'components/Label';
 import LabelExample from 'components/Label/example';
 import OverlayWrapper from 'components/OverlayWrapper';
 import OverlayWrapperExample from 'components/OverlayWrapper/example';
+import Poptip from 'components/Poptip';
+import PoptipExample from 'components/Poptip/example';
 import Popover from 'components/Popover';
 import PopoverExample from 'components/Popover/example';
 import Table from 'components/Table';
@@ -77,6 +79,10 @@ const componentsArray = [
   {
     index: OverlayWrapper,
     example: OverlayWrapperExample,
+  },
+  {
+    index: Poptip,
+    example: PoptipExample,
   },
   {
     index: Popover,
