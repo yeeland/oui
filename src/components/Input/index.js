@@ -1,5 +1,5 @@
 import React from 'react';
-import Label from 'components/Label';
+import Label from '../Label';
 
 /**
  * Generates an `input` element (optionally wrapped in a label) and accepts

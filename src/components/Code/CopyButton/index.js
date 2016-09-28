@@ -1,8 +1,8 @@
 import React from 'react';
 import { default as Clipboard } from 'clipboard';
 
-import Button from 'components/Button';
-import ClipboardIcon from 'components/Icon/ClipboardIcon';
+import Button from '../../Button';
+import ClipboardIcon from '../../Icon/ClipboardIcon';
 
 class CopyButton extends React.Component {
   componentDidMount() {

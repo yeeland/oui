@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Revert change to absolute paths because Babel isn't configured to resolve the module paths to the correct path.
 
 ## [17.5.0][17.5.0] - 2016-09-28
 ### Added

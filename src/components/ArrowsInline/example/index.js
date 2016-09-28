@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import ArrowsInline from 'components/ArrowsInline';
+import ArrowsInline from '../index';
 
 export default [
   {

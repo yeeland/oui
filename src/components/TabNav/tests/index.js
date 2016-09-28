@@ -1,5 +1,5 @@
 import React from 'react';
-import TabNav from 'components/TabNav';
+import TabNav from '../index';
 import { shallow, mount } from 'enzyme';
 
 describe('components/TabNav', () => {

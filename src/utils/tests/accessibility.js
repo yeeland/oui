@@ -1,4 +1,4 @@
-import { getAssistiveTextFromColorClass } from 'utils/accessibility';
+import { getAssistiveTextFromColorClass } from '../accessibility';
 
 describe('utils/accessibility', () => {
   describe('#getAssistiveTextFromColorClass', () => {

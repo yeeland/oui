@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Highlight from 'highlight.js';
 
-import CopyButton from 'components/Code/CopyButton';
+import CopyButton from './CopyButton';
 
 const HighlightedCode = (code, isHighlighted, language, className, testSection) => {
   let dangerouslySetInnerHTML = null;

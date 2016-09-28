@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Checkbox from 'components/Checkbox';
+import Checkbox from '../index';
 
 export default [
   {

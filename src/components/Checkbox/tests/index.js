@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
+import Checkbox from '../index';
 import { shallow, mount } from 'enzyme';
 
 describe('components/Checkbox', () => {

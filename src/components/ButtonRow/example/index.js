@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Button from 'components/Button';
-import ButtonRow from 'components/ButtonRow';
+import Button from '../../Button';
+import ButtonRow from '../';
 
 export default [
   {

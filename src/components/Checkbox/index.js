@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import Label from 'components/Label';
+import Label from '../Label';
 
 /**
  * Generates a `checkbox` element wrapped in a Label
