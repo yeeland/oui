@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [17.5.1][17.5.1] - 2016-09-28
 ### Fixed
 - [Patch] Revert change to absolute paths because Babel isn't configured to resolve the module paths to the correct path.
 
@@ -599,7 +601,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v17.5.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v17.5.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -657,3 +659,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [17.3.2]: https://github.com/optimizely/oui/compare/v17.3.1...v17.3.2
 [17.4.0]: https://github.com/optimizely/oui/compare/v17.3.2...v17.4.0
 [17.5.0]: https://github.com/optimizely/oui/compare/v17.4.0...v17.5.0
+[17.5.1]: https://github.com/optimizely/oui/compare/v17.5.0...v17.5.1
