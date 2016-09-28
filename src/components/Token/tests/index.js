@@ -1,5 +1,5 @@
 import React from 'react';
-import Token from '../index';
+import Token from 'components/Token';
 import { shallow, mount } from 'enzyme';
 
 describe('components/Token', () => {

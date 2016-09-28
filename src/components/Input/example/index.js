@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Input from '../index';
+import Input from 'components/Input';
 
 export default [
   {
@@ -23,6 +23,7 @@ export default [
   {
     examples: [
       <Input
+        type="text"
         defaultValue="onChange Example"
         onChange={
           function(event) {
@@ -35,10 +36,23 @@ export default [
   {
     examples: [
       <Input
+        type="text"
         defaultValue="onBlur Example"
         onBlur={
           function(event) {
             console.log('onBlur', event.target.value); // eslint-disable-line no-console
+          }
+        }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
+        defaultValue="onKeyDown Example"
+        onKeyDown={
+          function(event) {
+            console.log('onKeyDown', event.target.value); // eslint-disable-line no-console
           }
         }
       />,

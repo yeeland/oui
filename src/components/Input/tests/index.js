@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../index';
+import Input from 'components/Input';
 import { shallow, mount, render } from 'enzyme';
 
 describe('components/Input', () => {
@@ -84,6 +84,21 @@ describe('components/Input', () => {
     component.simulate('blur');
 
     expect(handler.onBlur).toHaveBeenCalled();
+  });
+
+  it('should call the onKeyDown event handler when a key is pressed down', () => {
+    const handler = {
+      onKeyDown: (event) => {},
+    };
+    spyOn(handler, 'onKeyDown');
+
+    const component = mount(
+      <Input type="text" value="foo" onKeyDown={ handler.onKeyDown } />
+    );
+
+    component.simulate('keydown');
+
+    expect(handler.onKeyDown).toHaveBeenCalled();
   });
 
   it('should call the onInput event handler when the input receives user input', () => {

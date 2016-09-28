@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Label from '../index';
+import Label from 'components/Label';
 
 export default [
   {

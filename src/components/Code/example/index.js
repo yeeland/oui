@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Code from '../index';
+import Code from 'components/Code';
 
 export default [
   {

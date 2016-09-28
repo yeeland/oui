@@ -24,7 +24,7 @@ $hosted-fonts:(
     800: xbold,
     900: black
   ),
-  url: '//dhm5hy2vn8l0l.cloudfront.net/proxima/'
+  url: 'https://dhm5hy2vn8l0l.cloudfront.net/proxima/'
 );
 
 @if variable-exists(include-fonts) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TD from '../index';
+import TD from 'components/Table/TD';
 import { shallow, render } from 'enzyme';
 
 describe('components/Table/TD', () => {
@@ -45,7 +45,11 @@ describe('components/Table/TD', () => {
 
   it('should not add width inline style to table cells by default', () => {
     const component = render(<TD></TD>);
-    expect(component.children().attr('style')).not.toContain('width');
+    const componentStyle = component.children().attr('style');
+
+    if (componentStyle) {
+      expect(componentStyle).not.toContain('width');
+    }
   });
 
   it('should add colspan to table cells when provided', () => {

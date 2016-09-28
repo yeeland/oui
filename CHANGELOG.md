@@ -5,9 +5,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
 ### Added
 - [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
+
+### Changed
+- [Patch] Update order of `npm test` tasks so that tests most likely to fail are run earlier. (#588)
+- [Patch] Upgrade to the latest version of Jest, our test runner. (#585)
+- [Patch] Convert relative paths to absolute paths in component imports. (#568)
+
+### Fixed
+- [Patch] Fix two small React component console errors. (#583)
+
+## [17.4.0][17.4.0] - 2016-09-22
+### Added
+- [Feature] Add `onKeyDown` event to `Input` React component.
+
+### Changed
+- [Patch] Always load external fonts through HTTPS, not a protocol relative URL. (#581)
+
+## [17.3.2][17.3.2] - 2016-09-19
+### Changed
+- [Patch] Remove `css-loader` dependency that was used by highlight.js and implement it the old-fashioned way. (#579)
 
 ## [17.3.1][17.3.1] - 2016-09-19
 ### Changed
@@ -574,7 +594,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v17.3.1...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v17.4.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -629,3 +649,5 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [17.2.0]: https://github.com/optimizely/oui/compare/v17.1.0...v17.2.0
 [17.3.0]: https://github.com/optimizely/oui/compare/v17.2.0...v17.3.0
 [17.3.1]: https://github.com/optimizely/oui/compare/v17.3.0...v17.3.1
+[17.3.2]: https://github.com/optimizely/oui/compare/v17.3.1...v17.3.2
+[17.4.0]: https://github.com/optimizely/oui/compare/v17.3.2...v17.4.0

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Attention from '../index';
+import Attention from 'components/Attention';
 
 export default [
   {
