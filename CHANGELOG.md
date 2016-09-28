@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+- [Patch] Updated contributing documentation with detailed steps about preparing for and releasing a new OUI version. (#515)
 
 ## [17.5.0][17.5.0] - 2016-09-28
 ### Added
