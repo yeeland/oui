@@ -18,7 +18,6 @@ export default [
               </p>
             </Popover>
           }
-          overylayIsVisibleProp='isVisible'
           isContstrainedToViewport={ true }>
           <Button>Open Popover</Button>
         </OverlayWrapper>
@@ -37,7 +36,6 @@ export default [
               </p>
             </Popover>
           }
-          overylayIsVisibleProp='isVisible'
           isContstrainedToViewport={ true }
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
@@ -60,7 +58,6 @@ export default [
               </p>
             </Popover>
           }
-          overylayIsVisibleProp='isVisible'
           isContstrainedToViewport={ true }
           horizontalAttachment="left"
           horizontalTargetAttachment="left"

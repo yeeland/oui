@@ -14,8 +14,7 @@ describe('components/', () => {
   it('should render contents passed in as children', () => {
     const component = mount(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );
@@ -25,33 +24,31 @@ describe('components/', () => {
   it('should render overlay', () => {
     const component = mount(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );
     expect(component.find('[data-test-section="fake-overlay"]').length).toBe(1);
   });
 
-  it('should pass user supplied prop to overlay component with correct value depending on state', () => {
+  it('should show or hide the `overlay` depending on state', () => {
     const component = mount(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );
 
     // Start off with the default state
     expect(component.state('isOverlayOpen')).toBe(false);
-    expect(component.find(FakeOverlay).prop('isVisibleTest')).toBe(false);
+    expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: none');
 
     // Change state of `isOverlayOpen` to be true
     component.setState({'isOverlayOpen': true});
 
     // Expect that state has changed and prop has been updated
     expect(component.state('isOverlayOpen')).toBe(true);
-    expect(component.find(FakeOverlay).prop('isVisibleTest')).toBe(true);
+    expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: block');
   });
 
   it('should pass `onClick` function to `children` that changes state of ``', () => {
@@ -59,8 +56,7 @@ describe('components/', () => {
 
     const component = shallow(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );
@@ -87,8 +83,7 @@ describe('components/', () => {
 
     shallow(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton onClick={ foo.bar } />
       </OverylayTrigger>
     );
@@ -109,8 +104,7 @@ describe('components/', () => {
     it('should pass the correct options with none of the layout props provided', () => {
       const component = mount(
         <OverylayTrigger
-          overlay={ <FakeOverlay /> }
-          overylayIsVisibleProp="isVisibleTest">
+          overlay={ <FakeOverlay /> }>
           <FakeButton />
         </OverylayTrigger>
       );
@@ -130,7 +124,7 @@ describe('components/', () => {
       const component = mount(
         <OverylayTrigger
           overlay={ <FakeOverlay /> }
-          overylayIsVisibleProp="isVisibleTest"
+
           horizontalAttachment="center"
           verticalAttachment="top"
           isContstrainedToViewport={ true }
@@ -160,8 +154,7 @@ describe('components/', () => {
   it('should destroy Tether on unmount', () => {
     const component = mount(
       <OverylayTrigger
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );
@@ -180,8 +173,7 @@ describe('components/', () => {
     const component = shallow(
       <OverylayTrigger
         testSection="foo"
-        overlay={ <FakeOverlay /> }
-        overylayIsVisibleProp="isVisibleTest">
+        overlay={ <FakeOverlay /> }>
         <FakeButton />
       </OverylayTrigger>
     );

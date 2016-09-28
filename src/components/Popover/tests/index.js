@@ -24,20 +24,12 @@ describe('components/Popover', () => {
     expect(component.hasClass('oui-pop--over')).toBe(true);
   });
 
-  it('should change opacity and display when visible', () => {
+  it('should overwrite SCSS to display by default', () => {
     const component = render(
-      <Popover isVisible={ true }>Heyo!</Popover>
+      <Popover>Heyo!</Popover>
     );
     expect(component.children().attr('style')).toContain('display:block');
     expect(component.children().attr('style')).toContain('opacity:1');
-  });
-
-  it('should not set opacity and display when not visible', () => {
-    const component = render(
-      <Popover isVisible={ false }>Heyo!</Popover>
-    );
-    expect(component.children().attr('style')).not.toContain('display:block');
-    expect(component.children().attr('style')).not.toContain('opacity:1');
   });
 
   it('should have a properly set test section', () => {

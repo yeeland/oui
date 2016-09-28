@@ -38,10 +38,6 @@ class OverlayWrapper extends React.Component {
   }
 
   render() {
-    const Overlay = React.cloneElement(this.props.overlay, {
-      [this.props.overylayIsVisibleProp]: this.state.isOverlayOpen,
-    });
-
     const Children = React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {
         onClick: (event) => {
@@ -65,7 +61,9 @@ class OverlayWrapper extends React.Component {
           { Children }
         </div>
         <div ref={ (ref) => { this._overlayEl = ref; } }>
-          { Overlay }
+          <div style={ this.state.isOverlayOpen ? { display: 'block' } : { display: 'none' } }>
+            { this.props.overlay }
+          </div>
         </div>
       </div>
       /* eslint-enable */
@@ -84,11 +82,6 @@ OverlayWrapper.propTypes = {
   isContstrainedToViewport: React.PropTypes.bool,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
-  /**
-    Name of the prop in the `overlay` that determines if the `overlay` is
-    visible
-  */
-  overylayIsVisibleProp: React.PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
   /** Vertical edge of the `overlay` that should touch the `children` */
