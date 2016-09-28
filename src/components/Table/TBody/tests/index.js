@@ -1,5 +1,5 @@
 import React from 'react';
-import TBody from '../index';
+import TBody from 'components/Table/TBody';
 import { shallow } from 'enzyme';
 
 describe('components/Table/TBody', () => {

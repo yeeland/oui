@@ -1,5 +1,5 @@
 import React from 'react';
-import Label from '../Label';
+import Label from 'components/Label';
 
 /**
  * Generates an `input` element (optionally wrapped in a label) and accepts
@@ -7,14 +7,22 @@ import Label from '../Label';
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Input = (props) => {
-  let renderInput = (opts) => {
+class Input extends React.Component {
+  blur() {
+    if (this._input) {
+      this._input.blur();
+    }
+  }
+
+  renderInput(opts) {
     let hasSearchIcon = opts.isFilter ? ' oui-text-input--search' : '';
     let classes = 'oui-text-input' + hasSearchIcon;
 
     return (
+      /* eslint-disable react/jsx-no-bind */
       <input
         className={ classes }
+        ref={ (c) => { this._input = c; } }
         type={ opts.type }
         value={ opts.value }
         defaultValue={ opts.defaultValue }
@@ -29,22 +37,26 @@ const Input = (props) => {
         onFocus={ opts.onFocus }
         data-test-section={ opts.testSection }
       />
-    );
-  };
-
-  if (props.label) {
-    return (
-      <Label testSection={ props.testSection + '-label' }>
-        <div className="oui-label">
-          { props.label }
-        </div>
-        { renderInput(props) }
-      </Label>
+      /* eslint-enable */
     );
   }
 
-  return renderInput(props);
-};
+  render() {
+    if (this.props.label) {
+      return (
+        <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
+          <div className="oui-label">
+            { this.props.label }
+            { this.props.isOptional && <span className="oui-label__optional">(Optional)</span> }
+          </div>
+          { this.renderInput(this.props) }
+        </Label>
+      );
+    }
+
+    return this.renderInput(this.props);
+  }
+}
 
 Input.propTypes = {
   /** The default value of the input used on initial render */
@@ -53,6 +65,16 @@ Input.propTypes = {
   isDisabled: React.PropTypes.bool,
   /** Includes search icon if true */
   isFilter: React.PropTypes.bool,
+  /** Adds an optional label if there is a label provided
+   *  @param {Object} props Object of props
+   *  @returns {Error} Error or null
+   */
+  isOptional: function verifyIsOptionalProp(props) {
+    if (props.isOptional && !props.label) {
+      return new Error('Must include a value for the label prop to use the isOptional prop');
+    }
+    return null;
+  },
   /** Prevents input from being modified but doesn't appear disabled */
   isReadOnly: React.PropTypes.bool,
   /** Prevents input from being submitted without value */

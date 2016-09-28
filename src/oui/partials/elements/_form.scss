@@ -395,7 +395,8 @@ fieldset {
 // Labels in `.#{$namespace}input-lists`
 
 .#{$namespace}check-label,
-.#{$namespace}input-list .#{$namespace}label {
+.#{$namespace}input-list .#{$namespace}label,
+.oui-input-list .oui-label {
   display: table-cell;
   padding-left: spacer(1);
   font-weight: 400;
@@ -403,7 +404,8 @@ fieldset {
 
 //  Groups of checkboxes and radios.
 
-.#{$namespace}input-list {
+.#{$namespace}input-list,
+.oui-input-list {
   list-style: none;
   margin: 0;
 
@@ -416,7 +418,8 @@ fieldset {
     display: table-cell;
   }
 
-  .#{$namespace}label {
+  .#{$namespace}label,
+  .oui-label {
     width: 100%;
   }
 

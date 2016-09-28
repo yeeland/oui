@@ -1,5 +1,5 @@
 import React from 'react';
-import Attention from '../index';
+import Attention from 'components/Attention';
 import { shallow, mount } from 'enzyme';
 
 describe('components/Attention', () => {

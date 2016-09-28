@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Table from '../index';
-import Button from '../../Button';
+import Table from 'components/Table';
+import Button from 'components/Button';
 
 export default [
   {
@@ -178,7 +178,7 @@ export default [
             <Table.TD verticalAlign="middle"><Button size="small">Start</Button></Table.TD>
           </Table.TR>
           <Table.TR>
-            <Table.TD colSpan="3">Cell Spanning Three Columns</Table.TD>
+            <Table.TD colSpan={ 3 }>Cell Spanning Three Columns</Table.TD>
           </Table.TR>
         </Table.TBody>
       </Table>,

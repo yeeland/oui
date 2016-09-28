@@ -40,11 +40,11 @@ This is a quick and easy way to add OUI to a project. It is the least flexible o
 You can include this pre-compiled version of OUI in your application:
 
 ```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.1.0/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/13.1.0/oui-extras.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/17.5.0/oui.css">
+<link rel="stylesheet" href="https://oui.cdn.optimizely.com/17.5.0/oui-extras.css">
 ```
 
-Replace `13.1.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
+Replace `17.5.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
 
 `oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use [OUI icons](https://github.com/optimizely/oui-icons) you'll need to include both `oui.css` and `oui-extras.css` in your project.
 

@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import HelpIcon from '../../Icon/HelpIcon';
-import UploadIcon from '../../Icon/UploadIcon';
-import DuplicateIcon from '../../Icon/DuplicateIcon';
-import SearchIcon from '../../Icon/SearchIcon';
-import RefreshIcon from '../../Icon/RefreshIcon';
-import ClipboardIcon from '../../Icon/ClipboardIcon';
+import HelpIcon from 'components/Icon/HelpIcon';
+import UploadIcon from 'components/Icon/UploadIcon';
+import DuplicateIcon from 'components/Icon/DuplicateIcon';
+import SearchIcon from 'components/Icon/SearchIcon';
+import RefreshIcon from 'components/Icon/RefreshIcon';
+import ClipboardIcon from 'components/Icon/ClipboardIcon';
 
 export default [
   {
