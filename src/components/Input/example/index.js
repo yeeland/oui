@@ -49,12 +49,22 @@ export default [
   {
     examples: [
       <Input
+        type="text"
         defaultValue="onKeyDown Example"
         onKeyDown={
           function(event) {
             console.log('onKeyDown', event.target.value); // eslint-disable-line no-console
           }
         }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
+        type="text"
+        label="Label with Optional"
+        isOptional={ true }
       />,
     ],
   },

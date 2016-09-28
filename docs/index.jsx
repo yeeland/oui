@@ -15,6 +15,8 @@ import Button from 'components/Button';
 import ButtonExample from 'components/Button/example';
 import ButtonRow from 'components/ButtonRow';
 import ButtonRowExample from 'components/ButtonRow/example';
+import Checkbox from 'components/Checkbox';
+import CheckboxExample from 'components/Checkbox/example';
 import Code from 'components/Code';
 import CodeExample from 'components/Code/example';
 import IconSample from 'components/IconSample';
@@ -51,6 +53,10 @@ const componentsArray = [
   {
     index: ButtonRow,
     example: ButtonRowExample,
+  },
+  {
+    index: Checkbox,
+    example: CheckboxExample,
   },
   {
     index: Code,

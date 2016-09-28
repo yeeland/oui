@@ -5,10 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
-
 ### Added
 - [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
+
+## [17.5.0][17.5.0] - 2016-09-28
+### Added
+- [Feature] Add `isOptional` prop to `Input` React component.
+- [Feature] Convert `Input` to an ES2015 class to add `blur` method and allow it to be referenced with `ref`. (#591)
+- [Feature] Add `Checkbox` React component.
+- [Feature] Add script to run tests and watch file, `npm run jest:watch`.
 
 ### Changed
 - [Patch] Update order of `npm test` tasks so that tests most likely to fail are run earlier. (#588)
@@ -594,7 +600,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v17.4.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v17.5.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -651,3 +657,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [17.3.1]: https://github.com/optimizely/oui/compare/v17.3.0...v17.3.1
 [17.3.2]: https://github.com/optimizely/oui/compare/v17.3.1...v17.3.2
 [17.4.0]: https://github.com/optimizely/oui/compare/v17.3.2...v17.4.0
+[17.5.0]: https://github.com/optimizely/oui/compare/v17.4.0...v17.5.0
