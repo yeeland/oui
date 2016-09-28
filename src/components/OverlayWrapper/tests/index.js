@@ -10,7 +10,7 @@ const FakeOverlay = (props) => {
   return <div data-test-section="fake-overlay"></div>;
 };
 
-describe('components/', () => {
+describe('components/OverlayWrapper', () => {
   it('should render contents passed in as children', () => {
     const component = mount(
       <OverylayTrigger

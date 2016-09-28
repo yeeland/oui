@@ -6,9 +6,7 @@ export default [
   {
     examples: [
       <div className="position--relative height--100">
-        <Popover
-          title="Lorem ipsum dolor sit amet"
-          isVisible={ true }>
+        <Popover title="Lorem ipsum dolor sit amet">
           <p>
             Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
             nihil libero et, hic!
