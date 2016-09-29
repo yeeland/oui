@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'components/Button';
-import ButtonRow from 'components/ButtonRow';
+import Button from '../../Button';
+import ButtonRow from '../';
 import { mount } from 'enzyme';
 
 describe('components/ButtonRow', () => {

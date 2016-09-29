@@ -1,5 +1,5 @@
 import React from 'react';
-import THead from 'components/Table/THead';
+import THead from '../index';
 import { shallow } from 'enzyme';
 
 describe('components/Table/THead', () => {

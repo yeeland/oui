@@ -1,5 +1,5 @@
 import React from 'react';
-import Label from 'components/Label';
+import Label from '../index';
 import { shallow, render } from 'enzyme';
 
 describe('components/Label', () => {

@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import THead from 'components/Table/THead';
-import TR from 'components/Table/TR';
-import TH from 'components/Table/TH';
-import TBody from 'components/Table/TBody';
-import TD from 'components/Table/TD';
+import THead from './THead';
+import TR from './TR';
+import TH from './TH';
+import TBody from './TBody';
+import TD from './TD';
 
 /**
  * Simple component to wrap `Table.THead` and `Table.TBody` components.

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import Tab from 'components/TabNav/Tab';
+import Tab from './Tab';
 
 /**
  * Wrapper component for a set of tabs

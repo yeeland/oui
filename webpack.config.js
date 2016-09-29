@@ -8,9 +8,6 @@ module.exports = {
     path: __dirname + '/dist/docs/js/',
     publicPath: 'js/',
   },
-  resolve: {
-    modulesDirectories: ['src', 'node_modules'],
-  },
   module: {
     loaders: [
       {

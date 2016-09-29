@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentRowItem from './ComponentRowItem';
-import Code from 'components/Code';
+import Code from '../src/components/Code';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 
 const ComponentRow = (props) => {
@@ -21,7 +21,7 @@ const ComponentRow = (props) => {
             codeHTML += reactElementToJSXString(exampleComponent, {
               showFunctions: true,
               displayName: (ReactElement) => {
-                return ReactElement.type.displayName || ReactElement.type.name;
+                return ReactElement.type.displayName || ReactElement.type.name || ReactElement.type;
               },
             }) + '\n';
 
