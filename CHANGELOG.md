@@ -10,6 +10,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Create simple `Popover` component. (#462)
 - [Release] Import a new SCSS file for Tether, a third party library used to position popovers.
 
+### Fixed
+- [Patch] Fix "undefined" elements in React documentation JSX examples. (#602)
+
 ## [17.5.1][17.5.1] - 2016-09-28
 ### Fixed
 - [Patch] Revert change to absolute paths because Babel isn't configured to resolve the module paths to the correct path.
