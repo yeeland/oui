@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [18.0.0][18.0.0] - 2016-09-29
 ### Added
 - [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
@@ -608,7 +610,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v17.5.1...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v18.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -667,3 +669,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [17.4.0]: https://github.com/optimizely/oui/compare/v17.3.2...v17.4.0
 [17.5.0]: https://github.com/optimizely/oui/compare/v17.4.0...v17.5.0
 [17.5.1]: https://github.com/optimizely/oui/compare/v17.5.0...v17.5.1
+[18.0.0]: https://github.com/optimizely/oui/compare/v17.5.1...v18.0.0
