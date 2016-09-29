@@ -25,6 +25,10 @@ import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
 import LabelExample from '../src/components/Label/example';
+import OverlayWrapper from '../src/components/OverlayWrapper';
+import OverlayWrapperExample from '../src/components/OverlayWrapper/example';
+import Popover from '../src/components/Popover';
+import PopoverExample from '../src/components/Popover/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
 import TabNav from '../src/components/TabNav';
@@ -69,6 +73,14 @@ const componentsArray = [
   {
     index: Label,
     example: LabelExample,
+  },
+  {
+    index: OverlayWrapper,
+    example: OverlayWrapperExample,
+  },
+  {
+    index: Popover,
+    example: PopoverExample,
   },
   {
     index: Table,

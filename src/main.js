@@ -10,3 +10,5 @@ export { default as Label } from './components/Label';
 export { default as Table } from './components/Table';
 export { default as TabNav } from './components/TabNav';
 export { default as Token } from './components/Token';
+export { default as OverlayWrapper } from './components/OverlayWrapper';
+export { default as Popover } from './components/Popover';
