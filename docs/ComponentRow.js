@@ -21,7 +21,7 @@ const ComponentRow = (props) => {
             codeHTML += reactElementToJSXString(exampleComponent, {
               showFunctions: true,
               displayName: (ReactElement) => {
-                return ReactElement.type.displayName || ReactElement.type.name;
+                return ReactElement.type.displayName || ReactElement.type.name || ReactElement.type;
               },
             }) + '\n';
 
