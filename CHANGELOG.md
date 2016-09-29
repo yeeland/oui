@@ -15,6 +15,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Fix "undefined" elements in React documentation JSX examples. (#602)
 
+### Changed
+- [Patch] Updated contributing documentation with detailed steps about preparing for and releasing a new OUI version. (#515)
+
 ## [17.5.1][17.5.1] - 2016-09-28
 ### Fixed
 - [Patch] Revert change to absolute paths because Babel isn't configured to resolve the module paths to the correct path.
