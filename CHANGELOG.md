@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Added `checked` prop to Checkbox react component, so that it can behave as either a controlled or uncontrolled component.
 
 ## [18.0.0][18.0.0] - 2016-09-29
 ### Added

@@ -18,6 +18,24 @@ describe('components/Checkbox', () => {
     expect(component.find('input[type="checkbox"]').get(0).checked).toBe(false);
   });
 
+  it('should render a checked checkbox when `checked` is true', () => {
+    const component = mount(<Checkbox checked={ true } onChange={ function() {} } />);
+    expect(component.find('input[type="checkbox"]').get(0).checked).toBe(true);
+  });
+
+  it('should render an unchecked checkbox when `checked` is false', () => {
+    const component = mount(<Checkbox checked={ false } onChange={ function() {} } />);
+    expect(component.find('input[type="checkbox"]').get(0).checked).toBe(false);
+  });
+
+  it('should throw an error if a checkbox is rendered without an onChange function', () => {
+    spyOn(console, 'error').and.stub();
+
+    mount(<Checkbox checked={ true } />);
+
+    expect(console.error.calls.all()[0].args[0]).toContain('You provided a `checked` prop to a form field without an `onChange` handler'); // eslint-disable-line
+  });
+
   it('should call the onChange event handler when the checkbox is changed', () => {
     const handler = {
       onChange: (event) => {},

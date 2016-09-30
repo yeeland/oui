@@ -22,6 +22,7 @@ const Checkbox = (props) => {
         <input
           type="checkbox"
           defaultChecked={ props.defaultChecked }
+          checked={ props.checked }
           disabled={ props.isDisabled }
           onChange={ props.onChange }
           data-test-section={ props.testSection }
@@ -35,6 +36,8 @@ const Checkbox = (props) => {
 };
 
 Checkbox.propTypes = {
+  /** Boolean to set checkbox, for controlled component  */
+  checked: React.PropTypes.bool,
   /** Boolean for how checkbox renders initially  */
   defaultChecked: React.PropTypes.bool,
   /** Prevents checkbox from being modified and appears disabled */
