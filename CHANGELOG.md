@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Force `npm test` to fail when the documentation can't be built. (#601)
 
 ## [18.1.0][18.1.0] - 2016-09-29
 ### Added
