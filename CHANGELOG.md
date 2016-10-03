@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Provide option to "pin" popover to the edge of screen. (#606)
+- [Feature] Add SCSS for TimePicki, a jQuery Time Picker plugin.
 
 ### Fixed
 - [Patch] Force `npm test` to fail when the documentation can't be built. (#601)
