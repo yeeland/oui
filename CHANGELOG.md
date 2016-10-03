@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Provide option to "pin" popover to the edge of screen. (#606)
+
 ### Fixed
 - [Patch] Force `npm test` to fail when the documentation can't be built. (#601)
 

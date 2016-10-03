@@ -20,6 +20,7 @@ class OverlayWrapper extends React.Component {
       constraints: [{
         to: 'window',
         attachment: 'together',
+        pin: this.props.isConstrainedToScreen,
       }],
     };
 
@@ -75,6 +76,8 @@ OverlayWrapper.propTypes = {
   horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Side of `children` that should attach to the `overlay` */
   horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  /** Attach `overlay` to an edge of the screen if it is going to move off */
+  isConstrainedToScreen: React.PropTypes.bool.isRequired,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
   /** Hook for automated JavaScript tests */
@@ -86,6 +89,7 @@ OverlayWrapper.propTypes = {
 };
 
 OverlayWrapper.defaultProps = {
+  isConstrainedToScreen: false,
   horizontalAttachment: 'center',
   verticalAttachment: 'top',
 };

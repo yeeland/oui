@@ -38,8 +38,9 @@ export default [
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
           verticalAttachment="middle"
-          verticalTargetAttachment="middle">
-          <Button>Open Popover</Button>
+          verticalTargetAttachment="middle"
+          isConstrainedToScreen={ true }>
+          <Button>Open Pinned Popover</Button>
         </OverlayWrapper>
       </div>,
     ],

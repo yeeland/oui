@@ -116,6 +116,7 @@ describe('components/OverlayWrapper', () => {
       expect(tetherOptions.constraints[0]).toEqual({
         attachment: 'together',
         to: 'window',
+        pin: false,
       });
       expect(tetherOptions.offset).toBe('0 0');
       expect(tetherOptions.targetAttachment).toBe('auto auto');
@@ -131,7 +132,8 @@ describe('components/OverlayWrapper', () => {
           horizontalAttachment="center"
           verticalAttachment="top"
           verticalTargetAttachment="top"
-          horizontalTargetAttachment="center">
+          horizontalTargetAttachment="center"
+          isConstrainedToScreen={ true }>
           <FakeButton />
         </OverylayTrigger>
       );
@@ -143,6 +145,7 @@ describe('components/OverlayWrapper', () => {
       expect(tetherOptions.constraints[0]).toEqual({
         attachment: 'together',
         to: 'window',
+        pin: true,
       });
       expect(tetherOptions.offset).toBe('0 0');
       expect(tetherOptions.targetAttachment).toBe('top center');
