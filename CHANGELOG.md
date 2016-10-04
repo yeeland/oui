@@ -9,6 +9,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Provide option to "pin" popover to the edge of screen. (#606)
 - [Feature] Add SCSS for TimePicki, a jQuery Time Picker plugin.
 
+### Changed
+- [Patch] Popover contents now scroll when the contents are larger than the viewport. (#608)
+
 ### Fixed
 - [Patch] Force `npm test` to fail when the documentation can't be built. (#601)
 
