@@ -28,21 +28,46 @@ class OverlayWrapper extends React.Component {
       options.targetAttachment = `${this.props.verticalTargetAttachment} ${this.props.horizontalTargetAttachment}`;
     }
 
-    this._tether = new Tether(options);
+    this._tether = this.createTether(options);
+    // Disable Tether after creation for performance improvements. This is okay
+    // since it is hidden by default.
+    this._tether.disable();
   }
 
   componentWillUnmount() {
     this._tether.destroy();
   }
 
+  createTether(options) {
+    return new Tether(options);
+  }
+
   render() {
     const Children = React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {
         onClick: (event) => {
+          const newIsOverlayOpen = !this.state.isOverlayOpen;
+
           this.setState({
-            'isOverlayOpen': !this.state.isOverlayOpen,
+            'isOverlayOpen': newIsOverlayOpen,
           });
 
+          if (newIsOverlayOpen) {
+            // Enable Tether when visible.
+            this._tether.enable();
+
+            // Reposition once the overlay is visible because Tether can't
+            // properly calculate the positioning when the overlay is not
+            // displayed.
+            setTimeout(() => {
+              this._tether.position();
+            });
+          } else {
+            // Disable Tether when not visible for performance reasons.
+            this._tether.disable();
+          }
+
+          // Run the `children`'s `onClick` if it exists.
           if (child.props.onClick) {
             child.props.onClick(event);
           }

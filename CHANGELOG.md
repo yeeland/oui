@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Call `Tether.disable()` when the overlay in `OverlayWrapper` is not visible. This leads to performance increases because Tether will essentially ignore the element until it becomes enabled.
+- [Patch] Reposition the Tether overlay when it is opened. This is needed because Tether can't properly calculate the position of elements that are hidden with `display: none;`.
 
 ## [18.2.0][18.2.0] - 2016-10-03
 ### Added
