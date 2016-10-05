@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [18.2.1][18.2.1] - 2016-10-05
 ### Changed
 - [Patch] Call `Tether.disable()` when the overlay in `OverlayWrapper` is not visible. This leads to performance increases because Tether will essentially ignore the element until it becomes enabled.
 - [Patch] Reposition the Tether overlay when it is opened. This is needed because Tether can't properly calculate the position of elements that are hidden with `display: none;`.
@@ -631,7 +633,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v18.2.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v18.2.1...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -693,3 +695,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [18.0.0]: https://github.com/optimizely/oui/compare/v17.5.1...v18.0.0
 [18.1.0]: https://github.com/optimizely/oui/compare/v18.0.0...v18.1.0
 [18.2.0]: https://github.com/optimizely/oui/compare/v18.1.0...v18.2.0
+[18.2.1]: https://github.com/optimizely/oui/compare/v18.2.0...v18.2.1
