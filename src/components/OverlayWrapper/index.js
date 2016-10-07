@@ -46,10 +46,12 @@ class OverlayWrapper extends React.Component {
       this._tether.position();
     });
 
-    // The function must be stored so that it can be still be removed even
+    // These functions must be stored so that it can be still be removed even
     // though `bind` was used: http://stackoverflow.com/a/22870717/316602
     this._bodyClickListener = this.isClickWithinOverlayOrChildren.bind(this);
-    document.body.addEventListener('click', this._bodyClickListener);
+    this._documentEscapeListener = this.onEscapeKey.bind(this);
+    document.addEventListener('click', this._bodyClickListener);
+    document.addEventListener('keyup', this._documentEscapeListener);
   }
 
   disableTether() {
@@ -60,7 +62,10 @@ class OverlayWrapper extends React.Component {
 
   removeBodyEventListner() {
     if (this._bodyClickListener) {
-      document.body.removeEventListener('click', this._bodyClickListener);
+      document.removeEventListener('click', this._bodyClickListener);
+    }
+    if (this._documentEscapeListener) {
+      document.removeEventListener('keyup', this._documentEscapeListener);
     }
   }
 
@@ -106,6 +111,13 @@ class OverlayWrapper extends React.Component {
     // Run the `children`'s `onClick` if it exists.
     if (child.props.onClick) {
       child.props.onClick(event);
+    }
+  }
+
+  onEscapeKey(event) {
+    // Escape key
+    if (event.keyCode === 27) {
+      this.disableTether();
     }
   }
 

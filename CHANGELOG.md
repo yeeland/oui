@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
+- [Feature] Close the `OverlayWrapper` when pressing `ESC`.
 
 ### Changed
 - [Patch] Refactor `OverlayWrapper` tests to be more unit-testy.

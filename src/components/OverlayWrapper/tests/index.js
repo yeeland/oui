@@ -190,8 +190,8 @@ describe('components/OverlayWrapper', () => {
   });
 
   describe('#enableTether', () => {
-    it('should add event listner to document body', () => {
-      spyOn(document.body, 'addEventListener');
+    it('should add click event listner to document', () => {
+      spyOn(document, 'addEventListener');
 
       const component = shallow(
         <OverylayWrapper
@@ -201,14 +201,33 @@ describe('components/OverlayWrapper', () => {
       );
 
       const instance = component.instance();
-      const initialCallCount = document.body.addEventListener.calls.count();
 
       instance._tether = { enable: () => {} };
       instance.enableTether();
 
-      expect(document.body.addEventListener.calls.count()).toBe(initialCallCount + 1);
-      expect(document.body.addEventListener.calls.mostRecent().args[0]).toBe('click');
-      expect(document.body.addEventListener.calls.mostRecent().args[1]).toBe(instance._bodyClickListener);
+      expect(document.addEventListener.calls.any()).toBe(true);
+      expect(document.addEventListener.calls.argsFor(0)[0]).toBe('click');
+      expect(document.addEventListener.calls.argsFor(0)[1]).toBe(instance._bodyClickListener);
+    });
+
+    it('should add keyup event listner to document', () => {
+      spyOn(document, 'addEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+
+      instance._tether = { enable: () => {} };
+      instance.enableTether();
+
+      expect(document.addEventListener.calls.any()).toBe(true);
+      expect(document.addEventListener.calls.argsFor(1)[0]).toBe('keyup');
+      expect(document.addEventListener.calls.argsFor(1)[1]).toBe(instance._documentEscapeListener);
     });
 
     it('should call function to enable Tether', () => {
@@ -381,9 +400,45 @@ describe('components/OverlayWrapper', () => {
     });
   });
 
+  describe('#onEscapeKey', () => {
+    it('should call function to disable Tether when escape key is pressed', () => {
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const fakeEvent = { keyCode: 27 };
+
+      instance.onEscapeKey(fakeEvent);
+
+      expect(instance.disableTether.calls.count()).toBe(1);
+    });
+
+    it('should not call function to disable Tether when non-escape key character is pressed', () => {
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const fakeEvent = { keyCode: 1 };
+
+      instance.onEscapeKey(fakeEvent);
+
+      expect(instance.disableTether.calls.count()).toBe(0);
+    });
+  });
+
   describe('#removeBodyEventListner', () => {
-    it('should remove event listener', () => {
-      spyOn(document.body, 'removeEventListener');
+    it('should remove click event listener', () => {
+      spyOn(document, 'removeEventListener');
 
       const component = shallow(
         <OverylayWrapper
@@ -393,15 +448,51 @@ describe('components/OverlayWrapper', () => {
       );
 
       const instance = component.instance();
-      const initialCallCount = document.body.removeEventListener.calls.count();
 
       const func = () => 42;
       instance._bodyClickListener = func;
       instance.removeBodyEventListner();
 
-      expect(document.body.removeEventListener.calls.count()).toBe(initialCallCount + 1);
-      expect(document.body.removeEventListener.calls.mostRecent().args[0]).toBe('click');
-      expect(document.body.removeEventListener.calls.mostRecent().args[1]).toBe(func);
+      expect(document.removeEventListener.calls.any()).toBe(true);
+      expect(document.removeEventListener.calls.argsFor(0)[0]).toBe('click');
+      expect(document.removeEventListener.calls.argsFor(0)[1]).toBe(func);
+    });
+
+    it('should remove keyup event listener', () => {
+      spyOn(document, 'removeEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+
+      const func = () => 42;
+      instance._documentEscapeListener = func;
+      instance.removeBodyEventListner();
+
+      expect(document.removeEventListener.calls.any()).toBe(true);
+      expect(document.removeEventListener.calls.argsFor(0)[0]).toBe('keyup');
+      expect(document.removeEventListener.calls.argsFor(0)[1]).toBe(func);
+    });
+
+    it('should not attempt to remove event listeners if they were never added', () => {
+      spyOn(document, 'removeEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      instance.removeBodyEventListner();
+
+      expect(document.removeEventListener.calls.any()).toBe(false);
     });
   });
 
