@@ -10,6 +10,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Feature] Close the `OverlayWrapper` when pressing `ESC`.
 
 ### Changed
+- [Patch] Flex-wrap React docs nav. (#623)
 - [Patch] Refactor `OverlayWrapper` tests to be more unit-testy.
 - [Patch] Change the default monospace font from `monospace` to use system defaults. (#617)
 - [Patch] Upgrade to the latest ESLint and eslint-plugin-react. (#612)

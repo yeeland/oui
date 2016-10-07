@@ -4,7 +4,7 @@ const Nav = (props) => {
 
   return (
     <ul
-      className="nav border--top border--bottom soft-double--ends">
+      className="nav border--top border--bottom soft-double--ends flex-wrap">
       { props.items.map((item, i) => {
         return (
           <li key={ i }><a href={ item.href }>{ item.label }</a></li>
