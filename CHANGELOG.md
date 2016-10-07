@@ -11,6 +11,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Refactor `OverlayWrapper` tests to be more unit-testy.
 - [Patch] Change the default monospace font from `monospace` to use system defaults. (#617)
+- [Patch] Upgrade to the latest ESLint and eslint-plugin-react. (#612)
 - [Patch] Make monospace text a bit smaller. (#618)
 
 ## [18.2.1][18.2.1] - 2016-10-05

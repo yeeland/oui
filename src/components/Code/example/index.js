@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-key */
+/* eslint-disable react/jsx-key, react/jsx-indent */
 import React from 'react';
 import Code from '../index';
 

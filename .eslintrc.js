@@ -182,17 +182,27 @@ module.exports = {
     "no-bitwise": "off",
     "no-plusplus": "off",
 
+    // Added 2016-10-06
+    "no-tabs": "warn",
+    "no-unsafe-negation": "warn",
+    "no-template-curly-in-string": "warn",
+    "react/no-find-dom-node": "warn",
+    "react/no-danger-with-children": "off",
+    "react/no-unused-prop-types": "off",
+    "react/style-prop-object": "off",
+    "react/no-children-prop": "warn",
+    "react/no-unescaped-entities": "off",
+
     // OUI rules
     "react/jsx-indent-props": ["warn", 2],
-    "react/no-comment-textnodes": ["warn"],
+    "react/jsx-no-comment-textnodes": ["warn"],
     "react/no-direct-mutation-state": ["warn"],
     "react/no-unknown-property": ["warn"],
     "react/prefer-stateless-function": ["warn"],
     "react/prop-types": ["warn"],
     "react/react-in-jsx-scope": ["warn"],
-    "react/require-extension": ["warn"],
     "react/sort-prop-types": ["warn"],
-    "react/wrap-multilines": ["warn"],
+    "react/jsx-wrap-multilines": ["warn"],
     "react/jsx-boolean-value": ["warn", "always"],
     "react/jsx-closing-bracket-location": ["warn", {
       "selfClosing": "tag-aligned",
