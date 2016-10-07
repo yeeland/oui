@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Change the default monospace font from `monospace` to use system defaults. (#617)
+- [Patch] Make monospace text a bit smaller. (#618)
 
 ## [18.2.1][18.2.1] - 2016-10-05
 ### Changed
