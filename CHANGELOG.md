@@ -5,7 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
+
 ### Changed
+- [Patch] Refactor `OverlayWrapper` tests to be more unit-testy.
 - [Patch] Change the default monospace font from `monospace` to use system defaults. (#617)
 - [Patch] Make monospace text a bit smaller. (#618)
 

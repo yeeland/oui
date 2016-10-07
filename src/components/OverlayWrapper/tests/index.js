@@ -14,158 +14,11 @@ const FakeOverlay = (props) => {
 };
 
 describe('components/OverlayWrapper', () => {
-  it('should render contents passed in as children', () => {
-    const component = mount(
-      <OverylayWrapper
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
-    expect(component.find('[data-test-section="fake-button"]').length).toBe(1);
+  afterEach(() => {
+    jest.clearAllTimers();
   });
 
-  it('should render overlay', () => {
-    const component = mount(
-      <OverylayWrapper
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
-    expect(component.find('[data-test-section="fake-overlay"]').length).toBe(1);
-  });
-
-  it('should show or hide the `overlay` depending on state', () => {
-    const component = mount(
-      <OverylayWrapper
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
-
-    // Start off with the default state
-    expect(component.state('isOverlayOpen')).toBe(false);
-    expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: none');
-
-    // Change state of `isOverlayOpen` to be true
-    component.setState({'isOverlayOpen': true});
-
-    // Expect that state has changed and prop has been updated
-    expect(component.state('isOverlayOpen')).toBe(true);
-    expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: block');
-  });
-
-  describe('clicking on the children', () => {
-    let fakeButtonClone;
-    let component;
-    const foo = { bar: () => {} };
-
-    beforeEach(() => {
-      spyOn(React, 'cloneElement').and.callThrough();
-      spyOn(foo, 'bar');
-
-      component = mount(
-        <OverylayWrapper
-          overlay={ <FakeOverlay /> }>
-          <FakeButton onClick={ foo.bar } />
-        </OverylayWrapper>
-      );
-
-      fakeButtonClone = React.cloneElement.calls.mostRecent();
-    });
-
-    afterEach(() => {
-      React.cloneElement.calls.reset();
-      foo.bar.calls.reset();
-      component.unmount();
-      fakeButtonClone = null;
-      component = null;
-    });
-
-    it('should still call `children`\'s existing `onClick` if it exists', () => {
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
-
-      // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
-
-      // Expect that `FakeButton`'s `onClick` was called
-      expect(foo.bar.calls.count()).toBe(1);
-    });
-
-    it('should enable and disable Tether when clicking on the children', () => {
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
-
-      // Store the mock for easy access
-      const disableMock = component.instance()._tether.disable.mock;
-      const enableMock = component.instance()._tether.enable.mock;
-      const initialDisableMockCalls = disableMock.calls.length;
-      const initialEnableMockCalls = enableMock.calls.length;
-
-      // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
-
-      // Tether should now be enabled
-      expect(enableMock.calls.length).toBe(initialEnableMockCalls + 1);
-
-      // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
-
-      // Tether should now be disabled
-      expect(disableMock.calls.length).toBe(initialDisableMockCalls + 1);
-    });
-
-    it('should position Tether when clicking on the children', () => {
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
-
-      // Store the mock for easy access
-      const positionMock = component.instance()._tether.position.mock;
-      const initialPositionMockCalls = positionMock.calls.length;
-
-      // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
-
-      // Run the `setTimeout` synchronously
-      jest.runAllTimers();
-
-      // The `Tether.position` function should have been called once
-      expect(positionMock.calls.length).toBe(initialPositionMockCalls + 1);
-    });
-
-    it('should pass `onClick` function to `children` that changes state of `OverylayWrapper`', () => {
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
-
-      // Ensure that the default state is what this test expects
-      expect(component.state('isOverlayOpen')).toBe(false);
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
-
-      // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
-
-      // Expect that the state changed
-      expect(component.state('isOverlayOpen')).toBe(true);
-    });
-  });
-
-  it('should disable Tether by default', () => {
-    const component = mount(
-      <OverylayWrapper
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
-
-    const disableMock = component.instance()._tether.disable.mock;
-    const enableMock = component.instance()._tether.enable.mock;
-
-    expect(disableMock.calls.length).toBe(1);
-    expect(enableMock.calls.length).toBe(0);
-  });
-
-  describe('passing options to Tether', () => {
+  describe('#componentDidMount', () => {
     beforeEach(() => {
       spyOn(OverylayWrapper.prototype, 'createTether').and.callThrough();
     });
@@ -174,7 +27,24 @@ describe('components/OverlayWrapper', () => {
       OverylayWrapper.prototype.createTether.calls.reset();
     });
 
-    it('should pass the correct options with none of the layout props provided', () => {
+    it('should call function to disable Tether', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      instance.componentDidMount();
+
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+
+    it('should pass the correct options when none of the layout props are provided', () => {
       const component = mount(
         <OverylayWrapper
           overlay={ <FakeOverlay /> }>
@@ -195,7 +65,7 @@ describe('components/OverlayWrapper', () => {
       expect(tetherOptions.element.tagName.toLowerCase()).toBe(component.find(FakeOverlay).render().children().first()[0].name);
     });
 
-    it('should pass the correct options with all the layout props provided', () => {
+    it('should pass the correct options when all the layout props are provided', () => {
       const component = mount(
         <OverylayWrapper
           overlay={ <FakeOverlay /> }
@@ -223,33 +93,378 @@ describe('components/OverlayWrapper', () => {
     });
   });
 
+  describe('#componentWillUnmount', () => {
+    let component;
+    let instance;
 
-  it('should destroy Tether on unmount', () => {
-    const component = mount(
-      <OverylayWrapper
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
+    beforeEach(() => {
+      component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
 
-    const instance = component.instance();
-    spyOn(instance._tether, 'destroy');
+      instance = component.instance();
+    });
 
-    expect(instance._tether).toBeTruthy();
-    expect(instance._tether.destroy.calls.count()).toBe(0);
+    afterEach(() => {
+      component = null;
+      instance = null;
+    });
 
-    component.unmount();
-    expect(instance._tether.destroy.calls.count()).toBe(1);
+    it('should destroy Tether', () => {
+      spyOn(instance._tether, 'destroy');
+
+      const initialCallCount = instance._tether.destroy.calls.count();
+
+      component.unmount();
+      expect(instance._tether.destroy.calls.count()).toBe(initialCallCount + 1);
+    });
+
+    it('should call `removeBodyEventListner` function', () => {
+      spyOn(instance, 'removeBodyEventListner');
+
+      const initialCallCount = instance.removeBodyEventListner.calls.count();
+
+      component.unmount();
+      expect(instance.removeBodyEventListner.calls.count()).toBe(initialCallCount + 1);
+    });
   });
 
-  it('should have a properly set test section', () => {
-    const component = shallow(
-      <OverylayWrapper
-        testSection="foo"
-        overlay={ <FakeOverlay /> }>
-        <FakeButton />
-      </OverylayWrapper>
-    );
-    expect(component.is('[data-test-section="foo"]')).toBe(true);
+  describe('#disableTether', () => {
+    it('should call function to remove event listner from document body', () => {
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'removeBodyEventListner');
+
+      const initialCallCount = instance.removeBodyEventListner.calls.count();
+
+      instance._tether = { disable: () => {} };
+      instance.disableTether();
+
+      expect(instance.removeBodyEventListner.calls.count()).toBe(initialCallCount + 1);
+    });
+
+    it('should call function to disable Tether', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+
+      const disableMock = instance._tether.disable.mock;
+      const initialCallCount = disableMock.calls.length;
+
+      instance.disableTether();
+
+      expect(disableMock.calls.length).toBe(initialCallCount + 1);
+    });
+
+    it('should set visible state of `overlay` to false', () => {
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      component.setState({ isOverlayOpen: true });
+
+      const instance = component.instance();
+
+      instance._tether = { disable: () => {} };
+      instance.disableTether();
+
+      expect(component.state('isOverlayOpen')).toBe(false);
+    });
+  });
+
+  describe('#enableTether', () => {
+    it('should add event listner to document body', () => {
+      spyOn(document.body, 'addEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      const initialCallCount = document.body.addEventListener.calls.count();
+
+      instance._tether = { enable: () => {} };
+      instance.enableTether();
+
+      expect(document.body.addEventListener.calls.count()).toBe(initialCallCount + 1);
+      expect(document.body.addEventListener.calls.mostRecent().args[0]).toBe('click');
+      expect(document.body.addEventListener.calls.mostRecent().args[1]).toBe(instance._bodyClickListener);
+    });
+
+    it('should call function to enable Tether', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      const enableMock = instance._tether.enable.mock;
+      const initialCallCount = enableMock.calls.length;
+
+      instance.enableTether();
+
+      expect(enableMock.calls.length).toBe(initialCallCount + 1);
+    });
+
+    it('should set visible state of `overlay` to true', () => {
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      component.setState({ isOverlayOpen: false });
+      const instance = component.instance();
+      instance._tether = { enable: () => {} };
+      instance.enableTether();
+
+      expect(component.state('isOverlayOpen')).toBe(true);
+    });
+
+    it('should call function to position Tether', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      const positionMock = instance._tether.position.mock;
+      const initialPositionMockCalls = positionMock.calls.length;
+
+      instance.enableTether();
+
+      // Run the `setTimeout` synchronously
+      jest.runAllTimers();
+
+      expect(positionMock.calls.length).toBe(initialPositionMockCalls + 1);
+    });
+  });
+
+  describe('#isClickWithinOverlayOrChildren', () => {
+    it('should call function to disable Tether if click is not within overlay or button', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      instance.isClickWithinOverlayOrChildren({ target: document.body });
+
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+
+    it('should not call function to disable Tether if click is within overlay', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const fakeOverlayNode = component.find('[data-test-section="fake-overlay"]').get(0);
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      instance.isClickWithinOverlayOrChildren({ target: fakeOverlayNode });
+
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount);
+    });
+
+    it('should not call function to disable Tether if click is within button', () => {
+      const component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const fakeButtonNode = component.find('[data-test-section="fake-button"]').get(0);
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      instance.isClickWithinOverlayOrChildren({ target: fakeButtonNode });
+
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount);
+    });
+  });
+
+  describe('#onChildClick', () => {
+    let component;
+
+    beforeEach(() => {
+      component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+    });
+
+    afterEach(() => {
+      component.unmount();
+      component = null;
+    });
+
+    it('should still call `children`\'s existing `onClick` if it exists', () => {
+      const instance = component.instance();
+      const fakeEvent = {};
+      const fakeChild = { props: { onClick: () => {} } };
+
+      spyOn(fakeChild.props, 'onClick');
+
+      instance.onChildClick(fakeEvent, fakeChild);
+
+      // Expect that `fakeChild`'s `onClick` was called and `fakeEvent` was
+      // passed in
+      expect(fakeChild.props.onClick.calls.count()).toBe(1);
+      expect(fakeChild.props.onClick.calls.mostRecent().args[0]).toBe(fakeEvent);
+    });
+
+    it('should call functions to enable Tether when clicking on the children and overlay is closed', () => {
+      const instance = component.instance();
+      spyOn(instance, 'enableTether');
+      const initialCallCount = instance.enableTether.calls.count();
+
+      component.setState({ 'isOverlayOpen': false });
+
+      instance.onChildClick(null, { props: {} });
+
+      // Should call function to enable Tether
+      expect(instance.enableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+
+    it('should call functions to disable Tether when clicking on the children and overlay is open', () => {
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      component.setState({ 'isOverlayOpen': true });
+
+      instance.onChildClick(null, { props: {} });
+
+      // Should call function to disable Tether
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+  });
+
+  describe('#removeBodyEventListner', () => {
+    it('should remove event listener', () => {
+      spyOn(document.body, 'removeEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+      const initialCallCount = document.body.removeEventListener.calls.count();
+
+      const func = () => 42;
+      instance._bodyClickListener = func;
+      instance.removeBodyEventListner();
+
+      expect(document.body.removeEventListener.calls.count()).toBe(initialCallCount + 1);
+      expect(document.body.removeEventListener.calls.mostRecent().args[0]).toBe('click');
+      expect(document.body.removeEventListener.calls.mostRecent().args[1]).toBe(func);
+    });
+  });
+
+  describe('#render', () => {
+    let component;
+
+    beforeEach(() => {
+      component = mount(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }
+          testSection="foo">
+          <FakeButton />
+        </OverylayWrapper>
+      );
+    });
+
+    afterEach(() => {
+      component.unmount();
+      component = null;
+    });
+
+    it('should render contents passed in as children', () => {
+      expect(component.find(FakeButton).length).toBe(1);
+    });
+
+    it('should render overlay', () => {
+      expect(component.find(FakeOverlay).length).toBe(1);
+    });
+
+    it('should have a properly set test section', () => {
+      expect(component.find('[data-test-section="foo"]').length).toBe(1);
+    });
+
+    it('should show or hide the `overlay` depending on state', () => {
+      // Start off with the default state
+      expect(component.state('isOverlayOpen')).toBe(false);
+      expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: none');
+
+      // Change state of `isOverlayOpen` to be true
+      component.setState({'isOverlayOpen': true});
+
+      // Expect that state has changed and prop has been updated
+      expect(component.state('isOverlayOpen')).toBe(true);
+      expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: block');
+    });
+
+    it('should call `onChildClick` when a child is clicked on', () => {
+      spyOn(React, 'cloneElement').and.callThrough();
+      component.update();
+      const instance = component.instance();
+      spyOn(instance, 'onChildClick');
+
+      const fakeButtonClone = React.cloneElement.calls.mostRecent();
+
+      // Ensure that we are looking at the correct call to `React.cloneElement`
+      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
+
+      const initialCallCount = instance.onChildClick.calls.count();
+
+      // Simulate a click on the button
+      fakeButtonClone.args[1].onClick();
+
+      expect(instance.onChildClick.calls.count()).toBe(initialCallCount + 1);
+    });
   });
 });

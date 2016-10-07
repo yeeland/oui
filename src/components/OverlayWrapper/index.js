@@ -10,6 +10,7 @@ class OverlayWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOverlayOpen: false };
+    this.onChildClick = this.onChildClick.bind(this);
   }
 
   componentDidMount() {
@@ -31,10 +32,60 @@ class OverlayWrapper extends React.Component {
     this._tether = this.createTether(options);
     // Disable Tether after creation for performance improvements. This is okay
     // since it is hidden by default.
+    this.disableTether();
+  }
+
+  enableTether() {
+    this.setState({ 'isOverlayOpen': true });
+    this._tether.enable();
+
+    // Reposition once the overlay is visible because Tether can't
+    // properly calculate the positioning when the overlay is not
+    // displayed.
+    setTimeout(() => {
+      this._tether.position();
+    });
+
+    // The function must be stored so that it can be still be removed even
+    // though `bind` was used: http://stackoverflow.com/a/22870717/316602
+    this._bodyClickListener = this.isClickWithinOverlayOrChildren.bind(this);
+    document.body.addEventListener('click', this._bodyClickListener);
+  }
+
+  disableTether() {
+    this.setState({ 'isOverlayOpen': false });
     this._tether.disable();
+    this.removeBodyEventListner();
+  }
+
+  removeBodyEventListner() {
+    if (this._bodyClickListener) {
+      document.body.removeEventListener('click', this._bodyClickListener);
+    }
+  }
+
+  /**
+    * Disable Tether if a user clicks outside of the `overlay` and `children`.
+    * @param {Object} event - Click event
+   */
+  isClickWithinOverlayOrChildren(event) {
+    let target = event.target;
+    let shouldCloseOverlay = true;
+
+    while (target.parentNode !== null && shouldCloseOverlay) {
+      if (target === this._overlayEl || target === this._activatorEl) {
+        shouldCloseOverlay = false;
+      }
+      target = target.parentNode;
+    }
+
+    if (shouldCloseOverlay) {
+      this.disableTether();
+    }
   }
 
   componentWillUnmount() {
+    this.removeBodyEventListner();
     this._tether.destroy();
   }
 
@@ -42,36 +93,26 @@ class OverlayWrapper extends React.Component {
     return new Tether(options);
   }
 
+  onChildClick(event, child) {
+    // Toggle the `overlay` by enabling or disabling Tether.
+    if (this.state.isOverlayOpen) {
+      // Disable Tether when not visible for performance reasons.
+      this.disableTether();
+    } else {
+      // Enable Tether when visible.
+      this.enableTether();
+    }
+
+    // Run the `children`'s `onClick` if it exists.
+    if (child.props.onClick) {
+      child.props.onClick(event);
+    }
+  }
+
   render() {
     const Children = React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {
-        onClick: (event) => {
-          const newIsOverlayOpen = !this.state.isOverlayOpen;
-
-          this.setState({
-            'isOverlayOpen': newIsOverlayOpen,
-          });
-
-          if (newIsOverlayOpen) {
-            // Enable Tether when visible.
-            this._tether.enable();
-
-            // Reposition once the overlay is visible because Tether can't
-            // properly calculate the positioning when the overlay is not
-            // displayed.
-            setTimeout(() => {
-              this._tether.position();
-            });
-          } else {
-            // Disable Tether when not visible for performance reasons.
-            this._tether.disable();
-          }
-
-          // Run the `children`'s `onClick` if it exists.
-          if (child.props.onClick) {
-            child.props.onClick(event);
-          }
-        },
+        onClick: (event) => this.onChildClick.call(null, event, child),
       });
     });
 
