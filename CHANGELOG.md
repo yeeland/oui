@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [18.3.0][18.3.0] - 2016-10-07
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
 - [Feature] Close the `OverlayWrapper` when pressing `ESC`.
@@ -644,7 +646,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v18.2.1...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v18.3.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -707,3 +709,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [18.1.0]: https://github.com/optimizely/oui/compare/v18.0.0...v18.1.0
 [18.2.0]: https://github.com/optimizely/oui/compare/v18.1.0...v18.2.0
 [18.2.1]: https://github.com/optimizely/oui/compare/v18.2.0...v18.2.1
+[18.3.0]: https://github.com/optimizely/oui/compare/v18.2.1...v18.3.0
