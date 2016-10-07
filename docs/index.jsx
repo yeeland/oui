@@ -11,6 +11,8 @@ import Attention from '../src/components/Attention';
 import AttentionExample from '../src/components/Attention/example';
 import ArrowsInline from '../src/components/ArrowsInline';
 import ArrowsInlineExample from '../src/components/ArrowsInline/example';
+import Badge from '../src/components/Badge';
+import BadgeExample from '../src/components/Badge/example';
 import Button from '../src/components/Button';
 import ButtonExample from '../src/components/Button/example';
 import ButtonRow from '../src/components/ButtonRow';
@@ -45,6 +47,10 @@ const componentsArray = [
   {
     index: Attention,
     example: AttentionExample,
+  },
+  {
+    index: Badge,
+    example: BadgeExample,
   },
   {
     index: Button,

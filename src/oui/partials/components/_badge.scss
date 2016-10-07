@@ -12,45 +12,57 @@
 ///   <ul class="badge"><li class="badge__plain">0</li></ul>
 ////
 
+@mixin badge {
+  height: map-fetch($badge, size);
+  line-height: map-fetch($badge, size);
+  background: map-fetch($badge, background-color);
+  color: map-fetch($color, ui, white);
+  min-width: map-fetch($badge, min-width);
+  text-align: center;
+  margin-right: spacer(0.5);
+  border-radius: map-fetch($badge, size);
+  font-size: map-fetch($badge, font-size);
+  padding: 0 spacer(0.5);
+  font-weight: map-fetch($badge, font-weight);
+  letter-spacing: map-fetch($badge, letter-spacing);
+  text-transform: uppercase;
+}
+
 .#{$namespace}badge {
   display: flex;
   align-items: center;
   white-space: nowrap;
 
   > li {
-    height: map-fetch($badge, size);
-    line-height: map-fetch($badge, size);
-    background: map-fetch($badge, background-color);
-    color: map-fetch($color, ui, white);
-    min-width: map-fetch($badge, min-width);
-    text-align: center;
-    margin-right: spacer(0.5);
-    border-radius: map-fetch($badge, size);
-    font-size: map-fetch($badge, font-size);
-    padding: 0 spacer(0.5);
-    font-weight: map-fetch($badge, font-weight);
-    letter-spacing: map-fetch($badge, letter-spacing);
-    text-transform: uppercase;
-
-    &.badge__draft {
-      background: map-fetch($color, ui, draft);
-    }
-
-    &.badge__live {
-      background: map-fetch($color, ui, live);
-    }
-
-    &.badge__primary {
-      background: map-fetch($token, background-color, primary);
-    }
-
-    &.badge__plain {
-      background: transparent;
-      color: map-fetch($color, ui, medium);
-    }
+    @include badge;
 
     &:last-child {
       margin-right: 0;
     }
   }
+}
+
+.oui-badge {
+  @include badge;
+}
+
+.#{$namespace}badge > li.badge__draft,
+.oui-badge--draft {
+  background: map-fetch($color, ui, draft);
+}
+
+.#{$namespace}badge > li.badge__live,
+.oui-badge--live {
+  background: map-fetch($color, ui, live);
+}
+
+.#{$namespace}badge > li.badge__primary,
+.oui-badge--primary {
+  background: map-fetch($token, background-color, primary);
+}
+
+.#{$namespace}badge > li.badge__plain,
+.oui-badge--plain {
+  background: transparent;
+  color: map-fetch($color, ui, medium);
 }

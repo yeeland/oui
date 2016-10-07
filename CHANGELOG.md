@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
 - [Feature] Close the `OverlayWrapper` when pressing `ESC`.
+- [Feature] Add a `Badge` React component. (#622)
 
 ### Changed
 - [Patch] Flex-wrap React docs nav. (#623)

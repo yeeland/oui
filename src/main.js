@@ -1,5 +1,6 @@
 export { default as ArrowsInline } from './components/ArrowsInline';
 export { default as Attention } from './components/Attention';
+export { default as Badge } from './components/Badge';
 export { default as Button } from './components/Button';
 export { default as ButtonRow } from './components/ButtonRow';
 export { default as Checkbox } from './components/Checkbox';
