@@ -64,7 +64,7 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Button size="full">Full Button</Button>,
+      <Button width="full">Full Button</Button>,
     ],
   },
 

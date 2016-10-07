@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 /**
  * Buttons come in a wide array of styles and allow the user to perform an
@@ -7,13 +8,16 @@ import React from 'react';
  * @returns {ReactElement}
  */
 const Button = (props) => {
-  let buttonStyleClass = props.style ? 'oui-button--' + props.style : '';
-  let buttonSizeClass = props.size ? 'oui-button--' + props.size : '';
-  let isActiveClass = props.isActive ? 'is-active' : '';
-
+  const buttonClassNames = classNames({
+    'oui-button': true,
+    [`oui-button--${props.style}`]: props.style,
+    [`oui-button--${props.size}`]: props.size,
+    [`oui-button--${props.width}`]: props.width,
+    ['is-active']: props.isActive,
+  });
   return (
     <button
-      className={ 'oui-button ' + buttonStyleClass + ' ' + buttonSizeClass + ' ' + isActiveClass }
+      className={ buttonClassNames }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
@@ -44,7 +48,6 @@ Button.propTypes = {
     'large',
     'narrow',
     'tight',
-    'full',
   ]),
   /** Various color options */
   style: React.PropTypes.oneOf([
@@ -59,6 +62,15 @@ Button.propTypes = {
   ]),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
+  /** Various height and width options */
+  width: React.PropTypes.oneOf([
+    'default',
+    'full',
+  ]),
+};
+
+Button.defaultProps = {
+  width: 'default',
 };
 
 export default Button;

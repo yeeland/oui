@@ -26,6 +26,14 @@ describe('components/Button', () => {
     expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 
+  it('should have a properly set width class', () => {
+    const component = shallow(
+      <Button width="full">Hello!</Button>
+    );
+
+    expect(component.hasClass('oui-button--full')).toBe(true);
+  });
+
   it('should add the active class if isActive is true', () => {
     const component = shallow(
       <Button isActive={ true }>Hello!</Button>
