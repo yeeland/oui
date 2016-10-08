@@ -70,6 +70,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  isSubmit: false,
   width: 'default',
 };
 

@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Improve test coverage for `Button` React component. (#629)
+
 ### Changed
 - [Release] Move React button `full` size option to its own prop for `width`. (#615)
 
