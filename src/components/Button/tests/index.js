@@ -3,6 +3,11 @@ import Button from '../index';
 import { shallow } from 'enzyme';
 
 describe('components/Button', () => {
+  it('should render a `button` HTML element', () => {
+    const component = shallow(<Button>Hello!</Button>);
+    expect(component.is('button')).toBe(true);
+  });
+
   it('should render contents that are passed in', () => {
     const component = shallow(<Button>Hello!</Button>);
     expect(component.text()).toBe('Hello!');
