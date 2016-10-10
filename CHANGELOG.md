@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Changed
 - [Release] Move React button `full` size option to its own prop for `width`. (#615)
+- [Patch] Speed up local React development by using `webpack-dev-server` instead of Browsersync. This renames `npm run react-docs:serve` to `npm run react:watch`. (#495)
 
 ## [18.3.0][18.3.0] - 2016-10-07
 ### Added

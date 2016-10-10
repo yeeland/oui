@@ -115,7 +115,7 @@ For example, if you're building a mobile site, your main SCSS file `mobile.scss`
 
 #### Using OUI React components
 
-OUI comes with React components that can be used instead of copying and pasting HTML from the documentation. You can view these components locally by running `npm run react-docs:serve` after cloning the repository and installing dependencies with `npm install`.
+OUI comes with React components that can be used instead of copying and pasting HTML from the documentation. You can view these components locally by running `npm run react:watch` after cloning the repository and installing dependencies with `npm install`.
 
 These components can be used in a React codebase by requiring OUI:
 
