@@ -1,6 +1,12 @@
 {
   "verbose": true,
-  "collectCoverage": false,
+  "collectCoverage": true,
+  "coveragePathIgnorePatterns": [
+    "node_modules/",
+    "components/Icon/",
+    "components/IconSample/",
+    "utils/.*-mock.js$"
+  ],
   "moduleNameMapper": {
     "^.+\\.(css)$": "<rootDir>/src/utils/empty-mock.js",
     "^.+\\.(svg)$": "<rootDir>/src/utils/svg-mock.js"
