@@ -8,6 +8,8 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Release] Move React button `full` size option to its own prop for `width`. (#615)
 - [Patch] Speed up local React development by using `webpack-dev-server` instead of Browsersync. This renames `npm run react-docs:serve` to `npm run react:watch`. (#495)
+- [Patch] Upgrade Jest to 16.0.0.
+- [Patch] Add test coverage support in Jest and report coverage to Codecov.
 
 ## [18.3.0][18.3.0] - 2016-10-07
 ### Added
