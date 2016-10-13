@@ -11,6 +11,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Upgrade Jest to 16.0.0.
 - [Patch] Add test coverage support in Jest and report coverage to Codecov.
 
+### Fixed
+- [Patch] Remove `style-loader` from `dependencies` since it is now only a `devDependency`.
+
 ## [18.3.0][18.3.0] - 2016-10-07
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
