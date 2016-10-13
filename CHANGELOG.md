@@ -17,6 +17,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Fixed
 - [Patch] Remove `style-loader` from `dependencies` since it is now only a `devDependency`.
 
+### Removed
+- [Release] Remove TimePicki library SCSS. (#627)
+
 ## [18.3.0][18.3.0] - 2016-10-07
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
