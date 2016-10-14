@@ -162,6 +162,10 @@
 /// Cursors
 /// @description Helpers for cursors.
 
+.cursor--auto {
+  cursor: auto !important;
+}
+
 .cursor--default {
   cursor: default !important;
 }
