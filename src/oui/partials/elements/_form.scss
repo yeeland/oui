@@ -89,7 +89,7 @@
 ///       <ol class="#{$namespace}form-fields">
 ///         <li class="#{$namespace}form-field__item">
 ///           <label class="oui-label">Textarea</label>
-///           <textarea class="#{$namespace}textarea"></textarea>
+///           <textarea class="oui-textarea"></textarea>
 ///         </li>
 ///         <li class="#{$namespace}form-field__item">
 ///           <label class="oui-label">Fixed-width Input</label>
@@ -266,7 +266,7 @@
 ///         </li>
 ///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
 ///           <label class="oui-label oui-label--required">Textarea</label>
-///           <textarea class="#{$namespace}textarea"></textarea>
+///           <textarea class="oui-textarea"></textarea>
 ///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
 ///         </li>
 ///       </ol>
@@ -279,7 +279,8 @@
 %oui-text-input,
 .#{$namespace}text-input,
 .#{$namespace}textarea,
-.oui-text-input {
+.oui-text-input,
+.oui-textarea {
   transition: border-color map-fetch($transition-duration, base);
   width: 100%;
   border: 1px solid map-fetch($border, color, base);
@@ -509,7 +510,8 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
-  .#{$namespace}textarea {
+  .#{$namespace}textarea,
+  .oui-textarea {
     border-color: map-fetch($color, ui, good-news);
   }
 }
@@ -522,7 +524,8 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
-  .#{$namespace}textarea {
+  .#{$namespace}textarea,
+  .oui-textarea {
     border-color: map-fetch($color, ui, bad-news);
   }
 }
@@ -535,7 +538,8 @@ fieldset {
   .#{$namespace}text-input,
   .oui-text-input,
   .#{$namespace}select,
-  .#{$namespace}textarea {
+  .#{$namespace}textarea,
+  .oui-textarea {
     border-color: map-fetch($color, ui, warning);
   }
 }

@@ -35,6 +35,8 @@ import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
 import TabNav from '../src/components/TabNav';
 import TabNavExample from '../src/components/TabNav/example';
+import Textarea from '../src/components/Textarea';
+import TextareaExample from '../src/components/Textarea/example';
 import Token from '../src/components/Token';
 import TokenExample from '../src/components/Token/example';
 
@@ -95,6 +97,10 @@ const componentsArray = [
   {
     index: TabNav,
     example: TabNavExample,
+  },
+  {
+    index: Textarea,
+    example: TextareaExample,
   },
   {
     index: Token,
