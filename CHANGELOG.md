@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] `background--none` and `cursor--auto` trumps added. (#636)
 - [Patch] Improve test coverage for `Button` React component. (#629)
 
 ### Changed
