@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Create a `Radio` input React component. (#639)
 - [Feature] Add a `Textarea` React component. (#638)
 
 ## [19.0.0][19.0.0] - 2016-10-13

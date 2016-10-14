@@ -31,6 +31,8 @@ import OverlayWrapper from '../src/components/OverlayWrapper';
 import OverlayWrapperExample from '../src/components/OverlayWrapper/example';
 import Popover from '../src/components/Popover';
 import PopoverExample from '../src/components/Popover/example';
+import Radio from '../src/components/Radio';
+import RadioExample from '../src/components/Radio/example';
 import Table from '../src/components/Table';
 import TableExample from '../src/components/Table/example';
 import TabNav from '../src/components/TabNav';
@@ -89,6 +91,10 @@ const componentsArray = [
   {
     index: Popover,
     example: PopoverExample,
+  },
+  {
+    index: Radio,
+    example: RadioExample,
   },
   {
     index: Table,
