@@ -93,9 +93,7 @@ describe('components/Radio', () => {
 
   it('should not add disabled attribute to radio input when not disabled', () => {
     const component = mount(<Radio name="goose" isDisabled={ false } />);
-
-    const input = component.find('input:not([disabled])');
-    expect(input.length).toBe(0);
+    expect(component.find('input').prop('disabled')).toBe(false);
   });
 
   it('should properly add a test section to label', () => {

@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Fix a CSS selector that doesn't work in Enzyme. (#649)
 
 ## [19.1.0][19.1.0] - 2016-10-14
 ### Added

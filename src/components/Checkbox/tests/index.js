@@ -88,9 +88,7 @@ describe('components/Checkbox', () => {
 
   it('should not add disabled attribute to checkbox when not disabled', () => {
     const component = mount(<Checkbox isDisabled={ false } />);
-
-    const input = component.find('input:not([disabled])');
-    expect(input.length).toBe(0);
+    expect(component.find('input').prop('disabled')).toBe(false);
   });
 
   it('should properly add a test section to label', () => {
