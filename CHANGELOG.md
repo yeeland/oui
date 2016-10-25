@@ -12,6 +12,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ### Fixed
 - [Patch] Fix a CSS selector that doesn't work in Enzyme. (#649)
+- [Patch] Remove `fs`, an unused NPM module, from `package.json`. (#643)
 
 ## [19.1.0][19.1.0] - 2016-10-14
 ### Added
