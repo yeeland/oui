@@ -17,4 +17,25 @@ export default [
       />,
     ],
   },
+  {
+    examples: [
+      <ButtonRow
+        centerGroup={ [
+          <Button key="1" style="outline">Center Button</Button>,
+          <Button key="2" style="highlight">Center Button</Button>,
+        ] }
+      />,
+    ],
+  },
+  {
+    examples: [
+      <ButtonRow
+        centerGroup={ [
+          <Button key="1" style="outline" width="full">Full Width</Button>,
+          <Button key="2" style="outline" width="full">Full Width</Button>,
+          <Button key="3" style="highlight" width="full">Full Width</Button>,
+        ] }
+      />,
+    ],
+  },
 ];
