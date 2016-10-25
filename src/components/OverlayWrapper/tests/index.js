@@ -182,6 +182,26 @@ describe('components/OverlayWrapper', () => {
       expect(disableMock.calls.length).toBe(initialCallCount + 1);
     });
 
+    it('should call `onHide` prop if a function is provided', () => {
+      const obj = { func: () => {} };
+      spyOn(obj, 'func').and.stub();
+
+      const component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }
+          onHide={ obj.func }>
+          <FakeButton />
+        </OverlayWrapper>
+      );
+
+      const instance = component.instance();
+      const initialCallCount = obj.func.calls.count();
+
+      instance.disableTether();
+
+      expect(obj.func.calls.count()).toBe(initialCallCount + 1);
+    });
+
     it('should set visible state of `overlay` to false', () => {
       const component = shallow(
         <OverlayWrapper
@@ -280,6 +300,26 @@ describe('components/OverlayWrapper', () => {
       instance.enableTether();
 
       expect(enableMock.calls.length).toBe(initialCallCount + 1);
+    });
+
+    it('should call `onShow` prop if a function is provided', () => {
+      const obj = { func: () => {} };
+      spyOn(obj, 'func').and.stub();
+
+      const component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }
+          onShow={ obj.func }>
+          <FakeButton />
+        </OverlayWrapper>
+      );
+
+      const instance = component.instance();
+      const initialCallCount = obj.func.calls.count();
+
+      instance.enableTether();
+
+      expect(obj.func.calls.count()).toBe(initialCallCount + 1);
     });
 
     it('should set visible state of `overlay` to true', () => {

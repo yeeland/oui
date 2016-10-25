@@ -46,6 +46,10 @@ class OverlayWrapper extends React.Component {
     this.setState({ 'isOverlayOpen': true });
     this._tether.enable();
 
+    if (typeof this.props.onShow === 'function') {
+      this.props.onShow();
+    }
+
     // Reposition once the overlay is visible because Tether can't
     // properly calculate the positioning when the overlay is not
     // displayed.
@@ -69,6 +73,10 @@ class OverlayWrapper extends React.Component {
     this.setState({ 'isOverlayOpen': false });
     this._tether.disable();
     this.removeBodyEventListner();
+
+    if (typeof this.props.onHide === 'function') {
+      this.props.onHide();
+    }
   }
 
   removeBodyEventListner() {
@@ -167,6 +175,10 @@ OverlayWrapper.propTypes = {
   horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Attach `overlay` to an edge of the screen if it is going to move off */
   isConstrainedToScreen: React.PropTypes.bool.isRequired,
+  /** Function that runs when the `overlay` is hidden */
+  onHide: React.PropTypes.func,
+  /** Function that runs when the `overlay` is shown */
+  onShow: React.PropTypes.func,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
   /** Should the `overlay` close when clicking outside of it */
