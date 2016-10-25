@@ -531,6 +531,100 @@ describe('components/OverlayWrapper', () => {
     });
   });
 
+  describe('#onChildMouseOver', () => {
+    let component;
+
+    beforeEach(() => {
+      component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }
+          behavior="hover">
+          <FakeButton />
+        </OverlayWrapper>
+      );
+    });
+
+    afterEach(() => {
+      component.unmount();
+      component = null;
+    });
+
+    it('should still call `children`\'s existing `onMouseOver` if it exists', () => {
+      const instance = component.instance();
+      const fakeEvent = {};
+      const fakeChild = { props: { onMouseOver: () => {} } };
+
+      spyOn(fakeChild.props, 'onMouseOver');
+
+      instance.onChildMouseOver(fakeEvent, fakeChild);
+
+      // Expect that `fakeChild`'s `onMouseOver` was called and `fakeEvent` was
+      // passed in
+      expect(fakeChild.props.onMouseOver.calls.count()).toBe(1);
+      expect(fakeChild.props.onMouseOver.calls.mostRecent().args[0]).toBe(fakeEvent);
+    });
+
+    it('should call functions to enable Tether when mousing over the children', () => {
+      const instance = component.instance();
+      spyOn(instance, 'enableTether');
+      const initialCallCount = instance.enableTether.calls.count();
+
+      component.setState({ 'isOverlayOpen': false });
+
+      instance.onChildMouseOver(null, { props: {} });
+
+      // Should call function to enable Tether
+      expect(instance.enableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+  });
+
+  describe('#onChildMouseOut', () => {
+    let component;
+
+    beforeEach(() => {
+      component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }
+          behavior="hover">
+          <FakeButton />
+        </OverlayWrapper>
+      );
+    });
+
+    afterEach(() => {
+      component.unmount();
+      component = null;
+    });
+
+    it('should still call `children`\'s existing `onMouseOut` if it exists', () => {
+      const instance = component.instance();
+      const fakeEvent = {};
+      const fakeChild = { props: { onMouseOut: () => {} } };
+
+      spyOn(fakeChild.props, 'onMouseOut');
+
+      instance.onChildMouseOut(fakeEvent, fakeChild);
+
+      // Expect that `fakeChild`'s `onMouseOut` was called and `fakeEvent` was
+      // passed in
+      expect(fakeChild.props.onMouseOut.calls.count()).toBe(1);
+      expect(fakeChild.props.onMouseOut.calls.mostRecent().args[0]).toBe(fakeEvent);
+    });
+
+    it('should call functions to disable Tether when mousing out of the children', () => {
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      const initialCallCount = instance.disableTether.calls.count();
+
+      component.setState({ 'isOverlayOpen': false });
+
+      instance.onChildMouseOut(null, { props: {} });
+
+      // Should call function to disable Tether
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+  });
+
   describe('#removeBodyEventListner', () => {
     it('should remove click event listener', () => {
       spyOn(document, 'removeEventListener');
@@ -634,23 +728,60 @@ describe('components/OverlayWrapper', () => {
       expect(component.instance()._overlayEl.getAttribute('style')).toContain('display: block');
     });
 
-    it('should call `onChildClick` when a child is clicked on', () => {
-      spyOn(React, 'cloneElement').and.callThrough();
-      component.update();
+    it('should properly call `onChildClick` when a child is clicked on', () => {
       const instance = component.instance();
       spyOn(instance, 'onChildClick');
-
-      const fakeButtonClone = React.cloneElement.calls.mostRecent();
-
-      // Ensure that we are looking at the correct call to `React.cloneElement`
-      expect(fakeButtonClone.args[0].type).toBe(FakeButton);
 
       const initialCallCount = instance.onChildClick.calls.count();
 
       // Simulate a click on the button
-      fakeButtonClone.args[1].onClick();
+      component.find(FakeButton).parent().simulate('click');
 
       expect(instance.onChildClick.calls.count()).toBe(initialCallCount + 1);
+      expect(instance.onChildClick.calls.mostRecent().args[1].type).toBe(FakeButton);
+    });
+
+    it('should properly call `onMouseOver` when a child is moused over', () => {
+      component.setProps({ behavior: 'hover' });
+
+      const instance = component.instance();
+      spyOn(instance, 'onChildMouseOver');
+
+      const initialCallCount = instance.onChildMouseOver.calls.count();
+
+      // Simulate a click on the button
+      component.find(FakeButton).parent().simulate('mouseover');
+
+      expect(instance.onChildMouseOver.calls.count()).toBe(initialCallCount + 1);
+      expect(instance.onChildMouseOver.calls.mostRecent().args[1].type).toBe(FakeButton);
+    });
+
+    it('should properly call `onMouseOut` when a child is moused out', () => {
+      component.setProps({ behavior: 'hover' });
+
+      const instance = component.instance();
+      spyOn(instance, 'onChildMouseOut');
+
+      const initialCallCount = instance.onChildMouseOut.calls.count();
+
+      // Simulate a click on the button
+      component.find(FakeButton).parent().simulate('mouseout');
+
+      expect(instance.onChildMouseOut.calls.count()).toBe(initialCallCount + 1);
+      expect(instance.onChildMouseOut.calls.mostRecent().args[1].type).toBe(FakeButton);
+    });
+
+    it('should throw an error if `children` is more than one element', () => {
+      expect(() => {
+        mount(
+          <OverlayWrapper
+            overlay={ <FakeOverlay /> }
+            testSection="foo">
+            <FakeButton />
+            <FakeButton />
+          </OverlayWrapper>
+        );
+      }).toThrowError(/React\.Children\.only/);
     });
   });
 });

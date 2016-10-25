@@ -9,20 +9,20 @@
       var trigger = ouiGetProps($(this));
 
       // Insert the poptip.
-      $('body').append('<div class=\'#{OUI_JS_NAMESPACE}pop #{OUI_JS_NAMESPACE}pop--tip\' />');
+      $('body').append('<div class=\'oui-pop oui-pop--tip\' />');
 
       // Add the text in.
-      $('.#{OUI_JS_NAMESPACE}pop--tip').text(trigger.dataAttrs[0].ouiPopText);
+      $('.oui-pop--tip').text(trigger.dataAttrs[0].ouiPopText);
 
       // Now get properities (heigh/width/etc) of the `pop` element.
-      var pop = ouiGetProps($('.#{OUI_JS_NAMESPACE}pop--tip'));
+      var pop = ouiGetProps($('.oui-pop--tip'));
 
       // // Show the poptip.
       ouiShowPop(trigger, pop, ARROW_SIZE);
     },
     mouseleave: function() {
       // After leaving trigger hover destroy the `pop` element.
-      $('.#{OUI_JS_NAMESPACE}pop--tip').remove();
+      $('.oui-pop--tip').remove();
     },
   }, '[data-oui-pop-type=\'pop--tip\']');
 

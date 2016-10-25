@@ -31,6 +31,8 @@ import OverlayWrapper from '../src/components/OverlayWrapper';
 import OverlayWrapperExample from '../src/components/OverlayWrapper/example';
 import Popover from '../src/components/Popover';
 import PopoverExample from '../src/components/Popover/example';
+import Poptip from '../src/components/Poptip';
+import PoptipExample from '../src/components/Poptip/example';
 import Radio from '../src/components/Radio';
 import RadioExample from '../src/components/Radio/example';
 import Table from '../src/components/Table';
@@ -93,6 +95,10 @@ const componentsArray = [
     example: PopoverExample,
   },
   {
+    index: Poptip,
+    example: PoptipExample,
+  },
+  {
     index: Radio,
     example: RadioExample,
   },
@@ -127,28 +133,34 @@ ComponentRow.propTypes = {
 };
 
 class App extends React.Component {
-  render() {
+  getComponentNameFromComponent(component) {
+    return component.index.displayName || component.index.name;
+  }
 
+  render() {
     let componentItems = [];
-    componentsArray.map(function(component) {
+    componentsArray.map((component) => {
+      let name = this.getComponentNameFromComponent(component);
+
       componentItems.push(
         {
-          label: component.index.name,
-          href: '#' + component.index.name,
+          label: name,
+          href: '#' + name,
         }
       );
     });
 
-    let componentNodes = componentsArray.map(function(component) {
-      let json = componentsJSON['src/components/' + component.index.name + '/index.js'];
+    let componentNodes = componentsArray.map((component) => {
+      let name = this.getComponentNameFromComponent(component);
+      let json = componentsJSON['src/components/' + name + '/index.js'];
       let desc = doctrine.parse(json.description);
 
       return (
         <ComponentWrapper
-          key={ component.index.name }
+          key={ name }
           description={ desc.description }
           examples={ component.example }
-          title={ component.index.name }
+          title={ name }
           props={ json.props }>
         </ComponentWrapper>
       );

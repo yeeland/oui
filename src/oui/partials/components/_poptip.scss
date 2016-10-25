@@ -20,7 +20,8 @@
 ///   </button>
 ////
 
-.#{$namespace}pop--tip {
+.#{$namespace}pop--tip,
+.oui-pop--tip {
   background: map-fetch($color, ui, dark);
   color: map-fetch($color, text, white);
   border-radius: map-fetch($border, radius, base);

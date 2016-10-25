@@ -11,6 +11,8 @@ class OverlayWrapper extends React.Component {
     super(props);
     this.state = { isOverlayOpen: false };
     this.onChildClick = this.onChildClick.bind(this);
+    this.onChildMouseOver = this.onChildMouseOver.bind(this);
+    this.onChildMouseOut = this.onChildMouseOut.bind(this);
     this.disableTether = this.disableTether.bind(this);
   }
 
@@ -133,6 +135,26 @@ class OverlayWrapper extends React.Component {
     }
   }
 
+  onChildMouseOver(event, child) {
+    // Enable Tether when visible.
+    this.enableTether();
+
+    // Run the `children`'s `onMouseOver` if it exists.
+    if (child.props.onMouseOver) {
+      child.props.onMouseOver(event);
+    }
+  }
+
+  onChildMouseOut(event, child) {
+    // Disable Tether when not visible for performance reasons.
+    this.disableTether();
+
+    // Run the `children`'s `onMouseOut` if it exists.
+    if (child.props.onMouseOut) {
+      child.props.onMouseOut(event);
+    }
+  }
+
   onEscapeKey(event) {
     // Escape key
     if (event.keyCode === 27) {
@@ -141,19 +163,34 @@ class OverlayWrapper extends React.Component {
   }
 
   render() {
-    const Children = React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, {
-        onClick: (event) => this.onChildClick.call(null, event, child),
-      });
-    });
+    let eventHandlerProps;
+    let child = React.Children.only(this.props.children);
+
+    switch (this.props.behavior) {
+      case 'click':
+        eventHandlerProps = {
+          onClick: (event) => this.onChildClick.call(null, event, child),
+        };
+        break;
+      case 'hover':
+        eventHandlerProps = {
+          onMouseOver: (event) => this.onChildMouseOver.call(null, event, child),
+          onMouseOut: (event) => this.onChildMouseOut.call(null, event, child),
+        };
+        break;
+      default:
+    }
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div data-test-section={ this.props.testSection }>
+      <div
+        data-test-section={ this.props.testSection }
+        style={ { display: 'inline-block' } }>
         <div
           style={ { display: 'inline-block' } }
-          ref={ (ref) => { this._activatorEl = ref; } }>
-          { Children }
+          ref={ (ref) => { this._activatorEl = ref; } }
+          { ...eventHandlerProps }>
+          { child }
         </div>
         <div
           ref={ (ref) => { this._overlayEl = ref; } }
@@ -167,6 +204,8 @@ class OverlayWrapper extends React.Component {
 }
 
 OverlayWrapper.propTypes = {
+  /** Event to listen to and open the overlay */
+  behavior: React.PropTypes.oneOf(['click', 'hover']),
   /** Element that the `overlay` should attach to */
   children: React.PropTypes.node.isRequired,
   /** Side of the `overlay` that should attach to the `children` */
@@ -192,6 +231,7 @@ OverlayWrapper.propTypes = {
 };
 
 OverlayWrapper.defaultProps = {
+  behavior: 'click',
   isConstrainedToScreen: false,
   shouldHideOnClick: true,
   horizontalAttachment: 'center',
