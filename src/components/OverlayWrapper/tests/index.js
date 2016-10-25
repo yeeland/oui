@@ -1,5 +1,5 @@
 import React from 'react';
-import OverylayWrapper from '../index';
+import OverlayWrapper from '../index';
 import { shallow, mount } from 'enzyme';
 
 jest.mock('tether');
@@ -9,8 +9,20 @@ const FakeButton = (props) => {
   return <button data-test-section="fake-button"></button>;
 };
 
-const FakeOverlay = (props) => {
-  return <div data-test-section="fake-overlay"></div>;
+const FakeOverlay = (props, context) => {
+  return (
+    <div data-test-section="fake-overlay">
+      <button
+        onClick={ context.hideOverlay }
+        data-test-section="fake-overlay-close">
+        Close
+      </button>
+    </div>
+  );
+};
+
+FakeOverlay.contextTypes = {
+  hideOverlay: React.PropTypes.func.isRequired,
 };
 
 describe('components/OverlayWrapper', () => {
@@ -20,19 +32,19 @@ describe('components/OverlayWrapper', () => {
 
   describe('#componentDidMount', () => {
     beforeEach(() => {
-      spyOn(OverylayWrapper.prototype, 'createTether').and.callThrough();
+      spyOn(OverlayWrapper.prototype, 'createTether').and.callThrough();
     });
 
     afterEach(() => {
-      OverylayWrapper.prototype.createTether.calls.reset();
+      OverlayWrapper.prototype.createTether.calls.reset();
     });
 
     it('should call function to disable Tether', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -46,13 +58,13 @@ describe('components/OverlayWrapper', () => {
 
     it('should pass the correct options when none of the layout props are provided', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
-      const tetherOptions = OverylayWrapper.prototype.createTether.calls.mostRecent().args[0];
+      const tetherOptions = OverlayWrapper.prototype.createTether.calls.mostRecent().args[0];
 
       expect(tetherOptions.attachment).toBe('top center');
       expect(tetherOptions.constraints.length).toBe(1);
@@ -67,7 +79,7 @@ describe('components/OverlayWrapper', () => {
 
     it('should pass the correct options when all the layout props are provided', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }
           horizontalAttachment="center"
           verticalAttachment="top"
@@ -75,10 +87,10 @@ describe('components/OverlayWrapper', () => {
           horizontalTargetAttachment="center"
           isConstrainedToScreen={ true }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
-      const tetherOptions = OverylayWrapper.prototype.createTether.calls.mostRecent().args[0];
+      const tetherOptions = OverlayWrapper.prototype.createTether.calls.mostRecent().args[0];
 
       expect(tetherOptions.attachment).toBe('top center');
       expect(tetherOptions.constraints.length).toBe(1);
@@ -99,10 +111,10 @@ describe('components/OverlayWrapper', () => {
 
     beforeEach(() => {
       component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       instance = component.instance();
@@ -135,10 +147,10 @@ describe('components/OverlayWrapper', () => {
   describe('#disableTether', () => {
     it('should call function to remove event listner from document body', () => {
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -154,10 +166,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should call function to disable Tether', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -172,10 +184,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should set visible state of `overlay` to false', () => {
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       component.setState({ isOverlayOpen: true });
@@ -194,11 +206,11 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'addEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }
           shouldHideOnClick={ true }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -216,11 +228,11 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'addEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }
           shouldHideOnClick={ false }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -237,10 +249,10 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'addEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -255,10 +267,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should call function to enable Tether', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -272,10 +284,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should set visible state of `overlay` to true', () => {
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       component.setState({ isOverlayOpen: false });
@@ -288,10 +300,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should call function to position Tether', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -307,13 +319,33 @@ describe('components/OverlayWrapper', () => {
     });
   });
 
+  describe('#getChildContext', () => {
+    it('should properly set the child context', () => {
+      const component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }>
+          <FakeButton />
+        </OverlayWrapper>
+      );
+
+      const instance = component.instance();
+      spyOn(instance, 'disableTether');
+      instance.enableTether();
+      const initialCallCount = instance.disableTether.calls.count();
+
+      component.find('[data-test-section="fake-overlay-close"]').simulate('click');
+
+      expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
+    });
+  });
+
   describe('#isClickWithinOverlayOrChildren', () => {
     it('should call function to disable Tether if click is not within overlay or button', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -327,10 +359,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should not call function to disable Tether if click is within overlay', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const fakeOverlayNode = component.find('[data-test-section="fake-overlay"]').get(0);
@@ -346,10 +378,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should not call function to disable Tether if click is within button', () => {
       const component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const fakeButtonNode = component.find('[data-test-section="fake-button"]').get(0);
@@ -369,10 +401,10 @@ describe('components/OverlayWrapper', () => {
 
     beforeEach(() => {
       component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
     });
 
@@ -426,10 +458,10 @@ describe('components/OverlayWrapper', () => {
   describe('#onEscapeKey', () => {
     it('should call function to disable Tether when escape key is pressed', () => {
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -443,10 +475,10 @@ describe('components/OverlayWrapper', () => {
 
     it('should not call function to disable Tether when non-escape key character is pressed', () => {
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -464,10 +496,10 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'removeEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -485,10 +517,10 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'removeEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -506,10 +538,10 @@ describe('components/OverlayWrapper', () => {
       spyOn(document, 'removeEventListener');
 
       const component = shallow(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }>
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
 
       const instance = component.instance();
@@ -524,11 +556,11 @@ describe('components/OverlayWrapper', () => {
 
     beforeEach(() => {
       component = mount(
-        <OverylayWrapper
+        <OverlayWrapper
           overlay={ <FakeOverlay /> }
           testSection="foo">
           <FakeButton />
-        </OverylayWrapper>
+        </OverlayWrapper>
       );
     });
 

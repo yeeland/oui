@@ -8,6 +8,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Feature] Add a `shouldHideOnClick` prop to `OverlayWrapper` to prevent it from always closing when clicking outside the overlay. (#654)
 - [Feature] Add a `centerGroup` prop to `ButtonRow`. (#651)
+- [Feature] Expose a `hideOverlay` function in `OverlayWrapper` as context that allows children to hide the overlay. (#657)
 
 ### Fixed
 - [Patch] Fix a CSS selector that doesn't work in Enzyme. (#649)

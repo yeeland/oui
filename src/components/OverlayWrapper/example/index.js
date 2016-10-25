@@ -5,6 +5,14 @@ import OverlayWrapper from '../index';
 import Button from '../../Button/';
 import Popover from '../../Popover/';
 
+const ClosePopoverButton = (props, context) => {
+  return <Button onClick={ context.hideOverlay }>Close Popopver</Button>;
+};
+
+ClosePopoverButton.contextTypes = {
+  hideOverlay: React.PropTypes.func.isRequired,
+};
+
 export default [
   {
     examples: [
@@ -33,6 +41,7 @@ export default [
                 Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
                 nihil libero et, hic!
               </p>
+              <ClosePopoverButton />
             </Popover>
           }
           horizontalAttachment="left"
@@ -41,6 +50,25 @@ export default [
           verticalTargetAttachment="middle"
           isConstrainedToScreen={ true }>
           <Button>Open Pinned Popover</Button>
+        </OverlayWrapper>
+      </div>,
+    ],
+  },
+  {
+    examples: [
+      <div className="position--relative height--100">
+        <OverlayWrapper
+          overlay={
+            <Popover>
+              <p>
+                The close button works because `OverlayWrapper` exposes a
+                `hideOverlay` method using `context` in React.
+              </p>
+              <p>See the source for `OverlayWrapper` to learn more.</p>
+              <ClosePopoverButton />
+            </Popover>
+          }>
+          <Button>Popover With A Close Button</Button>
         </OverlayWrapper>
       </div>,
     ],

@@ -11,6 +11,13 @@ class OverlayWrapper extends React.Component {
     super(props);
     this.state = { isOverlayOpen: false };
     this.onChildClick = this.onChildClick.bind(this);
+    this.disableTether = this.disableTether.bind(this);
+  }
+
+  getChildContext() {
+    return {
+      hideOverlay: this.disableTether,
+    };
   }
 
   componentDidMount() {
@@ -177,6 +184,10 @@ OverlayWrapper.defaultProps = {
   shouldHideOnClick: true,
   horizontalAttachment: 'center',
   verticalAttachment: 'top',
+};
+
+OverlayWrapper.childContextTypes = {
+  hideOverlay: React.PropTypes.func,
 };
 
 export default OverlayWrapper;
