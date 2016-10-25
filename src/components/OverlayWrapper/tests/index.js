@@ -190,12 +190,13 @@ describe('components/OverlayWrapper', () => {
   });
 
   describe('#enableTether', () => {
-    it('should add click event listner to document', () => {
+    it('should add click event listner to document if `shouldHideOnClick` is true', () => {
       spyOn(document, 'addEventListener');
 
       const component = shallow(
         <OverylayWrapper
-          overlay={ <FakeOverlay /> }>
+          overlay={ <FakeOverlay /> }
+          shouldHideOnClick={ true }>
           <FakeButton />
         </OverylayWrapper>
       );
@@ -206,8 +207,30 @@ describe('components/OverlayWrapper', () => {
       instance.enableTether();
 
       expect(document.addEventListener.calls.any()).toBe(true);
+      expect(instance._bodyClickListener).toBeTruthy();
       expect(document.addEventListener.calls.argsFor(0)[0]).toBe('click');
       expect(document.addEventListener.calls.argsFor(0)[1]).toBe(instance._bodyClickListener);
+    });
+
+    it('should not add click event listner to document if `shouldHideOnClick` is false', () => {
+      spyOn(document, 'addEventListener');
+
+      const component = shallow(
+        <OverylayWrapper
+          overlay={ <FakeOverlay /> }
+          shouldHideOnClick={ false }>
+          <FakeButton />
+        </OverylayWrapper>
+      );
+
+      const instance = component.instance();
+
+      instance._tether = { enable: () => {} };
+      instance.enableTether();
+
+      expect(instance._bodyClickListener).toBe(false);
+      expect(document.addEventListener.calls.argsFor(0)[0]).not.toBe('click');
+      expect(document.addEventListener.calls.argsFor(0)[1]).not.toBe(instance._bodyClickListener);
     });
 
     it('should add keyup event listner to document', () => {

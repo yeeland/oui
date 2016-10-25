@@ -66,4 +66,22 @@ export default [
       </div>,
     ],
   },
+  {
+    examples: [
+      <div className="position--relative height--100">
+        <OverlayWrapper
+          overlay={
+            <Popover title="Lorem ipsum dolor sit amet">
+              <p>
+                Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
+                nihil libero et, hic!
+              </p>
+            </Popover>
+          }
+          shouldHideOnClick={ false }>
+          <Button>Don't Close On Click Outside Popover</Button>
+        </OverlayWrapper>
+      </div>,
+    ],
+  },
 ];

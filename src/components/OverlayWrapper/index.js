@@ -48,9 +48,13 @@ class OverlayWrapper extends React.Component {
 
     // These functions must be stored so that it can be still be removed even
     // though `bind` was used: http://stackoverflow.com/a/22870717/316602
-    this._bodyClickListener = this.isClickWithinOverlayOrChildren.bind(this);
+    this._bodyClickListener = this.props.shouldHideOnClick && this.isClickWithinOverlayOrChildren.bind(this);
     this._documentEscapeListener = this.onEscapeKey.bind(this);
-    document.addEventListener('click', this._bodyClickListener);
+
+    if (this._bodyClickListener) {
+      document.addEventListener('click', this._bodyClickListener);
+    }
+
     document.addEventListener('keyup', this._documentEscapeListener);
   }
 
@@ -158,6 +162,8 @@ OverlayWrapper.propTypes = {
   isConstrainedToScreen: React.PropTypes.bool.isRequired,
   /** The element that is attached to the children */
   overlay: React.PropTypes.node.isRequired,
+  /** Should the `overlay` close when clicking outside of it */
+  shouldHideOnClick: React.PropTypes.bool,
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
   /** Vertical edge of the `overlay` that should touch the `children` */
@@ -168,6 +174,7 @@ OverlayWrapper.propTypes = {
 
 OverlayWrapper.defaultProps = {
   isConstrainedToScreen: false,
+  shouldHideOnClick: true,
   horizontalAttachment: 'center',
   verticalAttachment: 'top',
 };

@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add a `shouldHideOnClick` prop to `OverlayWrapper` to prevent it from always closing when clicking outside the overlay. (#654)
 - [Feature] Add a `centerGroup` prop to `ButtonRow`. (#651)
 
 ### Fixed
