@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Feature] `OverlayWrapper` prop `onHide` can now prevent the `overlay` from hiding by returning false. (#664)
 
 ## [19.2.0][19.2.0] - 2016-10-25
 ### Added

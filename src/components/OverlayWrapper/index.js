@@ -72,13 +72,21 @@ class OverlayWrapper extends React.Component {
   }
 
   disableTether() {
+    let shouldHide = true;
+    if (typeof this.props.onHide === 'function') {
+      shouldHide = this.props.onHide();
+    }
+
+    if (shouldHide === false) {
+      // Exit out of this function before hiding the `overlay` if the supplied
+      // `onHide` function returns false. This is useful for fine-tuned control
+      // of when the `overlay` should close.
+      return;
+    }
+
     this.setState({ 'isOverlayOpen': false });
     this._tether.disable();
     this.removeBodyEventListner();
-
-    if (typeof this.props.onHide === 'function') {
-      this.props.onHide();
-    }
   }
 
   removeBodyEventListner() {
@@ -214,7 +222,10 @@ OverlayWrapper.propTypes = {
   horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
   /** Attach `overlay` to an edge of the screen if it is going to move off */
   isConstrainedToScreen: React.PropTypes.bool.isRequired,
-  /** Function that runs when the `overlay` is hidden */
+  /**
+   * Function that runs when the `overlay` is hidden. Return `false` to prevent
+   * the `overlay` from closing.
+   */
   onHide: React.PropTypes.func,
   /** Function that runs when the `overlay` is shown */
   onShow: React.PropTypes.func,

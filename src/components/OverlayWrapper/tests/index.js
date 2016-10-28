@@ -202,6 +202,34 @@ describe('components/OverlayWrapper', () => {
       expect(obj.func.calls.count()).toBe(initialCallCount + 1);
     });
 
+    it('should exit early if `onHide` function returns false', () => {
+      const component = mount(
+        <OverlayWrapper
+          overlay={ <FakeOverlay /> }
+          onHide={ function() { return false; } }>
+          <FakeButton />
+        </OverlayWrapper>
+      );
+
+      component.setState({ isOverlayOpen: true });
+
+      const instance = component.instance();
+      spyOn(instance, 'removeBodyEventListner');
+
+      const disableMock = instance._tether.disable.mock;
+      const initialDisableMockCallCount = disableMock.calls.length;
+      const initialRemoveEventCallCount = instance.removeBodyEventListner.calls.count();
+
+      instance.disableTether();
+
+      // State shouldn't change
+      expect(component.state('isOverlayOpen')).toBe(true);
+      // Tether's disable function shouldn't be called
+      expect(disableMock.calls.length).toBe(initialDisableMockCallCount);
+      // Function to remove event listeners shouldn't be called
+      expect(instance.removeBodyEventListner.calls.count()).toBe(initialRemoveEventCallCount);
+    });
+
     it('should set visible state of `overlay` to false', () => {
       const component = shallow(
         <OverlayWrapper
