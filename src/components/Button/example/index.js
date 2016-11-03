@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
 import Button from '../index';
+import ClipboardIcon from '../../Icon/ClipboardIcon';
 
 export default [
   {
@@ -47,6 +48,15 @@ export default [
     isPadded: true,
     examples: [
       <Button style="unstyled">Unstyled Button</Button>,
+    ],
+  },
+
+  {
+    isPadded: true,
+    examples: [
+      <Button>
+        <ClipboardIcon size={ 16 } />
+      </Button>,
     ],
   },
 
