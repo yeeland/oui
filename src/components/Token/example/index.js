@@ -26,4 +26,16 @@ export default [
       />,
     ],
   },
+  {
+    examples: [
+      <Token
+        name="Duck Duck Goose"
+        description="A popular childhood game."
+        isDismissible={ true }
+        isDraggable={ true }
+        style="primary"
+        order={ 1 }
+      />,
+    ],
+  },
 ];

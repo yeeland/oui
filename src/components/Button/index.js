@@ -74,4 +74,6 @@ Button.defaultProps = {
   width: 'default',
 };
 
+Button.displayName = 'Button';
+
 export default Button;

@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Feature] Add `isDraggable`, `order`, and `description` props to `Token`. (#667)
 - [Patch] Add a `Button` example that has an icon within it.
 
 ### Changed
