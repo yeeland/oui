@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Removed
+- [Release] Temporarily remove syntax highlighting from `Code` component because it may be causing problems on Optimizely.
 
 ## [19.3.0][19.3.0] - 2016-11-04
 ### Added

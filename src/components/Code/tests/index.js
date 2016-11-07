@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../index';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('components/Code', () => {
   it('should render inline code in code tag', () => {
@@ -40,51 +40,6 @@ describe('components/Code', () => {
     );
 
     expect(component.html()).toBeFalsy();
-  });
-
-  it('should add syntax highlighting to code when specified', () => {
-    let code = 'var foo;';
-
-    const componentInline = render(
-      <Code type="inline" isHighlighted={ true }>{ code }</Code>
-    );
-
-    const componentBlock = render(
-      <Code type="block" isHighlighted={ true }>{ code }</Code>
-    );
-
-    expect(componentInline.find('[class^="hljs-"]').length).toBe(1);
-    expect(componentBlock.find('[class^="hljs-"]').length).toBe(1);
-  });
-
-  it('should not add syntax highlighting by default', () => {
-    let code = 'var foo;';
-
-    const componentInline = render(
-      <Code type="inline">{ code }</Code>
-    );
-
-    const componentBlock = render(
-      <Code type="block">{ code }</Code>
-    );
-
-    expect(componentInline.find('[class^="hljs-"]').length).toBe(0);
-    expect(componentBlock.find('[class^="hljs-"]').length).toBe(0);
-  });
-
-  it('should not add syntax highlighting if language is provided but highlighting is not requested', () => {
-    let code = 'var foo;';
-
-    const componentInline = render(
-      <Code type="inline" language="js">{ code }</Code>
-    );
-
-    const componentBlock = render(
-      <Code type="block" language="js">{ code }</Code>
-    );
-
-    expect(componentInline.find('[class^="hljs-"]').length).toBe(0);
-    expect(componentBlock.find('[class^="hljs-"]').length).toBe(0);
   });
 
   it('should not add a copy button by default', () => {

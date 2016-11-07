@@ -1,32 +1,6 @@
 import React from 'react';
-import * as Highlight from 'highlight.js';
 
 import CopyButton from './CopyButton';
-
-const HighlightedCode = (code, isHighlighted, language, className, testSection) => {
-  let dangerouslySetInnerHTML = null;
-
-  if (isHighlighted) {
-    // Code that uses syntax highlighting needs to have
-    // `dangerouslySetInnerHTML` set so that the HTML returned is displayed.
-    dangerouslySetInnerHTML = {
-      __html: language ? Highlight.highlight(language, code).value :
-                         Highlight.highlightAuto(code).value,
-    };
-    code = null;
-  }
-
-  return (
-    /* eslint-disable react/no-danger */
-    <code
-      className={ className }
-      data-test-section={ testSection }
-      dangerouslySetInnerHTML={ dangerouslySetInnerHTML }>
-      { code }
-    </code>
-    /* eslint-enable react/no-danger */
-  );
-};
 
 /**
  * Display code either inline or in its own block.
@@ -41,11 +15,13 @@ const Code = (props) => {
   let copy = null;
 
   if (props.type === 'inline') {
-    return HighlightedCode(props.children,
-      props.isHighlighted,
-      props.language,
-      'oui-code',
-      props.testSection);
+    return (
+      <code
+        className='oui-code'
+        data-test-section={ props.testSection }>
+        { props.children }
+      </code>
+    );
   }
 
   if (props.hasCopyButton) {
@@ -58,7 +34,9 @@ const Code = (props) => {
       <pre
         className="oui-pre"
         data-test-section={ props.testSection }>
-        { HighlightedCode(props.children, props.isHighlighted, props.language) }
+        <code>
+          { props.children }
+        </code>
       </pre>
     </div>
   );
@@ -69,8 +47,6 @@ Code.propTypes = {
   children: React.PropTypes.string,
   /** Adds a copy button to code examples */
   hasCopyButton: React.PropTypes.bool,
-  /** Apply syntax highlighting to the code */
-  isHighlighted: React.PropTypes.bool,
   /** Specify a language for the syntax highlighter */
   language: React.PropTypes.oneOf(['css', 'diff', 'html', 'java', 'javascript',
     'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',

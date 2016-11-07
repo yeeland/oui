@@ -38,7 +38,6 @@ const ComponentRow = (props) => {
       <Code
         type="block"
         hasCopyButton={ true }
-        isHighlighted={ true }
         language="html">
         { codeHTML }
       </Code>

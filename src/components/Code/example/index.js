@@ -13,14 +13,6 @@ var bat = 'baz';` }
   },
   {
     examples: [
-      <Code type="block" isHighlighted={ true } language="javascript">
-{ `var highlightedFoo = 'bar';
-var highlightedBat = 'baz';` }
-      </Code>,
-    ],
-  },
-  {
-    examples: [
       <Code type="block" hasCopyButton={ true } testSection="code">
 { `var copyableFoo = 'bar';
 var copyableBat = 'baz';` }
