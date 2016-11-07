@@ -6,6 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 
+## [22.0.0][22.0.0] - 2016-11-07
+_This version was accidentally released and contains no changes._
+
 ## [21.0.0][21.0.0] - 2016-11-07
 ### Removed
 - [Release] Actually include the breaking change that was supposed to be in `v20.0.0`: Temporarily remove syntax highlighting from `Code` component because it may be causing problems on Optimizely.
@@ -698,7 +701,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v21.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v22.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -768,3 +771,4 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 [19.3.0]: https://github.com/optimizely/oui/compare/v19.2.0...v19.3.0
 [20.0.0]: https://github.com/optimizely/oui/compare/v19.3.0...v20.0.0
 [21.0.0]: https://github.com/optimizely/oui/compare/v20.0.0...v21.0.0
+[22.0.0]: https://github.com/optimizely/oui/compare/v21.0.0...v22.0.0
