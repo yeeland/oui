@@ -210,7 +210,50 @@
       <button class="button button--danger-outline">Delete</button>
       <button class="button button--plain">Continue</button>
       <button class="button button--toggle">Continue</button>
+      <button class="button button--underline">Dropdown Underline Button <span class="oui-arrow-inline--down"></span></button>
     </div>
+
+    <h3>Button Underline</h3>
+    <div class="muted flex flex-align--center">The
+
+     <div class="dropdown-group push-half--sides">
+      <button class="oui-button oui-button--underline oui-button--plain">
+        unique conversion rate <span class="oui-arrow-inline--down"></span>
+      </button>
+      <ul class="dropdown">
+        <li class="oui-dropdown__item">
+          <a href="#" class="oui-dropdown__block-link">unique conversion rate</a>
+          <a href="#" class="oui-dropdown__block-link">average revenue</a>
+        </li>
+      </ul>
+    </div>
+
+    per
+      <div class="dropdown-group push-half--sides">
+        <button class="oui-button oui-button--plain oui-button--underline">
+          visitor <span class="oui-arrow-inline--down"></span>
+        </button>
+        <ul class="dropdown">
+          <li class="oui-dropdown__item">
+            <a href="#" class="oui-dropdown__block-link">visitor</a>
+            <a href="#" class="oui-dropdown__block-link">conversion</a>
+          </li>
+        </ul>
+      </div>
+      in the last
+      <input class="oui-text-input display--inline push-half--sides" value="14"> days
+      <svg class="lego-icon push-half--left vertical-align--center cursor--pointer"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#help-16"></use> </svg>
+    </div>
+    <script>
+      // throwaway JS
+      $('.dropdown-group .oui-button').on( "click", function(e) {
+        e.preventDefault();
+        $(this).toggleClass('is-open');
+      });
+      $('.dropdown-group .oui-button').blur(function(){
+        $(this).removeClass('is-open');
+      });
+    </script>
 
     <h3 class="push--bottom">Buttons with Icons</h3>
 
