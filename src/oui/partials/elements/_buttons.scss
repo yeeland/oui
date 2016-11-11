@@ -240,31 +240,23 @@
 
   &--underline {
     @extend .button--plain;
-    background: transparent;
     border-bottom: 2px solid map-fetch($border, color, base);
     color: map-fetch($button, type, base, color);
     padding-left: spacer(0.5);
     padding-right: spacer(0.5);
 
     &:hover {
-      background: transparent;
-      border-bottom: 2px solid map-fetch($color, ui, medium);
+      border-bottom-color: map-fetch($color, ui, medium);
       color: map-fetch($button, type, base, color);
     }
 
     &:focus {
-      background: transparent;
-      border-bottom: 2px solid map-fetch($button, type, outline, hover, border); /* v2 color */
+      border-bottom-color: map-fetch($button, type, outline, hover, border); /* v2 color */
     }
 
     &:active {
-      background: transparent;
-      border-color: 2px solid map-fetch($color, ui, medium);
+      border-color-color: map-fetch($color, ui, medium);
       color: map-fetch($color, background, brand-dark);
-    }
-
-    &.is-open > span { // didn't use .is-active to avoid writing overrides
-      transform: rotate(45deg) scaleY(-1) translateY(-2px) translateX(3px);
     }
   }
 

@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
+import ArrowsInline from '../../ArrowsInline';
 import Button from '../index';
 import ClipboardIcon from '../../Icon/ClipboardIcon';
 
@@ -16,6 +17,17 @@ export default [
       <Button style="toggle">Toggle</Button>,
     ],
   },
+
+  {
+    isPadded: true,
+    examples: [
+      <Button style="underline">
+        Underline Button&nbsp;
+        <ArrowsInline direction="down" />
+      </Button>,
+    ],
+  },
+
   {
     isPadded: true,
     examples: [
