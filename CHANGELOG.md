@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Added `min` and `max` props to `Input` to be used when `type` is `number`. (#676)
 
 ## [22.0.0][22.0.0] - 2016-11-07
 _This version was accidentally released and contains no changes._

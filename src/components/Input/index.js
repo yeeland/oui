@@ -35,6 +35,8 @@ class Input extends React.Component {
         onBlur={ opts.onBlur }
         onKeyDown={ opts.onKeyDown }
         onFocus={ opts.onFocus }
+        min={ opts.min }
+        max={ opts.max }
         data-test-section={ opts.testSection }
       />
       /* eslint-enable */
@@ -82,8 +84,16 @@ Input.propTypes = {
   /** Text that describes the input */
   label: React.PropTypes.string,
   /**
-    Function that fires when the input loses focus. It fires regardless of
-    whether the value has changed.
+   * Max value for the `input`. Should be used only when `type` is `number`.
+   */
+  max: React.PropTypes.number,
+  /**
+   * Min value for the `input`. Should be used only when `type` is `number`.
+   */
+  min: React.PropTypes.number,
+  /**
+   * Function that fires when the input loses focus. It fires regardless of
+   * whether the value has changed.
   */
   onBlur: React.PropTypes.func,
   /** Function that fires when the input loses focus after the value changes */
