@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Removed
+- [Patch] Remove `IconSample` from documentation until icons are properly working. (#681)
 
 ## [22.1.0][22.1.0] - 2016-11-29
 ### Added
