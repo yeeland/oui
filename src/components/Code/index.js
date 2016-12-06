@@ -1,52 +1,92 @@
 import React from 'react';
+let Highlight;
 
 import CopyButton from './CopyButton';
+
+// Make webpack's `require.ensure` work synchronously in Node.
+// https://github.com/webpack/webpack/issues/183
+if (typeof require.ensure !== 'function') {
+  require.ensure = (d, c) => {
+    c(require);
+  };
+}
 
 /**
  * Display code either inline or in its own block.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Code = (props) => {
-  if (!props.children) {
-    return null;
+class Code extends React.Component {
+  constructor() {
+    super();
+    this.renderCode = this.renderCode.bind(this);
   }
 
-  let copy = null;
+  componentWillMount() {
+    // Load highlight.js asynchronously since it is a large dependency.
+    require.ensure(['highlight.js'], (require) => {
+      Highlight = require('highlight.js');
+      this.forceUpdate();
+    });
+  }
 
-  if (props.type === 'inline') {
+  renderCode() {
+    let dangerouslySetInnerHTML = null;
+    let code = this.props.children;
+
+    if (Highlight && this.props.isHighlighted) {
+      // Code that uses syntax highlighting needs to have
+      // `dangerouslySetInnerHTML` set so that the HTML returned is displayed.
+      dangerouslySetInnerHTML = {
+        __html: this.props.language ? Highlight.highlight(this.props.language, code).value :
+                                      Highlight.highlightAuto(code).value,
+      };
+      code = null;
+    }
+
     return (
+      /* eslint-disable react/no-danger */
       <code
-        className='oui-code'
-        data-test-section={ props.testSection }>
-        { props.children }
+        className={ this.props.type === 'inline' ? 'oui-code' : '' }
+        data-test-section={ this.props.type === 'inline' && this.props.testSection }
+        dangerouslySetInnerHTML={ dangerouslySetInnerHTML }>
+        { code }
       </code>
+      /* eslint-enable react/no-danger */
     );
   }
 
-  if (props.hasCopyButton) {
-    copy = <CopyButton code={ props.children } testSection={ props.testSection } />;
-  }
+  render() {
+    if (!this.props.children) {
+      return null;
+    }
 
-  return (
-    <div className="position--relative">
-      { copy }
-      <pre
-        className="oui-pre"
-        data-test-section={ props.testSection }>
-        <code>
-          { props.children }
-        </code>
-      </pre>
-    </div>
-  );
-};
+    if (this.props.type === 'inline') {
+      return this.renderCode();
+    }
+
+    return (
+      <div className="position--relative">
+        { this.props.hasCopyButton &&
+          <CopyButton code={ this.props.children } testSection={ this.props.testSection } />
+        }
+        <pre
+          className="oui-pre"
+          data-test-section={ this.props.testSection }>
+          { this.renderCode() }
+        </pre>
+      </div>
+    );
+  }
+}
 
 Code.propTypes = {
   /** The code within the component */
   children: React.PropTypes.string,
   /** Adds a copy button to code examples */
   hasCopyButton: React.PropTypes.bool,
+  /** Apply syntax highlighting to the code */
+  isHighlighted: React.PropTypes.bool,
   /** Specify a language for the syntax highlighter */
   language: React.PropTypes.oneOf(['css', 'diff', 'html', 'java', 'javascript',
     'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',

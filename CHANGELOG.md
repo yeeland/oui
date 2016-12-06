@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Bring back syntax highlighting for Code component and load asynchronously. (#678)
+
 ### Removed
 - [Patch] Remove `IconSample` from documentation until icons are properly working. (#681)
 
