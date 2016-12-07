@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Load syntax highlighting synchronously but only load the necessary languages. (#679)
 
 ## [22.2.0-rc.1][22.2.0-rc.1] - 2016-12-06
 ### Added

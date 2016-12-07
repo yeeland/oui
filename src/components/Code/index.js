@@ -1,15 +1,23 @@
 import React from 'react';
-let Highlight;
 
 import CopyButton from './CopyButton';
+import Highlight from 'highlight.js/lib/highlight.js';
 
-// Make webpack's `require.ensure` work synchronously in Node.
-// https://github.com/webpack/webpack/issues/183
-if (typeof require.ensure !== 'function') {
-  require.ensure = (d, c) => {
-    c(require);
-  };
-}
+Highlight.registerLanguage('css', require('highlight.js/lib/languages/css'));
+Highlight.registerLanguage('diff', require('highlight.js/lib/languages/diff'));
+Highlight.registerLanguage('html', require('highlight.js/lib/languages/xml'));
+Highlight.registerLanguage('java', require('highlight.js/lib/languages/java'));
+Highlight.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+Highlight.registerLanguage('js', require('highlight.js/lib/languages/javascript'));
+Highlight.registerLanguage('jsx', require('highlight.js/lib/languages/javascript'));
+Highlight.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'));
+Highlight.registerLanguage('md', require('highlight.js/lib/languages/markdown'));
+Highlight.registerLanguage('objectivec', require('highlight.js/lib/languages/objectivec'));
+Highlight.registerLanguage('php', require('highlight.js/lib/languages/php'));
+Highlight.registerLanguage('python', require('highlight.js/lib/languages/python'));
+Highlight.registerLanguage('ruby', require('highlight.js/lib/languages/ruby'));
+Highlight.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
+Highlight.registerLanguage('swift', require('highlight.js/lib/languages/swift'));
 
 /**
  * Display code either inline or in its own block.
@@ -22,19 +30,11 @@ class Code extends React.Component {
     this.renderCode = this.renderCode.bind(this);
   }
 
-  componentWillMount() {
-    // Load highlight.js asynchronously since it is a large dependency.
-    require.ensure(['highlight.js'], (require) => {
-      Highlight = require('highlight.js');
-      this.forceUpdate();
-    });
-  }
-
   renderCode() {
     let dangerouslySetInnerHTML = null;
     let code = this.props.children;
 
-    if (Highlight && this.props.isHighlighted) {
+    if (this.props.isHighlighted) {
       // Code that uses syntax highlighting needs to have
       // `dangerouslySetInnerHTML` set so that the HTML returned is displayed.
       dangerouslySetInnerHTML = {
