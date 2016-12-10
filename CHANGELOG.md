@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Create a `BlockList` React component. (#452)
+
 ### Changed
 - [Patch] Remove `Icon` reference in `main.js` since it isn't actually working. (#684)
 
