@@ -59,7 +59,6 @@
     &:last-child {
       margin-bottom: -(spacer(0.5));
     }
-
   }
 
   // Removes padding on left/right so items are not indented.
@@ -82,7 +81,28 @@
       border-top: 0;
     }
   }
+}
 
+.oui-block-list__category:not(:last-child) {
+  border-bottom: 1px solid map-fetch($color, ui, light);
+}
+
+.oui-block-list__category__name {
+  background: map-fetch($color, background, faint);
+  color: map-fetch($color, text, muted);
+  font-size: map-fetch($font, size, micro);
+  font-weight: 400;
+  border-bottom: 1px solid map-fetch($color, ui, light);
+}
+
+.oui-block-list__item {
+  padding: spacer(0.5) spacer(1);
+}
+
+.oui-block-list__link:hover,
+.oui-block-list__link:focus {
+  background-color: map-fetch($color, background, brand-light);
+  outline: none;
 }
 
 %#{$namespace}block-list-group,

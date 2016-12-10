@@ -7,6 +7,22 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Add an `underline` style to `Button`.
+- [Feature] Create a `BlockList` React component. (#452)
+
+## [22.2.0][22.2.0] - 2016-12-06
+### Changed
+- [Patch] Load syntax highlighting synchronously but only load the necessary languages. (#679)
+
+## [22.2.0-rc.1][22.2.0-rc.1] - 2016-12-06
+### Added
+- [Feature] Bring back syntax highlighting for Code component and load asynchronously. (#678)
+
+### Removed
+- [Patch] Remove `IconSample` from documentation until icons are properly working. (#681)
+
+## [22.1.0][22.1.0] - 2016-11-29
+### Added
+- [Feature] Added `min` and `max` props to `Input` to be used when `type` is `number`. (#676)
 
 ## [22.0.0][22.0.0] - 2016-11-07
 _This version was accidentally released and contains no changes._
@@ -703,7 +719,7 @@ _This version was accidentally released and contains no changes._
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v22.0.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v22.2.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -774,3 +790,6 @@ _This version was accidentally released and contains no changes._
 [20.0.0]: https://github.com/optimizely/oui/compare/v19.3.0...v20.0.0
 [21.0.0]: https://github.com/optimizely/oui/compare/v20.0.0...v21.0.0
 [22.0.0]: https://github.com/optimizely/oui/compare/v21.0.0...v22.0.0
+[22.1.0]: https://github.com/optimizely/oui/compare/v22.0.0...v22.1.0
+[22.2.0-rc.1]: https://github.com/optimizely/oui/compare/v22.1.0...v22.2.0-rc.1
+[22.2.0]: https://github.com/optimizely/oui/compare/22.2.0-rc.1...v22.2.0

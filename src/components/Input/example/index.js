@@ -79,6 +79,11 @@ export default [
   },
   {
     examples: [
+      <Input type="number" min={ 10 } max={ 50 } />,
+    ],
+  },
+  {
+    examples: [
       <Input type="date" />,
     ],
   },

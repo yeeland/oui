@@ -137,6 +137,30 @@ describe('components/Input', () => {
     expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 
+  it('should add a `max` attribute when `max` is provided', () => {
+    const component = shallow(
+      <Input type="number" max={ 10 } />
+    );
+
+    expect(component.is('[max=10]')).toBe(true);
+  });
+
+  it('should add a `min` attribute when `min` is provided', () => {
+    const component = shallow(
+      <Input type="number" min={ 10 } />
+    );
+
+    expect(component.is('[min=10]')).toBe(true);
+  });
+
+  it('should have a properly set test section', () => {
+    const component = shallow(
+      <Input type="text" testSection="foo" />
+    );
+
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
+  });
+
   it('should render a label if label is passed', () => {
     const component = mount(
       <Input type="text" testSection="foo" label="Input Label" />

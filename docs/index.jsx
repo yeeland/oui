@@ -13,6 +13,8 @@ import ArrowsInline from '../src/components/ArrowsInline';
 import ArrowsInlineExample from '../src/components/ArrowsInline/example';
 import Badge from '../src/components/Badge';
 import BadgeExample from '../src/components/Badge/example';
+import BlockList from '../src/components/BlockList';
+import BlockListExample from '../src/components/BlockList/example';
 import Button from '../src/components/Button';
 import ButtonExample from '../src/components/Button/example';
 import ButtonRow from '../src/components/ButtonRow';
@@ -21,8 +23,6 @@ import Checkbox from '../src/components/Checkbox';
 import CheckboxExample from '../src/components/Checkbox/example';
 import Code from '../src/components/Code';
 import CodeExample from '../src/components/Code/example';
-import IconSample from '../src/components/IconSample';
-import IconExample from '../src/components/IconSample/example';
 import Input from '../src/components/Input';
 import InputExample from '../src/components/Input/example';
 import Label from '../src/components/Label';
@@ -59,6 +59,10 @@ const componentsArray = [
     example: BadgeExample,
   },
   {
+    index: BlockList,
+    example: BlockListExample,
+  },
+  {
     index: Button,
     example: ButtonExample,
   },
@@ -77,10 +81,6 @@ const componentsArray = [
   {
     index: Input,
     example: InputExample,
-  },
-  {
-    index: IconSample,
-    example: IconExample,
   },
   {
     index: Label,

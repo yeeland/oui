@@ -4,7 +4,6 @@
   "coveragePathIgnorePatterns": [
     "node_modules/",
     "components/Icon/",
-    "components/IconSample/",
     "utils/.*-mock.js$"
   ],
   "moduleNameMapper": {

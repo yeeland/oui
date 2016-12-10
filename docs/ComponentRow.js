@@ -5,7 +5,7 @@ import reactElementToJSXString from 'react-element-to-jsx-string';
 
 const ComponentRow = (props) => {
   let codeHTML = '';
-  let classes = ['border--all', 'no-border--bottom', 'soft-double'];
+  let classes = ['border--all', 'no-border--bottom', 'soft-double', 'position--relative'];
   if (props.isPadded) {
     classes.push('soft');
   }
@@ -38,6 +38,7 @@ const ComponentRow = (props) => {
       <Code
         type="block"
         hasCopyButton={ true }
+        isHighlighted={ true }
         language="html">
         { codeHTML }
       </Code>

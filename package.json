@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "22.0.0",
+  "version": "22.2.0",
   "description": "Optimizely's Component Library.",
   "private": false,
   "main": "dist/js/main.js",
@@ -9,6 +9,7 @@
     "babel-preset-react": "^6.5.0",
     "classnames": "^2.2.5",
     "clipboard": "^1.5.12",
+    "highlight.js": "^9.5.0",
     "oui-icons": "3.0.1",
     "svg-jsx-loader": "0.0.16",
     "tether": "^1.3.7"
