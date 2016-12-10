@@ -215,7 +215,7 @@ module.exports = {
     "react/jsx-indent": ["warn", 2],
     "react/jsx-indent-props": ["warn", 2],
     "react/jsx-key": ["warn"],
-    "react/jsx-no-bind": ["warn"],
+    "react/jsx-no-bind": ["warn", { "ignoreRefs": true }],
     "react/jsx-no-duplicate-props": ["warn"],
     "react/jsx-no-target-blank": ["warn"],
     "react/jsx-no-undef": ["warn"],
