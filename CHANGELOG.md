@@ -7,6 +7,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ## [Unreleased][Unreleased]
 ### Added
 - [Feature] Create a `BlockList` React component. (#452)
+- [Patch] Update `ArrowsInline` to use prefixed placeholder so that it works in more places. (#687)
 
 ## [22.2.0][22.2.0] - 2016-12-06
 ### Changed

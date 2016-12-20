@@ -14,6 +14,7 @@ $border-colored: 4px solid currentColor;
 $border-transparent: 4px solid transparent;
 
 %#{$namespace}arrow-inline,
+%oui-arrow-inline,
 .#{$namespace}arrow-inline,
 .oui-arrow-inline {
   display: inline-block;
@@ -24,28 +25,28 @@ $border-transparent: 4px solid transparent;
   vertical-align: middle;
 
   &--up {
-    @extend %#{$namespace}arrow-inline;
+    @extend %oui-arrow-inline;
     border-bottom: $border-colored;
     border-right: $border-transparent;
     border-left: $border-transparent;
   }
 
   &--down {
-    @extend %#{$namespace}arrow-inline;
+    @extend %oui-arrow-inline;
     border-top: $border-colored;
     border-right: $border-transparent;
     border-left: $border-transparent;
   }
 
   &--right {
-    @extend %#{$namespace}arrow-inline;
+    @extend %oui-arrow-inline;
     border-left: $border-colored;
     border-top: $border-transparent;
     border-bottom: $border-transparent;
   }
 
   &--left {
-    @extend %#{$namespace}arrow-inline;
+    @extend %oui-arrow-inline;
     border-right: $border-colored;
     border-top: $border-transparent;
     border-bottom: $border-transparent;
