@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [22.3.0][22.3.0] - 2016-12-20
 ### Added
 - [Feature] Create a `BlockList` React component. (#452)
 - [Patch] Update `ArrowsInline` to use prefixed placeholder so that it works in more places. (#687)
@@ -719,7 +721,7 @@ _This version was accidentally released and contains no changes._
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v22.2.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v22.3.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -793,3 +795,4 @@ _This version was accidentally released and contains no changes._
 [22.1.0]: https://github.com/optimizely/oui/compare/v22.0.0...v22.1.0
 [22.2.0-rc.1]: https://github.com/optimizely/oui/compare/v22.1.0...v22.2.0-rc.1
 [22.2.0]: https://github.com/optimizely/oui/compare/22.2.0-rc.1...v22.2.0
+[22.3.0]: https://github.com/optimizely/oui/compare/22.2.0...v22.3.0
