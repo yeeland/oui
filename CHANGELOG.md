@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Clean up stray Tether DOM nodes on `componentWillUnmount` in `OverlayWrapper`. (#236)
 
 ## [22.3.0][22.3.0] - 2016-12-20
 ### Added
