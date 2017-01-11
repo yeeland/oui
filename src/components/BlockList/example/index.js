@@ -114,6 +114,23 @@ export default [
   },
   {
     examples: [
+      <BlockList hasBorder={ false }>
+        <BlockList.Category>
+          <BlockList.Item onClick={ function() {} }>
+            Archive
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Pause
+          </BlockList.Item>
+        </BlockList.Category>
+        <BlockList.Item onClick={ function() {} }>
+          View Results
+        </BlockList.Item>
+      </BlockList>,
+    ],
+  },
+  {
+    examples: [
       <OverlayWrapper
         overlay={
           <BlockList>
