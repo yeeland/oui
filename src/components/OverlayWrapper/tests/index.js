@@ -142,6 +142,17 @@ describe('components/OverlayWrapper', () => {
       component.unmount();
       expect(instance.removeBodyEventListner.calls.count()).toBe(initialCallCount + 1);
     });
+
+    it('should remove the Tether element', () => {
+      instance._tether.element = {
+        remove: () => {},
+      };
+      spyOn(instance._tether.element, 'remove');
+      const initialCallCount = instance._tether.element.remove.calls.count();
+
+      component.unmount();
+      expect(instance._tether.element.remove.calls.count()).toBe(initialCallCount + 1);
+    });
   });
 
   describe('#disableTether', () => {

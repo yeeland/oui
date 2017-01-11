@@ -121,6 +121,9 @@ class OverlayWrapper extends React.Component {
   componentWillUnmount() {
     this.removeBodyEventListner();
     this._tether.destroy();
+    if (this._tether.element && this._tether.element.remove) {
+      this._tether.element.remove();
+    }
   }
 
   createTether(options) {
