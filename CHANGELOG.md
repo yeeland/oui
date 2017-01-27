@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Patch] Vertically align checkbox and radio with the top of the label. (#695)
 
 ## [22.4.0][22.4.0] - 2017-01-11
 ### Fixed
