@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Feature] Add a `maxHeight` prop to `BlockList` to enable scrolling. (#693)
+
 ### Changed
 - [Patch] Vertically align checkbox and radio with the top of the label. (#695)
 

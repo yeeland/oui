@@ -158,4 +158,51 @@ export default [
       </BlockList>,
     ],
   },
+  {
+    examples: [
+      <BlockList maxHeight={ '150px' }>
+        <BlockList.Category header="BlockList with Scroll">
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+        </BlockList.Category>
+      </BlockList>,
+    ],
+  },
 ];
