@@ -23,6 +23,7 @@ const Checkbox = (props) => {
           type="checkbox"
           defaultChecked={ props.defaultChecked }
           checked={ props.checked }
+          className="flex--none"
           disabled={ props.isDisabled }
           onChange={ props.onChange }
           data-test-section={ props.testSection }

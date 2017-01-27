@@ -8,6 +8,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 ### Changed
 - [Patch] Vertically align checkbox and radio with the top of the label. (#695)
 
+### Fixed
+- [Patch] Prevent checkbox and radio elements from getting squished. (#694)
+
 ## [22.4.0][22.4.0] - 2017-01-11
 ### Fixed
 - [Patch] Clean up stray Tether DOM nodes on `componentWillUnmount` in `OverlayWrapper`. (#236)
