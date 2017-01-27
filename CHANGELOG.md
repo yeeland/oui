@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+## [22.5.0][22.5.0] - 2017-01-27
 ### Added
 - [Feature] Add a `maxHeight` prop to `BlockList` to enable scrolling. (#693)
 
@@ -733,7 +734,7 @@ _This version was accidentally released and contains no changes._
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v22.4.0...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v22.5.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -809,3 +810,4 @@ _This version was accidentally released and contains no changes._
 [22.2.0]: https://github.com/optimizely/oui/compare/22.2.0-rc.1...v22.2.0
 [22.3.0]: https://github.com/optimizely/oui/compare/22.2.0...v22.3.0
 [22.4.0]: https://github.com/optimizely/oui/compare/22.3.0...v22.4.0
+[22.5.0]: https://github.com/optimizely/oui/compare/22.4.0...v22.5.0
