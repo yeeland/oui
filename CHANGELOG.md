@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+
+## [23.0.0][23.0.0] - 2017-02-03
 ### Changed
 - [Feature] Launch updated documentation that shows both React and Sass
 documentation and addresses common pain points. (#686)
@@ -745,7 +747,7 @@ _This version was accidentally released and contains no changes._
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
 
-[Unreleased]: https://github.com/optimizely/oui/compare/v22.5.1...HEAD
+[Unreleased]: https://github.com/optimizely/oui/compare/v23.0.0...HEAD
 [0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
 [0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
 [1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
@@ -823,3 +825,4 @@ _This version was accidentally released and contains no changes._
 [22.4.0]: https://github.com/optimizely/oui/compare/22.3.0...v22.4.0
 [22.5.0]: https://github.com/optimizely/oui/compare/22.4.0...v22.5.0
 [22.5.1]: https://github.com/optimizely/oui/compare/22.5.0...v22.5.1
+[23.0.0]: https://github.com/optimizely/oui/compare/22.5.1...v23.0.0
