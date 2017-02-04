@@ -12,7 +12,7 @@ const Popover = (props) => {
   return (
     <div
       className={ 'oui-pop--over' }
-      style={ { display: 'block', opacity: 1, position: 'initial' } }
+      style={{ display: 'block', opacity: 1, position: 'initial' }}
       data-test-section={ props.testSection }>
       <div className="oui-pop--over__content">
         { props.title && (

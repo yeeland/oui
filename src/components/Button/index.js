@@ -2,8 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 /**
- * Buttons come in a wide array of styles and allow the user to perform an
- * action.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */

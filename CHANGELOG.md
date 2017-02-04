@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Changed
+- [Feature] Launch updated documentation that shows both React and Sass
+documentation and addresses common pain points. (#686)
+
+### Removed
+- [Release] Remove jQuery that was written for the pre-React components.
+- [Release] Remove support for `oui-extras.css` that was used to generate and deploy CSS that contained out icons.
 
 ## [22.5.1][22.5.1] - 2017-01-30
 _This version was released to fix a deployment issue in `22.5.0`._

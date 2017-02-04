@@ -18,14 +18,12 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <OverlayWrapper
-          overlay={
-            <Popover title="Lorem ipsum dolor sit amet">
-              <p>
+          overlay={ <Popover title="Lorem ipsum dolor sit amet">
+            <p>
                 Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
                 nihil libero et, hic!
               </p>
-            </Popover>
-          }>
+          </Popover> }>
           <Button>Open Popover</Button>
         </OverlayWrapper>
       </div>,
@@ -35,15 +33,13 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <OverlayWrapper
-          overlay={
-            <Popover title="Lorem ipsum dolor sit amet">
-              <p>
+          overlay={ <Popover title="Lorem ipsum dolor sit amet">
+            <p>
                 Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
                 nihil libero et, hic!
               </p>
-              <ClosePopoverButton />
-            </Popover>
-          }
+            <ClosePopoverButton />
+          </Popover> }
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
           verticalAttachment="middle"
@@ -58,16 +54,14 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <OverlayWrapper
-          overlay={
-            <Popover>
-              <p>
+          overlay={ <Popover>
+            <p>
                 The close button works because `OverlayWrapper` exposes a
                 `hideOverlay` method using `context` in React.
               </p>
-              <p>See the source for `OverlayWrapper` to learn more.</p>
-              <ClosePopoverButton />
-            </Popover>
-          }>
+            <p>See the source for `OverlayWrapper` to learn more.</p>
+            <ClosePopoverButton />
+          </Popover> }>
           <Button>Popover With A Close Button</Button>
         </OverlayWrapper>
       </div>,
@@ -77,14 +71,12 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <OverlayWrapper
-          overlay={
-            <Popover title="Lorem ipsum dolor sit amet">
-              <p>
+          overlay={ <Popover title="Lorem ipsum dolor sit amet">
+            <p>
                 Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
                 nihil libero et, hic!
               </p>
-            </Popover>
-          }
+          </Popover> }
           horizontalAttachment="left"
           horizontalTargetAttachment="left"
           verticalAttachment="top"
@@ -98,14 +90,12 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <OverlayWrapper
-          overlay={
-            <Popover title="Lorem ipsum dolor sit amet">
-              <p>
+          overlay={ <Popover title="Lorem ipsum dolor sit amet">
+            <p>
                 Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae
                 nihil libero et, hic!
               </p>
-            </Popover>
-          }
+          </Popover> }
           shouldHideOnClick={ false }>
           <Button>Don't Close On Click Outside Popover</Button>
         </OverlayWrapper>

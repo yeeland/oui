@@ -10,11 +10,9 @@ import Poptip from './Poptip';
 const PoptipWrapper = (props) => (
   <OverlayWrapper
     behavior="hover"
-    overlay={
-      <Poptip testSection={ props.testSection }>
-        { props.content }
-      </Poptip>
-    }
+    overlay={ <Poptip testSection={ props.testSection }>
+      { props.content }
+    </Poptip> }
     horizontalAttachment={ props.horizontalAttachment }
     horizontalTargetAttachment={ props.horizontalTargetAttachment }
     verticalAttachment={ props.verticalAttachment }

@@ -7,4 +7,5 @@ coverage
 .sass-cache
 npm-debug.log
 .DS_Store
-docs/data.json
+docs/lite/sass.json
+docs/react/data.json

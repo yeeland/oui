@@ -1,14 +1,14 @@
 import React from 'react';
 
 /**
- * Displays help text when hovering on an element.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
+ * @private
  */
 const Poptip = (props) => (
   <div
     className={ 'oui-pop--tip' }
-    style={ { display: 'inline-block', opacity: 1, position: 'initial' } }
+    style={{ display: 'inline-block', opacity: 1, position: 'initial' }}
     data-test-section={ props.testSection }>
     { props.children }
   </div>

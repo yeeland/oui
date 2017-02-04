@@ -12,8 +12,8 @@ const BlockList = (props) => (
   <div
     className="background--white overflow-x--auto border--all"
     data-test-section={ props.testSection }
-    style={ { maxHeight: props.maxHeight } }>
-    <ul style={ { display: 'inline-block', minWidth: '100%' } }>
+    style={{ maxHeight: props.maxHeight }}>
+    <ul style={{ display: 'inline-block', minWidth: '100%' }}>
       { props.children }
     </ul>
   </div>

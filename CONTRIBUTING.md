@@ -8,8 +8,7 @@ Here are a few commonly used commands:
 
 * `npm start` - compiles Sass, transpiles JavaScript, and builds our React documentation
 * `npm test` - lints and tests the codebase
-* `npm run html-examples` - displays HTML examples locally
-* `npm run react-docs:serve` - displays the React documentation locally and watches relevant files for changes
+* `npm run docs:watch` - runs the documentation environment locally
 
 Run `npm run` for an entire list.
 
@@ -84,7 +83,7 @@ This applies any time classes are being renamed and you want old and new code to
   * `[Feature]` changes: `npm version minor`
   * `[Release]` changes: `npm version major`
 10. Now [create a new release on GitHub](https://github.com/optimizely/oui/releases/new). It should [look like this](https://www.dropbox.com/s/1nln5ttbxfbacuv/Screenshot%202015-09-02%2011.31.21.png). Select
- the tag version that gulp generated, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes.
+ the new tag version, leave the "Release title" blank, and paste the "Unreleased" contributions from the `CHANGELOG.md` in the release notes.
 11. Switch to the ScribeSass repo and [deploy new documentation](https://github.com/optimizely/scribesass/blob/master/README.md) for our CSS documentation.
 
 **Note for Optimizely developers:** The Optimizely frontend only reinstalls packages when its `package.json` changes. You'll have to update the version number for backward compatible changes if you want to ensure that it gets deployed quickly.

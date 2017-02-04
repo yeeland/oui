@@ -27,7 +27,7 @@ const Checkbox = (props) => {
           disabled={ props.isDisabled }
           onChange={ props.onChange }
           data-test-section={ props.testSection }
-          style={ { 'marginTop': '0.35em' } }
+          style={{ 'marginTop': '0.35em' }}
         />
         <div className={ labelClassNames }>
           { props.label }
