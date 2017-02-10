@@ -16,6 +16,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 - [Patch] Move Sass for `Textarea` to component folder. (#368)
 - [Patch] Move Sass for `Input` to component folder. (#368)
 - [Patch] Change `.nvmrc` to use the latest release in Node's "Boron" release.
+- [Patch] Remove CloudFront CDN upload on version release. (#706)
 
 ### Removed
 - [Release] Remove Sass placeholders for `textarea` and `input`. The placeholders are `%#{$namespace}text-input`,

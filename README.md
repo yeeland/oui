@@ -31,27 +31,6 @@ This "living" style guide uses [ScribeSass](https://github.com/optimizely/scribe
 
 ## Including OUI in your project
 
-There are two ways to include OUI in your project.
-
-### Pre-compiled CSS file
-
-This is a quick and easy way to add OUI to a project. It is the least flexible option but works well for small projects and and prototypes.
-
-You can include this pre-compiled version of OUI in your application:
-
-```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/23.0.0/oui.css">
-```
-
-Replace `23.0.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
-
-`oui.css` contains the core OUI CSS.
-
-
-### Grab OUI Sass and React components from npm
-
-This option is great for developers that want to tightly integrate OUI into their existing Sass or use our React components.
-
 OUI is published as an npm module called `optimizely-oui` that contains Sass files and React components.
 
 To install:
