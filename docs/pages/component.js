@@ -90,7 +90,7 @@ class Component extends React.Component {
     this.categoryDisplayName = toTitleCase(categoryName);
 
     const componentDescription = yamlData && yamlData.description;
-    const componentPaths = components[categoryName][componentName].path;
+    const componentPaths = components[categoryName][this.componentDisplayName].path;
 
     componentPaths['react'] && languages.push('react');
     componentPaths['sass'] && languages.push('sass');

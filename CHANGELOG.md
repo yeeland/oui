@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Fixed
+- [Patch] Show the correct available languages for subcomponents in the component page. (#702)
 
 ## [23.0.0][23.0.0] - 2017-02-03
 ### Changed
