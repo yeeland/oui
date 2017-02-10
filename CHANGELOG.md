@@ -6,6 +6,7 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Fixed
+- [Patch] Fix issue where SVG sprite were taking up space in the documentation UI.
 - [Patch] Show the correct available languages for subcomponents in the component page. (#702)
 
 ## [23.0.0][23.0.0] - 2017-02-03

@@ -137,7 +137,7 @@ class Component extends React.Component {
             }
             { language === 'sass' && sassData && sassData.example &&
               <div>
-                <div dangerouslySetInnerHTML={{ __html: ouiIcons }}></div>
+                <div dangerouslySetInnerHTML={{ __html: ouiIcons }} className="display--none"></div>
                 { sassData.example.map((example, i) => (
                   <SassComponentExample key={ i } component={ example } />
                 )) }
