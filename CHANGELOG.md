@@ -6,6 +6,9 @@ This file follows the format suggested by [Keep a CHANGELOG](https://github.com/
 
 ## [Unreleased][Unreleased]
 ### Added
+- [Patch] Add `Label` Sass examples to the documentation. (#686)
+- [Patch] Add `Radio` Sass examples to the documentation. (#686)
+- [Patch] Add `Checkbox` Sass examples to the documentation. (#686)
 - [Patch] Add Sass documentation examples for `Textarea`. (#686)
 - [Patch] Add Sass documentation examples for `Input`. (#686)
 

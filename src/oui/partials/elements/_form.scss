@@ -331,47 +331,6 @@ fieldset {
   margin-bottom: spacer(4);
 }
 
-// Labels
-// Define a `.label` class as well as a `<label>` element. This means we can
-// apply label-like styling to meta-labels for groups of options where a
-// `<label>` element is not suitable.
-
-.#{$namespace}label,
-.oui-label {
-  display: block;
-  margin-bottom: spacer(0.5);
-  font-weight: 500;
-
-  // Fun fact: We used to implement the “(Optional)” text with an `::after`, but had to change that because `content: '(Optional)';` couldn't be translated by our translation service.
-  &__optional {
-    margin-left: spacer(0.5);
-    color: map-fetch($color, text, muted);
-    font-size: map-fetch($font, size, micro);
-    font-weight: 400;
-  }
-
-  &--required::after {
-    content: '*';
-    margin-left: spacer(0.5);
-    color: map-fetch($color, text, bad-news);
-    font-weight: 400;
-    font-size: map-fetch($font, size, delta);
-    line-height: 1;
-    position: relative;
-    top: 2px; // Corrects position.
-  }
-
-  &--rule {
-    border-bottom: 1px solid map-fetch($border, color, base);
-    padding-bottom: spacer(0.5);
-  }
-
-  &--disabled {
-    color: map-fetch($color, text, muted);
-    cursor: default !important;
-  }
-}
-
 // Labels in `.#{$namespace}input-lists`
 
 .#{$namespace}check-label,
