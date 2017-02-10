@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased][Unreleased]
+### Added
+- [Patch] Add Sass documentation examples for `Textarea`. (#686)
+- [Patch] Add Sass documentation examples for `Input`. (#686)
+
+### Changed
+- [Patch] Move Sass for `Textarea` to component folder. (#368)
+- [Patch] Move Sass for `Input` to component folder. (#368)
+
+### Removed
+- [Release] Remove Sass placeholders for `textarea` and `input`. The placeholders are `%#{$namespace}text-input`,
+`%#{$namespace}textarea`, and `%oui-text-input`.
+
 ### Fixed
 - [Patch] Fix issue where SVG sprite were taking up space in the documentation UI.
 - [Patch] Show the correct available languages for subcomponents in the component page. (#702)
