@@ -63,14 +63,12 @@
     border-color: map-fetch($button, type, base, active, border);
     color: map-fetch($button, type, base, active, color);
     box-shadow: map-fetch($button, type, base, active, box-shadow);
-    text-shadow: map-fetch($button, type, base, active, text-shadow);
   }
 
   &--highlight {
     background-color: map-fetch($button, type, highlight, background);
     border-color: map-fetch($button, type, highlight, border);
     color: map-fetch($color, text, white);
-    text-shadow: map-fetch($button, type, highlight, text-shadow);
 
     &:hover {
       background: map-fetch($button, type, highlight, hover, background);
@@ -104,7 +102,6 @@
       background-color: map-fetch($button, type, outline, background);
       border-color: map-fetch($button, type, outline, hover, border);
       color: map-fetch($button, type, outline, hover, color);
-      text-shadow: none;
       box-shadow: none;
     }
 
@@ -112,7 +109,6 @@
       background-color: map-fetch($button, type, outline, background);
       border-color: map-fetch($button, type, outline, active, border);
       color: map-fetch($button, type, outline, active, color);
-      text-shadow: none;
       box-shadow: none;
     }
   }
@@ -143,7 +139,6 @@
     background-color: map-fetch($button, type, danger, background);
     border-color: map-fetch($button, type, danger, border);
     color: map-fetch($color, text, white);
-    text-shadow: map-fetch($button, type, danger, text-shadow);
 
     &:hover {
       background: map-fetch($button, type, danger, hover, background);
@@ -167,7 +162,6 @@
     color: map-fetch($button, type, danger-outline, color);
     border-color: map-fetch($button, type, danger-outline, border);
     background-color: transparent;
-    text-shadow: none;
     box-shadow: none;
 
     &:focus {
@@ -178,7 +172,6 @@
       color: map-fetch($button, type, danger-outline, hover, color);
       border-color: map-fetch($button, type, danger-outline, hover, border);
       background-color: transparent;
-      text-shadow: none;
       box-shadow: none;
     }
 
@@ -186,7 +179,6 @@
       border-color: map-fetch($button, type, danger-outline, active, border);
       background-color: transparent;
       color: map-fetch($button, type, danger-outline, active, color);
-      text-shadow: none;
       box-shadow: none;
     }
 
@@ -196,7 +188,6 @@
     color: map-fetch($button, type, plain, color);
     border-color: transparent;
     background-color: transparent;
-    text-shadow: none;
     box-shadow: none;
 
     &:hover {
@@ -213,7 +204,6 @@
     &:focus {
       border-color: transparent;
       background-color: transparent;
-      text-shadow: none;
       box-shadow: none;
     }
   }
@@ -321,7 +311,6 @@
     background-color: map-fetch($button, type, disabled, background);
     border-color: map-fetch($button, type, disabled, border);
     color: map-fetch($button, type, disabled, color);
-    text-shadow: none;
     box-shadow: none;
 
     &.#{$namespace}button--plain,
