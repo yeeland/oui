@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## 24.0.1 - 2017-02-15
 ### Changed
 - [Patch] Simplify the CHANGELOG to make it easier to maintain.
 - [Patch] Add command to `CONTRIBUTING.md` to show how to reload the Sass and React documentation examples while developing.
@@ -15,7 +17,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 - [Patch] Simplify the steps in `CONTRIBUTING.md`.
 - [Patch] Fixed the disabled state in select Sass. (#708)
 
-## 24.0.0 - 2017-02-17
+## 24.0.0 - 2017-02-15
 ### Added
 - [Patch] Add `Label` Sass examples to the documentation. (#686)
 - [Patch] Add `Radio` Sass examples to the documentation. (#686)
