@@ -1,9 +1,11 @@
 ////
 /// Select
-/// @description Custom `select` elements for Chrome/Safari/Firefox. It
-/// partially changes `select` elements in IE.
+/// @example[html]
+///   <select name="zoo" id="zoo" class="#{$namespace}select">
+///     <option value="one">This is option one</option>
+///     <option value="two">And this is option two</option>
+///   </select>
 ////
-
 .#{$namespace}select {
   appearance: none;
   transition: border-color map-fetch($transition-duration, base);
@@ -34,9 +36,5 @@
   &--large {
     font-size: map-fetch($button, size, large, font-size);
     height: map-fetch($button, size, large, height);
-  }
-
-  &::-ms-expand {
-    display: none;
   }
 }

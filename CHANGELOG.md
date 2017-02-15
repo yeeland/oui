@@ -7,6 +7,8 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ## Unreleased
 ### Changed
 - [Patch] Simplify the CHANGELOG to make it easier to maintain.
+- [Patch] Add command to `CONTRIBUTING.md` to show how to reload the Sass and React documentation examples while developing.
+- [Patch] Move Sass file for `Select` to add it to the documentation.
 
 ### Fixed
 - [Patch] Create the needed directories before building documentation.
