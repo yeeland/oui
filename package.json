@@ -74,10 +74,10 @@
     "docs:build:js": "webpack --progress",
     "docs:build:json": "node ./scripts/docs-generate.js",
     "docs:build:htaccess": "cp -v ./docs/.htaccess ./dist/docs/oui/$(node -e \"console.log(require('./package.json').version);\")/.htaccess",
-    "docs:build:html": "npm-run-all  docs:build:html:move docs:build:html:update",
+    "docs:build:html": "npm-run-all docs:build:html:move docs:build:html:update",
     "docs:build:html:move": "cp -v ./docs/index.html ./dist/docs/oui/$(node -e \"console.log(require('./package.json').version);\")/index.html",
     "docs:build:html:update": "oui_version=$(node -e \"console.log(require('./package.json').version);\") && sed -i.bak \"s/{{ oui_version }}/$oui_version/g\" dist/docs/oui/$(node -e \"console.log(require('./package.json').version);\")/index.html",
-    "docs:watch": "npm-run-all --parallel docs:build:json docs:build:html --parallel docs:watch:js",
+    "docs:watch": "npm-run-all docs:build:mkdir --parallel docs:build:json docs:build:html --parallel docs:watch:js",
     "docs:watch:js": "webpack-dev-server --open --progress --inline"
   },
   "repository": {
