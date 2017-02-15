@@ -12,6 +12,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ### Fixed
 - [Patch] Create the needed directories before building documentation.
+- [Patch] Simplify the steps in `CONTRIBUTING.md`.
 
 ## 24.0.0 - 2017-02-17
 ### Added
