@@ -5,6 +5,11 @@
 ///     <option value="one">This is option one</option>
 ///     <option value="two">And this is option two</option>
 ///   </select>
+/// @example[html]
+///   <select name="zoo" disabled id="zoo" class="#{$namespace}select">
+///     <option value="one">This is option one</option>
+///     <option value="two">And this is option two</option>
+///   </select>
 ////
 .#{$namespace}select {
   appearance: none;
@@ -23,9 +28,13 @@
   background-size: auto 16px;
   max-width: 100%;
 
-  &:hover {
+  &:hover:not([disabled]) {
     box-shadow: map-fetch($button, type, base, hover, box-shadow);
     border-color: map-fetch($color, ui, medium);
+  }
+
+  &:disabled {
+    cursor: default;
   }
 
   &--small {
