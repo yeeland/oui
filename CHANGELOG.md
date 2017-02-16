@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Fixed
+- [Patch] Remove duplicate example for `Token`.
 
 ## 24.0.1 - 2017-02-15
 ### Changed
