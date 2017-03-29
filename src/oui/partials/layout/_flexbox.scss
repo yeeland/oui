@@ -6,7 +6,6 @@
 /// In IE10 at least one of the flex children needs to have a width or flex
 /// value otherwise the content in those children will not wrap. However, if
 /// none of children will collide, no width or flex value is needed.
-/// @group Layout
 /// @example[html] Classes can be used directly in HTML.
 ///   <div class="flex flex--1">item</div>
 ////

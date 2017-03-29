@@ -13,27 +13,12 @@ before_deploy:
 - npm start
 # Remove `devDependencies` from `package.json` before it goes to npm.
 - ./node_modules/.bin/json -I -f package.json -e 'this.devDependencies={}'
-# Copy `dist/` CSS files into a folder for S3 upload.
-- mkdir -vp s3/$(node -e "console.log(require('./package.json').version);")
-- cp -v dist/css/* s3/$(node -e "console.log(require('./package.json').version);")
 # Prepare for deploying React documentation with SSH
 # https://oncletom.io/2016/travis-ssh-deploy/
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/deploy_rsa
 - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 deploy:
-- provider: s3
-  access_key_id:
-    secure: hUfpx4qlgXNxuq7fXCCI9BpbJ1aSQJFy58CtuDW077i3WULaoKJ5aTuVOPDQY3V+hgskj5ECWXG7i7o0ZiVAyBLR92IKJQiT5NvSWkEyw0WJ/L0b2QkVB9lx1sX2wzg6k03inJnPoUIYAkhAdtj1W6sMmLXbgOouhT7bsuYUi9M=
-  secret_access_key:
-    secure: sHcezDuWh9s341ruDx4pDMmjDWuoQ7cf5jhUQu3YyNQ8zaPRfVLztnYcJFZCUAznJi7Sswb3hIVvEQq+PXgd2YibdI6lXVrFff/cqbpRT9VBllIG9gRQbXcTJ22u+SzdB9ikE4wKqqZx2aUX1GpDIQc0TigsFmXhxNxKG8gkSik=
-  bucket: optimizely-oui
-  local-dir: s3
-  region: us-west-2
-  acl: public-read
-  on:
-    repo: optimizely/oui
-    tags: true
 - provider: npm
   email:
     secure: Y+A/HOGTYtASn+cHBFxslq52Ij8sdS5I+uvKiZF6466fwJytlGzdyR9e+4NGkul0UgJl3CUY5xKZ7LhyNBPxQUaG9DmlX8pkDiuHlcFlMbCtw+aTLhRS+pfpGbOlKZUWZcM5jZF+TvPIEqN/q5/p5kZnIqp9dmVijOSu7/t0zxA=

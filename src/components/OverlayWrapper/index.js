@@ -121,6 +121,9 @@ class OverlayWrapper extends React.Component {
   componentWillUnmount() {
     this.removeBodyEventListner();
     this._tether.destroy();
+    if (this._tether.element && this._tether.element.remove) {
+      this._tether.element.remove();
+    }
   }
 
   createTether(options) {
@@ -193,9 +196,9 @@ class OverlayWrapper extends React.Component {
       /* eslint-disable react/jsx-no-bind */
       <div
         data-test-section={ this.props.testSection }
-        style={ { display: 'inline-block' } }>
+        style={{ display: 'inline-block' }}>
         <div
-          style={ { display: 'inline-block' } }
+          style={{ display: 'inline-block' }}
           ref={ (ref) => { this._activatorEl = ref; } }
           { ...eventHandlerProps }>
           { child }

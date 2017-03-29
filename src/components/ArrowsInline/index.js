@@ -1,8 +1,6 @@
 import React from 'react';
 
 /**
- * Small arrows as needed next to navigational elements. The arrows will
- * inherit the color of the parent's color.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */

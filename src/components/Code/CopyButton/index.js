@@ -4,6 +4,11 @@ import { default as Clipboard } from 'clipboard';
 import Button from '../../Button';
 import ClipboardIcon from '../../Icon/ClipboardIcon';
 
+/**
+ * @param {Object} props - Properties passed to component
+ * @returns {ReactElement}
+ * @private
+ */
 class CopyButton extends React.Component {
   componentDidMount() {
     if (this.supportsCopyAPI() && this._buttonContainer) {
@@ -33,7 +38,7 @@ class CopyButton extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <div
-        style={ { position: 'absolute', right: 0, top: '5px' } }
+        style={{ position: 'absolute', right: 0, top: '5px' }}
         ref={ (c) => { this._buttonContainer = c; } }>
         <Button
           style="plain"
