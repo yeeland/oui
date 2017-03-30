@@ -2,10 +2,15 @@ import React from 'react';
 import Button from '../../Button';
 import CloseIcon from '../../Icon/CloseIcon';
 
+/**
+ * @param {Object} props - Properties passed to component
+ * @returns {ReactElement}
+ * @private
+ */
 const DismissButton = (props) => (
   <div
     className="push-half--left flex"
-    style={ { height: '12px', width: '12px' } }>
+    style={{ height: '12px', width: '12px' }}>
     <Button
       onClick={ props.onClick }
       style="unstyled"

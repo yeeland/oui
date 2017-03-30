@@ -18,15 +18,17 @@ const Radio = (props) => {
   });
   return (
     <Label testSection={ props.testSection && props.testSection + '-label' }>
-      <div className="flex flex-align--center">
+      <div className="flex">
         <input
           type="radio"
           name={ props.name }
           defaultChecked={ props.defaultChecked }
           checked={ props.checked }
+          className="flex--none"
           disabled={ props.isDisabled }
           onChange={ props.onChange }
           data-test-section={ props.testSection }
+          style={{ 'marginTop': '0.3em' }}
         />
         <div className={ labelClassNames }>
           { props.label }

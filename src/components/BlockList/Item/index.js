@@ -56,7 +56,7 @@ class Item extends React.Component {
 
     return (
       <li
-        style={ { wordBreak: 'break-word' } }
+        style={{ wordBreak: 'break-word' }}
         data-test-section={ this.props.testSection }>
         { item }
       </li>

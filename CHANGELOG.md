@@ -2,40 +2,112 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-This file follows the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
+This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
-## [Unreleased][Unreleased]
+## Unreleased
+### Added
+- [Patch] Added a remove borders option for `BlockList`. (#691)
+
+### Fixed
+- [Patch] Remove duplicate example for `Token`.
+
+### Changed
+- [Patch] Remove CloudFront CDN upload on version release. (#706)
+- [Patch] Remove `Icon` reference in `main.js` since it isn't actually working. (#684)
+
+## 24.0.1 - 2017-02-15
+### Changed
+- [Patch] Simplify the CHANGELOG to make it easier to maintain.
+- [Patch] Remove outdated “Philosophy” part of README to make it easier to scan through.
+- [Patch] Add command to `CONTRIBUTING.md` to show how to reload the Sass and React documentation examples while developing.
+- [Patch] Move Sass file for `Select` to add it to the documentation.
+
+### Fixed
+- [Patch] Create the needed directories before building documentation.
+- [Patch] Simplify the steps in `CONTRIBUTING.md`.
+- [Patch] Fixed the disabled state in select Sass. (#708)
+
+## 24.0.0 - 2017-02-15
+### Added
+- [Patch] Add `Label` Sass examples to the documentation. (#686)
+- [Patch] Add `Radio` Sass examples to the documentation. (#686)
+- [Patch] Add `Checkbox` Sass examples to the documentation. (#686)
+- [Patch] Add Sass documentation examples for `Textarea`. (#686)
+- [Patch] Add Sass documentation examples for `Input`. (#686)
+
+### Changed
+- [Patch] Move Sass for `Textarea` to component folder. (#368)
+- [Patch] Remove `text-shadow` from buttons since the shadows are inconsistent.
+- [Patch] Move Sass for `Input` to component folder. (#368)
+- [Patch] Change `.nvmrc` to use the latest release in Node's "Boron" release.
+
+### Removed
+- [Release] Remove Sass placeholders for `textarea` and `input`. The placeholders are `%#{$namespace}text-input`,
+`%#{$namespace}textarea`, and `%oui-text-input`.
+
+### Fixed
+- [Patch] Fix issue where SVG sprite were taking up space in the documentation UI.
+- [Patch] Show the correct available languages for subcomponents in the component page. (#702)
+
+## 23.0.0 - 2017-02-03
+### Changed
+- [Feature] Launch updated documentation that shows both React and Sass
+documentation and addresses common pain points. (#686)
+
+### Removed
+- [Release] Remove jQuery that was written for the pre-React components.
+- [Release] Remove support for `oui-extras.css` that was used to generate and deploy CSS that contained out icons.
+
+## 22.5.1 - 2017-01-30
+_This version was released to fix a deployment issue in `22.5.0`._
+
+## 22.5.0 - 2017-01-27
+### Added
+- [Feature] Add a `maxHeight` prop to `BlockList` to enable scrolling. (#693)
+
+### Changed
+- [Patch] Vertically align checkbox and radio with the top of the label. (#695)
+
+### Fixed
+- [Patch] Prevent checkbox and radio elements from getting squished. (#694)
+
+## 22.4.0 - 2017-01-11
+### Fixed
+- [Patch] Clean up stray Tether DOM nodes on `componentWillUnmount` in `OverlayWrapper`. (#236)
+
+## 22.3.0 - 2016-12-20
 ### Added
 - [Feature] Add an `underline` style to `Button`.
 - [Feature] Create a `BlockList` React component. (#452)
+- [Patch] Update `ArrowsInline` to use prefixed placeholder so that it works in more places. (#687)
 
 ## [22.2.0][22.2.0] - 2016-12-06
 ### Changed
 - [Patch] Load syntax highlighting synchronously but only load the necessary languages. (#679)
 
-## [22.2.0-rc.1][22.2.0-rc.1] - 2016-12-06
+## 22.2.0-rc.1 - 2016-12-06
 ### Added
 - [Feature] Bring back syntax highlighting for Code component and load asynchronously. (#678)
 
 ### Removed
 - [Patch] Remove `IconSample` from documentation until icons are properly working. (#681)
 
-## [22.1.0][22.1.0] - 2016-11-29
+## 22.1.0 - 2016-11-29
 ### Added
 - [Feature] Added `min` and `max` props to `Input` to be used when `type` is `number`. (#676)
 
-## [22.0.0][22.0.0] - 2016-11-07
+## 22.0.0 - 2016-11-07
 _This version was accidentally released and contains no changes._
 
-## [21.0.0][21.0.0] - 2016-11-07
+## 21.0.0 - 2016-11-07
 ### Removed
 - [Release] Actually include the breaking change that was supposed to be in `v20.0.0`: Temporarily remove syntax highlighting from `Code` component because it may be causing problems on Optimizely.
 
-## [20.0.0][20.0.0] - 2016-11-07
+## 20.0.0 - 2016-11-07
 ### Removed
 - [Release] Temporarily remove syntax highlighting from `Code` component because it may be causing problems on Optimizely.
 
-## [19.3.0][19.3.0] - 2016-11-04
+## 19.3.0 - 2016-11-04
 ### Added
 - [Feature] Add `isDraggable`, `order`, and `description` props to `Token`. (#667)
 - [Patch] Add a `Button` example that has an icon within it.
@@ -43,7 +115,7 @@ _This version was accidentally released and contains no changes._
 ### Changed
 - [Feature] `OverlayWrapper` prop `onHide` can now prevent the `overlay` from hiding by returning false. (#664)
 
-## [19.2.0][19.2.0] - 2016-10-25
+## 19.2.0 - 2016-10-25
 ### Added
 - [Feature] Add a `behavior` prop to `OverlayWrapper` that determines if the overlay appears on click or hover.
 - [Feature] Add a `Poptip` component that uses `OverlayWrapper`. (#519)
@@ -56,12 +128,12 @@ _This version was accidentally released and contains no changes._
 - [Patch] Fix a CSS selector that doesn't work in Enzyme. (#649)
 - [Patch] Remove `fs`, an unused NPM module, from `package.json`. (#643)
 
-## [19.1.0][19.1.0] - 2016-10-14
+## 19.1.0 - 2016-10-14
 ### Added
 - [Feature] Create a `Radio` input React component. (#639)
 - [Feature] Add a `Textarea` React component. (#638)
 
-## [19.0.0][19.0.0] - 2016-10-13
+## 19.0.0 - 2016-10-13
 ### Added
 - [Feature] `background--none` and `cursor--auto` trumps added. (#636)
 - [Patch] Improve test coverage for `Button` React component. (#629)
@@ -79,7 +151,7 @@ _This version was accidentally released and contains no changes._
 ### Removed
 - [Release] Remove TimePicki library SCSS. (#627)
 
-## [18.3.0][18.3.0] - 2016-10-07
+## 18.3.0 - 2016-10-07
 ### Added
 - [Feature] Close the `OverlayWrapper` when clicking outside of the `overlay`. (#614)
 - [Feature] Close the `OverlayWrapper` when pressing `ESC`.
@@ -92,12 +164,12 @@ _This version was accidentally released and contains no changes._
 - [Patch] Upgrade to the latest ESLint and eslint-plugin-react. (#612)
 - [Patch] Make monospace text a bit smaller. (#618)
 
-## [18.2.1][18.2.1] - 2016-10-05
+## 18.2.1 - 2016-10-05
 ### Changed
 - [Patch] Call `Tether.disable()` when the overlay in `OverlayWrapper` is not visible. This leads to performance increases because Tether will essentially ignore the element until it becomes enabled.
 - [Patch] Reposition the Tether overlay when it is opened. This is needed because Tether can't properly calculate the position of elements that are hidden with `display: none;`.
 
-## [18.2.0][18.2.0] - 2016-10-03
+## 18.2.0 - 2016-10-03
 ### Added
 - [Feature] Provide option to "pin" popover to the edge of screen. (#606)
 - [Feature] Add SCSS for TimePicki, a jQuery Time Picker plugin.
@@ -108,11 +180,11 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Force `npm test` to fail when the documentation can't be built. (#601)
 
-## [18.1.0][18.1.0] - 2016-09-29
+## 18.1.0 - 2016-09-29
 ### Added
 - [Feature] Added `checked` prop to Checkbox react component, so that it can behave as either a controlled or uncontrolled component.
 
-## [18.0.0][18.0.0] - 2016-09-29
+## 18.0.0 - 2016-09-29
 ### Added
 - [Feature] Create generic `OverlayWrapper` component that intelligently positions an overlay on a page relative to it's children. (#572)
 - [Feature] Create simple `Popover` component. (#462)
@@ -124,11 +196,11 @@ _This version was accidentally released and contains no changes._
 ### Changed
 - [Patch] Updated contributing documentation with detailed steps about preparing for and releasing a new OUI version. (#515)
 
-## [17.5.1][17.5.1] - 2016-09-28
+## 17.5.1 - 2016-09-28
 ### Fixed
 - [Patch] Revert change to absolute paths because Babel isn't configured to resolve the module paths to the correct path.
 
-## [17.5.0][17.5.0] - 2016-09-28
+## 17.5.0 - 2016-09-28
 ### Added
 - [Feature] Add `isOptional` prop to `Input` React component.
 - [Feature] Convert `Input` to an ES2015 class to add `blur` method and allow it to be referenced with `ref`. (#591)
@@ -143,26 +215,26 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Fix two small React component console errors. (#583)
 
-## [17.4.0][17.4.0] - 2016-09-22
+## 17.4.0 - 2016-09-22
 ### Added
 - [Feature] Add `onKeyDown` event to `Input` React component.
 
 ### Changed
 - [Patch] Always load external fonts through HTTPS, not a protocol relative URL. (#581)
 
-## [17.3.2][17.3.2] - 2016-09-19
+## 17.3.2 - 2016-09-19
 ### Changed
 - [Patch] Remove `css-loader` dependency that was used by highlight.js and implement it the old-fashioned way. (#579)
 
-## [17.3.1][17.3.1] - 2016-09-19
+## 17.3.1 - 2016-09-19
 ### Changed
 - [Patch] Correct regression and mistaken size classes for icons in SCSS. (#566) and (#497)
 
-## [17.3.0][17.3.0] - 2016-09-16
+## 17.3.0 - 2016-09-16
 ### Added
 - [Feature] Add `isActive` prop to Button React Component
 
-## [17.2.0][17.2.0] - 2016-09-16
+## 17.2.0 - 2016-09-16
 ### Added
 - [Feature] Add `onFocus` event to Input React Component
 - [Feature] Add `isOptional` and `isRequired` prop to Label React component to get properly colored optional/required labels. (#556)
@@ -171,7 +243,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Use correct oui- prefix with label. (#555)
 - [Patch] Hide the `CopyButton` component in browsers that do not support it. (#467)
 
-## [17.1.0][17.1.0] - 2016-09-12
+## 17.1.0 - 2016-09-12
 ### Added
 - [Feature] Add `unstyled` option for `Button`.
 - [Feature] Add Python to code language prop for syntax highlighting. (#558)
@@ -192,23 +264,23 @@ _This version was accidentally released and contains no changes._
 - [Patch] Fixup for React icon size prop warnings with proper array syntax in script. (#560)
 - [Patch] Update icon classes so the numerical sizes match the written sizes. (#549)
 
-## [17.0.0][17.0.0] - 2016-09-07
+## 17.0.0 - 2016-09-07
 ### Changed
 - [Release] Add a `tableLayoutAlgorithm` prop to the `Table` component and set it to `fixed` by default. Existing uses of the component should be updated to either ensure they look correct with the new default or add `tableLayoutAlgorithm={ 'auto' }` to the instance of `Table`. (#546)
 - [Patch] Replace in-house test helpers with Airbnb's Enzyme.
 
-## [16.0.0][16.0.0] - 2016-09-06
+## 16.0.0 - 2016-09-06
 ### Changed
 - [Release] Remove `text-align: center` from `[colspan]`. (#544)
 
 ### Removed
 - [Patch] Revert `merge=union` in `.gitattributes` because it was causing more harm than good. (#540)
 
-## [15.2.1][15.2.1] - 2016-09-02
+## 15.2.1 - 2016-09-02
 ### Changed
 - [Patch] Remove `padding-left: 0;` and `padding-right: 0;` from `oui-button--full` because it is never a desired style.
 
-## [15.2.0][15.2.0] - 2016-09-02
+## 15.2.0 - 2016-09-02
 ### Added
 - [Feature] Add `colSpan` prop to `Table.TD` component. (#533)
 - [Feature] Add size class based on icon size prop. (#517)
@@ -220,7 +292,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Fix warnings for keys in ButtonRow example.
 - [Patch] Fix typo in `rule-no-bottom-border` SCSS for `Table`.
 
-## [15.1.0][15.1.0] - 2016-08-30
+## 15.1.0 - 2016-08-30
 ### Added
 - [Feature] Add a `verticalAlign` prop to `Table.TD` component.
 - [Feature] Add the ability to pass a `width` to `Table.TD` and `Table.TH` components.
@@ -231,12 +303,12 @@ _This version was accidentally released and contains no changes._
 - [Patch] Add `user-select: none` rule to `oui-button`.
 - [Patch] Make `Button` `children` prop more generic. (#507)
 
-## [15.0.0][15.0.0] - 2016-08-26
+## 15.0.0 - 2016-08-26
 ### Changed
 - [Release] Change the `Table` React component API to be more declarative. (#513)
 - [Patch] Remove svgo-loader from inline requires for React icons and move svgo to bash script. Fixes breaking Jenkins builds and svgo issue with recent node versions. (#520)
 
-## [14.1.0][14.1.0] - 2016-08-25
+## 14.1.0 - 2016-08-25
 ### Added
 - [Feature] Add size class based on icon size prop. (#517)
 - [Feature] Add TabNav react component
@@ -247,13 +319,13 @@ _This version was accidentally released and contains no changes._
 - [Patch] Fix typo in React prop description to say onChange fires every keypress. (#492)
 - [Patch] Fix disabled button namespace with OUI. Add all disabled examples to React docs for easy testing for now. (#511)
 
-## [14.0.5][14.0.5] - 2016-08-17
+## 14.0.5 - 2016-08-17
 ### Added
 - [Feature] Add isFilter prop to <Input> for search icon (#488)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Minor version bump from publish issues (user error). (#498)
 - [Patch] Update require.css statement to ignore local webpack config transforms. Version patch bump due to publish user error. (#498)
 
-## [14.0.0][14.0.0] - 2016-08-15
+## 14.0.0 - 2016-08-15
 ### Added
 - [Feature] Create a shell script that programmatically generate a React component for each icon and check them into the codebase. (#475)
 
@@ -267,7 +339,7 @@ _This version was accidentally released and contains no changes._
 ### Changed
 - [Release] Add webpack loaders into `require(...)` (opposed to `webpack.config.js`) and as `dependencies` so that icon SVGs and `highlight.js` CSS can be loaded without requiring applications that use OUI's React components to configure the loaders in their `package.json`. (#485)
 
-## [13.2.0][13.2.0] - 2016-08-03
+## 13.2.0 - 2016-08-03
 ### Added
 - [Feature] Created `Token` React component.
 - [Patch] Include an example of a `Table` React component with a `Button` within it.
@@ -276,11 +348,11 @@ _This version was accidentally released and contains no changes._
 - [Patch] Add expected spacing between the buttons in the React ButtonRow component. (#473)
 - [Patch] Fix jarring active state for toggle buttons. (#470)
 
-## [13.1.1][13.1.1] - 2016-07-22
+## 13.1.1 - 2016-07-22
 ### Fixed
 - [Patch] Export the `ButtonRow` and `Table` components.
 
-## [13.1.0][13.1.0] - 2016-07-22
+## 13.1.0 - 2016-07-22
 ### Added
 - [Feature] Add a `tiny` sized button. (#454)
 - [Patch] Add more examples to the React documentation. (#460)
@@ -294,7 +366,7 @@ _This version was accidentally released and contains no changes._
 ### Removed
 - [Patch] Remove unused root `index.js` file. (#466)
 
-## [13.0.1][13.0.1] - 2016-07-13
+## 13.0.1 - 2016-07-13
 ### Added
 - [Patch] Add Google Analytics to React documentation. (#448)
 
@@ -302,7 +374,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Add `highlight.js` to dependencies, not devDependencies. (#446)
 - [Patch] Fix paths to static assets in React documentation so it doesn't assume it's hosted at the server root. (#444)
 
-## [13.0.0][13.0.0] - 2016-07-13
+## 13.0.0 - 2016-07-13
 ### Added
 - [Feature] Extend `Code` React component to accept a language. (#433)
 
@@ -313,7 +385,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Update SCSS to add selectors for `.oui-button` where `.#{$namespace}button` is used. (#441)
 - [Patch] Update outdated references to `npm run react:serve`. (#440)
 
-## [13.0.0-rc.3][13.0.0-rc.3] - 2016-07-05
+## 13.0.0-rc.3 - 2016-07-05
 ### Added
 - [Feature] Add syntax highlighting option to React `Code` component.
 - [Feature] Add a new `Table` React component.
@@ -321,11 +393,11 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Update instructions for deploying beta versions of OUI.
 
-## [13.0.0-rc.2][13.0.0-rc.2] - 2016-07-01
+## 13.0.0-rc.2 - 2016-07-01
 ### Added
 - [Patch] Add documentation about releasing beta versions of OUI.
 
-## [13.0.0-rc.1][13.0.0-rc.1] - 2016-07-01
+## 13.0.0-rc.1 - 2016-07-01
 ### Added
 - [Release] Add React to the OUI codebase. (#378)
 - [Release] Add Jest and the ESLint React plugin. (#378)
@@ -342,25 +414,25 @@ _This version was accidentally released and contains no changes._
 - [Patch] Add note to `README.md` saying that ScribeSass is internal only. (#359)
 - [Patch] Take a pass through our markdown files and update outdated information.
 
-## [12.2.0][12.2.0] - 2016-06-24
+## 12.2.0 - 2016-06-24
 ### Added
 - [Feature] Add dropup option for dropdowns. (#425)
 
-## [12.1.0][12.1.0] - 2016-06-22
+## 12.1.0 - 2016-06-22
 ### Added
 - [Feature] Add OUI overrides for Select2 plugin to library directory. (#421)
 
-## [12.0.0][12.0.0] - 2016-06-17
+## 12.0.0 - 2016-06-17
 ### Added
 - [Release] Admin color helpers as separate partial, also added better HTML examples. Renamed class, so it's a breaking change.
 - [Feature] Add token styles from V2.
 - [Feature] Add badge styles from V2.
 
-## [11.5.0][11.5.0] - 2016-06-16
+## 11.5.0 - 2016-06-16
 ### Added
 - [Feature] Add admin color from v1 and admin helper classes (#414)
 
-## [11.4.0][11.4.0] - 2016-06-01
+## 11.4.0 - 2016-06-01
 ### Added
 - [Feature] Restore `_search.scss` and icon to make search inputs more clear. (#400)
 
@@ -371,28 +443,28 @@ _This version was accidentally released and contains no changes._
 - [Patch] Update styling of jQuery datepicker in `_datepicker.scss`.
 - [Patch] Tighten Dropdown line-height to work better for 3-line descriptions. (#403)
 
-## [11.3.1][11.3.1] - 2016-05-12
+## 11.3.1 - 2016-05-12
 ### Fixed
 - [Patch] Change text-shadow offset of highlight buttons to match danger button. (#398)
 
-## [11.3.0][11.3.0] - 2016-04-19
+## 11.3.0 - 2016-04-19
 ### Added
 - [Feature] Added `--small` variation of `progress-dots`
 
-## [11.2.0][11.2.0] - 2016-04-18
+## 11.2.0 - 2016-04-18
 ### Added
 - [Feature] Add draft and live background color helpers (#376)
 
 ### Removed
 - [Patch] Remove linter pre-commit hook to avoid annoying Ruby dependency. (#370)
 
-## [11.1.0][11.1.0] - 2016-04-12
+## 11.1.0 - 2016-04-12
 ### Changed
 - [Patch] Restyle button focus to be more consistent with other inputs. (#355)
 - [Patch] Fix color of button focus to actually be consistent.
 - [Feature] Updated popover content to have smaller body font size and specifications for a footer. Changed size of ($line-height, tight) variable.
 
-## [11.0.0][11.0.0] - 2016-04-11
+## 11.0.0 - 2016-04-11
 ### Added
 - [Feature] Add `.dropdown--descriptive` class to support dropdown with sentences of text inside. (#352)
 - [Feature] Adding new style of loader, called `progress-dots`. (#347)
@@ -413,7 +485,7 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Fix issue where tabs border was not appearing ebcause of CSS issues. (#343, #345)
 
-## [10.0.0][10.0.0] - 2016-03-29
+## 10.0.0 - 2016-03-29
 ### Added
 - [Feature] Autoprefixer, removing all mixins that previously provided prefixes. (#240)
 - [Feature] Adding new white-space trump. (#223)
@@ -482,40 +554,40 @@ _This version was accidentally released and contains no changes._
 - [Patch] Removed `--deprecated.scss` files and import references to them. (#229)
 - [Release] Remove `.#{$namespace}form--small` (#162)
 
-## [9.0.8][9.0.8] - 2016-03-23
+## 9.0.8 - 2016-03-23
 ### Changed
 - [Patch] Add email address to NPM Travis CI config.
 
-## [9.0.7][9.0.7] - 2016-03-23
+## 9.0.7 - 2016-03-23
 ### Changed
 - [Patch] Force a version of NPM and tweak version detection so that the Travis CI NPM publishing works. (#328)
 
-## [9.0.6][9.0.6] - 2016-03-23
+## 9.0.6 - 2016-03-23
 ### Changed
 - [Patch] Use Travis CI to publish the NPM package. (#328)
 
-## [9.0.5][9.0.5] - 2016-03-23
+## 9.0.5 - 2016-03-23
 ### Changed
 - [Patch] Set ACL on Travis CI uploads so that the files are publicly viewable. (#326)
 
-## [9.0.4][9.0.4] - 2016-03-23
+## 9.0.4 - 2016-03-23
 ### Changed
 - [Patch] Update pre-commit hook to run `npm test` instead of `gulp lint`. (#324)
 
-## [9.0.3][9.0.3] - 2016-03-23
+## 9.0.3 - 2016-03-23
 ### Changed
 - [Patch] Offload deployment tasks to Travis CI and change the commands used to deploy. (#319, #320)
 
-## [9.0.2][9.0.2] - 2016-03-14
+## 9.0.2 - 2016-03-14
 ### Added
 - [Patch] Add OUI icons preview URL to icons SCSS comments. (#287)
 - [Patch] Use `oui-icons` NPM package instead of the GitHub URL. (#277)
 
-## [9.0.1][9.0.1] - 2016-02-19
+## 9.0.1 - 2016-02-19
 ### Fixed
 - [Patch] Change `oui-icons` reference in `package.json` to support older versions of NPM. (#222)
 
-## [9.0.0][9.0.0] - 2016-01-19
+## 9.0.0 - 2016-01-19
 ### Added
 - [Feature] Moving gulp tasks into individual files. Adding documenation for each one. (#202)
 - [Feature] Add a link to the living OUI documentation in the README. (#177)
@@ -535,7 +607,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Removed outdated information from `CONTRIBUTING.md`. (#193)
 - [Patch] Remove comment about `space-around` that isn't needed. (#180)
 
-## [8.0.0][8.0.0] - 2016-01-13
+## 8.0.0 - 2016-01-13
 ### Added
 - [Feature] Adding `.icon--text-align` class to allow inline icons to visually align with the text. E.g., help icons.
 - [Feature] Adding an image of our mascot, Louis.
@@ -552,11 +624,11 @@ _This version was accidentally released and contains no changes._
 - [Patch] Remove executable bit from non-executable files. (#161)
 - [Patch] Remove some outdated information from `README.md`. (#174)
 
-## [7.1.0][7.1.0] - 2015-12-08
+## 7.1.0 - 2015-12-08
 ### Changed
 - [Feature] Add ability to generate CSS with icons for Canvas and simplify deployment steps.
 
-## [7.0.0][7.0.0] - 2015-12-04
+## 7.0.0 - 2015-12-04
 ### Added
 - [Release] Adding local JS to power components.
 - [Feature] Adding new, custom styling for `select` elements. Removed select styling from `_forms.scss`.
@@ -585,7 +657,7 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Fix incorrect links in the changelog.
 
-## [6.0.0][6.0.0] - 2015-10-07
+## 6.0.0 - 2015-10-07
 ### Changed
 - [Patch] Updating weight of poptips from not specified to `600`.
 - [Patch] Border-radius on buttons now all `2px`.
@@ -596,7 +668,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Adding fix for Firefox buttons in `_reset.scss`, removing inner padding and border.
 - [Release] Rename LEGO to OUI. This creates a new NPM registry and changes the GitHub repository URL. (#130)
 
-## [5.0.0][5.0.0] - 2015-09-28
+## 5.0.0 - 2015-09-28
 ### Added
 - [Patch] Adding `watch` process so that Sass changes will compile automatically. To use run `gulp watch`.
 
@@ -608,7 +680,7 @@ _This version was accidentally released and contains no changes._
 - [Release] Updating buttons to use new styling, `button--dismiss` is now `button--plain`.
 - [Patch] Removing `button--extra`. It is not used in the app and is not needed.
 
-## [4.0.1][4.0.1] - 2015-09-22
+## 4.0.1 - 2015-09-22
 ### Fixed
 - [Patch] Added back a reference to the `_borders.scss` file. (#127)
 - [Patch] Fixes bug in previous release that caused the height of `lego-select` to be too large in FF/IE.
@@ -619,7 +691,7 @@ _This version was accidentally released and contains no changes._
 - [Patch] Adding `_flexbox--deprecated.scss` to temporarily retain the `flex-` classes.
 - [Patch] Adding instructions in CONTRIBUTING.md about how to handle deprecated code.
 
-## [4.0.0][4.0.0] - 2015-09-14
+## 4.0.0 - 2015-09-14
 ### Added
 - [Patch] `em` italic
 - [Release] Rebuilding flexbox mixins/classes, removing `lego-pane...` classes. (#70)
@@ -640,14 +712,14 @@ _This version was accidentally released and contains no changes._
 - [Patch] Fixes alignment of `lego-icon` inside `lego-button`.
 - [Patch] Fixes height of `lego-select` by adding `box-sizing: content-box;` so height will be calculated the same as `lego-button`.
 
-## [3.1.0][3.1.0] - 2015-09-02
+## 3.1.0 - 2015-09-02
 ### Added
 - [Feature] Add explanations to Patch, Feature, and Release in `CONTRIBUTING.md`. (#110)
 
 ### Changed
 - [Patch] `.lego-button--highlight` changed from green to bue
 
-## [3.0.0][3.0.0] - 2015-09-01
+## 3.0.0 - 2015-09-01
 ### Added
 - [Patch] Add "Charcoal" color `#383838`.
 - [Patch] Checks to see if `$include-fonts` map exists. Allows usage of Lego without being forced to include brand font. (#90)
@@ -665,12 +737,12 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Change the weight of `<b>` and `<strong>` tags to `600`.
 
-## [2.0.0][2.0.0] - 2015-08-18
+## 2.0.0 - 2015-08-18
 ### Changed
 - [Release] Major refactor of button styles and class names. New available class names are `.lego-button--highlight`, `lego-button--outline`, `.lego-button--outline-reverse`, `.lego-button--extra`, `.lego-button--dismiss`. `.lego-button--brand` has been deprecated. Usage for classes to follow shortly. (#92) (#85) (#74)
 - [Release] Added `!important` to buttons so that when used as anchors the color is consistent.
 
-## [1.0.0][1.0.0] - 2015-08-18
+## 1.0.0 - 2015-08-18
 ### Fixed
 - [Patch] Change comments in `_spinner.scss` to refer to `.lego-overlay` since `.lego-spinner-wrap` doesn't exist. (#76)
 ### Added
@@ -683,7 +755,7 @@ _This version was accidentally released and contains no changes._
 ### Removed
 - [Patch] Remove old gitignore targets from js days. (#97)
 
-## [0.0.3][0.0.3] - 2015-08-05
+## 0.0.3 - 2015-08-05
 ### Added
 - [Patch] Add a `.lego-pane--scroll-x` for setting `overflow-x` to `auto`.
 - [Patch] Add a `.pointer-events--none` trump for disabling pointer events.
@@ -696,7 +768,7 @@ _This version was accidentally released and contains no changes._
 ### Fixed
 - [Patch] Fix the name of the npm module and changed the privacy setting to false.
 
-## [0.0.2][0.0.2] - 2015-07-13
+## 0.0.2 - 2015-07-13
 ### Fixed
 - [Patch] Fix the broken links in `CHANGELOG.md`. (#60)
 
@@ -718,78 +790,3 @@ _This version was accidentally released and contains no changes._
 ## 0.0.1 - 2015-06-24
 ### Added
 - [Patch] Use semantic versioning in LEGO (#58).
-
-[Unreleased]: https://github.com/optimizely/oui/compare/v22.2.0...HEAD
-[0.0.2]: https://github.com/optimizely/oui/compare/v0.0.1...v0.0.2
-[0.0.3]: https://github.com/optimizely/oui/compare/v0.0.2...v0.0.3
-[1.0.0]: https://github.com/optimizely/oui/compare/v0.0.3...v1.0.0
-[2.0.0]: https://github.com/optimizely/oui/compare/v1.0.0...v2.0.0
-[3.0.0]: https://github.com/optimizely/oui/compare/v2.0.0...v3.0.0
-[3.1.0]: https://github.com/optimizely/oui/compare/v3.0.0...v3.1.0
-[4.0.0]: https://github.com/optimizely/oui/compare/v3.1.0...v4.0.0
-[4.0.1]: https://github.com/optimizely/oui/compare/v4.0.0...v4.0.1
-[5.0.0]: https://github.com/optimizely/oui/compare/v4.0.1...v5.0.0
-[6.0.0]: https://github.com/optimizely/oui/compare/v5.0.0...v6.0.0
-[7.0.0]: https://github.com/optimizely/oui/compare/v6.0.0...v7.0.0
-[7.1.0]: https://github.com/optimizely/oui/compare/v7.0.0...v7.1.0
-[8.0.0]: https://github.com/optimizely/oui/compare/v7.1.0...v8.0.0
-[9.0.0]: https://github.com/optimizely/oui/compare/v8.0.0...v9.0.0
-[9.0.1]: https://github.com/optimizely/oui/compare/v9.0.0...v9.0.1
-[9.0.2]: https://github.com/optimizely/oui/compare/v9.0.1...v9.0.2
-[9.0.3]: https://github.com/optimizely/oui/compare/v9.0.2...v9.0.3
-[9.0.4]: https://github.com/optimizely/oui/compare/v9.0.3...v9.0.4
-[9.0.5]: https://github.com/optimizely/oui/compare/v9.0.4...v9.0.5
-[9.0.6]: https://github.com/optimizely/oui/compare/v9.0.5...v9.0.6
-[9.0.7]: https://github.com/optimizely/oui/compare/v9.0.6...v9.0.7
-[9.0.8]: https://github.com/optimizely/oui/compare/v9.0.7...v9.0.8
-[10.0.0]: https://github.com/optimizely/oui/compare/v9.0.8...v10.0.0
-[11.0.0]: https://github.com/optimizely/oui/compare/v10.0.0...v11.0.0
-[11.1.0]: https://github.com/optimizely/oui/compare/v11.0.0...v11.1.0
-[11.2.0]: https://github.com/optimizely/oui/compare/v11.1.0...v11.2.0
-[11.3.0]: https://github.com/optimizely/oui/compare/v11.2.0...v11.3.0
-[11.3.1]: https://github.com/optimizely/oui/compare/v11.3.0...v11.3.1
-[11.4.0]: https://github.com/optimizely/oui/compare/v11.3.1...v11.4.0
-[11.5.0]: https://github.com/optimizely/oui/compare/v11.4.0...v11.5.0
-[12.0.0]: https://github.com/optimizely/oui/compare/v11.5.0...v12.0.0
-[12.1.0]: https://github.com/optimizely/oui/compare/v12.0.0...v12.1.0
-[12.2.0]: https://github.com/optimizely/oui/compare/v12.1.0...v12.2.0
-[13.0.0-rc.1]: https://github.com/optimizely/oui/compare/v12.2.0...v13.0.0-rc.1
-[13.0.0-rc.2]: https://github.com/optimizely/oui/compare/v13.0.0-rc.1...v13.0.0-rc.2
-[13.0.0-rc.3]: https://github.com/optimizely/oui/compare/v13.0.0-rc.2...v13.0.0-rc.3
-[13.0.0]: https://github.com/optimizely/oui/compare/v13.0.0-rc.3...v13.0.0
-[13.0.1]: https://github.com/optimizely/oui/compare/v13.0.0...v13.0.1
-[13.1.0]: https://github.com/optimizely/oui/compare/v13.0.1...v13.1.0
-[13.1.1]: https://github.com/optimizely/oui/compare/v13.1.0...v13.1.1
-[13.2.0]: https://github.com/optimizely/oui/compare/v13.1.1...v13.2.0
-[14.0.0]: https://github.com/optimizely/oui/compare/v13.2.0...v14.0.0
-[14.0.5]: https://github.com/optimizely/oui/compare/v14.0.0...v14.0.5
-[14.1.0]: https://github.com/optimizely/oui/compare/v14.0.5...v14.1.0
-[15.0.0]: https://github.com/optimizely/oui/compare/v14.1.0...v15.0.0
-[15.1.0]: https://github.com/optimizely/oui/compare/v15.0.0...v15.1.0
-[15.2.0]: https://github.com/optimizely/oui/compare/v15.1.0...v15.2.0
-[15.2.1]: https://github.com/optimizely/oui/compare/v15.2.0...v15.2.1
-[16.0.0]: https://github.com/optimizely/oui/compare/v15.2.1...v16.0.0
-[17.0.0]: https://github.com/optimizely/oui/compare/v16.0.0...v17.0.0
-[17.1.0]: https://github.com/optimizely/oui/compare/v17.0.0...v17.1.0
-[17.2.0]: https://github.com/optimizely/oui/compare/v17.1.0...v17.2.0
-[17.3.0]: https://github.com/optimizely/oui/compare/v17.2.0...v17.3.0
-[17.3.1]: https://github.com/optimizely/oui/compare/v17.3.0...v17.3.1
-[17.3.2]: https://github.com/optimizely/oui/compare/v17.3.1...v17.3.2
-[17.4.0]: https://github.com/optimizely/oui/compare/v17.3.2...v17.4.0
-[17.5.0]: https://github.com/optimizely/oui/compare/v17.4.0...v17.5.0
-[17.5.1]: https://github.com/optimizely/oui/compare/v17.5.0...v17.5.1
-[18.0.0]: https://github.com/optimizely/oui/compare/v17.5.1...v18.0.0
-[18.1.0]: https://github.com/optimizely/oui/compare/v18.0.0...v18.1.0
-[18.2.0]: https://github.com/optimizely/oui/compare/v18.1.0...v18.2.0
-[18.2.1]: https://github.com/optimizely/oui/compare/v18.2.0...v18.2.1
-[18.3.0]: https://github.com/optimizely/oui/compare/v18.2.1...v18.3.0
-[19.0.0]: https://github.com/optimizely/oui/compare/v18.3.0...v19.0.0
-[19.1.0]: https://github.com/optimizely/oui/compare/v19.0.0...v19.1.0
-[19.2.0]: https://github.com/optimizely/oui/compare/v19.1.0...v19.2.0
-[19.3.0]: https://github.com/optimizely/oui/compare/v19.2.0...v19.3.0
-[20.0.0]: https://github.com/optimizely/oui/compare/v19.3.0...v20.0.0
-[21.0.0]: https://github.com/optimizely/oui/compare/v20.0.0...v21.0.0
-[22.0.0]: https://github.com/optimizely/oui/compare/v21.0.0...v22.0.0
-[22.1.0]: https://github.com/optimizely/oui/compare/v22.0.0...v22.1.0
-[22.2.0-rc.1]: https://github.com/optimizely/oui/compare/v22.1.0...v22.2.0-rc.1
-[22.2.0]: https://github.com/optimizely/oui/compare/22.2.0-rc.1...v22.2.0

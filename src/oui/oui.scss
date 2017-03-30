@@ -1,9 +1,8 @@
 ////
 /// OUI
 /// @description Root file compiling only OUI CSS.
-/// @group Core
-/// @advanced
 ////
+
 /// Reminder: Adding a new partial file here? Don't forget
 /// to add a reference in Optly repo v2.scss!
 
@@ -24,14 +23,14 @@ $include-fonts:(
 /// Trumps
 /// @description Trumps use `!important` classes for overrides and should
 /// always be loaded last.
-@import 'partials/trumps/background';
-@import 'partials/trumps/borders';
-@import 'partials/trumps/layout';
-@import 'partials/trumps/margin';
-@import 'partials/trumps/padding';
-@import 'partials/trumps/type';
-@import 'partials/trumps/sizing';
-@import 'partials/trumps/admin';
+@import '../utilities/Background/index';
+@import '../utilities/Border/index';
+@import '../utilities/Layout/index';
+@import '../utilities/Margin/index';
+@import '../utilities/Padding/index';
+@import '../utilities/Type/index';
+@import '../utilities/Sizing/index';
+@import '../utilities/Admin/index';
 
 /// Third Party Code
 @import 'library/highlight.js/9.6.0/docco';

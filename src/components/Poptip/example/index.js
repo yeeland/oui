@@ -9,10 +9,7 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <Poptip
-          content={
-            `Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis
-            vitae nihil libero et, hic!`
-          }>
+          content="Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!">
           <Button>Basic Poptip</Button>
         </Poptip>
       </div>,
@@ -23,10 +20,7 @@ export default [
       <div className="position--relative height--100">
         Learn More&hellip;&nbsp;
         <Poptip
-          content={
-            `Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis
-            vitae nihil libero et, hic!`
-          }
+          content="Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!"
           horizontalAttachment="left"
           horizontalTargetAttachment="right"
           verticalAttachment="middle"
@@ -42,10 +36,7 @@ export default [
     examples: [
       <div className="position--relative height--100">
         <Poptip
-          content={
-            `Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis
-            vitae nihil libero et, hic!`
-          }
+          content="Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!"
           horizontalAttachment="left"
           horizontalTargetAttachment="left"
           verticalAttachment="top"
