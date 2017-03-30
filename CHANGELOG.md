@@ -11,6 +11,10 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Fixed
 - [Patch] Remove duplicate example for `Token`.
 
+### Changed
+- [Patch] Remove CloudFront CDN upload on version release. (#706)
+- [Patch] Remove `Icon` reference in `main.js` since it isn't actually working. (#684)
+
 ## 24.0.1 - 2017-02-15
 ### Changed
 - [Patch] Simplify the CHANGELOG to make it easier to maintain.
@@ -36,7 +40,6 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 - [Patch] Remove `text-shadow` from buttons since the shadows are inconsistent.
 - [Patch] Move Sass for `Input` to component folder. (#368)
 - [Patch] Change `.nvmrc` to use the latest release in Node's "Boron" release.
-- [Patch] Remove CloudFront CDN upload on version release. (#706)
 
 ### Removed
 - [Release] Remove Sass placeholders for `textarea` and `input`. The placeholders are `%#{$namespace}text-input`,
@@ -77,7 +80,7 @@ _This version was released to fix a deployment issue in `22.5.0`._
 - [Feature] Create a `BlockList` React component. (#452)
 - [Patch] Update `ArrowsInline` to use prefixed placeholder so that it works in more places. (#687)
 
-## 22.2.0 - 2016-12-06
+## [22.2.0][22.2.0] - 2016-12-06
 ### Changed
 - [Patch] Load syntax highlighting synchronously but only load the necessary languages. (#679)
 
