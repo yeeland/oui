@@ -17,7 +17,6 @@ This document contains four parts:
 1. [Documentation](#documentation)
 2. [Including OUI in your project](#including-oui-in-your-project)
 3. [Contributing to OUI](#contributing-to-oui)
-4. [Philosophy](#philosophy)
 
 ***
 
@@ -25,40 +24,11 @@ This document contains four parts:
 
 [http://design.optimizely.com/docs/oui/](http://design.optimizely.com/docs/oui/)
 
-This "living" style guide uses [ScribeSass](https://github.com/optimizely/scribesass) (currently internal to Optimizely) to construct single-page documentation from comments within each Sass file.
+This “living” style guide is built in React and is automatically updated with each new OUI release.
 
 ***
 
 ## Including OUI in your project
-
-There are two ways to include OUI in your project.
-
-### Pre-compiled CSS file
-
-This is a quick and easy way to add OUI to a project. It is the least flexible option but works well for small projects and and prototypes.
-
-You can include this pre-compiled version of OUI in your application:
-
-```html
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/17.5.0/oui.css">
-<link rel="stylesheet" href="https://oui.cdn.optimizely.com/17.5.0/oui-extras.css">
-```
-
-Replace `17.5.0` with the [latest release](https://github.com/optimizely/oui/releases) if needed.
-
-`oui.css` contains the core CSS and `oui-extras.css` currently contains only classes to render OUI icons. If you plan to use [OUI icons](https://github.com/optimizely/oui-icons) you'll need to include both `oui.css` and `oui-extras.css` in your project.
-
-The icons can be used like this:
-
-```html
-<div class="icon icon--add-16"></div>
-```
-
-This quick and easy implementation does not let you change the color of the icons. Look at the [OUI icons](https://github.com/optimizely/oui-icons) repository for a more advanced and flexible implementation.
-
-### Grab OUI Sass and React components from npm
-
-This option is great for developers that want to tightly integrate OUI into their existing Sass or use our React components.
 
 OUI is published as an npm module called `optimizely-oui` that contains Sass files and React components.
 
@@ -115,7 +85,7 @@ For example, if you're building a mobile site, your main SCSS file `mobile.scss`
 
 #### Using OUI React components
 
-OUI comes with React components that can be used instead of copying and pasting HTML from the documentation. You can view these components locally by running `npm run react:watch` after cloning the repository and installing dependencies with `npm install`.
+OUI comes with React components that can be used instead of copying and pasting HTML from the documentation. You can view these components locally by running `npm run docs:watch` after cloning the repository and installing dependencies with `npm install`.
 
 These components can be used in a React codebase by requiring OUI:
 
@@ -132,57 +102,3 @@ import Button from 'optimizely-oui';
 Want to run OUI locally? Clone this repository and run `npm install`. The `npm run` command will list all the available commands.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
-
-***
-
-## Philosophy
-
-OUI stands for Optimizely User Interface. It's a collection of CSS/HTML/JS elements and objects meant to be combined and extended to create larger interfaces, influenced primarily by Harry Robert's work on [inuit.css](https://github.com/csswizardry/inuit.css/) and Johnathon Snooks [SMACSS](https://smacss.com/). The goals of this library are to provide code that is...
-
-1. **Abstracted.** Component names shouldn't be derived from the content they contain. Class names should convey structural meaning.
-1. **Reusable.** Components should be generic enough to be reused throughout the site. They should make no assumptions what page/view they will be used on. Problems solved in one area should be easily applied elsewhere.
-1. **Mixable.** Components should be able to join together to create larger blocks.
-1. **Powered by variables.** Nearly all design elements — colors, fonts, spacings, shadows — should be defined using the pre-existing [variables](https://github.com/optimizely/oui/blob/master/oui/_oui-variables.scss).
-
-By achieving these goals our code becomes...
-
-1. **Scalable.** Reusing patterns means new elements can be created faster and with minimal additional CSS.
-1. **Consistent.** Not only will developers be able to read each other's code more easily we'll have a better end-user experience across the product.
-1. **Smaller and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)er.** Since we're constantly reusing low-level objects to build larger ones, often with Sass' <code>@extend</code> functionality, we cut down on CSS bloat. Less code means fewer bugs.
-
-### Writing Good Classes
-
-In order to write HTML and CSS classes that provide meaning for developers we're using the BEM syntax. BEM stands for Block, Element, Modifier and is becoming a popular approach to building CSS and HTML that describes an object's internal relationships.
-
-```html
-<div class="grid grid--gutter">
-  <div class="grid__cell">
-    grid cell
-  </div>
-  <div class="grid__cell">
-    grid cell
-  </div>
-  </div>
-  <div class="grid__cell">
-    grid cell
-  </div>
-</div>
-```
-
-In the example above...
-
-- **Block** is represented by <code>grid</code> and is the parent class of the object.
-- **Elements** are children of the object. They are named by joining the parent class name and a child class with a double underscore. In this case <code>grid__cell</code>.
-- **Modifiers** are variations on the default. In this case we have a <code>grid--gutter</code>. This provides spacing between the cells.
-
-Though somewhat verbose, this syntax makes it easy to determine the child/parent relationships between bits of code, especially when different objects are mixed together. It can be tricky naming elements so some judgment is required. This becomes easier over time.
-
-For a longer discussion Harry Roberts provides a <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">good introduction</a> to the syntax.
-
-### Futher Reading
-
-- [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/). Introduction to BEM.
-- [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/). What is a meaningful class name?
-- [OOCSS + Sass = The best way to CSS](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/). Some examples of bulding on existing objects using `@extend` in Sass.
-- [Hacks for dealing with specificity](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/). Some more technical details around specificity.
-- [Normalising designs for better quality CSS (Video)](https://www.youtube.com/watch?v=ldx4ZFxMEeo). A conference presentation about normalizing designs and the process from design to HTML.

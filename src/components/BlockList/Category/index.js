@@ -7,7 +7,7 @@ const Category = (props) => (
     { props.header &&
       <div
         className="oui-block-list__category__name soft-half--ends soft--sides"
-        style={ { wordBreak: 'break-word' } }>
+        style={{ wordBreak: 'break-word' }}>
         { props.header }
       </div>
     }

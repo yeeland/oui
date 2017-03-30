@@ -20,8 +20,9 @@ const BlockList = (props) => {
   return (
     <div
       className={ classes }
-      data-test-section={ props.testSection }>
-      <ul style={ { display: 'inline-block', minWidth: '100%' } }>
+      data-test-section={ props.testSection }
+      style={{ maxHeight: props.maxHeight }}>
+      <ul style={{ display: 'inline-block', minWidth: '100%' }}>
         { props.children }
       </ul>
     </div>
@@ -33,6 +34,14 @@ BlockList.propTypes = {
   children: React.PropTypes.node.isRequired,
   /** Should the `BlockList` contain a border on all sides */
   hasBorder: React.PropTypes.bool,
+  /**
+   * The max height of the `BlockList`. Pixels will be assumed if no unit is
+   * provided.
+   */
+  maxHeight: React.PropTypes.oneOfType([
+    React.PropTypes.number,
+    React.PropTypes.string,
+  ]),
   /** Hook for automated JavaScript tests */
   testSection: React.PropTypes.string,
 };

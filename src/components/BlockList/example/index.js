@@ -57,11 +57,9 @@ export default [
       <BlockList>
         <BlockList.Category>
           <BlockList.Item
-            onClick={
-              function() {
-                console.log('`onClick` Example'); // eslint-disable-line no-console
-              }
-          }>
+            onClick={ function() {
+              console.log('`onClick` Example'); // eslint-disable-line no-console
+            } }>
             onClick Example
           </BlockList.Item>
         </BlockList.Category>
@@ -132,19 +130,17 @@ export default [
   {
     examples: [
       <OverlayWrapper
-        overlay={
-          <BlockList>
-            <BlockList.Item onClick={ function() {} }>
+        overlay={ <BlockList>
+          <BlockList.Item onClick={ function() {} }>
               Archive
             </BlockList.Item>
-            <BlockList.Item onClick={ function() {} }>
+          <BlockList.Item onClick={ function() {} }>
               Pause
             </BlockList.Item>
-            <BlockList.Item onClick={ function() {} }>
+          <BlockList.Item onClick={ function() {} }>
               View Results
             </BlockList.Item>
-          </BlockList>
-        }
+        </BlockList> }
         horizontalAttachment="left"
         horizontalTargetAttachment="left"
         verticalAttachment="top"
@@ -170,6 +166,53 @@ export default [
           </BlockList.Item>
           <BlockList.Item onClick={ function() {} }>
             https://wwww.example.com/path1/path2/path3/path4/path5/superlongvaluethatdoesntfitintheblocklistwhenitgetsveryveryveryveryveryveryveryveryverylong
+          </BlockList.Item>
+        </BlockList.Category>
+      </BlockList>,
+    ],
+  },
+  {
+    examples: [
+      <BlockList maxHeight={ '150px' }>
+        <BlockList.Category header="BlockList with Scroll">
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
+          </BlockList.Item>
+          <BlockList.Item onClick={ function() {} }>
+            Lorem ipsum dolor sit amet.
           </BlockList.Item>
         </BlockList.Category>
       </BlockList>,

@@ -49,7 +49,9 @@ module.exports = {
     "no-dupe-args": "warn",
     "no-dupe-keys": "warn",
     "no-duplicate-case": "warn",
-    "no-empty": "warn",
+    "no-empty": ["warn", {
+      "allowEmptyCatch": true,
+    }],
     "no-empty-character-class": "warn",
     "no-ex-assign": "warn",
     "no-extra-boolean-cast": "off",
@@ -109,7 +111,9 @@ module.exports = {
     "no-self-compare": "warn",
     "no-sequences": "warn",
     "no-throw-literal": "warn",
-    "no-unused-expressions": "warn",
+    "no-unused-expressions": ["warn", {
+      "allowShortCircuit": true,
+    }],
     "no-void": "warn",
     "no-warning-comments": "off",
     "no-with": "off",
@@ -199,7 +203,9 @@ module.exports = {
     "react/no-direct-mutation-state": ["warn"],
     "react/no-unknown-property": ["warn"],
     "react/prefer-stateless-function": ["warn"],
-    "react/prop-types": ["warn"],
+    "react/prop-types": ["warn", {
+      "ignore": ["location"],
+    }],
     "react/react-in-jsx-scope": ["warn"],
     "react/sort-prop-types": ["warn"],
     "react/jsx-wrap-multilines": ["warn"],
@@ -208,7 +214,9 @@ module.exports = {
       "selfClosing": "tag-aligned",
       "nonEmpty": "after-props",
     }],
-    "react/jsx-curly-spacing": ["warn", "always"],
+    "react/jsx-curly-spacing": ["warn", "always", {"spacing": {
+      "objectLiterals": "never",
+    }}],
     "react/jsx-equals-spacing": ["warn", "never"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }],
     "react/jsx-first-prop-new-line": ["warn", "multiline"],

@@ -18,11 +18,9 @@ export default [
         style="primary"
         testSection="goose"
         isDismissible={ true }
-        onDismiss={
-          function() {
+        onDismiss={ function() {
 	          alert('Hello!'); // eslint-disable-line
-          }
-        }
+        } }
       />,
     ],
   },

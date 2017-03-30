@@ -8,11 +8,9 @@ export default [
       <Checkbox
         defaultChecked={ false }
         label="onChange Example"
-        onChange={
-          function(event) {
-            console.log('onChange', event.target.checked); // eslint-disable-line no-console
-          }
-        }
+        onChange={ function(event) {
+          console.log('onChange', event.target.checked); // eslint-disable-line no-console
+        } }
       />,
     ],
   },
