@@ -5,8 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+## 25.0.0 - 2017-03-30
 ### Added
-- [Patch] Added a remove borders option for `BlockList`. (#691)
+- [Release] Added a remove borders option for `BlockList`. (#691)
 
 ### Fixed
 - [Patch] Remove duplicate example for `Token`.
