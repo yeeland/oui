@@ -225,6 +225,31 @@
     }
   }
 
+  &--underline {
+    @extend %button--plain;
+    border-bottom: 2px solid map-fetch($border, color, base);
+    color: map-fetch($button, type, base, color);
+    padding-left: spacer(0.5);
+    padding-right: spacer(0.5);
+
+    &:hover {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($color, ui, medium);
+      color: map-fetch($button, type, base, color);
+    }
+
+    &:focus {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($button, type, outline, hover, border);
+    }
+
+    &:active {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($color, ui, medium);
+      color: map-fetch($color, background, brand-dark);
+    }
+  }
+
   // Button Sizes
   // Button size, variations.
 

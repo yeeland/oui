@@ -77,6 +77,7 @@ _This version was released to fix a deployment issue in `22.5.0`._
 
 ## 22.3.0 - 2016-12-20
 ### Added
+- [Feature] Add an `underline` style to `Button`.
 - [Feature] Create a `BlockList` React component. (#452)
 - [Patch] Update `ArrowsInline` to use prefixed placeholder so that it works in more places. (#687)
 

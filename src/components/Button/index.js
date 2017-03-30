@@ -56,6 +56,7 @@ Button.propTypes = {
     'outline-reverse',
     'plain',
     'toggle',
+    'underline',
     'unstyled',
   ]),
   /** Hook for automated JavaScript tests */
