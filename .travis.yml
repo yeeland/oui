@@ -1,4 +1,8 @@
 language: node_js
+node_js:
+  - "4"
+env:
+  - CXX=g++-4.8
 install:
 - bundle install
 - npm install
@@ -7,6 +11,11 @@ script:
 sudo: false
 addons:
   ssh_known_hosts: design.optimizely.com
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 before_deploy:
 # Start from scratch
 - rm -rfv dist
