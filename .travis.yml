@@ -4,6 +4,7 @@ install:
 - npm install
 script:
 - npm test
+dist: trusty
 sudo: false
 addons:
   ssh_known_hosts: design.optimizely.com
