@@ -30,7 +30,7 @@ const Routes = (props) => (
       <Route path="components" component={ Category }>
         <Route path=":component(/:subcomponent)(/:language)" component={ Component }></Route>
       </Route>
-      <Route path="utilities" component={ Category }>
+      <Route path="overrides" component={ Category }>
         <Route path=":component(/:subcomponent)(/:language)" component={ Component }></Route>
       </Route>
     </Route>
