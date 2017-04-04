@@ -23,14 +23,14 @@ $include-fonts:(
 /// Trumps
 /// @description Trumps use `!important` classes for overrides and should
 /// always be loaded last.
-@import '../utilities/Background/index';
-@import '../utilities/Border/index';
-@import '../utilities/Layout/index';
-@import '../utilities/Margin/index';
-@import '../utilities/Padding/index';
-@import '../utilities/Type/index';
-@import '../utilities/Sizing/index';
-@import '../utilities/Admin/index';
+@import '../overrides/Background/index';
+@import '../overrides/Border/index';
+@import '../overrides/Layout/index';
+@import '../overrides/Margin/index';
+@import '../overrides/Padding/index';
+@import '../overrides/Type/index';
+@import '../overrides/Sizing/index';
+@import '../overrides/Admin/index';
 
 /// Third Party Code
 @import 'library/highlight.js/9.6.0/docco';

@@ -10,11 +10,11 @@ const doctrine = require('doctrine').parse;
 const yaml = require('js-yaml').safeLoad;
 const find = require('lodash.find');
 
-const categories = ['components', 'utilities'];
+const categories = ['components', 'overrides'];
 
 // Grab all of the components
 const componentFolders = glob.sync(`src/@(${categories.join('|')})/**/`, {
-  ignore: ['src/components/', 'src/utilities/', '**/tests/', '**/example/', '**/Icon/*', '**/Icon/'],
+  ignore: ['src/components/', 'src/overrides/', '**/tests/', '**/example/', '**/Icon/*', '**/Icon/'],
 });
 
 const files = {};
