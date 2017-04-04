@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## 25.0.1 - 2017-04-04
 ### Changed
 - [Patch] Add trusty config option to Travis CI config to reduce `npm i` compiling failures.
 
