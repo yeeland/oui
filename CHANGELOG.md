@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Changed
+- [Patch] Add trusty config option to Travis CI config to reduce `npm i` compiling failures.
+
 ## 25.0.0 - 2017-03-30
 ### Added
 - [Release] Added a remove borders option for `BlockList`. (#691)
