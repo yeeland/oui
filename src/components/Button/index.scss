@@ -6,6 +6,7 @@
 ///   <button class="oui-button oui-button--danger">Button</button>
 ///   <button class="oui-button oui-button--danger-outline">Button</button>
 ///   <button class="oui-button oui-button--outline">Button</button>
+///   <button class="oui-button oui-button--underline">Button</button>
 ///   <button class="oui-button oui-button--plain">Button</button>
 /// @example[html] Tiny buttons
 ///   <button class="oui-button oui-button--tiny">Button</button>
@@ -226,6 +227,7 @@
   }
 
   &--underline {
+    @extend .oui-button--plain;
     border-bottom: 2px solid map-fetch($border, color, base);
     color: map-fetch($button, type, base, color);
     padding-left: spacer(0.5);

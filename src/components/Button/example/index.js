@@ -21,16 +21,6 @@ export default [
   {
     isPadded: true,
     examples: [
-      <Button style="underline">
-        Underline Button&nbsp;
-        <ArrowsInline direction="down" />
-      </Button>,
-    ],
-  },
-
-  {
-    isPadded: true,
-    examples: [
       <Button isDisabled={ true }>Button</Button>,
       <Button isDisabled={ true } style="highlight">Highlight</Button>,
       <Button isDisabled={ true } style="danger">Danger</Button>,
@@ -60,6 +50,16 @@ export default [
     isPadded: true,
     examples: [
       <Button style="unstyled">Unstyled Button</Button>,
+    ],
+  },
+
+  {
+    isPadded: true,
+    examples: [
+      <Button style="underline">
+        Underline Button&nbsp;
+        <ArrowsInline direction="down" />
+      </Button>,
     ],
   },
 
