@@ -20,8 +20,8 @@ $include-fonts:(
 /// OUI partials
 @import 'oui-partials';
 
-/// Trumps
-/// @description Trumps use `!important` classes for overrides and should
+/// Overrides
+/// @description Overrides use `!important` classes for overrides and should
 /// always be loaded last.
 @import '../overrides/Background/index';
 @import '../overrides/Border/index';

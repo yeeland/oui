@@ -279,7 +279,7 @@
 }
 
 
-/// Max Width Trumps
+/// Max Width Overrides
 
 .max-width--50 {
   max-width: 50px !important;
@@ -310,7 +310,7 @@
 }
 
 
-/// Min Width Trumps
+/// Min Width Overrides
 
 .min-width--50 {
   min-width: 50px !important;
@@ -341,7 +341,7 @@
 }
 
 
-/// Height Trumps
+/// Height Overrides
 
 .height--1-1 {
   height: 100% !important;
@@ -376,7 +376,7 @@
 }
 
 
-/// Min Height Trumps
+/// Min Height Overrides
 
 .min-height--50 {
   min-height: 50px !important;
