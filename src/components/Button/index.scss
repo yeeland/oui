@@ -226,7 +226,6 @@
   }
 
   &--underline {
-    @extend %button--plain;
     border-bottom: 2px solid map-fetch($border, color, base);
     color: map-fetch($button, type, base, color);
     padding-left: spacer(0.5);
