@@ -6,6 +6,7 @@
 ///   <button class="oui-button oui-button--danger">Button</button>
 ///   <button class="oui-button oui-button--danger-outline">Button</button>
 ///   <button class="oui-button oui-button--outline">Button</button>
+///   <button class="oui-button oui-button--underline">Button <span class="oui-arrow-inline--down"></span></button>
 ///   <button class="oui-button oui-button--plain">Button</button>
 /// @example[html] Tiny buttons
 ///   <button class="oui-button oui-button--tiny">Button</button>
@@ -184,7 +185,8 @@
 
   }
 
-  &--plain {
+  &--plain,
+  &--underline {
     color: map-fetch($button, type, plain, color);
     border-color: transparent;
     background-color: transparent;
@@ -209,7 +211,6 @@
   }
 
   &--toggle {
-
     &:hover {
       color: map-fetch($button, type, base, color);
     }
@@ -226,7 +227,6 @@
   }
 
   &--underline {
-    @extend %button--plain;
     border-bottom: 2px solid map-fetch($border, color, base);
     color: map-fetch($button, type, base, color);
     padding-left: spacer(0.5);
