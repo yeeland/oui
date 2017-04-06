@@ -71,16 +71,16 @@ For example, if you're building a mobile site, your main SCSS file `mobile.scss`
 @import '../node_modules/optimizely-oui/src/oui/oui-partials';
 @import 'mobile-website/mobile-partials';
 
-// ## Trumps (helper/utility classes)
-// Trumps use `!important` classes for overrides and should always be loaded last.
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/admin';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/background';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/borders';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/layout';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/margin';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/padding';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/type';
-@import '../node_modules/optimizely-oui/src/oui/partials/trumps/sizing';
+// ## Overrides (helper/utility classes)
+// Overrides use `!important` classes for overrides and should always be loaded last.
+@import '../node_modules/optimizely-oui/src/overrides/admin';
+@import '../node_modules/optimizely-oui/src/overrides/background';
+@import '../node_modules/optimizely-oui/src/overrides/borders';
+@import '../node_modules/optimizely-oui/src/overrides/layout';
+@import '../node_modules/optimizely-oui/src/overrides/margin';
+@import '../node_modules/optimizely-oui/src/overrides/padding';
+@import '../node_modules/optimizely-oui/src/overrides/type';
+@import '../node_modules/optimizely-oui/src/overrides/sizing';
 ```
 
 #### Using OUI React components
