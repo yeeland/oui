@@ -3,7 +3,8 @@ import React from 'react';
 import BlockList from '../index';
 import OverlayWrapper from '../../OverlayWrapper/index';
 import Button from '../../Button';
-import EllipsisIcon from '../../Icon/EllipsisIcon';
+// import EllipsisIcon from '../../Icon/EllipsisIcon';
+const EllipsisIcon = require('oui-icons').Icon.EllipsisIcon;
 
 export default [
   {

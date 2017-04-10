@@ -2,7 +2,8 @@
 import React from 'react';
 import Poptip from '../index';
 import Button from '../../Button';
-import HelpIcon from '../../Icon/HelpIcon';
+// import HelpIcon from '../../Icon/HelpIcon';
+const HelpIcon = require('oui-icons').Icon.HelpIcon;
 
 export default [
   {

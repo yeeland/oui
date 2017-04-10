@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
-import CloseIcon from '../Icon/CloseIcon';
+// import CloseIcon from '../Icon/CloseIcon';
+const CloseIcon = require('oui-icons').Icon.CloseIcon;
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
 const renderDismissButton = (testSection) => {

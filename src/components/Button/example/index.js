@@ -2,7 +2,8 @@
 import React from 'react';
 import ArrowsInline from '../../ArrowsInline';
 import Button from '../index';
-import ClipboardIcon from '../../Icon/ClipboardIcon';
+// import ClipboardIcon from '../../Icon/ClipboardIcon';
+const ClipboardIcon = require('oui-icons').Icon.ClipboardIcon;
 
 export default [
   {

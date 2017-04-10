@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../Button';
-import CloseIcon from '../../Icon/CloseIcon';
+// import CloseIcon from '../../Icon/CloseIcon';
+const CloseIcon = require('oui-icons').Icon.CloseIcon;
 
 /**
  * @param {Object} props - Properties passed to component

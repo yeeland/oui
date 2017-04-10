@@ -2,7 +2,8 @@ import React from 'react';
 import { default as Clipboard } from 'clipboard';
 
 import Button from '../../Button';
-import ClipboardIcon from '../../Icon/ClipboardIcon';
+// import ClipboardIcon from '../../Icon/ClipboardIcon';
+const ClipboardIcon = require('oui-icons').Icon.ClipboardIcon;
 
 /**
  * @param {Object} props - Properties passed to component

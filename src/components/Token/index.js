@@ -1,5 +1,6 @@
 import React from 'react';
-import EllipsisIcon from '../Icon/EllipsisIcon';
+// import EllipsisIcon from '../Icon/EllipsisIcon';
+const EllipsisIcon = require('oui-icons').Icon.EllipsisIcon;
 import DismissButton from './DismissButton';
 import classNames from 'classnames';
 

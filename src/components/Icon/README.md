@@ -12,6 +12,8 @@ The icons can be used within other projects as such:
 
 ```js
 const CloseIcon = require('optimizely-oui').Icon.CloseIcon;
+or
+const CloseIcon = require('oui-icons').Icon.CloseIcon;
 
 <CloseIcon size={ 24 } testSection="attention-close-icon" />
 ```
