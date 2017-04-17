@@ -292,7 +292,7 @@
 }
 
 @mixin text-input--disabled {
-  background: map-fetch($color, background, faint);
+  background-color: map-fetch($color, background, faint);
   color: map-fetch($color, ui, medium);
   cursor: default;
 
