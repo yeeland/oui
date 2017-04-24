@@ -7,6 +7,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ## Unreleased
 
 ## 25.1.0 - 2017-04-24
+### Added
 - [Feature] Add `cs` language option to code component for C# syntax highlighting. (#724)
 
 ## 25.0.4 - 2017-04-05
