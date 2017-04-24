@@ -3,6 +3,7 @@ import React from 'react';
 import CopyButton from './CopyButton';
 import Highlight from 'highlight.js/lib/highlight.js';
 
+Highlight.registerLanguage('cs', require('highlight.js/lib/languages/cs'));
 Highlight.registerLanguage('css', require('highlight.js/lib/languages/css'));
 Highlight.registerLanguage('diff', require('highlight.js/lib/languages/diff'));
 Highlight.registerLanguage('html', require('highlight.js/lib/languages/xml'));
@@ -88,7 +89,7 @@ Code.propTypes = {
   /** Apply syntax highlighting to the code */
   isHighlighted: React.PropTypes.bool,
   /** Specify a language for the syntax highlighter */
-  language: React.PropTypes.oneOf(['css', 'diff', 'html', 'java', 'javascript',
+  language: React.PropTypes.oneOf(['cs', 'css', 'diff', 'html', 'java', 'javascript',
     'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',
     'swift']),
   /** Hook for automated JavaScript tests */
