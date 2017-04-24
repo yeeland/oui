@@ -227,14 +227,14 @@
   }
 
   &--underline {
-    border-bottom: 2px solid map-fetch($border, color, base);
+    border-bottom: 2px solid map-fetch($root-color, grey-35);
     color: map-fetch($button, type, base, color);
     padding-left: spacer(0.5);
     padding-right: spacer(0.5);
 
     &:hover {
       border-bottom-width: 2px;
-      border-bottom-color: map-fetch($color, ui, medium);
+      border-bottom-color: map-fetch($root-color, grey-50);
       color: map-fetch($button, type, base, color);
     }
 
