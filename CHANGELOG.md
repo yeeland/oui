@@ -5,7 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-- [Patch] Add `cs` language option to code component for C# syntax highlighting. (#724)
+
+## 25.1.0 - 2017-04-24
+- [Feature] Add `cs` language option to code component for C# syntax highlighting. (#724)
 
 ## 25.0.4 - 2017-04-05
 ### Changed
