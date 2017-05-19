@@ -17,6 +17,7 @@ let Table = (props) => {
     'oui-table': true,
     [`oui-table--${props.style}`]: props.style,
     [`oui-table--${props.density}`]: props.density,
+    'oui-table--hover': props.shouldAddHover,
   });
 
   const style = {
@@ -38,6 +39,8 @@ Table.propTypes = {
   children: React.PropTypes.node,
   /** Sets the padding within cells */
   density: React.PropTypes.oneOf(['tight', 'loose']),
+  /** Whether to set the hover class on the Table */
+  shouldAddHover: React.PropTypes.bool,
   /** Available border and hover options */
   style: React.PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
   /**
