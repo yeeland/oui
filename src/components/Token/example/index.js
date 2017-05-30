@@ -33,6 +33,9 @@ export default [
         isDraggable={ true }
         style="primary"
         order={ 1 }
+        onDismiss={ function() {
+	          alert('Hello!'); // eslint-disable-line
+        } }
       />,
     ],
   },
