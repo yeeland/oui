@@ -17,4 +17,9 @@ describe('components/Table/TR', () => {
     const component = shallow(<TR testSection="goose"></TR>);
     expect(component.is('[data-test-section="goose"]')).toBe(true);
   });
+
+  it('should render without a border if noBorder is passed', () => {
+    const component = shallow(<TR noBorder="true" testSection="goose"></TR>);
+    expect(component.hasClass('no-border')).toBe(true);
+  });
 });

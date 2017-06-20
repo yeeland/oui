@@ -8,6 +8,9 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Fixed
 - [Patch] Align token close button to top instead of center. (#733)
 
+### Added
+- [Feature] Add noBorder prop to Table.TR
+
 ## 25.2.1 - 2017-05-19
 ### Added
 - [Feature] Add more class options to Table and Table.TR
