@@ -13,6 +13,23 @@ describe('components/Input', () => {
     expect(component.is('[type="text"]')).toBe(true);
   });
 
+  it('should render error class when hasError prop is true', () => {
+    const component = shallow(
+      <Input type="text" hasError={ true } />
+    );
+
+    expect(component.hasClass('oui-form-bad-news')).toBe(true);
+  });
+
+  it('should render error class on label when hasError prop is true', () => {
+    const component = shallow(
+      <Input type="text" label="Hello" hasError={ true } />
+    );
+
+    expect(component.find('.oui-form-bad-news .oui-label').length).toBe(1);
+    // expect(component.hasClass('oui-form-bad-news')).toBe(true);
+  });
+
   it('should render a "number" input when type="number" is passed', () => {
     const component = shallow(
       <Input type="number" />

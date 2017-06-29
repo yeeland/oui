@@ -15,6 +15,16 @@ export default [
     examples: [
       <Input
         type="text"
+        label="Test"
+        hasError={ true }
+        placeholder="This is a placeholder"
+      />,
+    ],
+  },
+  {
+    examples: [
+      <Input
+        type="text"
         placeholder="Browse by Name"
         isFilter={ true }
       />,
