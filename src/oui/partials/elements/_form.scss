@@ -317,13 +317,15 @@
   line-height: 1;
 }
 
-.#{$namespace}form-fields {
+.#{$namespace}form-fields,
+.oui-form-fields {
   @extend %kill-last-child-margin;
   list-style: none;
   margin: 0;
 }
 
-.#{$namespace}form-field__item {
+.#{$namespace}form-field__item,
+.oui-form-field__item {
   margin-bottom: spacer(1.5);
 }
 
@@ -454,12 +456,15 @@ fieldset {
   }
 }
 
-.#{$namespace}form-bad-news {
-  .#{$namespace}label {
+.#{$namespace}form-bad-news,
+.oui-form-bad-news {
+  .#{$namespace}label,
+  .oui-label {
     color: map-fetch($color, text, bad-news);
   }
 
   .#{$namespace}text-input,
+  &.oui-text-input,
   .oui-text-input,
   .#{$namespace}select,
   .#{$namespace}textarea,
@@ -467,6 +472,7 @@ fieldset {
     border-color: map-fetch($color, ui, bad-news);
   }
 }
+
 
 .#{$namespace}form-warning {
   .#{$namespace}label {

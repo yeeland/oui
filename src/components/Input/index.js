@@ -1,5 +1,6 @@
 import React from 'react';
 import Label from '../Label';
+import classnames from 'classnames';
 
 /**
  * Generates an `input` element (optionally wrapped in a label) and accepts
@@ -15,8 +16,7 @@ class Input extends React.Component {
   }
 
   renderInput(opts) {
-    let hasSearchIcon = opts.isFilter ? ' oui-text-input--search' : '';
-    let classes = 'oui-text-input' + hasSearchIcon;
+    let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.hasError});
 
     return (
       /* eslint-disable react/jsx-no-bind */
@@ -46,13 +46,15 @@ class Input extends React.Component {
   render() {
     if (this.props.label) {
       return (
-        <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
-          <div className="oui-label">
-            { this.props.label }
-            { this.props.isOptional && <span className="oui-label__optional">(Optional)</span> }
-          </div>
-          { this.renderInput(this.props) }
-        </Label>
+        <div className={ classnames({'oui-form-bad-news': this.props.hasError}) }>
+          <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
+            <div className="oui-label">
+              { this.props.label }
+              { this.props.isOptional && <span className="oui-label__optional">(Optional)</span> }
+            </div>
+            { this.renderInput(this.props) }
+          </Label>
+        </div>
       );
     }
 
@@ -63,6 +65,8 @@ class Input extends React.Component {
 Input.propTypes = {
   /** The default value of the input used on initial render */
   defaultValue: React.PropTypes.string,
+  /** Toggle error state styles  */
+  hasError: React.PropTypes.bool,
   /** Prevents input from being modified and appears disabled */
   isDisabled: React.PropTypes.bool,
   /** Includes search icon if true */
