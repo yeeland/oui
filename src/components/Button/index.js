@@ -19,6 +19,7 @@ const Button = (props) => {
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }
       onClick={ props.onClick }
+      data-track-id={ props.testSection }
       data-test-section={ props.testSection }
       aria-label={ props.ariaLabel }>
       { props.children }
