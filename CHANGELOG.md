@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## 25.3.0 - 2017-05-30
 ### Added
 - [Feature] Input component accepts hasError prop to display error styles. (#738)
 - [Feature] Add noBorder prop to Table.TR
