@@ -9,13 +9,25 @@ export default [
         type="text"
         placeholder="This is a placeholder"
       />,
+      <Input
+        type="text"
+        hasError={ true }
+        placeholder="This is a placeholder"
+      />,
     ],
   },
   {
     examples: [
       <Input
         type="text"
-        label="Test"
+        label="Normal state"
+        note="This is a label note"
+        placeholder="This is a placeholder"
+      />,
+      <Input
+        type="text"
+        label="Error state"
+        note="This is a label note"
         hasError={ true }
         placeholder="This is a placeholder"
       />,

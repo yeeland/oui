@@ -423,20 +423,24 @@ fieldset {
 
 // Form Notes
 
-.#{$namespace}form-note {
+.#{$namespace}form-note,
+.oui-form-note {
   padding-top: spacer(0.5);
   font-size: map-fetch($font, size, micro);
 }
 
-.#{$namespace}form-note--good-news {
+.#{$namespace}form-note--good-news,
+.oui-form-good-news .oui-form-note {
   color: map-fetch($color, text, good-news);
 }
 
-.#{$namespace}form-note--bad-news {
+.#{$namespace}form-note--bad-news,
+.oui-form-bad-news .oui-form-note {
   color: map-fetch($color, text, bad-news);
 }
 
-.#{$namespace}form-note--warning {
+.#{$namespace}form-note--warning,
+.oui-form-warning .oui-form-note {
   color: map-fetch($color, text, warning);
 }
 

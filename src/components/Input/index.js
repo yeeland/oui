@@ -9,6 +9,7 @@ import classnames from 'classnames';
  * @returns {ReactElement}
  */
 class Input extends React.Component {
+
   blur() {
     if (this._input) {
       this._input.blur();
@@ -16,29 +17,37 @@ class Input extends React.Component {
   }
 
   renderInput(opts) {
+    let noteLabel = null;
+    if (opts.note) {
+      noteLabel = <div className="oui-form-note">{ opts.note }</div>;
+    }
+
     let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.hasError});
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <input
-        className={ classes }
-        ref={ (c) => { this._input = c; } }
-        type={ opts.type }
-        value={ opts.value }
-        defaultValue={ opts.defaultValue }
-        placeholder={ opts.placeholder }
-        required={ opts.isRequired }
-        readOnly={ opts.isReadOnly }
-        disabled={ opts.isDisabled }
-        onInput={ opts.onInput }
-        onChange={ opts.onChange }
-        onBlur={ opts.onBlur }
-        onKeyDown={ opts.onKeyDown }
-        onFocus={ opts.onFocus }
-        min={ opts.min }
-        max={ opts.max }
-        data-test-section={ opts.testSection }
-      />
+      <div>
+        <input
+          className={ classes }
+          ref={ (c) => { this._input = c; } }
+          type={ opts.type }
+          value={ opts.value }
+          defaultValue={ opts.defaultValue }
+          placeholder={ opts.placeholder }
+          required={ opts.isRequired }
+          readOnly={ opts.isReadOnly }
+          disabled={ opts.isDisabled }
+          onInput={ opts.onInput }
+          onChange={ opts.onChange }
+          onBlur={ opts.onBlur }
+          onKeyDown={ opts.onKeyDown }
+          onFocus={ opts.onFocus }
+          min={ opts.min }
+          max={ opts.max }
+          data-test-section={ opts.testSection }
+        />
+        { noteLabel }
+      </div>
       /* eslint-enable */
     );
   }
@@ -95,6 +104,8 @@ Input.propTypes = {
    * Min value for the `input`. Should be used only when `type` is `number`.
    */
   min: React.PropTypes.number,
+  /** Append note near form input. */
+  note: React.PropTypes.string,
   /**
    * Function that fires when the input loses focus. It fires regardless of
    * whether the value has changed.
