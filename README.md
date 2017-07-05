@@ -101,4 +101,4 @@ import Button from 'optimizely-oui';
 
 Want to run OUI locally? Clone this repository and run `npm install`. The `npm run` command will list all the available commands.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information
