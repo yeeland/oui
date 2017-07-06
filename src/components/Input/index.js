@@ -2,7 +2,6 @@ import React from 'react';
 import Label from '../Label';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ArrowsInline from '../ArrowsInline';
 
 /**
  * Generates an `input` element (optionally wrapped in a label) and accepts
@@ -18,8 +17,27 @@ class Input extends React.Component {
     }
   }
 
-  renderInput(opts) {
-    let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.hasError});
+  renderInput({
+    isFilter,
+    hasError,
+    type,
+    value,
+    defaultValue,
+    placeholder,
+    isRequired,
+    isReadOnly,
+    isDisabled,
+    onInput,
+    onChange,
+    onBlur,
+    onKeyDown,
+    onFocus,
+    min,
+    max,
+    testSection,
+    focus,
+    isDropdown }) {
+    let classes = classnames('oui-text-input', {'oui-text-input--search': isFilter}, {'oui-form-bad-news': hasError});
 
     return (
       /* eslint-disable react/jsx-no-bind */
@@ -27,24 +45,24 @@ class Input extends React.Component {
         <input
           className={ classes }
           ref={ (c) => { this._input = c; } }
-          type={ props.type }
-          value={ props.value }
-          defaultValue={ props.defaultValue }
-          placeholder={ props.placeholder }
-          required={ props.isRequired }
-          readOnly={ props.isReadOnly }
-          disabled={ props.isDisabled }
-          onInput={ props.onInput }
-          onChange={ props.onChange }
-          onBlur={ props.onBlur }
-          onKeyDown={ props.onKeyDown }
-          onFocus={ props.onFocus }
-          min={ props.min }
-          max={ props.max }
-          data-test-section={ props.testSection }
-          autoFocus={props.focus}
+          type={ type }
+          value={ value }
+          defaultValue={ defaultValue }
+          placeholder={ placeholder }
+          required={ isRequired }
+          readOnly={ isReadOnly }
+          disabled={ isDisabled }
+          onInput={ onInput }
+          onChange={ onChange }
+          onBlur={ onBlur }
+          onKeyDown={ onKeyDown }
+          onFocus={ onFocus }
+          min={ min }
+          max={ max }
+          data-test-section={ testSection }
+          autoFocus={ focus }
         />
-        { this.props.isDropdown && <span className="oui-arrow-inline--down" />}
+        { isDropdown && <span className="oui-arrow-inline--down" /> }
       </div>
       /* eslint-enable */
     );
@@ -72,9 +90,11 @@ class Input extends React.Component {
 Input.propTypes = {
   /** The default value of the input used on initial render */
   defaultValue: PropTypes.string,
+    /** Includes search icon if true */
+  hasError: PropTypes.bool,
   /** Prevents input from being modified and appears disabled */
   isDisabled: PropTypes.bool,
-  /** Includes search icon if true */
+  /** Includes error if true */
   isFilter: PropTypes.bool,
   /** Adds an optional label if there is a label provided
    *  @param {Object} props Object of props
