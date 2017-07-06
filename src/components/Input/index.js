@@ -35,35 +35,31 @@ class Input extends React.Component {
     min,
     max,
     testSection,
-    focus,
-    isDropdown }) {
+    focus }) {
     let classes = classnames('oui-text-input', {'oui-text-input--search': isFilter}, {'oui-form-bad-news': hasError});
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div>
-        <input
-          className={ classes }
-          ref={ (c) => { this._input = c; } }
-          type={ type }
-          value={ value }
-          defaultValue={ defaultValue }
-          placeholder={ placeholder }
-          required={ isRequired }
-          readOnly={ isReadOnly }
-          disabled={ isDisabled }
-          onInput={ onInput }
-          onChange={ onChange }
-          onBlur={ onBlur }
-          onKeyDown={ onKeyDown }
-          onFocus={ onFocus }
-          min={ min }
-          max={ max }
-          data-test-section={ testSection }
-          autoFocus={ focus }
-        />
-        { isDropdown && <span className="oui-arrow-inline--down" /> }
-      </div>
+      <input
+        className={ classes }
+        ref={ (c) => { this._input = c; } }
+        type={ type }
+        value={ value }
+        defaultValue={ defaultValue }
+        placeholder={ placeholder }
+        required={ isRequired }
+        readOnly={ isReadOnly }
+        disabled={ isDisabled }
+        onInput={ onInput }
+        onChange={ onChange }
+        onBlur={ onBlur }
+        onKeyDown={ onKeyDown }
+        onFocus={ onFocus }
+        min={ min }
+        max={ max }
+        data-test-section={ testSection }
+        autoFocus={ focus }
+      />
       /* eslint-enable */
     );
   }
