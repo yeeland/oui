@@ -1,46 +1,47 @@
 import React from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 /**
  * Wraps text or HTML in a `label` element. Often used to label inputs.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Label = (props) => {
-  let classes = null;
+const Label = ({ textLabel, isRequired, isOptional, displayError, children, testSection }) => {
+  const labelClassNames = classNames({
+    'oui-form-bad-news': displayError
+  });
+
   let fieldLabel = null;
-
-  if (props.isRequired) {
+  if (isRequired) {
     fieldLabel = <span className="oui-label--required"></span>;
-  } else if (props.isOptional) {
+  } else if (isOptional) {
     fieldLabel = <span className="oui-label__optional">(Optional)</span>;
-  }
-
-  if (typeof props.children === 'string') {
-    classes = 'oui-label';
   }
 
   return (
     <label
-      className={ classes }
-      data-test-section={ props.testSection }>
-      { props.children }
-      { fieldLabel }
+      className={ labelClassNames }
+      data-test-section={ testSection }>
+      <span className="oui-label">{ children }
+        { fieldLabel }
+      </span>
     </label>
   );
 };
 
 Label.propTypes = {
   /** What the label describes */
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string.isRequired,
-    React.PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.node.isRequired,
   ]),
   /** Includes optional label if true */
-  isOptional: React.PropTypes.bool,
+  isOptional: PropTypes.bool,
   /** Includes required asterisk label if true */
-  isRequired: React.PropTypes.bool,
+  isRequired: PropTypes.bool,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 export default Label;

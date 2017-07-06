@@ -463,7 +463,8 @@ fieldset {
 .#{$namespace}form-bad-news,
 .oui-form-bad-news {
   .#{$namespace}label,
-  .oui-label {
+  .oui-label,
+  &.oui-label {
     color: map-fetch($color, text, bad-news);
   }
 
