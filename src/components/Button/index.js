@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
@@ -28,19 +29,19 @@ const Button = (props) => {
 
 Button.propTypes = {
   /** Describes buttons that have an icon but no text */
-  ariaLabel: React.PropTypes.string,
+  ariaLabel: PropTypes.string,
   /** Text within the button */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Render button with active state */
-  isActive: React.PropTypes.bool,
+  isActive: PropTypes.bool,
   /** Prevent users from interacting with the button */
-  isDisabled: React.PropTypes.bool,
+  isDisabled: PropTypes.bool,
   /** Make the button act as a submit button */
-  isSubmit: React.PropTypes.bool,
+  isSubmit: PropTypes.bool,
   /** Function that fires when the button is clicked on */
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
   /** Various height and width options */
-  size: React.PropTypes.oneOf([
+  size: PropTypes.oneOf([
     'tiny',
     'small',
     'large',
@@ -48,7 +49,7 @@ Button.propTypes = {
     'tight',
   ]),
   /** Various color options */
-  style: React.PropTypes.oneOf([
+  style: PropTypes.oneOf([
     'highlight',
     'danger',
     'danger-outline',
@@ -60,9 +61,9 @@ Button.propTypes = {
     'unstyled',
   ]),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Various height and width options */
-  width: React.PropTypes.oneOf([
+  width: PropTypes.oneOf([
     'default',
     'full',
   ]),

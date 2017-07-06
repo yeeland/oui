@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Wraps text or HTML in a `label` element. Often used to label inputs.
@@ -31,16 +32,16 @@ const Label = (props) => {
 
 Label.propTypes = {
   /** What the label describes */
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string.isRequired,
-    React.PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.node.isRequired,
   ]),
   /** Includes optional label if true */
-  isOptional: React.PropTypes.bool,
+  isOptional: PropTypes.bool,
   /** Includes required asterisk label if true */
-  isRequired: React.PropTypes.bool,
+  isRequired: PropTypes.bool,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 export default Label;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CopyButton from './CopyButton';
 import Highlight from 'highlight.js/lib/highlight.js';
@@ -83,19 +84,19 @@ class Code extends React.Component {
 
 Code.propTypes = {
   /** The code within the component */
-  children: React.PropTypes.string,
+  children: PropTypes.string,
   /** Adds a copy button to code examples */
-  hasCopyButton: React.PropTypes.bool,
+  hasCopyButton: PropTypes.bool,
   /** Apply syntax highlighting to the code */
-  isHighlighted: React.PropTypes.bool,
+  isHighlighted: PropTypes.bool,
   /** Specify a language for the syntax highlighter */
-  language: React.PropTypes.oneOf(['cs', 'css', 'diff', 'html', 'java', 'javascript',
+  language: PropTypes.oneOf(['cs', 'css', 'diff', 'html', 'java', 'javascript',
     'js', 'jsx', 'markdown', 'md', 'objectivec', 'php', 'python', 'ruby', 'scss',
     'swift']),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** How the code should be displayed */
-  type: React.PropTypes.oneOf(['inline', 'block']).isRequired,
+  type: PropTypes.oneOf(['inline', 'block']).isRequired,
 };
 
 export default Code;

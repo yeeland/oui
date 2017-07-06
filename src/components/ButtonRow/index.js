@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const areAnyButtonsFullWidth = (buttons) => {
@@ -68,13 +69,13 @@ const ButtonRow = (props) => {
 
 ButtonRow.propTypes = {
   /** Array of buttons for the center */
-  centerGroup: React.PropTypes.arrayOf(React.PropTypes.element),
+  centerGroup: PropTypes.arrayOf(PropTypes.element),
   /** Array of buttons for left side */
-  leftGroup: React.PropTypes.arrayOf(React.PropTypes.element),
+  leftGroup: PropTypes.arrayOf(PropTypes.element),
   /** Array of buttons for right side */
-  rightGroup: React.PropTypes.arrayOf(React.PropTypes.element),
+  rightGroup: PropTypes.arrayOf(PropTypes.element),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 export default ButtonRow;
