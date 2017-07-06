@@ -22,11 +22,17 @@ class Input extends React.Component {
       noteLabel = <div className="oui-form-note">{ opts.note }</div>;
     }
 
-    let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.hasError});
+    let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.displayError});
 
     return (
       /* eslint-disable react/jsx-no-bind */
       <div>
+        <Label
+           displayError={ opts.displayError }
+           isRequired={ opts.isRequired }
+           isOptional={ opts.isOptional }>
+           { opts.label }
+         </Label>
         <input
           className={ classes }
           ref={ (c) => { this._input = c; } }
@@ -53,20 +59,6 @@ class Input extends React.Component {
   }
 
   render() {
-    if (this.props.label) {
-      return (
-        <div className={ classnames({'oui-form-bad-news': this.props.hasError}) }>
-          <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
-            <div className="oui-label">
-              { this.props.label }
-              { this.props.isOptional && <span className="oui-label__optional">(Optional)</span> }
-            </div>
-            { this.renderInput(this.props) }
-          </Label>
-        </div>
-      );
-    }
-
     return this.renderInput(this.props);
   }
 }
@@ -75,7 +67,7 @@ Input.propTypes = {
   /** The default value of the input used on initial render */
   defaultValue: React.PropTypes.string,
   /** Toggle error state styles  */
-  hasError: React.PropTypes.bool,
+  displayError: React.PropTypes.bool,
   /** Prevents input from being modified and appears disabled */
   isDisabled: React.PropTypes.bool,
   /** Includes search icon if true */
