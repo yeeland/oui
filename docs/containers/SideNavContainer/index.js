@@ -1,9 +1,10 @@
 import React from 'react';
+
 import components from 'docs/data/index.json';
 import SideNav from 'docs/components/SideNav/';
 import { toTitleCase } from 'docs/utils/';
 
-const SideNavContainer = ({ categoryName, currentRoute, language }) => {
+const SideNavContainer = ({ categoryName, currentRoute }) => {
   const componentsInCategory = components[categoryName];
   let sideNavItems = [];
 
