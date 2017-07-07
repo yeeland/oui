@@ -5,10 +5,12 @@ import SideNavContainer from 'docs/containers/SideNavContainer';
 import PropsTable from 'docs/components/react/PropsTable';
 import ReactComponentExample from 'docs/components/react/ComponentExample';
 import SassComponentExample from 'docs/components/sass/ComponentExample';
-import { Link } from 'react-router';
+import { browserHistory, Link } from 'react-router';
 import { css } from 'glamor';
 import s from 'docs/styles/';
 import ouiIcons from 'oui-icons';
+
+import TabNav from '../../src/components/TabNav';
 
 const routeProps = ({ routes, params }) => {
   let language = params.language;
@@ -56,6 +58,12 @@ const getData = (categoryName, componentName) => {
 };
 
 class Component extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      currentTab: 'sass'
+    }
+  }
   componentDidMount() {
     document.title = `${this.componentDisplayName} | ${this.categoryDisplayName} | OUI`;
   }
@@ -92,8 +100,8 @@ class Component extends React.Component {
     const componentDescription = yamlData && yamlData.description;
     const componentPaths = components[categoryName][this.componentDisplayName].path;
 
-    componentPaths['react'] && languages.push('react');
     componentPaths['sass'] && languages.push('sass');
+    componentPaths['react'] && languages.push('react');
 
     return (
       <div { ...css(s.container) } style={{minWidth: 800}}>
@@ -106,22 +114,21 @@ class Component extends React.Component {
           </div>
 
           <div { ...css(s.componentContent) }>
+            <TabNav activeTab={this.state.currentTab} style={['small','sub']}>
+              { languages.length >= 1 && 
+                languages.map( (item) => {
+                  return <TabNav.Tab key={item} onClick={ () => { 
+                    browserHistory.push({pathname: `/${categoryName}/${componentFullName}/${item}`});
+                    this.setState({currentTab: item}); 
+                    } } tabId={item}>
+                  {item}
+                </TabNav.Tab>
+                })
+              }
+            </TabNav>
             <h2>{ this.componentDisplayName }</h2>
             <p>{ componentDescription }</p>
-            { !language &&
-              <div>
-                <h3>Languages</h3>
-                <ul className="list list--bullet">
-                  { languages.map(lang => (
-                    <li key={ lang }>
-                      <Link to={ `/${categoryName}/${componentFullName}/${lang}` }>
-                        { supportedLanguages[lang] }
-                      </Link>
-                    </li>
-                  )) }
-                </ul>
-              </div>
-            }
+
             { language === 'react' &&
               <div>
                 { reactData.examples && reactData.examples.map((example, i) => (
@@ -135,6 +142,7 @@ class Component extends React.Component {
                 <PropsTable componentProps={ reactData.props } />
               </div>
             }
+
             { language === 'sass' && sassData && sassData.example &&
               <div>
                 <div dangerouslySetInnerHTML={{ __html: ouiIcons }} className="display--none"></div>

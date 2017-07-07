@@ -3,7 +3,7 @@ import components from 'docs/data/index.json';
 import SideNav from 'docs/components/SideNav/';
 import { toTitleCase } from 'docs/utils/';
 
-const SideNavContainer = ({ categoryName, currentRoute }) => {
+const SideNavContainer = ({ categoryName, currentRoute, language }) => {
   const componentsInCategory = components[categoryName];
   let sideNavItems = [];
 
@@ -12,7 +12,7 @@ const SideNavContainer = ({ categoryName, currentRoute }) => {
     if (!component.private) {
       sideNavItems.push({
         name: component.name,
-        href: `/${categoryName}/${component.name}/`,
+        href: `/${categoryName}/${component.name}/sass`,
       });
     }
   });

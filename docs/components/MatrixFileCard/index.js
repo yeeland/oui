@@ -27,7 +27,7 @@ const MatrixFileCard = (props) => (
           { props.children }
         </h3>
       </Link>
-      <div { ...styles.badges }>
+      {/*<div { ...styles.badges }>
         { props.languages && props.languages.map(language => (
           <Link
             to={ `${props.link}/${language.toLowerCase()}` }
@@ -38,7 +38,7 @@ const MatrixFileCard = (props) => (
             </Badge>
           </Link>
         )) }
-      </div>
+      </div>*/}
     </div>
   </div>
 );
