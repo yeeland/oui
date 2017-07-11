@@ -140,7 +140,7 @@ class Component extends React.Component {
                 })
               }
             </TabNav>
-            <h2>{ this.componentDisplayName }</h2>
+            <h2 className="push-double--top">{ this.componentDisplayName }</h2>
             <p>{ componentDescription }</p>
 
             { lang === 'react' &&
