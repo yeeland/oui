@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tether from 'tether';
 
 /**
@@ -216,32 +217,32 @@ class OverlayWrapper extends React.Component {
 
 OverlayWrapper.propTypes = {
   /** Event to listen to and open the overlay */
-  behavior: React.PropTypes.oneOf(['click', 'hover']),
+  behavior: PropTypes.oneOf(['click', 'hover']),
   /** Element that the `overlay` should attach to */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Side of the `overlay` that should attach to the `children` */
-  horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  horizontalAttachment: PropTypes.oneOf(['left', 'center', 'right']),
   /** Side of `children` that should attach to the `overlay` */
-  horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  horizontalTargetAttachment: PropTypes.oneOf(['left', 'center', 'right']),
   /** Attach `overlay` to an edge of the screen if it is going to move off */
-  isConstrainedToScreen: React.PropTypes.bool.isRequired,
+  isConstrainedToScreen: PropTypes.bool.isRequired,
   /**
    * Function that runs when the `overlay` is hidden. Return `false` to prevent
    * the `overlay` from closing.
    */
-  onHide: React.PropTypes.func,
+  onHide: PropTypes.func,
   /** Function that runs when the `overlay` is shown */
-  onShow: React.PropTypes.func,
+  onShow: PropTypes.func,
   /** The element that is attached to the children */
-  overlay: React.PropTypes.node.isRequired,
+  overlay: PropTypes.node.isRequired,
   /** Should the `overlay` close when clicking outside of it */
-  shouldHideOnClick: React.PropTypes.bool,
+  shouldHideOnClick: PropTypes.bool,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Vertical edge of the `overlay` that should touch the `children` */
-  verticalAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
+  verticalAttachment: PropTypes.oneOf(['top', 'middle', 'bottom']),
   /** Vertical edge of the `children` that should touch the `overlay` */
-  verticalTargetAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
+  verticalTargetAttachment: PropTypes.oneOf(['top', 'middle', 'bottom']),
 };
 
 OverlayWrapper.defaultProps = {

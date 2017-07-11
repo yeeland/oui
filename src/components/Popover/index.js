@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Simple component often used to display supplemental information to contents
@@ -26,11 +27,11 @@ const Popover = (props) => {
 
 Popover.propTypes = {
   /** Content that appears within the popover body */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Text describing the popover contents */
-  title: React.PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Popover;
