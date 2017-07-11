@@ -10,17 +10,17 @@ export default [
   },
   {
     examples: [
-      <Label isRequired>I'm a Required Label</Label>,
+      <Label isRequired={ true }>I'm a Required Label</Label>,
     ],
   },
   {
     examples: [
-      <Label isOptional>I'm an Optional Label</Label>,
+      <Label isOptional={ true }>I'm an Optional Label</Label>,
     ],
   },
   {
     examples: [
-      <Label displayError>I'm a Label with an error</Label>,
+      <Label displayError={ true }>I'm a Label with an error</Label>,
     ],
   },
   {

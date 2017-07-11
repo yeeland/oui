@@ -4,26 +4,27 @@ import { shallow, mount, render } from 'enzyme';
 
 describe('components/Input', () => {
   it('should render a "text" input when type="text" is passed', () => {
-    const component = shallow(
+    const component = mount(
       <Input type="text" />
     );
 
-    expect(component.type()).toBe('input');
-    expect(component.hasClass('oui-text-input')).toBe(true);
-    expect(component.is('[type="text"]')).toBe(true);
+    const input = component.find('input');
+    expect(input.length).toBe(1);
+    expect(input.hasClass('oui-text-input')).toBe(true);
+    expect(component.find('input').is('[type="text"]')).toBe(true);
   });
 
-  it('should render error class when hasError prop is true', () => {
+  it('should render error class when displayError prop is true', () => {
     const component = shallow(
-      <Input type="text" hasError={ true } />
+      <Input type="text" displayError={ true } />
     );
 
     expect(component.hasClass('oui-form-bad-news')).toBe(true);
   });
 
-  it('should render error class on label when hasError prop is true', () => {
+  it('should render error class on label when displayError prop is true', () => {
     const component = shallow(
-      <Input type="text" label="Hello" hasError={ true } />
+      <Input type="text" label="Hello" displayError={ true } />
     );
 
     expect(component.find('.oui-form-bad-news .oui-label').length).toBe(1);
