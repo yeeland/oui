@@ -32,7 +32,7 @@ const Category = (props) => {
                       return (
                         <MatrixFileCard
                           key={ component.name }
-                          link={ `/${categoryName}/${component.name}` }
+                          link={ `/${categoryName}/${component.name}/sass` }
                           languages={ getLanguagesFromComponent(component) }>
                           { component.name }
                         </MatrixFileCard>
