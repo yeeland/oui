@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '../Button';
 import CloseIcon from '../Icon/CloseIcon';
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
@@ -43,15 +44,15 @@ const Attention = (props) => {
 
 Attention.propTypes = {
   /** How the text is aligned */
-  alignment: React.PropTypes.oneOf(['left', 'center']),
+  alignment: PropTypes.oneOf(['left', 'center']),
   /** Text that appears within the component */
-  children: React.PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   /** Button allowing users to dismiss the component */
-  isDismissible: React.PropTypes.bool,
+  isDismissible: PropTypes.bool,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Various color schemes */
-  type: React.PropTypes.oneOf(['bad-news', 'brand', 'good-news', 'warning']),
+  type: PropTypes.oneOf(['bad-news', 'brand', 'good-news', 'warning']),
 };
 
 export default Attention;

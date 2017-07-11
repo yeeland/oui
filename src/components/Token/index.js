@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import EllipsisIcon from '../Icon/EllipsisIcon';
 import DismissButton from './DismissButton';
 import classNames from 'classnames';
@@ -55,27 +56,27 @@ const Token = (props) => {
 
 Token.propTypes = {
   /** Description explaining the token */
-  description: React.PropTypes.string,
+  description: PropTypes.string,
   /**
    * Determines if token has dismissible feature or not. If true, `onDismiss`
    * is required.
    */
-  isDismissible: React.PropTypes.bool,
+  isDismissible: PropTypes.bool,
   /** Shows an icon indicating that the token is draggable */
-  isDraggable: React.PropTypes.bool,
+  isDraggable: PropTypes.bool,
   /** Name label on token */
-  name: React.PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   /**
    * Function to call that dismisses the token. Required if the token is
    * dismissible.
    */
-  onDismiss: React.PropTypes.func,
+  onDismiss: PropTypes.func,
   /** Show a number indicating the token's order */
-  order: React.PropTypes.number,
+  order: PropTypes.number,
   /** Determines style of token depending on priority level */
-  style: React.PropTypes.oneOf(['primary', 'secondary']),
+  style: PropTypes.oneOf(['primary', 'secondary']),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 Token.defaultProps = {

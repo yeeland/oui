@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Tab from './Tab';
@@ -34,17 +35,17 @@ const TabNav = (props) => {
 
 TabNav.propTypes = {
   /** Id corresponding to which tab should be given the active class */
-  activeTab: React.PropTypes.string.isRequired,
+  activeTab: PropTypes.string.isRequired,
   /** Set of Tab components */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Various styles that can be given to the navigation */
-  style: React.PropTypes.arrayOf(React.PropTypes.oneOf([
+  style: PropTypes.arrayOf(PropTypes.oneOf([
     'small',
     'center',
     'sub',
   ])),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 TabNav.Tab = Tab;
