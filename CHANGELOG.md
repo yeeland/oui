@@ -5,7 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## 25.4.0 - 2017-07-12
 ### Added
+- [Feature] Add displayError prop to Input and Label components to better handle error states. (#738)
 - [Feature] Add form-note as prop to Input component for more parity with SASS.
 
 ## 25.3.1 - 2017-07-05
