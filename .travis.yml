@@ -19,6 +19,7 @@ before_deploy:
 - chmod 600 $TRAVIS_BUILD_DIR/deploy_rsa
 - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 deploy:
+  skip_cleanup: true
 - provider: npm
   email:
     secure: Y+A/HOGTYtASn+cHBFxslq52Ij8sdS5I+uvKiZF6466fwJytlGzdyR9e+4NGkul0UgJl3CUY5xKZ7LhyNBPxQUaG9DmlX8pkDiuHlcFlMbCtw+aTLhRS+pfpGbOlKZUWZcM5jZF+TvPIEqN/q5/p5kZnIqp9dmVijOSu7/t0zxA=
