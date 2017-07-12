@@ -4,7 +4,6 @@ install:
 - npm install
 script:
 - npm test
-dist: trusty
 sudo: false
 addons:
   ssh_known_hosts: design.optimizely.com
@@ -21,6 +20,7 @@ before_deploy:
 - ssh-add $TRAVIS_BUILD_DIR/deploy_rsa
 deploy:
 - provider: npm
+  skip_cleanup: true
   email:
     secure: Y+A/HOGTYtASn+cHBFxslq52Ij8sdS5I+uvKiZF6466fwJytlGzdyR9e+4NGkul0UgJl3CUY5xKZ7LhyNBPxQUaG9DmlX8pkDiuHlcFlMbCtw+aTLhRS+pfpGbOlKZUWZcM5jZF+TvPIEqN/q5/p5kZnIqp9dmVijOSu7/t0zxA=
   api_key:
@@ -29,6 +29,7 @@ deploy:
     tags: true
     condition: "$(git describe --tags $(git rev-list --tags --max-count=1)) != *-*"
 - provider: script
+  skip_cleanup: true
   script: scripts/docs-deploy.sh
   on:
     tags: true
