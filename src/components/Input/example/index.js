@@ -10,8 +10,13 @@ export default [
         label="Label"
         note="This is a note"
         placeholder="This is a placeholder"
-        isRequired
+        isRequired={ true }
       />,
+    ],
+  },
+  {
+    examples: [
+      <Input type="text" label="Hello" displayError={ true } />,
     ],
   },
   {
@@ -20,9 +25,9 @@ export default [
         type="text"
         label="Label with error state"
         note="This is a note with error state"
-        displayError
+        displayError={ true }
         placeholder="This is a placeholder with error state"
-        isRequired
+        isRequired={ true }
       />,
     ],
   },
@@ -38,7 +43,7 @@ export default [
     examples: [
       <Input
         type="text"
-        displayError
+        displayError={ true }
         placeholder="This is a placeholder"
       />,
     ],
@@ -48,7 +53,7 @@ export default [
       <Input
         type="text"
         placeholder="Browse by Name"
-        isFilter
+        isFilter={ true }
       />,
     ],
   },
@@ -90,7 +95,7 @@ export default [
       <Input
         type="text"
         label="Label with Optional"
-        isOptional
+        isOptional={ true }
       />,
     ],
   },

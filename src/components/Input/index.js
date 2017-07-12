@@ -22,17 +22,23 @@ class Input extends React.Component {
       noteLabel = <div className="oui-form-note">{ opts.note }</div>;
     }
 
-    let classes = classnames('oui-text-input', {'oui-text-input--search': opts.isFilter}, {'oui-form-bad-news': opts.displayError});
+    let wrapperClasses = classnames(
+      {'oui-form-bad-news': opts.displayError}
+    );
+
+    let classes = classnames(
+      'oui-text-input', {'oui-text-input--search': opts.isFilter}
+    );
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div>
+      <div className={ wrapperClasses }>
         <Label
-           displayError={ opts.displayError }
-           isRequired={ opts.isRequired }
-           isOptional={ opts.isOptional }>
-           { opts.label }
-         </Label>
+          displayError={ opts.displayError }
+          isRequired={ opts.isRequired }
+          isOptional={ opts.isOptional }>
+          { opts.label }
+        </Label>
         <input
           className={ classes }
           ref={ (c) => { this._input = c; } }
