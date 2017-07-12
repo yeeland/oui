@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 /**
@@ -6,26 +7,26 @@ import PropTypes from 'prop-types';
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Label = (props) => {
-  let classes = null;
+const Label = ({ isRequired, isOptional, displayError, children, testSection }) => {
+  const labelClassNames = classNames({
+    'oui-form-bad-news': displayError,
+  });
+
   let fieldLabel = null;
-
-  if (props.isRequired) {
+  if (isRequired) {
     fieldLabel = <span className="oui-label--required"></span>;
-  } else if (props.isOptional) {
+  } else if (isOptional) {
     fieldLabel = <span className="oui-label__optional">(Optional)</span>;
-  }
-
-  if (typeof props.children === 'string') {
-    classes = 'oui-label';
   }
 
   return (
     <label
-      className={ classes }
-      data-test-section={ props.testSection }>
-      { props.children }
-      { fieldLabel }
+      className={ labelClassNames }
+      data-test-section={ testSection }>
+      <span className="oui-label">
+        { children }
+        { fieldLabel }
+      </span>
     </label>
   );
 };
@@ -36,6 +37,8 @@ Label.propTypes = {
     PropTypes.string.isRequired,
     PropTypes.node.isRequired,
   ]),
+  /** Show error state */
+  displayError: PropTypes.bool,
   /** Includes optional label if true */
   isOptional: PropTypes.bool,
   /** Includes required asterisk label if true */

@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Added
+- [Feature] Add form-note as prop to Input component for more parity with SASS.
 
 ## 25.3.1 - 2017-07-05
 ### Added
