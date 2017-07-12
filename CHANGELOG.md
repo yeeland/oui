@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Patch] Attempt to fix failing Travis CI deploys by removing `dist:trusty` flag.
 
 ## 25.4.0 - 2017-07-12
 ### Added
