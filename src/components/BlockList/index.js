@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Category from './Category';
 import Item from './Item';
@@ -31,19 +32,19 @@ const BlockList = (props) => {
 
 BlockList.propTypes = {
   /** Should be subcomponents of `BlockList` */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Should the `BlockList` contain a border on all sides */
-  hasBorder: React.PropTypes.bool,
+  hasBorder: PropTypes.bool,
   /**
    * The max height of the `BlockList`. Pixels will be assumed if no unit is
    * provided.
    */
-  maxHeight: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.string,
+  maxHeight: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
   ]),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 BlockList.defaultProps = {

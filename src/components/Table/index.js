@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import THead from './THead';
@@ -36,20 +37,20 @@ let Table = (props) => {
 
 Table.propTypes = {
   /** Should be a `Table.THead` or `Table.TBody` */
-  children: React.PropTypes.node,
+  children: PropTypes.node,
   /** Sets the padding within cells */
-  density: React.PropTypes.oneOf(['tight', 'loose']),
+  density: PropTypes.oneOf(['tight', 'loose']),
   /** Whether to set the hover class on the Table */
-  shouldAddHover: React.PropTypes.bool,
+  shouldAddHover: PropTypes.bool,
   /** Available border and hover options */
-  style: React.PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
+  style: PropTypes.oneOf(['wall', 'rule', 'rule-no-bottom-border']),
   /**
     Adjust the [CSS `table-layout` property](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
     that is used to calculate the with of inner table cells.
   */
-  tableLayoutAlgorithm: React.PropTypes.oneOf(['auto', 'fixed']),
+  tableLayoutAlgorithm: PropTypes.oneOf(['auto', 'fixed']),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 Table.defaultProps = {

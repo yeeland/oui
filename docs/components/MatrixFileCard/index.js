@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from 'glamor';
 import { Link } from 'react-router';
-import Badge from '../../../src/components/Badge';
 
 const styles = {
   header: css({
@@ -27,18 +26,6 @@ const MatrixFileCard = (props) => (
           { props.children }
         </h3>
       </Link>
-      <div { ...styles.badges }>
-        { props.languages && props.languages.map(language => (
-          <Link
-            to={ `${props.link}/${language.toLowerCase()}` }
-            key={ language }
-            title={ `View ${language} documentation for “${props.children}”` }>
-            <Badge color="plain">
-              { language }
-            </Badge>
-          </Link>
-        )) }
-      </div>
     </div>
   </div>
 );

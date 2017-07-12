@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Router, Route, browserHistory } from 'react-router';
 import { useBasename } from 'history';
 import ReactGA from 'react-ga';
@@ -38,7 +39,7 @@ const Routes = (props) => (
 );
 
 Routes.propTypes = {
-  shell: React.PropTypes.func,
+  shell: PropTypes.func,
 };
 
 export default Routes;
