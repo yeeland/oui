@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
@@ -23,11 +24,11 @@ const Badge = (props) => {
 
 Badge.propTypes = {
   /** Text that appears within the component */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Various color schemes */
-  color: React.PropTypes.oneOf(['default', 'draft', 'live', 'primary', 'plain']),
+  color: PropTypes.oneOf(['default', 'draft', 'live', 'primary', 'plain']),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 Badge.defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Generates a `textarea` element.
@@ -38,35 +39,35 @@ class Textarea extends React.Component {
 
 Textarea.propTypes = {
   /** The default value of the textarea used on initial render */
-  defaultValue: React.PropTypes.string,
+  defaultValue: PropTypes.string,
   /** Prevents textarea from being modified and appears disabled */
-  isDisabled: React.PropTypes.bool,
+  isDisabled: PropTypes.bool,
   /** Prevents textarea from being modified but doesn't appear disabled */
-  isReadOnly: React.PropTypes.bool,
+  isReadOnly: PropTypes.bool,
   /** Prevents textarea from being submitted without value */
-  isRequired: React.PropTypes.bool,
+  isRequired: PropTypes.bool,
   /**
     Function that fires when the textarea loses focus. It fires regardless of
     whether the value has changed.
   */
-  onBlur: React.PropTypes.func,
+  onBlur: PropTypes.func,
   /**
     Function that fires when the textarea loses focus after the value
     changes
   */
-  onChange: React.PropTypes.func,
+  onChange: PropTypes.func,
   /** Function that fires when the textarea gains focus */
-  onFocus: React.PropTypes.func,
+  onFocus: PropTypes.func,
   /** Function that fires the the textarea value changes */
-  onInput: React.PropTypes.func,
+  onInput: PropTypes.func,
   /** Function that fires when a key is pressed down */
-  onKeyDown: React.PropTypes.func,
+  onKeyDown: PropTypes.func,
   /** Textarea placeholder text */
-  placeholder: React.PropTypes.string,
+  placeholder: PropTypes.string,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Text within the textarea */
-  value: React.PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default Textarea;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import OverlayWrapper from '../OverlayWrapper';
 import Poptip from './Poptip';
 
@@ -25,19 +26,19 @@ PoptipWrapper.displayName = 'Poptip';
 
 PoptipWrapper.propTypes = {
   /** Content that, when hovered on, makes the Poptip appear */
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   /** Text that appears within the poptip */
-  content: React.PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
   /** Side of the poptip that should attach to the `children` */
-  horizontalAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  horizontalAttachment: PropTypes.oneOf(['left', 'center', 'right']),
   /** Side of `children` that should attach to the poptip */
-  horizontalTargetAttachment: React.PropTypes.oneOf(['left', 'center', 'right']),
+  horizontalTargetAttachment: PropTypes.oneOf(['left', 'center', 'right']),
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
   /** Vertical edge of the poptip that should touch the `children` */
-  verticalAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
+  verticalAttachment: PropTypes.oneOf(['top', 'middle', 'bottom']),
   /** Vertical edge of the `children` that should touch the poptip */
-  verticalTargetAttachment: React.PropTypes.oneOf(['top', 'middle', 'bottom']),
+  verticalTargetAttachment: PropTypes.oneOf(['top', 'middle', 'bottom']),
 };
 
 export default PoptipWrapper;

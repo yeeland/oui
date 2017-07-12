@@ -6,7 +6,16 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 
-## 25.3.0 - 2017-05-30
+## 25.4.0 - 2017-07-12
+### Added
+- [Feature] Add displayError prop to Input and Label components to better handle error states. (#738)
+- [Feature] Add form-note as prop to Input component for more parity with SASS.
+
+## 25.3.1 - 2017-07-05
+### Added
+- [Patch] Update PropTypes to use the new separated from react lib prop-types package.
+
+## 25.3.0 - 2017-06-30
 ### Added
 - [Feature] Input component accepts hasError prop to display error styles. (#738)
 - [Feature] Add noBorder prop to Table.TR
