@@ -32,5 +32,7 @@ stories
               onChange={ action('on change') }
               onBlur={ action('on blur') }
               onKeyDown={ action('on key press') }
+              displayError={ boolean('displayError', false) }
+              note={ text('note', '')}
           /> );
   });

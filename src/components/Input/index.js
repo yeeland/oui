@@ -3,6 +3,8 @@ import Label from '../Label';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
+import '../../../dist/docs/oui/25.3.0/js/styles.js';
+
 /**
  * Generates an `input` element (optionally wrapped in a label) and accepts
  * most of the common input types.
