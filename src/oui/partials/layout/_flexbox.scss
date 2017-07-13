@@ -30,6 +30,10 @@
   flex: none;
 }
 
+.flex--no-shrink {
+  flex-shrink: 0;
+}
+
 // Flex align
 
 .flex-align--start {
