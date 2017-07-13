@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Patch] Add flex helper to prevent containers from collapsing. (#744)
 
 ## 25.4.1 - 2017-07-12
 - [Patch] Attempt to fix Travis `npm-run-all` failures by adding `skip_cleanup: true` flag (https://docs.travis-ci.com/user/deployment/#Uploading-Files).
