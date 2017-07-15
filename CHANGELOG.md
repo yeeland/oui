@@ -6,6 +6,10 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 
+## 25.4.1 - 2017-07-12
+- [Patch] Attempt to fix Travis `npm-run-all` failures by adding `skip_cleanup: true` flag (https://docs.travis-ci.com/user/deployment/#Uploading-Files).
+- [Patch] Attempt to fix failing Travis CI deploys by removing `dist:trusty` flag.
+
 ## 25.4.0 - 2017-07-12
 ### Added
 - [Feature] Add displayError prop to Input and Label components to better handle error states. (#738)
