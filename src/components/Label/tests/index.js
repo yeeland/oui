@@ -8,6 +8,11 @@ describe('components/Label', () => {
     expect(component.text()).toBe('Foo');
   });
 
+  it('should render nothing when label is empty', () => {
+    const component = mount(<Label></Label>);
+    expect(!component);
+  });
+
   it('should render label with correct classes content', () => {
     const component = mount(<Label>Foo</Label>);
     expect(component.find('.oui-label').length).toBe(1);
@@ -50,21 +55,21 @@ describe('components/Label', () => {
 
   it('should render an optional label if isOptional is set', () => {
     const component = shallow(
-      <Label isOptional={ true }></Label>
+      <Label isOptional={ true }>Test</Label>
     );
     expect(component.find('.oui-label__optional').length).toBe(1);
   });
 
   it('should render an asterisk label if isRequired is set', () => {
     const component = shallow(
-      <Label isRequired={ true }></Label>
+      <Label isRequired={ true }>Test</Label>
     );
     expect(component.find('.oui-label--required').length).toBe(1);
   });
 
   it('should render only isRequired if both isOptional and isRequired are set', () => {
     const component = shallow(
-      <Label isRequired={ true } isOptional={ true }></Label>
+      <Label isRequired={ true } isOptional={ true }>Test</Label>
     );
     expect(component.find('.oui-label--required').length).toBe(1);
     expect(component.find('.oui-label__optional').length).toBe(0);
