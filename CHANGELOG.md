@@ -5,7 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-- [Patch] Return null when Label is empty. (#746)
+
+## 26.0.0 - 2017-07-17
+- [Release] Return null when Label is empty (breaking change). (#746)
 
 ## 25.5.0 - 2017-07-17
 - [Feature] Add flex helper to prevent containers from collapsing. (#744)
