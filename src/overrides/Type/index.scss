@@ -8,6 +8,13 @@
 ///   <p class="color--bad-news">This is bad news text</p>
 ///   <p class="color--charcoal">This is charcoal</p>
 /// @example[html]
+///   <p><a href="#" class="link">Link</a></p>
+///   <p><a href="#" class="link--dark">Dark link</a></p>
+///   <p><a href="#" class="link--bad-news">Bad news link</a></p>
+///   <p><a href="#" class="link--muted">Muted link</a></p>
+///   <p><a href="#" class="link--disabled">Disabled link</a></p>
+///   <p class="background--brand-dark"><a href="#" class="link--reverse">Reverse link</a></p>
+/// @example[html]
 ///   <p class="weight--light">Light weight</p>
 ///   <p class="weight--normal">Normal weight</p>
 ///   <p class="weight--bold">Bold weight</p>

@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Patch] Update docs to include more link examples under `text` overrides.
 
 ## 26.0.0 - 2017-07-17
 - [Release] Return null when Label is empty (breaking change). (#746)
