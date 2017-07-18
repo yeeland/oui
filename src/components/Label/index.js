@@ -8,6 +8,10 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement}
  */
 const Label = ({ isRequired, isOptional, displayError, children, testSection }) => {
+  if (!children) {
+    return null;
+  }
+
   const labelClassNames = classNames({
     'oui-form-bad-news': displayError,
   });
