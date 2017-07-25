@@ -25,7 +25,8 @@ class Input extends React.Component {
     }
 
     let wrapperClasses = classnames(
-      {'oui-form-bad-news': opts.displayError}
+      {'oui-form-bad-news': opts.displayError},
+      {'highlight-react-component': localStorage.highlight_react}
     );
 
     let classes = classnames(
@@ -34,7 +35,7 @@ class Input extends React.Component {
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div className={ wrapperClasses }>
+      <div data-oui-component className={ wrapperClasses }>
         <Label
           displayError={ opts.displayError }
           isRequired={ opts.isRequired }
