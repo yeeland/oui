@@ -58,6 +58,7 @@ const ButtonRowSide = (side, buttons, testSection) => {
 const ButtonRow = (props) => {
   return (
     <div
+      data-oui-component={ true }
       className='oui-button-row flex'
       data-test-section={ props.testSection }>
       { props.leftGroup ? ButtonRowSide('left', props.leftGroup, props.testSection) : null }

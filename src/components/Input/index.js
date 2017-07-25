@@ -34,7 +34,7 @@ class Input extends React.Component {
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div className={ wrapperClasses }>
+      <div data-oui-component={ true } className={ wrapperClasses }>
         <Label
           displayError={ opts.displayError }
           isRequired={ opts.isRequired }

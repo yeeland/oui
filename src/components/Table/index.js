@@ -27,6 +27,7 @@ let Table = (props) => {
 
   return (
     <table
+      data-oui-component={ true }
       className={ classes }
       style={ style }
       data-test-section={ props.testSection }>
