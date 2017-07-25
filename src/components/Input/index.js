@@ -25,8 +25,7 @@ class Input extends React.Component {
     }
 
     let wrapperClasses = classnames(
-      {'oui-form-bad-news': opts.displayError},
-      {'highlight-react-component': localStorage.highlight_react}
+      {'oui-form-bad-news': opts.displayError}
     );
 
     let classes = classnames(
