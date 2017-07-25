@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Patch] Add data attribute `data-oui-component` to all outer React components for tracking. Also add URL target to display borders in the docs/app via url `#oui-showreact`. (#751)
 - [Patch] Update travis.yml to kill `ssh-agent` which may be avoid background processes hanging and causing build reports only to fail. (#749)
 - [Patch] Update docs to include more link examples under `text` overrides.
 

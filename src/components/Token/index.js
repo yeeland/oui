@@ -17,6 +17,7 @@ const Token = (props) => {
   return (
     /* eslint-disable react/jsx-boolean-value */
     <div
+      data-oui-component={ true }
       className="oui-token-wrap flex"
       data-test-section={ props.testSection }>
       <div

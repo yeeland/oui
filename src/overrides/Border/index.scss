@@ -19,6 +19,15 @@
 ////
 
 
+body:target *[data-oui-component] {
+  outline: 2px solid hotpink;
+
+  & & {
+    outline-width: 1px;
+  }
+}
+
+
 %border--all,
 .border--all {
   border: 1px solid map-fetch($border, color, base) !important;

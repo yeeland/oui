@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 const Popover = (props) => {
   return (
     <div
+      data-oui-component={ true }
       className={ 'oui-pop--over' }
       style={{ display: 'block', opacity: 1, position: 'initial' }}
       data-test-section={ props.testSection }>
