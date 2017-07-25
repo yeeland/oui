@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
  */
 const ArrowsInline = (props) => (
   <span
+    data-oui-component
     className={ 'oui-arrow-inline--' + props.direction }
     aria-hidden="true"
     data-test-section={ props.testSection }>

@@ -29,7 +29,7 @@ const CampaignsIcon = (props) => {
 
   return (
     <Svg
-      className={ 'oui-icon display--inline ' + sizeclass }
+      data-oui-component className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );

@@ -17,6 +17,7 @@ class Textarea extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <textarea
+        data-oui-component
         className="oui-textarea"
         ref={ (c) => { this._textarea = c; } }
         value={ this.props.value }

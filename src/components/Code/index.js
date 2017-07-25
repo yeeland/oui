@@ -68,7 +68,7 @@ class Code extends React.Component {
     }
 
     return (
-      <div className="position--relative">
+      <div data-oui-component className="position--relative">
         { this.props.hasCopyButton &&
           <CopyButton code={ this.props.children } testSection={ this.props.testSection } />
         }

@@ -196,6 +196,7 @@ class OverlayWrapper extends React.Component {
     return (
       /* eslint-disable react/jsx-no-bind */
       <div
+        data-oui-component
         data-test-section={ this.props.testSection }
         style={{ display: 'inline-block' }}>
         <div

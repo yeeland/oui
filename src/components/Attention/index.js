@@ -32,6 +32,7 @@ const Attention = (props) => {
 
   return (
     <div
+      data-oui-component
       className={ classes }
       data-test-section={ props.testSection }
       aria-label={ attentionAriaLabel }

@@ -20,6 +20,7 @@ const BlockList = (props) => {
 
   return (
     <div
+      data-oui-component
       className={ classes }
       data-test-section={ props.testSection }
       style={{ maxHeight: props.maxHeight }}>
