@@ -29,7 +29,7 @@ const SyncIcon = (props) => {
 
   return (
     <Svg
-      data-oui-component={ true } className={ 'oui-icon display--inline ' + sizeclass }
+      className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );
