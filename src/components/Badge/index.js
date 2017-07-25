@@ -15,7 +15,7 @@ const Badge = (props) => {
 
   return (
     <span
-      data-oui-component
+      data-oui-component={ true }
       className={ classes }
       data-test-section={ props.testSection }>
       { props.children }

@@ -27,7 +27,7 @@ const Label = ({ isRequired, isOptional, displayError, children, testSection }) 
     <label
       className={ labelClassNames }
       data-test-section={ testSection }>
-      <span data-oui-component className="oui-label">
+      <span data-oui-component={ true } className="oui-label">
         { children }
         { fieldLabel }
       </span>

@@ -16,7 +16,7 @@ const Button = (props) => {
   });
   return (
     <button
-      data-oui-component
+      data-oui-component={ true }
       className={ buttonClassNames }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }

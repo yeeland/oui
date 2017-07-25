@@ -24,7 +24,7 @@ const ToolbarNewWindowIcon = (props) => {
 
   return (
     <Svg
-      data-oui-component className={ 'oui-icon display--inline ' + sizeclass }
+      data-oui-component={ true } className={ 'oui-icon display--inline ' + sizeclass }
       data-test-section={ props.testSection }
     />
   );
