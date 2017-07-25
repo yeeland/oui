@@ -35,3 +35,5 @@ deploy:
     tags: true
 before_install:
 - openssl aes-256-cbc -K $encrypted_310f735a6883_key -iv $encrypted_310f735a6883_iv -in deploy_rsa.enc -out deploy_rsa -d
+after_install:
+- ssh-agent -k
