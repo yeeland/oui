@@ -19,23 +19,13 @@
 ////
 
 
-.highlight-react-component,
-*[data-oui-component] {
-  outline: 1px solid pink !important;
-}
-
-*[data-oui-component] {
-  outline: 10px solid pink !important;
+body:target *[data-oui-component] {
+  outline: 2px solid hotpink;
   & & {
-    outline-width: 9px;
-    & & {
-      outline-width: 8px;
-      & & {
-        outline-width: 7px;
-      }
-    }
+    outline-width: 1px;
   }
 }
+
 
 %border--all,
 .border--all {
