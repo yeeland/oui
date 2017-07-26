@@ -99,8 +99,8 @@ import Button from 'optimizely-oui';
 
 | Component        | done           
 | ------------- |:-------------:| 
-| Accordion     | :heavy_multiplication_x: |  
-| Array     | :heavy_multiplication_x:     |   
+| Accordion     | :o: |  
+| Array     | :o:     |   
 | ArrowInline | :heavy_check_mark:    |     
 | Attention | :heavy_check_mark:    |     
 | Badge | :heavy_check_mark:    | 
@@ -111,27 +111,27 @@ import Button from 'optimizely-oui';
 | ButtonRow | :heavy_check_mark:    |     
 | CheckBox | :heavy_check_mark:    |     
 | Code | :heavy_check_mark:    |     
-| Dialog | :heavy_multiplication_x:   |     
-| Disclose | :heavy_multiplication_x:     |     
-| Dropdown | :heavy_multiplication_x:    |     
-| Help | :heavy_multiplication_x:    |     
+| Dialog | :o:   |     
+| Disclose | :o:     |     
+| Dropdown | :o:    |     
+| Help | :o:    |     
 | Input | :heavy_check_mark:    |     
-| InputIcon | :heavy_multiplication_x:   |  
+| InputIcon | :o:   |  
 | Label | :heavy_check_mark:    |   
-| Media | :heavy_multiplication_x:    |        
-| Nav | :heavy_multiplication_x:    |   
+| Media | :o:    |        
+| Nav | :o:    |   
 | OverlayWrapper | :heavy_check_mark:    |   
-| Pagination | :heavy_multiplication_x:   |   
+| Pagination | :o:   |   
 | Popover | :heavy_check_mark:    |   
 | Poptip | :heavy_check_mark:    |   
-| ProgressBar | :heavy_multiplication_x:    |   
-| ProgressDots | :heavy_multiplication_x:     |   
+| ProgressBar | :o:    |   
+| ProgressDots | :o:     |   
 | Radio | :heavy_check_mark:    |   
-| Search | :heavy_multiplication_x:     |   
-| Select | :heavy_multiplication_x:     |   
-| Spinner | :heavy_multiplication_x:     |   
-| Stats | :heavy_multiplication_x:     |   
-| Steps | :heavy_multiplication_x:     |   
+| Search | :o:     |   
+| Select | :o:     |   
+| Spinner | :o:     |   
+| Stats | :o:     |   
+| Steps | :o:     |   
 | Table | :heavy_check_mark:    |   
 | Tabel/TBody | :heavy_check_mark:    |   
 | Tabel/TD | :heavy_check_mark:    |   
