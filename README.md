@@ -114,6 +114,23 @@ import Button from 'optimizely-oui';
 | Tabel/THead | :heavy_check_mark:    | Tabel/TR | :heavy_check_mark:    | TabNav | :heavy_check_mark:    |   
 | TabNav/Tab | :heavy_check_mark:    | Textarea | :heavy_check_mark:    | Token | :heavy_check_mark:    |   
 
+| Component| Status| Component | Status | Component | Status |           
+| ------------- |:-------------:| ------------- |:-------------:| ------------- |:-------------:| 
+| Accordion     | :large_white_square: | Array     | :large_white_square:     | ArrowInline | :white_check_mark:    |     
+| Attention | :white_check_mark:    | Badge | :white_check_mark:    | BlockList | :white_check_mark:    |         
+| BlockList/Category | :white_check_mark:    | BlockList/Item | :white_check_mark:    | Button | :white_check_mark:    |     
+| ButtonRow | :white_check_mark:    | CheckBox | :white_check_mark:    | Code | :white_check_mark:    |     
+| Dialog | :large_white_square:   | Disclose | :large_white_square:     | Dropdown | :large_white_square:    |     
+| Help | :large_white_square:    | Input | :white_check_mark:    | InputIcon | :large_white_square:   |  
+| Label | :white_check_mark:    | Media | :large_white_square:    | Nav | :large_white_square:    |   
+| OverlayWrapper | :white_check_mark:    | Pagination | :large_white_square:   | Popover | :white_check_mark:    |   
+| Poptip | :white_check_mark:    | ProgressBar | :large_white_square:    | ProgressDots | :large_white_square:     |   
+| Radio | :white_check_mark:    | Search | :large_white_square:     | Select | :large_white_square:     |   
+| Spinner | :large_white_square:     | Stats | :large_white_square:     | Steps | :large_white_square:     |   
+| Table | :white_check_mark:    | Tabel/TBody | :white_check_mark:    | Tabel/TD | :white_check_mark:    |   
+| Tabel/THead | :white_check_mark:    | Tabel/TR | :white_check_mark:    | TabNav | :white_check_mark:    |   
+| TabNav/Tab | :white_check_mark:    | Textarea | :white_check_mark:    | Token | :white_check_mark:    |   
+
 ***
 
 ## Contributing to OUI
