@@ -95,6 +95,53 @@ import Button from 'optimizely-oui';
 
 [We provide React documentation](http://design.optimizely.com/docs/oui/) that includes information on our component props and default values.
 
+## React Components Dev Status:
+
+| Component        | done           
+| ------------- |:-------------:| 
+| Accordion     | :heavy_multiplication_x: |  
+| Array     | :heavy_multiplication_x:     |   
+| ArrowInline | :heavy_check_mark:    |     
+| Attention | :heavy_check_mark:    |     
+| Badge | :heavy_check_mark:    | 
+| BlockList | :heavy_check_mark:    |         
+| BlockList/Category | :heavy_check_mark:    |     
+| BlockList/Item | :heavy_check_mark:    |     
+| Button | :heavy_check_mark:    |     
+| ButtonRow | :heavy_check_mark:    |     
+| CheckBox | :heavy_check_mark:    |     
+| Code | :heavy_check_mark:    |     
+| Dialog | :heavy_multiplication_x:   |     
+| Disclose | :heavy_multiplication_x:     |     
+| Dropdown | :heavy_multiplication_x:    |     
+| Help | :heavy_multiplication_x:    |     
+| Input | :heavy_check_mark:    |     
+| InputIcon | :heavy_multiplication_x:   |  
+| Label | :heavy_check_mark:    |   
+| Media | :heavy_multiplication_x:    |        
+| Nav | :heavy_multiplication_x:    |   
+| OverlayWrapper | :heavy_check_mark:    |   
+| Pagination | :heavy_multiplication_x:   |   
+| Popover | :heavy_check_mark:    |   
+| Poptip | :heavy_check_mark:    |   
+| ProgressBar | :heavy_multiplication_x:    |   
+| ProgressDots | :heavy_multiplication_x:     |   
+| Radio | :heavy_check_mark:    |   
+| Search | :heavy_multiplication_x:     |   
+| Select | :heavy_multiplication_x:     |   
+| Spinner | :heavy_multiplication_x:     |   
+| Stats | :heavy_multiplication_x:     |   
+| Steps | :heavy_multiplication_x:     |   
+| Table | :heavy_check_mark:    |   
+| Tabel/TBody | :heavy_check_mark:    |   
+| Tabel/TD | :heavy_check_mark:    |   
+| Tabel/THead | :heavy_check_mark:    |   
+| Tabel/TR | :heavy_check_mark:    |   
+| TabNav | :heavy_check_mark:    |   
+| TabNav/Tab | :heavy_check_mark:    |   
+| Textarea | :heavy_check_mark:    |   
+| Token | :heavy_check_mark:    |   
+
 ***
 
 ## Contributing to OUI
