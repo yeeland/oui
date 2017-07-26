@@ -95,6 +95,53 @@ import Button from 'optimizely-oui';
 
 [We provide React documentation](http://design.optimizely.com/docs/oui/) that includes information on our component props and default values.
 
+## React Components Dev Status:
+
+| Component        | done           
+| ------------- |:-------------:| 
+| Accordion     | :o: |  
+| Array     | :o:     |   
+| ArrowInline | :heavy_check_mark:    |     
+| Attention | :heavy_check_mark:    |     
+| Badge | :heavy_check_mark:    | 
+| BlockList | :heavy_check_mark:    |         
+| BlockList/Category | :heavy_check_mark:    |     
+| BlockList/Item | :heavy_check_mark:    |     
+| Button | :heavy_check_mark:    |     
+| ButtonRow | :heavy_check_mark:    |     
+| CheckBox | :heavy_check_mark:    |     
+| Code | :heavy_check_mark:    |     
+| Dialog | :o:   |     
+| Disclose | :o:     |     
+| Dropdown | :o:    |     
+| Help | :o:    |     
+| Input | :heavy_check_mark:    |     
+| InputIcon | :o:   |  
+| Label | :heavy_check_mark:    |   
+| Media | :o:    |        
+| Nav | :o:    |   
+| OverlayWrapper | :heavy_check_mark:    |   
+| Pagination | :o:   |   
+| Popover | :heavy_check_mark:    |   
+| Poptip | :heavy_check_mark:    |   
+| ProgressBar | :o:    |   
+| ProgressDots | :o:     |   
+| Radio | :heavy_check_mark:    |   
+| Search | :o:     |   
+| Select | :o:     |   
+| Spinner | :o:     |   
+| Stats | :o:     |   
+| Steps | :o:     |   
+| Table | :heavy_check_mark:    |   
+| Tabel/TBody | :heavy_check_mark:    |   
+| Tabel/TD | :heavy_check_mark:    |   
+| Tabel/THead | :heavy_check_mark:    |   
+| Tabel/TR | :heavy_check_mark:    |   
+| TabNav | :heavy_check_mark:    |   
+| TabNav/Tab | :heavy_check_mark:    |   
+| Textarea | :heavy_check_mark:    |   
+| Token | :heavy_check_mark:    |   
+
 ***
 
 ## Contributing to OUI
