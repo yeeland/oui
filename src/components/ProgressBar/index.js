@@ -1,6 +1,9 @@
-import React from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import classnames from 'classnames';
+
+import Label from '../Label';
 
 /**
  * Generates an `ProgressBar` element
@@ -20,10 +23,14 @@ const ProgressBar = (props) => {
     topLabel,
   } = props;
 
-  const legoProgress = classnames('lego-progress', {'lego-progress--bad-news': badNews});
+  const legoProgress = classnames(
+    'lego-progress',
+    { 'lego-progress--bad-news': badNews }
+  );
+
   return (
     <div>
-      <label className="oui-label">{topLabel}</label>
+      <Label>{ topLabel }</Label>
       <div className={ legoProgress }>
         <div
           className="lego-progress__bar"
