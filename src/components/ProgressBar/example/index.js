@@ -7,5 +7,5 @@ export default [
     examples: [
       <ProgressBar />,
     ],
-  }
+  },
 ];
