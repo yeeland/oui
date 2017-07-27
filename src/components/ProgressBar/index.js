@@ -9,19 +9,33 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement}
  */
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = (props) => {
+  const {
+    progress,
+    topLabel,
+    leftLabel,
+    rightLabel,
+    min = 0,
+    max = 100,
+  } = props;
   return (
     <div>
-      <label className="oui-label">Traffic Allocatio</label>
+      <label className="oui-label">{topLabel}</label>
       <div className="lego-progress">
-        <div className="lego-progress__bar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+        <div
+          className="lego-progress__bar"
+          style={ `width: ${progress}%;` }
+          aria-valuenow={ `${progress}` }
+          aria-valuemin={ min }
+          aria-valuemax={ max }>
+        </div>
       </div>
       <div className="flex flex--1 push-half--top">
         <div className="flex flex--1 muted milli">
-          Allocated: 35%
+          {`${leftLabel}: ${progress}%`}
         </div>
         <div className="flex flex--1 muted milli flex-justified--end">
-          Available: 65%
+          {`${rightLabel}: ${progress - 100}%`}
         </div>
       </div>
     </div>
@@ -30,8 +44,18 @@ const ProgressBar = ({ progress }) => {
 };
 
 ProgressBar.propTypes = {
-  /** The default value of the input used on initial render */
+  /** left label */
+  leftLabel: PropTypes.string,
+  /** max */
+  max: PropTypes.string,
+  /** min */
+  min: PropTypes.string,
+  /** string data for progress */
   progress: PropTypes.string,
+  /** right label */
+  rightLabel: PropTypes.string,
+  /** top label*/
+  topLabel: PropTypes.string,
 };
 
 export default ProgressBar;
