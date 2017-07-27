@@ -13,7 +13,7 @@ export default [
       />,
     ],
   },
-    {
+  {
     examples: [
       <ProgressBar
         max="100"
@@ -48,7 +48,7 @@ export default [
   {
     examples: [
       <ProgressBar
-        displayError
+        displayError={ true }
         min="0"
         max="100"
         progress="60"
