@@ -6,6 +6,10 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 
+## 26.1.1 - 2017-07-27
+- [Feature] Add `yarn.lock` file to OUI to keep a more reliable dependency managament than `npm`. 
+- [Patch] Upgrade `jest` framework from version `18.0.0` to `20.0.4`. 
+
 ## 26.1.0 - 2017-07-25
 - [Feature] Add data attribute `data-oui-component` to all outer React components for tracking. Also add URL target to display borders in the docs/app via url `#oui-showreact`. (#751)
 - [Patch] Update travis.yml to kill `ssh-agent` which may be avoid background processes hanging and causing build reports only to fail. (#749)
