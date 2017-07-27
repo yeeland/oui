@@ -1,5 +1,5 @@
 import React from 'react';
-// import classnames from 'classnames';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 /**
@@ -11,17 +11,20 @@ import PropTypes from 'prop-types';
 
 const ProgressBar = (props) => {
   const {
-    progress,
-    topLabel,
+    badNews = false,
     leftLabel,
-    rightLabel,
-    min = 0,
     max = 100,
+    min = 0,
+    progress,
+    rightLabel,
+    topLabel,
   } = props;
+
+  const legoProgress = classnames('lego-progress', {'lego-progress--bad-news': badNews});
   return (
     <div>
       <label className="oui-label">{topLabel}</label>
-      <div className="lego-progress">
+      <div className={ legoProgress }>
         <div
           className="lego-progress__bar"
           style={ `width: ${progress}%;` }
@@ -44,6 +47,8 @@ const ProgressBar = (props) => {
 };
 
 ProgressBar.propTypes = {
+  /** badNews will change the progress bar color to red */
+  badNews: PropTypes.bool,
   /** left label */
   leftLabel: PropTypes.string,
   /** max */
