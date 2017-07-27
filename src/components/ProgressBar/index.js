@@ -14,7 +14,7 @@ import Label from '../Label';
 
 const ProgressBar = (props) => {
   const {
-    badNews = false,
+    displayError = false,
     leftLabel,
     max = 100,
     min = 0,
@@ -23,31 +23,36 @@ const ProgressBar = (props) => {
     topLabel,
   } = props;
 
-  const legoProgress = classnames(
-    'lego-progress',
-    { 'lego-progress--bad-news': badNews }
+  const ouiProgress = classnames(
+    'oui-progress',
+    { 'oui-progress--bad-news': displayError }
   );
 
   return (
     <div>
-      <Label>{ topLabel }</Label>
-      <div className={ legoProgress }>
+      { topLabel &&
+        <Label>{ topLabel }</Label>
+      }
+      <div className={ ouiProgress }>
         <div
-          className="lego-progress__bar"
-          style={ `width: ${progress}%;` }
+          className="oui-progress__bar"
+          style={{ 'width': `${progress}%`}}
           aria-valuenow={ `${progress}` }
           aria-valuemin={ min }
           aria-valuemax={ max }>
+          { !leftLabel && `${progress}%`}
         </div>
       </div>
-      <div className="flex flex--1 push-half--top">
-        <div className="flex flex--1 muted milli">
-          {`${leftLabel}: ${progress}%`}
+      { leftLabel && rightLabel &&
+        <div className="flex flex--1 push-half--top">
+          <div className="flex flex--1 muted milli">
+            {`${leftLabel}: ${progress}%`}
+          </div>
+          <div className="flex flex--1 muted milli flex-justified--end">
+            {`${rightLabel}: ${max - progress}%`}
+          </div>
         </div>
-        <div className="flex flex--1 muted milli flex-justified--end">
-          {`${rightLabel}: ${progress - 100}%`}
-        </div>
-      </div>
+      }
     </div>
       /* eslint-enable */
     );
@@ -55,7 +60,7 @@ const ProgressBar = (props) => {
 
 ProgressBar.propTypes = {
   /** badNews will change the progress bar color to red */
-  badNews: PropTypes.bool,
+  displayError: PropTypes.bool,
   /** left label */
   leftLabel: PropTypes.string,
   /** max */
