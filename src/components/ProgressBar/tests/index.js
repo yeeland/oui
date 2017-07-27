@@ -1,8 +1,7 @@
 import React from 'react';
 
-describe('components/Input', () => {
-  it('testing progressbar', () => {
-
+describe('components/ProgressBar', () => {
+  it('testing ProgressBar', () => {
     expect(true).toBe(true);
   });
 });
