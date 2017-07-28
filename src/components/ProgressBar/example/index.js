@@ -16,9 +16,9 @@ export default [
   {
     examples: [
       <ProgressBar
-        max="100"
+        max="80"
         min="0"
-        progress="60"
+        progress="20"
       />,
     ],
   },
@@ -26,9 +26,9 @@ export default [
     examples: [
       <ProgressBar
         leftLabel="Allocated traffic"
-        max="100"
+        max="250"
         min="0"
-        progress="60"
+        progress="90"
         rightLabel="Available traffic"
       />,
     ],
@@ -37,9 +37,22 @@ export default [
     examples: [
       <ProgressBar
         leftLabel="Allocated traffic"
-        min="0"
-        max="100"
-        progress="60"
+        min="20"
+        max="80"
+        progress="30"
+        rightLabel="Available traffic"
+        topLabel="hola esto es un label"
+      />,
+    ],
+  },
+  {
+    examples: [
+      <ProgressBar
+        displayError={ true }
+        leftLabel="Allocated traffic"
+        min="20"
+        max="80"
+        progress="30"
         rightLabel="Available traffic"
         topLabel="hola esto es un label"
       />,

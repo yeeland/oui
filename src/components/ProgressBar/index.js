@@ -28,6 +28,10 @@ const ProgressBar = (props) => {
     { 'oui-progress--bad-news': displayError }
   );
 
+  let range = max - min;
+  let allocated = Math.round(progress / range * 100);
+  let available = Math.round(100 - allocated);
+
   return (
     <div>
       { topLabel &&
@@ -36,20 +40,20 @@ const ProgressBar = (props) => {
       <div className={ ouiProgress }>
         <div
           className="oui-progress__bar"
-          style={{ 'width': `${progress}%`}}
-          aria-valuenow={ `${progress}` }
+          style={{ 'width': `${allocated}%`}}
+          aria-valuenow={ `${allocated}` }
           aria-valuemin={ min }
           aria-valuemax={ max }>
-          { !leftLabel && `${progress}%`}
+          { !leftLabel && `${allocated}%`}
         </div>
       </div>
       { leftLabel && rightLabel &&
         <div className="flex flex--1 push-half--top">
           <div className="flex flex--1 muted milli">
-            {`${leftLabel}: ${progress}%`}
+            {`${leftLabel}: ${allocated}%`}
           </div>
           <div className="flex flex--1 muted milli flex-justified--end">
-            {`${rightLabel}: ${max - progress}%`}
+            {`${rightLabel}: ${available}%`}
           </div>
         </div>
       }
