@@ -5,7 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-- [Feature] Add flex-grow--none and update flex-shrink--none helpers.
+
+## 26.2.0 - 2017-07-28
+- [Feature] Add ProgressBar component. (#758)
+- [Feature] Add flex-grow--none and update flex-shrink--none helpers. (#744)
 
 ## 26.1.1 - 2017-07-27
 - [Feature] Add `yarn.lock` file to OUI to keep a more reliable dependency managament than `npm`.
