@@ -64,11 +64,11 @@ ProgressBar.propTypes = {
   /** left label */
   leftLabel: PropTypes.string,
   /** max */
-  max: PropTypes.string,
+  max: PropTypes.string.isRequired,
   /** min */
-  min: PropTypes.string,
+  min: PropTypes.string.isRequired,
   /** string data for progress */
-  progress: PropTypes.string,
+  progress: PropTypes.string.isRequired,
   /** right label */
   rightLabel: PropTypes.string,
   /** top label*/
