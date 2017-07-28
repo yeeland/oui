@@ -45,6 +45,7 @@
     "react-element-to-jsx-string": "^5.0.0",
     "react-ga": "^2.1.2",
     "react-router": "^3.0.1",
+    "react-test-renderer": "^15.6.1",
     "sass-loader": "^4.0.2",
     "scribesass-parser": "optimizely/scribesass-parser#9639a63cb8883c5341cd285af468c5949a06f66f",
     "style-loader": "^0.13.1",
