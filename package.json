@@ -54,7 +54,7 @@
     "webpack-notifier": "^1.4.1"
   },
   "scripts": {
-    "test": "npm run eslint && npm run jest && codecov && npm run scss-lint && npm run icons:update && npm run docs:build",
+    "test": "npm run eslint && npm run jest && codecov && npm run icons:update && npm run docs:build",
     "start": "bundle install && bundle update && npm install && npm run icons:update && npm run babel && npm run docs:build",
     "jest": "jest --config .jest.config.json",
     "jest:watch": "jest --config .jest.config.json --watch",
