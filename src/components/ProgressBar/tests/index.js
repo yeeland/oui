@@ -87,4 +87,17 @@ describe('components/ProgressBar', () => {
     ));
     expect(component.text()).toEqual('60%');
   });
+  it('should render text for bottom labels and not in the bar', () => {
+    const component = shallow((
+      <ProgressBar
+        displayError={ true }
+        progress="60"
+        leftLabel="left label"
+        rightLabel="right label"
+      />
+    ));
+    expect(component.text()).toEqual('left label: 60%right label: 40%');
+  });
 });
+
+
