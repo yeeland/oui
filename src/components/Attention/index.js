@@ -31,7 +31,7 @@ const Attention = (props) => {
   let attentionAriaLabel = props.type ? getAssistiveTextFromColorClass(props.type) : null;
   let alignClass = ('oui-attention ' + colorClassName + ' ' + alignmentClassName).trim();
   let classes = classNames({
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
     [`${alignClass}`]: true,
   });
 

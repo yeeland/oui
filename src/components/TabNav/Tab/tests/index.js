@@ -13,7 +13,7 @@ describe('components/TabNav/Tab', () => {
     expect(component.hasClass('oui-tabs-nav__item')).toBe(true);
   });
 
-  it('should call function that is passed to onClick after tab is clicked', () => {
+  it('should call function passed to onClick after tab is clicked', () => {
     const obj = {
       func: function() {},
     };

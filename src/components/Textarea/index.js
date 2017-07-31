@@ -17,7 +17,7 @@ class Textarea extends React.Component {
   render() {
     const classes = classNames({
       'oui-textarea': true,
-      'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
     });
 
     return (

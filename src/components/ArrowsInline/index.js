@@ -9,7 +9,7 @@ import classNames from 'classnames';
 
 const ArrowsInline = (props) => {
   let classes = classNames({
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
     [`oui-arrow-inline--${props.direction}`]: props.direction,
   });
 

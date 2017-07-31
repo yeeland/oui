@@ -63,7 +63,7 @@ class Code extends React.Component {
   render() {
     let classes = classNames({
       'oui-pre': true,
-      'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
     });
 
     if (!this.props.children) {

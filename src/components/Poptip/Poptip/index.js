@@ -9,7 +9,7 @@ import classNames from 'classnames';
 const Poptip = (props) => {
   const classes = classNames({
     'oui-pop--tip': true,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (

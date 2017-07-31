@@ -26,7 +26,7 @@ class Input extends React.Component {
 
     let wrapperClasses = classNames({
       'oui-form-bad-news': opts.displayError,
-      'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
     });
 
     let classes = classNames({

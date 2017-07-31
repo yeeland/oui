@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const Popover = (props) => {
   let classes = classNames({
     'oui-pop--over': true,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (

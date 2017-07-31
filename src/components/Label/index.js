@@ -14,7 +14,7 @@ const Label = ({ isRequired, isOptional, displayError, children, testSection }) 
 
   const labelClassNames = classNames({
     'oui-form-bad-news': displayError,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   let fieldLabel = null;

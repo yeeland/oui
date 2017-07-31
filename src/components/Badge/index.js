@@ -11,7 +11,7 @@ const Badge = (props) => {
   let classes = classNames({
     'oui-badge': true,
     [`oui-badge--${props.color}`]: props.color,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (

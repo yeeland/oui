@@ -16,7 +16,7 @@ const BlockList = (props) => {
     'background--white': true,
     'overflow-x--auto': true,
     'border--all': props.hasBorder,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (

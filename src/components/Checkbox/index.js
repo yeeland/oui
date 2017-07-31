@@ -19,7 +19,7 @@ const Checkbox = (props) => {
   });
   const classes = classNames({
     'flex--none': true,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
   return (
     <Label testSection={ props.testSection && props.testSection + '-label' }>

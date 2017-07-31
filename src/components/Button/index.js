@@ -13,7 +13,7 @@ const Button = (props) => {
     [`oui-button--${props.size}`]: props.size,
     [`oui-button--${props.width}`]: props.width,
     ['is-active']: props.isActive,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') == 'true',
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (
