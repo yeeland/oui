@@ -19,7 +19,9 @@
 ////
 
 
-body:target *[data-oui-component] {
+body:target *[data-oui-component],
+.highlight-react--oui *[data-oui-component],
+.highlight-react--oui[data-oui-component] {
   outline: 2px solid hotpink;
 
   & & {
