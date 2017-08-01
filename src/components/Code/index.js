@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import CopyButton from './CopyButton';
@@ -49,6 +50,7 @@ class Code extends React.Component {
     return (
       /* eslint-disable react/no-danger */
       <code
+        data-oui-component={ true }
         className={ this.props.type === 'inline' ? 'oui-code' : '' }
         data-test-section={ this.props.type === 'inline' && this.props.testSection }
         dangerouslySetInnerHTML={ dangerouslySetInnerHTML }>
@@ -59,6 +61,11 @@ class Code extends React.Component {
   }
 
   render() {
+    let classes = classNames({
+      'oui-pre': true,
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+    });
+
     if (!this.props.children) {
       return null;
     }
@@ -73,7 +80,7 @@ class Code extends React.Component {
           <CopyButton code={ this.props.children } testSection={ this.props.testSection } />
         }
         <pre
-          className="oui-pre"
+          className={ classes }
           data-test-section={ this.props.testSection }>
           { this.renderCode() }
         </pre>

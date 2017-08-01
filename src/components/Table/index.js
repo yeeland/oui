@@ -19,6 +19,7 @@ let Table = (props) => {
     [`oui-table--${props.style}`]: props.style,
     [`oui-table--${props.density}`]: props.density,
     'oui-table--hover': props.shouldAddHover,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   const style = {

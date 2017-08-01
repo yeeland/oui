@@ -10,6 +10,11 @@ import classNames from 'classnames';
  * @returns {ReactElement}
  */
 const Token = (props) => {
+  const classes = classNames({
+    'oui-token-wrap': true,
+    'flex': true,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+  });
   const tokenToolsClasses = classNames({
     'oui-token-tool': props.isDraggable,
   });
@@ -18,7 +23,7 @@ const Token = (props) => {
     /* eslint-disable react/jsx-boolean-value */
     <div
       data-oui-component={ true }
-      className="oui-token-wrap flex"
+      className={ classes }
       data-test-section={ props.testSection }>
       <div
         className={ tokenToolsClasses }

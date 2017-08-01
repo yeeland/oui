@@ -17,14 +17,19 @@ const Checkbox = (props) => {
     'cursor--pointer': true,
     'oui-label--disabled': props.isDisabled,
   });
+  const classes = classNames({
+    'flex--none': true,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+  });
   return (
     <Label testSection={ props.testSection && props.testSection + '-label' }>
       <div className="flex">
         <input
+          data-oui-component={ true }
           type="checkbox"
           defaultChecked={ props.defaultChecked }
           checked={ props.checked }
-          className="flex--none"
+          className={ classes }
           disabled={ props.isDisabled }
           onChange={ props.onChange }
           data-test-section={ props.testSection }

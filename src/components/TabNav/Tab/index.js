@@ -13,6 +13,7 @@ const Tab = (props) => {
     'oui-tab-disabled': props.isDisabled,
     'is-active': props.isActive,
   });
+
   return (
     <li
       data-test-section={ props.testSection }

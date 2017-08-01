@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 /**
@@ -10,10 +11,15 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement}
  */
 const Popover = (props) => {
+  let classes = classNames({
+    'oui-pop--over': true,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+  });
+
   return (
     <div
       data-oui-component={ true }
-      className={ 'oui-pop--over' }
+      className={ classes }
       style={{ display: 'block', opacity: 1, position: 'initial' }}
       data-test-section={ props.testSection }>
       <div className="oui-pop--over__content">

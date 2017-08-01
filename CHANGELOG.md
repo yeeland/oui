@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Feature] Add data attribute `data-oui-component` to more components and add `.highlight-react--oui` class when present to highlight components in use. (#751)
 
 ## 26.2.0 - 2017-07-28
 - [Feature] Add ProgressBar component. (#758)

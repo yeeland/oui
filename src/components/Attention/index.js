@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import CloseIcon from '../Icon/CloseIcon';
+import classNames from 'classnames';
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
 const renderDismissButton = (testSection) => {
@@ -28,7 +29,11 @@ const Attention = (props) => {
   let colorClassName = props.type ? 'oui-attention--' + props.type : '';
   let alignmentClassName = (props.alignment === 'center') ? 'oui-text--center' : '';
   let attentionAriaLabel = props.type ? getAssistiveTextFromColorClass(props.type) : null;
-  let classes = ('oui-attention ' + colorClassName + ' ' + alignmentClassName).trim();
+  let alignClass = ('oui-attention ' + colorClassName + ' ' + alignmentClassName).trim();
+  let classes = classNames({
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+    [`${alignClass}`]: true,
+  });
 
   return (
     <div

@@ -11,5 +11,6 @@
     "^.+\\.(svg)$": "<rootDir>/src/utils/svg-mock.js"
   },
   "testRegex": "(/tests/.*|\\.(test|spec))\\.(js|json|node)$",
-  "moduleDirectories": ["node_modules", "src"]
+  "moduleDirectories": ["node_modules", "src"],
+  "setupTestFrameworkScriptFile": "<rootDir>/src/utils/localstorage-mock.js"
 }
