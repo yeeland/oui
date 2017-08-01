@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 /**
@@ -14,10 +15,16 @@ class Textarea extends React.Component {
   }
 
   render() {
+    const classes = classNames({
+      'oui-textarea': true,
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+    });
+
     return (
       /* eslint-disable react/jsx-no-bind */
       <textarea
-        className="oui-textarea"
+        data-oui-component={ true }
+        className={ classes }
         ref={ (c) => { this._textarea = c; } }
         value={ this.props.value }
         defaultValue={ this.props.defaultValue }

@@ -20,10 +20,12 @@ const ButtonRowSide = (side, buttons, testSection) => {
     'flex': includesFullWidthButton,
     'flex--1': true,
     [`oui-button-row--${side}`]: side,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (
     <div
+      data-oui-component={ true }
       className={ wrapperClassNames }
       data-test-section={ testSection ? testSection + '-' + side : null }>
       { buttons.map((button, index) => {
@@ -58,6 +60,7 @@ const ButtonRowSide = (side, buttons, testSection) => {
 const ButtonRow = (props) => {
   return (
     <div
+      data-oui-component={ true }
       className='oui-button-row flex'
       data-test-section={ props.testSection }>
       { props.leftGroup ? ButtonRowSide('left', props.leftGroup, props.testSection) : null }

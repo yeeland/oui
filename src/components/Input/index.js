@@ -1,6 +1,6 @@
 import React from 'react';
 import Label from '../Label';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 /**
@@ -24,17 +24,19 @@ class Input extends React.Component {
       noteLabel = <div className="oui-form-note">{ opts.note }</div>;
     }
 
-    let wrapperClasses = classnames(
-      {'oui-form-bad-news': opts.displayError}
-    );
+    let wrapperClasses = classNames({
+      'oui-form-bad-news': opts.displayError,
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+    });
 
-    let classes = classnames(
-      'oui-text-input', {'oui-text-input--search': opts.isFilter}
-    );
+    let classes = classNames({
+      'oui-text-input': true,
+      'oui-text-input--search': opts.isFilter,
+    });
 
     return (
       /* eslint-disable react/jsx-no-bind */
-      <div className={ wrapperClasses }>
+      <div data-oui-component={ true } className={ wrapperClasses }>
         <Label
           displayError={ opts.displayError }
           isRequired={ opts.isRequired }

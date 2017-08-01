@@ -14,6 +14,7 @@ const Label = ({ isRequired, isOptional, displayError, children, testSection }) 
 
   const labelClassNames = classNames({
     'oui-form-bad-news': displayError,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   let fieldLabel = null;
@@ -27,7 +28,7 @@ const Label = ({ isRequired, isOptional, displayError, children, testSection }) 
     <label
       className={ labelClassNames }
       data-test-section={ testSection }>
-      <span className="oui-label">
+      <span data-oui-component={ true } className="oui-label">
         { children }
         { fieldLabel }
       </span>

@@ -16,10 +16,12 @@ const BlockList = (props) => {
     'background--white': true,
     'overflow-x--auto': true,
     'border--all': props.hasBorder,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
   return (
     <div
+      data-oui-component={ true }
       className={ classes }
       data-test-section={ props.testSection }
       style={{ maxHeight: props.maxHeight }}>

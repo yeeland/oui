@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "26.0.0",
+  "version": "26.2.1",
   "description": "Optimizely's Component Library.",
   "private": false,
   "main": "dist/js/main.js",
@@ -33,7 +33,7 @@
     "glamor": "^2.20.12",
     "glob": "^7.0.6",
     "history": "^3.0.0",
-    "jest": "^18.0.0",
+    "jest": "^20.0.4",
     "js-yaml": "^3.7.0",
     "json": "^9.0.4",
     "json-loader": "^0.5.4",
@@ -59,7 +59,7 @@
     "webpack-notifier": "^1.4.1"
   },
   "scripts": {
-    "test": "npm run eslint && npm run jest && codecov && npm run scss-lint && npm run icons:update && npm run docs:build",
+    "test": "npm run eslint && npm run jest && codecov && npm run icons:update && npm run docs:build",
     "start": "bundle install && bundle update && npm install && npm run icons:update && npm run babel && npm run docs:build",
     "jest": "jest --config .jest.config.json",
     "jest:watch": "jest --config .jest.config.json --watch",

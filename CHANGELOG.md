@@ -6,6 +6,23 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 
+## 26.2.1 - 2017-08-01
+- [Patch] Update React component highlighting (#761)
+- [Patch] Remove react-test-renderer dependency (#760)
+
+## 26.2.0 - 2017-07-28
+- [Feature] Add ProgressBar component. (#758)
+- [Feature] Add flex-grow--none and update flex-shrink--none helpers. (#744)
+
+## 26.1.1 - 2017-07-27
+- [Feature] Add `yarn.lock` file to OUI to keep a more reliable dependency managament than `npm`.
+- [Patch] Upgrade `jest` framework from version `18.0.0` to `20.0.4`.
+
+## 26.1.0 - 2017-07-25
+- [Feature] Add data attribute `data-oui-component` to all outer React components for tracking. Also add URL target to display borders in the docs/app via url `#oui-showreact`. (#751)
+- [Patch] Update travis.yml to kill `ssh-agent` which may be avoid background processes hanging and causing build reports only to fail. (#749)
+- [Patch] Update docs to include more link examples under `text` overrides.
+
 ## 26.0.0 - 2017-07-17
 - [Release] Return null when Label is empty (breaking change). (#746)
 

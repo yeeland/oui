@@ -13,9 +13,12 @@ const Button = (props) => {
     [`oui-button--${props.size}`]: props.size,
     [`oui-button--${props.width}`]: props.width,
     ['is-active']: props.isActive,
+    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
+
   return (
     <button
+      data-oui-component={ true }
       className={ buttonClassNames }
       disabled={ props.isDisabled ? 'disabled' : false }
       type={ props.isSubmit ? 'submit' : 'button' }

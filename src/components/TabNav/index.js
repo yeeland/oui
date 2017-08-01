@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import Tab from './Tab';
 
@@ -13,7 +13,13 @@ const TabNav = (props) => {
   const tabStyleClasses = props.style ? props.style.map((style) => {
     return 'oui-tabs--' + style;
   }) : '';
-  const classes = classNames(tabStyleClasses, 'oui-tabs');
+
+  const classes = classNames(
+    tabStyleClasses,
+    'oui-tabs',
+    {'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true'}
+  );
+
   // Determine if the child is an active tab.
   // From http://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children
   const childrenWithProps = React.Children.map(props.children, (child) => {
@@ -23,7 +29,10 @@ const TabNav = (props) => {
   });
 
   return (
-    <div data-test-section={ props.testSection } className={ classes }>
+    <div
+      data-oui-component={ true }
+      data-test-section={ props.testSection }
+      className={ classes }>
       <ul
         className="oui-tabs-nav"
         data-test-section="tabs-menu">
