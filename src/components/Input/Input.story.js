@@ -5,23 +5,20 @@ import { action } from '@storybook/addon-actions';
 import  { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 import { WithNotes } from '@storybook/addon-notes';
 
-import '../../../dist/docs/oui/25.3.0/js/styles.js';
-
 import Input from './index.js';
 
 const stories = storiesOf('Input', module);
 stories
   .addDecorator(withKnobs)
   .addDecorator(story => (
-    <div id="rooty">
+    <div id="root-preview">
       {story()}
     </div>
   ));
 
 stories
   .addWithInfo('input with knobs', () => {
-
-    return(<Input 
+    return (<Input 
               defaultValue={text('defaultValue', 'some default value')}
               displayError={ boolean('displayError', false) }    
               isFilter={boolean('isFilter', false)}
@@ -39,8 +36,7 @@ stories
               type={select('type', ['text', 'password', 'number', 'date'], 'text')}
           /> );
   }).add('error input', () => {
-
-    return(<Input 
+    return (<Input 
              label="Some label"
              displayError={true}
              note="some error note that should be red"

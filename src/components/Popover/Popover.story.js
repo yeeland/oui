@@ -12,7 +12,7 @@ const stories = storiesOf('Popover', module);
 stories
   .addDecorator(withKnobs)
   .addDecorator(story => (
-    <div id="rooty">
+    <div id="root-preview">
       {story()}
     </div>
   ));
