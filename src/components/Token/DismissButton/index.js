@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../Button';
-import CloseIcon from '../../Icon/CloseIcon';
+// import CloseIcon from '../../Icon/CloseIcon';
+import Icon from 'react-oui-icons';
 
 /**
  * @param {Object} props - Properties passed to component
@@ -15,7 +16,9 @@ const DismissButton = (props) => (
       onClick={ props.onClick }
       style="unstyled"
       testSection={ props.testSection && `${props.testSection}-dismiss` }>
-      <CloseIcon size={ 12 } />
+      <Icon 
+        name="close" 
+        fill="white"/>
     </Button>
   </div>
 );
