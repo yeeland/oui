@@ -17,8 +17,10 @@ const DismissButton = (props) => (
       style="unstyled"
       testSection={ props.testSection && `${props.testSection}-dismiss` }>
       <Icon 
+        size="small"
         name="close" 
-        fill="white"/>
+        fill="white"
+      />
     </Button>
   </div>
 );
