@@ -9,7 +9,7 @@
 /// Namespace
 /// @description Provide a name space for most classes.
 
-$namespace                   : '';
+$namespace                   : '' !default;
 
 /// Colors
 /// @description Default color for objects' borders etc.
